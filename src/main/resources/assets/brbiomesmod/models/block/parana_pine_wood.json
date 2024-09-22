@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/parana_pine_bark",
+    "side": "brbiomesmod:block/parana_pine_bark"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/brazillian_sassafras_bark",
+    "side": "brbiomesmod:block/brazillian_sassafras_bark"
+  }
+}

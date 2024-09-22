@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/black_jurema_log_middle",
+    "side": "brbiomesmod:block/black_jurema_bark"
+  }
+}

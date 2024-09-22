@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/brazillian_sassafras_planks"
+  }
+}
