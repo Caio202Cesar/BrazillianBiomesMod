@@ -3,7 +3,8 @@ package com.brbiomesmod;
 import com.brbiomesmod.block.AraucariaPlateauBlocks;
 import com.brbiomesmod.block.CaatingaBlocks;
 import com.brbiomesmod.item.ModItems;
-import com.brbiomesmod.world.biomes.BiomeInit;
+import com.brbiomesmod.world.biomes.ModBiomes;
+import com.brbiomesmod.world.gen.BrazillianBiomeGeneration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -38,8 +39,9 @@ public class BrazillianBiomesMod
         ModItems.register(eventBus);
         CaatingaBlocks.register(eventBus);
         AraucariaPlateauBlocks.register(eventBus);
-        BiomeInit.BIOMES.register(eventBus);
-        BiomeInit.registerBiome();
+        ModBiomes.BIOMES.register(eventBus);
+        ModBiomes.registerBiome();
+        BrazillianBiomeGeneration.generateBiomes();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
