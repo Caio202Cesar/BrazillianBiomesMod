@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "brbiomesmod:blocks/jabuticaba_fruiting_log",
+  "pools": [
+    {
+      "rolls": 2,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "brbiomesmod:jabuticaba_log"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brbiomesmod:jabuticaba"
+        }
+      ]
+    }
+  ]
+}

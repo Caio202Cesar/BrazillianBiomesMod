@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/cambuci_sapling",
+    "particle": "brbiomesmod:block/cambuci_sapling"
+  }
+}

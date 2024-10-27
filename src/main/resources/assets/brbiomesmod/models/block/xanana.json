@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/xanana2",
+    "particle": "brbiomesmod:block/xanana_large"
+  }
+}

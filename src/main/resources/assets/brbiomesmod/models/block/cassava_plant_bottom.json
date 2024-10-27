@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/cassava_plant_bottom",
+    "particle": "brbiomesmod:block/cassava_plant_top"
+  }
+}

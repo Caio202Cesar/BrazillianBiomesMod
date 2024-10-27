@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "brbiomesmod:blocks/brazilwood_log",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "brbiomesmod:brazilwood_log"
+        }
+      ]
+    }
+  ]
+}

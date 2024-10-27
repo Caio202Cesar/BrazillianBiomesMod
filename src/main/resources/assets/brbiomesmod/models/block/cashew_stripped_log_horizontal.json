@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column_horizontal",
+  "textures": {
+    "end": "brbiomesmod:block/cashew_stripped_log_middle",
+    "side": "brbiomesmod:block/cashew_stripped_bark"
+  }
+}

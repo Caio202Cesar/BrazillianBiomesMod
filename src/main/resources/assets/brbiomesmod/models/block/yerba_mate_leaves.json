@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/yerba_mate_leaves",
+    "particle": "brbiomesmod:block/yerba_mate_leaves"
+  }
+}

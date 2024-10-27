@@ -1,0 +1,11 @@
+{
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/wolf_apple_leaves",
+        "weight": 2},
+      {"model": "brbiomesmod:block/wolf_apple_flowering_leaves",
+        "weight": 1},
+      {"model": "brbiomesmod:block/wolf_apple_fruiting_leaves",
+        "weight": 1}
+    ]
+  }}

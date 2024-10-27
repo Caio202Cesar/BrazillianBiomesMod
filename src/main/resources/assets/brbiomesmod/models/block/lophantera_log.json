@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/lophantera_log_middle",
+    "side": "brbiomesmod:block/lophantera_bark"
+  }
+}

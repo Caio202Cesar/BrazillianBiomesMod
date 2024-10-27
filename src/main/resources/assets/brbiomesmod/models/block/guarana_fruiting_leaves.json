@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/guarana_fruiting_leaves",
+    "particle": "brbiomesmod:block/guarana_fruiting_leaves"
+  }
+}

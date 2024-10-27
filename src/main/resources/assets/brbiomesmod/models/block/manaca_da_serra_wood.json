@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/manaca_bark",
+    "side": "brbiomesmod:block/manaca_bark"
+  }
+}

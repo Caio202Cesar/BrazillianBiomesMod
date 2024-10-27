@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/kapok_leaves",
+    "particle": "brbiomesmod:block/kapok_leaves"
+  }
+}

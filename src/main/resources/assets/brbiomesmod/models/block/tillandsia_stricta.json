@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/tillandsia_stricta",
+    "particle": "brbiomesmod:block/tillandsia_stricta"
+  }
+}

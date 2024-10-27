@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "brbiomesmod:blocks/cassava_plant",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "brbiomesmod:cassava",
+          "conditions": [
+            {
+              "block": "brbiomesmod:cassava_plant",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

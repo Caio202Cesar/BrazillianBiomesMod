@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "food",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:palmito"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:palm_heart",
+    "count": 1
+  }
+}

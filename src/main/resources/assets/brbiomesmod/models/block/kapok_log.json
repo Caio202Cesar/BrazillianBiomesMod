@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/kapok_log_middle",
+    "side": "brbiomesmod:block/kapok_bark"
+  }
+}

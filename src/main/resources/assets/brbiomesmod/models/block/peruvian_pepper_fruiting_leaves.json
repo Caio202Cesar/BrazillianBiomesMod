@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/peruvian_pepper_leaves_fruits",
+    "particle": "brbiomesmod:block/peruvian_pepper_leaves_fruits"
+  }
+}
