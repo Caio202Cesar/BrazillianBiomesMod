@@ -40,8 +40,6 @@ public class AmazonRainforestBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> LOPHANTERA_LEAVES = registerBlock("lophantera_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> LOPHANTERA_FLOWERING_LEAVES = registerBlock("lophantera_flowering_leaves",
-            ModLeaves::new);
     public static final RegistryObject<Block> LOPHANTERA_SAPLING = registerBlock("lophantera_sapling",
             LophanteraSapling::new);
 

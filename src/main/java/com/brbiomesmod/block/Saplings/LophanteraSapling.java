@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
+import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
 import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
@@ -24,7 +25,7 @@ public class LophanteraSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(CaatingaBlocks.BLACK_JUREMA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.LOPHANTERA_SAPLING.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -38,7 +39,11 @@ public class LophanteraSapling extends SaplingBlock {
     private static class LophanteraTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.LOPHANTERA_TREE;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.LOPHANTERA_TREE;
+            } else {
+                return TreeFeatures.LOPHANTERA_TREE2;
+            }
         }
     }
 }

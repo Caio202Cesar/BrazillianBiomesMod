@@ -1,7 +1,7 @@
 {
   "variants":{
     "":[
-      {"model": "brbiomesmod:block/yerba_mate_leaves"},
+      {"model": "brbiomesmod:block/lophantera_leaves"},
       {"model": "brbiomesmod:block/lophantera_flowering_leaves"}
     ]
   }}
