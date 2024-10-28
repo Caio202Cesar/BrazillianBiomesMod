@@ -1,14 +1,8 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "brbiomesmod:blocks/imbuia_log",
   "pools": [
     {
       "rolls": 1.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
       "entries": [
         {
           "type": "minecraft:item",

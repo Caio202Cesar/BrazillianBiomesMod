@@ -4,6 +4,7 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
 import com.brbiomesmod.block.Saplings.BrazilwoodSapling;
 import com.brbiomesmod.block.Saplings.CambuciSapling;
+import com.brbiomesmod.block.Saplings.ManacaSapling;
 import com.brbiomesmod.block.Saplings.YellowIpeSapling;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -89,18 +90,28 @@ public class AtlanticForestBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> MANACA_DA_SERRA_PLANKS = registerBlock("manaca_da_serra_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> MANACA_DA_SERRA_SAPLING = registerBlock("manaca_da_serra_sapling",
+            ManacaSapling::new);
 
 
     public static final RegistryObject<Block> IPE_LOG = registerBlock("ipe_log",
             ModLogs::new);
     public static final RegistryObject<Block> YELLOW_IPE_BLOSSOM = registerBlock("yellow_ipe_blossom",
             ModLeaves::new);
+    public static final RegistryObject<Block> YELLOW_IPE_SAPLING = registerBlock("yellow_ipe_sapling",
+            YellowIpeSapling::new);
     public static final RegistryObject<Block> PURPLE_IPE_BLOSSOM = registerBlock("purple_ipe_blossom",
             ModLeaves::new);
+    public static final RegistryObject<Block> PURPLE_IPE_SAPLING = registerBlock("purple_ipe_sapling",
+            PurpleIpeSapling::new);
     public static final RegistryObject<Block> PINK_IPE_BLOSSOM = registerBlock("pink_ipe_blossom",
             ModLeaves::new);
+    public static final RegistryObject<Block> PINK_IPE_SAPLING = registerBlock("pink_ipe_sapling",
+            PinkIpeSapling::new);
     public static final RegistryObject<Block> WHITE_IPE_BLOSSOM = registerBlock("white_ipe_blossom",
             ModLeaves::new);
+    public static final RegistryObject<Block> WHITE_IPE_SAPLING = registerBlock("white_ipe_sapling",
+            WhiteIpeSapling::new);
 
 
     public static final RegistryObject<Block> PASSION_FRUIT_VINE = registerBlock("passion_fruit_vine",
@@ -112,9 +123,6 @@ public class AtlanticForestBlocks {
     public static final RegistryObject<Block> TILLANDSIA_STRICTA = registerBlock("tillandsia_stricta",
             EpiphytePlant::new);
 
-
-    public static final RegistryObject<Block> YELLOW_IPE_SAPLING = registerBlock("yellow_ipe_sapling",
-            YellowIpeSapling::new);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -69,6 +69,24 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLE_IPE_TREE = register("purple_ipe_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
+                    new SimpleBlockStateProvider(States.PURPLE_IPE_BLOSSOM),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_IPE_TREE = register("pink_ipe_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
+                    new SimpleBlockStateProvider(States.PINK_IPE_BLOSSOM),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_IPE_TREE = register("white_ipe_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.IPE_LOG),
+                    new SimpleBlockStateProvider(States.WHITE_IPE_BLOSSOM),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Yerba maté Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YERBA_MATE_TREE = register("yerba_mate_tree",
@@ -222,9 +240,23 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOPHANTERA_TREE2 = register("lophantera_tree2",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LOPHANTERA_LOG),
                     new SimpleBlockStateProvider(States.LOPHANTERA_LEAVES),
-                    new SpruceFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), FeatureSpread.create(6)),
-                    new StraightTrunkPlacer(6, 5, 0),
+                    new SpruceFoliagePlacer(FeatureSpread.create(4), FeatureSpread.create(3), FeatureSpread.create(6)),
+                    new StraightTrunkPlacer(3, 5, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
+
+    //Manaca da Serra Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MANACA_TREE = register("manaca_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MANACA_DA_SERRA_LOG),
+                    new SimpleBlockStateProvider(States.MANACA_DA_SERRA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MANACA_FANCY_TREE = register("manaca_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MANACA_DA_SERRA_LOG),
+                    new SimpleBlockStateProvider(States.MANACA_DA_SERRA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
 
     public TreeFeatures(Codec<CustomTreeFeatureConfig> configCodec) {
@@ -253,6 +285,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState IPE_LOG = AtlanticForestBlocks.IPE_LOG.get().getDefaultState();
         protected static final BlockState YELLOW_IPE_BLOSSOM = AtlanticForestBlocks.YELLOW_IPE_BLOSSOM.get().getDefaultState();
+        protected static final BlockState PURPLE_IPE_BLOSSOM = AtlanticForestBlocks.PURPLE_IPE_BLOSSOM.get().getDefaultState();
+        protected static final BlockState PINK_IPE_BLOSSOM = AtlanticForestBlocks.PINK_IPE_BLOSSOM.get().getDefaultState();
+        protected static final BlockState WHITE_IPE_BLOSSOM = AtlanticForestBlocks.WHITE_IPE_BLOSSOM.get().getDefaultState();
 
         protected static final BlockState CAMBUCI_LOG = AtlanticForestBlocks.CAMBUCI_LOG.get().getDefaultState();
         protected static final BlockState CAMBUCI_LEAVES = AtlanticForestBlocks.CAMBUCI_LEAVES.get().getDefaultState();
@@ -288,6 +323,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState LOPHANTERA_LOG = AmazonRainforestBlocks.LOPHANTERA_LOG.get().getDefaultState();
         protected static final BlockState LOPHANTERA_LEAVES = AmazonRainforestBlocks.LOPHANTERA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState MANACA_DA_SERRA_LOG = AtlanticForestBlocks.MANACA_DA_SERRA_LOG.get().getDefaultState();
+        protected static final BlockState MANACA_DA_SERRA_LEAVES = AtlanticForestBlocks.MANACA_DA_SERRA_LEAVES.get().getDefaultState();
     }
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String p_243968_0_, ConfiguredFeature<FC, ?> p_243968_1_) {
