@@ -63,6 +63,9 @@ public class ModItems {
     public static final RegistryObject<Item> PINEAPPLE_GUAVA = ITEMS.register("pineapple_guava",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
+    public static final RegistryObject<Item> TOURMALINE_PARAIBA = ITEMS.register("tourmaline_paraiba",
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

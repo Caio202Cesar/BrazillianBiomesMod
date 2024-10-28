@@ -24,9 +24,9 @@ public class BeachFlower extends BushBlock {
         RenderTypeLookup.setRenderLayer(RestingaBlocks.IPOMAEA_PES_CAPRAE.get(), RenderType.getCutout());
     }
 
-    protected boolean mayPlaceOn(BlockState state, IBlockReader worldIn, BlockPos pos) {
-        Block block = state.getBlock();
-        return block == Blocks.SAND;
+    protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
+        return state.matchesBlock(Blocks.GRASS_BLOCK) || state.matchesBlock(Blocks.DIRT)
+                || state.matchesBlock(Blocks.COARSE_DIRT) || state.matchesBlock(Blocks.SAND);
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
