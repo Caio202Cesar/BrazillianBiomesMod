@@ -3,12 +3,7 @@
   "random_sequence": "brbiomesmod:blocks/yerba_mate_leaves",
   "pools": [
     {
-      "rolls": 2.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
+      "rolls": 2,
       "entries": [
         {
           "type": "minecraft:item",

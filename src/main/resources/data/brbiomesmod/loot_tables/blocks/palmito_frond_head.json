@@ -1,18 +1,13 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "brazillianbiomes:blocks/palmito_frond_head",
+  "random_sequence": "brbiomesmod:blocks/palmito",
   "pools": [
     {
-      "rolls": 1.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brazillianbiomes:palmito_frond_head"
+          "name": "brbiomesmod:palm_heart"
         }
       ]
     }

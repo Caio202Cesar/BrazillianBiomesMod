@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:feijoa_sapling",
+          "name": "brbiomesmod:jua_sapling",
           "weight": 15,
           "functions": [
             {
@@ -34,7 +34,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:pineapple_guava",
+          "name": "brbiomesmod:jua_berries",
           "weight": 20,
           "functions": [
             {

@@ -1,18 +1,13 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "brazillianbiomes:blocks/kapok_log",
+  "random_sequence": "brbiomesmod:blocks/kapok_log",
   "pools": [
     {
-      "rolls": 1.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brazillianbiomes:kapok_log"
+          "name": "brbiomesmod:kapok_log"
         }
       ]
     }

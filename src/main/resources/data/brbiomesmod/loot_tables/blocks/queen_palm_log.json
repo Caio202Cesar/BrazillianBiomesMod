@@ -1,18 +1,13 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "brazillianbiomes:blocks/queen_palm_log",
+  "random_sequence": "brbiomesmod:blocks/queen_palm_log",
   "pools": [
     {
       "rolls": 1.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brazillianbiomes:queen_palm_log"
+          "name": "brbiomesmod:queen_palm_log"
         }
       ]
     }

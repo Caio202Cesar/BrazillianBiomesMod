@@ -4,11 +4,6 @@
   "pools": [
     {
       "rolls": 2,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
       "entries": [
         {
           "type": "minecraft:item",

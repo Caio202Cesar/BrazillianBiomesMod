@@ -2,10 +2,7 @@ package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
-import com.brbiomesmod.block.Saplings.BrazilwoodSapling;
-import com.brbiomesmod.block.Saplings.CambuciSapling;
-import com.brbiomesmod.block.Saplings.ManacaSapling;
-import com.brbiomesmod.block.Saplings.YellowIpeSapling;
+import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
@@ -112,6 +109,16 @@ public class AtlanticForestBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> WHITE_IPE_SAPLING = registerBlock("white_ipe_sapling",
             WhiteIpeSapling::new);
+
+
+    public static final RegistryObject<Block> EUGENIA_LOG = registerBlock("eugenia_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PITANGA_LEAVES = registerBlock("pitanga_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BLACK_PITANGA_LEAVES = registerBlock("pitanga_black_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PITANGA_SAPLING = registerBlock("pitanga_sapling",
+            PitangaSapling::new);
 
 
     public static final RegistryObject<Block> PASSION_FRUIT_VINE = registerBlock("passion_fruit_vine",
