@@ -2,6 +2,8 @@ package com.brbiomesmod;
 
 import com.brbiomesmod.block.BlockClasses.*;
 import com.brbiomesmod.item.ModItems;
+import com.brbiomesmod.world.biomes.AmazonRainforestBiome;
+import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -42,15 +44,10 @@ public class BrazillianBiomesMod
         CerradoSavannaBlocks.register(eventBus);
         PampasPlainsBlocks.register(eventBus);
 
+        AmazonRainforestBiome.register(eventBus);
+
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    private void setup(final FMLCommonSetupEvent event)
-    {
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
@@ -88,4 +85,15 @@ public class BrazillianBiomesMod
             LOGGER.info("HELLO from Register Block");
         }
     }
-}
+
+    private void setup(final FMLCommonSetupEvent event)
+    {
+        event.enqueueWork(() -> {
+
+            ModBiomeGeneration.generateBiomes();
+
+            // some preinit code
+            LOGGER.info("HELLO FROM PREINIT");
+            LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        });
+}}

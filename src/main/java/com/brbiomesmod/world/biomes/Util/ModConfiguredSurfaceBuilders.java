@@ -1,4 +1,4 @@
-package com.brbiomesmod.world.biomes;
+package com.brbiomesmod.world.biomes.Util;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
@@ -16,8 +16,15 @@ public class ModConfiguredSurfaceBuilders {
             SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
             CaatingaBlocks.CAATINGA_SAND.get().getDefaultState(), //top material
             Blocks.COARSE_DIRT.getBlock().getDefaultState(), //under material
-            Blocks.COARSE_DIRT.getBlock().getDefaultState() //underwater material
+            Blocks.SAND.getBlock().getDefaultState() //underwater material
     )));
+
+    public static ConfiguredSurfaceBuilder<?> FOREST_SURFACE = register("forest_surface",
+            SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
+                    Blocks.PODZOL.getBlock().getDefaultState(), //top material
+                    Blocks.STONE.getBlock().getDefaultState(), //under material
+                    Blocks.GRAVEL.getBlock().getDefaultState() //underwater material
+            )));
 
     private static <SC extends ISurfaceBuilderConfig>ConfiguredSurfaceBuilder<SC> register(String name, ConfiguredSurfaceBuilder<SC> csb) {
 
