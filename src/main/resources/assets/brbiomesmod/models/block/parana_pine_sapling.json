@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/parana_pine_sapling",
+    "particle": "brbiomesmod:block/parana_pine_sapling"
+  }
+}

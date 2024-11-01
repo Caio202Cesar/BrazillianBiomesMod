@@ -4,6 +4,7 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
 import com.brbiomesmod.block.Saplings.BrazillianSassafrasSapling;
 import com.brbiomesmod.block.Saplings.FeijoaSapling;
+import com.brbiomesmod.block.Saplings.ParanaPineSapling;
 import com.brbiomesmod.block.Saplings.YerbaMateSapling;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -49,8 +50,8 @@ public class AraucariaPlateauBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> PARANA_PINE_LEAVES = registerBlock("parana_pine_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> PARANA_PINE_FRUITING_LEAVES = registerBlock("parana_pine_fruiting_leaves",
-            ModLeaves::new);
+    public static final RegistryObject<Block> PARANA_PINE_SAPLING = registerBlock("parana_pine_sapling",
+            ParanaPineSapling::new);
 
 
     public static final RegistryObject<Block> IMBUIA_LOG = registerBlock("imbuia_log",

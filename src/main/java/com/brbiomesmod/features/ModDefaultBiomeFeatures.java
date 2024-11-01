@@ -29,4 +29,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withCambuciTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CAMBUCI_TREE);
     }
+    public static void withParanaPineTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PARANA_PINE_TREES);
+    }
+
 }
