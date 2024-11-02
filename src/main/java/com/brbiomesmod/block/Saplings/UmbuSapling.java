@@ -42,5 +42,11 @@ public class UmbuSapling extends SaplingBlock {
             return TreeFeatures.UMBU_TREE;
         }
     }
-}
+        protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
+            return state.matchesBlock(Blocks.GRASS_BLOCK) || state.matchesBlock(Blocks.DIRT)
+                    || state.matchesBlock(Blocks.COARSE_DIRT) || state.matchesBlock(Blocks.SAND)
+                    || state.matchesBlock(Blocks.FARMLAND) || state.matchesBlock(Blocks.RED_SAND);
+        }
+    }
+
 

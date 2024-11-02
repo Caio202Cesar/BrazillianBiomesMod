@@ -2,6 +2,7 @@ package com.brbiomesmod.world.biomes.Util;
 
 import com.brbiomesmod.world.biomes.AmazonRainforestBiome;
 import com.brbiomesmod.world.biomes.AraucariaPlateauBiome;
+import com.brbiomesmod.world.biomes.CaatingaBiome;
 import com.brbiomesmod.world.biomes.PantanalBiome;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
@@ -15,12 +16,13 @@ import static net.minecraftforge.common.BiomeDictionary.Type.*;
 
 public class ModBiomeGeneration {
     public static void generateBiomes() {
-        addBiome(AmazonRainforestBiome.AMAZON_RAINFOREST.get(), BiomeManager.BiomeType.WARM, 26, OVERWORLD, HOT, DENSE, FOREST,
+        addBiome(AmazonRainforestBiome.AMAZON_RAINFOREST.get(), BiomeManager.BiomeType.WARM, 27, OVERWORLD, HOT, DENSE, FOREST,
                 JUNGLE, LUSH, WET);
         addBiome(AraucariaPlateauBiome.ARAUCARIA_PLATEAU.get(), BiomeManager.BiomeType.WARM, 7, OVERWORLD, DENSE, FOREST, PLATEAU,
                 RARE, CONIFEROUS, LUSH, WET, MOUNTAIN);
         addBiome(PantanalBiome.PANTANAL.get(), BiomeManager.BiomeType.WARM, 14, OVERWORLD, HOT, SPARSE, SAVANNA, RARE, WET, SWAMP,
                 PLAINS, LUSH);
+        addBiome(CaatingaBiome.CAATINGA.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, SPARSE, SAVANNA, DRY, SANDY);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {

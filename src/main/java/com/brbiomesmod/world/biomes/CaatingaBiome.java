@@ -54,13 +54,16 @@ private static Biome makeCaatingaBiome(final Supplier<ConfiguredSurfaceBuilder<?
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withDesertWells(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withCaatingaTrees(biomegenerationsettings$builder);
-    DefaultBiomeFeatures.withDesertVegetation(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withBullNettles(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withTrumpetTrees(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withDisks(biomegenerationsettings$builder);
 
 
-    return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
-            .temperature(0.7F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
-                    .setWaterFogColor(993300).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(8293460)
-                    .withGrassColor(8762696).setFogColor(14807295)
+    return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
+            .temperature(2.0F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
+                    .setWaterFogColor(993300).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(14210767)
+                    .withGrassColor(142107676).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                     .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                     .build())
@@ -68,7 +71,7 @@ private static Biome makeCaatingaBiome(final Supplier<ConfiguredSurfaceBuilder<?
 }
 
 private static int getSkyColorWithTemperatureModifier(float temperature) {
-    float lvt_1_1_ = temperature / 0.7F;
+    float lvt_1_1_ = temperature / 2.0F;
     lvt_1_1_ = MathHelper.clamp(lvt_1_1_, -1.0F, 1.0F);
     return MathHelper.hsvToRGB(0.2460909F - lvt_1_1_ * 0.05F, 0.5F + lvt_1_1_ * 0.1F, 1.0F);
 }

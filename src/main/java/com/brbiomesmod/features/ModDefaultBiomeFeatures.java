@@ -47,4 +47,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withCaatingaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CAATINGA_TREES);
     }
+    public static void withBullNettles(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.BULL_NETTLES);
+    }
 }
