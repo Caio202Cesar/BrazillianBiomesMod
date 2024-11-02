@@ -32,5 +32,16 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withParanaPineTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PARANA_PINE_TREES);
     }
-
+    public static void withYerbaMateTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.MATE_TREES);
+    }
+    public static void withOcoteaTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.OCOTEA_TREES);
+    }
+    public static void withXaximPlant(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_XAXIM_PLANT);
+    }
+    public static void withFeijoaShrub(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.FEIJOA_SHRUB);
+    }
 }
