@@ -14,9 +14,9 @@ public class ModConfiguredSurfaceBuilders {
 
     public static ConfiguredSurfaceBuilder<?> CAATINGA_SURFACE = register("caatinga_surface",
             SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
-            CaatingaBlocks.CAATINGA_SAND.get().getDefaultState(), //top material
+            Blocks.COARSE_DIRT.getBlock().getDefaultState(), //top material
             Blocks.STONE.getBlock().getDefaultState(), //under material
-            Blocks.SAND.getBlock().getDefaultState() //underwater material
+            CaatingaBlocks.CAATINGA_SAND.get().getDefaultState() //underwater material
     )));
 
     public static ConfiguredSurfaceBuilder<?> FOREST_SURFACE = register("forest_surface",

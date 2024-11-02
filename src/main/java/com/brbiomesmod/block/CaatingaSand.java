@@ -16,4 +16,8 @@ public class CaatingaSand extends Block {
     public boolean canSustainPlant(BlockState state, IBlockReader world, BlockPos pos, Direction direction, IPlantable plantable) {
         return true;
     }
+
+    public boolean matchesBlock(Block block) {
+        return this == block;
+    }
 }
