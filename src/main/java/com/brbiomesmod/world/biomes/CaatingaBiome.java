@@ -55,7 +55,6 @@ private static Biome makeCaatingaBiome(final Supplier<ConfiguredSurfaceBuilder<?
     DefaultBiomeFeatures.withDesertWells(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withCaatingaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withBullNettles(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withTrumpetTrees(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withDisks(biomegenerationsettings$builder);
 

@@ -215,8 +215,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JUA_LOG),
                     new SimpleBlockStateProvider(States.JUA_LEAVES),
                     new DarkOakFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(3, 4, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new DarkOakTrunkPlacer(3, 4, 1),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Brazillian Sassafras Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_SASSAFRAS_TREE = register("brazillian_sassafras_tree",
@@ -289,13 +290,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PARANA_PINE_LOG),
                     new SimpleBlockStateProvider(States.PARANA_PINE_LEAVES),
                     new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(13, 2, 14),
+                    new GiantTrunkPlacer(13, 2, 14),
                     new TwoLayerFeature(1, 1, 2))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PARANA_PINE_TREE_YOUNG = register("young_parana_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PARANA_PINE_LOG),
                     new SimpleBlockStateProvider(States.PARANA_PINE_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
-                    new StraightTrunkPlacer(13, 2, 14),
+                    new StraightTrunkPlacer(6, 2, 14),
                     new TwoLayerFeature(1, 1, 2))).build()));
 
     //Imbuia Trees
@@ -313,6 +314,19 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    //Cecropia Trees
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SILVER_CECROPIA_TREE = register("silver_cecropia_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CECROPIA_LOG),
+                    new SimpleBlockStateProvider(States.SILVER_CECROPIA_LEAVES),
+                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(15, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CECROPIA_TREE = register("cecropia_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CECROPIA_LOG),
+                    new SimpleBlockStateProvider(States.CECROPIA_LEAVES),
+                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(7, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
 
     public static final class States {
 
@@ -387,6 +401,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState IMBUIA_LOG = AraucariaPlateauBlocks.IMBUIA_LOG.get().getDefaultState();
         protected static final BlockState IMBUIA_LEAVES = AraucariaPlateauBlocks.IMBUIA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CECROPIA_LOG = RestingaBlocks.CECROPIA_LOG.get().getDefaultState();
+        protected static final BlockState CECROPIA_LEAVES = RestingaBlocks.CECROPIA_LEAVES.get().getDefaultState();
+        protected static final BlockState SILVER_CECROPIA_LEAVES = AtlanticForestBlocks.CECROPIA_SILVER_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
@@ -409,6 +427,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     MANACA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> BRAZILWOOD_TREES = register("brazilwood_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILWOOD_TREE.withChance(0.1F)),
+                    BRAZILWOOD_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+
     public static final ConfiguredFeature<?, ?> CASHEW_TREES = register("cashew_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CASHEW_TREE.withChance(0.5F)),
                     CASHEW_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
@@ -418,7 +441,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_IPE_TREE.withChance(0.025641026F),
                     PINK_IPE_TREE.withChance(0.30769232F), PURPLE_IPE_TREE.withChance(0.33333334F)), YELLOW_IPE_FANCY_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                            .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+                            .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> PARANA_PINE_TREES = register("parana_pine_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PARANA_PINE_TREE_YOUNG.withChance(0.1F)),
@@ -438,7 +461,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> CAATINGA_TREES = register("caatinga_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(UMBU_TREE.withChance(0.2F),
                             JUA_TREE.withChance(0.1F)), BLACK_JUREMA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> PITANGA_TREES = register("pitanga_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_PITANGA_TREE.withChance(0.02F)),
+                    PITANGA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String p_243968_0_, ConfiguredFeature<FC, ?> p_243968_1_) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, p_243968_0_, p_243968_1_);
