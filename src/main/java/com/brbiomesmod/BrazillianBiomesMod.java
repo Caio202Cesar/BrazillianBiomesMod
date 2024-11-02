@@ -4,6 +4,7 @@ import com.brbiomesmod.block.BlockClasses.*;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.AmazonRainforestBiome;
 import com.brbiomesmod.world.biomes.AraucariaPlateauBiome;
+import com.brbiomesmod.world.biomes.PantanalBiome;
 import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -47,6 +48,7 @@ public class BrazillianBiomesMod
 
         AmazonRainforestBiome.register(eventBus);
         AraucariaPlateauBiome.register(eventBus);
+        PantanalBiome.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

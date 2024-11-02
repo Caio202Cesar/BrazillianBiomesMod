@@ -2,6 +2,7 @@ package com.brbiomesmod.world.biomes.Util;
 
 import com.brbiomesmod.world.biomes.AmazonRainforestBiome;
 import com.brbiomesmod.world.biomes.AraucariaPlateauBiome;
+import com.brbiomesmod.world.biomes.PantanalBiome;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
@@ -18,6 +19,8 @@ public class ModBiomeGeneration {
                 JUNGLE, LUSH, WET);
         addBiome(AraucariaPlateauBiome.ARAUCARIA_PLATEAU.get(), BiomeManager.BiomeType.WARM, 7, OVERWORLD, DENSE, FOREST, PLATEAU,
                 RARE, CONIFEROUS, LUSH, WET, MOUNTAIN);
+        addBiome(PantanalBiome.PANTANAL.get(), BiomeManager.BiomeType.WARM, 14, OVERWORLD, HOT, SPARSE, SAVANNA, RARE, WET, SWAMP,
+                PLAINS, LUSH);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {
