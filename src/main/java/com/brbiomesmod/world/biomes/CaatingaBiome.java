@@ -9,8 +9,6 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.biome.*;
-import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
@@ -21,30 +19,31 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class AraucariaPlateauBiome {
+public class CaatingaBiome {
 public static final DeferredRegister<Biome> BIOMES
         = DeferredRegister.create(ForgeRegistries.BIOMES, BrazillianBiomesMod.MOD_ID);
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-public static final RegistryObject<Biome> ARAUCARIA_PLATEAU = BIOMES.register("araucaria_plateau",
-        () -> makeAraucariaPlateauBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.1f, 0.4f));
+public static final RegistryObject<Biome> CAATINGA = BIOMES.register("caatinga_scrubland",
+        () -> makeCaatingaBiome(() -> ModConfiguredSurfaceBuilders.CAATINGA_SURFACE, 0.1f, 0.4f));
 
 
-private static Biome makeAraucariaPlateauBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+private static Biome makeCaatingaBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
     DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
     DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
     mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
-            new MobSpawnInfo.Spawners(EntityType.PARROT, 100, 7, 10));
-
+            new MobSpawnInfo.Spawners(EntityType.MULE, 100, 7, 10));
+    mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
+            new MobSpawnInfo.Spawners(EntityType.DONKEY, 100, 7, 10));
     BiomeGenerationSettings.Builder biomegenerationsettings$builder =
             (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
     biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
-    biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_JUNGLE);
+    biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_DESERT);
     biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
     biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
-    biomegenerationsettings$builder.withStructure(StructureFeatures.JUNGLE_PYRAMID);
+    biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_SAVANNA);
 
     DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
@@ -53,15 +52,9 @@ private static Biome makeAraucariaPlateauBiome(final Supplier<ConfiguredSurfaceB
     DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-    DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withOcoteaTrees(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withParanaPineTrees(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withYerbaMateTrees(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withFeijoaShrub(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withXaximPlant(biomegenerationsettings$builder);
-    DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
-    DefaultBiomeFeatures.withEmeraldOre(biomegenerationsettings$builder);
-    DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withDesertWells(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withCaatingaTrees(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withDesertVegetation(biomegenerationsettings$builder);
 
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)

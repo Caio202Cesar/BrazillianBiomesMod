@@ -44,4 +44,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withFeijoaShrub(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.FEIJOA_SHRUB);
     }
+    public static void withCaatingaTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CAATINGA_TREES);
+    }
 }
