@@ -24,7 +24,7 @@ public static final DeferredRegister<Biome> BIOMES
         = DeferredRegister.create(ForgeRegistries.BIOMES, BrazillianBiomesMod.MOD_ID);
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-public static final RegistryObject<Biome> CAATINGA = BIOMES.register("caatinga_scrubland",
+public static final RegistryObject<Biome> CAATINGA = BIOMES.register("caatinga_shrubland",
         () -> makeCaatingaBiome(() -> ModConfiguredSurfaceBuilders.CAATINGA_SURFACE, 0.1f, 0.4f));
 
 

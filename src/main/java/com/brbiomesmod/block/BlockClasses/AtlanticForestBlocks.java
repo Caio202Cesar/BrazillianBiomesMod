@@ -131,6 +131,24 @@ public class AtlanticForestBlocks {
             EpiphytePlant::new);
 
 
+    public static final RegistryObject<Block> PINK_PEROBA_LOG = registerBlock("pink_peroba_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PINK_PEROBA_LEAVES = registerBlock("pink_peroba_leaves",
+            ModLeaves::new);
+
+
+    public static final RegistryObject<Block> JEQUITIBA_LOG = registerBlock("jequitiba_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> JEQUITIBA_LEAVES = registerBlock("jequitiba_leaves",
+            ModLeaves::new);
+
+
+    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LOG = registerBlock("brazillian_rosewood_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LEAVES = registerBlock("brazillian_rosewood_leaves",
+            ModLeaves::new);
+
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

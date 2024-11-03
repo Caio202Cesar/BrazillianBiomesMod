@@ -21,6 +21,7 @@
   "block.brbiomesmod.black_jurema_log": "Black Jurema Log",
   "block.brbiomesmod.black_jurema_wood": "Black Jurema Wood",
   "block.brbiomesmod.black_jurema_leaves": "Black Jurema Leaves",
+  "block.brbiomesmod.black_jurema_sapling": "Black Jurema Sapling",
   "block.brbiomesmod.brazillian_dutchman_pipe_vine": "Brazillian Dutchman-Pipe Vine",
   "block.brbiomesmod.brazillian_sassafras_log": "Brazillian Sassafras Log",
   "block.brbiomesmod.brazillian_sassafras_wood": "Brazillian Sassafras Wood",
@@ -79,7 +80,10 @@
   "itemGroup.BRBAraucariaPlateauTab": "BRB: Araucaria Plateau",
   "itemGroup.BRBAmazonRainforestTab": "BRB: Amazon Rainforest",
   "itemGroup.BRBRestingaTab": "BRB: Restinga",
-  "itemGroup.BRBCerradoSavannaTab": "BRB: Cerrado Savanna"
+  "itemGroup.BRBCerradoSavannaTab": "BRB: Cerrado Savanna",
 
-
+  "biome.brbiomesmod.amazon_rainforest": "Amazon Rainforest",
+  "biome.brbiomesmod.atlantic_forest": "Atlantic Forest",
+  "biome.brbiomesmod.caatinga_shrubland": "Caatinga Shrubland",
+  "biome.brbiomesmod.pantanal": "Pantanal"
 }
