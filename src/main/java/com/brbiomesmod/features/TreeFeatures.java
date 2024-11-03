@@ -291,12 +291,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
                     new GiantTrunkPlacer(13, 2, 14),
                     new TwoLayerFeature(1, 1, 2))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PARANA_PINE_TREE2 = register("parana_pine_tree2",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PARANA_PINE_LOG),
-                    new SimpleBlockStateProvider(States.PARANA_PINE_LEAVES),
-                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new GiantTrunkPlacer(13, 2, 14),
-                    new TwoLayerFeature(1, 1, 2))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PARANA_PINE_TREE_YOUNG = register("young_parana_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PARANA_PINE_LOG),
                     new SimpleBlockStateProvider(States.PARANA_PINE_LEAVES),
@@ -430,12 +424,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> MANACA_TREES = register("manaca_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANACA_FANCY_TREE.withChance(0.1F)),
                     MANACA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> BRAZILWOOD_TREES = register("brazilwood_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILWOOD_TREE.withChance(0.2F)),
                     BRAZILWOOD_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> CASHEW_TREES = register("cashew_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CASHEW_TREE.withChance(0.5F)),
@@ -481,7 +475,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String p_243968_0_, ConfiguredFeature<FC, ?> p_243968_1_) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, p_243968_0_, p_243968_1_);
     }
-
 }
 
 

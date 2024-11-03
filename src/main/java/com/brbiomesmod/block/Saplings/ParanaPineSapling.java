@@ -40,9 +40,9 @@ public class ParanaPineSapling extends SaplingBlock {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 6) {
-                return TreeFeatures.PARANA_PINE_TREE;
+                return TreeFeatures.PARANA_PINE_TREE_YOUNG;
             } else {
-                return TreeFeatures.PARANA_PINE_TREE2;
+                return TreeFeatures.PARANA_PINE_TREE;
             }
         }
     }
