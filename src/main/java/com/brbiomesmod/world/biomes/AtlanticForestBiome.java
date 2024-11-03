@@ -61,6 +61,7 @@ private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBui
     ModDefaultBiomeFeatures.withPitangaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withBrazilwoodTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withForestCecropiaTrees(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withAtlanticForestUpperTrees(biomegenerationsettings$builder);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
             .temperature(0.9F).downfall(0.9F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)

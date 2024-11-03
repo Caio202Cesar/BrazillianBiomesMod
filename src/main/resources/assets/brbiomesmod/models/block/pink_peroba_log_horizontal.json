@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/pink_peroba_log_middle",
+    "side": "brbiomesmod:block/pink_peroba_bark"
+  }
+}

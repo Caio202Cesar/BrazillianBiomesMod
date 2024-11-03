@@ -335,6 +335,22 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    //Jequitiba Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JEQUITIBA_TREE = register("jequitiba_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JEQUITIBA_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.JEQUITIBA_LEAVES),
+                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new MegaJungleTrunkPlacer(10, 20, 4),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
+    //Brazillian Rosewood
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_ROSEWOOD_TREE = register("brazillian_rosewood_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_ROSEWOOD_LOG),
+                    new SimpleBlockStateProvider(States.BRAZILLIAN_ROSEWOOD_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new ForkyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
     public static final class States {
 
         protected static final BlockState KAPOK_LOG = AmazonRainforestBlocks.KAPOK_LOG.get().getDefaultState();
@@ -415,6 +431,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState PINK_PEROBA_LOG = AtlanticForestBlocks.PINK_PEROBA_LOG.get().getDefaultState();
         protected static final BlockState PINK_PEROBA_LEAVES = AtlanticForestBlocks.PINK_PEROBA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState JEQUITIBA_LOG = AtlanticForestBlocks.JEQUITIBA_LOG.get().getDefaultState();
+        protected static final BlockState JEQUITIBA_LEAVES = AtlanticForestBlocks.JEQUITIBA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState BRAZILLIAN_ROSEWOOD_LOG = AtlanticForestBlocks.BRAZILLIAN_ROSEWOOD_LOG.get().getDefaultState();
+        protected static final BlockState BRAZILLIAN_ROSEWOOD_LEAVES = AtlanticForestBlocks.BRAZILLIAN_ROSEWOOD_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
@@ -482,6 +504,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.2F)),
                     SILVER_CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_UPPER_TREES = register("atlantic_forest_upper_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_PEROBA_TREE.withChance(0.1F),
+                            JEQUITIBA_TREE.withChance(0.1F)), BRAZILLIAN_ROSEWOOD_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String p_243968_0_, ConfiguredFeature<FC, ?> p_243968_1_) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, p_243968_0_, p_243968_1_);
