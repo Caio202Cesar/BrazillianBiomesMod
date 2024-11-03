@@ -63,9 +63,9 @@ private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBui
     ModDefaultBiomeFeatures.withForestCecropiaTrees(biomegenerationsettings$builder);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
-            .temperature(0.95F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
-                    .setWaterFogColor(993300).withSkyColor(4169700).withFoliageColor(103307)
-                    .withGrassColor(257610).setFogColor(14807295)
+            .temperature(0.9F).downfall(0.9F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
+                    .setWaterFogColor(993300).withSkyColor(4169700).withFoliageColor(5877296)
+                    .withGrassColor(7979098).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                     .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                     .build())

@@ -2,10 +2,7 @@ package com.brbiomesmod;
 
 import com.brbiomesmod.block.BlockClasses.*;
 import com.brbiomesmod.item.ModItems;
-import com.brbiomesmod.world.biomes.AmazonRainforestBiome;
-import com.brbiomesmod.world.biomes.AraucariaPlateauBiome;
-import com.brbiomesmod.world.biomes.CaatingaBiome;
-import com.brbiomesmod.world.biomes.PantanalBiome;
+import com.brbiomesmod.world.biomes.*;
 import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -51,6 +48,7 @@ public class BrazillianBiomesMod
         AraucariaPlateauBiome.register(eventBus);
         PantanalBiome.register(eventBus);
         CaatingaBiome.register(eventBus);
+        AtlanticForestBiome.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
