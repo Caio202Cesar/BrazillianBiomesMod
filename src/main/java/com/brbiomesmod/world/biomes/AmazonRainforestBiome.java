@@ -66,18 +66,12 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
             .temperature(0.95F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
-                    .setWaterFogColor(993300).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(103307)
+                    .setWaterFogColor(993300).withSkyColor(4169700).withFoliageColor(103307)
                     .withGrassColor(257610).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                     .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                     .build())
             .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
-}
-
-private static int getSkyColorWithTemperatureModifier(float temperature) {
-    float lvt_1_1_ = temperature / 3.0F;
-    lvt_1_1_ = MathHelper.clamp(lvt_1_1_, -1.0F, 1.0F);
-    return MathHelper.hsvToRGB(0.2460909F - lvt_1_1_ * 0.05F, 0.5F + lvt_1_1_ * 0.1F, 1.0F);
 }
 
 public static void register(IEventBus eventBus) {

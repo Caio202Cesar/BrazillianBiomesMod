@@ -57,22 +57,16 @@ private static Biome makeCaatingaBiome(final Supplier<ConfiguredSurfaceBuilder<?
     ModDefaultBiomeFeatures.withBullNettles(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withDisks(biomegenerationsettings$builder);
-
+    ModDefaultBiomeFeatures.withCacti(biomegenerationsettings$builder);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
             .temperature(2.0F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
-                    .setWaterFogColor(993300).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(14210767)
+                    .setWaterFogColor(993300).withSkyColor(8569325).withFoliageColor(14210767)
                     .withGrassColor(142107676).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                     .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                     .build())
             .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
-}
-
-private static int getSkyColorWithTemperatureModifier(float temperature) {
-    float lvt_1_1_ = temperature / 2.0F;
-    lvt_1_1_ = MathHelper.clamp(lvt_1_1_, -1.0F, 1.0F);
-    return MathHelper.hsvToRGB(0.2460909F - lvt_1_1_ * 0.05F, 0.5F + lvt_1_1_ * 0.1F, 1.0F);
 }
 
 public static void register(IEventBus eventBus) {

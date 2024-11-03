@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.gen.blockplacer.ColumnBlockPlacer;
 import net.minecraft.world.gen.blockplacer.DoublePlantBlockPlacer;
 import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
@@ -21,6 +22,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> BULL_NETTLES = register("bull_nettles",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.BULL_NETTLE_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
+    public static final ConfiguredFeature<?, ?> CAATINGA_CACTUS_PATCH = register("caatinga_cactus_patch", Feature.RANDOM_PATCH
+            .withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CACTUS),
+            new ColumnBlockPlacer(1, 2))).tries(10).preventProjection().build()));
+
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, key, configuredFeature);
@@ -38,6 +43,6 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState XAXIM = AraucariaPlateauBlocks.XAXIM_PLANT.get().getDefaultState();
         protected static final BlockState BULL_NETTLE = CaatingaBlocks.CNIDOSCOLUS_URENS.get().getDefaultState();
         protected static final BlockState BULL_NETTLE_FRUITS = CaatingaBlocks.CNIDOSCOLUS_URENS_FRUITING.get().getDefaultState();
-
+        protected static final BlockState CACTUS = Blocks.CACTUS.getDefaultState();
     }
 }

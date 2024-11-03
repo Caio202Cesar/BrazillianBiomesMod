@@ -66,18 +66,12 @@ public class PantanalBiome {
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.SWAMP).depth(depth).scale(scale)
                 .temperature(0.9F).downfall(0.7F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4757429)
-                        .setWaterFogColor(4765085).withSkyColor(getSkyColorWithTemperatureModifier(0.8F)).withFoliageColor(6403400)
+                        .setWaterFogColor(4765085).withSkyColor(8569325).withFoliageColor(6403400)
                         .withGrassColor(9942344).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
                 .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();
-    }
-
-    private static int getSkyColorWithTemperatureModifier(float temperature) {
-        float lvt_1_1_ = temperature / 3.0F;
-        lvt_1_1_ = MathHelper.clamp(lvt_1_1_, -1.0F, 1.0F);
-        return MathHelper.hsvToRGB(0.2460909F - lvt_1_1_ * 0.05F, 0.5F + lvt_1_1_ * 0.1F, 1.0F);
     }
 
     public static void register(IEventBus eventBus) {

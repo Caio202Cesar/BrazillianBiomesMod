@@ -53,4 +53,13 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withPitangaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PITANGA_TREES);
     }
+    public static void withCacti(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.CAATINGA_CACTUS_PATCH);
+    }
+    public static void withBrazilwoodTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BRAZILWOOD_TREES);
+    }
+    public static void withForestCecropiaTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.FOREST_CECROPIA_TREES);
+    }
 }
