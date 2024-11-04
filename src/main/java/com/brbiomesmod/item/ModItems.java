@@ -42,6 +42,15 @@ public class ModItems {
     public static final RegistryObject<Item> GUARANA_SEEDS = ITEMS.register("guarana_seeds",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
+    public static final RegistryObject<Item> BRAZILNUT_FRUIT = ITEMS.register("brazilnut_fruit",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> BRAZILNUT_SHELL = ITEMS.register("brazilnut_shell",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> BRAZILNUT_WITH_PELL = ITEMS.register("brazilnut_with_pell",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> PELLED_BRAZILNUT = ITEMS.register("pelled_brazilnut",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+
     public static final RegistryObject<Item> CASSAVA = ITEMS.register("cassava",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
@@ -49,6 +58,9 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> UMBU = ITEMS.register("umbu",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+
+    public static final RegistryObject<Item> CUPUACU = ITEMS.register("cupuacu",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> WOLF_APPLE = ITEMS.register("wolf_apple",

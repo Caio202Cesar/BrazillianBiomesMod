@@ -1,10 +1,7 @@
 package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.AcaiBunchBlock;
-import com.brbiomesmod.block.CassavaPlant;
-import com.brbiomesmod.block.ModLeaves;
-import com.brbiomesmod.block.ModLogs;
+import com.brbiomesmod.block.*;
 import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -32,6 +29,8 @@ public class AmazonRainforestBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> KAPOK_LEAVES = registerBlock("kapok_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> KAPOK_PLANKS = registerBlock("kapok_planks",
+            ModPlanks::new);
     public static final RegistryObject<Block> KAPOK_SAPLING = registerBlock("kapok_sapling",
             KapokSapling::new);
 
@@ -40,8 +39,11 @@ public class AmazonRainforestBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> LOPHANTERA_LEAVES = registerBlock("lophantera_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> LOPHANTERA_PLANKS = registerBlock("lophantera_planks",
+            ModPlanks::new);
     public static final RegistryObject<Block> LOPHANTERA_SAPLING = registerBlock("lophantera_sapling",
             LophanteraSapling::new);
+
 
     //Cupuacu and Guarana trunk is made of Jungle Log
     public static final RegistryObject<Block> CUPUACU_LEAVES = registerBlock("cupuacu_leaves",
@@ -59,6 +61,8 @@ public class AmazonRainforestBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILNUT_LEAVES = registerBlock("brazilnut_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> BRAZILNUT_PLANKS = registerBlock("brazilnut_planks",
+            ModPlanks::new);
     public static final RegistryObject<Block> BRAZILNUT_SAPLING = registerBlock("brazilnut_sapling",
             BrazilnutSapling::new);
 
@@ -77,6 +81,8 @@ public class AmazonRainforestBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> SHARINGA_LEAVES = registerBlock("sharinga_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> SHARINGA_PLANKS = registerBlock("sharinga_planks",
+            ModPlanks::new);
     public static final RegistryObject<Block> SHARINGA_SAPLING = registerBlock("sharinga_sapling",
             SharingaSapling::new);
 
