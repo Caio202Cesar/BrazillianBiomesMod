@@ -46,14 +46,6 @@ public class RestingaBlocks {
             CashewSapling::new);
 
 
-    public static final RegistryObject<Block> CECROPIA_LOG = registerBlock("cecropia_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CECROPIA_WOOD = registerBlock("cecropia_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> CECROPIA_LEAVES = registerBlock("cecropia_leaves",
-            ModLeaves::new);
-
-
     public static final RegistryObject<Block> IPOMAEA_PES_CAPRAE = registerBlock("ipomaea_pes_caprae",
             BeachFlower::new);
 

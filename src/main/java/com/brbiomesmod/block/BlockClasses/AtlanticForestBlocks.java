@@ -75,8 +75,18 @@ public class AtlanticForestBlocks {
             CambuciSapling::new);
 
 
+    public static final RegistryObject<Block> CECROPIA_LOG = registerBlock("cecropia_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CECROPIA_WOOD = registerBlock("cecropia_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> CECROPIA_LEAVES = registerBlock("cecropia_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CECROPIA_SILVER_SAPLING = registerBlock("cecropia_silver_sapling",
+            SilverCecropiaSapling::new);
     public static final RegistryObject<Block> CECROPIA_SILVER_LEAVES = registerBlock("cecropia_silver_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> CECROPIA_SAPLING = registerBlock("cecropia_sapling",
+            CecropiaSapling::new);
 
 
     public static final RegistryObject<Block> MANACA_DA_SERRA_LOG = registerBlock("manaca_da_serra_log",
@@ -121,6 +131,30 @@ public class AtlanticForestBlocks {
             PitangaSapling::new);
 
 
+    public static final RegistryObject<Block> PINK_PEROBA_LOG = registerBlock("pink_peroba_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PINK_PEROBA_LEAVES = registerBlock("pink_peroba_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PINK_PEROBA_SAPLING = registerBlock("pink_peroba_sapling",
+            PinkPerobaSapling::new);
+
+
+    public static final RegistryObject<Block> JEQUITIBA_LOG = registerBlock("jequitiba_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> JEQUITIBA_LEAVES = registerBlock("jequitiba_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> JEQUITIBA_SAPLING = registerBlock("jequitiba_sapling",
+            JequitibaSapling::new);
+
+
+    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LOG = registerBlock("brazillian_rosewood_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LEAVES = registerBlock("brazillian_rosewood_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_SAPLING = registerBlock("brazillian_rosewood_sapling",
+            BrazillianRosewoodSapling::new);
+
+
     public static final RegistryObject<Block> PASSION_FRUIT_VINE = registerBlock("passion_fruit_vine",
             PassionFruitVine::new);
     public static final RegistryObject<Block> PASSION_FRUIT_FLOWERING_VINE = registerBlock("passion_fruit_flowering_vine",
@@ -129,24 +163,6 @@ public class AtlanticForestBlocks {
             AristolochiaVine::new);
     public static final RegistryObject<Block> TILLANDSIA_STRICTA = registerBlock("tillandsia_stricta",
             EpiphytePlant::new);
-
-
-    public static final RegistryObject<Block> PINK_PEROBA_LOG = registerBlock("pink_peroba_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> PINK_PEROBA_LEAVES = registerBlock("pink_peroba_leaves",
-            ModLeaves::new);
-
-
-    public static final RegistryObject<Block> JEQUITIBA_LOG = registerBlock("jequitiba_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> JEQUITIBA_LEAVES = registerBlock("jequitiba_leaves",
-            ModLeaves::new);
-
-
-    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LOG = registerBlock("brazillian_rosewood_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LEAVES = registerBlock("brazillian_rosewood_leaves",
-            ModLeaves::new);
 
 
 

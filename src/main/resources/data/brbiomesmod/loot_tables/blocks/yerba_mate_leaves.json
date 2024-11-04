@@ -1,6 +1,5 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "brbiomesmod:blocks/yerba_mate_leaves",
   "pools": [
     {
       "rolls": 2,

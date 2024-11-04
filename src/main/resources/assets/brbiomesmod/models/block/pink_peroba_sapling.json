@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/pink_peroba_sapling",
+    "particle": "brbiomesmod:block/pink_peroba_sapling"
+  }
+}

@@ -1,6 +1,5 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "brbiomesmod:blocks/parana_pine_log",
   "pools": [
     {
       "rolls": 1,

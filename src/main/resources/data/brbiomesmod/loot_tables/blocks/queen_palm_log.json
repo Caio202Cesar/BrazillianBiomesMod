@@ -1,6 +1,5 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "brbiomesmod:blocks/queen_palm_log",
   "pools": [
     {
       "rolls": 1.0,

@@ -126,14 +126,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PERUVIAN_PEPPER_TREE = register("peruvian_pepper_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SCHINUS_LOG),
                     new SimpleBlockStateProvider(States.PERUVIAN_PEPPER_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new BlobFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PERUVIAN_PEPPER_FANCY_TREE = register("peruvian_pepper_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SCHINUS_LOG),
                     new SimpleBlockStateProvider(States.PERUVIAN_PEPPER_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    new DarkOakFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new DarkOakTrunkPlacer(3, 4, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Brazillian Pepper Tree
@@ -425,8 +425,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState IMBUIA_LOG = AraucariaPlateauBlocks.IMBUIA_LOG.get().getDefaultState();
         protected static final BlockState IMBUIA_LEAVES = AraucariaPlateauBlocks.IMBUIA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CECROPIA_LOG = RestingaBlocks.CECROPIA_LOG.get().getDefaultState();
-        protected static final BlockState CECROPIA_LEAVES = RestingaBlocks.CECROPIA_LEAVES.get().getDefaultState();
+        protected static final BlockState CECROPIA_LOG = AtlanticForestBlocks.CECROPIA_LOG.get().getDefaultState();
+        protected static final BlockState CECROPIA_LEAVES = AtlanticForestBlocks.CECROPIA_LEAVES.get().getDefaultState();
         protected static final BlockState SILVER_CECROPIA_LEAVES = AtlanticForestBlocks.CECROPIA_SILVER_LEAVES.get().getDefaultState();
 
         protected static final BlockState PINK_PEROBA_LOG = AtlanticForestBlocks.PINK_PEROBA_LOG.get().getDefaultState();

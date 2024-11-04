@@ -1,6 +1,5 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "brbiomesmod:blocks/kapok_log",
   "pools": [
     {
       "rolls": 1,
