@@ -53,6 +53,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> CASSAVA = ITEMS.register("cassava",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> CASSAVA_SEEDS = ITEMS.register("cassava_seeds",
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
     public static final RegistryObject<Item> ACAI_BERRIES = ITEMS.register("acai_berries",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));

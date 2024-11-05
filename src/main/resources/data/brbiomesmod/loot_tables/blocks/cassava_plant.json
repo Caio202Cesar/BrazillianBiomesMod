@@ -16,8 +16,19 @@
               }
             }
           ]
-        }
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brbiomesmod:cassava_seeds",
+          "conditions": [
+            {
+              "block": "brbiomesmod:cassava_plant",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
       ]
     }
   ]
-}
+}]}

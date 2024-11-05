@@ -173,6 +173,8 @@ public class AtlanticForestBlocks {
             AristolochiaVine::new);
     public static final RegistryObject<Block> TILLANDSIA_STRICTA = registerBlock("tillandsia_stricta",
             EpiphytePlant::new);
+    public static final RegistryObject<Block> CATTLEYA_PURPURATA = registerBlock("cattleya_purpurata",
+            OrchidPlant::new);
 
 
 
