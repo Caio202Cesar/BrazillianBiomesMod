@@ -26,7 +26,7 @@ public class DunasRestingaBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> DUNAS_RESTINGA = BIOMES.register("dunas_restinga",
-            () -> makeDunasRestingaBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.1f, 0.3f));
+            () -> makeDunasRestingaBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.1f, 0.4f));
 
 
     private static Biome makeDunasRestingaBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
