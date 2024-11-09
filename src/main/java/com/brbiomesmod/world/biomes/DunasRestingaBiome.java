@@ -57,11 +57,12 @@ public class DunasRestingaBiome {
         DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withTrumpetTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withRestingaTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withCashewTrees(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
                 .temperature(1.0F).downfall(0.7F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4757429)
-                        .setWaterFogColor(4765085).withSkyColor(4169700).withFoliageColor(5877296)
-                        .withGrassColor(7979098).setFogColor(14807295)
+                        .setWaterFogColor(4765085).withSkyColor(4169700).withFoliageColor(4110351)
+                        .withGrassColor(6604607).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())

@@ -34,13 +34,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CASHEW_SHRUB = register("cashew_shrub",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASHEW_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.CASHEW_LEAVES),
-                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new BushFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CASHEW_TREE = register("cashew_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASHEW_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.CASHEW_LEAVES),
-                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new BushFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0), 3),
                     new ForkyTrunkPlacer(4, 2, 0), //replace for straight if it goes bad
                     new TwoLayerFeature(1, 0, 1))).build()));
 
@@ -467,13 +467,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> CASHEW_TREES = register("cashew_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CASHEW_TREE.withChance(0.2F)),
                     CASHEW_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> TRUMPET_TREES = register("trumpet_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_IPE_TREE.withChance(0.025641026F),
                     PINK_IPE_TREE.withChance(0.30769232F), PURPLE_IPE_TREE.withChance(0.33333334F)), YELLOW_IPE_FANCY_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                            .configure(new AtSurfaceWithExtraConfig(1, 0.01F, 0))));
+                            .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
     public static final ConfiguredFeature<?, ?> PARANA_PINE_TREES = register("parana_pine_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PARANA_PINE_TREE_YOUNG.withChance(0.1F)),
@@ -493,23 +493,28 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> CAATINGA_TREES = register("caatinga_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(UMBU_TREE.withChance(0.2F),
                             JUA_TREE.withChance(0.1F)), BLACK_JUREMA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));;
 
     public static final ConfiguredFeature<?, ?> RESTINGA_TREES = register("restinga_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.1F),
-                            CASHEW_TREE.withChance(0.1F), MANGABA_TREE.withChance(0.1F)), CASHEW_SHRUB))
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                            .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.1F)),
+                    CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> PITANGA_TREES = register("pitanga_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_PITANGA_TREE.withChance(0.02F)),
                     PITANGA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> PINK_PEEPER_TREES = register("pink_peeper_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PERUVIAN_PEPPER_FANCY_TREE.withChance(0.01F),
+                            PERUVIAN_PEPPER_TREE.withChance(0.1F), BRAZILLIAN_PEPPER_BIG_TREE.withChance(0.2F)), BRAZILLIAN_PEPPER_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                            .configure(new AtSurfaceWithExtraConfig(0, 0.05F, 1))));
+
     public static final ConfiguredFeature<?, ?> FOREST_CECROPIA_TREES = register("cecropia_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.2F)),
                     SILVER_CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_UPPER_TREES = register("atlantic_forest_upper_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_PEROBA_TREE.withChance(0.3F),

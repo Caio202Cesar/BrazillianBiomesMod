@@ -23,6 +23,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withRestingaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.RESTINGA_TREES);
     }
+    public static void withCashewTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CASHEW_TREES);
+    }
     public static void withTrumpetTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TRUMPET_TREES);
     }
@@ -63,6 +66,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.FOREST_CECROPIA_TREES);
     }
     public static void withAtlanticForestUpperTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ATLANTIC_FOREST_UPPER_TREES);
+    }
+    public static void withPinkPeeperTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ATLANTIC_FOREST_UPPER_TREES);
     }
 }
