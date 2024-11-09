@@ -1,0 +1,51 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "minecraft:block/vitoria_regia"
+      },
+      {
+        "model": "minecraft:block/vitoria_regia",
+        "y": 90
+      },
+      {
+        "model": "minecraft:block/vitoria_regia",
+        "y": 180
+      },
+      {
+        "model": "minecraft:block/vitoria_regia",
+        "y": 270
+      },
+      {
+        "model": "minecraft:block/vitoria_regia_pink_flower"
+      },
+      {
+        "model": "minecraft:block/vitoria_regia_pink_flower",
+        "y": 90
+      },
+      {
+        "model": "minecraft:block/vitoria_regia_pink_flower",
+        "y": 180
+      },
+      {
+        "model": "minecraft:block/vitoria_regia_pink_flower",
+        "y": 270
+      },
+      {
+        "model": "minecraft:block/vitoria_regia_white_flower"
+      },
+      {
+        "model": "minecraft:block/vitoria_regia_white_flower",
+        "y": 90
+      },
+      {
+        "model": "minecraft:block/vitoria_regia_white_flower",
+        "y": 180
+      },
+      {
+        "model": "minecraft:block/vitoria_regia_white_flower",
+        "y": 270
+      }
+    ]
+  }
+}

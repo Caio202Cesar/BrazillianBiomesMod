@@ -90,6 +90,9 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> CASSAVA_PLANT = registerBlock("cassava_plant",
             CassavaPlant::new);
 
+    public static final RegistryObject<Block> VITORIA_REGIA = registerBlock("vitoria_regia",
+            VitoriaRegiaBlock::new);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
