@@ -20,7 +20,7 @@ public class ModBiomeGeneration {
         addBiome(PantanalBiome.PANTANAL.get(), BiomeManager.BiomeType.WARM, 14, OVERWORLD, HOT, SPARSE, SAVANNA, RARE, WET, SWAMP,
                 PLAINS, LUSH);
         addBiome(CaatingaBiome.CAATINGA.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, SPARSE, SAVANNA, DRY, SANDY);
-        addBiome(DunasRestingaBiome.DUNAS_RESTINGA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, HOT, SPARSE, DENSE, DRY, SANDY);
+        addBiome(DunasRestingaBiome.DUNAS_RESTINGA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, HOT, DENSE, DRY, SANDY);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {
