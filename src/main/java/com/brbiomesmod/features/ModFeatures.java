@@ -1,5 +1,6 @@
 package com.brbiomesmod.features;
 
+import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
 import com.brbiomesmod.block.BlockClasses.AraucariaPlateauBlocks;
 import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
 import net.minecraft.block.BlockState;
@@ -18,6 +19,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> PATCH_XAXIM_PLANT = register("patch_xaxim_plant",
             Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.XAXIM),
                     new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
+    public static final ConfiguredFeature<?, ?> PATCH_CASSAVA_PLANT = register("patch_cassava_plant",
+            Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASSAVA),
+                            new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
     public static final ConfiguredFeature<?, ?> BULL_NETTLES = register("bull_nettles",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.BULL_NETTLE_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
@@ -41,6 +46,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
     public static final class States {
         protected static final BlockState XAXIM = AraucariaPlateauBlocks.XAXIM_PLANT.get().getDefaultState();
+        protected static final BlockState CASSAVA = AmazonRainforestBlocks.CASSAVA_PLANT.get().getDefaultState();
         protected static final BlockState BULL_NETTLE = CaatingaBlocks.CNIDOSCOLUS_URENS.get().getDefaultState();
         protected static final BlockState BULL_NETTLE_FRUITS = CaatingaBlocks.CNIDOSCOLUS_URENS_FRUITING.get().getDefaultState();
         protected static final BlockState CACTUS = Blocks.CACTUS.getDefaultState();
