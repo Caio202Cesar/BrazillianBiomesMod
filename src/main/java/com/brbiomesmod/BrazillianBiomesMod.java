@@ -50,6 +50,7 @@ public class BrazillianBiomesMod
         CaatingaBiome.register(eventBus);
         AtlanticForestBiome.register(eventBus);
         DunasRestingaBiome.register(eventBus);
+        PampasBiome.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
