@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:parana_pine_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:parana_pine_planks",
+    "count": 4
+  }
+}

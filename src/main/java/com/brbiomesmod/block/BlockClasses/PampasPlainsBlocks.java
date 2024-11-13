@@ -3,6 +3,7 @@ package com.brbiomesmod.block.BlockClasses;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.ModLeaves;
 import com.brbiomesmod.block.ModLogs;
+import com.brbiomesmod.block.ModPlanks;
 import com.brbiomesmod.block.Saplings.BrazillianPepperSapling;
 import com.brbiomesmod.block.Saplings.PeruvianPepperSapling;
 import com.brbiomesmod.item.ModItemGroup;
@@ -28,6 +29,8 @@ public class PampasPlainsBlocks {
 
     public static final RegistryObject<Block> SCHINUS_LOG = registerBlock("schinus_log",
             ModLogs::new);
+    public static final RegistryObject<Block> SCHINUS_PLANKS = registerBlock("schinus_planks",
+            ModPlanks::new);
     public static final RegistryObject<Block> BRAZILLIAN_PEPPER_LEAVES = registerBlock("brazillian_pepper_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> PERUVIAN_PEPPER_LEAVES = registerBlock("peruvian_pepper_leaves",

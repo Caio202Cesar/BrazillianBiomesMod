@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:kapok_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:kapok_planks",
+    "count": 4
+  }
+}

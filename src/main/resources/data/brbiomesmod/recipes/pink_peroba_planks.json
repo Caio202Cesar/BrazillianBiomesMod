@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:pink_peroba_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:pink_peroba_planks",
+    "count": 4
+  }
+}

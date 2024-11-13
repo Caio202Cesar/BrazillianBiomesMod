@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:cambuci_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:cambuci_planks",
+    "count": 4
+  }
+}
