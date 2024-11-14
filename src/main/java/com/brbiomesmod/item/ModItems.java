@@ -18,7 +18,7 @@ public class ModItems {
     public static final RegistryObject<Item> CASHEW_APPLE = ITEMS.register("cashew_apple",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CASHEW_APPLE)));
     public static final RegistryObject<Item> CASHEWNUT = ITEMS.register("cashewnut",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CASHEWNUT)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> COOKED_CASHEWNUT = ITEMS.register("cooked_cashewnut",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COOKED_CASHEWNUT)));
 

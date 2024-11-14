@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "brbiomesmod:parana_pine_cone"
+  },
+  "result": "brbiomesmod:parana_pine_cooked_pinenuts",
+  "experience": 0.35,
+  "cookingtime": 100
+}
