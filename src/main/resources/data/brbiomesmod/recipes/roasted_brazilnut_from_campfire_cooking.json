@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "brbiomesmod:pelled_brazilnut"
+  },
+  "result": "brbiomesmod:roasted_brazilnut",
+  "experience": 0.35,
+  "cookingtime": 600
+}

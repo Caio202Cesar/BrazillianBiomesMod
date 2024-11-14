@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "brbiomesmod:pelled_brazilnut"
+  },
+  "result": "brbiomesmod:roasted_brazilnut",
+  "experience": 0.35,
+  "cookingtime": 100
+}

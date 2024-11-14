@@ -20,5 +20,6 @@ public class BrbiomesAtlanticForestBlocks$BlocksClientSideHandler {
         PassionFruitVine.registerRenderLayer();
         AristolochiaVine.registerRenderLayer();
         EpiphytePlant.registerRenderLayer();
+        OrchidPlant.registerRenderLayer();
     }
 }

@@ -334,7 +334,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JEQUITIBA_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.JEQUITIBA_LEAVES),
                     new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new MegaJungleTrunkPlacer(10, 20, 4),
+                    new MegaJungleTrunkPlacer(13, 20, 4),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Brazillian Rosewood
