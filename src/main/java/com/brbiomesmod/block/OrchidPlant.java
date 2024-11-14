@@ -25,6 +25,8 @@ public class OrchidPlant extends BushBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.CATTLEYA_PURPURATA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.LADY_ACKLAND_CATTLEYA.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

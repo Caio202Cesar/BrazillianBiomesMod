@@ -175,6 +175,8 @@ public class AtlanticForestBlocks {
             EpiphytePlant::new);
     public static final RegistryObject<Block> CATTLEYA_PURPURATA = registerBlock("cattleya_purpurata",
             OrchidPlant::new);
+    public static final RegistryObject<Block> LADY_ACKLAND_CATTLEYA = registerBlock("cattleya_lady_ackland",
+            OrchidPlant::new);
 
 
 

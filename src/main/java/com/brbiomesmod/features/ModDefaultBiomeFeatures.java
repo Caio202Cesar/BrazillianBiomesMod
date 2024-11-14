@@ -74,4 +74,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withCassavaPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_CASSAVA_PLANT);
     }
+    public static void withAtlanticForestOrchids(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.ATLANTIC_FOREST_ORCHIDS);
+    }
 }
