@@ -22,6 +22,8 @@ public class ModBiomeGeneration {
         addBiome(CaatingaBiome.CAATINGA.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, SPARSE, SAVANNA, DRY, SANDY);
         addBiome(DunasRestingaBiome.DUNAS_RESTINGA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, HOT, DENSE, SANDY);
         addBiome(PampasBiome.PAMPAS.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, PLAINS);
+        addBiome(CerradoBiome.CERRADO.get(), BiomeManager.BiomeType.WARM, 25, HOT, OVERWORLD, SPARSE, SAVANNA);
+
 
     }
 
