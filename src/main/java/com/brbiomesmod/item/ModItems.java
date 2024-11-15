@@ -67,6 +67,12 @@ public class ModItems {
     public static final RegistryObject<Item> UMBU = ITEMS.register("umbu",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.UMBU)));
 
+    public static final RegistryObject<Item> MANGABA_FRUITS = ITEMS.register("mangaba_fruits",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.MANGABA)));
+
+    public static final RegistryObject<Item> PINK_PEEPER = ITEMS.register("pink_peeper",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+
     public static final RegistryObject<Item> CUPUACU = ITEMS.register("cupuacu",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CUPUACU)));
 

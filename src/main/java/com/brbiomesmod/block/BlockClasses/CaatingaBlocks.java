@@ -79,6 +79,8 @@ public class CaatingaBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> MANGABA_LOG = registerBlock("mangaba_log",
             ModLogs::new);
+    public static final RegistryObject<Block> MANGABA_PLANKS = registerBlock("mangaba_planks",
+            ModPlanks::new);
     public static final RegistryObject<Block> MANGABA_SAPLING = registerBlock("mangaba_sapling",
             MangabaSapling::new);
 

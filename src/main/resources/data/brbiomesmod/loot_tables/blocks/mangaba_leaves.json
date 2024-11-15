@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:peruvian_pepper_sapling",
+          "name": "brbiomesmod:mangaba_sapling",
           "weight": 1,
           "functions": [
             {
@@ -34,8 +34,8 @@
         },
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:pink_peeper",
-          "weight": 15,
+          "name": "brbiomesmod:mangaba_fruits",
+          "weight": 12,
           "functions": [
             {
               "function": "set_count",

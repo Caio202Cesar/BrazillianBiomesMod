@@ -34,7 +34,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:brazilnut",
+          "name": "brbiomesmod:brazilnut_fruit",
           "weight": 10,
           "functions": [
             {

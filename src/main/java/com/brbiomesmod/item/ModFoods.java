@@ -28,4 +28,6 @@ public class ModFoods extends Foods {
     public static final Food CUPUACU = (new Food.Builder()).hunger(6).saturation(0.6F).build();
     public static final Food WOLF_APPLE = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food PINEAPPLE_GUAVA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food MANGABA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+
 }
