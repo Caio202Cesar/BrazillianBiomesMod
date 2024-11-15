@@ -1,6 +1,7 @@
 package com.brbiomesmod.item;
 
 import com.brbiomesmod.BrazillianBiomesMod;
+import com.brbiomesmod.item.custom.BrazilnutFruit;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -43,7 +44,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> BRAZILNUT_FRUIT = ITEMS.register("brazilnut_fruit",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new BrazilnutFruit(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> BRAZILNUT_SHELL = ITEMS.register("brazilnut_shell",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> BRAZILNUT_WITH_PELL = ITEMS.register("brazilnut_with_pell",
