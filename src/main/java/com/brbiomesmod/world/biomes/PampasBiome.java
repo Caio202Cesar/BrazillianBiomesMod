@@ -55,6 +55,7 @@ public class PampasBiome {
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPinkPeeperTrees(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withPitangaTrees(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(depth).scale(scale)
                 .temperature(0.8F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)

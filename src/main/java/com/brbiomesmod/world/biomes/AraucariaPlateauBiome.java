@@ -59,6 +59,7 @@ private static Biome makeAraucariaPlateauBiome(final Supplier<ConfiguredSurfaceB
     ModDefaultBiomeFeatures.withYerbaMateTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withFeijoaShrub(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withXaximPlant(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withPitangaTrees(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withEmeraldOre(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
