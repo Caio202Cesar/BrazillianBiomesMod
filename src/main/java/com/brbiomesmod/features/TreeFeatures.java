@@ -337,13 +337,29 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new MegaJungleTrunkPlacer(13, 20, 4),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
-    //Brazillian Rosewood
+    //Brazillian Rosewood Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_ROSEWOOD_TREE = register("brazillian_rosewood_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_ROSEWOOD_LOG),
                     new SimpleBlockStateProvider(States.BRAZILLIAN_ROSEWOOD_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new ForkyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
+    //Jabuticaba Trees
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FRUITING_JABUTICABA_TREE = register("fruiting_jabuticaba_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_FRUITING_LOG),
+                    new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new DarkOakTrunkPlacer(6, 2, 1),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FLOWERING_JABUTICABA_TREE = register("flowering_jabuticaba_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_FLOWERING_LOG),
+                    new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new DarkOakTrunkPlacer(6, 2, 1),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     public static final class States {
 
@@ -431,6 +447,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState BRAZILLIAN_ROSEWOOD_LOG = AtlanticForestBlocks.BRAZILLIAN_ROSEWOOD_LOG.get().getDefaultState();
         protected static final BlockState BRAZILLIAN_ROSEWOOD_LEAVES = AtlanticForestBlocks.BRAZILLIAN_ROSEWOOD_LEAVES.get().getDefaultState();
+
+        protected static final BlockState JABUTICABA_FRUITING_LOG = AtlanticForestBlocks.JABUTICABA_FRUITING_LOG.get().getDefaultState();
+        protected static final BlockState JABUTICABA_FLOWERING_LOG = AtlanticForestBlocks.JABUTICABA_FLOWERING_LOG.get().getDefaultState();
+        protected static final BlockState JABUTICABA_LEAVES = AtlanticForestBlocks.JABUTICABA_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
@@ -499,6 +519,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     PITANGA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(3, 0.0F, 0))));
 
+    public static final ConfiguredFeature<?, ?> PAMPAS_PITANGA_TREES = register("pampas_pitanga_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_PITANGA_TREE.withChance(0.02F)),
+                    PITANGA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(0, 0.01F, 1))));
+
     public static final ConfiguredFeature<?, ?> PINK_PEEPER_TREES = register("pink_peeper_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PERUVIAN_PEPPER_FANCY_TREE.withChance(0.01F),
                             PERUVIAN_PEPPER_TREE.withChance(0.1F), BRAZILLIAN_PEPPER_BIG_TREE.withChance(0.2F)), BRAZILLIAN_PEPPER_TREE))
@@ -519,6 +544,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.02F)),
                     WOLF_APPLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> JABUTICABA_TREES = register("jabuticaba_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FLOWERING_JABUTICABA_TREE.withChance(0.4F)),
+                    FRUITING_JABUTICABA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String p_243968_0_, ConfiguredFeature<FC, ?> p_243968_1_) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, p_243968_0_, p_243968_1_);

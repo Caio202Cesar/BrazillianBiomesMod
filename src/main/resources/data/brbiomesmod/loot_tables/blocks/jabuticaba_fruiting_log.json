@@ -3,7 +3,7 @@
   "random_sequence": "brbiomesmod:blocks/jabuticaba_fruiting_log",
   "pools": [
     {
-      "rolls": 2,
+      "rolls": 3,
       "entries": [
         {
           "type": "minecraft:item",

@@ -62,8 +62,10 @@
   "block.brbiomesmod.cattleya_lady_ackland": "Lady Ackland's Cattleya",
   "block.brbiomesmod.cattleya_purpurata": "Cattleya Purpurata",
   "block.brbiomesmod.cecropia_leaves": "Cecropia Leaves",
+  "block.brbiomesmod.cecropia_sapling": "Cecropia Sapling",
   "block.brbiomesmod.cecropia_log": "Cecropia Log",
   "block.brbiomesmod.cecropia_silver_leaves": "Silver Cecropia Leaves",
+  "block.brbiomesmod.cecropia_silver_sapling": "Silver Cecropia Sapling",
   "block.brbiomesmod.cecropia_wood": "Cecropia Wood",
   "block.brbiomesmod.cupuacu_leaves": "Cupuacu Leaves",
   "block.brbiomesmod.cupuacu_sapling": "Cupuacu Sapling",
@@ -137,6 +139,7 @@
   "block.brbiomesmod.sharinga_leaves": "Sharinga Leaves",
   "block.brbiomesmod.sharinga_log": "Sharinga Log",
   "block.brbiomesmod.sharinga_sapling": "Sharinga Sapling",
+  "block.brbiomesmod.sharinga_planks": "Sharinga Planks",
   "block.brbiomesmod.tourmaline_paraiba_block": "Tourmaline-Paraiba Block",
   "block.brbiomesmod.tourmaline_paraiba_ore": "Tourmaline-Paraiba Ore",
   "block.brbiomesmod.umbu_leaves": "Umbu Leaves",
@@ -174,5 +177,8 @@
   "biome.brbiomesmod.atlantic_forest": "Atlantic Forest",
   "biome.brbiomesmod.araucaria_plateau": "Araucaria Plateau",
   "biome.brbiomesmod.caatinga_shrubland": "Caatinga Shrubland",
-  "biome.brbiomesmod.pantanal": "Pantanal"
+  "biome.brbiomesmod.pantanal": "Pantanal",
+  "biome.brbiomesmod.pampas": "Pampas",
+  "biome.brbiomesmod.dunas_restinga": "Dunas Restinga",
+  "biome.brbiomesmod.cerrado": "Cerrado"
 }

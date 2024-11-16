@@ -47,20 +47,19 @@ public class AtlanticForestBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> JABUTICABA_LEAVES = registerBlock("jabuticaba_leaves",
             ModLeaves::new);
-
-
-    public static final RegistryObject<Block> QUEEN_PALM_LOG = registerBlock("queen_palm_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> QUEEN_PALM_WOOD = registerBlock("queen_palm_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> QUEEN_PALM_PLANKS = registerBlock("queen_palm_planks",
+    public static final RegistryObject<Block> JABUTICABA_PLANKS = registerBlock("jabuticaba_log",
             ModPlanks::new);
-    public static final RegistryObject<Block> QUEEN_PALM_FROND = registerBlock("queen_palm_frond",
-            ModLeaves::new);
+    public static final RegistryObject<Block> JABUTICABA_SAPLING = registerBlock("jabuticaba_sapling",
+            JabuticabaSapling::new);
 
 
-    public static final RegistryObject<Block> JUSSARA_FROND = registerBlock("jussara_frond",
-            ModLeaves::new);
+    //public static final RegistryObject<Block> QUEEN_PALM_LOG = registerBlock("queen_palm_log", ModLogs::new);
+    //public static final RegistryObject<Block> QUEEN_PALM_WOOD = registerBlock("queen_palm_wood", ModLogs::new);
+    //public static final RegistryObject<Block> QUEEN_PALM_PLANKS = registerBlock("queen_palm_planks", ModPlanks::new);
+    //public static final RegistryObject<Block> QUEEN_PALM_FROND = registerBlock("queen_palm_frond", ModLeaves::new);
+
+
+    //public static final RegistryObject<Block> JUSSARA_FROND = registerBlock("jussara_frond", ModLeaves::new);
 
 
     public static final RegistryObject<Block> CAMBUCI_LOG = registerBlock("cambuci_log",

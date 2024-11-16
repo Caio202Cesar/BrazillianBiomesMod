@@ -56,6 +56,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withPitangaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PITANGA_TREES);
     }
+    public static void withPampasPitangaTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PAMPAS_PITANGA_TREES);
+    }
     public static void withCacti(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.CAATINGA_CACTUS_PATCH);
     }
@@ -79,5 +82,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     }
     public static void withCerradoTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CERRADO_TREES);
+    }
+    public static void withJabuticabaTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.JABUTICABA_TREES);
     }
 }

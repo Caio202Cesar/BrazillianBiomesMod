@@ -67,14 +67,10 @@ public class AmazonRainforestBlocks {
             BrazilnutSapling::new);
 
 
-    public static final RegistryObject<Block> PALMITO_LOG = registerBlock("palmito_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> PALMITO = registerBlock("palmito",
-            ModLogs::new);
-    public static final RegistryObject<Block> ACAI_FROND = registerBlock("acai_frond",
-            ModLeaves::new);
-    public static final RegistryObject<Block> ACAI_BUNCH = registerBlock("acai_bunch",
-            AcaiBunchBlock::new);
+    //public static final RegistryObject<Block> PALMITO_LOG = registerBlock("palmito_log", ModLogs::new);
+    //public static final RegistryObject<Block> PALMITO = registerBlock("palmito", ModLogs::new);
+    //public static final RegistryObject<Block> ACAI_FROND = registerBlock("acai_frond", ModLeaves::new);
+    //public static final RegistryObject<Block> ACAI_BUNCH = registerBlock("acai_bunch", AcaiBunchBlock::new);
 
 
     public static final RegistryObject<Block> SHARINGA_LOG = registerBlock("sharinga_log",
@@ -90,8 +86,7 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> CASSAVA_PLANT = registerBlock("cassava_plant",
             CassavaPlant::new);
 
-    public static final RegistryObject<Block> VITORIA_REGIA = registerBlock("vitoria_regia",
-            VitoriaRegiaBlock::new);
+    //public static final RegistryObject<Block> VITORIA_REGIA = registerBlock("vitoria_regia", VitoriaRegiaBlock::new);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

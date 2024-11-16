@@ -61,8 +61,7 @@ public class ModItems {
     public static final RegistryObject<Item> CASSAVA_SEEDS = ITEMS.register("cassava_seeds",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
-    public static final RegistryObject<Item> ACAI_BERRIES = ITEMS.register("acai_berries",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    //public static final RegistryObject<Item> ACAI_BERRIES = ITEMS.register("acai_berries", () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> UMBU = ITEMS.register("umbu",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.UMBU)));
@@ -83,7 +82,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> JABUTICABA = ITEMS.register("jabuticaba",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.JABUTICABA)));
 
     public static final RegistryObject<Item> PINEAPPLE_GUAVA = ITEMS.register("pineapple_guava",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.PINEAPPLE_GUAVA)));
