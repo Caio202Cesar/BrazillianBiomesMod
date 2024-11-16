@@ -23,6 +23,8 @@ public class ModBiomeGeneration {
         addBiome(DunasRestingaBiome.DUNAS_RESTINGA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, HOT, DENSE, SANDY);
         addBiome(PampasBiome.PAMPAS.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, PLAINS);
         addBiome(CerradoBiome.CERRADO.get(), BiomeManager.BiomeType.WARM, 25, HOT, OVERWORLD, SPARSE, SAVANNA);
+        addBiome(RestingaBeachBiome.RESTINGA_BEACH.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, HOT, BEACH, SANDY);
+
 
 
     }
