@@ -5,6 +5,7 @@ import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.pathfinding.PathNodeType;
@@ -35,39 +36,14 @@ public class BullNettlePlant extends BushBlock {
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
         return state.matchesBlock(Blocks.GRASS_BLOCK) || state.matchesBlock(Blocks.DIRT)
                 || state.matchesBlock(Blocks.COARSE_DIRT) || state.matchesBlock(Blocks.PODZOL)
-                || state.matchesBlock(Blocks.FARMLAND) || state.matchesBlock(Blocks.RED_SAND);
+                || state.matchesBlock(Blocks.FARMLAND) || state.matchesBlock(Blocks.RED_SAND)
+                || state.matchesBlock(Blocks.SAND);
     }
 
     //Plant harmful effects
-    @Override
-    public void onEntityWalk(World worldIn, BlockPos pos, Entity entityIn) {
-        super.onEntityWalk(worldIn, pos, entityIn);
-
-    }
-
     @SuppressWarnings("deprecation")
-    @Override
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player,
-                                             Hand handIn, BlockRayTraceResult hit) {
-        if(!worldIn.isRemote()) {
-            if(handIn == Hand.MAIN_HAND) {
-                System.out.println("I right-clicked a bull-nettle plant. Called for the Main Hand.");
-            }
-            if(handIn == Hand.OFF_HAND) {
-                System.out.println("I right-clicked a bull-nettle plant. Called for the Off Hand.");
-            }
-
-        return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
-    }
-        return null;
-    }
-
-    @SuppressWarnings("deprecation")
-    @Override
-    public void onBlockClicked(BlockState state, World worldIn, BlockPos pos, PlayerEntity player) {
-        if(!worldIn.isRemote()) {
-            System.out.println("I left-clicked a bull-nettle plant.");
-        }
+    public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {
+        entityIn.attackEntityFrom(DamageSource.CACTUS, 3.0F);
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

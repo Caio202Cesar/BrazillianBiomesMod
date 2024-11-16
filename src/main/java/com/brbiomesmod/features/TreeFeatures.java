@@ -34,7 +34,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CASHEW_TREE = register("cashew_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASHEW_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.CASHEW_LEAVES),
-                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new BushFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0), 3),
                     new ForkyTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
