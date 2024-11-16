@@ -26,8 +26,11 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withCashewTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CASHEW_TREES);
     }
-    public static void withTrumpetTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.TRUMPET_TREES);
+    public static void withForestTrumpetTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.FOREST_TRUMPET_TREES);
+    }
+    public static void withSavannaTrumpetTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SAVANNA_TRUMPET_TREES);
     }
     public static void withCambuciTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CAMBUCI_TREE);

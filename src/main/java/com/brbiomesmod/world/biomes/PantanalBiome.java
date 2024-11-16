@@ -57,7 +57,7 @@ public class PantanalBiome {
         DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTrumpetTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withSavannaTrumpetTrees(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSwampVegetation(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withTreesInWater(biomegenerationsettings$builder);

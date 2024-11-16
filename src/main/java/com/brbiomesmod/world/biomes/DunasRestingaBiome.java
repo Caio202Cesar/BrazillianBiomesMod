@@ -55,7 +55,7 @@ public class DunasRestingaBiome {
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withTrumpetTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withForestTrumpetTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withRestingaTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCashewTrees(biomegenerationsettings$builder);
 

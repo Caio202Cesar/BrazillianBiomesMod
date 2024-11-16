@@ -55,7 +55,7 @@ private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBui
     DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withTrumpetTrees(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withForestTrumpetTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withCambuciTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withManacaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withPitangaTrees(biomegenerationsettings$builder);

@@ -342,7 +342,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_ROSEWOOD_LOG),
                     new SimpleBlockStateProvider(States.BRAZILLIAN_ROSEWOOD_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new ForkyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Jabuticaba Trees
@@ -483,11 +483,17 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     CASHEW_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
-    public static final ConfiguredFeature<?, ?> TRUMPET_TREES = register("trumpet_trees",
+    public static final ConfiguredFeature<?, ?> SAVANNA_TRUMPET_TREES = register("savanna_trumpet_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_IPE_TREE.withChance(0.025641026F),
                     PINK_IPE_TREE.withChance(0.30769232F), PURPLE_IPE_TREE.withChance(0.33333334F)), YELLOW_IPE_FANCY_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                            .configure(new AtSurfaceWithExtraConfig(0, 0.01F, 1))));
+                            .configure(new AtSurfaceWithExtraConfig(0, 0.06F, 1))));
+
+    public static final ConfiguredFeature<?, ?> FOREST_TRUMPET_TREES = register("forest_trumpet_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_IPE_TREE.withChance(0.025641026F),
+                            PINK_IPE_TREE.withChance(0.30769232F), PURPLE_IPE_TREE.withChance(0.33333334F)), YELLOW_IPE_FANCY_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                            .configure(new AtSurfaceWithExtraConfig(2, 0.01F, 0))));
 
     public static final ConfiguredFeature<?, ?> PARANA_PINE_TREES = register("parana_pine_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PARANA_PINE_TREE_YOUNG.withChance(0.1F)),
@@ -533,7 +539,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> FOREST_CECROPIA_TREES = register("cecropia_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.2F)),
                     SILVER_CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(4, 0.1F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(4, 0.0F, 0))));
 
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_UPPER_TREES = register("atlantic_forest_upper_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_PEROBA_TREE.withChance(0.3F),
