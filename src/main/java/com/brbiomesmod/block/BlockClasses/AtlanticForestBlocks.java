@@ -47,7 +47,7 @@ public class AtlanticForestBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> JABUTICABA_LEAVES = registerBlock("jabuticaba_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> JABUTICABA_PLANKS = registerBlock("jabuticaba_log",
+    public static final RegistryObject<Block> JABUTICABA_PLANKS = registerBlock("jabuticaba_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> JABUTICABA_SAPLING = registerBlock("jabuticaba_sapling",
             JabuticabaSapling::new);

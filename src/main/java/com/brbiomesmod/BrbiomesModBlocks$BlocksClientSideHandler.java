@@ -19,7 +19,6 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
     @SubscribeEvent
     public static void clientSetup(FMLClientSetupEvent event) {
         CassavaPlant.registerRenderLayer();
-        AcaiBunchBlock.registerRenderLayer();
         XaximPlant.registerRenderLayer();
         BeachFlower.registerRenderLayer();
         XananaFlower.registerRenderLayer();

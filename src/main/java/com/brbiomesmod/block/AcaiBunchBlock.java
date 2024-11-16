@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
+/*
 public class AcaiBunchBlock extends Block {
     public AcaiBunchBlock() {
         super(AbstractBlock.Properties.from(Blocks.BEEHIVE).zeroHardnessAndResistance().tickRandomly()
@@ -43,4 +44,4 @@ public class AcaiBunchBlock extends Block {
     public PushReaction getPushReaction(BlockState state) {
         return PushReaction.DESTROY;
     }
-}
+} */
