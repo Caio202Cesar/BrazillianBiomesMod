@@ -11,6 +11,8 @@ import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.placement.IPlacementConfig;
+import net.minecraft.world.gen.placement.Placement;
 
 public class ModFeatures extends Features implements IFeatureConfig {
 
@@ -71,6 +73,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState CACTUS = Blocks.CACTUS.getDefaultState();
         protected static final BlockState CATTLEYA_PURPURATA = AtlanticForestBlocks.CATTLEYA_PURPURATA.get().getDefaultState();
         protected static final BlockState IPOMAEA_PES_CAPRAE = RestingaBlocks.IPOMAEA_PES_CAPRAE.get().getDefaultState();
+        protected static final BlockState TOURMALINE_ORE = CaatingaBlocks.TOURMALINE_PARAIBA_ORE.get().getDefaultState();
+        protected static final BlockState STONE = Blocks.STONE.getDefaultState();
 
     }
 }

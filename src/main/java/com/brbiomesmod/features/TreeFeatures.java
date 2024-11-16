@@ -35,8 +35,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASHEW_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.CASHEW_LEAVES),
                     new BushFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0), 3),
-                    new ForkyTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).build()));
+                    new ForkyTrunkPlacer(6, 4, 4),
+                    new TwoLayerFeature(1, 0, 3))).build()));
 
     //Kapok Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> KAPOK_TREE = register("kapok_tree",
@@ -140,7 +140,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_PEPPER_BIG_TREE = register("brazillian_pepper_big_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SCHINUS_LOG),
                     new SimpleBlockStateProvider(States.BRAZILLIAN_PEPPER_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new DarkOakFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(3, 4, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
