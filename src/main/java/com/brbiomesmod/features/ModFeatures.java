@@ -1,9 +1,6 @@
 package com.brbiomesmod.features;
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
-import com.brbiomesmod.block.BlockClasses.AraucariaPlateauBlocks;
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
+import com.brbiomesmod.block.BlockClasses.*;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.registry.Registry;
@@ -31,6 +28,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.BULL_NETTLE_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
+    public static final ConfiguredFeature<?, ?> IPOMAEA_PES_CAPRAE_PATCH = register("ipomaea_pes_caprae",
+            Feature.FLOWER.withConfiguration(ModFeatures.Configs.IPOMAEA_PES_CAPRAE_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
+
     public static final ConfiguredFeature<?, ?> CAATINGA_CACTUS_PATCH = register("caatinga_cactus_patch", Feature.RANDOM_PATCH
             .withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CACTUS),
             new ColumnBlockPlacer(1, 2))).tries(10).preventProjection().build()));
@@ -55,6 +56,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.CATTLEYA_PURPURATA, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig IPOMAEA_PES_CAPRAE_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.IPOMAEA_PES_CAPRAE, 3),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
     public static final class States {
@@ -64,6 +70,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState BULL_NETTLE_FRUITS = CaatingaBlocks.CNIDOSCOLUS_URENS_FRUITING.get().getDefaultState();
         protected static final BlockState CACTUS = Blocks.CACTUS.getDefaultState();
         protected static final BlockState CATTLEYA_PURPURATA = AtlanticForestBlocks.CATTLEYA_PURPURATA.get().getDefaultState();
+        protected static final BlockState IPOMAEA_PES_CAPRAE = RestingaBlocks.IPOMAEA_PES_CAPRAE.get().getDefaultState();
 
     }
 }
