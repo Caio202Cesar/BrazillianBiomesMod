@@ -57,7 +57,6 @@ public class DunasRestingaBiome {
         DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withForestTrumpetTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withRestingaTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withCashewTrees(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
                 .temperature(1.0F).downfall(0.7F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4757429)

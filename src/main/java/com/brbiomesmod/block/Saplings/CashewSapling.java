@@ -38,11 +38,7 @@ public class CashewSapling extends SaplingBlock {
     private static class CashewTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 6) {
                 return TreeFeatures.CASHEW_SHRUB;
-            } else {
-                return TreeFeatures.CASHEW_TREE;
-            }
         }
     }
 }
