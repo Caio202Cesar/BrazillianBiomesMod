@@ -13,17 +13,17 @@ import static net.minecraftforge.common.BiomeDictionary.Type.*;
 
 public class ModBiomeGeneration {
     public static void generateBiomes() {
-        addBiome(AmazonRainforestBiome.AMAZON_RAINFOREST.get(), BiomeManager.BiomeType.WARM, 27, OVERWORLD, HOT, DENSE, FOREST,
+        addBiome(AmazonRainforestBiome.AMAZON_RAINFOREST.get(), BiomeManager.BiomeType.DESERT, 27, OVERWORLD, HOT, DENSE, FOREST,
                 JUNGLE, LUSH, WET, SPOOKY);
         addBiome(AraucariaPlateauBiome.ARAUCARIA_PLATEAU.get(), BiomeManager.BiomeType.WARM, 7, OVERWORLD, DENSE, FOREST, PLATEAU,
                 RARE, CONIFEROUS, LUSH, WET, MOUNTAIN);
-        addBiome(PantanalBiome.PANTANAL.get(), BiomeManager.BiomeType.WARM, 14, OVERWORLD, HOT, SPARSE, SAVANNA, RARE, WET, SWAMP,
+        addBiome(PantanalBiome.PANTANAL.get(), BiomeManager.BiomeType.DESERT, 14, OVERWORLD, HOT, SPARSE, SAVANNA, RARE, WET, SWAMP,
                 PLAINS, LUSH);
         addBiome(CaatingaBiome.CAATINGA.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, SPARSE, SAVANNA, DRY, SANDY);
-        addBiome(DunasRestingaBiome.DUNAS_RESTINGA.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, HOT, DENSE, SANDY);
+        addBiome(DunasRestingaBiome.DUNAS_RESTINGA.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, DENSE, SANDY);
         addBiome(PampasBiome.PAMPAS.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, PLAINS);
-        addBiome(CerradoBiome.CERRADO.get(), BiomeManager.BiomeType.WARM, 25, HOT, OVERWORLD, SPARSE, SAVANNA);
-        addBiome(RestingaBeachBiome.RESTINGA_BEACH.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, HOT, BEACH, SANDY);
+        addBiome(CerradoBiome.CERRADO.get(), BiomeManager.BiomeType.DESERT, 25, HOT, OVERWORLD, SPARSE, SAVANNA);
+        addBiome(RestingaBeachBiome.RESTINGA_BEACH.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, BEACH, SANDY);
 
 
 
