@@ -27,6 +27,7 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         AristolochiaVine.registerRenderLayer();
         EpiphytePlant.registerRenderLayer();
         OrchidPlant.registerRenderLayer();
+        PampasPlant.registerRenderLayer();
 
         BlackJuremaSapling.registerRenderLayer();
         BrazillianPepperSapling.registerRenderLayer();

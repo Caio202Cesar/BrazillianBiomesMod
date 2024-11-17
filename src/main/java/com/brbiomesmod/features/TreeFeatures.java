@@ -107,7 +107,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CAMBUCI_LOG),
                     new SimpleBlockStateProvider(States.CAMBUCI_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Peruvian Pepper Tree
@@ -120,8 +121,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PERUVIAN_PEPPER_FANCY_TREE = register("peruvian_pepper_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SCHINUS_LOG),
                     new SimpleBlockStateProvider(States.PERUVIAN_PEPPER_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(3, 4, 0), new TwoLayerFeature(0, 0, 0,
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Brazillian Pepper Tree
@@ -356,17 +358,17 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Algarrobillo Tree (Pampas)
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ALGARROBILLO = register("algarrobillo",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Features.States.ACACIA_LOG),
-                    new SimpleBlockStateProvider(Features.States.ACACIA_LEAVES),
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ALGARROBILLO_TREE = register("algarrobillo_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ALGARROBILLO_LOG),
+                    new SimpleBlockStateProvider(States.ALGARROBILLO_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
 
     //Caven Thorn Tree (Pampas)
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAVEN_THORN = register("caven_thorn",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Features.States.ACACIA_LOG),
-                    new SimpleBlockStateProvider(Features.States.ACACIA_LEAVES),
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAVEN_THORN_TREE = register("caven_thorn_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAVEN_THORN_LOG),
+                    new SimpleBlockStateProvider(States.CAVEN_THORN_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
@@ -462,6 +464,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState JABUTICABA_FRUITING_LOG = AtlanticForestBlocks.JABUTICABA_FRUITING_LOG.get().getDefaultState();
         protected static final BlockState JABUTICABA_FLOWERING_LOG = AtlanticForestBlocks.JABUTICABA_FLOWERING_LOG.get().getDefaultState();
         protected static final BlockState JABUTICABA_LEAVES = AtlanticForestBlocks.JABUTICABA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState ALGARROBILLO_LOG = PampasPlainsBlocks.ALGARROBILLO_LOG.get().getDefaultState();
+        protected static final BlockState ALGARROBILLO_LEAVES = PampasPlainsBlocks.ALGARROBILLO_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CAVEN_THORN_LOG = PampasPlainsBlocks.CAVEN_THORN_LOG.get().getDefaultState();
+        protected static final BlockState CAVEN_THORN_LEAVES = PampasPlainsBlocks.CAVEN_THORN_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
@@ -540,7 +548,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PERUVIAN_PEPPER_FANCY_TREE.withChance(0.01F),
                             PERUVIAN_PEPPER_TREE.withChance(0.1F), BRAZILLIAN_PEPPER_BIG_TREE.withChance(0.2F)), BRAZILLIAN_PEPPER_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                            .configure(new AtSurfaceWithExtraConfig(0, 0.05F, 1))));
+                            .configure(new AtSurfaceWithExtraConfig(0, 0.05F, 2))));
 
     public static final ConfiguredFeature<?, ?> FOREST_CECROPIA_TREES = register("cecropia_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.2F)),
@@ -561,6 +569,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FLOWERING_JABUTICABA_TREE.withChance(0.4F)),
                     FRUITING_JABUTICABA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> PAMPAS_TREES = register("pampas_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAVEN_THORN_TREE.withChance(0.3F)),
+                    ALGARROBILLO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String p_243968_0_, ConfiguredFeature<FC, ?> p_243968_1_) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, p_243968_0_, p_243968_1_);

@@ -27,7 +27,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> ARAUCARIA_PLATEAU = BIOMES.register("araucaria_plateau",
-        () -> makeAraucariaPlateauBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.1f, 0.4f));
+        () -> makeAraucariaPlateauBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.4f, 0.2f));
 
 
 private static Biome makeAraucariaPlateauBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

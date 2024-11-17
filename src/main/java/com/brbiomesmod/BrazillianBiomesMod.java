@@ -24,8 +24,7 @@ import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(BrazillianBiomesMod.MOD_ID)
-public class BrazillianBiomesMod
-{
+public class BrazillianBiomesMod {
     public static final String MOD_ID = "brbiomesmod";
 
     // Directly reference a log4j logger.
@@ -44,6 +43,8 @@ public class BrazillianBiomesMod
         CerradoSavannaBlocks.register(eventBus);
         PampasPlainsBlocks.register(eventBus);
 
+        eventBus.addListener(this::setup);
+
         AmazonRainforestBiome.register(eventBus);
         AraucariaPlateauBiome.register(eventBus);
         PantanalBiome.register(eventBus);
@@ -58,23 +59,30 @@ public class BrazillianBiomesMod
         MinecraftForge.EVENT_BUS.register(this);
     }
 
+    private void setup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+
+            ModBiomeGeneration.generateBiomes();
+
+        });
+    }
+
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().fontRenderer);
     }
 
-    private void enqueueIMC(final InterModEnqueueEvent event)
-    {
+    private void enqueueIMC(final InterModEnqueueEvent event) {
 
     }
 
-    private void processIMC(final InterModProcessEvent event)
-    {
+    private void processIMC(final InterModProcessEvent event) {
         // some example code to receive and process InterModComms from other mods
         LOGGER.info("Got IMC {}", event.getIMCStream().
-                map(m->m.getMessageSupplier().get()).
+                map(m -> m.getMessageSupplier().get()).
                 collect(Collectors.toList()));
     }
+
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
@@ -84,7 +92,7 @@ public class BrazillianBiomesMod
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
     // Event bus for receiving Registry Events)
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 
     public static class RegistryEvents {
         @SubscribeEvent
@@ -93,15 +101,4 @@ public class BrazillianBiomesMod
             LOGGER.info("HELLO from Register Block");
         }
     }
-
-    private void setup(final FMLCommonSetupEvent event)
-    {
-        event.enqueueWork(() -> {
-
-            ModBiomeGeneration.generateBiomes();
-
-            // some preinit code
-            LOGGER.info("HELLO FROM PREINIT");
-            LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
-        });
-}}
+}

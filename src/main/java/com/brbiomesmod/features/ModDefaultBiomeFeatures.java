@@ -89,4 +89,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withIpomaeaPesCaprae(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.IPOMAEA_PES_CAPRAE_PATCH);
     }
+    public static void withPampasTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PAMPAS_TREES);
+    }
 }

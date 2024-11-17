@@ -4,10 +4,14 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.ModLeaves;
 import com.brbiomesmod.block.ModLogs;
 import com.brbiomesmod.block.ModPlanks;
+import com.brbiomesmod.block.PampasPlant;
+import com.brbiomesmod.block.Saplings.AlgarrobilloSapling;
 import com.brbiomesmod.block.Saplings.BrazillianPepperSapling;
+import com.brbiomesmod.block.Saplings.CavenThornSapling;
 import com.brbiomesmod.block.Saplings.PeruvianPepperSapling;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
+import com.electronwill.nightconfig.core.ConfigSpec;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -39,6 +43,30 @@ public class PampasPlainsBlocks {
             BrazillianPepperSapling::new);
     public static final RegistryObject<Block> PERUVIAN_PEPPER_SAPLING = registerBlock("peruvian_pepper_sapling",
             PeruvianPepperSapling::new);
+
+
+    public static final RegistryObject<Block> ALGARROBILLO_LOG = registerBlock("algarrobillo_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ALGARROBILLO_LEAVES = registerBlock("algarrobillo_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> ALGARROBILLO_SAPLING = registerBlock("algarrobillo_sapling",
+            AlgarrobilloSapling::new);
+    public static final RegistryObject<Block> ALGARROBILLO_PLANKS = registerBlock("algarrobillo_planks",
+            ModPlanks::new);
+
+
+    public static final RegistryObject<Block> CAVEN_THORN_LOG = registerBlock("caven_thorn_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CAVEN_THORN_LEAVES = registerBlock("caven_thorn_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CAVEN_THORN_SAPLING = registerBlock("caven_thorn_sapling",
+            CavenThornSapling::new);
+    public static final RegistryObject<Block> CAVEN_THORN_PLANKS = registerBlock("caven_thorn_planks",
+            ModPlanks::new);
+
+
+    public static final RegistryObject<Block> MACELA = registerBlock("macela",
+            PampasPlant::new);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
