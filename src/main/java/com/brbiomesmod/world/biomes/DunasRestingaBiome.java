@@ -2,6 +2,7 @@ package com.brbiomesmod.world.biomes;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.features.ModDefaultBiomeFeatures;
+import com.brbiomesmod.world.biomes.Util.ModConfiguredSurfaceBuilders;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -26,7 +27,7 @@ public class DunasRestingaBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> DUNAS_RESTINGA = BIOMES.register("dunas_restinga",
-            () -> makeDunasRestingaBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.1f, 0.4f));
+            () -> makeDunasRestingaBiome(() -> ModConfiguredSurfaceBuilders.FOREST_SURFACE, 0.1f, 0.4f));
 
 
     private static Biome makeDunasRestingaBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
