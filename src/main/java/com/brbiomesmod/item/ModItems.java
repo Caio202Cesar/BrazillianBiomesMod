@@ -90,6 +90,19 @@ public class ModItems {
     public static final RegistryObject<Item> TOURMALINE_PARAIBA = ITEMS.register("tourmaline_paraiba",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
+
+    public static final RegistryObject<Item> PURPLE_IPE_FLOWERS = ITEMS.register("purple_ipe_flowers",
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+
+    public static final RegistryObject<Item> WHITE_IPE_FLOWERS = ITEMS.register("white_ipe_flowers",
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+
+    public static final RegistryObject<Item> PINK_IPE_FLOWERS = ITEMS.register("pink_ipe_flowers",
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+
+    public static final RegistryObject<Item> YELLOW_IPE_FLOWERS = ITEMS.register("yellow_ipe_flowers",
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

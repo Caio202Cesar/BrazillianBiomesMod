@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "white_dye",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:white_ipe_flowers"
+    }
+  ],
+  "result": {
+    "item": "minecraft:white_dye"
+  }
+}

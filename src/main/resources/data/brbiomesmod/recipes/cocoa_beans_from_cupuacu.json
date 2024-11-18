@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "planks",
+  "group": "cocoa_beans",
   "ingredients": [
     {
       "item": "brbiomesmod:cupuacu"
