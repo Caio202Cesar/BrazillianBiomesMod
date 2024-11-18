@@ -84,11 +84,6 @@ public class CaatingaBlocks {
     public static final RegistryObject<Block> MANGABA_SAPLING = registerBlock("mangaba_sapling",
             MangabaSapling::new);
 
-
-    public static final RegistryObject<Block> XANANA = registerBlock("xanana",
-            XananaFlower::new);
-    public static final RegistryObject<Block> XANANA_BIG = registerBlock("xanana_big",
-            XananaFlower::new);
     public static final RegistryObject<Block> CNIDOSCOLUS_URENS = registerBlock("bull_nettle",
             BullNettlePlant::new);
     public static final RegistryObject<Block> CNIDOSCOLUS_URENS_FRUITING = registerBlock("bull_nettle_fruiting",

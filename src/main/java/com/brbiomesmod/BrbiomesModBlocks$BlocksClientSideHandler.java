@@ -29,6 +29,8 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         OrchidPlant.registerRenderLayer();
         PampasPlant.registerRenderLayer();
 
+        AlgarrobilloSapling.registerRenderLayer();
+        CavenThornSapling.registerRenderLayer();
         BlackJuremaSapling.registerRenderLayer();
         BrazillianPepperSapling.registerRenderLayer();
         BrazillianRosewoodSapling.registerRenderLayer();
@@ -61,5 +63,6 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         WolfAppleSapling.registerRenderLayer();
         YellowIpeSapling.registerRenderLayer();
         YerbaMateSapling.registerRenderLayer();
+        ImbuiaSapling.registerRenderLayer();
     }
 }

@@ -30,7 +30,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.BULL_NETTLE_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
-    public static final ConfiguredFeature<?, ?> IPOMAEA_PES_CAPRAE_PATCH = register("ipomaea_pes_caprae",
+    public static final ConfiguredFeature<?, ?> IPOMAEA_PES_CAPRAE_PATCH = register("ipomaea_pes_caprae_patch",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.IPOMAEA_PES_CAPRAE_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
 
@@ -41,6 +41,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_ORCHIDS = register("atlantic_forest_orchids",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.ATLANTIC_ORCHIDS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
+
+    public static final ConfiguredFeature<?, ?> XANANA_PATCH = register("xanana_patch",
+            Feature.FLOWER.withConfiguration(ModFeatures.Configs.XANANA_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
 
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
@@ -63,6 +67,12 @@ public class ModFeatures extends Features implements IFeatureConfig {
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.IPOMAEA_PES_CAPRAE, 3),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig XANANA_FLOWER_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.XANANA1, 5)
+                        .addWeightedBlockstate(States.XANANA2, 2),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
     public static final class States {
@@ -73,6 +83,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState CACTUS = Blocks.CACTUS.getDefaultState();
         protected static final BlockState CATTLEYA_PURPURATA = AtlanticForestBlocks.CATTLEYA_PURPURATA.get().getDefaultState();
         protected static final BlockState IPOMAEA_PES_CAPRAE = RestingaBlocks.IPOMAEA_PES_CAPRAE.get().getDefaultState();
+        protected static final BlockState XANANA1 = RestingaBlocks.XANANA.get().getDefaultState();
+        protected static final BlockState XANANA2 = RestingaBlocks.XANANA_BIG.get().getDefaultState();
         protected static final BlockState TOURMALINE_ORE = CaatingaBlocks.TOURMALINE_PARAIBA_ORE.get().getDefaultState();
         protected static final BlockState STONE = Blocks.STONE.getDefaultState();
 

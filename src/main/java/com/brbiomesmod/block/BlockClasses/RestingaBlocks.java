@@ -1,10 +1,7 @@
 package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.BeachFlower;
-import com.brbiomesmod.block.ModLeaves;
-import com.brbiomesmod.block.ModLogs;
-import com.brbiomesmod.block.ModPlanks;
+import com.brbiomesmod.block.*;
 import com.brbiomesmod.block.Saplings.CashewSapling;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -45,7 +42,10 @@ public class RestingaBlocks {
     public static final RegistryObject<Block> CASHEW_SAPLING = registerBlock("cashew_sapling",
             CashewSapling::new);
 
-
+    public static final RegistryObject<Block> XANANA = registerBlock("xanana",
+            XananaFlower::new);
+    public static final RegistryObject<Block> XANANA_BIG = registerBlock("xanana_big",
+            XananaFlower::new);
     public static final RegistryObject<Block> IPOMAEA_PES_CAPRAE = registerBlock("ipomaea_pes_caprae",
             BeachFlower::new);
 

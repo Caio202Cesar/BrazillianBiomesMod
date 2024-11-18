@@ -2,10 +2,7 @@ package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
-import com.brbiomesmod.block.Saplings.BrazillianSassafrasSapling;
-import com.brbiomesmod.block.Saplings.FeijoaSapling;
-import com.brbiomesmod.block.Saplings.ParanaPineSapling;
-import com.brbiomesmod.block.Saplings.YerbaMateSapling;
+import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
@@ -62,6 +59,8 @@ public class AraucariaPlateauBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> IMBUIA_LEAVES = registerBlock("imbuia_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> IMBUIA_SAPLING = registerBlock("imbuia_sapling",
+            ImbuiaSapling::new);
 
 
     public static final RegistryObject<Block> YERBA_MATE_LOG = registerBlock("yerba_mate_log",

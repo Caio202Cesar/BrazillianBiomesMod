@@ -1,6 +1,7 @@
 package com.brbiomesmod.block;
 
 import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
+import com.brbiomesmod.block.BlockClasses.RestingaBlocks;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
@@ -21,8 +22,13 @@ public class XananaFlower extends BushBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(CaatingaBlocks.XANANA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(CaatingaBlocks.XANANA_BIG.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RestingaBlocks.XANANA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RestingaBlocks.XANANA_BIG.get(), RenderType.getCutout());
+    }
+
+    protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
+        return state.matchesBlock(Blocks.GRASS_BLOCK) || state.matchesBlock(Blocks.DIRT)
+                || state.matchesBlock(Blocks.COARSE_DIRT) || state.matchesBlock(Blocks.SAND);
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
