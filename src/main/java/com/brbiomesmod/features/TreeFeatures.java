@@ -115,7 +115,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PERUVIAN_PEPPER_TREE = register("peruvian_pepper_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SCHINUS_LOG),
                     new SimpleBlockStateProvider(States.PERUVIAN_PEPPER_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0), 3),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PERUVIAN_PEPPER_FANCY_TREE = register("peruvian_pepper_fancy_tree",
@@ -136,9 +136,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_PEPPER_BIG_TREE = register("brazillian_pepper_big_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SCHINUS_LOG),
                     new SimpleBlockStateProvider(States.BRAZILLIAN_PEPPER_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(3, 4, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new DarkOakTrunkPlacer(6, 2, 1),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
     //Mangaba Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MANGABA_TREE = register("mangaba_tree",
@@ -347,15 +348,16 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new DarkOakTrunkPlacer(6, 2, 1),
-                    new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FLOWERING_JABUTICABA_TREE = register("flowering_jabuticaba_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_FLOWERING_LOG),
                     new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new DarkOakTrunkPlacer(6, 2, 1),
-                    new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
+
 
     //Algarrobillo Tree (Pampas)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ALGARROBILLO_TREE = register("algarrobillo_tree",

@@ -41,6 +41,7 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         CupuacuSapling.registerRenderLayer();
         FeijoaSapling.registerRenderLayer();
         GuaranaSapling.registerRenderLayer();
+        JabuticabaSapling.registerRenderLayer();
         JequitibaSapling.registerRenderLayer();
         JuaSapling.registerRenderLayer();
         KapokSapling.registerRenderLayer();

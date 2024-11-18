@@ -40,7 +40,7 @@ public class JabuticabaSapling extends SaplingBlock {
     private static class JabuticabaTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 0) {
+            if (random.nextInt(10) == 5) {
                 return TreeFeatures.FLOWERING_JABUTICABA_TREE;
             } else {
                 return TreeFeatures.FRUITING_JABUTICABA_TREE;
