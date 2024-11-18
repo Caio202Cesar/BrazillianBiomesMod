@@ -2,8 +2,10 @@ package com.brbiomesmod.item;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.item.custom.BrazilnutFruit;
+import com.brbiomesmod.item.custom.CashewFruit;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -14,8 +16,8 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, BrazillianBiomesMod.MOD_ID);
 
-    public static final RegistryObject<Item> CASHEW_FRUIT = ITEMS.register("cashewfruit",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> CASHEW_FRUIT = ITEMS.register("cashew_fruit",
+            () -> new CashewFruit(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> CASHEW_APPLE = ITEMS.register("cashew_apple",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CASHEW_APPLE)));
     public static final RegistryObject<Item> CASHEWNUT = ITEMS.register("cashewnut",
