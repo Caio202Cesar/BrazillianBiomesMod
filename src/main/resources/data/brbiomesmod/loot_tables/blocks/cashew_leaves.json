@@ -34,7 +34,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:cashewfruit",
+          "name": "brbiomesmod:cashew_fruit",
           "weight": 2,
           "functions": [
             {
