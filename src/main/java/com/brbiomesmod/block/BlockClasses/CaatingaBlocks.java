@@ -84,10 +84,17 @@ public class CaatingaBlocks {
     public static final RegistryObject<Block> MANGABA_SAPLING = registerBlock("mangaba_sapling",
             MangabaSapling::new);
 
+    public static final RegistryObject<Block> WHITE_SILK_FLOSS_LEAVES = registerBlock("white_silk_floss_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
+            ModLogs::new);
+
+
     public static final RegistryObject<Block> CNIDOSCOLUS_URENS = registerBlock("bull_nettle",
             BullNettlePlant::new);
     public static final RegistryObject<Block> CNIDOSCOLUS_URENS_FRUITING = registerBlock("bull_nettle_fruiting",
             BullNettlePlant::new);
+
 
 
     public static final RegistryObject<Block> TOURMALINE_PARAIBA_ORE = registerBlock("tourmaline_paraiba_ore",
