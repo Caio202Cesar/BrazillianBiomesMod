@@ -95,4 +95,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withXananaFlower(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.XANANA_PATCH);
     }
+    public static void withTurkTurbanCactus(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.TURK_TURBAN_CACTUS);
+    }
 }

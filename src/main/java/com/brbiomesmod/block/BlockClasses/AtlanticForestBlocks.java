@@ -53,10 +53,10 @@ public class AtlanticForestBlocks {
             JabuticabaSapling::new);
 
 
-    //public static final RegistryObject<Block> QUEEN_PALM_LOG = registerBlock("queen_palm_log", ModLogs::new);
-    //public static final RegistryObject<Block> QUEEN_PALM_WOOD = registerBlock("queen_palm_wood", ModLogs::new);
-    //public static final RegistryObject<Block> QUEEN_PALM_PLANKS = registerBlock("queen_palm_planks", ModPlanks::new);
-    //public static final RegistryObject<Block> QUEEN_PALM_FROND = registerBlock("queen_palm_frond", ModLeaves::new);
+    public static final RegistryObject<Block> QUEEN_PALM_LOG = registerBlock("queen_palm_log", ModLogs::new);
+    public static final RegistryObject<Block> QUEEN_PALM_WOOD = registerBlock("queen_palm_wood", ModLogs::new);
+    public static final RegistryObject<Block> QUEEN_PALM_PLANKS = registerBlock("queen_palm_planks", ModPlanks::new);
+    public static final RegistryObject<Block> QUEEN_PALM_FROND = registerBlock("queen_palm_frond", ModLeaves::new);
 
 
     //public static final RegistryObject<Block> JUSSARA_FROND = registerBlock("jussara_frond", ModLeaves::new);

@@ -59,7 +59,7 @@ private static Biome makeCaatingaBiome(final Supplier<ConfiguredSurfaceBuilder<?
     ModDefaultBiomeFeatures.withBullNettles(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withDesertDeadBushes(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withDisks(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withCacti(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withTurkTurbanCactus(biomegenerationsettings$builder);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
             .temperature(2.0F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)

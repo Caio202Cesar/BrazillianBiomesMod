@@ -18,7 +18,7 @@ import net.minecraftforge.common.ToolType;
 
 public class XaximPlant extends DoublePlantBlock {
     public XaximPlant() {
-        super(Properties.from(Blocks.CHORUS_PLANT).tickRandomly().zeroHardnessAndResistance()
+        super(Properties.from(Blocks.CHORUS_PLANT).tickRandomly().hardnessAndResistance(0.1f)
                 .sound(SoundType.PLANT).harvestTool(ToolType.HOE));
     }
 

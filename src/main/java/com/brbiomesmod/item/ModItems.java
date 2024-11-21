@@ -89,6 +89,9 @@ public class ModItems {
     public static final RegistryObject<Item> PINEAPPLE_GUAVA = ITEMS.register("pineapple_guava",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.PINEAPPLE_GUAVA)));
 
+    public static final RegistryObject<Item> TURK_TURBAN_BERRIES = ITEMS.register("turk_turban_berries",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.TURK_TURBAN_BERRIES)));
+
     public static final RegistryObject<Item> TOURMALINE_PARAIBA = ITEMS.register("tourmaline_paraiba",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 

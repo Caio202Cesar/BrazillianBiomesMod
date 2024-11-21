@@ -30,6 +30,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.BULL_NETTLE_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
+    public static final ConfiguredFeature<?, ?> TURK_TURBAN_CACTUS = register("turk_turban_cactus",
+            Feature.FLOWER.withConfiguration(ModFeatures.Configs.TURK_TURBAN_CACTUS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
+
     public static final ConfiguredFeature<?, ?> IPOMAEA_PES_CAPRAE_PATCH = register("ipomaea_pes_caprae_patch",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.IPOMAEA_PES_CAPRAE_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
@@ -58,6 +62,12 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.BULL_NETTLE_FRUITS, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
+        public static final BlockClusterFeatureConfig TURK_TURBAN_CACTUS_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.TURK_TURBAN, 1)
+                        .addWeightedBlockstate(States.TURK_TURBAN_FRUITING, 1),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
+
         public static final BlockClusterFeatureConfig ATLANTIC_ORCHIDS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.CATTLEYA_PURPURATA, 1),
@@ -80,6 +90,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState CASSAVA = AmazonRainforestBlocks.CASSAVA_PLANT.get().getDefaultState();
         protected static final BlockState BULL_NETTLE = CaatingaBlocks.CNIDOSCOLUS_URENS.get().getDefaultState();
         protected static final BlockState BULL_NETTLE_FRUITS = CaatingaBlocks.CNIDOSCOLUS_URENS_FRUITING.get().getDefaultState();
+        protected static final BlockState TURK_TURBAN = CaatingaBlocks.TURK_TURBAN_CACTUS.get().getDefaultState();
+        protected static final BlockState TURK_TURBAN_FRUITING = CaatingaBlocks.TURK_TURBAN_FRUITING_CACTUS.get().getDefaultState();
         protected static final BlockState CACTUS = Blocks.CACTUS.getDefaultState();
         protected static final BlockState CATTLEYA_PURPURATA = AtlanticForestBlocks.CATTLEYA_PURPURATA.get().getDefaultState();
         protected static final BlockState IPOMAEA_PES_CAPRAE = RestingaBlocks.IPOMAEA_PES_CAPRAE.get().getDefaultState();
