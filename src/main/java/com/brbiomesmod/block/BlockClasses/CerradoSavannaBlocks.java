@@ -4,6 +4,7 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.ModLeaves;
 import com.brbiomesmod.block.ModLogs;
 import com.brbiomesmod.block.ModPlanks;
+import com.brbiomesmod.block.Saplings.CagaitaSapling;
 import com.brbiomesmod.block.Saplings.WolfAppleSapling;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -34,6 +35,11 @@ public class CerradoSavannaBlocks {
             WolfAppleSapling::new);
     public static final RegistryObject<Block> WOLF_APPLE_PLANKS = registerBlock("wolf_apple_planks",
             ModPlanks::new);
+
+    public static final RegistryObject<Block> CAGAITA_LEAVES = registerBlock("cagaita_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CAGAITA_SAPLING = registerBlock("cagaita_sapling",
+            CagaitaSapling::new);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

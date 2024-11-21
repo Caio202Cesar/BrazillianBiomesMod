@@ -31,5 +31,6 @@ public class ModFoods extends Foods {
     public static final Food MANGABA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food JABUTICABA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food TURK_TURBAN_BERRIES = (new Food.Builder()).hunger(1).saturation(0.1F).build();
+    public static final Food CAGAITA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
 
 }

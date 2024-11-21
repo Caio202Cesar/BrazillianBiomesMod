@@ -40,6 +40,7 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         BrazilwoodSapling.registerRenderLayer();
         CambuciSapling.registerRenderLayer();
         CashewSapling.registerRenderLayer();
+        CagaitaSapling.registerRenderLayer();
         CecropiaSapling.registerRenderLayer();
         CupuacuSapling.registerRenderLayer();
         FeijoaSapling.registerRenderLayer();

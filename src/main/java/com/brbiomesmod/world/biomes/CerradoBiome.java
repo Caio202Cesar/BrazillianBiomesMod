@@ -51,7 +51,7 @@ public class CerradoBiome {
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSavannaTrumpetTrees(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withCerradoTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withCerradoFruitTrees(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
                 .temperature(1.0F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)

@@ -1,0 +1,7 @@
+{
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/cagaita_leaves"},
+      {"model": "brbiomesmod:block/cagaita_fruiting_leaves"}
+    ]
+  }}

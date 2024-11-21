@@ -388,6 +388,15 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new ForkyTrunkPlacer(5, 2, 2),
                     new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
 
+    //Cagaita Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAGAITA_TREE = register("cagaita_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.EUGENIA_LOG),
+                    new SimpleBlockStateProvider(States.CAGAITA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
 
     public static final class States {
 
@@ -485,6 +494,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState CAVEN_THORN_LOG = PampasPlainsBlocks.CAVEN_THORN_LOG.get().getDefaultState();
         protected static final BlockState CAVEN_THORN_LEAVES = PampasPlainsBlocks.CAVEN_THORN_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CAGAITA_LEAVES = CerradoSavannaBlocks.CAGAITA_LEAVES.get().getDefaultState();
+
     }
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
@@ -575,10 +587,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             JEQUITIBA_TREE.withChance(0.1F)), BRAZILLIAN_ROSEWOOD_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(11, 0.1F, 1))));
 
-    public static final ConfiguredFeature<?, ?> CERRADO_TREES = register("cerrado_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.02F)),
-                    WOLF_APPLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
+    public static final ConfiguredFeature<?, ?> CERRADO_FRUIT_TREES = register("cerrado_fruit_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.2F),
+                            CAGAITA_TREE.withChance(0.2F)), WOLF_APPLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
     public static final ConfiguredFeature<?, ?> JABUTICABA_TREES = register("jabuticaba_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FLOWERING_JABUTICABA_TREE.withChance(0.4F)),
