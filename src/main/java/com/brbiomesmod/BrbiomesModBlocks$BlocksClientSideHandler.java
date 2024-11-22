@@ -33,6 +33,7 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         AlgarrobilloSapling.registerRenderLayer();
         CavenThornSapling.registerRenderLayer();
         BlackJuremaSapling.registerRenderLayer();
+        BlackSucupiraSapling.registerRenderLayer();
         BrazillianPepperSapling.registerRenderLayer();
         BrazillianRosewoodSapling.registerRenderLayer();
         BrazillianSassafrasSapling.registerRenderLayer();

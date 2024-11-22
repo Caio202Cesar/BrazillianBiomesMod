@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:cambuci_sapling",
+          "name": "brbiomesmod:cagaita_sapling",
           "weight": 0.1,
           "functions": [
             {
@@ -34,7 +34,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:cambuci",
+          "name": "brbiomesmod:cagaita_fruits",
           "weight": 10,
           "functions": [
             {
