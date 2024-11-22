@@ -4,6 +4,7 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.ModLeaves;
 import com.brbiomesmod.block.ModLogs;
 import com.brbiomesmod.block.ModPlanks;
+import com.brbiomesmod.block.Saplings.BlackSucupiraSapling;
 import com.brbiomesmod.block.Saplings.CagaitaSapling;
 import com.brbiomesmod.block.Saplings.WolfAppleSapling;
 import com.brbiomesmod.item.ModItemGroup;
@@ -34,6 +35,15 @@ public class CerradoSavannaBlocks {
     public static final RegistryObject<Block> WOLF_APPLE_SAPLING = registerBlock("wolf_apple_sapling",
             WolfAppleSapling::new);
     public static final RegistryObject<Block> WOLF_APPLE_PLANKS = registerBlock("wolf_apple_planks",
+            ModPlanks::new);
+
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_LOG = registerBlock("black_sucupira_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_LEAVES = registerBlock("black_sucupira_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_SAPLING = registerBlock("black_sucupira_sapling",
+            BlackSucupiraSapling::new);
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_PLANKS = registerBlock("black_sucupira_planks",
             ModPlanks::new);
 
     public static final RegistryObject<Block> CAGAITA_LEAVES = registerBlock("cagaita_leaves",

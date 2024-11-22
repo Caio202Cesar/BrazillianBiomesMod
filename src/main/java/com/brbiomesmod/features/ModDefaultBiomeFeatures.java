@@ -98,4 +98,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withTurkTurbanCactus(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.TURK_TURBAN_CACTUS);
     }
+    public static void withCerradoTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CERRADO_TREES);
+    }
 }

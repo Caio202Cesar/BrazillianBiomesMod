@@ -397,6 +397,15 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    //Black Sucupira Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_SUCUPIRA_TREE = register("black_sucupira_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BLACK_SUCUPIRA_LOG),
+                    new SimpleBlockStateProvider(States.BLACK_SUCUPIRA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
 
     public static final class States {
 
@@ -497,6 +506,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState CAGAITA_LEAVES = CerradoSavannaBlocks.CAGAITA_LEAVES.get().getDefaultState();
 
+        protected static final BlockState BLACK_SUCUPIRA_LOG = CerradoSavannaBlocks.BLACK_SUCUPIRA_LOG.get().getDefaultState();
+        protected static final BlockState BLACK_SUCUPIRA_LEAVES = CerradoSavannaBlocks.BLACK_SUCUPIRA_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
@@ -600,6 +611,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> PAMPAS_TREES = register("pampas_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAVEN_THORN_TREE.withChance(0.3F)),
                     ALGARROBILLO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
+
+    public static final ConfiguredFeature<?, ?> CERRADO_TREES = register("cerrado_trees",
+            BLACK_SUCUPIRA_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String p_243968_0_, ConfiguredFeature<FC, ?> p_243968_1_) {
