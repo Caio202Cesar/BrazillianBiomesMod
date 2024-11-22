@@ -44,6 +44,7 @@ public class PampasBiome {
         biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL);
         biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
         biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
+        biomegenerationsettings$builder.withStructure(StructureFeatures.VILLAGE_PLAINS);
 
         DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
