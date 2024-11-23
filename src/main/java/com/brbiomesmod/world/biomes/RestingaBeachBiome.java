@@ -50,8 +50,8 @@ public class RestingaBeachBiome {
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
                 .temperature(0.95F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4445678)
-                        .setWaterFogColor(270131).withSkyColor(8103167).withFoliageColor(9153185)
-                        .withGrassColor(10139053).setFogColor(13028309)
+                        .setWaterFogColor(270131).withSkyColor(8103167).withFoliageColor(4110351)
+                        .withGrassColor(6604607).setFogColor(13028309)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
