@@ -24,7 +24,7 @@ import javax.annotation.Nullable;
 
 public class CactusPlant extends BushBlock {
     public CactusPlant() {
-        super(Properties.from(Blocks.CACTUS).tickRandomly().hardnessAndResistance(0.1f)
+        super(Properties.from(Blocks.SWEET_BERRY_BUSH).tickRandomly().hardnessAndResistance(0.1f)
                 .sound(SoundType.CORAL).harvestTool(ToolType.HOE));
     }
 
@@ -42,7 +42,7 @@ public class CactusPlant extends BushBlock {
     //Plant harmful effects
     @SuppressWarnings("deprecation")
     public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {
-        entityIn.attackEntityFrom(DamageSource.CACTUS, 2.0F);
+        entityIn.attackEntityFrom(DamageSource.CACTUS, 1.0F);
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
