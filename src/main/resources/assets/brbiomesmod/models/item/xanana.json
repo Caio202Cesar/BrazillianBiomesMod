@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/xanana"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/xanana2"
+  }
 }

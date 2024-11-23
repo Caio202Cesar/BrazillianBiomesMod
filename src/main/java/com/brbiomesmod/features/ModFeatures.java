@@ -50,6 +50,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.XANANA_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
 
+    public static final ConfiguredFeature<?, ?> PAMPAS_PLAINS_FLOWER_PATCH = register("pampas_plains_flower_patch",
+            Feature.FLOWER.withConfiguration(ModFeatures.Configs.PAMPAS_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
+
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, key, configuredFeature);
@@ -83,6 +87,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.XANANA1, 5)
                         .addWeightedBlockstate(States.XANANA2, 2),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig PAMPAS_FLOWER_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.MACELA, 1),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
     public static final class States {
@@ -97,6 +106,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState IPOMAEA_PES_CAPRAE = RestingaBlocks.IPOMAEA_PES_CAPRAE.get().getDefaultState();
         protected static final BlockState XANANA1 = RestingaBlocks.XANANA.get().getDefaultState();
         protected static final BlockState XANANA2 = RestingaBlocks.XANANA_BIG.get().getDefaultState();
+        protected static final BlockState MACELA = PampasPlainsBlocks.MACELA.get().getDefaultState();
         protected static final BlockState TOURMALINE_ORE = CaatingaBlocks.TOURMALINE_PARAIBA_ORE.get().getDefaultState();
         protected static final BlockState STONE = Blocks.STONE.getDefaultState();
 
