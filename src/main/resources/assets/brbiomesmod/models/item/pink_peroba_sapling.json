@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/pink_peroba_sapling"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/pink_peroba_sapling"
+  }
 }

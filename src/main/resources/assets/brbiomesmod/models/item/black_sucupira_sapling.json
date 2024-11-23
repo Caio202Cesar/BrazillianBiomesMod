@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/black_sucupira_sapling"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/black_sucupira_sapling"
+  }
 }

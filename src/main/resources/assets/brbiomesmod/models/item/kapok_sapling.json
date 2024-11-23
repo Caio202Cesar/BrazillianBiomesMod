@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/kapok_sapling"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/kapok_sapling"
+  }
 }

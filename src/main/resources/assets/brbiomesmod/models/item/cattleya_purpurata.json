@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/cattleya_purpurata"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/cattleya_purpurata"
+  }
 }

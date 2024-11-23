@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/cecropia_sapling"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/cecropia_sapling"
+  }
 }

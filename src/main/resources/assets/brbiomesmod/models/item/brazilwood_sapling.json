@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/brazilwood_sapling"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/brazilwood_sapling"
+  }
 }

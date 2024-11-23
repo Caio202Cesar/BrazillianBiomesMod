@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/cashew_sapling"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/cashew_sapling"
+  }
 }

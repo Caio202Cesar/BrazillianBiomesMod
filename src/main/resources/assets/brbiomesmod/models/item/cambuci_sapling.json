@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/cambuci_sapling"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/cambuci_sapling"
+  }
 }

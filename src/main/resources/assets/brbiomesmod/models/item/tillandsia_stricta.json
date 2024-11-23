@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/tillandsia_stricta"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/tillandsia_stricta"
+  }
 }

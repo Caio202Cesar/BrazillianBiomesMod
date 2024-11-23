@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/jua_sapling"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/jua_sapling"
+  }
 }

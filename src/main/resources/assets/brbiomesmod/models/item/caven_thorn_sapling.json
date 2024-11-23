@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/caven_thorn_sapling"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/caven_thorn_sapling"
+  }
 }

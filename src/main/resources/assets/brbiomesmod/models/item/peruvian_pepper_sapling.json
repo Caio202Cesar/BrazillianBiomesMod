@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/peruvian_pepper_sapling"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/peruvian_pepper_sapling"
+  }
 }

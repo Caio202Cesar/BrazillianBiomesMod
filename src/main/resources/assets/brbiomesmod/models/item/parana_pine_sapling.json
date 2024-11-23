@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/parana_pine_sapling"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/parana_pine_sapling"
+  }
 }

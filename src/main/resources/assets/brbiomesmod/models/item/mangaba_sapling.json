@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/mangaba_sapling"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/mangaba_sapling"
+  }
 }
