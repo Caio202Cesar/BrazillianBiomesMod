@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/yerba_mate_sapling"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/yerba_mate_sapling"
+  }
 }
