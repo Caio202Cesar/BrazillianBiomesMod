@@ -1,0 +1,32 @@
+{
+  "replace": false,
+  "values": [
+    "brbiomesmod:kapok_planks",
+    "brbiomesmod:cashew_planks",
+    "brbiomesmod:ipe_planks",
+    "brbiomesmod:jabuticaba_planks",
+    "brbiomesmod:yerba_mate_planks",
+    "brbiomesmod:feijoa_planks",
+    "brbiomesmod:cambuci_planks",
+    "brbiomesmod:schinus_planks",
+    "brbiomesmod:wolf_apple_planks",
+    "brbiomesmod:mangaba_planks",
+    "brbiomesmod:brazilwood_planks",
+    "brbiomesmod:brazilnut_planks",
+    "brbiomesmod:jua_planks",
+    "brbiomesmod:brazillian_sassafras_planks",
+    "brbiomesmod:lophantera_planks",
+    "brbiomesmod:imbuia_planks",
+    "brbiomesmod:umbu_planks",
+    "brbiomesmod:manaca_da_serra_planks",
+    "brbiomesmod:eugenia_planks",
+    "brbiomesmod:parana_pine_planks",
+    "brbiomesmod:brazillian_rosewood_planks",
+    "brbiomesmod:jequitiba_planks",
+    "brbiomesmod:pink_peroba_planks",
+    "brbiomesmod:sharinga_planks",
+    "brbiomesmod:algarrobillo_planks",
+    "brbiomesmod:caven_thorn_planks",
+    "brbiomesmod:black_sucupira_planks"
+  ]
+}

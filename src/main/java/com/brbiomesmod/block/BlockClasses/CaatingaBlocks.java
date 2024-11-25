@@ -77,6 +77,8 @@ public class CaatingaBlocks {
 
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_LEAVES = registerBlock("white_silk_floss_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> WHITE_SILK_FLOSS_SAPLING = registerBlock("white_silk_floss_sapling",
+            ModLeaves::new);
     public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
             ModLogs::new);
 

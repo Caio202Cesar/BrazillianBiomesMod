@@ -51,6 +51,11 @@ public class CerradoSavannaBlocks {
     public static final RegistryObject<Block> CAGAITA_SAPLING = registerBlock("cagaita_sapling",
             CagaitaSapling::new);
 
+    public static final RegistryObject<Block> PINK_SILK_FLOSS_LEAVES = registerBlock("pink_silk_floss_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PINK_SILK_FLOSS_SAPLING = registerBlock("pink_silk_floss_sapling",
+            ModLeaves::new);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
