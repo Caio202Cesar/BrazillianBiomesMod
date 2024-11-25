@@ -25,10 +25,10 @@ public class ModEntityTypes {
                     EntityClassification.CREATURE).size(0.6F, 0.7F).build(new ResourceLocation(BrazillianBiomesMod.MOD_ID,
                     "maned_wolf").toString()));
 
-    public static final RegistryObject<EntityType<CuracangaEntity>> CURACANGA =
+    /*public static final RegistryObject<EntityType<CuracangaEntity>> CURACANGA =
             ENTITY_TYPES.register("curacanga", () -> EntityType.Builder.create(CuracangaEntity::new,
                     EntityClassification.MONSTER).immuneToFire().size(0.4f, 0.4f).build(new ResourceLocation(BrazillianBiomesMod.MOD_ID,
-                    "curacanga").toString()));
+                    "curacanga").toString()));*/
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

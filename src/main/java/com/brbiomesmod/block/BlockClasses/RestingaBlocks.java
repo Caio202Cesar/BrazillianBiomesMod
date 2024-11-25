@@ -3,6 +3,7 @@ package com.brbiomesmod.block.BlockClasses;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
 import com.brbiomesmod.block.Saplings.CashewSapling;
+import com.brbiomesmod.block.Saplings.MangabaSapling;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
@@ -41,6 +42,17 @@ public class RestingaBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> CASHEW_SAPLING = registerBlock("cashew_sapling",
             CashewSapling::new);
+
+
+    public static final RegistryObject<Block> MANGABA_LEAVES = registerBlock("mangaba_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> MANGABA_LOG = registerBlock("mangaba_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> MANGABA_PLANKS = registerBlock("mangaba_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> MANGABA_SAPLING = registerBlock("mangaba_sapling",
+            MangabaSapling::new);
+
 
     public static final RegistryObject<Block> XANANA = registerBlock("xanana",
             XananaFlower::new);

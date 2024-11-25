@@ -75,15 +75,6 @@ public class CaatingaBlocks {
             UmbuSapling::new);
 
 
-    public static final RegistryObject<Block> MANGABA_LEAVES = registerBlock("mangaba_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> MANGABA_LOG = registerBlock("mangaba_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> MANGABA_PLANKS = registerBlock("mangaba_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> MANGABA_SAPLING = registerBlock("mangaba_sapling",
-            MangabaSapling::new);
-
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_LEAVES = registerBlock("white_silk_floss_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",

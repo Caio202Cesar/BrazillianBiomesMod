@@ -440,8 +440,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState WOLF_APPLE_LOG = CerradoSavannaBlocks.WOLF_APPLE_LOG.get().getDefaultState();
         protected static final BlockState WOLF_APPLE_LEAVES = CerradoSavannaBlocks.WOLF_APPLE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState MANGABA_LOG = CaatingaBlocks.MANGABA_LOG.get().getDefaultState();
-        protected static final BlockState MANGABA_LEAVES = CaatingaBlocks.MANGABA_LEAVES.get().getDefaultState();
+        protected static final BlockState MANGABA_LOG = RestingaBlocks.MANGABA_LOG.get().getDefaultState();
+        protected static final BlockState MANGABA_LEAVES = RestingaBlocks.MANGABA_LEAVES.get().getDefaultState();
 
         protected static final BlockState BRAZILNUT_LOG = AmazonRainforestBlocks.BRAZILNUT_LOG.get().getDefaultState();
         protected static final BlockState BRAZILNUT_LEAVES = AmazonRainforestBlocks.BRAZILNUT_LEAVES.get().getDefaultState();
