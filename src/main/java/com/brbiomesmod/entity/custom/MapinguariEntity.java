@@ -26,7 +26,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class MapinguariEntity extends MonsterEntity {
-    protected MapinguariEntity(EntityType<? extends MonsterEntity> type, World worldIn) {
+    public MapinguariEntity(EntityType<? extends MonsterEntity> type, World worldIn) {
         super(type, worldIn);
     }
 

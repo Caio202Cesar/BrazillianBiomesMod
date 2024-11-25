@@ -13,7 +13,7 @@ public class ManedWolfEntity extends FoxEntity {
     }
 
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.getItem() == ModItems.WOLF_APPLE;
+        return ModItems.WOLF_APPLE.isPresent();
     }
 
 }
