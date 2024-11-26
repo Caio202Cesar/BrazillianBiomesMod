@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "brbiomesmod:blocks/jequitiba_log",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "brbiomesmod:jequitiba_log"
+        }
+      ]
+    }
+  ]
+}
