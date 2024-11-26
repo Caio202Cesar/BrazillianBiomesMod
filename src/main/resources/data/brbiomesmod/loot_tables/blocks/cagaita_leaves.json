@@ -5,46 +5,189 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "brbiomesmod:cagaita_sapling",
-          "weight": 1,
-          "functions": [
+          "type": "minecraft:alternatives",
+          "children": [
             {
-              "function": "set_count",
-              "count": {
-                "min": 0,
-                "max": 1
-              }
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:alternative",
+                  "terms": [
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "item": "minecraft:shears"
+                      }
+                    },
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "enchantments": [
+                          {
+                            "enchantment": "minecraft:silk_touch",
+                            "levels": {
+                              "min": 1
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ],
+              "name": "brbiomesmod:cagaita_leaves"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                },
+                {
+                  "condition": "minecraft:table_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "chances": [
+                    0.05,
+                    0.0625,
+                    0.083333336,
+                    0.1
+                  ]
+                }
+              ],
+              "name": "brbiomesmod:cagaita_sapling"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:stick",
-          "weight": 10,
+          "conditions": [
+            {
+              "condition": "minecraft:table_bonus",
+              "enchantment": "minecraft:fortune",
+              "chances": [
+                0.4,
+                0.45,
+                0.425,
+                0.4333334,
+                0.45
+              ]
+            }
+          ],
           "functions": [
             {
-              "function": "set_count",
+              "function": "minecraft:set_count",
               "count": {
-                "min": 1,
-                "max": 1
+                "min": 1.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
               }
+            },
+            {
+              "function": "minecraft:explosion_decay"
             }
-          ]
-        },
+          ],
+          "name": "minecraft:stick"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:alternative",
+            "terms": [
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "item": "minecraft:shears"
+                }
+              },
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "enchantments": [
+                    {
+                      "enchantment": "minecraft:silk_touch",
+                      "levels": {
+                        "min": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:cagaita_fruits",
-          "weight": 5,
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            },
+            {
+              "condition": "minecraft:table_bonus",
+              "enchantment": "minecraft:fortune",
+              "chances": [
+                0.4,
+                0.45,
+                0.425,
+                0.4333334,
+                0.45
+              ]
+            }
+          ],
           "functions": [
             {
-              "function": "set_count",
+              "function": "minecraft:set_count",
               "count": {
-                "min": 1,
-                "max": 4
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
               }
+            },
+            {
+              "function": "minecraft:explosion_decay"
             }
-          ]
+          ],
+          "name": "brbiomesmod:cagaita_fruits"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:inverted",
+          "term": {
+            "condition": "minecraft:alternative",
+            "terms": [
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "item": "minecraft:shears"
+                }
+              },
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "enchantments": [
+                    {
+                      "enchantment": "minecraft:silk_touch",
+                      "levels": {
+                        "min": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         }
       ]
     }
