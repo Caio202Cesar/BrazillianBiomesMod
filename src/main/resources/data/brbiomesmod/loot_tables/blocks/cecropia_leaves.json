@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:cecropía_sapling"
+              "name": "brbiomesmod:cecropia_sapling"
             }
           ]
         }
@@ -137,11 +137,11 @@
               "condition": "minecraft:table_bonus",
               "enchantment": "minecraft:fortune",
               "chances": [
-                0.3,
-                0.35,
-                0.045,
-                0.0533334,
-                0.25
+                0.4,
+                0.45,
+                0.425,
+                0.4333334,
+                0.45
               ]
             }
           ],
@@ -150,7 +150,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 1.0,
-                "max": 3.0,
+                "max": 4.0,
                 "type": "minecraft:uniform"
               }
             },
