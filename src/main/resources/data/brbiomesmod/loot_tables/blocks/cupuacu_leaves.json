@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:cashew_leaves"
+              "name": "brbiomesmod:cupuacu_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:cashew_sapling"
+              "name": "brbiomesmod:cupuacu_sapling"
             }
           ]
         }
@@ -150,7 +150,7 @@
               "function": "minecraft:set_count",
               "count": {
                 "min": 1.0,
-                "max": 2.0,
+                "max": 1.0,
                 "type": "minecraft:uniform"
               }
             },
@@ -158,7 +158,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "brbiomesmod:cashew_fruit"
+          "name": "brbiomesmod:cupuacu"
         }
       ],
       "conditions": [
