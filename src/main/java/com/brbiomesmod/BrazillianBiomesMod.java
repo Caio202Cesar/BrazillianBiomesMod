@@ -1,12 +1,10 @@
 package com.brbiomesmod;
 
 import com.brbiomesmod.block.BlockClasses.*;
-import com.brbiomesmod.entity.ModEntityTypes;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.*;
 import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -55,8 +53,6 @@ public class BrazillianBiomesMod {
         PampasBiome.register(eventBus);
         CerradoBiome.register(eventBus);
         RestingaBeachBiome.register(eventBus);
-
-        ModEntityTypes.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
