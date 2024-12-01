@@ -93,6 +93,16 @@ public class AmazonRainforestBlocks {
             BacuriSapling::new);
 
 
+    public static final RegistryObject<Block> CAMU_CAMU_LOG = registerBlock("camu_camu_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CAMU_CAMU_LEAVES = registerBlock("camu_camu_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CAMU_CAMU_PLANKS = registerBlock("camu_camu_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> CAMU_CAMU_SAPLING = registerBlock("camu_camu_sapling",
+            CamuCamuSapling::new);
+
+
     public static final RegistryObject<Block> CASSAVA_PLANT = registerBlock("cassava_plant",
             CassavaPlant::new);
 

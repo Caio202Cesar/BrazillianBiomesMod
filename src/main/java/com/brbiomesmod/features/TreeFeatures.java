@@ -423,6 +423,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(4, 8, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Camu-camu Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAMU_CAMU_TREE = register("camu_camu_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMU_CAMU_LOG),
+                    new SimpleBlockStateProvider(States.CAMU_CAMU_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
 
     public static final class States {
 
@@ -443,6 +450,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState BACURI_LOG = AmazonRainforestBlocks.BACURI_LOG.get().getDefaultState();
         protected static final BlockState BACURI_LEAVES = AmazonRainforestBlocks.BACURI_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CAMU_CAMU_LOG = AmazonRainforestBlocks.CAMU_CAMU_LOG.get().getDefaultState();
+        protected static final BlockState CAMU_CAMU_LEAVES = AmazonRainforestBlocks.CAMU_CAMU_LEAVES.get().getDefaultState();
 
         protected static final BlockState IPE_LOG = AtlanticForestBlocks.IPE_LOG.get().getDefaultState();
         protected static final BlockState YELLOW_IPE_BLOSSOM = AtlanticForestBlocks.YELLOW_IPE_BLOSSOM.get().getDefaultState();
