@@ -73,7 +73,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
         public static final BlockClusterFeatureConfig ATLANTIC_ORCHIDS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
-                        .addWeightedBlockstate(States.CATTLEYA_PURPURATA, 1),
+                        .addWeightedBlockstate(States.CATTLEYA_PURPURATA, 1)
+                        .addWeightedBlockstate(States.CATTLEYA_LADY_ACKLAND, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig IPOMAEA_PES_CAPRAE_CONFIG =
@@ -102,6 +103,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState TURK_TURBAN_FRUITING = CaatingaBlocks.TURK_TURBAN_FRUITING_CACTUS.get().getDefaultState();
         protected static final BlockState CACTUS = Blocks.CACTUS.getDefaultState();
         protected static final BlockState CATTLEYA_PURPURATA = AtlanticForestBlocks.CATTLEYA_PURPURATA.get().getDefaultState();
+        protected static final BlockState CATTLEYA_LADY_ACKLAND = AtlanticForestBlocks.CATTLEYA_LADY_ACKLAND.get().getDefaultState();
         protected static final BlockState IPOMAEA_PES_CAPRAE = RestingaBlocks.IPOMAEA_PES_CAPRAE.get().getDefaultState();
         protected static final BlockState XANANA1 = RestingaBlocks.XANANA.get().getDefaultState();
         protected static final BlockState XANANA2 = RestingaBlocks.XANANA_BIG.get().getDefaultState();
