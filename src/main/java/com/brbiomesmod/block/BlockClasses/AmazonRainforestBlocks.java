@@ -83,6 +83,16 @@ public class AmazonRainforestBlocks {
             SharingaSapling::new);
 
 
+    public static final RegistryObject<Block> BACURI_LOG = registerBlock("bacuri_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BACURI_LEAVES = registerBlock("bacuri_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BACURI_PLANKS = registerBlock("bacuri_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> BACURI_SAPLING = registerBlock("bacuri_sapling",
+            BacuriSapling::new);
+
+
     public static final RegistryObject<Block> CASSAVA_PLANT = registerBlock("cassava_plant",
             CassavaPlant::new);
 

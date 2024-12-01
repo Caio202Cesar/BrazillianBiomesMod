@@ -1,6 +1,7 @@
 package com.brbiomesmod;
 
 import com.brbiomesmod.block.BlockClasses.*;
+import com.brbiomesmod.features.ModFeatures;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.*;
 import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;

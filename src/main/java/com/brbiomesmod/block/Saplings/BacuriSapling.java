@@ -1,6 +1,7 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.PampasPlainsBlocks;
+import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
@@ -16,15 +17,15 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Random;
 
-public class BrazillianPepperSapling extends SaplingBlock {
-    public BrazillianPepperSapling() {
-        super(new BrazillianPepperTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class BacuriSapling extends SaplingBlock {
+    public BacuriSapling() {
+        super(new BacuriSapling.BacuriTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(PampasPlainsBlocks.BRAZILLIAN_PEPPER_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.BACURI_SAPLING.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -36,14 +37,13 @@ public class BrazillianPepperSapling extends SaplingBlock {
     }
 
 
-    private static class BrazillianPepperTree extends Tree {
+    private static class BacuriTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 5) {
-                return TreeFeatures.BRAZILLIAN_PEPPER_STOUT_TREE;
+                return TreeFeatures.MEGA_BACURI_TREE;
             } else {
-                return TreeFeatures.BRAZILLIAN_PEPPER_TREE;
+                return TreeFeatures.BACURI_TREE;
             }}
     }
 }
-
