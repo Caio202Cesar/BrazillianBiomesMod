@@ -64,6 +64,7 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         SilverCecropiaSapling.registerRenderLayer();
         UmbuSapling.registerRenderLayer();
         WhiteIpeSapling.registerRenderLayer();
+        WhiteSilkFlossSapling.registerRenderLayer();
         WolfAppleSapling.registerRenderLayer();
         YellowIpeSapling.registerRenderLayer();
         YerbaMateSapling.registerRenderLayer();

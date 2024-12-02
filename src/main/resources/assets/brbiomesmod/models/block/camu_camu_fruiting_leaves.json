@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/camu_camu_fruiting_leaves",
+    "particle": "brbiomesmod:block/camu_camu_fruiting_leaves"
+  }
+}

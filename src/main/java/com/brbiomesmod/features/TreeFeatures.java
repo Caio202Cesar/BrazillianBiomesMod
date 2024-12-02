@@ -432,21 +432,31 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Silver Pepper Shrub (Schinus lentiscifolius) - a shrub in Pampas Biome
-    public static final ConfiguredFeature<?, ?> JUNGLE_BUSH = register("jungle_bush",
+    public static final ConfiguredFeature<?, ?> SILVER_PEPPER_BUSH = register("silver_pepper_bush",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SCHINUS_LOG),
-                    new SimpleBlockStateProvider(Features.States.SILVER_PEPPER_LEAVES),
+                    new SimpleBlockStateProvider(States.SILVER_PEPPER_LEAVES),
                     new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
                     new StraightTrunkPlacer(1, 0, 0),
                     new TwoLayerFeature(0, 0, 0))).setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
 
     //Sapucaia Tree
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAPUCAIA_TREE = register("sapucaia_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.EUGENIA_LOG),
-                    new SimpleBlockStateProvider(States.CAGAITA_LEAVES),
+    /*public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAPUCAIA_TREE = register("sapucaia_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SAPUCAIA_LOG),
+                    new SimpleBlockStateProvider(States.SAPUCAIA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));*/
+
+    //Silk Floss Trees
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_SILK_FLOSS_TREE = register("white_silk_floss_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SILK_FLOSS_LOG),
+                    new SimpleBlockStateProvider(States.WHITE_SILK_FLOSS_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
 
     public static final class States {
 
@@ -464,6 +474,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState BLACK_JUREMA_LOG = CaatingaBlocks.BLACK_JUREMA_LOG.get().getDefaultState();
         protected static final BlockState BLACK_JUREMA_LEAVES = CaatingaBlocks.BLACK_JUREMA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState SILK_FLOSS_LOG = CerradoSavannaBlocks.SILK_FLOSS_LOG.get().getDefaultState();
+        protected static final BlockState WHITE_SILK_FLOSS_LEAVES = CaatingaBlocks.WHITE_SILK_FLOSS_LEAVES.get().getDefaultState();
 
         protected static final BlockState BACURI_LOG = AmazonRainforestBlocks.BACURI_LOG.get().getDefaultState();
         protected static final BlockState BACURI_LEAVES = AmazonRainforestBlocks.BACURI_LEAVES.get().getDefaultState();
@@ -483,6 +496,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState SCHINUS_LOG = PampasPlainsBlocks.SCHINUS_LOG.get().getDefaultState();
         protected static final BlockState BRAZILLIAN_PEPPER_LEAVES = PampasPlainsBlocks.BRAZILLIAN_PEPPER_LEAVES.get().getDefaultState();
         protected static final BlockState PERUVIAN_PEPPER_LEAVES = PampasPlainsBlocks.PERUVIAN_PEPPER_LEAVES.get().getDefaultState();
+        protected static final BlockState SILVER_PEPPER_LEAVES = PampasPlainsBlocks.SILVER_PEPPER_LEAVES.get().getDefaultState();
 
         protected static final BlockState WOLF_APPLE_LOG = CerradoSavannaBlocks.WOLF_APPLE_LOG.get().getDefaultState();
         protected static final BlockState WOLF_APPLE_LEAVES = CerradoSavannaBlocks.WOLF_APPLE_LEAVES.get().getDefaultState();

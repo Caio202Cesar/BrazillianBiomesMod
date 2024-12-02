@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:silk_floss_log"
+    }
+  ],
+  "result": {
+    "item": "minecraft:jungle_planks",
+    "count": 4
+  }
+}

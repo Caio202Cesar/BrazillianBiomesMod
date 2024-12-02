@@ -43,6 +43,8 @@ public class PampasPlainsBlocks {
             BrazillianPepperSapling::new);
     public static final RegistryObject<Block> PERUVIAN_PEPPER_SAPLING = registerBlock("peruvian_pepper_sapling",
             PeruvianPepperSapling::new);
+    public static final RegistryObject<Block> SILVER_PEPPER_LEAVES = registerBlock("silver_pepper_leaves",
+            ModLeaves::new);
 
 
     public static final RegistryObject<Block> ALGARROBILLO_LOG = registerBlock("algarrobillo_log",

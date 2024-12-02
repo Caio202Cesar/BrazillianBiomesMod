@@ -51,6 +51,8 @@ public class CerradoSavannaBlocks {
     public static final RegistryObject<Block> CAGAITA_SAPLING = registerBlock("cagaita_sapling",
             CagaitaSapling::new);
 
+    public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
+            ModLogs::new);
     public static final RegistryObject<Block> PINK_SILK_FLOSS_LEAVES = registerBlock("pink_silk_floss_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> PINK_SILK_FLOSS_SAPLING = registerBlock("pink_silk_floss_sapling",

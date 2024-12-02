@@ -2,10 +2,7 @@ package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
-import com.brbiomesmod.block.Saplings.BlackJuremaSapling;
-import com.brbiomesmod.block.Saplings.JuaSapling;
-import com.brbiomesmod.block.Saplings.MangabaSapling;
-import com.brbiomesmod.block.Saplings.UmbuSapling;
+import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
@@ -75,12 +72,10 @@ public class CaatingaBlocks {
             UmbuSapling::new);
 
 
-    public static final RegistryObject<Block> WHITE_SILK_FLOSS_LEAVES = registerBlock("white_silk_floss_leaves",
+    public static final RegistryObject<Block> WHITE_SILK_FLOSS_LEAVES = registerBlock("silk_floss_white_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> WHITE_SILK_FLOSS_SAPLING = registerBlock("white_silk_floss_sapling",
-            ModLeaves::new);
-    public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
-            ModLogs::new);
+    public static final RegistryObject<Block> WHITE_SILK_FLOSS_SAPLING = registerBlock("silk_floss_white_sapling",
+            WhiteSilkFlossSapling::new);
 
 
     public static final RegistryObject<Block> CNIDOSCOLUS_URENS = registerBlock("bull_nettle",
