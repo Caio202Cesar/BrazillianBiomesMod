@@ -6,6 +6,6 @@
       {"model": "brbiomesmod:block/cambuci_flowering_leaves",
         "weight": 1},
       {"model": "brbiomesmod:block/cambuci_fruiting_leaves",
-        "weight": 1}
+        "weight": 2}
     ]
   }}

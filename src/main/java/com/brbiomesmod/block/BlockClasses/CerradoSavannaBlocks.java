@@ -7,6 +7,7 @@ import com.brbiomesmod.block.ModPlanks;
 import com.brbiomesmod.block.Saplings.BlackSucupiraSapling;
 import com.brbiomesmod.block.Saplings.CagaitaSapling;
 import com.brbiomesmod.block.Saplings.WolfAppleSapling;
+import com.brbiomesmod.block.SilkFlossLog;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
@@ -52,7 +53,7 @@ public class CerradoSavannaBlocks {
             CagaitaSapling::new);
 
     public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
-            ModLogs::new);
+            SilkFlossLog::new);
     public static final RegistryObject<Block> PINK_SILK_FLOSS_LEAVES = registerBlock("pink_silk_floss_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> PINK_SILK_FLOSS_SAPLING = registerBlock("pink_silk_floss_sapling",

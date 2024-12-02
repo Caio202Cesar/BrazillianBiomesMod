@@ -1,8 +1,11 @@
 {
   "variants":{
     "":[
-      {"model": "brbiomesmod:block/bacuri_leaves"},
-      {"model": "brbiomesmod:block/bacuri_flowering_leaves"},
-      {"model": "brbiomesmod:block/bacuri_fruiting_leaves"}
+      {"model": "brbiomesmod:block/bacuri_leaves",
+        "weight": 5},
+      {"model": "brbiomesmod:block/bacuri_flowering_leaves",
+        "weight": 2},
+      {"model": "brbiomesmod:block/bacuri_fruiting_leaves",
+        "weight": 2}
     ]
   }}

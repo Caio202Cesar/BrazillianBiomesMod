@@ -10,6 +10,8 @@ import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.Items;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.IItemProvider;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 
 public class BrazilnutFruit extends Item {
@@ -43,6 +45,16 @@ public class BrazilnutFruit extends Item {
             // Add the items to the player's inventory
             playerEntity.inventory.addItemStackToInventory(firstItemStack);
             playerEntity.inventory.addItemStackToInventory(secondItemStack);
+
+            // Play a sound at the clicked block's position
+            context.getWorld().playSound(
+                    null, // Use null to play the sound for all nearby players
+                    context.getPos(), // Position where the sound will play
+                    SoundEvents.ENTITY_ITEM_BREAK, // Sound event (replace with your desired sound)
+                    SoundCategory.PLAYERS, // Sound category
+                    1.0F, // Volume
+                    1.0F // Pitch
+            );
 
             // Optionally, you could remove the used item from the player’s hand if desired
             context.getItem().shrink(1); // Reduces the stack size by 1

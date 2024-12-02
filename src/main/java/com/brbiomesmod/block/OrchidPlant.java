@@ -25,7 +25,7 @@ public class OrchidPlant extends BushBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.CATTLEYA_PURPURATA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.LADY_ACKLAND_CATTLEYA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.CATTLEYA_LADY_ACKLAND.get(), RenderType.getCutout());
 
     }
 
