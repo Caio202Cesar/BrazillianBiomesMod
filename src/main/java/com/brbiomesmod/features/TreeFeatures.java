@@ -605,6 +605,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     BRAZILNUT_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> BALSA_TREES = register("balsa_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BALSA_TREE.withChance(0.5F)),
+                    MEGA_BALSA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
+
     public static final ConfiguredFeature<?, ?> BACURI_TREES = register("bacuri_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BACURI_TREE.withChance(0.5F)),
                     MEGA_BACURI_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA

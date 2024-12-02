@@ -64,6 +64,7 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
     DefaultBiomeFeatures.withSwampVegetation(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withTreesInWater(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withBacuriTrees(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withBalsaTrees(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.JUNGLE_TREE);
 
