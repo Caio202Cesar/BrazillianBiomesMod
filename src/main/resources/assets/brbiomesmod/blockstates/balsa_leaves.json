@@ -4,7 +4,7 @@
       {"model": "brbiomesmod:block/balsa_leaves",
         "weight": 5},
       {"model": "brbiomesmod:block/balsa_flowering_leaves",
-        "weight": 3},
+        "weight": 1},
       {"model": "brbiomesmod:block/balsa_fruiting_leaves",
         "weight": 2}
     ]

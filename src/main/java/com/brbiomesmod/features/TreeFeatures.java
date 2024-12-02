@@ -468,7 +468,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BALSA_LOG),
                     new SimpleBlockStateProvider(States.BALSA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 8, 0),
+                    new StraightTrunkPlacer(10, 12, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_BALSA_TREE = register("mega_balsa_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BALSA_LOG),
@@ -597,7 +597,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SHARINGA_TREE.withChance(0.2F),
-                            CUPUACU_TREE.withChance(0.1F), CAMU_CAMU_TREE.withChance(0.1F)), KAPOK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            CUPUACU_TREE.withChance(0.1F), CAMU_CAMU_TREE.withChance(0.2F)), KAPOK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> BRAZILNUT_TREES = register("brazilnut_trees",
@@ -618,7 +618,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> LOPHANTERA_TREES = register("lophantera_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOPHANTERA_TREE.withChance(0.5F)),
                     LOPHANTERA_TREE2)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 
     public static final ConfiguredFeature<?, ?> MANACA_TREES = register("manaca_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANACA_FANCY_TREE.withChance(0.1F)),
