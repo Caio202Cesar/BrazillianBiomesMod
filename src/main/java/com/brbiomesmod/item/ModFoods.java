@@ -34,5 +34,6 @@ public class ModFoods extends Foods {
     public static final Food CAGAITA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food CECROPIA_FRUITS = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food BACURI = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food CAMU_CAMU_FRUITS = (new Food.Builder()).hunger(2).saturation(0.1F).build();
 
 }

@@ -101,6 +101,9 @@ public class ModItems {
     public static final RegistryObject<Item> BACURI = ITEMS.register("bacuri",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.BACURI)));
 
+    public static final RegistryObject<Item> CAMU_CAMU_FRUITS = ITEMS.register("camu_camu_fruits",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CAMU_CAMU_FRUITS)));
+
 
     public static final RegistryObject<Item> TOURMALINE_PARAIBA = ITEMS.register("tourmaline_paraiba",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
