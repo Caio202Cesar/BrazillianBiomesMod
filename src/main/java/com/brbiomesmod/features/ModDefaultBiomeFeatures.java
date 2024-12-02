@@ -104,4 +104,10 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withCerradoTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CERRADO_TREES);
     }
+    public static void withPampasShrubs(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PAMPAS_SHRUBS);
+    }
+    public static void withBacuriTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BACURI_TREES);
+    }
 }

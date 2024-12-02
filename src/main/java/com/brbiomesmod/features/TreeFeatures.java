@@ -573,13 +573,18 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SHARINGA_TREE.withChance(0.2F),
-                            CUPUACU_TREE.withChance(0.1F)), KAPOK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            CUPUACU_TREE.withChance(0.1F), CAMU_CAMU_TREE.withChance(0.1F)), KAPOK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> BRAZILNUT_TREES = register("brazilnut_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILNUT_TREE.withChance(0.5F)),
                     BRAZILNUT_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> BACURI_TREES = register("bacuri_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BACURI_TREE.withChance(0.5F)),
+                    MEGA_BACURI_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(6, 0.1F, 0))));
 
     public static final ConfiguredFeature<?, ?> LOPHANTERA_TREES = register("lophantera_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOPHANTERA_TREE.withChance(0.5F)),
@@ -625,7 +630,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> CAATINGA_TREES = register("caatinga_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(UMBU_TREE.withChance(0.2F),
-                            JUA_TREE.withChance(0.1F)), BLACK_JUREMA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    JUA_TREE.withChance(0.1F), WHITE_SILK_FLOSS_TREE.withChance(0.1F)), BLACK_JUREMA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 0))));
 
     public static final ConfiguredFeature<?, ?> RESTINGA_TREES = register("restinga_trees",
@@ -648,6 +653,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             PERUVIAN_PEPPER_TREE.withChance(0.1F), BRAZILLIAN_PEPPER_BIG_TREE.withChance(0.01F), BRAZILLIAN_PEPPER_STOUT_TREE.withChance(0.2F)),
                             BRAZILLIAN_PEPPER_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
+
+    public static final ConfiguredFeature<?, ?> PAMPAS_SHRUBS = register("pampas_shrubs",
+            SILVER_PEPPER_BUSH.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> FOREST_CECROPIA_TREES = register("cecropia_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.2F)),

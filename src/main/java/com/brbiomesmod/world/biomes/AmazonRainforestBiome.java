@@ -63,6 +63,8 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
     ModDefaultBiomeFeatures.withCassavaPlants(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withSwampVegetation(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withTreesInWater(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withBacuriTrees(biomegenerationsettings$builder);
+
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.JUNGLE_TREE);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
