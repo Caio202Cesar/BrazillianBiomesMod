@@ -457,6 +457,21 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    //Balsa Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JUNGLE_TREE_NO_VINE = register("jungle_tree_no_vine",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Features.States.JUNGLE_LOG),
+                    new SimpleBlockStateProvider(Features.States.JUNGLE_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 8, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_JUNGLE_TREE = register("mega_jungle_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(Features.States.JUNGLE_LOG),
+                    new SimpleBlockStateProvider(Features.States.JUNGLE_LEAVES),
+                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
+                    new MegaJungleTrunkPlacer(10, 2, 19),
+                    new TwoLayerFeature(1, 1, 2))).build()));
+
+
 
     public static final class States {
 
@@ -569,6 +584,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState BLACK_SUCUPIRA_LOG = CerradoSavannaBlocks.BLACK_SUCUPIRA_LOG.get().getDefaultState();
         protected static final BlockState BLACK_SUCUPIRA_LEAVES = CerradoSavannaBlocks.BLACK_SUCUPIRA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState BALSA_LOG = AmazonRainforestBlocks.BALSA_LOG.get().getDefaultState();
+        protected static final BlockState BALSA_LEAVES = AmazonRainforestBlocks.BALSA_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",

@@ -35,6 +35,14 @@ public class AmazonRainforestBlocks {
             KapokSapling::new);
 
 
+    public static final RegistryObject<Block> BALSA_LOG = registerBlock("balsa_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BALSA_LEAVES = registerBlock("balsa_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BALSA_PLANKS = registerBlock("balsa_planks",
+            ModPlanks::new);
+
+
     public static final RegistryObject<Block> LOPHANTERA_LOG = registerBlock("lophantera_log",
             ModLogs::new);
     public static final RegistryObject<Block> LOPHANTERA_LEAVES = registerBlock("lophantera_leaves",
