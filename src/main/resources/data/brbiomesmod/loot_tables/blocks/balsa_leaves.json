@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:pitanga_leaves"
+              "name": "brbiomesmod:balsa_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:pitanga_sapling"
+              "name": "brbiomesmod:balsa_sapling"
             }
           ]
         }
@@ -92,73 +92,6 @@
             }
           ],
           "name": "minecraft:stick"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:inverted",
-          "term": {
-            "condition": "minecraft:alternative",
-            "terms": [
-              {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "item": "minecraft:shears"
-                }
-              },
-              {
-                "condition": "minecraft:match_tool",
-                "predicate": {
-                  "enchantments": [
-                    {
-                      "enchantment": "minecraft:silk_touch",
-                      "levels": {
-                        "min": 1
-                      }
-                    }
-                  ]
-                }
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "conditions": [
-            {
-              "condition": "minecraft:survives_explosion"
-            },
-            {
-              "condition": "minecraft:table_bonus",
-              "enchantment": "minecraft:fortune",
-              "chances": [
-                0.5,
-                0.55,
-                0.525,
-                0.5333334,
-                0.55
-              ]
-            }
-          ],
-          "functions": [
-            {
-              "function": "minecraft:set_count",
-              "count": {
-                "min": 0.0,
-                "max": 5.0,
-                "type": "minecraft:uniform"
-              }
-            },
-            {
-              "function": "minecraft:explosion_decay"
-            }
-          ],
-          "name": "brbiomesmod:pitanga"
         }
       ],
       "conditions": [

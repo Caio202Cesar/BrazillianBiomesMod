@@ -5,10 +5,7 @@ import com.brbiomesmod.block.ModLeaves;
 import com.brbiomesmod.block.ModLogs;
 import com.brbiomesmod.block.ModPlanks;
 import com.brbiomesmod.block.PampasPlant;
-import com.brbiomesmod.block.Saplings.AlgarrobilloSapling;
-import com.brbiomesmod.block.Saplings.BrazillianPepperSapling;
-import com.brbiomesmod.block.Saplings.CavenThornSapling;
-import com.brbiomesmod.block.Saplings.PeruvianPepperSapling;
+import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import com.electronwill.nightconfig.core.ConfigSpec;
@@ -45,6 +42,8 @@ public class PampasPlainsBlocks {
             PeruvianPepperSapling::new);
     public static final RegistryObject<Block> SILVER_PEPPER_LEAVES = registerBlock("silver_pepper_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> SILVER_PEPPER_SAPLING = registerBlock("silver_pepper_sapling",
+            SilverPepperSapling::new);
 
 
     public static final RegistryObject<Block> ALGARROBILLO_LOG = registerBlock("algarrobillo_log",

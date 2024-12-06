@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:pitanga_leaves"
+              "name": "brbiomesmod:silver_pepper_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:pitanga_sapling"
+              "name": "brbiomesmod:silver_pepper_sapling"
             }
           ]
         }
@@ -137,11 +137,11 @@
               "condition": "minecraft:table_bonus",
               "enchantment": "minecraft:fortune",
               "chances": [
-                0.5,
-                0.55,
-                0.525,
-                0.5333334,
-                0.55
+                0.3,
+                0.35,
+                0.045,
+                0.0533334,
+                0.15
               ]
             }
           ],
@@ -149,8 +149,8 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 0.0,
-                "max": 5.0,
+                "min": 1.0,
+                "max": 3.0,
                 "type": "minecraft:uniform"
               }
             },
@@ -158,7 +158,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "brbiomesmod:pitanga"
+          "name": "brbiomesmod:pink_peeper"
         }
       ],
       "conditions": [

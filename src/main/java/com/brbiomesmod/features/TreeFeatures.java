@@ -438,7 +438,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Silver Pepper Shrub (Schinus lentiscifolius) - a shrub in Pampas Biome
-    public static final ConfiguredFeature<?, ?> SILVER_PEPPER_BUSH = register("silver_pepper_bush",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SILVER_PEPPER_BUSH = register("silver_pepper_bush",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SCHINUS_LOG),
                     new SimpleBlockStateProvider(States.SILVER_PEPPER_LEAVES),
                     new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),

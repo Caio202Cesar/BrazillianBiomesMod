@@ -39,6 +39,7 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         BrazillianSassafrasSapling.registerRenderLayer();
         BrazilnutSapling.registerRenderLayer();
         BrazilwoodSapling.registerRenderLayer();
+        BalsaSapling.registerRenderLayer();
         CambuciSapling.registerRenderLayer();
         CashewSapling.registerRenderLayer();
         CagaitaSapling.registerRenderLayer();
@@ -62,6 +63,7 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         PurpleIpeSapling.registerRenderLayer();
         SharingaSapling.registerRenderLayer();
         SilverCecropiaSapling.registerRenderLayer();
+        SilverPepperSapling.registerRenderLayer();
         UmbuSapling.registerRenderLayer();
         WhiteIpeSapling.registerRenderLayer();
         WhiteSilkFlossSapling.registerRenderLayer();
