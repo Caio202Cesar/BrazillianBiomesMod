@@ -72,7 +72,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.MANGABA)));
 
     public static final RegistryObject<Item> PINK_PEEPER = ITEMS.register("pink_peeper",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.PINK_PEPPER)));
 
     public static final RegistryObject<Item> CUPUACU = ITEMS.register("cupuacu",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CUPUACU)));
