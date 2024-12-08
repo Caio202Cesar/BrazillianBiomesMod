@@ -62,8 +62,6 @@ public class PampasPlainsBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> CAVEN_THORN_SAPLING = registerBlock("caven_thorn_sapling",
             CavenThornSapling::new);
-    public static final RegistryObject<Block> CAVEN_THORN_PLANKS = registerBlock("caven_thorn_planks",
-            ModPlanks::new);
 
 
     public static final RegistryObject<Block> MACELA = registerBlock("macela",
