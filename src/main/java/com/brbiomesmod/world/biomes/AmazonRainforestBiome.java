@@ -66,7 +66,7 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.JUNGLE_TREE);
 
-    return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
+    return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
             .temperature(0.95F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                     .setWaterFogColor(993300).withSkyColor(4169700).withFoliageColor(3193611)
                     .withGrassColor(5884220).setFogColor(14807295)
