@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/mandevilla_coccinea",
+    "particle": "brbiomesmod:block/mandevilla_coccinea"
+  }
+}

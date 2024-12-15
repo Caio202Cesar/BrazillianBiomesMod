@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/velame_of_rio_grande",
+    "particle": "brbiomesmod:block/velame_of_rio_grande"
+  }
+}

@@ -66,6 +66,12 @@ public class PampasPlainsBlocks {
 
     public static final RegistryObject<Block> MACELA = registerBlock("macela",
             PampasPlant::new);
+    public static final RegistryObject<Block> ASPILIA_MONTEVIDENSIS = registerBlock("aspilia_montevidensis",
+            PampasPlant::new);
+    public static final RegistryObject<Block> MANDEVILLA_COCCINEA = registerBlock("mandevilla_coccinea",
+            PampasPlant::new);
+    public static final RegistryObject<Block> VELAME_OF_RIO_GRANDE = registerBlock("velame_of_rio_grande",
+            PampasPlant::new);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
