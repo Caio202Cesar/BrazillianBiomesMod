@@ -603,6 +603,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState COCKSPUR_CORAL_LOG = PampasPlainsBlocks.COCKSPUR_CORAL_LOG.get().getDefaultState();
         protected static final BlockState COCKSPUR_CORAL_LEAVES = PampasPlainsBlocks.COCKSPUR_CORAL_LEAVES.get().getDefaultState();
+
+        protected static final BlockState SAPUCAIA_LOG = AtlanticForestBlocks.SAPUCAIA_LOG.get().getDefaultState();
+        protected static final BlockState SAPUCAIA_LEAVES = AtlanticForestBlocks.SAPUCAIA_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",

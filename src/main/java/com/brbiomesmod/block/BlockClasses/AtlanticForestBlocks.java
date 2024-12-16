@@ -170,6 +170,8 @@ public class AtlanticForestBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> SAPUCAIA_LEAVES = registerBlock("sapucaia_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> SAPUCAIA_SAPLING = registerBlock("sapucaia_sapling",
+            SapucaiaSapling::new);
 
 
     public static final RegistryObject<Block> PASSION_FRUIT_VINE = registerBlock("passion_fruit_vine",
