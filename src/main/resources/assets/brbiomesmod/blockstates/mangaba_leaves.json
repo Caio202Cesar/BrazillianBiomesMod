@@ -2,10 +2,10 @@
   "variants":{
     "":[
       {"model": "brbiomesmod:block/mangaba_leaves",
-        "weight": 2},
+        "weight": 6},
       {"model": "brbiomesmod:block/mangaba_flowering_leaves",
         "weight": 1},
       {"model": "brbiomesmod:block/mangaba_fruiting_leaves",
-        "weight": 1}
+        "weight": 3}
     ]
   }}
