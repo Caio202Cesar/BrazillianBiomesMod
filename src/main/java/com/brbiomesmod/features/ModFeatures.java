@@ -90,7 +90,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
         public static final BlockClusterFeatureConfig PAMPAS_FLOWER_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
-                        .addWeightedBlockstate(States.MACELA, 1),
+                        .addWeightedBlockstate(States.MACELA, 2)
+                        .addWeightedBlockstate(States.VELAME_OF_RIO_GRANDE, 1)
+                        .addWeightedBlockstate(States.MANDEVILLA_COCCINEA, 1)
+                        .addWeightedBlockstate(States.ASPILIA_MONTEVIDENSIS, 2),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
     }
 
@@ -108,8 +111,9 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState XANANA1 = RestingaBlocks.XANANA.get().getDefaultState();
         protected static final BlockState XANANA2 = RestingaBlocks.XANANA_BIG.get().getDefaultState();
         protected static final BlockState MACELA = PampasPlainsBlocks.MACELA.get().getDefaultState();
-        protected static final BlockState TOURMALINE_ORE = CaatingaBlocks.TOURMALINE_PARAIBA_ORE.get().getDefaultState();
-        protected static final BlockState STONE = Blocks.STONE.getDefaultState();
+        protected static final BlockState VELAME_OF_RIO_GRANDE = PampasPlainsBlocks.VELAME_OF_RIO_GRANDE.get().getDefaultState();
+        protected static final BlockState MANDEVILLA_COCCINEA = PampasPlainsBlocks.MANDEVILLA_COCCINEA.get().getDefaultState();
+        protected static final BlockState ASPILIA_MONTEVIDENSIS = PampasPlainsBlocks.ASPILIA_MONTEVIDENSIS.get().getDefaultState();
 
     }
 }
