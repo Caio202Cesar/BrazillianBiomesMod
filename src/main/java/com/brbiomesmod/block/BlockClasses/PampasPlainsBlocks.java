@@ -64,6 +64,16 @@ public class PampasPlainsBlocks {
             CavenThornSapling::new);
 
 
+    public static final RegistryObject<Block> COCKSPUR_CORAL_LOG = registerBlock("cockspur_coral_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> COCKSPUR_CORAL_LEAVES = registerBlock("cockspur_coral_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> COCKSPUR_CORAL_SAPLING = registerBlock("cockspur_coral_sapling",
+            CockspurCoralSapling::new);
+    public static final RegistryObject<Block> COCKSPUR_CORAL_PLANKS = registerBlock("cockspur_coral_planks",
+            ModPlanks::new);
+
+
     public static final RegistryObject<Block> MACELA = registerBlock("macela",
             PampasPlant::new);
     public static final RegistryObject<Block> ASPILIA_MONTEVIDENSIS = registerBlock("aspilia_montevidensis",

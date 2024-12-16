@@ -34,12 +34,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new BushFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CASHEW_FANCY_TREE = register("cashew_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CASHEW_LOG),
-                    new SimpleBlockStateProvider(States.CASHEW_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Kapok Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> KAPOK_TREE = register("kapok_tree",
@@ -446,13 +440,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(0, 0, 0))).setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
 
     //Sapucaia Tree
-    /*public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAPUCAIA_TREE = register("sapucaia_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAPUCAIA_TREE = register("sapucaia_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SAPUCAIA_LOG),
                     new SimpleBlockStateProvider(States.SAPUCAIA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));*/
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Silk Floss Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_SILK_FLOSS_TREE = register("white_silk_floss_tree",
@@ -477,6 +471,19 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new MegaJungleTrunkPlacer(10, 2, 19),
                     new TwoLayerFeature(1, 1, 2))).build()));
 
+    //Cockspur Coral Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COCKSPUR_CORAL_TREE1 = register("cockspur_coral_tree1",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.COCKSPUR_CORAL_LOG),
+                    new SimpleBlockStateProvider(States.COCKSPUR_CORAL_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COCKSPUR_CORAL_TREE2 = register("cockspur_coral_tree2",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.COCKSPUR_CORAL_LOG),
+                    new SimpleBlockStateProvider(States.COCKSPUR_CORAL_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(5, 3, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
 
 
     public static final class States {
@@ -593,6 +600,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState BALSA_LOG = AmazonRainforestBlocks.BALSA_LOG.get().getDefaultState();
         protected static final BlockState BALSA_LEAVES = AmazonRainforestBlocks.BALSA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState COCKSPUR_CORAL_LOG = PampasPlainsBlocks.COCKSPUR_CORAL_LOG.get().getDefaultState();
+        protected static final BlockState COCKSPUR_CORAL_LEAVES = PampasPlainsBlocks.COCKSPUR_CORAL_LEAVES.get().getDefaultState();
     }
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
