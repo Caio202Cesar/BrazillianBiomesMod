@@ -72,11 +72,18 @@ public class CaatingaBlocks {
             UmbuSapling::new);
 
 
+    public static final RegistryObject<Block> CATINGUEIRA_LOG = registerBlock("catingueira_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CATINGUEIRA_LEAVES = registerBlock("catingueira_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CATINGUEIRA_SAPLING = registerBlock("catingueira_sapling",
+            CatingueiraSapling::new);
+
+
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_LEAVES = registerBlock("silk_floss_white_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_SAPLING = registerBlock("silk_floss_white_sapling",
             WhiteSilkFlossSapling::new);
-
 
     public static final RegistryObject<Block> CNIDOSCOLUS_URENS = registerBlock("bull_nettle",
             BullNettlePlant::new);
