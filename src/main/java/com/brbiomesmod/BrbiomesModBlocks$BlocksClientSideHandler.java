@@ -74,5 +74,6 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         BacuriSapling.registerRenderLayer();
         SapucaiaSapling.registerRenderLayer();
         CockspurCoralSapling.registerRenderLayer();
+        UruguayanPepperSapling.registerRenderLayer();
     }
 }

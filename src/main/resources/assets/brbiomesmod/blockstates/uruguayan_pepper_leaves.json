@@ -1,0 +1,7 @@
+{
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/uruguayan_pepper_leaves"},
+      {"model": "brbiomesmod:block/uruguayan_pepper_fruiting_leaves"}
+    ]
+  }}

@@ -439,6 +439,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(1, 0, 0),
                     new TwoLayerFeature(0, 0, 0))).setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
 
+    //Uruguayan Pepper Shrub (Schinus weinmanniifolia) - a shrub in Pampas Biome
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> URUGUAYAN_PEPPER_BUSH = register("uruguayan_pepper_bush",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SCHINUS_LOG),
+                    new SimpleBlockStateProvider(States.URUGUAYAN_PEPPER_LEAVES),
+                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
+                    new StraightTrunkPlacer(1, 0, 0),
+                    new TwoLayerFeature(0, 0, 0))).setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
+
     //Sapucaia Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAPUCAIA_TREE = register("sapucaia_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SAPUCAIA_LOG),
@@ -525,6 +533,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState BRAZILLIAN_PEPPER_LEAVES = PampasPlainsBlocks.BRAZILLIAN_PEPPER_LEAVES.get().getDefaultState();
         protected static final BlockState PERUVIAN_PEPPER_LEAVES = PampasPlainsBlocks.PERUVIAN_PEPPER_LEAVES.get().getDefaultState();
         protected static final BlockState SILVER_PEPPER_LEAVES = PampasPlainsBlocks.SILVER_PEPPER_LEAVES.get().getDefaultState();
+        protected static final BlockState URUGUAYAN_PEPPER_LEAVES = PampasPlainsBlocks.URUGUAYAN_PEPPER_LEAVES.get().getDefaultState();
 
         protected static final BlockState WOLF_APPLE_LOG = CerradoSavannaBlocks.WOLF_APPLE_LOG.get().getDefaultState();
         protected static final BlockState WOLF_APPLE_LEAVES = CerradoSavannaBlocks.WOLF_APPLE_LEAVES.get().getDefaultState();
@@ -697,13 +706,15 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
     public static final ConfiguredFeature<?, ?> PAMPAS_SHRUBS = register("pampas_shrubs",
-            SILVER_PEPPER_BUSH.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.01F, 1))));
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SILVER_PEPPER_BUSH.withChance(0.4F)),
+                    URUGUAYAN_PEPPER_BUSH)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(0, 0.08F, 1))));
+
 
     public static final ConfiguredFeature<?, ?> FOREST_CECROPIA_TREES = register("cecropia_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.2F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.4F)),
                     SILVER_CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(4, 0.0F, 0))));
+                    .configure(new AtSurfaceWithExtraConfig(2, 0.0F, 0))));
 
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_UPPER_TREES = register("atlantic_forest_upper_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_PEROBA_TREE.withChance(0.3F),
