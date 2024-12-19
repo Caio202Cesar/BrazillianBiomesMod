@@ -86,6 +86,11 @@ public class AraucariaPlateauBlocks {
     public static final RegistryObject<Block> FEIJOA_SAPLING = registerBlock("feijoa_sapling",
             FeijoaSapling::new);
 
+    public static final RegistryObject<Block> RIO_GRANDE_CHERRY_LEAVES = registerBlock("rio_grande_cherry_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> RIO_GRANDE_CHERRY_SAPLING = registerBlock("rio_grande_cherry_sapling",
+            RioGrandeCherrySapling::new);
+
 
     public static final RegistryObject<Block> XAXIM_PLANT = registerBlock("xaxim_plant",
             XaximPlant::new);

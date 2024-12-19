@@ -464,6 +464,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_SILK_FLOSS_TREE = register("pink_silk_floss_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SILK_FLOSS_LOG),
+                    new SimpleBlockStateProvider(States.PINK_SILK_FLOSS_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Balsa Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BALSA_TREE = register("balsa_tree",
@@ -493,6 +500,15 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(5, 3, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Rio Grande Cherry
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RIO_GRANDE_CHERRY_TREE = register("rio_grande_cherry_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUGENIA_LOG),
+                    new SimpleBlockStateProvider(States.RIO_GRANDE_CHERRY_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
 
     public static final class States {
 
@@ -513,6 +529,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState SILK_FLOSS_LOG = CerradoSavannaBlocks.SILK_FLOSS_LOG.get().getDefaultState();
         protected static final BlockState WHITE_SILK_FLOSS_LEAVES = CaatingaBlocks.WHITE_SILK_FLOSS_LEAVES.get().getDefaultState();
+        protected static final BlockState PINK_SILK_FLOSS_LEAVES = CerradoSavannaBlocks.PINK_SILK_FLOSS_LEAVES.get().getDefaultState();
 
         protected static final BlockState BACURI_LOG = AmazonRainforestBlocks.BACURI_LOG.get().getDefaultState();
         protected static final BlockState BACURI_LEAVES = AmazonRainforestBlocks.BACURI_LEAVES.get().getDefaultState();
@@ -569,6 +586,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState EUGENIA_LOG = AtlanticForestBlocks.EUGENIA_LOG.get().getDefaultState();
         protected static final BlockState PITANGA_LEAVES = AtlanticForestBlocks.PITANGA_LEAVES.get().getDefaultState();
         protected static final BlockState BLACK_PITANGA_LEAVES = AtlanticForestBlocks.BLACK_PITANGA_LEAVES.get().getDefaultState();
+        protected static final BlockState CAGAITA_LEAVES = CerradoSavannaBlocks.CAGAITA_LEAVES.get().getDefaultState();
+        protected static final BlockState RIO_GRANDE_CHERRY_LEAVES = AraucariaPlateauBlocks.RIO_GRANDE_CHERRY_LEAVES.get().getDefaultState();
 
         protected static final BlockState SHARINGA_LOG = AmazonRainforestBlocks.SHARINGA_LOG.get().getDefaultState();
         protected static final BlockState SHARINGA_LEAVES = AmazonRainforestBlocks.SHARINGA_LEAVES.get().getDefaultState();
@@ -601,8 +620,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState CAVEN_THORN_LOG = PampasPlainsBlocks.CAVEN_THORN_LOG.get().getDefaultState();
         protected static final BlockState CAVEN_THORN_LEAVES = PampasPlainsBlocks.CAVEN_THORN_LEAVES.get().getDefaultState();
-
-        protected static final BlockState CAGAITA_LEAVES = CerradoSavannaBlocks.CAGAITA_LEAVES.get().getDefaultState();
 
         protected static final BlockState BLACK_SUCUPIRA_LOG = CerradoSavannaBlocks.BLACK_SUCUPIRA_LOG.get().getDefaultState();
         protected static final BlockState BLACK_SUCUPIRA_LEAVES = CerradoSavannaBlocks.BLACK_SUCUPIRA_LEAVES.get().getDefaultState();
@@ -710,7 +727,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     URUGUAYAN_PEPPER_BUSH)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.08F, 1))));
 
-
     public static final ConfiguredFeature<?, ?> FOREST_CECROPIA_TREES = register("cecropia_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.4F)),
                     SILVER_CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
@@ -738,8 +754,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
     public static final ConfiguredFeature<?, ?> CERRADO_TREES = register("cerrado_trees",
-            BLACK_SUCUPIRA_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_SUCUPIRA_TREE.withChance(0.5F)),
+                    PINK_SILK_FLOSS_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
+
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String p_243968_0_, ConfiguredFeature<FC, ?> p_243968_1_) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, p_243968_0_, p_243968_1_);

@@ -6,6 +6,7 @@ import com.brbiomesmod.block.ModLogs;
 import com.brbiomesmod.block.ModPlanks;
 import com.brbiomesmod.block.Saplings.BlackSucupiraSapling;
 import com.brbiomesmod.block.Saplings.CagaitaSapling;
+import com.brbiomesmod.block.Saplings.PinkSilkFlossSapling;
 import com.brbiomesmod.block.Saplings.WolfAppleSapling;
 import com.brbiomesmod.block.SilkFlossLog;
 import com.brbiomesmod.item.ModItemGroup;
@@ -54,9 +55,9 @@ public class CerradoSavannaBlocks {
 
     public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
             SilkFlossLog::new);
-    public static final RegistryObject<Block> PINK_SILK_FLOSS_LEAVES = registerBlock("pink_silk_floss_leaves",
+    public static final RegistryObject<Block> PINK_SILK_FLOSS_LEAVES = registerBlock("silk_floss_pink_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> PINK_SILK_FLOSS_SAPLING = registerBlock("pink_silk_floss_sapling",
+    public static final RegistryObject<Block> PINK_SILK_FLOSS_SAPLING = registerBlock("silk_floss_pink_sapling",
             PinkSilkFlossSapling::new);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
