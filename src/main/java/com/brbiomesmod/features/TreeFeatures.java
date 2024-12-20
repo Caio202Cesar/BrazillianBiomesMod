@@ -501,13 +501,19 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Rio Grande Cherry
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RIO_GRANDE_CHERRY_TREE = register("rio_grande_cherry_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RIO_GRANDE_CHERRY_FANCY_TREE = register("rio_grande_cherry_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUGENIA_LOG),
                     new SimpleBlockStateProvider(States.RIO_GRANDE_CHERRY_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RIO_GRANDE_CHERRY_TREE = register("rio_grande_cherry_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUGENIA_LOG),
+                    new SimpleBlockStateProvider(States.RIO_GRANDE_CHERRY_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(5, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
 
 
     public static final class States {

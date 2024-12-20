@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/rio_grande_cherry_sapling",
+    "particle": "brbiomesmod:block/rio_grande_cherry_sapling"
+  }
+}
