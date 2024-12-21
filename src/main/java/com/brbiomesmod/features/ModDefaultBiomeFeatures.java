@@ -20,6 +20,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withManacaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.MANACA_TREES);
     }
+    public static void withRioGrandeCherryTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.RIO_GRANDE_CHERRY_TREES);
+    }
     public static void withRestingaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.RESTINGA_TREES);
     }

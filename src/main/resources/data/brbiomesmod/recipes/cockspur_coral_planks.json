@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:cockspur_coral_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:cockspur_coral_planks",
+    "count": 4
+  }
+}
