@@ -34,6 +34,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.PITANGA)));
     public static final RegistryObject<Item> BLACK_PITANGA = ITEMS.register("black_pitanga",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.BLACK_PITANGA)));
+    public static final RegistryObject<Item> RIO_GRANDE_CHERRY = ITEMS.register("rio_grande_cherry",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.RIO_GRANDE_CHERRY)));
 
     public static final RegistryObject<Item> PARANA_PINE_CONE = ITEMS.register("parana_pine_cone",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));

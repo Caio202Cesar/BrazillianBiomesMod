@@ -13,6 +13,7 @@ public class ModFoods extends Foods {
     public static final Food CAMBUCI = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food PITANGA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food BLACK_PITANGA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food RIO_GRANDE_CHERRY = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food COOKED_PARANA_PINENUT = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food GUARANA_FRUIT = (new Food.Builder()).hunger(2).saturation(0.1F)
             .effect(new EffectInstance(Effects.JUMP_BOOST, 100, 0), 0.6F)
