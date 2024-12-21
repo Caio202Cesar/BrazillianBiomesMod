@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "brbiomesmod:block/cassava_stage0"
+    },
+    "age=1": {
+      "model": "brbiomesmod:block/cassava_stage1"
+    },
+    "age=2": {
+      "model": "brbiomesmod:block/cassava_stage2"
+    },
+    "age=3": {
+      "model": "brbiomesmod:block/cassava_stage3"
+    },
+    "age=4": {
+      "model": "brbiomesmod:block/cassava_stage4"
+    },
+    "age=5": {
+      "model": "brbiomesmod:block/cassava_stage5"
+    },
+    "age=6": {
+      "model": "brbiomesmod:block/cassava_stage6"
+    },
+    "age=7": {
+      "model": "brbiomesmod:block/cassava_stage7"
+    }
+  }
+}

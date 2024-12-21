@@ -1,8 +1,10 @@
 package com.brbiomesmod.item;
 
 import com.brbiomesmod.BrazillianBiomesMod;
+import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
 import com.brbiomesmod.item.custom.BrazilnutFruit;
 import com.brbiomesmod.item.custom.CashewFruit;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -62,8 +64,9 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CASSAVA)));
     public static final RegistryObject<Item> COOKED_CASSAVA = ITEMS.register("cooked_cassava",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COOKED_CASSAVA)));
+
     public static final RegistryObject<Item> CASSAVA_SEEDS = ITEMS.register("cassava_seeds",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+            () -> new BlockItem(AmazonRainforestBlocks.CASSAVA_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));
 
     //public static final RegistryObject<Item> ACAI_BERRIES = ITEMS.register("acai_berries", () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
