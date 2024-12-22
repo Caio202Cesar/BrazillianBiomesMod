@@ -54,6 +54,9 @@ public class AmazonRainforestBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> LOPHANTERA_SAPLING = registerBlock("lophantera_sapling",
             LophanteraSapling::new);
+    public static final RegistryObject<Block> LOPHANTERA_STAIRS = registerBlock("lophantera_stairs",
+            () -> new StairsBlock(() -> LOPHANTERA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     //Cupuacu and Guarana trunk is made of Jungle Log
@@ -76,6 +79,9 @@ public class AmazonRainforestBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> BRAZILNUT_SAPLING = registerBlock("brazilnut_sapling",
             BrazilnutSapling::new);
+    public static final RegistryObject<Block> BRAZILNUT_STAIRS = registerBlock("brazilnut_stairs",
+            () -> new StairsBlock(() -> BRAZILNUT_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     //public static final RegistryObject<Block> PALMITO_LOG = registerBlock("palmito_log", ModLogs::new);
