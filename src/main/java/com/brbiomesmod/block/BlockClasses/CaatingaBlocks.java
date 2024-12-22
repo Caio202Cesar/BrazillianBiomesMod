@@ -44,6 +44,9 @@ public class CaatingaBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> JUA_SAPLING = registerBlock("jua_sapling",
             JuaSapling::new);
+    public static final RegistryObject<Block> JUA_STAIRS = registerBlock("jua_stairs",
+            () -> new StairsBlock(() -> JUA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> BLACK_JUREMA_LOG = registerBlock("black_jurema_log",
@@ -60,22 +63,21 @@ public class CaatingaBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> UMBU_WOOD = registerBlock("umbu_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> UMBU_STRIPPED_LOG = registerBlock("umbu_stripped_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> UMBU_STRIPPED_WOOD = registerBlock("umbu_stripped_wood",
-            ModLogs::new);
+    //public static final RegistryObject<Block> UMBU_STRIPPED_LOG = registerBlock("umbu_stripped_log", ModLogs::new);
+    //public static final RegistryObject<Block> UMBU_STRIPPED_WOOD = registerBlock("umbu_stripped_wood", ModLogs::new);
     public static final RegistryObject<Block> UMBU_PLANKS = registerBlock("umbu_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> UMBU_LEAVES = registerBlock("umbu_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> UMBU_SAPLING = registerBlock("umbu_sapling",
             UmbuSapling::new);
+    public static final RegistryObject<Block> UMBU_STAIRS = registerBlock("umbu_stairs",
+            () -> new StairsBlock(() -> UMBU_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
-    public static final RegistryObject<Block> CATINGUEIRA_LOG = registerBlock("catingueira_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CATINGUEIRA_LEAVES = registerBlock("catingueira_leaves",
-            ModLeaves::new);
+    //public static final RegistryObject<Block> CATINGUEIRA_LOG = registerBlock("catingueira_log", ModLogs::new);
+    //public static final RegistryObject<Block> CATINGUEIRA_LEAVES = registerBlock("catingueira_leaves", ModLeaves::new);
 
 
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_LEAVES = registerBlock("silk_floss_white_leaves",

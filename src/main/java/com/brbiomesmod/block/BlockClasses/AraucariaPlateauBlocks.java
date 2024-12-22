@@ -37,6 +37,9 @@ public class AraucariaPlateauBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_SAPLING = registerBlock("brazillian_sassafras_sapling",
             BrazillianSassafrasSapling::new);
+    public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_STAIRS = registerBlock("brazillian_sassafras_stairs",
+            () -> new StairsBlock(() -> BRAZILLIAN_SASSAFRAS_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> PARANA_PINE_LOG = registerBlock("parana_pine_log",
@@ -49,6 +52,9 @@ public class AraucariaPlateauBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> PARANA_PINE_SAPLING = registerBlock("parana_pine_sapling",
             ParanaPineSapling::new);
+    public static final RegistryObject<Block> PARANA_PINE_STAIRS = registerBlock("parana_pine_stairs",
+            () -> new StairsBlock(() -> PARANA_PINE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> IMBUIA_LOG = registerBlock("imbuia_log",
@@ -61,6 +67,9 @@ public class AraucariaPlateauBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> IMBUIA_SAPLING = registerBlock("imbuia_sapling",
             ImbuiaSapling::new);
+    public static final RegistryObject<Block> IMBUIA_STAIRS = registerBlock("imbuia_stairs",
+            () -> new StairsBlock(() -> IMBUIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> YERBA_MATE_LOG = registerBlock("yerba_mate_log",
@@ -73,6 +82,9 @@ public class AraucariaPlateauBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> YERBA_MATE_SAPLING = registerBlock("yerba_mate_sapling",
             YerbaMateSapling::new);
+    public static final RegistryObject<Block> YERBA_MATE_STAIRS = registerBlock("yerba_mate_stairs",
+            () -> new StairsBlock(() -> YERBA_MATE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> FEIJOA_LOG = registerBlock("feijoa_log",
@@ -85,6 +97,10 @@ public class AraucariaPlateauBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> FEIJOA_SAPLING = registerBlock("feijoa_sapling",
             FeijoaSapling::new);
+    public static final RegistryObject<Block> FEIJOA_STAIRS = registerBlock("feijoa_stairs",
+            () -> new StairsBlock(() -> FEIJOA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+
 
     public static final RegistryObject<Block> RIO_GRANDE_CHERRY_LEAVES = registerBlock("rio_grande_cherry_leaves",
             ModLeaves::new);

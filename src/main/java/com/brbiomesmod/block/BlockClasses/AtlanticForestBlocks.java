@@ -37,6 +37,9 @@ public class AtlanticForestBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> BRAZILWOOD_SAPLING = registerBlock("brazilwood_sapling",
             BrazilwoodSapling::new);
+    public static final RegistryObject<Block> BRAZILWOOD_STAIRS = registerBlock("brazilwood_stairs",
+            () -> new StairsBlock(() -> BRAZILWOOD_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> JABUTICABA_LOG = registerBlock("jabuticaba_log",
@@ -51,6 +54,9 @@ public class AtlanticForestBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> JABUTICABA_SAPLING = registerBlock("jabuticaba_sapling",
             JabuticabaSapling::new);
+    public static final RegistryObject<Block> JABUTICABA_STAIRS = registerBlock("jabuticaba_stairs",
+            () -> new StairsBlock(() -> JABUTICABA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> QUEEN_PALM_LOG = registerBlock("queen_palm_log", ModLogs::new);
@@ -72,6 +78,9 @@ public class AtlanticForestBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> CAMBUCI_SAPLING = registerBlock("cambuci_sapling",
             CambuciSapling::new);
+    public static final RegistryObject<Block> CAMBUCI_STAIRS = registerBlock("cambuci_stairs",
+            () -> new StairsBlock(() -> CAMBUCI_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> CECROPIA_LOG = registerBlock("cecropia_log",
@@ -98,6 +107,9 @@ public class AtlanticForestBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> MANACA_DA_SERRA_SAPLING = registerBlock("manaca_da_serra_sapling",
             ManacaSapling::new);
+    public static final RegistryObject<Block> MANACA_DA_SERRA_STAIRS = registerBlock("manaca_da_serra_stairs",
+            () -> new StairsBlock(() -> MANACA_DA_SERRA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> IPE_LOG = registerBlock("ipe_log",
@@ -120,6 +132,9 @@ public class AtlanticForestBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> WHITE_IPE_SAPLING = registerBlock("white_ipe_sapling",
             WhiteIpeSapling::new);
+    public static final RegistryObject<Block> IPE_STAIRS = registerBlock("ipe_stairs",
+            () -> new StairsBlock(() -> IPE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> EUGENIA_LOG = registerBlock("eugenia_log",
@@ -132,6 +147,9 @@ public class AtlanticForestBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> PITANGA_SAPLING = registerBlock("pitanga_sapling",
             PitangaSapling::new);
+    public static final RegistryObject<Block> EUGENIA_STAIRS = registerBlock("eugenia_stairs",
+            () -> new StairsBlock(() -> EUGENIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> PINK_PEROBA_LOG = registerBlock("pink_peroba_log",
@@ -142,6 +160,9 @@ public class AtlanticForestBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> PINK_PEROBA_SAPLING = registerBlock("pink_peroba_sapling",
             PinkPerobaSapling::new);
+    public static final RegistryObject<Block> PINK_PEROBA_STAIRS = registerBlock("pink_peroba_stairs",
+            () -> new StairsBlock(() -> PINK_PEROBA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> JEQUITIBA_LOG = registerBlock("jequitiba_log",
@@ -152,6 +173,9 @@ public class AtlanticForestBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> JEQUITIBA_SAPLING = registerBlock("jequitiba_sapling",
             JequitibaSapling::new);
+    public static final RegistryObject<Block> JEQUITIBA_STAIRS = registerBlock("jequitiba_stairs",
+            () -> new StairsBlock(() -> JEQUITIBA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LOG = registerBlock("brazillian_rosewood_log",
@@ -162,6 +186,9 @@ public class AtlanticForestBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_SAPLING = registerBlock("brazillian_rosewood_sapling",
             BrazillianRosewoodSapling::new);
+    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_STAIRS = registerBlock("brazillian_rosewood_stairs",
+            () -> new StairsBlock(() -> BRAZILLIAN_ROSEWOOD_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> SAPUCAIA_LOG = registerBlock("sapucaia_log",
@@ -172,6 +199,9 @@ public class AtlanticForestBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> SAPUCAIA_SAPLING = registerBlock("sapucaia_sapling",
             SapucaiaSapling::new);
+    public static final RegistryObject<Block> SAPUCAIA_STAIRS = registerBlock("sapucaia_stairs",
+            () -> new StairsBlock(() -> SAPUCAIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> PASSION_FRUIT_VINE = registerBlock("passion_fruit_vine",
