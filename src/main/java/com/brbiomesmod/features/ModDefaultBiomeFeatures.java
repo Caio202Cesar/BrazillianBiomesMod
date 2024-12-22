@@ -1,8 +1,11 @@
 package com.brbiomesmod.features;
 
+import com.brbiomesmod.world.gen.ModOreGeneration;
+import com.brbiomesmod.world.gen.OreType;
 import net.minecraft.world.biome.BiomeGenerationSettings;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withAmazonTrees(BiomeGenerationSettings.Builder builder) {
@@ -64,9 +67,6 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     }
     public static void withPampasFlowers(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PAMPAS_PLAINS_FLOWER_PATCH);
-    }
-    public static void withCacti(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.CAATINGA_CACTUS_PATCH);
     }
     public static void withBrazilwoodTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BRAZILWOOD_TREES);
