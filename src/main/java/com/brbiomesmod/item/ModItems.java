@@ -4,10 +4,7 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
 import com.brbiomesmod.item.custom.BrazilnutFruit;
 import com.brbiomesmod.item.custom.CashewFruit;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,6 +15,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, BrazillianBiomesMod.MOD_ID);
 
+    //Foods
     public static final RegistryObject<Item> CASHEW_FRUIT = ITEMS.register("cashew_fruit",
             () -> new CashewFruit(new Item.Properties().group(ItemGroup.FOOD)));
     public static final RegistryObject<Item> CASHEW_APPLE = ITEMS.register("cashew_apple",
@@ -109,10 +107,9 @@ public class ModItems {
     public static final RegistryObject<Item> CAMU_CAMU_FRUITS = ITEMS.register("camu_camu_fruits",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CAMU_CAMU_FRUITS)));
 
-
+    //Materials
     public static final RegistryObject<Item> TOURMALINE_PARAIBA = ITEMS.register("tourmaline_paraiba",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
-
 
     public static final RegistryObject<Item> PURPLE_IPE_FLOWERS = ITEMS.register("purple_ipe_flowers",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
@@ -128,6 +125,27 @@ public class ModItems {
 
     public static final RegistryObject<Item> SILK_COTTON = ITEMS.register("silk_cotton",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+
+    //Tools
+    public static final RegistryObject<Item> TOURMALINE_SWORD = ITEMS.register("tourmaline_paraiba_sword",
+            () -> new SwordItem(ModItemTier.TOURMALINE, 3, -2.4F,
+                    new Item.Properties().group(ItemGroup.COMBAT)));
+
+    public static final RegistryObject<Item> TOURMALINE_PICKAXE = ITEMS.register("tourmaline_paraiba_pickaxe",
+            () -> new PickaxeItem(ModItemTier.TOURMALINE, 1, -2.8F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
+
+    public static final RegistryObject<Item> TOURMALINE_SHOVEL = ITEMS.register("tourmaline_paraiba_shovel",
+            () -> new ShovelItem(ModItemTier.TOURMALINE, 1.5F, -3.0F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
+
+    public static final RegistryObject<Item> TOURMALINE_AXE = ITEMS.register("tourmaline_paraiba_axe",
+            () -> new AxeItem(ModItemTier.TOURMALINE, 5.0F, -3.0F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
+
+    public static final RegistryObject<Item> TOURMALINE_HOE = ITEMS.register("tourmaline_paraiba_hoe",
+            () -> new HoeItem(ModItemTier.TOURMALINE, -3, 0.0F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
