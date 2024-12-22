@@ -98,6 +98,9 @@ public class AmazonRainforestBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> SHARINGA_SAPLING = registerBlock("sharinga_sapling",
             SharingaSapling::new);
+    public static final RegistryObject<Block> SHARINGA_STAIRS = registerBlock("sharinga_stairs",
+            () -> new StairsBlock(() -> SHARINGA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> BACURI_LOG = registerBlock("bacuri_log",
@@ -108,6 +111,9 @@ public class AmazonRainforestBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> BACURI_SAPLING = registerBlock("bacuri_sapling",
             BacuriSapling::new);
+    public static final RegistryObject<Block> BACURI_STAIRS = registerBlock("bacuri_stairs",
+            () -> new StairsBlock(() -> BACURI_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> CAMU_CAMU_LOG = registerBlock("camu_camu_log",
@@ -118,6 +124,9 @@ public class AmazonRainforestBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> CAMU_CAMU_SAPLING = registerBlock("camu_camu_sapling",
             CamuCamuSapling::new);
+    public static final RegistryObject<Block> CAMU_CAMU_STAIRS = registerBlock("camu_camu_stairs",
+            () -> new StairsBlock(() -> CAMU_CAMU_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> CASSAVA_PLANT = registerBlock("cassava_plant",
