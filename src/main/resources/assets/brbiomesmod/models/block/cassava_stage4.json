@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/crop",
   "textures": {
-    "crop": "brbiomesmod:block/cassava_stage1_lower"
+    "crop": "brbiomesmod:block/cassava_stage4"
   }
 }

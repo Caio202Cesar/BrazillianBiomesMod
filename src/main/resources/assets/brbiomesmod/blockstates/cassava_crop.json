@@ -1,52 +1,28 @@
 {
   "variants": {
-    "age=0, half=lower": {
-      "model": "brbiomesmod:block/cassava_stage0_lower"
+    "age=0": {
+      "model": "brbiomesmod:block/cassava_stage0"
     },
-    "age=1, half=lower": {
-      "model": "brbiomesmod:block/cassava_stage1_lower"
+    "age=1": {
+      "model": "brbiomesmod:block/cassava_stage1"
     },
-    "age=2, half=lower": {
-      "model": "brbiomesmod:block/cassava_stage2_lower"
+    "age=2": {
+      "model": "brbiomesmod:block/cassava_stage2"
     },
-    "age=3, half=lower": {
-      "model": "brbiomesmod:block/cassava_stage3_lower"
+    "age=3": {
+      "model": "brbiomesmod:block/cassava_stage3"
     },
-    "age=4, half=lower": {
-      "model": "brbiomesmod:block/cassava_stage4_lower"
+    "age=4": {
+      "model": "brbiomesmod:block/cassava_stage4"
     },
-    "age=5, half=lower": {
-      "model": "brbiomesmod:block/cassava_stage5_lower"
+    "age=5": {
+      "model": "brbiomesmod:block/cassava_stage5"
     },
-    "age=6, half=lower": {
-      "model": "brbiomesmod:block/cassava_stage6_lower"
+    "age=6": {
+      "model": "brbiomesmod:block/cassava_stage6"
     },
-    "age=7, half=lower": {
-      "model": "brbiomesmod:block/cassava_stage7_lower"
-    },
-    "age=0, half=upper": {
-      "model": "brbiomesmod:block/cassava_stage0_upper"
-    },
-    "age=1, half=upper": {
-      "model": "brbiomesmod:block/cassava_stage1_upper"
-    },
-    "age=2, half=upper": {
-      "model": "brbiomesmod:block/cassava_stage2_upper"
-    },
-    "age=3, half=upper": {
-      "model": "brbiomesmod:block/cassava_stage3_upper"
-    },
-    "age=4, half=upper": {
-      "model": "brbiomesmod:block/cassava_stage4_upper"
-    },
-    "age=5, half=upper": {
-      "model": "brbiomesmod:block/cassava_stage5_upper"
-    },
-    "age=6, half=upper": {
-      "model": "brbiomesmod:block/cassava_stage6_upper"
-    },
-    "age=7, half=upper": {
-      "model": "brbiomesmod:block/cassava_stage7_upper"
+    "age=7": {
+      "model": "brbiomesmod:block/cassava_stage7"
     }
   }
 }

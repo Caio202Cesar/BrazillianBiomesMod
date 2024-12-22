@@ -116,7 +116,7 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> CASSAVA_PLANT = registerBlock("cassava_plant",
             CassavaPlant::new);
     public static final  RegistryObject<Block> CASSAVA_CROP = BLOCKS.register("cassava_crop",
-            () -> new CassavaCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+            () -> new CassavaCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
 
     //public static final RegistryObject<Block> VITORIA_REGIA = registerBlock("vitoria_regia", VitoriaRegiaBlock::new);
 
