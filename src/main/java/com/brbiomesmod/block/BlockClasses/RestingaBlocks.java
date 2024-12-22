@@ -32,16 +32,17 @@ public class RestingaBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CASHEW_WOOD = registerBlock("cashew_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> CASHEW_STRIPPED_LOG = registerBlock("cashew_stripped_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CASHEW_STRIPPED_WOOD = registerBlock("cashew_stripped_wood",
-            ModLogs::new);
+    //public static final RegistryObject<Block> CASHEW_STRIPPED_LOG = registerBlock("cashew_stripped_log", ModLogs::new);
+    //public static final RegistryObject<Block> CASHEW_STRIPPED_WOOD = registerBlock("cashew_stripped_wood", ModLogs::new);
     public static final RegistryObject<Block> CASHEW_PLANKS = registerBlock("cashew_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> CASHEW_LEAVES = registerBlock("cashew_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CASHEW_SAPLING = registerBlock("cashew_sapling",
             CashewSapling::new);
+    public static final RegistryObject<Block> CASHEW_STAIRS = registerBlock("cashew_stairs",
+            () -> new StairsBlock(() -> CASHEW_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> MANGABA_LEAVES = registerBlock("mangaba_leaves",
@@ -52,6 +53,9 @@ public class RestingaBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> MANGABA_SAPLING = registerBlock("mangaba_sapling",
             MangabaSapling::new);
+    public static final RegistryObject<Block> MANGABA_STAIRS = registerBlock("mangaba_stairs",
+            () -> new StairsBlock(() -> MANGABA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> XANANA = registerBlock("xanana",
