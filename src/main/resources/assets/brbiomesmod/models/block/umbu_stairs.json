@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "brbiomesmod:block/umbu_planks",
+    "top": "brbiomesmod:block/umbu_planks",
+    "side": "brbiomesmod:block/umbu_planks"
+  }
+}

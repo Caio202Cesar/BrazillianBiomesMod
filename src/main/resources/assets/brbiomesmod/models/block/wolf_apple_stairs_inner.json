@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "brbiomesmod:block/wolf_apple_planks",
+    "top": "brbiomesmod:block/wolf_apple_planks",
+    "side": "brbiomesmod:block/wolf_apple_planks"
+  }
+}
