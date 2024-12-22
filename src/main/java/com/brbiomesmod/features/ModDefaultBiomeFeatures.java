@@ -1,11 +1,8 @@
 package com.brbiomesmod.features;
 
-import com.brbiomesmod.world.gen.ModOreGeneration;
-import com.brbiomesmod.world.gen.OreType;
 import net.minecraft.world.biome.BiomeGenerationSettings;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
 
 public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withAmazonTrees(BiomeGenerationSettings.Builder builder) {
