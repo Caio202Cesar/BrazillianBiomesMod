@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "brbiomesmod:block/algarrobillo_planks",
+    "top": "brbiomesmod:block/algarrobillo_planks",
+    "side": "brbiomesmod:block/algarrobillo_planks"
+  }
+}
