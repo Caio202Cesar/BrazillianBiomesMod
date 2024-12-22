@@ -29,8 +29,6 @@ public class AmazonRainforestBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> KAPOK_LEAVES = registerBlock("kapok_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> KAPOK_PLANKS = registerBlock("kapok_planks",
-            ModPlanks::new);
     public static final RegistryObject<Block> KAPOK_SAPLING = registerBlock("kapok_sapling",
             KapokSapling::new);
 
@@ -43,6 +41,8 @@ public class AmazonRainforestBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> BALSA_SAPLING = registerBlock("balsa_sapling",
             BalsaSapling::new);
+    public static final RegistryObject<Block> KAPOK_STAIRS = registerBlock("kapok_stairs",
+            ModPlanks::new);
 
 
     public static final RegistryObject<Block> LOPHANTERA_LOG = registerBlock("lophantera_log",
