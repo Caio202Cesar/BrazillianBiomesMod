@@ -41,8 +41,9 @@ public class AmazonRainforestBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> BALSA_SAPLING = registerBlock("balsa_sapling",
             BalsaSapling::new);
-    public static final RegistryObject<Block> KAPOK_STAIRS = registerBlock("kapok_stairs",
-            ModPlanks::new);
+    public static final RegistryObject<Block> BALSA_STAIRS = registerBlock("balsa_stairs",
+            () -> new StairsBlock(() -> BALSA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
 
 
     public static final RegistryObject<Block> LOPHANTERA_LOG = registerBlock("lophantera_log",

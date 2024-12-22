@@ -53,6 +53,7 @@
   "block.brbiomesmod.balsa_leaves": "Balsa Leaves",
   "block.brbiomesmod.balsa_planks": "Balsa Planks",
   "block.brbiomesmod.balsa_log": "Balsa Log",
+  "block.brbiomesmod.balsa_stairs": "Balsa Stairs",
   "block.brbiomesmod.balsa_sapling": "Balsa Sapling",
   "block.brbiomesmod.black_jurema_log": "Jurema-preta Log",
   "block.brbiomesmod.black_jurema_wood": "Jurema-preta Wood",
@@ -249,6 +250,7 @@
   "itemGroup.BRBAmazonRainforestTab": "BRB: Amazon Rainforest",
   "itemGroup.BRBRestingaTab": "BRB: Restinga",
   "itemGroup.BRBCerradoSavannaTab": "BRB: Cerrado Savanna",
+  "itemGroup.BRBPampasTab": "BRB: Pampas",
 
   "biome.brbiomesmod.amazon_rainforest": "Amazon Rainforest",
   "biome.brbiomesmod.atlantic_forest": "Atlantic Forest",
