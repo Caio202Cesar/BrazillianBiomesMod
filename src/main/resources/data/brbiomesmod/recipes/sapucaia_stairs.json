@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:sapucaia_planks"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:sapucaia_stairs",
+    "count": 4
+  }
+}
