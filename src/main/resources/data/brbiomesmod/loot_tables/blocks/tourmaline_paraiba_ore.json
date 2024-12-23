@@ -6,7 +6,16 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:tourmaline_paraiba"
+          "name": "brbiomesmod:tourmaline_paraiba",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0,
+                "max": 3
+              }
+            }
+          ]
         }
       ]
     }

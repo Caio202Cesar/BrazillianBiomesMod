@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_stairs",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:brazilwood_planks"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:brazilwood_stairs",
+    "count": 4
+  }
+}
