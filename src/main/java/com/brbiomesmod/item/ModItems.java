@@ -107,6 +107,9 @@ public class ModItems {
     public static final RegistryObject<Item> CAMU_CAMU_FRUITS = ITEMS.register("camu_camu_fruits",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CAMU_CAMU_FRUITS)));
 
+    public static final RegistryObject<Item> MATE = ITEMS.register("mate",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CAMU_CAMU_FRUITS)));
+
     //Materials
     public static final RegistryObject<Item> TOURMALINE_PARAIBA = ITEMS.register("tourmaline_paraiba",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
@@ -146,6 +149,10 @@ public class ModItems {
     public static final RegistryObject<Item> TOURMALINE_HOE = ITEMS.register("tourmaline_paraiba_hoe",
             () -> new HoeItem(ModItemTier.TOURMALINE, -3, 0.0F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
+
+    //Mate Cup cannot be crafted and can only be found in dungeon loots or traded by plains or savanna villagers.
+    public static final RegistryObject<Item> MATE_CUP = ITEMS.register("mate_cup",
+            () -> new Item(new Item.Properties().group(ItemGroup.TOOLS)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
