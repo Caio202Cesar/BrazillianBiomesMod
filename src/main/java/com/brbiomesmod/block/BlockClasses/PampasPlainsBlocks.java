@@ -1,17 +1,12 @@
 package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.ModLeaves;
-import com.brbiomesmod.block.ModLogs;
-import com.brbiomesmod.block.ModPlanks;
-import com.brbiomesmod.block.PampasPlant;
+import com.brbiomesmod.block.*;
 import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import com.electronwill.nightconfig.core.ConfigSpec;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.StairsBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -99,6 +94,10 @@ public class PampasPlainsBlocks {
             PampasPlant::new);
     public static final RegistryObject<Block> VELAME_OF_RIO_GRANDE = registerBlock("velame_of_rio_grande",
             PampasPlant::new);
+
+
+    public static final  RegistryObject<Block> CALABASH_CROP = BLOCKS.register("calabash_crop",
+            () -> new CalabashCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

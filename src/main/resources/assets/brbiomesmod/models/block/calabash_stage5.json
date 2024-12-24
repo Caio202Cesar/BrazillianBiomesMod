@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "brbiomesmod:block/calabash_stage5"
+  }
+}

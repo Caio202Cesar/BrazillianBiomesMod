@@ -2,6 +2,7 @@ package com.brbiomesmod.item;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.PampasPlainsBlocks;
 import com.brbiomesmod.item.custom.BrazilnutFruit;
 import com.brbiomesmod.item.custom.CashewFruit;
 import net.minecraft.item.*;
@@ -62,9 +63,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CASSAVA)));
     public static final RegistryObject<Item> COOKED_CASSAVA = ITEMS.register("cooked_cassava",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COOKED_CASSAVA)));
-
-    public static final RegistryObject<Item> CASSAVA_SEEDS = ITEMS.register("cassava_seeds",
-            () -> new BlockItem(AmazonRainforestBlocks.CASSAVA_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));
 
     //public static final RegistryObject<Item> ACAI_BERRIES = ITEMS.register("acai_berries", () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
@@ -129,6 +127,15 @@ public class ModItems {
     public static final RegistryObject<Item> SILK_COTTON = ITEMS.register("silk_cotton",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
+    public static final RegistryObject<Item> CASSAVA_SEEDS = ITEMS.register("cassava_seeds",
+            () -> new BlockItem(AmazonRainforestBlocks.CASSAVA_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));
+
+    public static final RegistryObject<Item> CALABASH_SEEDS = ITEMS.register("calabash_seeds",
+            () -> new BlockItem(PampasPlainsBlocks.CALABASH_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));
+
+    public static final RegistryObject<Item> CALABASH = ITEMS.register("calabash",
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+
     //Tools
     public static final RegistryObject<Item> TOURMALINE_SWORD = ITEMS.register("tourmaline_paraiba_sword",
             () -> new SwordItem(ModItemTier.TOURMALINE, 3, -2.4F,
@@ -150,7 +157,6 @@ public class ModItems {
             () -> new HoeItem(ModItemTier.TOURMALINE, -3, 0.0F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
 
-    //Mate Cup cannot be crafted and can only be found in dungeon loots or traded by plains or savanna villagers.
     public static final RegistryObject<Item> MATE_CUP = ITEMS.register("mate_cup",
             () -> new Item(new Item.Properties().group(ItemGroup.TOOLS)));
 

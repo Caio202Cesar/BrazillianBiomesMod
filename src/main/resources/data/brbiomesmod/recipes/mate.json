@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "a",
+   "bbb",
+    "c "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:water_bucket"
+    },
+    "b": {
+      "item": "brbiomesmod:mate_leaf"
+    },
+    "c": {
+      "item": "brbiomesmod:mate_cup"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:mate",
+    "count": 1
+  }
+}
