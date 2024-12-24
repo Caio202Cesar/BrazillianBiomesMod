@@ -39,6 +39,7 @@ public class ModFoods extends Foods {
     public static final Food PINK_PEPPER = (new Food.Builder()).hunger(1).saturation(0.1F).build();
     public static final Food MATE = (new Food.Builder()).hunger(4).saturation(0.1F)
             .effect(new EffectInstance(Effects.REGENERATION, 100, 1), 1.0F)
-            .effect(new EffectInstance(Effects.SPEED, 2400, 0), 1.0F).build();
+            .effect(new EffectInstance(Effects.SPEED, 2400, 0), 1.0F)
+            .effect(new EffectInstance(Effects.JUMP_BOOST, 2400, 0), 1.0F).build();
 
 }

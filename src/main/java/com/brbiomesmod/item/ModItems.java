@@ -5,6 +5,7 @@ import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
 import com.brbiomesmod.block.BlockClasses.PampasPlainsBlocks;
 import com.brbiomesmod.item.custom.BrazilnutFruit;
 import com.brbiomesmod.item.custom.CashewFruit;
+import com.brbiomesmod.item.custom.MateItem;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -106,7 +107,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CAMU_CAMU_FRUITS)));
 
     public static final RegistryObject<Item> MATE = ITEMS.register("mate",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CAMU_CAMU_FRUITS)));
+            () -> new MateItem(new Item.Properties().group(ItemGroup.FOOD).containerItem(ModItems.MATE_CUP.get())
+                    .maxStackSize(1).food(ModFoods.MATE)));
 
     //Materials
     public static final RegistryObject<Item> TOURMALINE_PARAIBA = ITEMS.register("tourmaline_paraiba",
