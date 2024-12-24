@@ -48,7 +48,7 @@ public class MateItem extends Item {
     }
 
     /**
-     * returns the action that specifies what animation to play when the items is being used
+     * returns the action that specifies what animation to play when the items are being used
      */
     public UseAction getUseAction(ItemStack stack) {
         return UseAction.DRINK;
