@@ -1,0 +1,34 @@
+{
+  "replace": false,
+  "values": [
+    "brbiomesmod:cashew_fence",
+    "brbiomesmod:ipe_fence",
+    "brbiomesmod:jabuticaba_fence",
+    "brbiomesmod:yerba_mate_fence",
+    "brbiomesmod:feijoa_fence",
+    "brbiomesmod:cambuci_fence",
+    "brbiomesmod:schinus_fence",
+    "brbiomesmod:wolf_apple_fence",
+    "brbiomesmod:mangaba_fence",
+    "brbiomesmod:brazilwood_fence",
+    "brbiomesmod:brazilnut_fence",
+    "brbiomesmod:jua_fence",
+    "brbiomesmod:brazillian_sassafras_fence",
+    "brbiomesmod:lophantera_fence",
+    "brbiomesmod:imbuia_fence",
+    "brbiomesmod:umbu_fence",
+    "brbiomesmod:manaca_da_serra_fence",
+    "brbiomesmod:eugenia_fence",
+    "brbiomesmod:parana_pine_fence",
+    "brbiomesmod:brazillian_rosewood_fence",
+    "brbiomesmod:jequitiba_fence",
+    "brbiomesmod:pink_peroba_fence",
+    "brbiomesmod:sharinga_fence",
+    "brbiomesmod:algarrobillo_fence",
+    "brbiomesmod:black_sucupira_fence",
+    "brbiomesmod:bacuri_fence",
+    "brbiomesmod:camu_camu_fence",
+    "brbiomesmod:balsa_fence"
+
+  ]
+}

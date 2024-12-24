@@ -47,6 +47,12 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> BALSA_STAIRS = registerBlock("balsa_stairs",
             () -> new StairsBlock(() -> BALSA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> BALSA_FENCE = registerBlock("balsa_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> BALSA_FENCE_GATE = registerBlock("balsa_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     public static final RegistryObject<Block> LOPHANTERA_LOG = registerBlock("lophantera_log",
