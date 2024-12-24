@@ -1,15 +1,20 @@
 package com.brbiomesmod.block;
 
+import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.PampasPlainsBlocks;
 import com.brbiomesmod.item.ModItems;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CropsBlock;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class CalabashCropBlock extends CropsBlock {
     private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]{
@@ -25,6 +30,11 @@ public class CalabashCropBlock extends CropsBlock {
 
     public CalabashCropBlock(Properties builder) {
         super(builder);
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public static void registerRenderLayer() {
+        RenderTypeLookup.setRenderLayer(PampasPlainsBlocks.CALABASH_CROP.get(), RenderType.getCutout());
     }
 
     @Override

@@ -107,8 +107,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CAMU_CAMU_FRUITS)));
 
     public static final RegistryObject<Item> MATE = ITEMS.register("mate",
-            () -> new MateItem(new Item.Properties().group(ItemGroup.FOOD).containerItem(ModItems.MATE_CUP.get())
-                    .maxStackSize(1).food(ModFoods.MATE)));
+            () -> new MateItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
+                    .food(ModFoods.MATE)));
 
     //Materials
     public static final RegistryObject<Item> TOURMALINE_PARAIBA = ITEMS.register("tourmaline_paraiba",
@@ -138,6 +138,9 @@ public class ModItems {
     public static final RegistryObject<Item> CALABASH = ITEMS.register("calabash",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
+    public static final RegistryObject<Item> MATE_CUP = ITEMS.register("mate_cup",
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+
     //Tools
     public static final RegistryObject<Item> TOURMALINE_SWORD = ITEMS.register("tourmaline_paraiba_sword",
             () -> new SwordItem(ModItemTier.TOURMALINE, 3, -2.4F,
@@ -158,9 +161,6 @@ public class ModItems {
     public static final RegistryObject<Item> TOURMALINE_HOE = ITEMS.register("tourmaline_paraiba_hoe",
             () -> new HoeItem(ModItemTier.TOURMALINE, -3, 0.0F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
-
-    public static final RegistryObject<Item> MATE_CUP = ITEMS.register("mate_cup",
-            () -> new Item(new Item.Properties().group(ItemGroup.TOOLS)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
