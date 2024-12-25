@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/template_fence_side",
+  "parent": "minecraft:block/fence_side",
   "textures": {
     "texture": "brbiomesmod:block/jequitiba_planks"
   }
