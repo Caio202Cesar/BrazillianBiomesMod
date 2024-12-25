@@ -48,11 +48,11 @@ public class CaatingaBlocks {
             () -> new StairsBlock(() -> JUA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
 
-    public static final RegistryObject<Block> IMBUIA_FENCE = registerBlock("imbuia_fence",
+    public static final RegistryObject<Block> JUA_FENCE = registerBlock("jua_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
-    public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
+    public static final RegistryObject<Block> JUA_FENCE_GATE = registerBlock("jua_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
@@ -83,11 +83,11 @@ public class CaatingaBlocks {
             () -> new StairsBlock(() -> UMBU_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
 
-    public static final RegistryObject<Block> IMBUIA_FENCE = registerBlock("imbuia_fence",
+    public static final RegistryObject<Block> UMBU_FENCE = registerBlock("umbu_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
-    public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
+    public static final RegistryObject<Block> UMBU_FENCE_GATE = registerBlock("umbu_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 

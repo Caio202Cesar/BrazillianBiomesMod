@@ -32,8 +32,6 @@ public class RestingaBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CASHEW_WOOD = registerBlock("cashew_wood",
             ModLogs::new);
-    //public static final RegistryObject<Block> CASHEW_STRIPPED_LOG = registerBlock("cashew_stripped_log", ModLogs::new);
-    //public static final RegistryObject<Block> CASHEW_STRIPPED_WOOD = registerBlock("cashew_stripped_wood", ModLogs::new);
     public static final RegistryObject<Block> CASHEW_PLANKS = registerBlock("cashew_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> CASHEW_LEAVES = registerBlock("cashew_leaves",
@@ -44,14 +42,16 @@ public class RestingaBlocks {
             () -> new StairsBlock(() -> CASHEW_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
 
-    public static final RegistryObject<Block> IMBUIA_FENCE = registerBlock("imbuia_fence",
+    public static final RegistryObject<Block> CASHEW_FENCE = registerBlock("cashew_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
-    public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
+    public static final RegistryObject<Block> CASHEW_FENCE_GATE = registerBlock("cashew_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
+    //public static final RegistryObject<Block> CASHEW_STRIPPED_LOG = registerBlock("cashew_stripped_log", ModLogs::new);
+    //public static final RegistryObject<Block> CASHEW_STRIPPED_WOOD = registerBlock("cashew_stripped_wood", ModLogs::new);
 
     public static final RegistryObject<Block> MANGABA_LEAVES = registerBlock("mangaba_leaves",
             ModLeaves::new);
@@ -65,11 +65,11 @@ public class RestingaBlocks {
             () -> new StairsBlock(() -> MANGABA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
 
-    public static final RegistryObject<Block> IMBUIA_FENCE = registerBlock("imbuia_fence",
+    public static final RegistryObject<Block> MANGABA_FENCE = registerBlock("mangaba_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
-    public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
+    public static final RegistryObject<Block> MANGABA_FENCE_GATE = registerBlock("mangaba_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 

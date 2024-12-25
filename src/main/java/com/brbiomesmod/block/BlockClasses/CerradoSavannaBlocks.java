@@ -44,11 +44,11 @@ public class CerradoSavannaBlocks {
             () -> new StairsBlock(() -> WOLF_APPLE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
 
-    public static final RegistryObject<Block> IMBUIA_FENCE = registerBlock("imbuia_fence",
+    public static final RegistryObject<Block> WOLF_APPLE_FENCE = registerBlock("wolf_apple_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
-    public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
+    public static final RegistryObject<Block> WOLF_APPLE_FENCE_GATE = registerBlock("wolf_apple_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
@@ -65,11 +65,11 @@ public class CerradoSavannaBlocks {
             () -> new StairsBlock(() -> BLACK_SUCUPIRA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
 
-    public static final RegistryObject<Block> IMBUIA_FENCE = registerBlock("imbuia_fence",
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_FENCE = registerBlock("black_sucupira_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
-    public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_FENCE_GATE = registerBlock("black_sucupira_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
