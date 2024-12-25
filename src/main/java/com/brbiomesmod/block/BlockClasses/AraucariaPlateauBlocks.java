@@ -41,6 +41,14 @@ public class AraucariaPlateauBlocks {
             () -> new StairsBlock(() -> BRAZILLIAN_SASSAFRAS_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
 
+    public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_FENCE = registerBlock("brazillian_sassafras_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+    public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_FENCE_GATE = registerBlock("brazillian_sassafras_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
 
     public static final RegistryObject<Block> PARANA_PINE_LOG = registerBlock("parana_pine_log",
             ModLogs::new);
@@ -55,6 +63,14 @@ public class AraucariaPlateauBlocks {
     public static final RegistryObject<Block> PARANA_PINE_STAIRS = registerBlock("parana_pine_stairs",
             () -> new StairsBlock(() -> PARANA_PINE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
+
+    public static final RegistryObject<Block> PARANA_PINE_FENCE = registerBlock("parana_pine_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+    public static final RegistryObject<Block> PARANA_PINE_FENCE_GATE = registerBlock("parana_pine_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     public static final RegistryObject<Block> IMBUIA_LOG = registerBlock("imbuia_log",
@@ -71,6 +87,14 @@ public class AraucariaPlateauBlocks {
             () -> new StairsBlock(() -> IMBUIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
 
+    public static final RegistryObject<Block> IMBUIA_FENCE = registerBlock("imbuia_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+    public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
 
     public static final RegistryObject<Block> YERBA_MATE_LOG = registerBlock("yerba_mate_log",
             ModLogs::new);
@@ -86,6 +110,14 @@ public class AraucariaPlateauBlocks {
             () -> new StairsBlock(() -> YERBA_MATE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
 
+    public static final RegistryObject<Block> IMBUIA_FENCE = registerBlock("imbuia_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+    public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
 
     public static final RegistryObject<Block> FEIJOA_LOG = registerBlock("feijoa_log",
             ModLogs::new);
@@ -100,6 +132,14 @@ public class AraucariaPlateauBlocks {
     public static final RegistryObject<Block> FEIJOA_STAIRS = registerBlock("feijoa_stairs",
             () -> new StairsBlock(() -> FEIJOA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
+
+    public static final RegistryObject<Block> IMBUIA_FENCE = registerBlock("imbuia_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+    public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     public static final RegistryObject<Block> RIO_GRANDE_CHERRY_LEAVES = registerBlock("rio_grande_cherry_leaves",

@@ -11,9 +11,7 @@ import com.brbiomesmod.block.Saplings.WolfAppleSapling;
 import com.brbiomesmod.block.SilkFlossLog;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.StairsBlock;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -46,6 +44,14 @@ public class CerradoSavannaBlocks {
             () -> new StairsBlock(() -> WOLF_APPLE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
 
+    public static final RegistryObject<Block> IMBUIA_FENCE = registerBlock("imbuia_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+    public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
 
     public static final RegistryObject<Block> BLACK_SUCUPIRA_LOG = registerBlock("black_sucupira_log",
             ModLogs::new);
@@ -58,6 +64,14 @@ public class CerradoSavannaBlocks {
     public static final RegistryObject<Block> BLACK_SUCUPIRA_STAIRS = registerBlock("black_sucupira_stairs",
             () -> new StairsBlock(() -> BLACK_SUCUPIRA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
+
+    public static final RegistryObject<Block> IMBUIA_FENCE = registerBlock("imbuia_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+    public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     public static final RegistryObject<Block> CAGAITA_LEAVES = registerBlock("cagaita_leaves",

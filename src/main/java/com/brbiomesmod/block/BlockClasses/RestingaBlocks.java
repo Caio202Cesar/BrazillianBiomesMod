@@ -44,6 +44,14 @@ public class RestingaBlocks {
             () -> new StairsBlock(() -> CASHEW_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
 
+    public static final RegistryObject<Block> IMBUIA_FENCE = registerBlock("imbuia_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+    public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
 
     public static final RegistryObject<Block> MANGABA_LEAVES = registerBlock("mangaba_leaves",
             ModLeaves::new);
@@ -56,6 +64,14 @@ public class RestingaBlocks {
     public static final RegistryObject<Block> MANGABA_STAIRS = registerBlock("mangaba_stairs",
             () -> new StairsBlock(() -> MANGABA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
+
+    public static final RegistryObject<Block> IMBUIA_FENCE = registerBlock("imbuia_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+    public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     public static final RegistryObject<Block> XANANA = registerBlock("xanana",
