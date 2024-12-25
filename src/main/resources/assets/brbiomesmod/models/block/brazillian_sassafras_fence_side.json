@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "brbiomesmod:block/brazillian_sassafras_planks"
+  }
+}

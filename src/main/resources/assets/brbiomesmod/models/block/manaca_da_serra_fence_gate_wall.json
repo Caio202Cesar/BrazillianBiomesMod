@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate_wall",
+  "textures": {
+    "texture": "brbiomesmod:block/manaca_da_serra_planks"
+  }
+}
