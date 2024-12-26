@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence",
+  "pattern": [
+    "W#W",
+    "W#W"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "brbiomesmod:algarrobillo_planks"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:algarrobillo_fence",
+    "count": 3
+  }
+}
