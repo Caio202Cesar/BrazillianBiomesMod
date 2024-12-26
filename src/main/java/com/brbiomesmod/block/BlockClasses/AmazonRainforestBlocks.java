@@ -44,6 +44,11 @@ public class AmazonRainforestBlocks {
             BalsaSapling::new);
     public static final RegistryObject<Block> BALSA_WOOD = registerBlock("balsa_wood",
             ModLogs::new);
+
+    public static final RegistryObject<Block> BALSA_SLAB = registerBlock("balsa_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
     public static final RegistryObject<Block> BALSA_STAIRS = registerBlock("balsa_stairs",
             () -> new StairsBlock(() -> BALSA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
