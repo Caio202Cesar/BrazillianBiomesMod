@@ -52,6 +52,8 @@ public class AtlanticForestBlocks {
 
     public static final RegistryObject<Block> JABUTICABA_LOG = registerBlock("jabuticaba_log",
             ModLogs::new);
+    public static final RegistryObject<Block> JABUTICABA_WOOD = registerBlock("jabuticaba_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> JABUTICABA_FLOWERING_LOG = registerBlock("jabuticaba_flowering_log",
             ModLogs::new);
     public static final RegistryObject<Block> JABUTICABA_FRUITING_LOG = registerBlock("jabuticaba_fruiting_log",
@@ -146,6 +148,8 @@ public class AtlanticForestBlocks {
 
     public static final RegistryObject<Block> IPE_LOG = registerBlock("ipe_log",
             ModLogs::new);
+    public static final RegistryObject<Block> IPE_WOOD = registerBlock("ipe_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> IPE_PLANKS = registerBlock("ipe_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> YELLOW_IPE_BLOSSOM = registerBlock("yellow_ipe_blossom",
@@ -179,6 +183,8 @@ public class AtlanticForestBlocks {
 
     public static final RegistryObject<Block> EUGENIA_LOG = registerBlock("eugenia_log",
             ModLogs::new);
+    public static final RegistryObject<Block> EUGENIA_WOOD = registerBlock("eugenia_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> EUGENIA_PLANKS = registerBlock("eugenia_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> PITANGA_LEAVES = registerBlock("pitanga_leaves",
@@ -202,6 +208,8 @@ public class AtlanticForestBlocks {
 
     public static final RegistryObject<Block> PINK_PEROBA_LOG = registerBlock("pink_peroba_log",
             ModLogs::new);
+    public static final RegistryObject<Block> PINK_PEROBA_WOOD = registerBlock("pínk_peroba_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> PINK_PEROBA_PLANKS = registerBlock("pink_peroba_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> PINK_PEROBA_LEAVES = registerBlock("pink_peroba_leaves",
@@ -222,6 +230,8 @@ public class AtlanticForestBlocks {
 
 
     public static final RegistryObject<Block> JEQUITIBA_LOG = registerBlock("jequitiba_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> JEQUITIBA_WOOD = registerBlock("jequitiba_wood",
             ModLogs::new);
     public static final RegistryObject<Block> JEQUITIBA_PLANKS = registerBlock("jequitiba_planks",
             ModPlanks::new);
@@ -244,6 +254,8 @@ public class AtlanticForestBlocks {
 
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LOG = registerBlock("brazillian_rosewood_log",
             ModLogs::new);
+    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_WOOD = registerBlock("jequitiba_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_PLANKS = registerBlock("brazillian_rosewood_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LEAVES = registerBlock("brazillian_rosewood_leaves",
@@ -264,6 +276,8 @@ public class AtlanticForestBlocks {
 
 
     public static final RegistryObject<Block> SAPUCAIA_LOG = registerBlock("sapucaia_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> SAPUCAIA_WOOD = registerBlock("sapucaia_wood",
             ModLogs::new);
     public static final RegistryObject<Block> SAPUCAIA_PLANKS = registerBlock("sapucaia_planks",
             ModPlanks::new);
