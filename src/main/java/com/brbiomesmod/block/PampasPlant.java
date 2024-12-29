@@ -1,6 +1,6 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.PampasPlainsBlocks;
+import com.brbiomesmod.block.BlockClasses.PampasBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BushBlock;
@@ -24,10 +24,10 @@ public class PampasPlant extends BushBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(PampasPlainsBlocks.MACELA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PampasPlainsBlocks.ASPILIA_MONTEVIDENSIS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PampasPlainsBlocks.MANDEVILLA_COCCINEA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PampasPlainsBlocks.VELAME_OF_RIO_GRANDE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PampasBlocks.MACELA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PampasBlocks.ASPILIA_MONTEVIDENSIS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PampasBlocks.MANDEVILLA_COCCINEA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PampasBlocks.VELAME_OF_RIO_GRANDE.get(), RenderType.getCutout());
 
     }
 

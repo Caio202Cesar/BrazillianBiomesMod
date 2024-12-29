@@ -1,6 +1,6 @@
 package com.brbiomesmod.item;
 
-import com.brbiomesmod.block.BlockClasses.PampasPlainsBlocks;
+import com.brbiomesmod.block.BlockClasses.PampasBlocks;
 import com.brbiomesmod.block.BlockClasses.RestingaBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -66,7 +66,7 @@ public class ModItemGroup {
         @Override
         public ItemStack createIcon()
         {
-            return new ItemStack(PampasPlainsBlocks.CAVEN_THORN_SAPLING.get());
+            return new ItemStack(PampasBlocks.CAVEN_THORN_SAPLING.get());
         }
     };
 }

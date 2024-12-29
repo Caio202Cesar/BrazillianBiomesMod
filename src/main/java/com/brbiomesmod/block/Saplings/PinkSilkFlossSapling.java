@@ -1,7 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
-import com.brbiomesmod.block.BlockClasses.CerradoSavannaBlocks;
+import com.brbiomesmod.block.BlockClasses.CerradoBlocks;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -28,7 +27,7 @@ public class PinkSilkFlossSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(CerradoSavannaBlocks.PINK_SILK_FLOSS_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(CerradoBlocks.PINK_SILK_FLOSS_SAPLING.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

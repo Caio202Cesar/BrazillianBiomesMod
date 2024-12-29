@@ -1,6 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.PampasPlainsBlocks;
+import com.brbiomesmod.block.BlockClasses.PampasBlocks;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -27,7 +27,7 @@ public class CavenThornSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(PampasPlainsBlocks.CAVEN_THORN_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PampasBlocks.CAVEN_THORN_SAPLING.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

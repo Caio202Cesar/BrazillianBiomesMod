@@ -2,7 +2,7 @@ package com.brbiomesmod.item;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
-import com.brbiomesmod.block.BlockClasses.PampasPlainsBlocks;
+import com.brbiomesmod.block.BlockClasses.PampasBlocks;
 import com.brbiomesmod.item.custom.BrazilnutFruit;
 import com.brbiomesmod.item.custom.CashewFruit;
 import com.brbiomesmod.item.custom.MateItem;
@@ -141,7 +141,7 @@ public class ModItems {
             () -> new BlockItem(AmazonRainforestBlocks.CASSAVA_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));
 
     public static final RegistryObject<Item> CALABASH_SEEDS = ITEMS.register("calabash_seeds",
-            () -> new BlockItem(PampasPlainsBlocks.CALABASH_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));
+            () -> new BlockItem(PampasBlocks.CALABASH_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));
 
     public static final RegistryObject<Item> CALABASH = ITEMS.register("calabash",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));

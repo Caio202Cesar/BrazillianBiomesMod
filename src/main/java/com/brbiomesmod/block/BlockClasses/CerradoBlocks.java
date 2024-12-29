@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
-public class CerradoSavannaBlocks {
+public class CerradoBlocks {
     public static List<Block> blocksList = new ArrayList<>();
 
     public static final DeferredRegister<Block> BLOCKS

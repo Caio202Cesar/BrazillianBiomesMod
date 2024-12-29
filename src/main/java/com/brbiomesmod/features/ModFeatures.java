@@ -1,7 +1,6 @@
 package com.brbiomesmod.features;
 
 import com.brbiomesmod.block.BlockClasses.*;
-import com.brbiomesmod.world.gen.OreType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.registry.Registry;
@@ -12,10 +11,6 @@ import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.placement.IPlacementConfig;
-import net.minecraft.world.gen.placement.Placement;
-
-import static net.minecraftforge.registries.ForgeRegistries.FEATURES;
 
 public class ModFeatures extends Features implements IFeatureConfig {
 
@@ -114,10 +109,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState IPOMAEA_PES_CAPRAE = RestingaBlocks.IPOMAEA_PES_CAPRAE.get().getDefaultState();
         protected static final BlockState XANANA1 = RestingaBlocks.XANANA.get().getDefaultState();
         protected static final BlockState XANANA2 = RestingaBlocks.XANANA_BIG.get().getDefaultState();
-        protected static final BlockState MACELA = PampasPlainsBlocks.MACELA.get().getDefaultState();
-        protected static final BlockState VELAME_OF_RIO_GRANDE = PampasPlainsBlocks.VELAME_OF_RIO_GRANDE.get().getDefaultState();
-        protected static final BlockState MANDEVILLA_COCCINEA = PampasPlainsBlocks.MANDEVILLA_COCCINEA.get().getDefaultState();
-        protected static final BlockState ASPILIA_MONTEVIDENSIS = PampasPlainsBlocks.ASPILIA_MONTEVIDENSIS.get().getDefaultState();
+        protected static final BlockState MACELA = PampasBlocks.MACELA.get().getDefaultState();
+        protected static final BlockState VELAME_OF_RIO_GRANDE = PampasBlocks.VELAME_OF_RIO_GRANDE.get().getDefaultState();
+        protected static final BlockState MANDEVILLA_COCCINEA = PampasBlocks.MANDEVILLA_COCCINEA.get().getDefaultState();
+        protected static final BlockState ASPILIA_MONTEVIDENSIS = PampasBlocks.ASPILIA_MONTEVIDENSIS.get().getDefaultState();
 
     }
 }

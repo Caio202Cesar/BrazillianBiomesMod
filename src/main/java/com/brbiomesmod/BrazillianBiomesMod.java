@@ -1,7 +1,6 @@
 package com.brbiomesmod;
 
 import com.brbiomesmod.block.BlockClasses.*;
-import com.brbiomesmod.features.ModFeatures;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.*;
 import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
@@ -43,8 +42,8 @@ public class BrazillianBiomesMod {
         AtlanticForestBlocks.register(eventBus);
         AmazonRainforestBlocks.register(eventBus);
         RestingaBlocks.register(eventBus);
-        CerradoSavannaBlocks.register(eventBus);
-        PampasPlainsBlocks.register(eventBus);
+        CerradoBlocks.register(eventBus);
+        PampasBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);

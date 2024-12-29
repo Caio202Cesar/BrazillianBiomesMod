@@ -5,7 +5,6 @@ import com.brbiomesmod.block.*;
 import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
-import com.electronwill.nightconfig.core.ConfigSpec;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
@@ -20,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
-public class PampasPlainsBlocks {
+public class PampasBlocks {
     public static List<Block> blocksList = new ArrayList<>();
 
     public static final DeferredRegister<Block> BLOCKS

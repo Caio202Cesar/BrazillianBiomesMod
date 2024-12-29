@@ -13,16 +13,11 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.foliageplacer.*;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.treedecorator.CocoaTreeDecorator;
-import net.minecraft.world.gen.treedecorator.LeaveVineTreeDecorator;
-import net.minecraft.world.gen.treedecorator.TrunkVineTreeDecorator;
 import net.minecraft.world.gen.trunkplacer.*;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.OptionalInt;
-
-import static net.minecraft.item.UseAction.BLOCK;
 
 public abstract class TreeFeatures implements IFeatureConfig {
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, BrazillianBiomesMod.MOD_ID);
@@ -533,9 +528,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState BLACK_JUREMA_LOG = CaatingaBlocks.BLACK_JUREMA_LOG.get().getDefaultState();
         protected static final BlockState BLACK_JUREMA_LEAVES = CaatingaBlocks.BLACK_JUREMA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SILK_FLOSS_LOG = CerradoSavannaBlocks.SILK_FLOSS_LOG.get().getDefaultState();
+        protected static final BlockState SILK_FLOSS_LOG = CerradoBlocks.SILK_FLOSS_LOG.get().getDefaultState();
         protected static final BlockState WHITE_SILK_FLOSS_LEAVES = CaatingaBlocks.WHITE_SILK_FLOSS_LEAVES.get().getDefaultState();
-        protected static final BlockState PINK_SILK_FLOSS_LEAVES = CerradoSavannaBlocks.PINK_SILK_FLOSS_LEAVES.get().getDefaultState();
+        protected static final BlockState PINK_SILK_FLOSS_LEAVES = CerradoBlocks.PINK_SILK_FLOSS_LEAVES.get().getDefaultState();
 
         protected static final BlockState BACURI_LOG = AmazonRainforestBlocks.BACURI_LOG.get().getDefaultState();
         protected static final BlockState BACURI_LEAVES = AmazonRainforestBlocks.BACURI_LEAVES.get().getDefaultState();
@@ -552,14 +547,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState CAMBUCI_LOG = AtlanticForestBlocks.CAMBUCI_LOG.get().getDefaultState();
         protected static final BlockState CAMBUCI_LEAVES = AtlanticForestBlocks.CAMBUCI_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SCHINUS_LOG = PampasPlainsBlocks.SCHINUS_LOG.get().getDefaultState();
-        protected static final BlockState BRAZILLIAN_PEPPER_LEAVES = PampasPlainsBlocks.BRAZILLIAN_PEPPER_LEAVES.get().getDefaultState();
-        protected static final BlockState PERUVIAN_PEPPER_LEAVES = PampasPlainsBlocks.PERUVIAN_PEPPER_LEAVES.get().getDefaultState();
-        protected static final BlockState SILVER_PEPPER_LEAVES = PampasPlainsBlocks.SILVER_PEPPER_LEAVES.get().getDefaultState();
-        protected static final BlockState URUGUAYAN_PEPPER_LEAVES = PampasPlainsBlocks.URUGUAYAN_PEPPER_LEAVES.get().getDefaultState();
+        protected static final BlockState SCHINUS_LOG = PampasBlocks.SCHINUS_LOG.get().getDefaultState();
+        protected static final BlockState BRAZILLIAN_PEPPER_LEAVES = PampasBlocks.BRAZILLIAN_PEPPER_LEAVES.get().getDefaultState();
+        protected static final BlockState PERUVIAN_PEPPER_LEAVES = PampasBlocks.PERUVIAN_PEPPER_LEAVES.get().getDefaultState();
+        protected static final BlockState SILVER_PEPPER_LEAVES = PampasBlocks.SILVER_PEPPER_LEAVES.get().getDefaultState();
+        protected static final BlockState URUGUAYAN_PEPPER_LEAVES = PampasBlocks.URUGUAYAN_PEPPER_LEAVES.get().getDefaultState();
 
-        protected static final BlockState WOLF_APPLE_LOG = CerradoSavannaBlocks.WOLF_APPLE_LOG.get().getDefaultState();
-        protected static final BlockState WOLF_APPLE_LEAVES = CerradoSavannaBlocks.WOLF_APPLE_LEAVES.get().getDefaultState();
+        protected static final BlockState WOLF_APPLE_LOG = CerradoBlocks.WOLF_APPLE_LOG.get().getDefaultState();
+        protected static final BlockState WOLF_APPLE_LEAVES = CerradoBlocks.WOLF_APPLE_LEAVES.get().getDefaultState();
 
         protected static final BlockState MANGABA_LOG = RestingaBlocks.MANGABA_LOG.get().getDefaultState();
         protected static final BlockState MANGABA_LEAVES = RestingaBlocks.MANGABA_LEAVES.get().getDefaultState();
@@ -592,7 +587,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState EUGENIA_LOG = AtlanticForestBlocks.EUGENIA_LOG.get().getDefaultState();
         protected static final BlockState PITANGA_LEAVES = AtlanticForestBlocks.PITANGA_LEAVES.get().getDefaultState();
         protected static final BlockState BLACK_PITANGA_LEAVES = AtlanticForestBlocks.BLACK_PITANGA_LEAVES.get().getDefaultState();
-        protected static final BlockState CAGAITA_LEAVES = CerradoSavannaBlocks.CAGAITA_LEAVES.get().getDefaultState();
+        protected static final BlockState CAGAITA_LEAVES = CerradoBlocks.CAGAITA_LEAVES.get().getDefaultState();
         protected static final BlockState RIO_GRANDE_CHERRY_LEAVES = AraucariaPlateauBlocks.RIO_GRANDE_CHERRY_LEAVES.get().getDefaultState();
 
         protected static final BlockState SHARINGA_LOG = AmazonRainforestBlocks.SHARINGA_LOG.get().getDefaultState();
@@ -621,20 +616,20 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState JABUTICABA_FLOWERING_LOG = AtlanticForestBlocks.JABUTICABA_FLOWERING_LOG.get().getDefaultState();
         protected static final BlockState JABUTICABA_LEAVES = AtlanticForestBlocks.JABUTICABA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState ALGARROBILLO_LOG = PampasPlainsBlocks.ALGARROBILLO_LOG.get().getDefaultState();
-        protected static final BlockState ALGARROBILLO_LEAVES = PampasPlainsBlocks.ALGARROBILLO_LEAVES.get().getDefaultState();
+        protected static final BlockState ALGARROBILLO_LOG = PampasBlocks.ALGARROBILLO_LOG.get().getDefaultState();
+        protected static final BlockState ALGARROBILLO_LEAVES = PampasBlocks.ALGARROBILLO_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CAVEN_THORN_LOG = PampasPlainsBlocks.CAVEN_THORN_LOG.get().getDefaultState();
-        protected static final BlockState CAVEN_THORN_LEAVES = PampasPlainsBlocks.CAVEN_THORN_LEAVES.get().getDefaultState();
+        protected static final BlockState CAVEN_THORN_LOG = PampasBlocks.CAVEN_THORN_LOG.get().getDefaultState();
+        protected static final BlockState CAVEN_THORN_LEAVES = PampasBlocks.CAVEN_THORN_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BLACK_SUCUPIRA_LOG = CerradoSavannaBlocks.BLACK_SUCUPIRA_LOG.get().getDefaultState();
-        protected static final BlockState BLACK_SUCUPIRA_LEAVES = CerradoSavannaBlocks.BLACK_SUCUPIRA_LEAVES.get().getDefaultState();
+        protected static final BlockState BLACK_SUCUPIRA_LOG = CerradoBlocks.BLACK_SUCUPIRA_LOG.get().getDefaultState();
+        protected static final BlockState BLACK_SUCUPIRA_LEAVES = CerradoBlocks.BLACK_SUCUPIRA_LEAVES.get().getDefaultState();
 
         protected static final BlockState BALSA_LOG = AmazonRainforestBlocks.BALSA_LOG.get().getDefaultState();
         protected static final BlockState BALSA_LEAVES = AmazonRainforestBlocks.BALSA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState COCKSPUR_CORAL_LOG = PampasPlainsBlocks.COCKSPUR_CORAL_LOG.get().getDefaultState();
-        protected static final BlockState COCKSPUR_CORAL_LEAVES = PampasPlainsBlocks.COCKSPUR_CORAL_LEAVES.get().getDefaultState();
+        protected static final BlockState COCKSPUR_CORAL_LOG = PampasBlocks.COCKSPUR_CORAL_LOG.get().getDefaultState();
+        protected static final BlockState COCKSPUR_CORAL_LEAVES = PampasBlocks.COCKSPUR_CORAL_LEAVES.get().getDefaultState();
 
         protected static final BlockState SAPUCAIA_LOG = AtlanticForestBlocks.SAPUCAIA_LOG.get().getDefaultState();
         protected static final BlockState SAPUCAIA_LEAVES = AtlanticForestBlocks.SAPUCAIA_LEAVES.get().getDefaultState();
