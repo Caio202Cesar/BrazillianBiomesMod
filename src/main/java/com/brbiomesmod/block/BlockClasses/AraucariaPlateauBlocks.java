@@ -150,6 +150,8 @@ public class AraucariaPlateauBlocks {
 
     public static final RegistryObject<Block> XAXIM_PLANT = registerBlock("xaxim_plant",
             XaximPlant::new);
+    public static final RegistryObject<Block> CATTLEYA_COCCINEA = registerBlock("cattleya_coccinea",
+            OrchidPlant::new);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

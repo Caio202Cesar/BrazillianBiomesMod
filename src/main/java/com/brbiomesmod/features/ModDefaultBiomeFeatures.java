@@ -65,6 +65,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withPampasFlowers(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PAMPAS_PLAINS_FLOWER_PATCH);
     }
+    public static void withAraucariaForestFlowers(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.ARAUCARIA_FOREST_FLOWERS);
+    }
     public static void withBrazilwoodTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BRAZILWOOD_TREES);
     }
@@ -80,8 +83,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withCassavaPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_CASSAVA_PLANT);
     }
-    public static void withAtlanticForestOrchids(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.ATLANTIC_FOREST_ORCHIDS);
+    public static void withAtlanticForestFlowers(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.ATLANTIC_FOREST_FLOWERS);
     }
     public static void withCerradoFruitTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CERRADO_FRUIT_TREES);

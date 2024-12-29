@@ -36,12 +36,12 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.IPOMAEA_PES_CAPRAE_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
 
-    public static final ConfiguredFeature<?, ?> CAATINGA_CACTUS_PATCH = register("caatinga_cactus_patch", Feature.RANDOM_PATCH
-            .withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CACTUS),
-            new ColumnBlockPlacer(1, 2))).tries(10).preventProjection().build()));
+    public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_FLOWERS = register("atlantic_forest_orchids",
+            Feature.FLOWER.withConfiguration(ModFeatures.Configs.ATLANTIC_FOREST_FLOWERS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
-    public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_ORCHIDS = register("atlantic_forest_orchids",
-            Feature.FLOWER.withConfiguration(ModFeatures.Configs.ATLANTIC_ORCHIDS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+    public static final ConfiguredFeature<?, ?> ARAUCARIA_FOREST_FLOWERS = register("araucaria_forest_orchids",
+            Feature.FLOWER.withConfiguration(ModFeatures.Configs.ARAUCARIA_FLOWERS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
     public static final ConfiguredFeature<?, ?> XANANA_PATCH = register("xanana_patch",
@@ -70,10 +70,15 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.TURK_TURBAN_FRUITING, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
-        public static final BlockClusterFeatureConfig ATLANTIC_ORCHIDS_CONFIG =
+        public static final BlockClusterFeatureConfig ATLANTIC_FOREST_FLOWERS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.CATTLEYA_PURPURATA, 1)
                         .addWeightedBlockstate(States.CATTLEYA_LADY_ACKLAND, 1),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig ARAUCARIA_FLOWERS_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.CATTLEYA_COCCINEA, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig IPOMAEA_PES_CAPRAE_CONFIG =
@@ -98,6 +103,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
     public static final class States {
         protected static final BlockState XAXIM = AraucariaPlateauBlocks.XAXIM_PLANT.get().getDefaultState();
+        protected static final BlockState CATTLEYA_COCCINEA = AraucariaPlateauBlocks.CATTLEYA_COCCINEA.get().getDefaultState();
         protected static final BlockState CASSAVA = AmazonRainforestBlocks.CASSAVA_PLANT.get().getDefaultState();
         protected static final BlockState BULL_NETTLE = CaatingaBlocks.CNIDOSCOLUS_URENS.get().getDefaultState();
         protected static final BlockState BULL_NETTLE_FRUITS = CaatingaBlocks.CNIDOSCOLUS_URENS_FRUITING.get().getDefaultState();

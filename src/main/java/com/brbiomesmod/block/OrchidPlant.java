@@ -1,5 +1,6 @@
 package com.brbiomesmod.block;
 
+import com.brbiomesmod.block.BlockClasses.AraucariaPlateauBlocks;
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import com.brbiomesmod.block.BlockClasses.RestingaBlocks;
 import net.minecraft.block.BlockState;
@@ -26,6 +27,7 @@ public class OrchidPlant extends BushBlock {
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.CATTLEYA_PURPURATA.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.CATTLEYA_LADY_ACKLAND.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AraucariaPlateauBlocks.CATTLEYA_COCCINEA.get(), RenderType.getCutout());
 
     }
 
