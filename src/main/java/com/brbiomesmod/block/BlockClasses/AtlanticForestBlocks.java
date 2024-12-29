@@ -254,7 +254,7 @@ public class AtlanticForestBlocks {
 
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LOG = registerBlock("brazillian_rosewood_log",
             ModLogs::new);
-    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_WOOD = registerBlock("jequitiba_wood",
+    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_WOOD = registerBlock("brazillian_rosewood_wood",
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_PLANKS = registerBlock("brazillian_rosewood_planks",
             ModPlanks::new);
