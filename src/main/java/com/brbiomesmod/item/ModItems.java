@@ -83,7 +83,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.WOLF_APPLE)));
 
     public static final RegistryObject<Item> MATE_LEAF = ITEMS.register("mate_leaf",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            () -> new Item(new Item.Properties().group(ItemGroup.MISC)));
 
     public static final RegistryObject<Item> JABUTICABA = ITEMS.register("jabuticaba",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.JABUTICABA)));
