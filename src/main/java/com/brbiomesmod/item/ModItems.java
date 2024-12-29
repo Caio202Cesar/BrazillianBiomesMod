@@ -6,6 +6,7 @@ import com.brbiomesmod.block.BlockClasses.PampasPlainsBlocks;
 import com.brbiomesmod.item.custom.BrazilnutFruit;
 import com.brbiomesmod.item.custom.CashewFruit;
 import com.brbiomesmod.item.custom.MateItem;
+import com.brbiomesmod.item.custom.SapucaiaFruit;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -59,6 +60,13 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.PELLED_BRAZILNUT)));
     public static final RegistryObject<Item> ROASTED_BRAZILNUT = ITEMS.register("roasted_brazilnut",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.ROASTED_BRAZILNUT)));
+
+    public static final RegistryObject<Item> SAPUCAIA_FRUIT = ITEMS.register("sapucaia_fruit",
+            () -> new SapucaiaFruit(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> SAPUCAIA_SHELL = ITEMS.register("sapucaia_shell",
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+    public static final RegistryObject<Item> SAPUCAIA_NUTS = ITEMS.register("sapucaia_nuts",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.SAPUCAIA_NUTS)));
 
     public static final RegistryObject<Item> CASSAVA = ITEMS.register("cassava",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CASSAVA)));

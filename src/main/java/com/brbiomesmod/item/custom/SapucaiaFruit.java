@@ -4,8 +4,8 @@ import com.brbiomesmod.item.ModItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class CashewFruit extends Item {
-    public CashewFruit(Properties properties) {
+public class SapucaiaFruit extends Item {
+    public SapucaiaFruit(Properties properties) {
         super(properties);
     }
 

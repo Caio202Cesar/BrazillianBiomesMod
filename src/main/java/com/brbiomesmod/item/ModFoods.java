@@ -20,6 +20,7 @@ public class ModFoods extends Foods {
             .effect(new EffectInstance(Effects.SPEED, 100, 0), 0.6F).build();
     public static final Food PELLED_BRAZILNUT = (new Food.Builder()).hunger(1).saturation(0.1F).build();
     public static final Food ROASTED_BRAZILNUT = (new Food.Builder()).hunger(2).saturation(0.2F).build();
+    public static final Food SAPUCAIA_NUTS = (new Food.Builder()).hunger(2).saturation(0.2F).build();
     public static final Food CASSAVA = (new Food.Builder()).hunger(1).saturation(0.1F)
             .effect(new EffectInstance(Effects.POISON, 100, 3), 1.0F)
             .effect(new EffectInstance(Effects.HUNGER, 300, 2), 1.0F)
