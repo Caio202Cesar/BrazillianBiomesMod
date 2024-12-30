@@ -53,6 +53,7 @@ public class RestingaBlocks {
     //public static final RegistryObject<Block> CASHEW_STRIPPED_LOG = registerBlock("cashew_stripped_log", ModLogs::new);
     //public static final RegistryObject<Block> CASHEW_STRIPPED_WOOD = registerBlock("cashew_stripped_wood", ModLogs::new);
 
+
     public static final RegistryObject<Block> MANGABA_LEAVES = registerBlock("mangaba_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> MANGABA_LOG = registerBlock("mangaba_log",
