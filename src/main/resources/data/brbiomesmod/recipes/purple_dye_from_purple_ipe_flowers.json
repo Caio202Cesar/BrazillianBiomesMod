@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "magenta_dye",
+  "group": "purple_dye",
   "ingredients": [
     {
       "item": "brbiomesmod:purple_ipe_flowers"
     }
   ],
   "result": {
-    "item": "minecraft:magenta_dye"
+    "item": "minecraft:purple_dye"
   }
 }
