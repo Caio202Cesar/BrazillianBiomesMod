@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "white_dye",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:velame_of_rio_grande"
+    }
+  ],
+  "result": {
+    "item": "minecraft:white_dye"
+  }
+}
