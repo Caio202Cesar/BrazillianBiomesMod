@@ -30,6 +30,8 @@ public class PampasBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> SCHINUS_PLANKS = registerBlock("schinus_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> SCHINUS_WOOD = registerBlock("schinus_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> BRAZILLIAN_PEPPER_LEAVES = registerBlock("brazillian_pepper_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> PERUVIAN_PEPPER_LEAVES = registerBlock("peruvian_pepper_leaves",
@@ -61,6 +63,8 @@ public class PampasBlocks {
 
     public static final RegistryObject<Block> ALGARROBILLO_LOG = registerBlock("algarrobillo_log",
             ModLogs::new);
+    public static final RegistryObject<Block> ALGARROBILLO_WOOD = registerBlock("algarrobillo_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> ALGARROBILLO_LEAVES = registerBlock("algarrobillo_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> ALGARROBILLO_SAPLING = registerBlock("algarrobillo_sapling",
@@ -82,6 +86,8 @@ public class PampasBlocks {
 
     public static final RegistryObject<Block> CAVEN_THORN_LOG = registerBlock("caven_thorn_log",
             ModLogs::new);
+    public static final RegistryObject<Block> CAVEN_THORN_WOOD = registerBlock("caven_thorn_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> CAVEN_THORN_LEAVES = registerBlock("caven_thorn_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CAVEN_THORN_SAPLING = registerBlock("caven_thorn_sapling",
@@ -89,6 +95,8 @@ public class PampasBlocks {
 
 
     public static final RegistryObject<Block> COCKSPUR_CORAL_LOG = registerBlock("cockspur_coral_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> COCKSPUR_CORAL_WOOD = registerBlock("cockspur_coral_wood",
             ModLogs::new);
     public static final RegistryObject<Block> COCKSPUR_CORAL_LEAVES = registerBlock("cockspur_coral_leaves",
             ModLeaves::new);
