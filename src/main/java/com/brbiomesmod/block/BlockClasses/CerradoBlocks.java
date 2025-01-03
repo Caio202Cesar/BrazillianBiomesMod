@@ -34,6 +34,8 @@ public class CerradoBlocks {
 
     public static final RegistryObject<Block> WOLF_APPLE_LOG = registerBlock("wolf_apple_log",
             ModLogs::new);
+    public static final RegistryObject<Block> WOLF_APPLE_WOOD = registerBlock("wolf_apple_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> WOLF_APPLE_LEAVES = registerBlock("wolf_apple_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> WOLF_APPLE_SAPLING = registerBlock("wolf_apple_sapling",
@@ -54,6 +56,8 @@ public class CerradoBlocks {
 
 
     public static final RegistryObject<Block> BLACK_SUCUPIRA_LOG = registerBlock("black_sucupira_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_WOOD = registerBlock("black_sucupira_wood",
             ModLogs::new);
     public static final RegistryObject<Block> BLACK_SUCUPIRA_LEAVES = registerBlock("black_sucupira_leaves",
             ModLeaves::new);
@@ -80,6 +84,10 @@ public class CerradoBlocks {
             CagaitaSapling::new);
 
     public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
+            SilkFlossLog::new);
+    public static final RegistryObject<Block> SILK_FLOSS_WOOD = registerBlock("silk_floss_thornless_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> SILK_FLOSS_THORNY_WOOD = registerBlock("silk_floss_thorny_wood",
             SilkFlossLog::new);
     public static final RegistryObject<Block> PINK_SILK_FLOSS_LEAVES = registerBlock("silk_floss_pink_leaves",
             ModLeaves::new);

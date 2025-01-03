@@ -208,7 +208,7 @@ public class AtlanticForestBlocks {
 
     public static final RegistryObject<Block> PINK_PEROBA_LOG = registerBlock("pink_peroba_log",
             ModLogs::new);
-    public static final RegistryObject<Block> PINK_PEROBA_WOOD = registerBlock("pínk_peroba_wood",
+    public static final RegistryObject<Block> PINK_PEROBA_WOOD = registerBlock("pink_peroba_wood",
             ModLogs::new);
     public static final RegistryObject<Block> PINK_PEROBA_PLANKS = registerBlock("pink_peroba_planks",
             ModPlanks::new);
