@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "brbiomesmod:block/sharinga_wood",
+      "model": "brbiomesmod:block/pink_peroba_wood",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "brbiomesmod:block/sharinga_wood"
+      "model": "brbiomesmod:block/pink_peroba_wood"
     },
     "axis=z": {
-      "model": "brbiomesmod:block/sharinga_wood",
+      "model": "brbiomesmod:block/pink_peroba_wood",
       "x": 90
     }
   }

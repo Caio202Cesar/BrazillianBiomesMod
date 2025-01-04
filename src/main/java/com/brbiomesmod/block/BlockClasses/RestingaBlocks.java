@@ -38,14 +38,15 @@ public class RestingaBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> CASHEW_SAPLING = registerBlock("cashew_sapling",
             CashewSapling::new);
+    public static final RegistryObject<Block> CASHEW_SLAB = registerBlock("cashew_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> CASHEW_STAIRS = registerBlock("cashew_stairs",
             () -> new StairsBlock(() -> CASHEW_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> CASHEW_FENCE = registerBlock("cashew_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> CASHEW_FENCE_GATE = registerBlock("cashew_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -64,14 +65,15 @@ public class RestingaBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> MANGABA_SAPLING = registerBlock("mangaba_sapling",
             MangabaSapling::new);
+    public static final RegistryObject<Block> MANGABA_SLAB = registerBlock("mangaba_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> MANGABA_STAIRS = registerBlock("mangaba_stairs",
             () -> new StairsBlock(() -> MANGABA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> MANGABA_FENCE = registerBlock("mangaba_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> MANGABA_FENCE_GATE = registerBlock("mangaba_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));

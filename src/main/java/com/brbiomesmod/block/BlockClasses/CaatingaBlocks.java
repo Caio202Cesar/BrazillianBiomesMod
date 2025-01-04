@@ -29,7 +29,6 @@ public class CaatingaBlocks {
     public static final RegistryObject<Block> CAATINGA_SAND = registerBlock("caatinga_sand",
             CaatingaSand::new);
 
-
     public static final RegistryObject<Block> JUA_LOG = registerBlock("jua_log",
             ModLogs::new);
     public static final RegistryObject<Block> JUA_WOOD = registerBlock("jua_wood",
@@ -44,14 +43,15 @@ public class CaatingaBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> JUA_SAPLING = registerBlock("jua_sapling",
             JuaSapling::new);
+    public static final RegistryObject<Block> JUA_SLAB = registerBlock("jua_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> JUA_STAIRS = registerBlock("jua_stairs",
             () -> new StairsBlock(() -> JUA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> JUA_FENCE = registerBlock("jua_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> JUA_FENCE_GATE = registerBlock("jua_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -79,14 +79,15 @@ public class CaatingaBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> UMBU_SAPLING = registerBlock("umbu_sapling",
             UmbuSapling::new);
+    public static final RegistryObject<Block> UMBU_SLAB = registerBlock("umbu_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> UMBU_STAIRS = registerBlock("umbu_stairs",
             () -> new StairsBlock(() -> UMBU_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> UMBU_FENCE = registerBlock("umbu_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> UMBU_FENCE_GATE = registerBlock("umbu_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -110,7 +111,6 @@ public class CaatingaBlocks {
             CactusPlant::new);
     public static final RegistryObject<Block> TURK_TURBAN_FRUITING_CACTUS = registerBlock("turk_turban_fruiting_cactus",
             CactusPlant::new);
-
 
 
     public static final RegistryObject<Block> TOURMALINE_PARAIBA_ORE = registerBlock("tourmaline_paraiba_ore",

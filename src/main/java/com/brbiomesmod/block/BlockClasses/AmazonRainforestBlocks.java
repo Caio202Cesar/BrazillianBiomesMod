@@ -44,19 +44,15 @@ public class AmazonRainforestBlocks {
             BalsaSapling::new);
     public static final RegistryObject<Block> BALSA_WOOD = registerBlock("balsa_wood",
             ModLogs::new);
-
     public static final RegistryObject<Block> BALSA_SLAB = registerBlock("balsa_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> BALSA_STAIRS = registerBlock("balsa_stairs",
             () -> new StairsBlock(() -> BALSA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> BALSA_FENCE = registerBlock("balsa_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> BALSA_FENCE_GATE = registerBlock("balsa_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -72,14 +68,15 @@ public class AmazonRainforestBlocks {
             LophanteraSapling::new);
     public static final RegistryObject<Block> LOPHANTERA_WOOD = registerBlock("lophantera_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> LOPHANTERA_SLAB = registerBlock("lophantera_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> LOPHANTERA_STAIRS = registerBlock("lophantera_stairs",
             () -> new StairsBlock(() -> LOPHANTERA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> LOPHANTERA_FENCE = registerBlock("lophantera_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> LOPHANTERA_FENCE_GATE = registerBlock("lophantera_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -107,14 +104,15 @@ public class AmazonRainforestBlocks {
             BrazilnutSapling::new);
     public static final RegistryObject<Block> BRAZILNUT_WOOD = registerBlock("brazilnut_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> BRAZILNUT_SLAB = registerBlock("brazilnut_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> BRAZILNUT_STAIRS = registerBlock("brazilnut_stairs",
             () -> new StairsBlock(() -> BRAZILNUT_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> BRAZILNUT_FENCE = registerBlock("brazilnut_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> BRAZILNUT_FENCE_GATE = registerBlock("brazilnut_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -136,14 +134,15 @@ public class AmazonRainforestBlocks {
             SharingaSapling::new);
     public static final RegistryObject<Block> SHARINGA_WOOD = registerBlock("sharinga_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> SHARINGA_SLAB = registerBlock("sharinga_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> SHARINGA_STAIRS = registerBlock("sharinga_stairs",
             () -> new StairsBlock(() -> SHARINGA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> SHARINGA_FENCE = registerBlock("sharinga_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> SHARINGA_FENCE_GATE = registerBlock("sharinga_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -159,14 +158,15 @@ public class AmazonRainforestBlocks {
             BacuriSapling::new);
     public static final RegistryObject<Block> BACURI_WOOD = registerBlock("bacuri_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> BACURI_SLAB = registerBlock("bacuri_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> BACURI_STAIRS = registerBlock("bacuri_stairs",
             () -> new StairsBlock(() -> BACURI_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> BACURI_FENCE = registerBlock("bacuri_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> BACURI_FENCE_GATE = registerBlock("bacuri_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -182,14 +182,15 @@ public class AmazonRainforestBlocks {
             CamuCamuSapling::new);
     public static final RegistryObject<Block> CAMU_CAMU_WOOD = registerBlock("camu_camu_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> CAMU_CAMU_SLAB = registerBlock("camu_camu_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> CAMU_CAMU_STAIRS = registerBlock("camu_camu_stairs",
             () -> new StairsBlock(() -> CAMU_CAMU_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> CAMU_CAMU_FENCE = registerBlock("camu_camu_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> CAMU_CAMU_FENCE_GATE = registerBlock("camu_camu_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
