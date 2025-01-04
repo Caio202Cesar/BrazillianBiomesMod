@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/brazillian_sassafras_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/brazillian_sassafras_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/brazillian_sassafras_slab_top"
+    }
+  }
+}

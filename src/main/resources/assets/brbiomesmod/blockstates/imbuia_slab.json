@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/imbuia_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/imbuia_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/imbuia_slab_top"
+    }
+  }
+}

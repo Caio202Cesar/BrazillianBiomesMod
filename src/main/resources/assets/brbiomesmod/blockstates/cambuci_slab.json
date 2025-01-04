@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/cambuci_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/cambuci_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/cambuci_slab_top"
+    }
+  }
+}

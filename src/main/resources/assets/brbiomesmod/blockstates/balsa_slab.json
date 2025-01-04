@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/balsa_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/balsa_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/balsa_slab_top"
+    }
+  }
+}

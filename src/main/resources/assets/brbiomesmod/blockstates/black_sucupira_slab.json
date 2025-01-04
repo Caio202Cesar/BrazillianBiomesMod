@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/black_sucupira_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/black_sucupira_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/black_sucupira_slab_top"
+    }
+  }
+}

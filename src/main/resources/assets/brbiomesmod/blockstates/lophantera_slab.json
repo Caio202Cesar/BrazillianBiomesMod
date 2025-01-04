@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/lophantera_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/lophantera_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/lophantera_slab_top"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/sharinga_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/sharinga_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/sharinga_slab_top"
+    }
+  }
+}

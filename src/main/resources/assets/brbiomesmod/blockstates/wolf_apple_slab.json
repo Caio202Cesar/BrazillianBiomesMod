@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/wolf_apple_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/wolf_apple_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/wolf_apple_slab_top"
+    }
+  }
+}

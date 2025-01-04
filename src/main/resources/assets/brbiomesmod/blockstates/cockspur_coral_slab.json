@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/cockspur_coral_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/cockspur_coral_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/cockspur_coral_slab_top"
+    }
+  }
+}

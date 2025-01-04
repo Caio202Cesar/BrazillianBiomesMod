@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/parana_pine_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/parana_pine_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/parana_pine_slab_top"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/brazillian_rosewood_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/brazillian_rosewood_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/brazillian_rosewood_slab_top"
+    }
+  }
+}

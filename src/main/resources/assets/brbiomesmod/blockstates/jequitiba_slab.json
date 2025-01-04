@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/jequitiba_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/jequitiba_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/jequitiba_slab_top"
+    }
+  }
+}

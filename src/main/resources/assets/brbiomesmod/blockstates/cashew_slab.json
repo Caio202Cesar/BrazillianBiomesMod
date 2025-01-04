@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/cashew_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/cashew_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/cashew_slab_top"
+    }
+  }
+}
