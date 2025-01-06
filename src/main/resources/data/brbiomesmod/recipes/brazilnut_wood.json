@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:brazilnut_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:brazilnut_wood",
+    "count": 3
+  }
+}

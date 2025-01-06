@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:cockspur_coral_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:cockspur_coral_wood",
+    "count": 3
+  }
+}

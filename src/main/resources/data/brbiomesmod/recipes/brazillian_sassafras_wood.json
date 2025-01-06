@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:brazillian_sassafras_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:brazillian_sassafras_wood",
+    "count": 3
+  }
+}

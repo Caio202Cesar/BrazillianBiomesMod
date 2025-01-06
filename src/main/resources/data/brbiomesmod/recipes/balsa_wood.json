@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:balsa_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:balsa_wood",
+    "count": 3
+  }
+}
