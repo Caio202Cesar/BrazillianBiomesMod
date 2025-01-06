@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:imbuia_planks"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:imbuia_slab",
+    "count": 6
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:algarrobillo_planks"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:algarrobillo_slab",
+    "count": 6
+  }
+}

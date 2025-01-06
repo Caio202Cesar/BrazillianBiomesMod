@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:feijoa_planks"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:feijoa_slab",
+    "count": 6
+  }
+}
