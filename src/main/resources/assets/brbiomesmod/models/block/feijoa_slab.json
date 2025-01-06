@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "brbiomesmod:block/feijoa_planks",
+    "top": "brbiomesmod:block/feijoa_planks",
+    "side": "brbiomesmod:block/feijoa_planks"
+  }
+}

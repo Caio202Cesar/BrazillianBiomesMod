@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "brbiomesmod:block/lophantera_planks",
+    "top": "brbiomesmod:block/lophantera_planks",
+    "side": "brbiomesmod:block/lophantera_planks"
+  }
+}
