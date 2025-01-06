@@ -1,5 +1,6 @@
 package com.brbiomesmod.item;
 
+import com.brbiomesmod.BrazillianBiomesMod;
 import net.minecraft.block.ComposterBlock;
 import net.minecraft.item.Items;
 import net.minecraft.util.IItemProvider;
@@ -15,7 +16,8 @@ public class ModCompostables extends ComposterBlock {
         CHANCES.put(item.asItem(), chance);
     }
 
-    public static void init() {
+    public static void modCompostables() {
+
         CHANCES.defaultReturnValue(-1.0F);
         float f = 0.3F;
         float f1 = 0.5F;

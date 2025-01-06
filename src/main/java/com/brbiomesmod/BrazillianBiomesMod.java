@@ -29,7 +29,6 @@ import java.util.stream.Collectors;
 public class BrazillianBiomesMod {
     public static final String MOD_ID = "brbiomesmod";
 
-    // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
     public BrazillianBiomesMod() {
