@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "bark",
   "ingredients": [
     {
       "item": "brbiomesmod:silk_floss_thorny_wood"
