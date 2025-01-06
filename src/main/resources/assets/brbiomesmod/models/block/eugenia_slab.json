@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/slab_top",
+  "parent": "minecraft:block/slab",
   "textures": {
     "bottom": "brbiomesmod:block/eugenia_planks",
     "top": "brbiomesmod:block/eugenia_planks",
