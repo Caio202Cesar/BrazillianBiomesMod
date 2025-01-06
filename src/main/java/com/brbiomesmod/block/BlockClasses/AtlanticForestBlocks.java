@@ -98,7 +98,7 @@ public class AtlanticForestBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> CAMBUCI_SAPLING = registerBlock("cambuci_sapling",
             CambuciSapling::new);
-    public static final RegistryObject<Block> CAMBUCI_SLAB = registerBlock("jabuticaba_slab",
+    public static final RegistryObject<Block> CAMBUCI_SLAB = registerBlock("cambuci_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> CAMBUCI_STAIRS = registerBlock("cambuci_stairs",
@@ -192,23 +192,18 @@ public class AtlanticForestBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> EUGENIA_PLANKS = registerBlock("eugenia_planks",
             ModPlanks::new);
-
     public static final RegistryObject<Block> EUGENIA_SLAB = registerBlock("eugenia_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> EUGENIA_STAIRS = registerBlock("eugenia_stairs",
             () -> new StairsBlock(() -> EUGENIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-
     public static final RegistryObject<Block> EUGENIA_FENCE = registerBlock("eugenia_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> EUGENIA_FENCE_GATE = registerBlock("eugenia_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> PITANGA_LEAVES = registerBlock("pitanga_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> BLACK_PITANGA_LEAVES = registerBlock("pitanga_black_leaves",
