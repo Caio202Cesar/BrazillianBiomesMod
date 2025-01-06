@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "bark",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:silk_floss_thorny_wood"
+    }
+  ],
+  "result": {
+    "item": "minecraft:silk_floss_thornless_wood",
+    "count": 1
+  }
+}
