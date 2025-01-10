@@ -317,6 +317,8 @@
   "block.brbiomesmod.schinus_log": "Schinus Log",
   "block.brbiomesmod.schinus_planks": "Schinus Planks",
   "block.brbiomesmod.schinus_stairs": "Schinus Stairs",
+  "block.brbiomesmod.schinus_slab": "Schinus Slab",
+  "block.brbiomesmod.schinus_wood": "Schinus Wood",
   "block.brbiomesmod.silk_floss_log": "Silk Floss Log",
   "block.brbiomesmod.silk_floss_white_leaves": "White Silk Floss Leaves",
   "block.brbiomesmod.silk_floss_white_sapling": "White Silk Floss Sapling",
@@ -331,6 +333,8 @@
   "block.brbiomesmod.sharinga_sapling": "Sharinga Sapling",
   "block.brbiomesmod.sharinga_planks": "Sharinga Planks",
   "block.brbiomesmod.sharinga_stairs": "Sharinga Stairs",
+  "block.brbiomesmod.sharinga_slab": "Sharinga Slab",
+  "block.brbiomesmod.sharinga_wood": "Sharinga Wood",
   "block.brbiomesmod.tourmaline_paraiba_block": "Tourmaline-Paraiba Block",
   "block.brbiomesmod.tourmaline_paraiba_ore": "Tourmaline-Paraiba Ore",
   "block.brbiomesmod.turk_turban_cactus": "Turk's Turban Cactus",
@@ -374,7 +378,6 @@
   "block.brbiomesmod.yerba_mate_sapling": "Yerba-mate Sapling",
   "block.brbiomesmod.yerba_mate_wood": "Yerba-mate Wood",
   "block.brbiomesmod.yerba_mate_slab": "Yerba-mate Slab",
-
 
   "itemGroup.BRBCaatingaTab": "BRB: Caatinga",
   "itemGroup.BRBAtlanticForestTab": "BRB: Atlantic Forest",
