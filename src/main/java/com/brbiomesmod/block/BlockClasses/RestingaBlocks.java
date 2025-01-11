@@ -79,6 +79,14 @@ public class RestingaBlocks {
                     .hardnessAndResistance(3f)));
 
 
+    public static final RegistryObject<Block> PITOMBA_LEAVES = registerBlock("pitomba_leaves",
+            ModLeaves::new);
+
+
+    public static final RegistryObject<Block> MONKEY_CAJARANA_LEAVES = registerBlock("monkey_cajarana_leaves",
+            ModLeaves::new);
+
+
     public static final RegistryObject<Block> XANANA = registerBlock("xanana",
             XananaFlower::new);
     public static final RegistryObject<Block> XANANA_BIG = registerBlock("xanana_big",
