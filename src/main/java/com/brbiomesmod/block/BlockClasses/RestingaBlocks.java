@@ -85,6 +85,8 @@ public class RestingaBlocks {
 
     public static final RegistryObject<Block> MONKEY_CAJARANA_LEAVES = registerBlock("monkey_cajarana_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> MONKEY_CAJARANA_LOG = registerBlock("mangaba_log",
+            ModLogs::new);
 
 
     public static final RegistryObject<Block> XANANA = registerBlock("xanana",
