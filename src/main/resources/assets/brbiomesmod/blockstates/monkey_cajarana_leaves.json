@@ -1,8 +1,10 @@
 {
   "variants":{
     "":[
-      {"model": "brbiomesmod:block/monkey_cajarana_leaves"},
-      {"model": "brbiomesmod:block/monkey_cajarana_fruiting_leaves"}
+      {"model": "brbiomesmod:block/monkey_cajarana_leaves",
+        "weight": 3},
+      {"model": "brbiomesmod:block/monkey_cajarana_fruiting_leaves",
+        "weight": 1}
     ]
   }
 }

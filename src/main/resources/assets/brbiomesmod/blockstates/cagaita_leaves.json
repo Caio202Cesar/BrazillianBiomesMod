@@ -10,6 +10,6 @@
       {"model": "brbiomesmod:block/cagaita_fruiting_leaves2",
         "weight": 1},
       {"model": "brbiomesmod:block/cagaita_leaves1",
-        "weight": 2}
+        "weight": 1}
     ]
   }}
