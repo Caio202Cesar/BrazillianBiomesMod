@@ -646,8 +646,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
     }
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SHARINGA_TREE.withChance(0.2F),
-                            CUPUACU_TREE.withChance(0.1F), CAMU_CAMU_TREE.withChance(0.2F)), KAPOK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(KAPOK_TREE.withChance(0.4F),
+                            CUPUACU_TREE.withChance(0.1F), CAMU_CAMU_TREE.withChance(0.2F)), SHARINGA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> BRAZILNUT_TREES = register("brazilnut_trees",
