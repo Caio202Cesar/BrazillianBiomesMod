@@ -5,6 +5,8 @@
         "weight": 6},
       {"model": "brbiomesmod:block/sapucaia_flowering_leaves",
         "weight": 3},
+      {"model": "brbiomesmod:block/sapucaia_green_leaves",
+        "weight": 2},
       {"model": "brbiomesmod:block/sapucaia_fruiting_leaves",
         "weight": 1}
     ]
