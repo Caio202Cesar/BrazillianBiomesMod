@@ -33,7 +33,9 @@ public class ModFoods extends Foods {
     public static final Food MANGABA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food JABUTICABA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food TURK_TURBAN_BERRIES = (new Food.Builder()).hunger(1).saturation(0.1F).build();
-    public static final Food CAGAITA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+    public static final Food CAGAITA = (new Food.Builder()).hunger(2).saturation(0.1F)
+            .effect(new EffectInstance(Effects.HUNGER, 300, 2), 1.0F)
+            .effect(new EffectInstance(Effects.NAUSEA, 300, 0), 1.0F).build();
     public static final Food CECROPIA_FRUITS = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food BACURI = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food CAMU_CAMU_FRUITS = (new Food.Builder()).hunger(2).saturation(0.1F).build();
