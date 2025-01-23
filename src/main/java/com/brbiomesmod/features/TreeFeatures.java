@@ -641,6 +641,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState SAPUCAIA_LOG = AtlanticForestBlocks.SAPUCAIA_LOG.get().getDefaultState();
         protected static final BlockState SAPUCAIA_LEAVES = AtlanticForestBlocks.SAPUCAIA_LEAVES.get().getDefaultState();
 
+        protected static final BlockState MONKEY_CAJARANA_LOG = RestingaBlocks.MONKEY_CAJARANA_LOG.get().getDefaultState();
+        protected static final BlockState MONKEY_CAJARANA_LEAVES = RestingaBlocks.MONKEY_CAJARANA_LEAVES.get().getDefaultState();
+
         protected static final BlockState PODZOL = Blocks.PODZOL.getDefaultState();
 
     }
