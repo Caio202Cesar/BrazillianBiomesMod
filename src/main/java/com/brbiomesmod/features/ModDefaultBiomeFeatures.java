@@ -89,6 +89,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withPinkPeeperTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PINK_PEEPER_TREES);
     }
+    public static void withScrubPinkPeeperTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SCRUB_PINK_PEEPER_TREES);
+    }
     public static void withCassavaPlants(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_CASSAVA_PLANT);
     }

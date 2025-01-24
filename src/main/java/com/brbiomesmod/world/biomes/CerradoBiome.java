@@ -53,6 +53,8 @@ public class CerradoBiome {
         ModDefaultBiomeFeatures.withSavannaTrumpetTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCerradoFruitTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCerradoTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withScrubPinkPeeperTrees(biomegenerationsettings$builder);
+
 
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
                 .temperature(1.0F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
