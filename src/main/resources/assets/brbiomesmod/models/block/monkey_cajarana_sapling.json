@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/monkey_cajarana_sapling",
+    "particle": "brbiomesmod:block/monkey_cajarana_sapling"
+  }
+}

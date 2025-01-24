@@ -4,6 +4,7 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
 import com.brbiomesmod.block.Saplings.CashewSapling;
 import com.brbiomesmod.block.Saplings.MangabaSapling;
+import com.brbiomesmod.block.Saplings.MonkeyCajaranaSapling;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
@@ -87,6 +88,8 @@ public class RestingaBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> MONKEY_CAJARANA_LOG = registerBlock("monkey_cajarana_log",
             ModLogs::new);
+    public static final RegistryObject<Block> MONKEY_CAJARANA_SAPLING = registerBlock("monkey_cajarana_sapling",
+            MonkeyCajaranaSapling::new);
 
 
     public static final RegistryObject<Block> XANANA = registerBlock("xanana",
