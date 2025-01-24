@@ -32,6 +32,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withForestTrumpetTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.FOREST_TRUMPET_TREES);
     }
+    public static void withRestingaTrumpetTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.RESTINGA_TRUMPET_TREES);
+    }
     public static void withMonkeyCajaranaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.MONKEY_CAJARANA_TREES);
     }
