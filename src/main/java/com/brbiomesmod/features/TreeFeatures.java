@@ -517,6 +517,20 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(5, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Monkey Cajarana
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MONKEY_CAJARANA_TREE1 = register("monkey_cajarana1",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MONKEY_CAJARANA_LOG),
+                    new SimpleBlockStateProvider(States.MONKEY_CAJARANA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MONKEY_CAJARANA_TREE2 = register("monkey_cajarana2",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MONKEY_CAJARANA_LOG),
+                    new SimpleBlockStateProvider(States.MONKEY_CAJARANA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
 
     public static final class States {
 
@@ -719,6 +733,16 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.2F),
                             CECROPIA_TREE.withChance(0.2F)), CASHEW_SHRUB)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.1F, 0))));
+
+    public static final ConfiguredFeature<?, ?> MONKEY_CAJARANA_TREES = register("monkey_cajarana_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MONKEY_CAJARANA_TREE2.withChance(0.1F)),
+                    MONKEY_CAJARANA_TREE1)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
+
+    public static final ConfiguredFeature<?, ?> BEACH_PEPPER_TREES = register("beach_pepper_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_PEPPER_BIG_TREE.withChance(0.7F)),
+                    BRAZILLIAN_PEPPER_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> PITANGA_TREES = register("pitanga_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_PITANGA_TREE.withChance(0.02F)),
