@@ -789,8 +789,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_UPPER_TREES = register("atlantic_forest_upper_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_PEROBA_TREE.withChance(0.3F),
-                            JEQUITIBA_TREE.withChance(0.1F), SAPUCAIA_TREE.withChance(0.01F)), BRAZILLIAN_ROSEWOOD_TREE))
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                            JEQUITIBA_TREE.withChance(0.1F), BRAZILLIAN_SASSAFRAS_TREE.withChance(0.2F), SAPUCAIA_TREE.withChance(0.07F)),
+                            BRAZILLIAN_ROSEWOOD_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(11, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> CERRADO_FRUIT_TREES = register("cerrado_fruit_trees",
