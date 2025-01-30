@@ -87,7 +87,7 @@ public class ModItems {
     public static final RegistryObject<Item> CUPUACU = ITEMS.register("cupuacu",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CUPUACU)));
     public static final RegistryObject<Item> CUPUACU_CREAM = ITEMS.register("cupuacu_cream",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CUPUACU)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CUPUACU_CREAM)));
 
     public static final RegistryObject<Item> WOLF_APPLE = ITEMS.register("wolf_apple",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.WOLF_APPLE)));
