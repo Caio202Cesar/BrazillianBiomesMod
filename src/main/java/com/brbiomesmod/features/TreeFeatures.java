@@ -795,16 +795,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     URUGUAYAN_PEPPER_BUSH)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(1, 0.08F, 1))));
 
-    public static final ConfiguredFeature<?, ?> FOREST_CECROPIA_TREES = register("cecropia_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.4F)),
-                    SILVER_CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(2, 0.0F, 0))));
-
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_UPPER_TREES = register("atlantic_forest_upper_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PINK_PEROBA_TREE.withChance(0.3F),
-                            JEQUITIBA_TREE.withChance(0.1F), BRAZILLIAN_SASSAFRAS_TREE.withChance(0.2F), SAPUCAIA_TREE.withChance(0.07F)),
-                            BRAZILLIAN_ROSEWOOD_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                            .configure(new AtSurfaceWithExtraConfig(11, 0.1F, 1))));
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.1F),
+                    JEQUITIBA_TREE.withChance(0.1F), BRAZILLIAN_SASSAFRAS_TREE.withChance(0.4F), SILVER_CECROPIA_TREE.withChance(0.1F),
+                    SAPUCAIA_TREE.withChance(0.089F), BRAZILLIAN_ROSEWOOD_TREE.withChance(0.3F)), PINK_PEROBA_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                            .configure(new AtSurfaceWithExtraConfig(12, 0.0F, 1))));
 
     public static final ConfiguredFeature<?, ?> CERRADO_FRUIT_TREES = register("cerrado_fruit_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.2F),

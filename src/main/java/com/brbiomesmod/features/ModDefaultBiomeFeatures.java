@@ -80,9 +80,6 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withBrazilwoodTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BRAZILWOOD_TREES);
     }
-    public static void withForestCecropiaTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.FOREST_CECROPIA_TREES);
-    }
     public static void withAtlanticForestUpperTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ATLANTIC_FOREST_UPPER_TREES);
     }
