@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "ab",
+    "c "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:bowl"
+    },
+    "b": {
+      "item": "brbiomesmod:cupuacu"
+    },
+    "c": {
+      "item": "minecraft:ice"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:cupuacu_cream",
+    "count": 1
+  }
+}
