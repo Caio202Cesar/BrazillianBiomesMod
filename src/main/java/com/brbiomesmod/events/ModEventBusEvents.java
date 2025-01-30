@@ -20,6 +20,8 @@ public class ModEventBusEvents {
         event.getRegistry().registerAll(
                 new CalabashSeedsAdditionModifier.Serializer().setRegistryName
                         (new ResourceLocation(BrazillianBiomesMod.MOD_ID,"calabash_seeds_from_grass")),
+                new CalabashSeedsAdditionModifier.Serializer().setRegistryName
+                        (new ResourceLocation(BrazillianBiomesMod.MOD_ID,"calabash_seeds_from_tall_grass")),
                 new CalabashSeedsStructureAdditionModifier.Serializer().setRegistryName
                         (new ResourceLocation(BrazillianBiomesMod.MOD_ID,"calabash_seeds_in_abandoned_mineshaft")),
                 new CalabashSeedsStructureAdditionModifier.Serializer().setRegistryName

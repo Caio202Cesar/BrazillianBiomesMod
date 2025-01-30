@@ -15,7 +15,7 @@
     },
     {
       "condition": "block_state_property",
-      "block": "minecraft:grass"
+      "block": "minecraft:tall_grass"
     }
   ],
   "addition": "brbiomesmod:calabash_seeds"
