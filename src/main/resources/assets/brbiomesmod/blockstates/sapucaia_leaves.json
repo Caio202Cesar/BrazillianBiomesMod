@@ -2,12 +2,12 @@
   "variants":{
     "":[
       {"model": "brbiomesmod:block/sapucaia_leaves",
-        "weight": 6},
+        "weight": 2},
       {"model": "brbiomesmod:block/sapucaia_flowering_leaves",
         "weight": 3},
       {"model": "brbiomesmod:block/sapucaia_green_leaves",
-        "weight": 2},
+        "weight": 6},
       {"model": "brbiomesmod:block/sapucaia_fruiting_leaves",
-        "weight": 1}
+        "weight": 2}
     ]
   }}
