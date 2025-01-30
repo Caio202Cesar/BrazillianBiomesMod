@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "brbiomesmod:block/kapok_leaves"
-    }
+    "":[
+      {"model": "brbiomesmod:block/kapok_leaves",
+        "weight": 7},
+      {"model": "brbiomesmod:block/kapok_fruiting_leaves",
+        "weight": 2}
+    ]
   }
 }
