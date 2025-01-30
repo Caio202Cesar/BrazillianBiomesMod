@@ -2,7 +2,10 @@ package com.brbiomesmod.block.Saplings;
 
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import com.brbiomesmod.features.TreeFeatures;
-import net.minecraft.block.*;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -16,15 +19,15 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Random;
 
-public class YellowIpeSapling extends SaplingBlock {
-    public YellowIpeSapling() {
-        super(new YellowIpeTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class ApricotIpeSapling extends SaplingBlock {
+    public ApricotIpeSapling() {
+        super(new ApricotIpeTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.YELLOW_IPE_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.APRICOT_IPE_SAPLING.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -35,13 +38,13 @@ public class YellowIpeSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class YellowIpeTree extends Tree {
+    private static class ApricotIpeTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 8) {
-                return TreeFeatures.YELLOW_IPE_TREE;
+                return TreeFeatures.APRICOT_IPE_TREE;
             } else {
-                return TreeFeatures.YELLOW_IPE_FANCY_TREE;
+                return TreeFeatures.APRICOT_IPE_FANCY_TREE;
             }
         }
     }
