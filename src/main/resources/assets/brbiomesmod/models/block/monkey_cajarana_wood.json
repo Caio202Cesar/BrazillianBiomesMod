@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/monkey_cajarana_bark",
+    "side": "brbiomesmod:block/monkey_cajarana_bark"
+  }
+}

@@ -88,8 +88,24 @@ public class RestingaBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> MONKEY_CAJARANA_LOG = registerBlock("monkey_cajarana_log",
             ModLogs::new);
+    public static final RegistryObject<Block> MONKEY_CAJARANA_WOOD = registerBlock("monkey_cajarana_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> MONKEY_CAJARANA_SAPLING = registerBlock("monkey_cajarana_sapling",
             MonkeyCajaranaSapling::new);
+    public static final RegistryObject<Block> MONKEY_CAJARANA_PLANKS = registerBlock("monkey_cajarana_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> MONKEY_CAJARANA_SLAB = registerBlock("monkey_cajarana_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MONKEY_CAJARANA_STAIRS = registerBlock("monkey_cajarana_stairs",
+            () -> new StairsBlock(() -> MONKEY_CAJARANA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> MONKEY_CAJARANA_FENCE = registerBlock("monkey_cajarana_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MONKEY_CAJARANA_FENCE_GATE = registerBlock("monkey_cajarana_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     public static final RegistryObject<Block> XANANA = registerBlock("xanana",

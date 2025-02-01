@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:monkey_cajarana_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:monkey_cajarana_planks",
+    "count": 4
+  }
+}
