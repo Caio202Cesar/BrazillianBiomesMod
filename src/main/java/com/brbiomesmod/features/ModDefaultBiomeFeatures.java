@@ -56,8 +56,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withXaximPlant(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_XAXIM_PLANT);
     }
-    public static void withFeijoaShrub(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.FEIJOA_SHRUB);
+    public static void withAraucariaPlateauMyrtaceae(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ARAUCARIA_PLATEAU_MYRTACEAE);
     }
     public static void withCaatingaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CAATINGA_TREES);
