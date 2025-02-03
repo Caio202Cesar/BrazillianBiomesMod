@@ -765,7 +765,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.1F),
                             CECROPIA_TREE.withChance(0.2F), MONKEY_CAJARANA_TREE1.withChance(0.1F), MONKEY_CAJARANA_TREE2.withChance(0.2F)), CASHEW_SHRUB))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                            .configure(new AtSurfaceWithExtraConfig(12, 0.1F, 0))));
+                            .configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> BEACH_PEPPER_TREES = register("beach_pepper_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_PEPPER_BIG_TREE.withChance(0.2F),
