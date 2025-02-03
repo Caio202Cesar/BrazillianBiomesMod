@@ -705,7 +705,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PITANGA_TREE.withChance(0.1F),
                     BLACK_PITANGA_TREE.withChance(0.02F), FEIJOA_SHRUB.withChance(0.7F), RIO_GRANDE_CHERRY_TREE.withChance(0.5F)),
                     RIO_GRANDE_CHERRY_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(3, 0.0F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> LOPHANTERA_TREES = register("lophantera_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOPHANTERA_TREE.withChance(0.5F)),
