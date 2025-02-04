@@ -66,7 +66,7 @@ private static Biome makeAraucariaPlateauBiome(final Supplier<ConfiguredSurfaceB
 
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
-            .temperature(0.7F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
+            .temperature(0.8F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                     .setWaterFogColor(993300).withSkyColor(12966647).withFoliageColor(8293460)
                     .withGrassColor(8762696).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
