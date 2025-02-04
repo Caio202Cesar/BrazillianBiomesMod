@@ -36,6 +36,10 @@ private static Biome makeAraucariaPlateauBiome(final Supplier<ConfiguredSurfaceB
     DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
     mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
             new MobSpawnInfo.Spawners(EntityType.PARROT, 100, 7, 10));
+    mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
+            new MobSpawnInfo.Spawners(EntityType.BAT, 70, 2, 10));
+    mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
+            new MobSpawnInfo.Spawners(EntityType.OCELOT, 40, 1, 4));
 
     BiomeGenerationSettings.Builder biomegenerationsettings$builder =
             (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
