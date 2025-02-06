@@ -27,10 +27,10 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> ARAUCARIA_PLATEAU = BIOMES.register("araucaria_plateau",
-        () -> makeAraucariaPlateauBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 0.4f, 0.2f));
+        () -> makeSavannaPlateauBiome(() -> ConfiguredSurfaceBuilders.MOUNTAIN, 1.5f, 0.025f));
 
 
-private static Biome makeAraucariaPlateauBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+private static Biome makeSavannaPlateauBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
     DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
     DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
