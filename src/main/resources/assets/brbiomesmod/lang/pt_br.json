@@ -47,7 +47,7 @@
   "item.brbiomesmod.tourmaline_paraiba_pickaxe": "Picareta de Turmalina Paraíba",
   "item.brbiomesmod.tourmaline_paraiba_shovel": "Pá de Turmalina Paraíba",
   "item.brbiomesmod.tourmaline_paraiba_sword": "Espada de Turmalina Paraíba",
-
+  "item.brbiomesmod.monkey_cajarana": "Frutas de Cajarana-de-macaco",
 
   "block.brbiomesmod.acai_bunch": "Cacho de Açaí",
   "block.brbiomesmod.acai_frond": "Palha de Açaí",
@@ -280,6 +280,14 @@
   "block.brbiomesmod.mangaba_stairs": "Escadas de Mangabeira",
   "block.brbiomesmod.mangaba_sapling": "Muda de Mangabeira",
   "block.brbiomesmod.mangaba_wood": "Madeira de Mangabeira",
+  "block.brbiomesmod.monkey_cajarana_fence": "Cerca de Cajarana-de-macaco",
+  "block.brbiomesmod.monkey_cajarana_fence_gate": "Portão de Cajarana-de-macaco",
+  "block.brbiomesmod.monkey_cajarana_leaves": "Folhas de Cajarana-de-macaco",
+  "block.brbiomesmod.monkey_cajarana_log": "Tronco de Cajarana-de-macaco",
+  "block.brbiomesmod.monkey_cajarana_planks": "Tábuas de Cajarana-de-macaco",
+  "block.brbiomesmod.monkey_cajarana_stairs": "Escadas de Cajarana-de-macaco",
+  "block.brbiomesmod.monkey_cajarana_sapling": "Muda de Cajarana-de-macaco",
+  "block.brbiomesmod.monkey_cajarana_wood": "Madeira de Cajarana-de-macaco",
   "block.brbiomesmod.parana_pine_fence": "Cerca de Pinheiro-do-Paraná",
   "block.brbiomesmod.parana_pine_fence_gate": "Portão de Pinheiro-do-Paraná",
   "block.brbiomesmod.parana_pine_leaves": "Folhas de Pinheiro-do-Paraná",
