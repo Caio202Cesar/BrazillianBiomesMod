@@ -724,13 +724,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> SAVANNA_TRUMPET_TREES = register("savanna_trumpet_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_IPE_TREE.withChance(0.2F),
-                    PINK_IPE_TREE.withChance(0.3F), PURPLE_IPE_TREE.withChance(0.3F)), YELLOW_IPE_FANCY_TREE))
+                    PINK_IPE_TREE.withChance(0.3F), APRICOT_IPE_FANCY_TREE.withChance(0.00000034F), PURPLE_IPE_TREE.withChance(0.3F)), YELLOW_IPE_FANCY_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> FOREST_TRUMPET_TREES = register("forest_trumpet_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_IPE_TREE.withChance(0.025641026F),
-                            PINK_IPE_TREE.withChance(0.30769232F), YELLOW_IPE_FANCY_TREE.withChance(0.33333334F)), PURPLE_IPE_TREE))
+                            PINK_IPE_TREE.withChance(0.30769232F), APRICOT_IPE_FANCY_TREE.withChance(0.00000034F), YELLOW_IPE_FANCY_TREE.withChance(0.33333334F)), PURPLE_IPE_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(1, 0.01F, 0))));
 
