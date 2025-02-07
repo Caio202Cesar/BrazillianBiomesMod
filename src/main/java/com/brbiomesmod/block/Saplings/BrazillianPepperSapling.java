@@ -41,11 +41,8 @@ public class BrazillianPepperSapling extends SaplingBlock {
     private static class BrazillianPepperTree extends BigTree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 5) {
-                return TreeFeatures.BRAZILLIAN_PEPPER_STOUT_TREE;
-            } else {
-                return TreeFeatures.BRAZILLIAN_PEPPER_TREE;
-            }}
+            return TreeFeatures.BRAZILLIAN_PEPPER_TREE;
+        }
 
         /**
          * Get a {@link ConfiguredFeature} of the huge variant of this tree
@@ -55,7 +52,11 @@ public class BrazillianPepperSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
-            return TreeFeatures.BRAZILLIAN_PEPPER_BIG_TREE;
+            if (rand.nextInt(10) == 8) {
+                return TreeFeatures.BRAZILLIAN_PEPPER_STOUT_TREE;
+            } else {
+                return TreeFeatures.BRAZILLIAN_PEPPER_BIG_TREE;
+            }
         }
     }
 }
