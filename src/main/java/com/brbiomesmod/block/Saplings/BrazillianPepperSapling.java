@@ -3,6 +3,7 @@ package com.brbiomesmod.block.Saplings;
 import com.brbiomesmod.block.BlockClasses.PampasBlocks;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -14,6 +15,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 public class BrazillianPepperSapling extends SaplingBlock {
@@ -36,7 +38,7 @@ public class BrazillianPepperSapling extends SaplingBlock {
     }
 
 
-    private static class BrazillianPepperTree extends Tree {
+    private static class BrazillianPepperTree extends BigTree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 5) {
@@ -44,6 +46,17 @@ public class BrazillianPepperSapling extends SaplingBlock {
             } else {
                 return TreeFeatures.BRAZILLIAN_PEPPER_TREE;
             }}
+
+        /**
+         * Get a {@link ConfiguredFeature} of the huge variant of this tree
+         *
+         * @param rand
+         */
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            return TreeFeatures.BRAZILLIAN_PEPPER_BIG_TREE;
+        }
     }
 }
 
