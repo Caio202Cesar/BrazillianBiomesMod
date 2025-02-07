@@ -1,6 +1,7 @@
 package com.brbiomesmod.events;
 
 import com.brbiomesmod.BrazillianBiomesMod;
+import com.brbiomesmod.events.loot.ApricotIpeStructureAdditionModifier;
 import com.brbiomesmod.events.loot.CalabashSeedsAdditionModifier;
 import com.brbiomesmod.events.loot.CalabashSeedsStructureAdditionModifier;
 import com.brbiomesmod.events.loot.MateCupStructureAdditionModifier;
@@ -30,12 +31,18 @@ public class ModEventBusEvents {
                         (new ResourceLocation(BrazillianBiomesMod.MOD_ID,"calabash_seeds_in_stronghold")),
                 new MateCupStructureAdditionModifier.Serializer().setRegistryName
                         (new ResourceLocation(BrazillianBiomesMod.MOD_ID,"mate_cup_in_bonus_chest")),
-                new CalabashSeedsStructureAdditionModifier.Serializer().setRegistryName
+                new MateCupStructureAdditionModifier.Serializer().setRegistryName
                         (new ResourceLocation(BrazillianBiomesMod.MOD_ID,"mate_cup_in_abandoned_mineshaft")),
-                new CalabashSeedsStructureAdditionModifier.Serializer().setRegistryName
+                new MateCupStructureAdditionModifier.Serializer().setRegistryName
                         (new ResourceLocation(BrazillianBiomesMod.MOD_ID,"mate_cup_in_dungeon")),
-                new CalabashSeedsStructureAdditionModifier.Serializer().setRegistryName
-                        (new ResourceLocation(BrazillianBiomesMod.MOD_ID,"mate_cup_in_stronghold"))
+                new MateCupStructureAdditionModifier.Serializer().setRegistryName
+                        (new ResourceLocation(BrazillianBiomesMod.MOD_ID,"mate_cup_in_stronghold")),
+                new ApricotIpeStructureAdditionModifier.Serializer().setRegistryName
+                        (new ResourceLocation(BrazillianBiomesMod.MOD_ID,"apricot_ipe_sapling_in_abandoned_mineshaft")),
+                new ApricotIpeStructureAdditionModifier.Serializer().setRegistryName
+                        (new ResourceLocation(BrazillianBiomesMod.MOD_ID,"apricot_ipe_sapling_in_dungeon")),
+                new ApricotIpeStructureAdditionModifier.Serializer().setRegistryName
+                        (new ResourceLocation(BrazillianBiomesMod.MOD_ID,"apricot_ipe_sapling_in_stronghold"))
         );
     }
 }
