@@ -52,10 +52,10 @@ public class BrazillianPepperSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
-            if (rand.nextInt(10) == 8) {
-                return TreeFeatures.BRAZILLIAN_PEPPER_STOUT_TREE;
-            } else {
+            if (rand.nextInt(10) == 5) {
                 return TreeFeatures.BRAZILLIAN_PEPPER_BIG_TREE;
+            } else {
+                return TreeFeatures.BRAZILLIAN_PEPPER_STOUT_TREE;
             }
         }
     }
