@@ -28,6 +28,8 @@ public class OrchidPlant extends BushBlock {
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.CATTLEYA_PURPURATA.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.CATTLEYA_LADY_ACKLAND.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AraucariaPlateauBlocks.CATTLEYA_COCCINEA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_CATTLEYA_PURPURATA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_CATTLEYA_LADY_ACKLAND.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AraucariaPlateauBlocks.POTTED_CATTLEYA_COCCINEA.get(), RenderType.getCutout());
 
     }
