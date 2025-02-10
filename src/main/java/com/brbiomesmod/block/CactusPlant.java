@@ -33,6 +33,7 @@ public class CactusPlant extends BushBlock {
         RenderTypeLookup.setRenderLayer(CaatingaBlocks.TURK_TURBAN_CACTUS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(CaatingaBlocks.TURK_TURBAN_FRUITING_CACTUS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(CaatingaBlocks.POTTED_TURK_TURBAN_CACTUS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(CaatingaBlocks.POTTED_TURK_TURBAN_FRUITING_CACTUS.get(), RenderType.getCutout());
 
     }
 

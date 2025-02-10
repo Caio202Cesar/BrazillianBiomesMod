@@ -1,6 +1,9 @@
 {
   "replace": false,
   "entries": [
+    "brbiomesmod:apricot_ipe_sapling_in_abandoned_mineshaft",
+    "brbiomesmod:apricot_ipe_sapling_in_dungeon",
+    "brbiomesmod:apricot_ipe_sapling_in_stronghold",
     "brbiomesmod:mate_cup_in_dungeon",
     "brbiomesmod:mate_cup_in_abandoned_mineshaft",
     "brbiomesmod:mate_cup_in_stronghold",
