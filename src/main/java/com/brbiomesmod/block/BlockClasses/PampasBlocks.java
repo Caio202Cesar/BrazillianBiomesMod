@@ -9,6 +9,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -121,13 +122,16 @@ public class PampasBlocks {
 
 
     public static final RegistryObject<Block> MACELA = registerBlock("macela",
-            PampasPlant::new);
+            () -> new FlowerBlock(Effects.REGENERATION, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
+
     public static final RegistryObject<Block> ASPILIA_MONTEVIDENSIS = registerBlock("aspilia_montevidensis",
-            PampasPlant::new);
+            () -> new FlowerBlock(Effects.JUMP_BOOST, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
+
     public static final RegistryObject<Block> MANDEVILLA_COCCINEA = registerBlock("mandevilla_coccinea",
-            PampasPlant::new);
+            () -> new FlowerBlock(Effects.REGENERATION, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
+
     public static final RegistryObject<Block> VELAME_OF_RIO_GRANDE = registerBlock("velame_of_rio_grande",
-            PampasPlant::new);
+            () -> new FlowerBlock(Effects.BLINDNESS, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
 
 
     public static final  RegistryObject<Block> CALABASH_CROP = BLOCKS.register("calabash_crop",
