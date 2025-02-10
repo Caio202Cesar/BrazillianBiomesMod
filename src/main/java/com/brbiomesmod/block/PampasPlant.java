@@ -16,7 +16,6 @@ import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
 
 public class PampasPlant extends BushBlock {
-
     public PampasPlant() {
         super(Properties.from(Blocks.DANDELION).tickRandomly().doesNotBlockMovement().notSolid()
                 .zeroHardnessAndResistance().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
@@ -28,6 +27,10 @@ public class PampasPlant extends BushBlock {
         RenderTypeLookup.setRenderLayer(PampasBlocks.ASPILIA_MONTEVIDENSIS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(PampasBlocks.MANDEVILLA_COCCINEA.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(PampasBlocks.VELAME_OF_RIO_GRANDE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PampasBlocks.POTTED_MACELA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PampasBlocks.POTTED_ASPILIA_MONTEVIDENSIS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PampasBlocks.POTTED_MANDEVILLA_COCCINEA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PampasBlocks.POTTED_VELAME_OF_RIO_GRANDE.get(), RenderType.getCutout());
 
     }
 
