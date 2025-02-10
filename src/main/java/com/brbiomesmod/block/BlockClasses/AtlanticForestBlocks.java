@@ -343,13 +343,13 @@ public class AtlanticForestBlocks {
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_CATTLEYA_PURPURATA = BLOCKS.register("potted_cattleya_purpurata",
             () -> new FlowerPotBlock(AtlanticForestBlocks.CATTLEYA_PURPURATA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance()));
+                    .zeroHardnessAndResistance().notSolid()));
     public static final RegistryObject<Block> CATTLEYA_LADY_ACKLAND = registerBlock("cattleya_lady_ackland",
             () -> new FlowerBlock(Effects.NIGHT_VISION, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_CATTLEYA_LADY_ACKLAND = BLOCKS.register("potted_cattleya_lady_ackland",
             () -> new FlowerPotBlock(AtlanticForestBlocks.CATTLEYA_LADY_ACKLAND.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance()));
+                    .zeroHardnessAndResistance().notSolid()));
 
 
 

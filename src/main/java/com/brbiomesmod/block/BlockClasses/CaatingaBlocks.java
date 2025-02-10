@@ -111,6 +111,10 @@ public class CaatingaBlocks {
             CactusPlant::new);
     public static final RegistryObject<Block> TURK_TURBAN_FRUITING_CACTUS = registerBlock("turk_turban_fruiting_cactus",
             CactusPlant::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_TURK_TURBAN_CACTUS = BLOCKS.register("potted_turk_turban_cactus",
+            () -> new FlowerPotBlock(CaatingaBlocks.TURK_TURBAN_CACTUS.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
 
 
     public static final RegistryObject<Block> TOURMALINE_PARAIBA_ORE = registerBlock("tourmaline_paraiba_ore",
@@ -119,6 +123,7 @@ public class CaatingaBlocks {
     public static final RegistryObject<Block> TOURMALINE_PARAIBA_BLOCK = registerBlock("tourmaline_paraiba_block",
             () -> new Block(AbstractBlock.Properties.create(Material.IRON).harvestLevel(2).harvestTool(ToolType.PICKAXE)
                     .setRequiresTool().hardnessAndResistance(5f)));
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

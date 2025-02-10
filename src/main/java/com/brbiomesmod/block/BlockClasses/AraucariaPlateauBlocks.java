@@ -164,7 +164,7 @@ public class AraucariaPlateauBlocks {
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_CATTLEYA_COCCINEA = BLOCKS.register("potted_cattleya_coccinea",
             () -> new FlowerPotBlock(AraucariaPlateauBlocks.CATTLEYA_COCCINEA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance()));
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
