@@ -80,10 +80,6 @@ public class RestingaBlocks {
                     .hardnessAndResistance(3f)));
 
 
-    public static final RegistryObject<Block> PITOMBA_LEAVES = registerBlock("pitomba_leaves",
-            ModLeaves::new);
-
-
     public static final RegistryObject<Block> MONKEY_CAJARANA_LEAVES = registerBlock("monkey_cajarana_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> MONKEY_CAJARANA_LOG = registerBlock("monkey_cajarana_log",
@@ -111,20 +107,20 @@ public class RestingaBlocks {
     public static final RegistryObject<Block> XANANA = registerBlock("xanana",
             XananaFlower::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_MACELA = BLOCKS.register("potted_macela",
-            () -> new FlowerPotBlock(PampasBlocks.MACELA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_XANANA = BLOCKS.register("potted_xanana",
+            () -> new FlowerPotBlock(RestingaBlocks.XANANA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
     public static final RegistryObject<Block> XANANA_BIG = registerBlock("xanana_big",
             XananaFlower::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_MACELA = BLOCKS.register("potted_macela",
-            () -> new FlowerPotBlock(PampasBlocks.MACELA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_BIG_XANANA = BLOCKS.register("potted_big_xanana",
+            () -> new FlowerPotBlock(RestingaBlocks.XANANA_BIG.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
     public static final RegistryObject<Block> IPOMAEA_PES_CAPRAE = registerBlock("ipomaea_pes_caprae",
             BeachFlower::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_MACELA = BLOCKS.register("potted_macela",
-            () -> new FlowerPotBlock(PampasBlocks.MACELA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_IPOMAEA_PES_CAPRAE = BLOCKS.register("potted_ipomaea_pes_caprae",
+            () -> new FlowerPotBlock(RestingaBlocks.IPOMAEA_PES_CAPRAE.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
 
