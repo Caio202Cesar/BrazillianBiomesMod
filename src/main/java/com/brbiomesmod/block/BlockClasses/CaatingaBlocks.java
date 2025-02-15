@@ -55,6 +55,10 @@ public class CaatingaBlocks {
     public static final RegistryObject<Block> JUA_FENCE_GATE = registerBlock("jua_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_JUA_SAPLING = BLOCKS.register("potted_jua_sapling",
+            () -> new FlowerPotBlock(CaatingaBlocks.JUA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
 
 
     public static final RegistryObject<Block> BLACK_JUREMA_LOG = registerBlock("black_jurema_log",
@@ -65,14 +69,16 @@ public class CaatingaBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> BLACK_JUREMA_SAPLING = registerBlock("black_jurema_sapling",
             BlackJuremaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BLACK_JUREMA_SAPLING = BLOCKS.register("potted_black_jurema_sapling",
+            () -> new FlowerPotBlock(CaatingaBlocks.BLACK_JUREMA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
 
 
     public static final RegistryObject<Block> UMBU_LOG = registerBlock("umbu_log",
             ModLogs::new);
     public static final RegistryObject<Block> UMBU_WOOD = registerBlock("umbu_wood",
             ModLogs::new);
-    //public static final RegistryObject<Block> UMBU_STRIPPED_LOG = registerBlock("umbu_stripped_log", ModLogs::new);
-    //public static final RegistryObject<Block> UMBU_STRIPPED_WOOD = registerBlock("umbu_stripped_wood", ModLogs::new);
     public static final RegistryObject<Block> UMBU_PLANKS = registerBlock("umbu_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> UMBU_LEAVES = registerBlock("umbu_leaves",
@@ -91,6 +97,10 @@ public class CaatingaBlocks {
     public static final RegistryObject<Block> UMBU_FENCE_GATE = registerBlock("umbu_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_UMBU_SAPLING = BLOCKS.register("potted_umbu_sapling",
+            () -> new FlowerPotBlock(CaatingaBlocks.UMBU_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
 
 
     //public static final RegistryObject<Block> CATINGUEIRA_LOG = registerBlock("catingueira_log", ModLogs::new);
@@ -101,6 +111,11 @@ public class CaatingaBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_SAPLING = registerBlock("silk_floss_white_sapling",
             WhiteSilkFlossSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_WHITE_SILK_FLOSS_SAPLING = BLOCKS.register("potted_silk_floss_white_sapling",
+            () -> new FlowerPotBlock(CaatingaBlocks.WHITE_SILK_FLOSS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
+
 
     public static final RegistryObject<Block> CNIDOSCOLUS_URENS = registerBlock("bull_nettle",
             BullNettlePlant::new);
@@ -114,6 +129,7 @@ public class CaatingaBlocks {
     public static final RegistryObject<Block> POTTED_CNIDOSCOLUS_URENS_FRUITING = BLOCKS.register("potted_bull_nettle_fruiting",
             () -> new FlowerPotBlock(CaatingaBlocks.CNIDOSCOLUS_URENS_FRUITING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
+
 
     public static final RegistryObject<Block> TURK_TURBAN_CACTUS = registerBlock("turk_turban_cactus",
             CactusPlant::new);

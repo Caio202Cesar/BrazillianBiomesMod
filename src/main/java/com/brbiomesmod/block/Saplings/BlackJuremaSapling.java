@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
+import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
 import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
 import com.brbiomesmod.block.CaatingaSand;
 import com.brbiomesmod.features.TreeFeatures;
@@ -28,6 +29,8 @@ public class BlackJuremaSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(CaatingaBlocks.BLACK_JUREMA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(CaatingaBlocks.POTTED_BLACK_JUREMA_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

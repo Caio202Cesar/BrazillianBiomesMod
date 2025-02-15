@@ -26,6 +26,8 @@ public class BacuriSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.BACURI_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.POTTED_BACURI_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

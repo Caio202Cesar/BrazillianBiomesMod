@@ -33,6 +33,11 @@ public class AmazonRainforestBlocks {
             KapokSapling::new);
     public static final RegistryObject<Block> KAPOK_WOOD = registerBlock("kapok_wood",
             ModLogs::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_KAPOK_SAPLING = BLOCKS.register("potted_kapok_sapling",
+            () -> new FlowerPotBlock(AmazonRainforestBlocks.KAPOK_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
 
     public static final RegistryObject<Block> BALSA_LOG = registerBlock("balsa_log",
             ModLogs::new);
@@ -56,6 +61,10 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> BALSA_FENCE_GATE = registerBlock("balsa_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BALSA_SAPLING = BLOCKS.register("potted_balsa_sapling",
+            () -> new FlowerPotBlock(AmazonRainforestBlocks.BALSA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> LOPHANTERA_LOG = registerBlock("lophantera_log",
@@ -80,6 +89,10 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> LOPHANTERA_FENCE_GATE = registerBlock("lophantera_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_LOPHANTERA_SAPLING = BLOCKS.register("potted_lophantera_sapling",
+            () -> new FlowerPotBlock(AmazonRainforestBlocks.LOPHANTERA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     //Cupuacu and Guarana trunk is made of Jungle Log
@@ -87,11 +100,20 @@ public class AmazonRainforestBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> CUPUACU_SAPLING = registerBlock("cupuacu_sapling",
             CupuacuSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CUPUACU_SAPLING = BLOCKS.register("potted_cupuacu_sapling",
+            () -> new FlowerPotBlock(AmazonRainforestBlocks.CUPUACU_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
 
     public static final RegistryObject<Block> GUARANA_LEAVES = registerBlock("guarana_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> GUARANA_SAPLING = registerBlock("guarana_sapling",
             GuaranaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_GUARANA_SAPLING = BLOCKS.register("potted_guarana_sapling",
+            () -> new FlowerPotBlock(AmazonRainforestBlocks.GUARANA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> BRAZILNUT_LOG = registerBlock("brazilnut_log",
@@ -116,12 +138,10 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> BRAZILNUT_FENCE_GATE = registerBlock("brazilnut_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
-
-    //public static final RegistryObject<Block> PALMITO_LOG = registerBlock("palmito_log", ModLogs::new);
-    //public static final RegistryObject<Block> PALMITO = registerBlock("palmito", ModLogs::new);
-    //public static final RegistryObject<Block> ACAI_FROND = registerBlock("acai_frond", ModLeaves::new);
-    //public static final RegistryObject<Block> ACAI_BUNCH = registerBlock("acai_bunch", AcaiBunchBlock::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BRAZILNUT_SAPLING = BLOCKS.register("potted_brazilnut_sapling",
+            () -> new FlowerPotBlock(AmazonRainforestBlocks.BRAZILNUT_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> SHARINGA_LOG = registerBlock("sharinga_log",
@@ -146,6 +166,10 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> SHARINGA_FENCE_GATE = registerBlock("sharinga_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_SHARINGA_SAPLING = BLOCKS.register("potted_sharinga_sapling",
+            () -> new FlowerPotBlock(AmazonRainforestBlocks.SHARINGA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> BACURI_LOG = registerBlock("bacuri_log",
@@ -170,6 +194,10 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> BACURI_FENCE_GATE = registerBlock("bacuri_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BACURI_SAPLING = BLOCKS.register("potted_bacuri_sapling",
+            () -> new FlowerPotBlock(AmazonRainforestBlocks.BACURI_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> CAMU_CAMU_LOG = registerBlock("camu_camu_log",
@@ -194,6 +222,10 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> CAMU_CAMU_FENCE_GATE = registerBlock("camu_camu_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CAMU_CAMU_SAPLING = BLOCKS.register("potted_camu_camu_sapling",
+            () -> new FlowerPotBlock(AmazonRainforestBlocks.CAMU_CAMU_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> CASSAVA_PLANT = registerBlock("cassava_plant",
