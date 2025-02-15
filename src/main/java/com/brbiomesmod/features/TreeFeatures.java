@@ -612,8 +612,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState JUA_LOG = CaatingaBlocks.JUA_LOG.get().getDefaultState();
         protected static final BlockState JUA_LEAVES = CaatingaBlocks.JUA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BRAZILLIAN_SASSAFRAS_LOG = AraucariaPlateauBlocks.BRAZILLIAN_SASSAFRAS_LOG.get().getDefaultState();
-        protected static final BlockState BRAZILLIAN_SASSAFRAS_LEAVES = AraucariaPlateauBlocks.BRAZILLIAN_SASSAFRAS_LEAVES.get().getDefaultState();
+        protected static final BlockState BRAZILLIAN_SASSAFRAS_LOG = AtlanticForestBlocks.BRAZILLIAN_SASSAFRAS_LOG.get().getDefaultState();
+        protected static final BlockState BRAZILLIAN_SASSAFRAS_LEAVES = AtlanticForestBlocks.BRAZILLIAN_SASSAFRAS_LEAVES.get().getDefaultState();
 
         protected static final BlockState UMBU_LOG = CaatingaBlocks.UMBU_LOG.get().getDefaultState();
         protected static final BlockState UMBU_LEAVES = CaatingaBlocks.UMBU_LEAVES.get().getDefaultState();
