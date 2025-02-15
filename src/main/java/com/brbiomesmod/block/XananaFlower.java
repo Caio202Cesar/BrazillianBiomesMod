@@ -17,7 +17,7 @@ import net.minecraftforge.common.ToolType;
 
 public class XananaFlower extends FlowerBlock {
     public XananaFlower() {
-        super(Effects.SPEED, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER));
+        super(Effects.WATER_BREATHING, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER));
     }
 
     @OnlyIn(Dist.CLIENT)

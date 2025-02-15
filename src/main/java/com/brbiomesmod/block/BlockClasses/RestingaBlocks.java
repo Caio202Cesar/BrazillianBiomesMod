@@ -110,10 +110,22 @@ public class RestingaBlocks {
 
     public static final RegistryObject<Block> XANANA = registerBlock("xanana",
             XananaFlower::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_MACELA = BLOCKS.register("potted_macela",
+            () -> new FlowerPotBlock(PampasBlocks.MACELA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     public static final RegistryObject<Block> XANANA_BIG = registerBlock("xanana_big",
             XananaFlower::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_MACELA = BLOCKS.register("potted_macela",
+            () -> new FlowerPotBlock(PampasBlocks.MACELA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
     public static final RegistryObject<Block> IPOMAEA_PES_CAPRAE = registerBlock("ipomaea_pes_caprae",
             BeachFlower::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_MACELA = BLOCKS.register("potted_macela",
+            () -> new FlowerPotBlock(PampasBlocks.MACELA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
