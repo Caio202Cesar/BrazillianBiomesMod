@@ -65,6 +65,22 @@ public class PampasBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> URUGUAYAN_PEPPER_SAPLING = registerBlock("uruguayan_pepper_sapling",
             UruguayanPepperSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BRAZILLIAN_PEPPER_SAPLING = BLOCKS.register("potted_brazillian_pepper_sapling",
+            () -> new FlowerPotBlock(PampasBlocks.BRAZILLIAN_PEPPER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PERUVIAN_PEPPER_SAPLING = BLOCKS.register("potted_peruvian_pepper_sapling",
+            () -> new FlowerPotBlock(PampasBlocks.PERUVIAN_PEPPER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_SILVER_PEPPER_SAPLING = BLOCKS.register("potted_silver_pepper_sapling",
+            () -> new FlowerPotBlock(PampasBlocks.SILVER_PEPPER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_URUGUAYAN_PEPPER_SAPLING = BLOCKS.register("potted_uruguayan_pepper_sapling",
+            () -> new FlowerPotBlock(PampasBlocks.URUGUAYAN_PEPPER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> ALGARROBILLO_LOG = registerBlock("algarrobillo_log",
@@ -89,6 +105,10 @@ public class PampasBlocks {
     public static final RegistryObject<Block> ALGARROBILLO_FENCE_GATE = registerBlock("algarrobillo_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_ALGARROBILLO_SAPLING = BLOCKS.register("potted_algarrobillo_sapling",
+            () -> new FlowerPotBlock(PampasBlocks.ALGARROBILLO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> CAVEN_THORN_LOG = registerBlock("caven_thorn_log",
@@ -99,6 +119,10 @@ public class PampasBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> CAVEN_THORN_SAPLING = registerBlock("caven_thorn_sapling",
             CavenThornSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CAVEN_THORN_SAPLING = BLOCKS.register("potted_caven_thorn_sapling",
+            () -> new FlowerPotBlock(PampasBlocks.CAVEN_THORN_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> COCKSPUR_CORAL_LOG = registerBlock("cockspur_coral_log",
@@ -123,31 +147,40 @@ public class PampasBlocks {
     public static final RegistryObject<Block> COCKSPUR_CORAL_FENCE_GATE = registerBlock("cockspur_coral_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_COCKSPUR_CORAL_SAPLING = BLOCKS.register("potted_cockspur_coral_sapling",
+            () -> new FlowerPotBlock(PampasBlocks.COCKSPUR_CORAL_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
 
     public static final RegistryObject<Block> MACELA = registerBlock("macela",
             () -> new FlowerBlock(Effects.REGENERATION, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
-    public static final RegistryObject<Block> ASPILIA_MONTEVIDENSIS = registerBlock("aspilia_montevidensis",
-            () -> new FlowerBlock(Effects.JUMP_BOOST, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
-    public static final RegistryObject<Block> MANDEVILLA_COCCINEA = registerBlock("mandevilla_coccinea",
-            () -> new FlowerBlock(Effects.REGENERATION, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
-    public static final RegistryObject<Block> VELAME_OF_RIO_GRANDE = registerBlock("velame_of_rio_grande",
-            () -> new FlowerBlock(Effects.BLINDNESS, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_MACELA = BLOCKS.register("potted_macela",
             () -> new FlowerPotBlock(PampasBlocks.MACELA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> ASPILIA_MONTEVIDENSIS = registerBlock("aspilia_montevidensis",
+            () -> new FlowerBlock(Effects.JUMP_BOOST, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_ASPILIA_MONTEVIDENSIS = BLOCKS.register("potted_aspilia_montevidensis",
             () -> new FlowerPotBlock(PampasBlocks.ASPILIA_MONTEVIDENSIS.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> MANDEVILLA_COCCINEA = registerBlock("mandevilla_coccinea",
+            () -> new FlowerBlock(Effects.REGENERATION, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_MANDEVILLA_COCCINEA = BLOCKS.register("potted_mandevilla_coccinea",
             () -> new FlowerPotBlock(PampasBlocks.MANDEVILLA_COCCINEA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> VELAME_OF_RIO_GRANDE = registerBlock("velame_of_rio_grande",
+            () -> new FlowerBlock(Effects.BLINDNESS, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_VELAME_OF_RIO_GRANDE = BLOCKS.register("potted_velame_of_rio_grande",
             () -> new FlowerPotBlock(PampasBlocks.VELAME_OF_RIO_GRANDE.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
 
     public static final  RegistryObject<Block> CALABASH_CROP = BLOCKS.register("calabash_crop",
             () -> new CalabashCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));

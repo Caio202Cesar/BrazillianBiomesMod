@@ -26,6 +26,8 @@ public class CamuCamuSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.CAMU_CAMU_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.POTTED_CAMU_CAMU_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

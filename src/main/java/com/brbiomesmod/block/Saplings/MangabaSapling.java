@@ -26,6 +26,8 @@ public class MangabaSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(RestingaBlocks.MANGABA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RestingaBlocks.POTTED_MANGABA_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

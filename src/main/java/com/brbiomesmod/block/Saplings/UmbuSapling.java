@@ -25,6 +25,8 @@ public class UmbuSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(CaatingaBlocks.UMBU_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(CaatingaBlocks.POTTED_UMBU_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

@@ -25,6 +25,8 @@ public class CashewSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(RestingaBlocks.CASHEW_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RestingaBlocks.POTTED_CASHEW_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

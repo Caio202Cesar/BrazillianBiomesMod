@@ -25,6 +25,8 @@ public class CagaitaSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(CerradoBlocks.CAGAITA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(CerradoBlocks.POTTED_CAGAITA_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

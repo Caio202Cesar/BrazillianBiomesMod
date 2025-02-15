@@ -53,6 +53,11 @@ public class CerradoBlocks {
     public static final RegistryObject<Block> WOLF_APPLE_FENCE_GATE = registerBlock("wolf_apple_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_WOLF_APPLE_SAPLING = BLOCKS.register("potted_wolf_apple_sapling",
+            () -> new FlowerPotBlock(CerradoBlocks.WOLF_APPLE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
+
 
     public static final RegistryObject<Block> BLACK_SUCUPIRA_LOG = registerBlock("black_sucupira_log",
             ModLogs::new);
@@ -76,11 +81,21 @@ public class CerradoBlocks {
     public static final RegistryObject<Block> BLACK_SUCUPIRA_FENCE_GATE = registerBlock("black_sucupira_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BLACK_SUCUPIRA_SAPLING = BLOCKS.register("potted_black_sucupira_sapling",
+            () -> new FlowerPotBlock(CerradoBlocks.BLACK_SUCUPIRA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
+
 
     public static final RegistryObject<Block> CAGAITA_LEAVES = registerBlock("cagaita_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CAGAITA_SAPLING = registerBlock("cagaita_sapling",
             CagaitaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CAGAITA_SAPLING = BLOCKS.register("potted_cagaita_sapling",
+            () -> new FlowerPotBlock(CerradoBlocks.CAGAITA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
+
 
     public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
             SilkFlossLog::new);
@@ -92,6 +107,11 @@ public class CerradoBlocks {
             ModLeaves::new);
     public static final RegistryObject<Block> PINK_SILK_FLOSS_SAPLING = registerBlock("silk_floss_pink_sapling",
             PinkSilkFlossSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PINK_SILK_FLOSS_SAPLING = BLOCKS.register("potted_silk_floss_pink_sapling",
+            () -> new FlowerPotBlock(CerradoBlocks.PINK_SILK_FLOSS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

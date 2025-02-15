@@ -25,6 +25,8 @@ public class BlackSucupiraSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(CerradoBlocks.BLACK_SUCUPIRA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(CerradoBlocks.POTTED_BLACK_SUCUPIRA_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

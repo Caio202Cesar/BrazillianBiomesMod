@@ -51,9 +51,10 @@ public class RestingaBlocks {
     public static final RegistryObject<Block> CASHEW_FENCE_GATE = registerBlock("cashew_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
-    //public static final RegistryObject<Block> CASHEW_STRIPPED_LOG = registerBlock("cashew_stripped_log", ModLogs::new);
-    //public static final RegistryObject<Block> CASHEW_STRIPPED_WOOD = registerBlock("cashew_stripped_wood", ModLogs::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CASHEW_SAPLING = BLOCKS.register("potted_cashew_sapling",
+            () -> new FlowerPotBlock(RestingaBlocks.CASHEW_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> MANGABA_LEAVES = registerBlock("mangaba_leaves",
@@ -78,6 +79,10 @@ public class RestingaBlocks {
     public static final RegistryObject<Block> MANGABA_FENCE_GATE = registerBlock("mangaba_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_MANGABA_SAPLING = BLOCKS.register("potted_mangaba_sapling",
+            () -> new FlowerPotBlock(RestingaBlocks.MANGABA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> MONKEY_CAJARANA_LEAVES = registerBlock("monkey_cajarana_leaves",
@@ -102,6 +107,10 @@ public class RestingaBlocks {
     public static final RegistryObject<Block> MONKEY_CAJARANA_FENCE_GATE = registerBlock("monkey_cajarana_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_MONKEY_CAJARANA_SAPLING = BLOCKS.register("potted_monkey_cajarana_sapling",
+            () -> new FlowerPotBlock(RestingaBlocks.MONKEY_CAJARANA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> XANANA = registerBlock("xanana",

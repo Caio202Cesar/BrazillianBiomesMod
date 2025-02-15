@@ -25,6 +25,8 @@ public class UruguayanPepperSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(PampasBlocks.URUGUAYAN_PEPPER_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PampasBlocks.POTTED_URUGUAYAN_PEPPER_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
