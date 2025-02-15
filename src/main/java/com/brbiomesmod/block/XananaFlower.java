@@ -24,6 +24,8 @@ public class XananaFlower extends FlowerBlock {
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(RestingaBlocks.XANANA.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(RestingaBlocks.XANANA_BIG.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RestingaBlocks.POTTED_XANANA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RestingaBlocks.POTTED_BIG_XANANA.get(), RenderType.getCutout());
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {

@@ -22,6 +22,8 @@ public class BeachFlower extends FlowerBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(RestingaBlocks.IPOMAEA_PES_CAPRAE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(RestingaBlocks.POTTED_IPOMAEA_PES_CAPRAE.get(), RenderType.getCutout());
+
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {

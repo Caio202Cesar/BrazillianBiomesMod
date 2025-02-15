@@ -119,14 +119,6 @@ public class CaatingaBlocks {
             CactusPlant::new);
     public static final RegistryObject<Block> TURK_TURBAN_FRUITING_CACTUS = registerBlock("turk_turban_fruiting_cactus",
             CactusPlant::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_TURK_TURBAN_CACTUS = BLOCKS.register("potted_turk_turban_cactus",
-            () -> new FlowerPotBlock(CaatingaBlocks.TURK_TURBAN_CACTUS.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance()));
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_TURK_TURBAN_FRUITING_CACTUS = BLOCKS.register("potted_turk_turban_fruiting_cactus",
-            () -> new FlowerPotBlock(CaatingaBlocks.TURK_TURBAN_FRUITING_CACTUS.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance()));
 
 
     public static final RegistryObject<Block> TOURMALINE_PARAIBA_ORE = registerBlock("tourmaline_paraiba_ore",

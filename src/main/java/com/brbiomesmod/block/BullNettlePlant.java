@@ -31,6 +31,8 @@ public class BullNettlePlant extends BushBlock {
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(CaatingaBlocks.CNIDOSCOLUS_URENS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(CaatingaBlocks.CNIDOSCOLUS_URENS_FRUITING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(CaatingaBlocks.POTTED_CNIDOSCOLUS_URENS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(CaatingaBlocks.POTTED_CNIDOSCOLUS_URENS_FRUITING.get(), RenderType.getCutout());
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
