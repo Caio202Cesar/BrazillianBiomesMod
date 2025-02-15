@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "brbiomesmod:block/black_sucupira_sapling",
-    "particle": "brbiomesmod:block/black_sucupira_sapling"
-  }
-}

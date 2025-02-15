@@ -106,6 +106,14 @@ public class CaatingaBlocks {
             BullNettlePlant::new);
     public static final RegistryObject<Block> CNIDOSCOLUS_URENS_FRUITING = registerBlock("bull_nettle_fruiting",
             BullNettlePlant::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CNIDOSCOLUS_URENS = BLOCKS.register("potted_bull_nettle",
+            () -> new FlowerPotBlock(CaatingaBlocks.CNIDOSCOLUS_URENS.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CNIDOSCOLUS_URENS_FRUITING = BLOCKS.register("potted_bull_nettle_fruiting",
+            () -> new FlowerPotBlock(CaatingaBlocks.CNIDOSCOLUS_URENS_FRUITING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
 
     public static final RegistryObject<Block> TURK_TURBAN_CACTUS = registerBlock("turk_turban_cactus",
             CactusPlant::new);
