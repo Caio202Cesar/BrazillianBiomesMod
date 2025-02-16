@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "brbiomesmod:block/uruguayan_pepper_sapling"
+      "model": "brbiomesmod:block/potted_uruguayan_pepper_sapling"
     }
   }
 }
