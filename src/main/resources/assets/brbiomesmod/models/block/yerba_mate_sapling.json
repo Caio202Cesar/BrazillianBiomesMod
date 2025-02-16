@@ -1,7 +1,7 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "brbiomesmod:block/mate_sapling",
-    "particle": "brbiomesmod:block/mate_sapling"
+    "cross": "brbiomesmod:block/yerba_mate_sapling",
+    "particle": "brbiomesmod:block/yerba_mate_sapling"
   }
 }
