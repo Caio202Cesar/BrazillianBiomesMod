@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/flower_pot_cross",
   "textures": {
-    "plant": "brbiomesmod:block/turk_turban_fruiting_cactus"
+    "plant": "brbiomesmod:block/algarrabillo_sapling"
   }
 }
+

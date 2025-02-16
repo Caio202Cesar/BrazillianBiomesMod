@@ -1,0 +1,14 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/silver_pepper_sapling",
+    "particle": "brbiomesmod:block/silver_pepper_sapling"
+  }
+}
+
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "brbiomesmod:block/silk_floss_white_sapling"
+  }
+}

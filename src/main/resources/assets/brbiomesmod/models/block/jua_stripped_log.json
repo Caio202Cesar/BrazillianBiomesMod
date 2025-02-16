@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "brbiomesmod:block/jua_stripped_log_middle",
-    "side": "brbiomesmod:block/jua_stripped_bark"
-  }
-}

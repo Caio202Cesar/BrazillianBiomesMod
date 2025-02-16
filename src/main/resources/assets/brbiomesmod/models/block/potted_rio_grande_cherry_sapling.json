@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "brbiomesmod:block/rio_grande_cherry_sapling"
+  }
+}
