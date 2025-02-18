@@ -59,6 +59,8 @@ public class PantanalBiome {
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withSavannaTrumpetTrees(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
+        DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
+
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.SWAMP).depth(depth).scale(scale)
                 .temperature(0.9F).downfall(0.7F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4757429)
