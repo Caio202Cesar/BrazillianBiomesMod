@@ -32,8 +32,6 @@ public class PampasBiome {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
-        mobspawninfo$builder.withSpawner(EntityClassification.MONSTER,
-                new MobSpawnInfo.Spawners(EntityType.HOGLIN, 0, 2, 4));
         mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
                 new MobSpawnInfo.Spawners(EntityType.OCELOT, 100, 7, 10));
 

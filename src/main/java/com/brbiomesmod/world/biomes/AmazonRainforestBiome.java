@@ -33,8 +33,8 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
     DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
     DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
-    mobspawninfo$builder.withSpawner(EntityClassification.MONSTER,
-            new MobSpawnInfo.Spawners(EntityType.HOGLIN, 2, 7, 8));
+    mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
+            new MobSpawnInfo.Spawners(EntityType.BAT, 70, 2, 10));
     mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
             new MobSpawnInfo.Spawners(EntityType.PARROT, 100, 7, 10));
     mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
