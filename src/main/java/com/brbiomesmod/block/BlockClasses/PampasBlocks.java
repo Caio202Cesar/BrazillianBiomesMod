@@ -2,6 +2,7 @@ package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
+import com.brbiomesmod.block.Custom.Leaves.PinkPeeperLeaves;
 import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -50,19 +51,19 @@ public class PampasBlocks {
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> BRAZILLIAN_PEPPER_LEAVES = registerBlock("brazillian_pepper_leaves",
-            ModLeaves::new);
+            PinkPeeperLeaves::new);
     public static final RegistryObject<Block> PERUVIAN_PEPPER_LEAVES = registerBlock("peruvian_pepper_leaves",
-            ModLeaves::new);
+            PinkPeeperLeaves::new);
     public static final RegistryObject<Block> BRAZILLIAN_PEPPER_SAPLING = registerBlock("brazillian_pepper_sapling",
             BrazillianPepperSapling::new);
     public static final RegistryObject<Block> PERUVIAN_PEPPER_SAPLING = registerBlock("peruvian_pepper_sapling",
             PeruvianPepperSapling::new);
     public static final RegistryObject<Block> SILVER_PEPPER_LEAVES = registerBlock("silver_pepper_leaves",
-            ModLeaves::new);
+            PinkPeeperLeaves::new);
     public static final RegistryObject<Block> SILVER_PEPPER_SAPLING = registerBlock("silver_pepper_sapling",
             SilverPepperSapling::new);
     public static final RegistryObject<Block> URUGUAYAN_PEPPER_LEAVES = registerBlock("uruguayan_pepper_leaves",
-            ModLeaves::new);
+            PinkPeeperLeaves::new);
     public static final RegistryObject<Block> URUGUAYAN_PEPPER_SAPLING = registerBlock("uruguayan_pepper_sapling",
             UruguayanPepperSapling::new);
     @SuppressWarnings("deprecation")

@@ -2,6 +2,11 @@ package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
+import com.brbiomesmod.block.Custom.JabuticabaFruitingLog;
+import com.brbiomesmod.block.Custom.Leaves.BlackPitangaLeaves;
+import com.brbiomesmod.block.Custom.Leaves.CambuciLeaves;
+import com.brbiomesmod.block.Custom.Leaves.PitangaLeaves;
+import com.brbiomesmod.block.Custom.Leaves.SapucaiaLeaves;
 import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -63,7 +68,7 @@ public class AtlanticForestBlocks {
     public static final RegistryObject<Block> JABUTICABA_FLOWERING_LOG = registerBlock("jabuticaba_flowering_log",
             ModLogs::new);
     public static final RegistryObject<Block> JABUTICABA_FRUITING_LOG = registerBlock("jabuticaba_fruiting_log",
-            ModLogs::new);
+            JabuticabaFruitingLog::new);
     public static final RegistryObject<Block> JABUTICABA_LEAVES = registerBlock("jabuticaba_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> JABUTICABA_PLANKS = registerBlock("jabuticaba_planks",
@@ -95,7 +100,7 @@ public class AtlanticForestBlocks {
     public static final RegistryObject<Block> CAMBUCI_PLANKS = registerBlock("cambuci_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> CAMBUCI_LEAVES = registerBlock("cambuci_leaves",
-            ModLeaves::new);
+            CambuciLeaves::new);
     public static final RegistryObject<Block> CAMBUCI_SAPLING = registerBlock("cambuci_sapling",
             CambuciSapling::new);
     public static final RegistryObject<Block> CAMBUCI_SLAB = registerBlock("cambuci_slab",
@@ -273,9 +278,9 @@ public class AtlanticForestBlocks {
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> PITANGA_LEAVES = registerBlock("pitanga_leaves",
-            ModLeaves::new);
+            PitangaLeaves::new);
     public static final RegistryObject<Block> BLACK_PITANGA_LEAVES = registerBlock("pitanga_black_leaves",
-            ModLeaves::new);
+            BlackPitangaLeaves::new);
     public static final RegistryObject<Block> PITANGA_SAPLING = registerBlock("pitanga_sapling",
             PitangaSapling::new);
     @SuppressWarnings("deprecation")
@@ -375,7 +380,7 @@ public class AtlanticForestBlocks {
     public static final RegistryObject<Block> SAPUCAIA_PLANKS = registerBlock("sapucaia_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> SAPUCAIA_LEAVES = registerBlock("sapucaia_leaves",
-            ModLeaves::new);
+            SapucaiaLeaves::new);
     public static final RegistryObject<Block> SAPUCAIA_SAPLING = registerBlock("sapucaia_sapling",
             SapucaiaSapling::new);
     public static final RegistryObject<Block> SAPUCAIA_SLAB = registerBlock("sapucaia_slab",

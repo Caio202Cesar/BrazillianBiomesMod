@@ -2,6 +2,7 @@ package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
+import com.brbiomesmod.block.Custom.Leaves.*;
 import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -28,7 +29,7 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> KAPOK_LOG = registerBlock("kapok_log",
             ModLogs::new);
     public static final RegistryObject<Block> KAPOK_LEAVES = registerBlock("kapok_leaves",
-            ModLeaves::new);
+            KapokLeaves::new);
     public static final RegistryObject<Block> KAPOK_SAPLING = registerBlock("kapok_sapling",
             KapokSapling::new);
     public static final RegistryObject<Block> KAPOK_WOOD = registerBlock("kapok_wood",
@@ -97,7 +98,7 @@ public class AmazonRainforestBlocks {
 
     //Cupuacu and Guarana trunk is made of Jungle Log
     public static final RegistryObject<Block> CUPUACU_LEAVES = registerBlock("cupuacu_leaves",
-            ModLeaves::new);
+            CupuacuLeaves::new);
     public static final RegistryObject<Block> CUPUACU_SAPLING = registerBlock("cupuacu_sapling",
             CupuacuSapling::new);
     @SuppressWarnings("deprecation")
@@ -107,7 +108,7 @@ public class AmazonRainforestBlocks {
 
 
     public static final RegistryObject<Block> GUARANA_LEAVES = registerBlock("guarana_leaves",
-            ModLeaves::new);
+            GuaranaLeaves::new);
     public static final RegistryObject<Block> GUARANA_SAPLING = registerBlock("guarana_sapling",
             GuaranaSapling::new);
     @SuppressWarnings("deprecation")
@@ -119,7 +120,7 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> BRAZILNUT_LOG = registerBlock("brazilnut_log",
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILNUT_LEAVES = registerBlock("brazilnut_leaves",
-            ModLeaves::new);
+            BrazilnutLeaves::new);
     public static final RegistryObject<Block> BRAZILNUT_PLANKS = registerBlock("brazilnut_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> BRAZILNUT_SAPLING = registerBlock("brazilnut_sapling",
@@ -175,7 +176,7 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> BACURI_LOG = registerBlock("bacuri_log",
             ModLogs::new);
     public static final RegistryObject<Block> BACURI_LEAVES = registerBlock("bacuri_leaves",
-            ModLeaves::new);
+            BacuriLeaves::new);
     public static final RegistryObject<Block> BACURI_PLANKS = registerBlock("bacuri_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> BACURI_SAPLING = registerBlock("bacuri_sapling",
@@ -203,7 +204,7 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> CAMU_CAMU_LOG = registerBlock("camu_camu_log",
             ModLogs::new);
     public static final RegistryObject<Block> CAMU_CAMU_LEAVES = registerBlock("camu_camu_leaves",
-            ModLeaves::new);
+            CamuCamuLeaves::new);
     public static final RegistryObject<Block> CAMU_CAMU_PLANKS = registerBlock("camu_camu_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> CAMU_CAMU_SAPLING = registerBlock("camu_camu_sapling",

@@ -1,6 +1,9 @@
 package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
+import com.brbiomesmod.block.Custom.Leaves.CagaitaLeaves;
+import com.brbiomesmod.block.Custom.Leaves.KapokLeaves;
+import com.brbiomesmod.block.Custom.Leaves.WolfAppleLeaves;
 import com.brbiomesmod.block.ModLeaves;
 import com.brbiomesmod.block.ModLogs;
 import com.brbiomesmod.block.ModPlanks;
@@ -36,7 +39,7 @@ public class CerradoBlocks {
     public static final RegistryObject<Block> WOLF_APPLE_WOOD = registerBlock("wolf_apple_wood",
             ModLogs::new);
     public static final RegistryObject<Block> WOLF_APPLE_LEAVES = registerBlock("wolf_apple_leaves",
-            ModLeaves::new);
+            WolfAppleLeaves::new);
     public static final RegistryObject<Block> WOLF_APPLE_SAPLING = registerBlock("wolf_apple_sapling",
             WolfAppleSapling::new);
     public static final RegistryObject<Block> WOLF_APPLE_PLANKS = registerBlock("wolf_apple_planks",
@@ -88,7 +91,7 @@ public class CerradoBlocks {
 
 
     public static final RegistryObject<Block> CAGAITA_LEAVES = registerBlock("cagaita_leaves",
-            ModLeaves::new);
+            CagaitaLeaves::new);
     public static final RegistryObject<Block> CAGAITA_SAPLING = registerBlock("cagaita_sapling",
             CagaitaSapling::new);
     @SuppressWarnings("deprecation")
@@ -104,7 +107,7 @@ public class CerradoBlocks {
     public static final RegistryObject<Block> SILK_FLOSS_THORNY_WOOD = registerBlock("silk_floss_thorny_wood",
             SilkFlossLog::new);
     public static final RegistryObject<Block> PINK_SILK_FLOSS_LEAVES = registerBlock("silk_floss_pink_leaves",
-            ModLeaves::new);
+            KapokLeaves::new);
     public static final RegistryObject<Block> PINK_SILK_FLOSS_SAPLING = registerBlock("silk_floss_pink_sapling",
             PinkSilkFlossSapling::new);
     @SuppressWarnings("deprecation")

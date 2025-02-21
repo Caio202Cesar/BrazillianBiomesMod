@@ -2,6 +2,9 @@ package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
+import com.brbiomesmod.block.Custom.Leaves.JuaLeaves;
+import com.brbiomesmod.block.Custom.Leaves.KapokLeaves;
+import com.brbiomesmod.block.Custom.Leaves.UmbuLeaves;
 import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -40,7 +43,7 @@ public class CaatingaBlocks {
     public static final RegistryObject<Block> JUA_PLANKS = registerBlock("jua_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> JUA_LEAVES = registerBlock("jua_leaves",
-            ModLeaves::new);
+            JuaLeaves::new);
     public static final RegistryObject<Block> JUA_SAPLING = registerBlock("jua_sapling",
             JuaSapling::new);
     public static final RegistryObject<Block> JUA_SLAB = registerBlock("jua_slab",
@@ -82,7 +85,7 @@ public class CaatingaBlocks {
     public static final RegistryObject<Block> UMBU_PLANKS = registerBlock("umbu_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> UMBU_LEAVES = registerBlock("umbu_leaves",
-            ModLeaves::new);
+            UmbuLeaves::new);
     public static final RegistryObject<Block> UMBU_SAPLING = registerBlock("umbu_sapling",
             UmbuSapling::new);
     public static final RegistryObject<Block> UMBU_SLAB = registerBlock("umbu_slab",
@@ -108,9 +111,9 @@ public class CaatingaBlocks {
 
 
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_LEAVES = registerBlock("silk_floss_white_leaves",
-            ModLeaves::new);
+            KapokLeaves::new);
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_SAPLING = registerBlock("silk_floss_white_sapling",
-            WhiteSilkFlossSapling::new);
+            KapokLeaves::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_WHITE_SILK_FLOSS_SAPLING = BLOCKS.register("potted_silk_floss_white_sapling",
             () -> new FlowerPotBlock(CaatingaBlocks.WHITE_SILK_FLOSS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)

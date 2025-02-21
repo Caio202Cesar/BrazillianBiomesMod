@@ -2,6 +2,9 @@ package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
+import com.brbiomesmod.block.Custom.Leaves.CashewLeaves;
+import com.brbiomesmod.block.Custom.Leaves.MangabaLeaves;
+import com.brbiomesmod.block.Custom.Leaves.MonkeyCajaranaLeaves;
 import com.brbiomesmod.block.Saplings.CashewSapling;
 import com.brbiomesmod.block.Saplings.MangabaSapling;
 import com.brbiomesmod.block.Saplings.MonkeyCajaranaSapling;
@@ -36,7 +39,7 @@ public class RestingaBlocks {
     public static final RegistryObject<Block> CASHEW_PLANKS = registerBlock("cashew_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> CASHEW_LEAVES = registerBlock("cashew_leaves",
-            ModLeaves::new);
+            CashewLeaves::new);
     public static final RegistryObject<Block> CASHEW_SAPLING = registerBlock("cashew_sapling",
             CashewSapling::new);
     public static final RegistryObject<Block> CASHEW_SLAB = registerBlock("cashew_slab",
@@ -58,7 +61,7 @@ public class RestingaBlocks {
 
 
     public static final RegistryObject<Block> MANGABA_LEAVES = registerBlock("mangaba_leaves",
-            ModLeaves::new);
+            MangabaLeaves::new);
     public static final RegistryObject<Block> MANGABA_LOG = registerBlock("mangaba_log",
             ModLogs::new);
     public static final RegistryObject<Block> MANGABA_WOOD = registerBlock("mangaba_wood",
@@ -86,7 +89,7 @@ public class RestingaBlocks {
 
 
     public static final RegistryObject<Block> MONKEY_CAJARANA_LEAVES = registerBlock("monkey_cajarana_leaves",
-            ModLeaves::new);
+            MonkeyCajaranaLeaves::new);
     public static final RegistryObject<Block> MONKEY_CAJARANA_LOG = registerBlock("monkey_cajarana_log",
             ModLogs::new);
     public static final RegistryObject<Block> MONKEY_CAJARANA_WOOD = registerBlock("monkey_cajarana_wood",

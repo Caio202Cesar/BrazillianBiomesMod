@@ -2,6 +2,8 @@ package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
+import com.brbiomesmod.block.Custom.Leaves.FeijoaLeaves;
+import com.brbiomesmod.block.Custom.Leaves.RioGrandeCherryLeaves;
 import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -119,7 +121,7 @@ public class AraucariaPlateauBlocks {
     public static final RegistryObject<Block> FEIJOA_WOOD = registerBlock("feijoa_wood",
             ModLogs::new);
     public static final RegistryObject<Block> FEIJOA_LEAVES = registerBlock("feijoa_leaves",
-            ModLeaves::new);
+            FeijoaLeaves::new);
     public static final RegistryObject<Block> FEIJOA_PLANKS = registerBlock("feijoa_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> FEIJOA_SAPLING = registerBlock("feijoa_sapling",
@@ -143,7 +145,7 @@ public class AraucariaPlateauBlocks {
 
 
     public static final RegistryObject<Block> RIO_GRANDE_CHERRY_LEAVES = registerBlock("rio_grande_cherry_leaves",
-            ModLeaves::new);
+            RioGrandeCherryLeaves::new);
     public static final RegistryObject<Block> RIO_GRANDE_CHERRY_SAPLING = registerBlock("rio_grande_cherry_sapling",
             RioGrandeCherrySapling::new);
     @SuppressWarnings("deprecation")
