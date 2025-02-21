@@ -45,7 +45,7 @@ public class FruitingCactusPlant extends BushBlock {
 
             worldIn.setBlockState(pos, CaatingaBlocks.TURK_TURBAN_CACTUS.get().getDefaultState());
 
-            worldIn.playSound(null, pos, SoundEvents.BLOCK_FUNGUS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            worldIn.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
         }
         return ActionResultType.SUCCESS;
@@ -60,14 +60,6 @@ public class FruitingCactusPlant extends BushBlock {
     @SuppressWarnings("deprecation")
     public void onEntityCollision(BlockState state, World worldIn, BlockPos pos, Entity entityIn) {
         entityIn.attackEntityFrom(DamageSource.CACTUS, 1.0F);
-    }
-
-    public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 10;
-    }
-
-    public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 30;
     }
 
     @Nullable

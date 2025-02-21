@@ -74,14 +74,6 @@ public class CactusPlant extends BushBlock {
         entityIn.attackEntityFrom(DamageSource.CACTUS, 1.0F);
     }
 
-    public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 10;
-    }
-
-    public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 30;
-    }
-
     @Nullable
     public PathNodeType getAiPathNodeType(BlockState state, IBlockReader world, BlockPos pos, @Nullable MobEntity entity) {
         return PathNodeType.DANGER_CACTUS;
