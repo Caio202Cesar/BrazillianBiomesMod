@@ -34,8 +34,7 @@ public class PantanalBiome {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
-        mobspawninfo$builder.withSpawner(EntityClassification.MONSTER,
-                new MobSpawnInfo.Spawners(EntityType.HOGLIN, 0, 3, 5));
+
         mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
                 new MobSpawnInfo.Spawners(EntityType.PARROT, 100, 7, 10));
         mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
