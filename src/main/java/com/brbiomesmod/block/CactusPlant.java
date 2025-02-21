@@ -48,7 +48,7 @@ public class CactusPlant extends BushBlock {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         super.randomTick(state, worldIn, pos, random);
 
-        double chance = 0.9;
+        double chance = 0.6;
 
         if (random.nextDouble() < chance) {
             worldIn.setBlockState(pos, CaatingaBlocks.TURK_TURBAN_FRUITING_CACTUS.get().getDefaultState());
