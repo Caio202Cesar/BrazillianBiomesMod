@@ -1,6 +1,7 @@
 package com.brbiomesmod.block;
 
 import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
+import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BushBlock;
@@ -9,12 +10,13 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.MobEntity;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.pathfinding.PathNodeType;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.Direction;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
@@ -26,41 +28,27 @@ import net.minecraftforge.common.ToolType;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class CactusPlant extends BushBlock {
-    public CactusPlant() {
+public class FruitingCactusPlant extends BushBlock {
+    public FruitingCactusPlant() {
         super(Properties.from(Blocks.SWEET_BERRY_BUSH).tickRandomly().hardnessAndResistance(0.1f)
                 .sound(SoundType.CORAL).harvestTool(ToolType.HOE));
     }
 
-    public boolean ticksRandomly(BlockState state) {
-        return true;
-    }
-
-    /**
-     * Performs a random tick on a block.
-     *
-     * @param state
-     * @param worldIn
-     * @param pos
-     * @param random
-     */
     @Override
-    public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        super.randomTick(state, worldIn, pos, random);
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        if (!worldIn.isRemote) {
 
-        double chance = 0.9;
+            ItemStack itemStack = new ItemStack(ModItems.TURK_TURBAN_BERRIES.get());
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
-        if (random.nextDouble() < chance) {
-            worldIn.setBlockState(pos, CaatingaBlocks.TURK_TURBAN_FRUITING_CACTUS.get().getDefaultState());
+            worldIn.addEntity(itemEntity);
+
+            worldIn.setBlockState(pos, CaatingaBlocks.TURK_TURBAN_CACTUS.get().getDefaultState());
+
+            worldIn.playSound(null, pos, SoundEvents.BLOCK_FUNGUS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
         }
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(CaatingaBlocks.TURK_TURBAN_CACTUS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(CaatingaBlocks.TURK_TURBAN_FRUITING_CACTUS.get(), RenderType.getCutout());
-
+        return ActionResultType.SUCCESS;
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {
