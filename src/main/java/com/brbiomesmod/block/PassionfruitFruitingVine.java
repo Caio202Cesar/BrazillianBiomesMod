@@ -29,13 +29,19 @@ public class PassionfruitFruitingVine extends VineBlock {
         if (!worldIn.isRemote) {
 
             ItemStack itemStack = new ItemStack(ModItems.TURK_TURBAN_BERRIES.get());
-            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, AtlanticForestBlocks.PASSION_FRUIT_FRUITING_VINE.get().getDefaultState());
+            BlockState currentState = state;
+            BlockState newState = AtlanticForestBlocks.PASSION_FRUIT_VINE.get().getDefaultState();
 
-            worldIn.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
+                    .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
+
+            worldIn.setBlockState(pos, newState, 3);
+
+            worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
         }
         return ActionResultType.SUCCESS;

@@ -36,11 +36,19 @@ public class PassionfruitFloweringVine extends VineBlock {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         super.randomTick(state, worldIn, pos, random);
 
-        double chance = 0.8;
+        double chance = 0.2;
 
         if (random.nextDouble() < chance) {
+
+            BlockState currentState = state;
+            BlockState newState = AtlanticForestBlocks.PASSION_FRUIT_FRUITING_VINE.get().getDefaultState();
+
             worldIn.setBlockState(pos, AtlanticForestBlocks.PASSION_FRUIT_FRUITING_VINE.get().getDefaultState());
 
+            newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
+                    .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
+
+            worldIn.setBlockState(pos, newState, 3);
         }
     }
 
