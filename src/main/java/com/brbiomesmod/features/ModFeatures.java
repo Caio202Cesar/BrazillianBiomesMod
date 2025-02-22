@@ -1,5 +1,6 @@
 package com.brbiomesmod.features;
 
+import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.*;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -11,8 +12,17 @@ import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class ModFeatures extends Features implements IFeatureConfig {
+
+    /*public static final ConfiguredFeature<?, ?> PASSION_FRUIT_VINE_PATCH = register("passion_fruit_vine_patch",
+            ModFeature.PASSION_FRUIT_VINE_FEATURE.get().withConfiguration((NoFeatureConfig) NoFeatureConfig.CODEC)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .count(3));*/
 
     public static final ConfiguredFeature<?, ?> PATCH_XAXIM_PLANT = register("patch_xaxim_plant",
             Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.XAXIM),
@@ -109,7 +119,6 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState BULL_NETTLE_FRUITS = CaatingaBlocks.CNIDOSCOLUS_URENS_FRUITING.get().getDefaultState();
         protected static final BlockState TURK_TURBAN = CaatingaBlocks.TURK_TURBAN_CACTUS.get().getDefaultState();
         protected static final BlockState TURK_TURBAN_FRUITING = CaatingaBlocks.TURK_TURBAN_FRUITING_CACTUS.get().getDefaultState();
-        protected static final BlockState CACTUS = Blocks.CACTUS.getDefaultState();
         protected static final BlockState CATTLEYA_PURPURATA = AtlanticForestBlocks.CATTLEYA_PURPURATA.get().getDefaultState();
         protected static final BlockState CATTLEYA_LADY_ACKLAND = AtlanticForestBlocks.CATTLEYA_LADY_ACKLAND.get().getDefaultState();
         protected static final BlockState IPOMAEA_PES_CAPRAE = RestingaBlocks.IPOMAEA_PES_CAPRAE.get().getDefaultState();

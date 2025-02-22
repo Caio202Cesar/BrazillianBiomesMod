@@ -123,8 +123,8 @@ public class ModItems {
             () -> new MateItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
                     .food(ModFoods.MATE)));
 
-    public static final RegistryObject<Item> PASSION_FRUIT = ITEMS.register("cassava",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.CASSAVA)));
+    public static final RegistryObject<Item> PASSION_FRUIT = ITEMS.register("passion_fruit",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     //Materials
     public static final RegistryObject<Item> TOURMALINE_PARAIBA = ITEMS.register("tourmaline_paraiba",

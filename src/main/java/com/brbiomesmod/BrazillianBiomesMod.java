@@ -1,6 +1,8 @@
 package com.brbiomesmod;
 
 import com.brbiomesmod.block.BlockClasses.*;
+import com.brbiomesmod.features.ModFeature;
+import com.brbiomesmod.features.ModFeatures;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.*;
 import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
@@ -58,6 +60,8 @@ public class BrazillianBiomesMod {
         PampasBiome.register(eventBus);
         CerradoBiome.register(eventBus);
         RestingaBeachBiome.register(eventBus);
+
+        ModFeature.FEATURES.register(FMLJavaModLoadingContext.get().getModEventBus());
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
