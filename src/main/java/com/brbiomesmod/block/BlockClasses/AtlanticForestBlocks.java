@@ -453,6 +453,34 @@ public class AtlanticForestBlocks {
             () -> new FlowerPotBlock(AtlanticForestBlocks.NEOREGELIA_MARMORATA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+    public static final RegistryObject<Block> RED_GUZMANIA = registerBlock("red_guzmania",
+            EpiphytePlant::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_RED_GUZMANIA = BLOCKS.register("potted_red_guzmania",
+            () -> new FlowerPotBlock(AtlanticForestBlocks.RED_GUZMANIA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> PINK_GUZMANIA = registerBlock("pink_guzmania",
+            EpiphytePlant::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PINK_GUZMANIA = BLOCKS.register("potted_pink_guzmania",
+            () -> new FlowerPotBlock(AtlanticForestBlocks.PINK_GUZMANIA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> YELLOW_GUZMANIA = registerBlock("yellow_guzmania",
+            EpiphytePlant::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_YELLOW_GUZMANIA = BLOCKS.register("potted_yellow_guzmania",
+            () -> new FlowerPotBlock(AtlanticForestBlocks.YELLOW_GUZMANIA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> ORANGE_GUZMANIA = registerBlock("orange_guzmania",
+            EpiphytePlant::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_ORANGE_GUZMANIA = BLOCKS.register("potted_orange_guzmania",
+            () -> new FlowerPotBlock(AtlanticForestBlocks.ORANGE_GUZMANIA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -32,6 +32,18 @@ public class EpiphytePlant extends Block {
 
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.NEOREGELIA_MARMORATA.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_NEOREGELIA_MARMORATA.get(), RenderType.getCutout());
+
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.RED_GUZMANIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_RED_GUZMANIA.get(), RenderType.getCutout());
+
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.YELLOW_GUZMANIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_YELLOW_GUZMANIA.get(), RenderType.getCutout());
+
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.PINK_GUZMANIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_PINK_GUZMANIA.get(), RenderType.getCutout());
+
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.ORANGE_GUZMANIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_ORANGE_GUZMANIA.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
