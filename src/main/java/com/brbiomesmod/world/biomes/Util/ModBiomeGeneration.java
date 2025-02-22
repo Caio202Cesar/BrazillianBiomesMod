@@ -15,7 +15,7 @@ public class ModBiomeGeneration {
     public static void generateBiomes() {
         addBiome(AmazonRainforestBiome.AMAZON_RAINFOREST.get(), BiomeManager.BiomeType.DESERT, 27, OVERWORLD, HOT, DENSE, FOREST,
                 JUNGLE, LUSH, WET, SPOOKY);
-        addBiome(AraucariaPlateauBiome.ARAUCARIA_PLATEAU.get(), BiomeManager.BiomeType.WARM, 7, OVERWORLD, DENSE, FOREST, PLATEAU,
+        addBiome(AraucariaPlateauBiome.ARAUCARIA_PLATEAU.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, DENSE, FOREST, PLATEAU,
                 RARE, CONIFEROUS, LUSH, WET, MOUNTAIN);
         addBiome(PantanalBiome.PANTANAL.get(), BiomeManager.BiomeType.DESERT, 14, OVERWORLD, HOT, SPARSE, SAVANNA, RARE, WET, SWAMP,
                 PLAINS, LUSH);
