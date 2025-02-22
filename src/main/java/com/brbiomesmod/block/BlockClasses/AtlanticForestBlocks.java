@@ -404,6 +404,8 @@ public class AtlanticForestBlocks {
             PassionfruitVine::new);
     public static final RegistryObject<Block> PASSION_FRUIT_FLOWERING_VINE = registerBlock("passion_fruit_flowering_vine",
             PassionfruitFloweringVine::new);
+    public static final RegistryObject<Block> PASSION_FRUIT_FRUITING_VINE = registerBlock("passion_fruit_fruiting_vine",
+            PassionfruitFruitingVine::new);
     public static final RegistryObject<Block> BRAZILLIAN_DUTCHMAN_PIPE_VINE = registerBlock("brazillian_dutchman_pipe_vine",
             AristolochiaVine::new);
     public static final RegistryObject<Block> TILLANDSIA_STRICTA = registerBlock("tillandsia_stricta",

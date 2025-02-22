@@ -38,7 +38,7 @@ public class PassionfruitVine extends VineBlock {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         super.randomTick(state, worldIn, pos, random);
 
-        double chance = 0.6;
+        double chance = 0.7;
 
         if (random.nextDouble() < chance) {
             worldIn.setBlockState(pos, AtlanticForestBlocks.PASSION_FRUIT_FLOWERING_VINE.get().getDefaultState());
@@ -50,6 +50,8 @@ public class PassionfruitVine extends VineBlock {
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.PASSION_FRUIT_VINE.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.PASSION_FRUIT_FLOWERING_VINE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.PASSION_FRUIT_FRUITING_VINE.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
