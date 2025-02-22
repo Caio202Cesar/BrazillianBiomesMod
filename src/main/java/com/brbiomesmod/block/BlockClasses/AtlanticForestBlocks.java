@@ -417,11 +417,40 @@ public class AtlanticForestBlocks {
     public static final RegistryObject<Block> POTTED_CATTLEYA_PURPURATA = BLOCKS.register("potted_cattleya_purpurata",
             () -> new FlowerPotBlock(AtlanticForestBlocks.CATTLEYA_PURPURATA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> CATTLEYA_LADY_ACKLAND = registerBlock("cattleya_lady_ackland",
             () -> new FlowerBlock(Effects.NIGHT_VISION, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_CATTLEYA_LADY_ACKLAND = BLOCKS.register("potted_cattleya_lady_ackland",
             () -> new FlowerPotBlock(AtlanticForestBlocks.CATTLEYA_LADY_ACKLAND.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> SILVER_VASE_BROMELIAD = registerBlock("silver_vase_bromeliad",
+            EpiphytePlant::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_SILVER_VASE_BROMELIAD = BLOCKS.register("potted_silver_vase_bromeliad",
+            () -> new FlowerPotBlock(AtlanticForestBlocks.SILVER_VASE_BROMELIAD.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> FIREBALL_NEOREGELIA = registerBlock("fireball_neoregelia",
+            EpiphytePlant::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_FIREBALL_NEOREGELIA = BLOCKS.register("potted_fireball_neoregelia",
+            () -> new FlowerPotBlock(AtlanticForestBlocks.FIREBALL_NEOREGELIA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> AECHMEA_ALBA = registerBlock("aechmea_alba",
+            EpiphytePlant::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_AECHMEA_ALBA = BLOCKS.register("potted_aechmea_alba",
+            () -> new FlowerPotBlock(AtlanticForestBlocks.AECHMEA_ALBA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> BRAZILIAN_VASEPLANT = registerBlock("brazilian_vaseplant",
+            EpiphytePlant::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BRAZILIAN_VASEPLANT = BLOCKS.register("potted_aechmea_alba",
+            () -> new FlowerPotBlock(AtlanticForestBlocks.AECHMEA_ALBA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
 

@@ -1,28 +1,17 @@
 package com.brbiomesmod.features;
 
-import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.*;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
-import net.minecraft.world.gen.blockplacer.ColumnBlockPlacer;
 import net.minecraft.world.gen.blockplacer.DoublePlantBlockPlacer;
 import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
-import net.minecraftforge.fml.RegistryObject;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraft.world.gen.feature.NoFeatureConfig;
 
 public class ModFeatures extends Features implements IFeatureConfig {
-
-    /*public static final ConfiguredFeature<?, ?> PASSION_FRUIT_VINE_PATCH = register("passion_fruit_vine_patch",
-            ModFeature.PASSION_FRUIT_VINE_FEATURE.get().withConfiguration((NoFeatureConfig) NoFeatureConfig.CODEC)
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT)
-                    .count(3));*/
 
     public static final ConfiguredFeature<?, ?> PATCH_XAXIM_PLANT = register("patch_xaxim_plant",
             Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.XAXIM),
@@ -61,6 +50,12 @@ public class ModFeatures extends Features implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> PAMPAS_PLAINS_FLOWER_PATCH = register("pampas_plains_flower_patch",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.PAMPAS_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
+
+    public static final ConfiguredFeature<?, ?> PASSION_FRUIT_VINE_PATCH = register("passion_fruit_vine_patch",
+            ModFeature.PASSION_FRUIT_VINE_FEATURE.get().withConfiguration(NoFeatureConfig.INSTANCE)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .count(3));
 
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {

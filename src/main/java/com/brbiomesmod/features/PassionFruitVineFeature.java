@@ -14,7 +14,6 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.Random;
 import java.util.function.Supplier;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class PassionFruitVineFeature extends Feature<NoFeatureConfig> {
     private final Supplier<BlockState> vineStateSupplier;
 

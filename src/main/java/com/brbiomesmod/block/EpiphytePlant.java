@@ -13,13 +13,22 @@ import net.minecraftforge.common.ToolType;
 
 public class EpiphytePlant extends Block {
     public EpiphytePlant() {
-        super(AbstractBlock.Properties.from(Blocks.VINE).tickRandomly().zeroHardnessAndResistance()
+        super(AbstractBlock.Properties.from(Blocks.CORNFLOWER).tickRandomly().zeroHardnessAndResistance()
                 .sound(SoundType.PLANT).doesNotBlockMovement().notSolid().harvestTool(ToolType.HOE));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.TILLANDSIA_STRICTA.get(), RenderType.getCutout());
+
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.SILVER_VASE_BROMELIAD.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_SILVER_VASE_BROMELIAD.get(), RenderType.getCutout());
+
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.FIREBALL_NEOREGELIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_FIREBALL_NEOREGELIA.get(), RenderType.getCutout());
+
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.AECHMEA_ALBA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_AECHMEA_ALBA.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
