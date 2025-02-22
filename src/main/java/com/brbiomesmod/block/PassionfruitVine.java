@@ -1,22 +1,49 @@
 package com.brbiomesmod.block;
 
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
+import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
 import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
 
-public class PassionFruitVine extends VineBlock {
-    public PassionFruitVine() {
+import java.util.Random;
+
+public class PassionfruitVine extends VineBlock {
+    public PassionfruitVine() {
         super(AbstractBlock.Properties.from(Blocks.VINE).tickRandomly().zeroHardnessAndResistance()
                 .sound(SoundType.PLANT).doesNotBlockMovement().notSolid().harvestTool(ToolType.HOE));
+    }
+
+    public boolean ticksRandomly(BlockState state) {
+        return true;
+    }
+
+    /**
+     * Performs a random tick on a block.
+     *
+     * @param state
+     * @param worldIn
+     * @param pos
+     * @param random
+     */
+    @Override
+    public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        super.randomTick(state, worldIn, pos, random);
+
+        double chance = 0.6;
+
+        if (random.nextDouble() < chance) {
+            worldIn.setBlockState(pos, AtlanticForestBlocks.PASSION_FRUIT_FLOWERING_VINE.get().getDefaultState());
+
+        }
     }
 
     @OnlyIn(Dist.CLIENT)

@@ -23,7 +23,7 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         BeachFlower.registerRenderLayer();
         XananaFlower.registerRenderLayer();
         BullNettlePlant.registerRenderLayer();
-        PassionFruitVine.registerRenderLayer();
+        PassionfruitVine.registerRenderLayer();
         AristolochiaVine.registerRenderLayer();
         EpiphytePlant.registerRenderLayer();
         OrchidPlant.registerRenderLayer();

@@ -12,7 +12,6 @@ import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Effects;
@@ -402,9 +401,9 @@ public class AtlanticForestBlocks {
 
 
     public static final RegistryObject<Block> PASSION_FRUIT_VINE = registerBlock("passion_fruit_vine",
-            PassionFruitVine::new);
+            PassionfruitVine::new);
     public static final RegistryObject<Block> PASSION_FRUIT_FLOWERING_VINE = registerBlock("passion_fruit_flowering_vine",
-            PassionFruitVine::new);
+            PassionfruitFloweringVine::new);
     public static final RegistryObject<Block> BRAZILLIAN_DUTCHMAN_PIPE_VINE = registerBlock("brazillian_dutchman_pipe_vine",
             AristolochiaVine::new);
     public static final RegistryObject<Block> TILLANDSIA_STRICTA = registerBlock("tillandsia_stricta",
