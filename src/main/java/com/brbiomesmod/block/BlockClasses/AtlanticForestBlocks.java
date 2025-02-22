@@ -446,13 +446,12 @@ public class AtlanticForestBlocks {
             () -> new FlowerPotBlock(AtlanticForestBlocks.AECHMEA_ALBA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> BRAZILIAN_VASEPLANT = registerBlock("brazilian_vaseplant",
+    public static final RegistryObject<Block> NEOREGELIA_MARMORATA = registerBlock("neoregelia_marmorata",
             EpiphytePlant::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_BRAZILIAN_VASEPLANT = BLOCKS.register("potted_aechmea_alba",
-            () -> new FlowerPotBlock(AtlanticForestBlocks.AECHMEA_ALBA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_NEOREGELIA_MARMORATA = BLOCKS.register("potted_neoregelia_marmorata",
+            () -> new FlowerPotBlock(AtlanticForestBlocks.NEOREGELIA_MARMORATA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
