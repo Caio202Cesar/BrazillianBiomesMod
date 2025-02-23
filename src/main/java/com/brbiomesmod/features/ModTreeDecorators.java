@@ -15,6 +15,10 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("passionvine_decorator",
                     () -> new TreeDecoratorType<>(PassionFruitVineLeavesDecorator.CODEC));
 
+    public static final RegistryObject<TreeDecoratorType<PassionFruitVineTrunkDecorator>> TRUNK_PASSIONVINE_DECORATOR =
+            TREE_DECORATORS.register("passionvine_trunk_decorator",
+                    () -> new TreeDecoratorType<>(PassionFruitVineTrunkDecorator.CODEC));
+
     public static void register(IEventBus eventBus) {
         TREE_DECORATORS.register(eventBus);
     }

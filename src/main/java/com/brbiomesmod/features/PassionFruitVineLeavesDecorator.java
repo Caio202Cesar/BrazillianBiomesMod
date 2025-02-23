@@ -25,7 +25,7 @@ public class PassionFruitVineLeavesDecorator extends TreeDecorator {
     @Override
     protected TreeDecoratorType<?> getDecoratorType() {
         // Return your registered TreeDecoratorType – ensure you've registered it with your mod's modid.
-        return ModTreeDecorators.PASSIONVINE_DECORATOR.get();
+        return ModTreeDecorators.TRUNK_PASSIONVINE_DECORATOR.get();
     }
 
     /**
