@@ -28,7 +28,7 @@ public class PassionfruitFruitingVine extends VineBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            ItemStack itemStack = new ItemStack(ModItems.TURK_TURBAN_BERRIES.get());
+            ItemStack itemStack = new ItemStack(ModItems.PASSIONFRUIT.get());
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
