@@ -222,6 +222,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILWOOD_TREE_WITH_PASSIONVINE = register("brazilwood_tree_with_passionvine",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILWOOD_LOG),
+                    new SimpleBlockStateProvider(States.BRAZILWOOD_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Jua Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JUA_TREE = register("jua_tree",
@@ -346,7 +353,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new SimpleBlockStateProvider(States.CECROPIA_LEAVES),
                     new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(7, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).build()));
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE)).setIgnoreVines().build()));
 
     //Pink Peroba Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_PEROBA_TREE = register("pink_peroba_tree",

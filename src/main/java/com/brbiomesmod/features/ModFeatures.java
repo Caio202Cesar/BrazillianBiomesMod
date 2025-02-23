@@ -54,12 +54,6 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.PAMPAS_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
 
-    public static final ConfiguredFeature<?, ?> PASSION_FRUIT_VINE_PATCH = register("passion_fruit_vine_patch",
-            ModFeature.PASSION_FRUIT_VINE_FEATURE.get().withConfiguration(NoFeatureConfig.INSTANCE)
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT)
-                    .count(3));
-
     public static final ConfiguredFeature<?, ?> ANGEL_TRUMPET_BUSHES = register("angel_trumpet_bushes",
             Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(Configs.ANGEL_TRUMPET_LIST))
                     .countSpread(FeatureSpread.create(-3, 4))

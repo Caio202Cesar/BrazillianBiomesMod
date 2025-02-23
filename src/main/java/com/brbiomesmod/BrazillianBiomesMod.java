@@ -3,6 +3,7 @@ package com.brbiomesmod;
 import com.brbiomesmod.block.BlockClasses.*;
 import com.brbiomesmod.features.ModFeature;
 import com.brbiomesmod.features.ModFeatures;
+import com.brbiomesmod.features.ModTreeDecorators;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.*;
 import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
@@ -45,6 +46,8 @@ public class BrazillianBiomesMod {
         RestingaBlocks.register(eventBus);
         CerradoBlocks.register(eventBus);
         PampasBlocks.register(eventBus);
+
+        ModTreeDecorators.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);
