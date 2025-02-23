@@ -21,7 +21,7 @@ public class PassionFruitVineTrunkDecorator extends TreeDecorator {
     @Override
     protected TreeDecoratorType<?> getDecoratorType() {
         // Return your registered type. Replace with your custom type if desired.
-        return ModTreeDecorators.PASSIONVINE_DECORATOR.get();
+        return ModTreeDecorators.TRUNK_PASSIONVINE_DECORATOR.get();
     }
 
     @Override
