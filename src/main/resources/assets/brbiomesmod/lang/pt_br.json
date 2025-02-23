@@ -48,6 +48,7 @@
   "item.brbiomesmod.tourmaline_paraiba_shovel": "Pá de Turmalina Paraíba",
   "item.brbiomesmod.tourmaline_paraiba_sword": "Espada de Turmalina Paraíba",
   "item.brbiomesmod.monkey_cajarana": "Frutas de Cajarana-de-macaco",
+  "item.brbiomesmod.passionfruit": "Maracujá",
 
   "block.brbiomesmod.acai_bunch": "Cacho de Açaí",
   "block.brbiomesmod.acai_frond": "Palha de Açaí",
@@ -60,6 +61,11 @@
   "block.brbiomesmod.algarrobillo_planks": "Tábuas de Inhanduvá",
   "block.brbiomesmod.algarrobillo_stairs": "Escadas de Inhanduvá",
   "block.brbiomesmod.algarrobillo_sapling": "Muda de Inhanduvá",
+  "block.brbiomesmod.angel_trumpet_white": "Trombeta-de-anjo Branca",
+  "block.brbiomesmod.angel_trumpet_pink": "Trombeta-de-anjo Rosa",
+  "block.brbiomesmod.angel_trumpet_yellow": "Trombeta-de-anjo Amarela",
+  "block.brbiomesmod.angel_trumpet_salmon": "Trombeta-de-anjo Salmão",
+  "block.brbiomesmod.angel_trumpet_orange": "Trombeta-de-anjo Laranja",
   "block.brbiomesmod.apricot_ipe_blossom": "Florada de Ipê Bicolor Damasco",
   "block.brbiomesmod.apricot_ipe_sapling": "Muda de Ipê Bicolor Damasco",
   "block.brbiomesmod.aspilia_montevidensis": "Mal-Me-Quer-do-Campo",
@@ -169,6 +175,7 @@
   "block.brbiomesmod.cashew_planks": "Tábuas de Cajueiro",
   "block.brbiomesmod.cashew_stairs": "Escadas de Cajueiro",
   "block.brbiomesmod.cashew_sapling": "Muda de Cajueiro",
+  "block.brbiomesmod.cashew_stripped_log": "Cashew Stripped Log",
   "block.brbiomesmod.cashew_wood": "Madeira de Cajueiro",
   "block.brbiomesmod.cashew_slab": "Laje de Cajueiro",
   "block.brbiomesmod.cassava_plant": "Planta de Mandioca",
@@ -252,6 +259,7 @@
   "block.brbiomesmod.jua_log": "Tronco de Juazeiro",
   "block.brbiomesmod.jua_planks": "Tábuas de Juazeiro",
   "block.brbiomesmod.jua_sapling": "Muda de Juazeiro",
+  "block.brbiomesmod.jua_stripped_log": "Jua Stripped Log",
   "block.brbiomesmod.jua_stairs": "Escadas de Juazeiro",
   "block.brbiomesmod.jua_wood": "Madeira de Juazeiro",
   "block.brbiomesmod.kapok_leaves": "Folhas de Samaúma",
@@ -359,6 +367,7 @@
   "block.brbiomesmod.umbu_log": "Tronco de Umbuzeiro",
   "block.brbiomesmod.umbu_planks": "Tábuas de Umbuzeiro",
   "block.brbiomesmod.umbu_sapling": "Muda de Umbuzeiro",
+  "block.brbiomesmod.umbu_stripped_log": "Umbu Stripped Log",
   "block.brbiomesmod.umbu_wood": "Madeira de Umbuzeiro",
   "block.brbiomesmod.umbu_slab": "laje de Umbuzeiro",
   "block.brbiomesmod.umbu_stairs": "Escadas de Umbuzeiro",
@@ -389,7 +398,9 @@
   "block.brbiomesmod.yerba_mate_sapling": "Muda de Erva-mate",
   "block.brbiomesmod.yerba_mate_wood": "Madeira de Erva-mate",
   "block.brbiomesmod.yerba_mate_slab": "Laje de Erva-mate",
-
+  "block.brbiomesmod.passion_fruit_vine": "Maracujazeiro",
+  "block.brbiomesmod.passion_fruit_flowering_vine": "Maracujazeiro",
+  "block.brbiomesmod.passion_fruit_fruiting_vine": "Maracujazeiro",
 
   "itemGroup.BRBCaatingaTab": "Caatinga",
   "itemGroup.BRBAtlanticForestTab": "Mata Atlântica",
@@ -398,7 +409,6 @@
   "itemGroup.BRBRestingaTab": "Restinga",
   "itemGroup.BRBCerradoSavannaTab": "Cerrado",
   "itemGroup.BRBPampasTab": "Pampas",
-
 
   "biome.brbiomesmod.amazon_rainforest": "Floresta Amazônica",
   "biome.brbiomesmod.atlantic_forest": "Mata Atlântica",
@@ -410,4 +420,3 @@
   "biome.brbiomesmod.cerrado": "Cerrado",
   "biome.brbiomesmod.restinga_beach": "Praia da Restinga"
 }
-
