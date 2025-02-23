@@ -89,6 +89,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withAtlanticForestFlowers(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.ATLANTIC_FOREST_FLOWERS);
     }
+    public static void withAngelTrumpetBushes(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.ANGEL_TRUMPET_BUSHES);
+    }
     public static void withCerradoFruitTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CERRADO_FRUIT_TREES);
     }

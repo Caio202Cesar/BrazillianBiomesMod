@@ -1,6 +1,7 @@
 package com.brbiomesmod.features;
 
 import com.brbiomesmod.block.BlockClasses.*;
+import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -10,6 +11,8 @@ import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
+
+import java.util.function.Supplier;
 
 public class ModFeatures extends Features implements IFeatureConfig {
 
@@ -56,6 +59,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .count(3));
+
+    public static final ConfiguredFeature<?, ?> ANGEL_TRUMPET_BUSHES = register("angel_trumpet_bushes",
+            Feature.SIMPLE_RANDOM_SELECTOR.withConfiguration(new SingleRandomFeature(Configs.ANGEL_TRUMPET_LIST))
+                    .countSpread(FeatureSpread.create(-3, 4))
+                    .withPlacement(Features.Placements.VEGETATION_PLACEMENT).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(5));
 
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String key, ConfiguredFeature<FC, ?> configuredFeature) {
@@ -104,6 +112,19 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.MANDEVILLA_COCCINEA, 1)
                         .addWeightedBlockstate(States.ASPILIA_MONTEVIDENSIS, 2),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        private static final ImmutableList<Supplier<ConfiguredFeature<?, ?>>> ANGEL_TRUMPET_LIST = ImmutableList.of(() -> {
+            return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.ANGEL_TRUMPET_WHITE),
+                    new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+        }, () -> {return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.ANGEL_TRUMPET_PINK),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+        }, () -> {return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.ANGEL_TRUMPET_YELLOW),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+        }, () -> {return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.ANGEL_TRUMPET_SALMON),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+        }, () -> {return Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.ANGEL_TRUMPET_ORANGE),
+                new DoublePlantBlockPlacer())).tries(64).preventProjection().build());
+        });
     }
 
     public static final class States {
@@ -123,6 +144,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState VELAME_OF_RIO_GRANDE = PampasBlocks.VELAME_OF_RIO_GRANDE.get().getDefaultState();
         protected static final BlockState MANDEVILLA_COCCINEA = PampasBlocks.MANDEVILLA_COCCINEA.get().getDefaultState();
         protected static final BlockState ASPILIA_MONTEVIDENSIS = PampasBlocks.ASPILIA_MONTEVIDENSIS.get().getDefaultState();
+        protected static final BlockState ANGEL_TRUMPET_WHITE = AtlanticForestBlocks.WHITE_ANGEL_TRUMPET.get().getDefaultState();
+        protected static final BlockState ANGEL_TRUMPET_ORANGE = AtlanticForestBlocks.ORANGE_ANGEL_TRUMPET.get().getDefaultState();
+        protected static final BlockState ANGEL_TRUMPET_PINK = AtlanticForestBlocks.PINK_ANGEL_TRUMPET.get().getDefaultState();
+        protected static final BlockState ANGEL_TRUMPET_SALMON = AtlanticForestBlocks.SALMON_ANGEL_TRUMPET.get().getDefaultState();
+        protected static final BlockState ANGEL_TRUMPET_YELLOW = AtlanticForestBlocks.YELLOW_ANGEL_TRUMPET.get().getDefaultState();
 
     }
 }
