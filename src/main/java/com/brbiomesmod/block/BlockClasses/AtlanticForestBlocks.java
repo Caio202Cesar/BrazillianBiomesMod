@@ -399,6 +399,14 @@ public class AtlanticForestBlocks {
             () -> new FlowerPotBlock(AtlanticForestBlocks.SAPUCAIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+    public static final RegistryObject<Block> WHITE_ANGEL_TRUMPET = registerBlock("white_angel_trumpet",
+            AngelTrumpetPlant::new);
+    public static final RegistryObject<Block> PINK_ANGEL_TRUMPET = registerBlock("pink_angel_trumpet",
+            AngelTrumpetPlant::new);
+    public static final RegistryObject<Block> YELLOW_ANGEL_TRUMPET = registerBlock("yellow_angel_trumpet",
+            AngelTrumpetPlant::new);
+    public static final RegistryObject<Block> SALMON_ANGEL_TRUMPET = registerBlock("salmon_angel_trumpet",
+            AngelTrumpetPlant::new);
 
     public static final RegistryObject<Block> PASSION_FRUIT_VINE = registerBlock("passion_fruit_vine",
             PassionfruitVine::new);
@@ -410,6 +418,7 @@ public class AtlanticForestBlocks {
             AristolochiaVine::new);
     public static final RegistryObject<Block> TILLANDSIA_STRICTA = registerBlock("tillandsia_stricta",
             EpiphytePlant::new);
+
 
     public static final RegistryObject<Block> CATTLEYA_PURPURATA = registerBlock("cattleya_purpurata",
             () -> new FlowerBlock(Effects.JUMP_BOOST, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
