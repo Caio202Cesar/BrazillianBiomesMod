@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "brbiomesmod:blocks/angel_trumpet_pink",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "brbiomesmod:blocks/angel_trumpet_pink",
+          "conditions": [
+            {
+              "block": "brbiomesmod:blocks/angel_trumpet_pink",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
