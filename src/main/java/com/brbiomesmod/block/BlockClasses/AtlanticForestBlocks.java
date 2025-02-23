@@ -399,13 +399,15 @@ public class AtlanticForestBlocks {
             () -> new FlowerPotBlock(AtlanticForestBlocks.SAPUCAIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> WHITE_ANGEL_TRUMPET = registerBlock("white_angel_trumpet",
+    public static final RegistryObject<Block> WHITE_ANGEL_TRUMPET = registerBlock("angel_trumpet_white",
             AngelTrumpetPlant::new);
-    public static final RegistryObject<Block> PINK_ANGEL_TRUMPET = registerBlock("pink_angel_trumpet",
+    public static final RegistryObject<Block> PINK_ANGEL_TRUMPET = registerBlock("angel_trumpet_pink",
             AngelTrumpetPlant::new);
-    public static final RegistryObject<Block> YELLOW_ANGEL_TRUMPET = registerBlock("yellow_angel_trumpet",
+    public static final RegistryObject<Block> YELLOW_ANGEL_TRUMPET = registerBlock("angel_trumpet_yellow",
             AngelTrumpetPlant::new);
-    public static final RegistryObject<Block> SALMON_ANGEL_TRUMPET = registerBlock("salmon_angel_trumpet",
+    public static final RegistryObject<Block> SALMON_ANGEL_TRUMPET = registerBlock("angel_trumpet_salmon",
+            AngelTrumpetPlant::new);
+    public static final RegistryObject<Block> ORANGE_ANGEL_TRUMPET = registerBlock("angel_trumpet_orange",
             AngelTrumpetPlant::new);
 
     public static final RegistryObject<Block> PASSION_FRUIT_VINE = registerBlock("passion_fruit_vine",

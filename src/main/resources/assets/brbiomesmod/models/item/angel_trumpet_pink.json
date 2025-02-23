@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:block/angel_trumpet_pink_top"
+  }
+}

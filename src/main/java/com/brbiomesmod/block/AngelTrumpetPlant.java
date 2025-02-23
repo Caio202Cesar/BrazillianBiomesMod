@@ -28,6 +28,8 @@ public class AngelTrumpetPlant extends DoublePlantBlock {
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.YELLOW_ANGEL_TRUMPET.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.PINK_ANGEL_TRUMPET.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.SALMON_ANGEL_TRUMPET.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.ORANGE_ANGEL_TRUMPET.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
