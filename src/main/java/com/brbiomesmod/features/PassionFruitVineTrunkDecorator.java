@@ -1,5 +1,6 @@
 package com.brbiomesmod.features;
 
+import com.brbiomesmod.block.PassionfruitVine;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.VineBlock;
 import net.minecraft.util.math.BlockPos;
@@ -29,25 +30,25 @@ public class PassionFruitVineTrunkDecorator extends TreeDecorator {
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos = pos.west();
                 if (Feature.isAirAt(world, blockpos)) {
-                    this.func_227424_a_(world, blockpos, VineBlock.EAST, placed, boundingBox);
+                    this.func_227424_a_(world, blockpos, PassionfruitVine.EAST, placed, boundingBox);
                 }
             }
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos1 = pos.east();
                 if (Feature.isAirAt(world, blockpos1)) {
-                    this.func_227424_a_(world, blockpos1, VineBlock.WEST, placed, boundingBox);
+                    this.func_227424_a_(world, blockpos1, PassionfruitVine.WEST, placed, boundingBox);
                 }
             }
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos2 = pos.north();
                 if (Feature.isAirAt(world, blockpos2)) {
-                    this.func_227424_a_(world, blockpos2, VineBlock.SOUTH, placed, boundingBox);
+                    this.func_227424_a_(world, blockpos2, PassionfruitVine.SOUTH, placed, boundingBox);
                 }
             }
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos3 = pos.south();
                 if (Feature.isAirAt(world, blockpos3)) {
-                    this.func_227424_a_(world, blockpos3, VineBlock.NORTH, placed, boundingBox);
+                    this.func_227424_a_(world, blockpos3, PassionfruitVine.NORTH, placed, boundingBox);
                 }
             }
         });
