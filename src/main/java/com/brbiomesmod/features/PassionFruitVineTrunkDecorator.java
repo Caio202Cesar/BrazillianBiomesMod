@@ -1,11 +1,15 @@
 package com.brbiomesmod.features;
 
+import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import com.brbiomesmod.block.PassionfruitVine;
 import com.mojang.serialization.Codec;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.VineBlock;
+import net.minecraft.state.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.ISeedReader;
+import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.treedecorator.TreeDecorator;
 import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
@@ -30,27 +34,47 @@ public class PassionFruitVineTrunkDecorator extends TreeDecorator {
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos = pos.west();
                 if (Feature.isAirAt(world, blockpos)) {
-                    this.func_227424_a_(world, blockpos, PassionfruitVine.EAST, placed, boundingBox);
+                    this.placeVine(world, blockpos, PassionfruitVine.EAST, placed, boundingBox);
                 }
             }
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos1 = pos.east();
                 if (Feature.isAirAt(world, blockpos1)) {
-                    this.func_227424_a_(world, blockpos1, PassionfruitVine.WEST, placed, boundingBox);
+                    this.placeVine(world, blockpos1, PassionfruitVine.WEST, placed, boundingBox);
                 }
             }
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos2 = pos.north();
                 if (Feature.isAirAt(world, blockpos2)) {
-                    this.func_227424_a_(world, blockpos2, PassionfruitVine.SOUTH, placed, boundingBox);
+                    this.placeVine(world, blockpos2, PassionfruitVine.SOUTH, placed, boundingBox);
                 }
             }
             if (rand.nextInt(3) > 0) {
                 BlockPos blockpos3 = pos.south();
                 if (Feature.isAirAt(world, blockpos3)) {
-                    this.func_227424_a_(world, blockpos3, PassionfruitVine.NORTH, placed, boundingBox);
+                    this.placeVine(world, blockpos3, PassionfruitVine.NORTH, placed, boundingBox);
                 }
             }
         });
     }
+
+    private void placeCustomVine(IWorldGenerationReader world, BlockPos pos, BlockState state, Set<BlockPos> placed, MutableBoundingBox boundingBox) {
+        // Directly set your custom vine block at the position.
+        world.setBlockState(pos, state, 19);
+        placed.add(pos.toImmutable());
+        // Optionally, update boundingBox here if needed.
+    }
+
+    private void placeVine(IWorldGenerationReader world, BlockPos pos, BooleanProperty property, Set<BlockPos> placed, MutableBoundingBox boundingBox) {
+        // Get the passion fruit vine default state and apply the directional property.
+        BlockState vineState = AtlanticForestBlocks.PASSION_FRUIT_VINE.get().getDefaultState().with(property, true);
+        // Use our custom helper instead of the vanilla one.
+        this.placeCustomVine(world, pos, vineState, placed, boundingBox);
+        int i = 4;
+        for (BlockPos downPos = pos.down(); Feature.isAirAt(world, downPos) && i > 0; --i) {
+            this.placeCustomVine(world, downPos, vineState, placed, boundingBox);
+            downPos = downPos.down();
+        }
+    }
 }
+
