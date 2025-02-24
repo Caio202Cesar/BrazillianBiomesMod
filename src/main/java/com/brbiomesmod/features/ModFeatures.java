@@ -80,7 +80,15 @@ public class ModFeatures extends Features implements IFeatureConfig {
         public static final BlockClusterFeatureConfig ATLANTIC_FOREST_FLOWERS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.CATTLEYA_PURPURATA, 1)
-                        .addWeightedBlockstate(States.CATTLEYA_LADY_ACKLAND, 1),
+                        .addWeightedBlockstate(States.CATTLEYA_LADY_ACKLAND, 1)
+                        .addWeightedBlockstate(States.SILVER_VASE_BROMELIAD, 1)
+                        .addWeightedBlockstate(States.GUZMANIA_RED, 1)
+                        .addWeightedBlockstate(States.GUZMANIA_ORANGE, 1)
+                        .addWeightedBlockstate(States.GUZMANIA_PINK, 1)
+                        .addWeightedBlockstate(States.GUZMANIA_YELLOW, 1)
+                        .addWeightedBlockstate(States.AECHMEA_ALBA, 1)
+                        .addWeightedBlockstate(States.FIREBALL_NEOREGELIA, 1)
+                        .addWeightedBlockstate(States.NEOREGELIA_MARMORATA, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig ARAUCARIA_FLOWERS_CONFIG =
@@ -143,6 +151,14 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState ANGEL_TRUMPET_PINK = AtlanticForestBlocks.PINK_ANGEL_TRUMPET.get().getDefaultState();
         protected static final BlockState ANGEL_TRUMPET_SALMON = AtlanticForestBlocks.SALMON_ANGEL_TRUMPET.get().getDefaultState();
         protected static final BlockState ANGEL_TRUMPET_YELLOW = AtlanticForestBlocks.YELLOW_ANGEL_TRUMPET.get().getDefaultState();
+        protected static final BlockState GUZMANIA_RED = AtlanticForestBlocks.RED_GUZMANIA.get().getDefaultState();
+        protected static final BlockState GUZMANIA_YELLOW = AtlanticForestBlocks.YELLOW_GUZMANIA.get().getDefaultState();
+        protected static final BlockState GUZMANIA_PINK = AtlanticForestBlocks.PINK_GUZMANIA.get().getDefaultState();
+        protected static final BlockState GUZMANIA_ORANGE = AtlanticForestBlocks.ORANGE_GUZMANIA.get().getDefaultState();
+        protected static final BlockState FIREBALL_NEOREGELIA = AtlanticForestBlocks.FIREBALL_NEOREGELIA.get().getDefaultState();
+        protected static final BlockState NEOREGELIA_MARMORATA = AtlanticForestBlocks.NEOREGELIA_MARMORATA.get().getDefaultState();
+        protected static final BlockState AECHMEA_ALBA = AtlanticForestBlocks.AECHMEA_ALBA.get().getDefaultState();
+        protected static final BlockState SILVER_VASE_BROMELIAD = AtlanticForestBlocks.SILVER_VASE_BROMELIAD.get().getDefaultState();
 
     }
 }

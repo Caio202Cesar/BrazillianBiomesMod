@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/yellow_guzmania",
+    "particle": "brbiomesmod:block/yellow_guzmania"
+  }
+}

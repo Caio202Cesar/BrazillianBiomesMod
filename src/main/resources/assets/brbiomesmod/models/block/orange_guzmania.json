@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/orange_guzmania",
+    "particle": "brbiomesmod:block/orange_guzmania"
+  }
+}

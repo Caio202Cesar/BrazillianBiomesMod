@@ -17,7 +17,7 @@ public class ModBiomeGeneration {
                 JUNGLE, LUSH, WET, SPOOKY);
         addBiome(AraucariaPlateauBiome.ARAUCARIA_PLATEAU.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, DENSE, FOREST, PLATEAU,
                 RARE, CONIFEROUS, LUSH, WET, MOUNTAIN);
-        addBiome(PantanalBiome.PANTANAL.get(), BiomeManager.BiomeType.DESERT, 14, OVERWORLD, HOT, SPARSE, SAVANNA, RARE, WET, SWAMP,
+        addBiome(PantanalBiome.PANTANAL.get(), BiomeManager.BiomeType.DESERT, 15, OVERWORLD, HOT, SPARSE, SAVANNA, RARE, WET, SWAMP,
                 PLAINS, LUSH);
         addBiome(CaatingaBiome.CAATINGA.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, SPARSE, SAVANNA, DRY, SANDY);
         addBiome(DunasRestingaBiome.DUNAS_RESTINGA.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, DENSE, SANDY);
