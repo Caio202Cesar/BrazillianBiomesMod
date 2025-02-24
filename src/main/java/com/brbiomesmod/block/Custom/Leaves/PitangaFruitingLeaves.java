@@ -1,7 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -21,8 +20,8 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class PitangaLeaves extends LeavesBlock implements IForgeShearable {
-    public PitangaLeaves() {
+public class PitangaFruitingLeaves extends LeavesBlock implements IForgeShearable {
+    public PitangaFruitingLeaves() {
         super(Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                 .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
     }
@@ -46,7 +45,7 @@ public class PitangaLeaves extends LeavesBlock implements IForgeShearable {
         double chance = 0.6;
 
         if (random.nextDouble() < chance) {
-            worldIn.setBlockState(pos, AtlanticForestBlocks.PITANGA_FLOWERING_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, AtlanticForestBlocks.PITANGA_LEAVES.get().getDefaultState());
 
         }
     }

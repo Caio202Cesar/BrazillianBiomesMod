@@ -45,7 +45,7 @@ public class FruitingCactusPlant extends BushBlock {
 
             worldIn.setBlockState(pos, CaatingaBlocks.TURK_TURBAN_CACTUS.get().getDefaultState());
 
-            worldIn.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_HIT, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
         }
         return ActionResultType.SUCCESS;

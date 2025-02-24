@@ -100,6 +100,10 @@ public class AtlanticForestBlocks {
             ModPlanks::new);
     public static final RegistryObject<Block> CAMBUCI_LEAVES = registerBlock("cambuci_leaves",
             CambuciLeaves::new);
+    public static final RegistryObject<Block> CAMBUCI_FLOWERING_LEAVES = registerBlock("cambuci_flowering_leaves",
+            CambuciFloweringLeaves::new);
+    public static final RegistryObject<Block> CAMBUCI_FRUITING_LEAVES = registerBlock("cambuci_fruiting_leaves",
+            CambuciFruitingLeaves::new);
     public static final RegistryObject<Block> CAMBUCI_SAPLING = registerBlock("cambuci_sapling",
             CambuciSapling::new);
     public static final RegistryObject<Block> CAMBUCI_SLAB = registerBlock("cambuci_slab",
@@ -278,8 +282,16 @@ public class AtlanticForestBlocks {
                     .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> PITANGA_LEAVES = registerBlock("pitanga_leaves",
             PitangaLeaves::new);
+    public static final RegistryObject<Block> PITANGA_FLOWERING_LEAVES = registerBlock("pitanga_flowering_leaves",
+            PitangaFloweringLeaves::new);
+    public static final RegistryObject<Block> PITANGA_FRUITING_LEAVES = registerBlock("pitanga_fruiting_leaves",
+            PitangaFruitingLeaves::new);
     public static final RegistryObject<Block> BLACK_PITANGA_LEAVES = registerBlock("pitanga_black_leaves",
             BlackPitangaLeaves::new);
+    public static final RegistryObject<Block> BLACK_PITANGA_FLOWERING_LEAVES = registerBlock("pitanga_black_flowering_leaves",
+            BlackPitangaFloweringLeaves::new);
+    public static final RegistryObject<Block> BLACK_PITANGA_FRUITING_LEAVES = registerBlock("pitanga_black_fruiting_leaves",
+            BlackPitangaFruitingLeaves::new);
     public static final RegistryObject<Block> PITANGA_SAPLING = registerBlock("pitanga_sapling",
             PitangaSapling::new);
     @SuppressWarnings("deprecation")
