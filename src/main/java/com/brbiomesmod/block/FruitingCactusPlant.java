@@ -1,5 +1,6 @@
 package com.brbiomesmod.block;
 
+import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.BlockState;
@@ -32,6 +33,30 @@ public class FruitingCactusPlant extends BushBlock {
     public FruitingCactusPlant() {
         super(Properties.from(Blocks.SWEET_BERRY_BUSH).tickRandomly().hardnessAndResistance(0.1f)
                 .sound(SoundType.CORAL).harvestTool(ToolType.HOE));
+    }
+
+    public boolean ticksRandomly(BlockState state) {
+        return true;
+    }
+
+    /**
+     * Performs a random tick on a block.
+     *
+     * @param state
+     * @param worldIn
+     * @param pos
+     * @param random
+     */
+    @Override
+    public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        super.randomTick(state, worldIn, pos, random);
+
+        double chance = 0.09;
+
+        if (random.nextDouble() < chance) {
+            worldIn.setBlockState(pos, CaatingaBlocks.TURK_TURBAN_CACTUS.get().getDefaultState());
+
+        }
     }
 
     @Override
