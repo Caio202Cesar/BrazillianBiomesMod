@@ -1,9 +1,7 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -13,12 +11,16 @@ import net.minecraftforge.common.IForgeShearable;
 import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
+import java.util.function.Supplier;
 
 public class CambuciFloweringLeaves extends LeavesBlock implements IForgeShearable {
-    public CambuciFloweringLeaves() {
-        super(Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
+    private final Supplier<Block> nextStage;
+
+    public CambuciFloweringLeaves(AbstractBlock.Properties properties, Supplier<Block> nextStage) {
+        super(properties);
+        this.nextStage = nextStage;
     }
+
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -34,13 +36,14 @@ public class CambuciFloweringLeaves extends LeavesBlock implements IForgeShearab
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        super.randomTick(state, worldIn, pos, random);
+        if (nextStage != null && random.nextInt(5) == 0) {
 
-        double chance = 0.6;
+        int distance = state.get(LeavesBlock.DISTANCE);
+        boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-        if (random.nextDouble() < chance) {
-            worldIn.setBlockState(pos, AtlanticForestBlocks.CAMBUCI_FRUITING_LEAVES.get().getDefaultState());
+        BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
+            worldIn.setBlockState(pos, newState, 2);
         }
     }
 

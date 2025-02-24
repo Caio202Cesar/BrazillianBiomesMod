@@ -96,11 +96,14 @@ public class AtlanticForestBlocks {
     public static final RegistryObject<Block> CAMBUCI_PLANKS = registerBlock("cambuci_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> CAMBUCI_LEAVES = registerBlock("cambuci_leaves",
-            CambuciLeaves::new);
+            () -> new CambuciLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.CAMBUCI_FLOWERING_LEAVES));
     public static final RegistryObject<Block> CAMBUCI_FLOWERING_LEAVES = registerBlock("cambuci_flowering_leaves",
-            CambuciFloweringLeaves::new);
+            () -> new CambuciFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.CAMBUCI_FRUITING_LEAVES));
     public static final RegistryObject<Block> CAMBUCI_FRUITING_LEAVES = registerBlock("cambuci_fruiting_leaves",
-            CambuciFruitingLeaves::new);
+            () -> new CambuciFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.CAMBUCI_LEAVES));
     public static final RegistryObject<Block> CAMBUCI_SAPLING = registerBlock("cambuci_sapling",
             CambuciSapling::new);
     public static final RegistryObject<Block> CAMBUCI_SLAB = registerBlock("cambuci_slab",
