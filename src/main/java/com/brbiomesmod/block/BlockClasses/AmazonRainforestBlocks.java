@@ -229,6 +229,34 @@ public class AmazonRainforestBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    public static final RegistryObject<Block> SOMBREIRO_LOG = registerBlock("sombreiro_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> SOMBREIRO_LEAVES = registerBlock("sombreiro_leaves",
+            CamuCamuLeaves::new);
+    public static final RegistryObject<Block> SOMBREIRO_PLANKS = registerBlock("sombreiro_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> SOMBREIRO_SAPLING = registerBlock("sombreiro_sapling",
+            CamuCamuSapling::new);
+    public static final RegistryObject<Block> SOMBREIRO_WOOD = registerBlock("sombreiro_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> SOMBREIRO_SLAB = registerBlock("sombreiro_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> SOMBREIRO_STAIRS = registerBlock("sombreiro_stairs",
+            () -> new StairsBlock(() -> SOMBREIRO_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> SOMBREIRO_FENCE = registerBlock("sombreiro_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> SOMBREIRO_FENCE_GATE = registerBlock("sombreiro_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_SOMBREIRO_SAPLING = BLOCKS.register("potted_sombreiro_sapling",
+            () -> new FlowerPotBlock(AmazonRainforestBlocks.SOMBREIRO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+
     public static final RegistryObject<Block> CASSAVA_PLANT = registerBlock("cassava_plant",
             CassavaPlant::new);
     public static final  RegistryObject<Block> CASSAVA_CROP = BLOCKS.register("cassava_crop",
