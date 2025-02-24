@@ -51,24 +51,6 @@ public class PitangaLeaves extends LeavesBlock implements IForgeShearable {
         }
     }
 
-    @Override
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        if (!worldIn.isRemote) {
-            Random random = new Random();
-            double chance = 0.17;
-
-            if (random.nextDouble() < chance) {
-                ItemStack itemStack = new ItemStack(ModItems.PITANGA.get());
-                ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
-
-                worldIn.addEntity(itemEntity);
-
-                worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
-            }
-        }
-        return ActionResultType.SUCCESS;
-    }
-
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;
     }

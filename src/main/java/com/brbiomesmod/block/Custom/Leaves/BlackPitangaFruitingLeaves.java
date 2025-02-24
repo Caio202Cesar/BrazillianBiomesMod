@@ -1,6 +1,7 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
+import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -20,8 +21,8 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class PitangaFruitingLeaves extends LeavesBlock implements IForgeShearable {
-    public PitangaFruitingLeaves() {
+public class BlackPitangaFruitingLeaves extends LeavesBlock implements IForgeShearable {
+    public BlackPitangaFruitingLeaves() {
         super(Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                 .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
     }
@@ -45,7 +46,7 @@ public class PitangaFruitingLeaves extends LeavesBlock implements IForgeShearabl
         double chance = 0.2;
 
         if (random.nextDouble() < chance) {
-            worldIn.setBlockState(pos, AtlanticForestBlocks.PITANGA_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, AtlanticForestBlocks.BLACK_PITANGA_LEAVES.get().getDefaultState());
 
         }
     }
@@ -54,12 +55,12 @@ public class PitangaFruitingLeaves extends LeavesBlock implements IForgeShearabl
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            ItemStack itemStack = new ItemStack(ModItems.PITANGA.get());
+            ItemStack itemStack = new ItemStack(ModItems.BLACK_PITANGA.get());
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, AtlanticForestBlocks.PITANGA_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, AtlanticForestBlocks.BLACK_PITANGA_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
