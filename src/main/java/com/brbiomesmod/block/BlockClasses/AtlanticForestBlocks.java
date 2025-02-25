@@ -2,8 +2,11 @@ package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
-import com.brbiomesmod.block.Custom.JabuticabaFruitingLog;
+import com.brbiomesmod.block.Custom.Log.JabuticabaFloweringLog;
+import com.brbiomesmod.block.Custom.Log.JabuticabaFruitingLog;
 import com.brbiomesmod.block.Custom.Leaves.*;
+import com.brbiomesmod.block.Custom.Log.JabuticabaLog;
+import com.brbiomesmod.block.Custom.Log.ModLogs;
 import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -58,11 +61,11 @@ public class AtlanticForestBlocks {
 
 
     public static final RegistryObject<Block> JABUTICABA_LOG = registerBlock("jabuticaba_log",
-            ModLogs::new);
+            JabuticabaLog::new);
     public static final RegistryObject<Block> JABUTICABA_WOOD = registerBlock("jabuticaba_wood",
             ModLogs::new);
     public static final RegistryObject<Block> JABUTICABA_FLOWERING_LOG = registerBlock("jabuticaba_flowering_log",
-            ModLogs::new);
+            JabuticabaFloweringLog::new);
     public static final RegistryObject<Block> JABUTICABA_FRUITING_LOG = registerBlock("jabuticaba_fruiting_log",
             JabuticabaFruitingLog::new);
     public static final RegistryObject<Block> JABUTICABA_LEAVES = registerBlock("jabuticaba_leaves",
@@ -280,7 +283,6 @@ public class AtlanticForestBlocks {
     public static final RegistryObject<Block> EUGENIA_FENCE_GATE = registerBlock("eugenia_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
     public static final RegistryObject<Block> PITANGA_LEAVES = registerBlock("pitanga_leaves",
             () -> new PitangaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.PITANGA_FLOWERING_LEAVES));
@@ -290,7 +292,6 @@ public class AtlanticForestBlocks {
     public static final RegistryObject<Block> PITANGA_FRUITING_LEAVES = registerBlock("pitanga_fruiting_leaves",
             () -> new PitangaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.PITANGA_LEAVES));
-
     public static final RegistryObject<Block> BLACK_PITANGA_LEAVES = registerBlock("pitanga_black_leaves",
             () -> new BlackPitangaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.BLACK_PITANGA_FLOWERING_LEAVES));
@@ -300,7 +301,6 @@ public class AtlanticForestBlocks {
     public static final RegistryObject<Block> BLACK_PITANGA_FRUITING_LEAVES = registerBlock("pitanga_black_fruiting_leaves",
             () -> new BlackPitangaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.BLACK_PITANGA_LEAVES));
-
     public static final RegistryObject<Block> PITANGA_SAPLING = registerBlock("pitanga_sapling",
             PitangaSapling::new);
     @SuppressWarnings("deprecation")

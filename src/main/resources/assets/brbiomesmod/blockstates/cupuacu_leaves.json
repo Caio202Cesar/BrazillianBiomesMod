@@ -1,10 +1,7 @@
 {
-  "variants":{
-    "":[
-      {"model": "brbiomesmod:block/cupuacu_leaves", "weight": 6},
-      {"model": "brbiomesmod:block/cupuacu_fruiting_leaves", "weight": 1}
-    ]
-  }}
-
-
-
+  "variants": {
+    "": {
+      "model": "brbiomesmod:block/cupuacu_leaves"
+    }
+  }
+}

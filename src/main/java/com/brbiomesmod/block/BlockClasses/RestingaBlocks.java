@@ -3,6 +3,7 @@ package com.brbiomesmod.block.BlockClasses;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
 import com.brbiomesmod.block.Custom.Leaves.*;
+import com.brbiomesmod.block.Custom.Log.ModLogs;
 import com.brbiomesmod.block.Saplings.CashewSapling;
 import com.brbiomesmod.block.Saplings.MangabaSapling;
 import com.brbiomesmod.block.Saplings.MonkeyCajaranaSapling;

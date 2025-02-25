@@ -1,9 +1,7 @@
-package com.brbiomesmod.block;
+package com.brbiomesmod.block.Custom.Log;
 
 import net.minecraft.block.*;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.util.DamageSource;

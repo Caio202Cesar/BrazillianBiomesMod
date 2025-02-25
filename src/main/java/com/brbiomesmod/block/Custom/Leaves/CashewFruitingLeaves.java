@@ -42,7 +42,7 @@ public class CashewFruitingLeaves extends LeavesBlock implements IForgeShearable
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(10) == 2) {
+        if (nextStage != null && random.nextInt(15) == 0) {
 
             int dropCount = 1;
 

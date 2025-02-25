@@ -3,6 +3,7 @@ package com.brbiomesmod.block.BlockClasses;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
 import com.brbiomesmod.block.Custom.Leaves.*;
+import com.brbiomesmod.block.Custom.Log.ModLogs;
 import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -98,7 +99,11 @@ public class AmazonRainforestBlocks {
 
     //Cupuacu and Guarana trunk is made of Jungle Log
     public static final RegistryObject<Block> CUPUACU_LEAVES = registerBlock("cupuacu_leaves",
-            CupuacuLeaves::new);
+            () -> new CupuacuLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AmazonRainforestBlocks.CUPUACU_FRUITING_LEAVES));
+    public static final RegistryObject<Block> CUPUACU_FRUITING_LEAVES = registerBlock("cupuacu_fruiting_leaves",
+            () -> new CupuacuFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AmazonRainforestBlocks.CUPUACU_FRUITING_LEAVES));
     public static final RegistryObject<Block> CUPUACU_SAPLING = registerBlock("cupuacu_sapling",
             CupuacuSapling::new);
     @SuppressWarnings("deprecation")
@@ -176,7 +181,14 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> BACURI_LOG = registerBlock("bacuri_log",
             ModLogs::new);
     public static final RegistryObject<Block> BACURI_LEAVES = registerBlock("bacuri_leaves",
-            BacuriLeaves::new);
+            () -> new BacuriLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AmazonRainforestBlocks.BACURI_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> BACURI_FLOWERING_LEAVES = registerBlock("bacuri_flowering_leaves",
+            () -> new BacuriFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AmazonRainforestBlocks.BACURI_FRUITING_LEAVES));
+    public static final RegistryObject<Block> BACURI_FRUITING_LEAVES = registerBlock("bacuri_fruiting_leaves",
+            () -> new BacuriFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AmazonRainforestBlocks.BACURI_LEAVES));
     public static final RegistryObject<Block> BACURI_PLANKS = registerBlock("bacuri_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> BACURI_SAPLING = registerBlock("bacuri_sapling",
@@ -204,7 +216,11 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> CAMU_CAMU_LOG = registerBlock("camu_camu_log",
             ModLogs::new);
     public static final RegistryObject<Block> CAMU_CAMU_LEAVES = registerBlock("camu_camu_leaves",
-            CamuCamuLeaves::new);
+            () -> new CamuCamuLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AmazonRainforestBlocks.CAMU_CAMU_FRUITING_LEAVES));
+    public static final RegistryObject<Block> CAMU_CAMU_FRUITING_LEAVES = registerBlock("camu_camu_fruiting_leaves",
+            () -> new CamuCamuLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AmazonRainforestBlocks.CAMU_CAMU_LEAVES));
     public static final RegistryObject<Block> CAMU_CAMU_PLANKS = registerBlock("camu_camu_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> CAMU_CAMU_SAPLING = registerBlock("camu_camu_sapling",
@@ -232,7 +248,7 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> SOMBREIRO_LOG = registerBlock("sombreiro_log",
             ModLogs::new);
     public static final RegistryObject<Block> SOMBREIRO_LEAVES = registerBlock("sombreiro_leaves",
-            CamuCamuLeaves::new);
+            ModLeaves::new);
     public static final RegistryObject<Block> SOMBREIRO_PLANKS = registerBlock("sombreiro_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> SOMBREIRO_SAPLING = registerBlock("sombreiro_sapling",

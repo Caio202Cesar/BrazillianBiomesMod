@@ -1,4 +1,4 @@
-package com.brbiomesmod.block;
+package com.brbiomesmod.block.Custom.Log;
 
 import net.minecraft.block.*;
 import net.minecraft.util.Direction;

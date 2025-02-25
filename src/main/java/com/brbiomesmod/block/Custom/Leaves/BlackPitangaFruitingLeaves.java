@@ -41,7 +41,7 @@ public class BlackPitangaFruitingLeaves extends LeavesBlock implements IForgeShe
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(10) == 0) {
+        if (nextStage != null && random.nextInt(15) == 0) {
 
             int dropCount = 2 + random.nextInt(3);
 

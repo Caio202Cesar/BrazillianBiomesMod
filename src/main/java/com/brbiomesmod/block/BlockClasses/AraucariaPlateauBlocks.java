@@ -2,18 +2,15 @@ package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
-import com.brbiomesmod.block.Custom.Leaves.FeijoaLeaves;
-import com.brbiomesmod.block.Custom.Leaves.RioGrandeCherryLeaves;
+import com.brbiomesmod.block.Custom.Leaves.*;
+import com.brbiomesmod.block.Custom.Log.ModLogs;
 import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
-import net.minecraft.advancements.criterion.MobEffectsPredicate;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.potion.Effect;
 import net.minecraft.potion.Effects;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -121,7 +118,14 @@ public class AraucariaPlateauBlocks {
     public static final RegistryObject<Block> FEIJOA_WOOD = registerBlock("feijoa_wood",
             ModLogs::new);
     public static final RegistryObject<Block> FEIJOA_LEAVES = registerBlock("feijoa_leaves",
-            FeijoaLeaves::new);
+            () -> new FeijoaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AraucariaPlateauBlocks.FEIJOA_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> FEIJOA_FLOWERING_LEAVES = registerBlock("feijoa_flowering_leaves",
+            () -> new FeijoaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AraucariaPlateauBlocks.FEIJOA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> FEIJOA_FRUITING_LEAVES = registerBlock("feijoa_fruiting_leaves",
+            () -> new FeijoaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AraucariaPlateauBlocks.FEIJOA_LEAVES));
     public static final RegistryObject<Block> FEIJOA_PLANKS = registerBlock("feijoa_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> FEIJOA_SAPLING = registerBlock("feijoa_sapling",
@@ -145,7 +149,14 @@ public class AraucariaPlateauBlocks {
 
 
     public static final RegistryObject<Block> RIO_GRANDE_CHERRY_LEAVES = registerBlock("rio_grande_cherry_leaves",
-            RioGrandeCherryLeaves::new);
+            () -> new RioGrandeCherryLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AraucariaPlateauBlocks.RIO_GRANDE_CHERRY_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> RIO_GRANDE_CHERRY_FLOWERING_LEAVES = registerBlock("rio_grande_cherry_flowering_leaves",
+            () -> new RioGrandeCherryFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AraucariaPlateauBlocks.RIO_GRANDE_CHERRY_FRUITING_LEAVES));
+    public static final RegistryObject<Block> RIO_GRANDE_CHERRY_FRUITING_LEAVES = registerBlock("rio_grande_cherry_fruiting_leaves",
+            () -> new RioGrandeCherryFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AraucariaPlateauBlocks.RIO_GRANDE_CHERRY_LEAVES));
     public static final RegistryObject<Block> RIO_GRANDE_CHERRY_SAPLING = registerBlock("rio_grande_cherry_sapling",
             RioGrandeCherrySapling::new);
     @SuppressWarnings("deprecation")

@@ -1,4 +1,4 @@
-package com.brbiomesmod.block.Custom;
+package com.brbiomesmod.block.Custom.Log;
 
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;

@@ -1,17 +1,14 @@
 package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.Custom.Leaves.CagaitaLeaves;
-import com.brbiomesmod.block.Custom.Leaves.KapokLeaves;
-import com.brbiomesmod.block.Custom.Leaves.WolfAppleLeaves;
-import com.brbiomesmod.block.ModLeaves;
-import com.brbiomesmod.block.ModLogs;
+import com.brbiomesmod.block.Custom.Leaves.*;
+import com.brbiomesmod.block.Custom.Log.ModLogs;
 import com.brbiomesmod.block.ModPlanks;
 import com.brbiomesmod.block.Saplings.BlackSucupiraSapling;
 import com.brbiomesmod.block.Saplings.CagaitaSapling;
 import com.brbiomesmod.block.Saplings.PinkSilkFlossSapling;
 import com.brbiomesmod.block.Saplings.WolfAppleSapling;
-import com.brbiomesmod.block.SilkFlossLog;
+import com.brbiomesmod.block.Custom.Log.SilkFlossLog;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
@@ -39,7 +36,14 @@ public class CerradoBlocks {
     public static final RegistryObject<Block> WOLF_APPLE_WOOD = registerBlock("wolf_apple_wood",
             ModLogs::new);
     public static final RegistryObject<Block> WOLF_APPLE_LEAVES = registerBlock("wolf_apple_leaves",
-            WolfAppleLeaves::new);
+            () -> new WolfAppleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), CerradoBlocks.WOLF_APPLE_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> WOLF_APPLE_FLOWERING_LEAVES = registerBlock("wolf_apple_flowering_leaves",
+            () -> new WolfAppleFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), CerradoBlocks.WOLF_APPLE_FRUITING_LEAVES));
+    public static final RegistryObject<Block> WOLF_APPLE_FRUITING_LEAVES = registerBlock("wolf_apple_fruiting_leaves",
+            () -> new WolfAppleFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), CerradoBlocks.WOLF_APPLE_LEAVES));
     public static final RegistryObject<Block> WOLF_APPLE_SAPLING = registerBlock("wolf_apple_sapling",
             WolfAppleSapling::new);
     public static final RegistryObject<Block> WOLF_APPLE_PLANKS = registerBlock("wolf_apple_planks",
