@@ -1,6 +1,7 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
+import com.brbiomesmod.block.BlockClasses.RestingaBlocks;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -19,10 +20,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class PitangaFruitingLeaves extends LeavesBlock implements IForgeShearable {
+public class CashewFruitingLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public PitangaFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+    public CashewFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -41,11 +42,11 @@ public class PitangaFruitingLeaves extends LeavesBlock implements IForgeShearabl
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(10) == 0) {
+        if (nextStage != null && random.nextInt(10) == 2) {
 
-            int dropCount = 2 + random.nextInt(3);
+            int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.PITANGA.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.CASHEW_FRUIT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -63,14 +64,14 @@ public class PitangaFruitingLeaves extends LeavesBlock implements IForgeShearabl
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 5;
+            int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.PITANGA.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.CASHEW_FRUIT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, AtlanticForestBlocks.PITANGA_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, RestingaBlocks.CASHEW_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 

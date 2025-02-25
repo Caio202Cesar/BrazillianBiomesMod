@@ -2,9 +2,7 @@ package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
-import com.brbiomesmod.block.Custom.Leaves.CashewLeaves;
-import com.brbiomesmod.block.Custom.Leaves.MangabaLeaves;
-import com.brbiomesmod.block.Custom.Leaves.MonkeyCajaranaLeaves;
+import com.brbiomesmod.block.Custom.Leaves.*;
 import com.brbiomesmod.block.Saplings.CashewSapling;
 import com.brbiomesmod.block.Saplings.MangabaSapling;
 import com.brbiomesmod.block.Saplings.MonkeyCajaranaSapling;
@@ -12,7 +10,6 @@ import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.ToolType;
@@ -39,7 +36,11 @@ public class RestingaBlocks {
     public static final RegistryObject<Block> CASHEW_PLANKS = registerBlock("cashew_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> CASHEW_LEAVES = registerBlock("cashew_leaves",
-            CashewLeaves::new);
+            () -> new CashewLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), RestingaBlocks.CASHEW_FRUITING_LEAVES));
+    public static final RegistryObject<Block> CASHEW_FRUITING_LEAVES = registerBlock("cashew_fruiting_leaves",
+            () -> new CashewFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), RestingaBlocks.CASHEW_LEAVES));
     public static final RegistryObject<Block> CASHEW_SAPLING = registerBlock("cashew_sapling",
             CashewSapling::new);
     public static final RegistryObject<Block> CASHEW_SLAB = registerBlock("cashew_slab",
@@ -60,14 +61,18 @@ public class RestingaBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> MANGABA_LEAVES = registerBlock("mangaba_leaves",
-            MangabaLeaves::new);
     public static final RegistryObject<Block> MANGABA_LOG = registerBlock("mangaba_log",
             ModLogs::new);
     public static final RegistryObject<Block> MANGABA_WOOD = registerBlock("mangaba_wood",
             ModLogs::new);
     public static final RegistryObject<Block> MANGABA_PLANKS = registerBlock("mangaba_planks",
             ModPlanks::new);
+    public static final RegistryObject<Block> MANGABA_LEAVES = registerBlock("mangaba_leaves",
+            MangabaLeaves::new);
+    public static final RegistryObject<Block> MANGABA_FLOWERING_LEAVES = registerBlock("mangaba_flowering_leaves",
+            MangabaLeaves::new);
+    public static final RegistryObject<Block> MANGABA_FRUITING_LEAVES = registerBlock("mangaba_fruiting_leaves",
+            MangabaLeaves::new);
     public static final RegistryObject<Block> MANGABA_SAPLING = registerBlock("mangaba_sapling",
             MangabaSapling::new);
     public static final RegistryObject<Block> MANGABA_SLAB = registerBlock("mangaba_slab",
