@@ -280,18 +280,27 @@ public class AtlanticForestBlocks {
     public static final RegistryObject<Block> EUGENIA_FENCE_GATE = registerBlock("eugenia_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+
     public static final RegistryObject<Block> PITANGA_LEAVES = registerBlock("pitanga_leaves",
-            PitangaLeaves::new);
+            () -> new PitangaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.PITANGA_FLOWERING_LEAVES));
     public static final RegistryObject<Block> PITANGA_FLOWERING_LEAVES = registerBlock("pitanga_flowering_leaves",
-            PitangaFloweringLeaves::new);
+            () -> new PitangaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.PITANGA_FRUITING_LEAVES));
     public static final RegistryObject<Block> PITANGA_FRUITING_LEAVES = registerBlock("pitanga_fruiting_leaves",
-            PitangaFruitingLeaves::new);
+            () -> new PitangaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.PITANGA_LEAVES));
+
     public static final RegistryObject<Block> BLACK_PITANGA_LEAVES = registerBlock("pitanga_black_leaves",
-            BlackPitangaLeaves::new);
+            () -> new BlackPitangaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.BLACK_PITANGA_FLOWERING_LEAVES));
     public static final RegistryObject<Block> BLACK_PITANGA_FLOWERING_LEAVES = registerBlock("pitanga_black_flowering_leaves",
-            BlackPitangaFloweringLeaves::new);
+            () -> new BlackPitangaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.BLACK_PITANGA_FRUITING_LEAVES));
     public static final RegistryObject<Block> BLACK_PITANGA_FRUITING_LEAVES = registerBlock("pitanga_black_fruiting_leaves",
-            BlackPitangaFruitingLeaves::new);
+            () -> new BlackPitangaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.BLACK_PITANGA_LEAVES));
+
     public static final RegistryObject<Block> PITANGA_SAPLING = registerBlock("pitanga_sapling",
             PitangaSapling::new);
     @SuppressWarnings("deprecation")

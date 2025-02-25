@@ -1,31 +1,25 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
-import com.brbiomesmod.item.ModItems;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.*;
+import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
-import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
+import java.util.function.Supplier;
 
 public class PitangaLeaves extends LeavesBlock implements IForgeShearable {
-    public PitangaLeaves() {
-        super(Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
+    private final Supplier<Block> nextStage;
+
+    public PitangaLeaves(Properties properties, Supplier<Block> nextStage) {
+        super(properties);
+        this.nextStage = nextStage;
     }
+
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -41,12 +35,14 @@ public class PitangaLeaves extends LeavesBlock implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        super.randomTick(state, worldIn, pos, random);
+        if (nextStage != null && random.nextInt(7) == 0) {
 
-        double chance = 0.6;
+        int distance = state.get(LeavesBlock.DISTANCE);
+        boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-        if (random.nextDouble() < chance) {
-            worldIn.setBlockState(pos, AtlanticForestBlocks.PITANGA_FLOWERING_LEAVES.get().getDefaultState());
+        BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
 
         }
     }

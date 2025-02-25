@@ -2,10 +2,9 @@ package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import com.brbiomesmod.item.ModItems;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -16,14 +15,16 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
-import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
+import java.util.function.Supplier;
 
 public class PitangaFruitingLeaves extends LeavesBlock implements IForgeShearable {
-    public PitangaFruitingLeaves() {
-        super(Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
+    private final Supplier<Block> nextStage;
+
+    public PitangaFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+        super(properties);
+        this.nextStage = nextStage;
     }
 
     public boolean ticksRandomly(BlockState state) {
@@ -40,13 +41,21 @@ public class PitangaFruitingLeaves extends LeavesBlock implements IForgeShearabl
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        super.randomTick(state, worldIn, pos, random);
+        if (nextStage != null && random.nextInt(10) == 0) {
 
-        double chance = 0.2;
+            int dropCount = 1 + random.nextInt(3);
 
-        if (random.nextDouble() < chance) {
-            worldIn.setBlockState(pos, AtlanticForestBlocks.PITANGA_LEAVES.get().getDefaultState());
+            ItemStack itemStack = new ItemStack(ModItems.PITANGA.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
+            worldIn.addEntity(itemEntity);
+
+        int distance = state.get(LeavesBlock.DISTANCE);
+        boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+        BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
         }
     }
 
