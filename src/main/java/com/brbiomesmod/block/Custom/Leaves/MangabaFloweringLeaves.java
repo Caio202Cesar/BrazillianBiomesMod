@@ -12,10 +12,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class MangabaLeaves extends LeavesBlock implements IForgeShearable {
+public class MangabaFloweringLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public MangabaLeaves(Properties properties, Supplier<Block> nextStage) {
+    public MangabaFloweringLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -43,7 +43,6 @@ public class MangabaLeaves extends LeavesBlock implements IForgeShearable {
         BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
             worldIn.setBlockState(pos, newState, 2);
-
         }
     }
 

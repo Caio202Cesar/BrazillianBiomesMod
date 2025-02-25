@@ -68,11 +68,14 @@ public class RestingaBlocks {
     public static final RegistryObject<Block> MANGABA_PLANKS = registerBlock("mangaba_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> MANGABA_LEAVES = registerBlock("mangaba_leaves",
-            MangabaLeaves::new);
+            () -> new MangabaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), RestingaBlocks.MANGABA_FLOWERING_LEAVES));
     public static final RegistryObject<Block> MANGABA_FLOWERING_LEAVES = registerBlock("mangaba_flowering_leaves",
-            MangabaLeaves::new);
+            () -> new MangabaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), RestingaBlocks.MANGABA_FRUITING_LEAVES));
     public static final RegistryObject<Block> MANGABA_FRUITING_LEAVES = registerBlock("mangaba_fruiting_leaves",
-            MangabaLeaves::new);
+            () -> new MangabaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), RestingaBlocks.MANGABA_LEAVES));
     public static final RegistryObject<Block> MANGABA_SAPLING = registerBlock("mangaba_sapling",
             MangabaSapling::new);
     public static final RegistryObject<Block> MANGABA_SLAB = registerBlock("mangaba_slab",
@@ -94,7 +97,11 @@ public class RestingaBlocks {
 
 
     public static final RegistryObject<Block> MONKEY_CAJARANA_LEAVES = registerBlock("monkey_cajarana_leaves",
-            MonkeyCajaranaLeaves::new);
+            () -> new MonkeyCajaranaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), RestingaBlocks.MONKEY_CAJARANA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> MONKEY_CAJARANA_FRUITING_LEAVES = registerBlock("monkey_cajarana_fruiting_leaves",
+            () -> new MonkeyCajaranaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), RestingaBlocks.MONKEY_CAJARANA_LEAVES));
     public static final RegistryObject<Block> MONKEY_CAJARANA_LOG = registerBlock("monkey_cajarana_log",
             ModLogs::new);
     public static final RegistryObject<Block> MONKEY_CAJARANA_WOOD = registerBlock("monkey_cajarana_wood",
