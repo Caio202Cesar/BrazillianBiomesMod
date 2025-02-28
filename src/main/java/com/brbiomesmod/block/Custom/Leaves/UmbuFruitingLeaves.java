@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
+import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.block.BlockClasses.AraucariaPlateauBlocks;
 import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
 import com.brbiomesmod.item.ModItems;
@@ -42,7 +43,9 @@ public class UmbuFruitingLeaves extends LeavesBlock implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(15) == 0) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
+
+        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
             int dropCount = 2 + random.nextInt(8);
 

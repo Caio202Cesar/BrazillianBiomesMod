@@ -41,7 +41,7 @@ public class MonkeyCajaranaFruitingLeaves extends LeavesBlock implements IForgeS
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(10) == 5) {
+        if (nextStage != null && random.nextInt(30) == 0) {
 
             int dropCount = 2 + random.nextInt(3);
 
