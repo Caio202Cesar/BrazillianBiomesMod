@@ -80,6 +80,7 @@ public class BrazillianBiomesMod {
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
+            LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().fontRenderer);
 
             RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.CASSAVA_CROP.get(), RenderType.getCutout());
         });

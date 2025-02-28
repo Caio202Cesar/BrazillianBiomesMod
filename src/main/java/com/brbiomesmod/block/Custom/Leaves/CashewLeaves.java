@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
+import com.brbiomesmod.Seasons.Season;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -35,7 +36,9 @@ public class CashewLeaves extends LeavesBlock implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(15) == 0) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
+
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(30) == 0) {
 
         int distance = state.get(LeavesBlock.DISTANCE);
         boolean persistent = state.get(LeavesBlock.PERSISTENT);

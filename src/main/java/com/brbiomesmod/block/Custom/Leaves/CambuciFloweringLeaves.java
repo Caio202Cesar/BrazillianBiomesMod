@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
+import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -36,7 +37,9 @@ public class CambuciFloweringLeaves extends LeavesBlock implements IForgeShearab
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(15) == 0) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
+
+        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(20) == 0) {
 
         int distance = state.get(LeavesBlock.DISTANCE);
         boolean persistent = state.get(LeavesBlock.PERSISTENT);

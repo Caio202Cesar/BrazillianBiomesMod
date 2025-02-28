@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
+import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
@@ -41,7 +42,9 @@ public class BlackPitangaFruitingLeaves extends LeavesBlock implements IForgeShe
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(15) == 0) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
+
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(10) == 0) {
 
             int dropCount = 2 + random.nextInt(3);
 
