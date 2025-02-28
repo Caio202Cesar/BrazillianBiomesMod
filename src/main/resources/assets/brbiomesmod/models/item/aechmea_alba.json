@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/aechmea_alba"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/aechmea_alba"
+  }
 }

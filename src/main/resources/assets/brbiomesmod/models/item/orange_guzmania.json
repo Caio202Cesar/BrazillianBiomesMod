@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/orange_guzmania"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/orange_guzmania"
+  }
 }
