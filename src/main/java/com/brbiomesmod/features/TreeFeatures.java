@@ -630,6 +630,15 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Sombreiro
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SOMBREIRO_TREE = register("sombreiro_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SOMBREIRO_LOG),
+                    new SimpleBlockStateProvider(States.SOMBREIRO_LEAVES),
+                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new DarkOakTrunkPlacer(6, 2, 1),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
+
 
     public static final class States {
 
