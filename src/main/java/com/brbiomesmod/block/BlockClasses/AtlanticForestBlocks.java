@@ -400,11 +400,14 @@ public class AtlanticForestBlocks {
     public static final RegistryObject<Block> SAPUCAIA_PLANKS = registerBlock("sapucaia_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> SAPUCAIA_LEAVES = registerBlock("sapucaia_leaves",
-            SapucaiaLeaves::new);
+            () -> new SapucaiaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.SAPUCAIA_FRUITING_LEAVES));
     public static final RegistryObject<Block> SAPUCAIA_FLOWERING_LEAVES = registerBlock("sapucaia_flowering_leaves",
-            SapucaiaFloweringLeaves::new);
+            () -> new SapucaiaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.SAPUCAIA_LEAVES));
     public static final RegistryObject<Block> SAPUCAIA_FRUITING_LEAVES = registerBlock("sapucaia_fruiting_leaves",
-            SapucaiaFruitingLeaves::new);
+            () -> new SapucaiaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AtlanticForestBlocks.SAPUCAIA_FLOWERING_LEAVES));
     public static final RegistryObject<Block> SAPUCAIA_SAPLING = registerBlock("sapucaia_sapling",
             SapucaiaSapling::new);
     public static final RegistryObject<Block> SAPUCAIA_SLAB = registerBlock("sapucaia_slab",

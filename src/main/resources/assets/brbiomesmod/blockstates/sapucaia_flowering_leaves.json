@@ -1,0 +1,10 @@
+{
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/sapucaia_leaves",
+        "weight": 6},
+      {"model": "brbiomesmod:block/sapucaia_flowering_leaves",
+        "weight": 2}
+    ]
+  }
+}
