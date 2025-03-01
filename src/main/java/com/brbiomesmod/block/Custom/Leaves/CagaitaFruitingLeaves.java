@@ -1,6 +1,7 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.CerradoBlocks;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -19,10 +20,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class CamuCamuFruitingLeaves extends LeavesBlock implements IForgeShearable {
+public class CagaitaFruitingLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public CamuCamuFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
+    public CagaitaFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -41,11 +42,11 @@ public class CamuCamuFruitingLeaves extends LeavesBlock implements IForgeShearab
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(30) == 0) {
+        if (nextStage != null && random.nextInt(25) == 0) {
 
-            int dropCount = 3;
+            int dropCount = 5;
 
-            ItemStack itemStack = new ItemStack(ModItems.CAMU_CAMU_FRUITS.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.CAGAITA.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -65,12 +66,12 @@ public class CamuCamuFruitingLeaves extends LeavesBlock implements IForgeShearab
 
             int dropCount = 5;
 
-            ItemStack itemStack = new ItemStack(ModItems.CAMU_CAMU_FRUITS.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.CAGAITA.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, AmazonRainforestBlocks.CAMU_CAMU_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, CerradoBlocks.CAGAITA_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 

@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:cagaita_leaves"
+              "name": "brbiomesmod:camu_camu_flowering_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:cagaita_sapling"
+              "name": "brbiomesmod:camu_camu_sapling"
             }
           ]
         }

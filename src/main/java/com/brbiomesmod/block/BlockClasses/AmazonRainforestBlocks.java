@@ -217,9 +217,12 @@ public class AmazonRainforestBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CAMU_CAMU_LEAVES = registerBlock("camu_camu_leaves",
             () -> new CamuCamuLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AmazonRainforestBlocks.CAMU_CAMU_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> CAMU_CAMU_FLOWERING_LEAVES = registerBlock("camu_camu_flowering_leaves",
+            () -> new CamuCamuFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AmazonRainforestBlocks.CAMU_CAMU_FRUITING_LEAVES));
     public static final RegistryObject<Block> CAMU_CAMU_FRUITING_LEAVES = registerBlock("camu_camu_fruiting_leaves",
-            () -> new CamuCamuLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new CamuCamuFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AmazonRainforestBlocks.CAMU_CAMU_LEAVES));
     public static final RegistryObject<Block> CAMU_CAMU_PLANKS = registerBlock("camu_camu_planks",
             ModPlanks::new);

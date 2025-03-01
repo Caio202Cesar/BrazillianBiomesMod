@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "brbiomesmod:block/cagaita_leaves1",
-    "particle": "brbiomesmod:block/cagaita_leaves1"
-  }
-}

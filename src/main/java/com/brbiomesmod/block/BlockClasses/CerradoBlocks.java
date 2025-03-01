@@ -95,7 +95,14 @@ public class CerradoBlocks {
 
 
     public static final RegistryObject<Block> CAGAITA_LEAVES = registerBlock("cagaita_leaves",
-            CagaitaLeaves::new);
+            () -> new CagaitaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), CerradoBlocks.CAGAITA_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> CAGAITA_FLOWERING_LEAVES = registerBlock("cagaita_flowering_leaves",
+            () -> new CagaitaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), CerradoBlocks.CAGAITA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> CAGAITA_FRUITING_LEAVES = registerBlock("cagaita_fruiting_leaves",
+            () -> new CagaitaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), CerradoBlocks.CAGAITA_LEAVES));
     public static final RegistryObject<Block> CAGAITA_SAPLING = registerBlock("cagaita_sapling",
             CagaitaSapling::new);
     @SuppressWarnings("deprecation")
