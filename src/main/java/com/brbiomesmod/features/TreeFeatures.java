@@ -641,6 +641,16 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
+    //Cocoa Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COCOA_TREE = register("cocoa_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
+                    new SimpleBlockStateProvider(States.JUNGLE_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 8, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(new CocoaTreeDecorator(0.98F))).setIgnoreVines().build()));
+
+
 
     public static final class States {
 
@@ -700,6 +710,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState GUARANA_LEAVES = AmazonRainforestBlocks.GUARANA_LEAVES.get().getDefaultState();
         protected static final BlockState CUPUACU_LEAVES = AmazonRainforestBlocks.CUPUACU_LEAVES.get().getDefaultState();
         protected static final BlockState JUNGLE_LOG = Blocks.JUNGLE_LOG.getDefaultState();
+        protected static final BlockState JUNGLE_LEAVES = Blocks.JUNGLE_LEAVES.getDefaultState();
 
         protected static final BlockState BRAZILWOOD_LOG = AtlanticForestBlocks.BRAZILWOOD_LOG.get().getDefaultState();
         protected static final BlockState BRAZILWOOD_LEAVES = AtlanticForestBlocks.BRAZILWOOD_LEAVES.get().getDefaultState();
@@ -778,7 +789,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(KAPOK_TREE.withChance(0.6F),
-                            CUPUACU_TREE.withChance(0.5F), JUNGLE_TREE.withChance(0.5F), CAMU_CAMU_TREE.withChance(0.5F), SOMBREIRO_TREE.withChance(0.2F)),
+                            CUPUACU_TREE.withChance(0.5F), COCOA_TREE.withChance(0.5F), CAMU_CAMU_TREE.withChance(0.5F), SOMBREIRO_TREE.withChance(0.2F)),
                             SHARINGA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
