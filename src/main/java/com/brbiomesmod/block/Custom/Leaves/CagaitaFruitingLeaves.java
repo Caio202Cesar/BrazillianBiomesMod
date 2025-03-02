@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
+import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
 import com.brbiomesmod.block.BlockClasses.CerradoBlocks;
 import com.brbiomesmod.item.ModItems;
@@ -42,7 +43,7 @@ public class CagaitaFruitingLeaves extends LeavesBlock implements IForgeShearabl
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(25) == 0) {
+        if (nextStage != null && random.nextInt(5) == 0) {
 
             int dropCount = 5;
 
