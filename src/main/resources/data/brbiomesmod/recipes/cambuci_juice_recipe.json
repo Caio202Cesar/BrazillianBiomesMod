@@ -8,14 +8,14 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:mangaba_fruits"
+      "item": "brbiomesmod:cambuci"
     },
     "W": {
       "item": "minecraft:glass_bottle"
     }
   },
   "result": {
-    "item": "brbiomesmod:mangaba_juice",
+    "item": "brbiomesmod:cambuci_juice",
     "count": 1
   }
 }

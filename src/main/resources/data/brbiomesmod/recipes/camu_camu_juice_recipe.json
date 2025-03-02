@@ -8,14 +8,14 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:mangaba_fruits"
+      "item": "brbiomesmod:camu_camu_fruits"
     },
     "W": {
       "item": "minecraft:glass_bottle"
     }
   },
   "result": {
-    "item": "brbiomesmod:mangaba_juice",
+    "item": "brbiomesmod:camu_camu_juice",
     "count": 1
   }
 }

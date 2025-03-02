@@ -8,14 +8,14 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:mangaba_fruits"
+      "item": "brbiomesmod:pineapple_guava"
     },
     "W": {
       "item": "minecraft:glass_bottle"
     }
   },
   "result": {
-    "item": "brbiomesmod:mangaba_juice",
+    "item": "brbiomesmod:feijoa_juice",
     "count": 1
   }
 }
