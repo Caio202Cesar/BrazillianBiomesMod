@@ -1,0 +1,13 @@
+{
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/sombreiro_leaves"},
+      {"model": "brbiomesmod:block/sombreiro_flowering_leaves"},
+      {"model": "brbiomesmod:block/sombreiro_fruiting_leaves"}
+    ]
+  }
+}
+
+
+
+

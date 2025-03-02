@@ -255,7 +255,7 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> SOMBREIRO_PLANKS = registerBlock("sombreiro_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> SOMBREIRO_SAPLING = registerBlock("sombreiro_sapling",
-            CamuCamuSapling::new);
+            SombreiroSapling::new);
     public static final RegistryObject<Block> SOMBREIRO_WOOD = registerBlock("sombreiro_wood",
             ModLogs::new);
     public static final RegistryObject<Block> SOMBREIRO_SLAB = registerBlock("sombreiro_slab",

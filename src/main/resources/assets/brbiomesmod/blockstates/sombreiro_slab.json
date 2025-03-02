@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/sombreiro_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/sombreiro_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/sombreiro_slab_top"
+    }
+  }
+}

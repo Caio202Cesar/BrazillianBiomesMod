@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/sombreiro_leaves",
+    "particle": "brbiomesmod:block/sombreiro_leaves"
+  }
+}
