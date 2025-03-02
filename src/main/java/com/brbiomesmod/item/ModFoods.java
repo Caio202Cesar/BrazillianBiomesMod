@@ -47,5 +47,6 @@ public class ModFoods extends Foods {
             .effect(new EffectInstance(Effects.SPEED, 2400, 0), 1.0F)
             .effect(new EffectInstance(Effects.JUMP_BOOST, 2400, 0), 1.0F).build();
     public static final Food PASSIONFRUIT = (new Food.Builder()).hunger(5).saturation(0.4F).build();
+    public static final Food FRUIT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
 
 }

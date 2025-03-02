@@ -3,10 +3,7 @@ package com.brbiomesmod.item;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
 import com.brbiomesmod.block.BlockClasses.PampasBlocks;
-import com.brbiomesmod.item.custom.BrazilnutFruit;
-import com.brbiomesmod.item.custom.CashewFruit;
-import com.brbiomesmod.item.custom.MateItem;
-import com.brbiomesmod.item.custom.SapucaiaFruit;
+import com.brbiomesmod.item.custom.*;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -125,6 +122,37 @@ public class ModItems {
 
     public static final RegistryObject<Item> PASSIONFRUIT = ITEMS.register("passionfruit",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.PASSIONFRUIT)));
+
+    public static final RegistryObject<Item> PITANGA_JUICE = ITEMS.register("pitanga_juice",
+            () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
+                    .food(ModFoods.FRUIT_JUICE)));
+    public static final RegistryObject<Item> BLACK_PITANGA_JUICE = ITEMS.register("black_pitanga_juice",
+            () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
+                    .food(ModFoods.FRUIT_JUICE)));
+    public static final RegistryObject<Item> CASHEW_JUICE = ITEMS.register("cashew_juice",
+            () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
+                    .food(ModFoods.FRUIT_JUICE)));
+    public static final RegistryObject<Item> FEIJOA_JUICE = ITEMS.register("feijoa_juice",
+            () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
+                    .food(ModFoods.FRUIT_JUICE)));
+    public static final RegistryObject<Item> CAMBUCI_JUICE = ITEMS.register("cambuci_juice",
+            () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
+                    .food(ModFoods.FRUIT_JUICE)));
+    public static final RegistryObject<Item> JABUTICABA_JUICE = ITEMS.register("jabuticaba_juice",
+            () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
+                    .food(ModFoods.FRUIT_JUICE)));
+    public static final RegistryObject<Item> PASSIONFRUIT_JUICE = ITEMS.register("passionfruit_juice",
+            () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
+                    .food(ModFoods.FRUIT_JUICE)));
+    public static final RegistryObject<Item> MANGABA_JUICE = ITEMS.register("mangaba_juice",
+            () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
+                    .food(ModFoods.FRUIT_JUICE)));
+    public static final RegistryObject<Item> RIO_GRANDE_CHERRY_JUICE = ITEMS.register("rio_grande_cherry_juice",
+            () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
+                    .food(ModFoods.FRUIT_JUICE)));
+
+    public static final RegistryObject<Item> BACURI_PASTE = ITEMS.register("bacuri_paste",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.BACURI_PASTE)));
 
     //Materials
     public static final RegistryObject<Item> TOURMALINE_PARAIBA = ITEMS.register("tourmaline_paraiba",
