@@ -156,6 +156,9 @@ public class ModItems {
     public static final RegistryObject<Item> CUPUACU_JUICE = ITEMS.register("cupuacu_juice",
             () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
                     .food(ModFoods.FRUIT_JUICE)));
+    public static final RegistryObject<Item> UMBU_JUICE = ITEMS.register("umbu_juice",
+            () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
+                    .food(ModFoods.FRUIT_JUICE)));
 
     public static final RegistryObject<Item> BACURI_PASTE = ITEMS.register("bacuri_paste",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.BACURI_PASTE)));
