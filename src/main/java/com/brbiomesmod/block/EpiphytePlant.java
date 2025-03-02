@@ -9,9 +9,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
 
-public class EpiphytePlant extends Block {
+public class EpiphytePlant extends BushBlock {
     public EpiphytePlant() {
         super(AbstractBlock.Properties.from(Blocks.CORNFLOWER).tickRandomly().zeroHardnessAndResistance()
                 .sound(SoundType.PLANT).doesNotBlockMovement().notSolid().harvestTool(ToolType.HOE));
@@ -54,4 +55,7 @@ public class EpiphytePlant extends Block {
         return 60;
     }
 
+    public PlantType getPlantType(IBlockReader world, BlockPos pos) {
+        return PlantType.CAVE;
+    }
 }

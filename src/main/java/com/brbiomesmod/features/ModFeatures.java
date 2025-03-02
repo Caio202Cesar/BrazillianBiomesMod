@@ -38,9 +38,9 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.IPOMAEA_PES_CAPRAE_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
 
-    public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_FLOWERS = register("atlantic_forest_orchids",
+    public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_FLOWERS = register("atlantic_forest_flowers",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.ATLANTIC_FOREST_FLOWERS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(20));
 
     public static final ConfiguredFeature<?, ?> ARAUCARIA_FOREST_FLOWERS = register("araucaria_forest_orchids",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.ARAUCARIA_FLOWERS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
@@ -48,7 +48,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> XANANA_PATCH = register("xanana_patch",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.XANANA_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
-                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(12));
 
     public static final ConfiguredFeature<?, ?> PAMPAS_PLAINS_FLOWER_PATCH = register("pampas_plains_flower_patch",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.PAMPAS_FLOWER_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
