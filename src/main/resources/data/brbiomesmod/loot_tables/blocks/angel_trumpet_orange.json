@@ -1,21 +1,15 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "brbiomesmod:blocks/angel_trumpet_orange",
   "pools": [
     {
-      "rolls": 1.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
+      "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:blocks/angel_trumpet_orange",
+          "name": "brbiomesmod:angel_trumpet_orange",
           "conditions": [
             {
-              "block": "brbiomesmod:blocks/angel_trumpet_orange",
+              "block": "brbiomesmod:angel_trumpet_orange",
               "condition": "minecraft:block_state_property",
               "properties": {
                 "half": "lower"

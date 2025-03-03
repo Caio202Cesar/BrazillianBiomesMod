@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:block/aechmea_alba",
+          "name": "brbiomesmod:aechmea_alba",
           "functions": [
             {
               "function": "minecraft:set_count",

@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:block/red_guzmania",
+          "name": "brbiomesmod:red_guzmania",
           "functions": [
             {
               "function": "minecraft:set_count",

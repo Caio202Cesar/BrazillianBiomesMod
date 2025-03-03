@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:yellow_guzmania",
+          "name": "brbiomesmod:fireball_neoregelia",
           "functions": [
             {
               "function": "minecraft:set_count",

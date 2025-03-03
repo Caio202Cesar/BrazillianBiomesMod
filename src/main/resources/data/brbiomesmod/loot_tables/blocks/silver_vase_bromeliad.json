@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:yellow_guzmania",
+          "name": "brbiomesmod:silver_vase_bromeliad",
           "functions": [
             {
               "function": "minecraft:set_count",
