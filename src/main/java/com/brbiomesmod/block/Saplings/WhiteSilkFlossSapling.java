@@ -3,6 +3,7 @@ package com.brbiomesmod.block.Saplings;
 import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -14,6 +15,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 public class WhiteSilkFlossSapling extends SaplingBlock {
@@ -37,10 +39,21 @@ public class WhiteSilkFlossSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class WhiteSilkFlossTree extends Tree {
+    private static class WhiteSilkFlossTree extends BigTree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             return TreeFeatures.WHITE_SILK_FLOSS_TREE;
+        }
+
+        /**
+         * Get a {@link ConfiguredFeature} of the huge variant of this tree
+         *
+         * @param rand
+         */
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            return TreeFeatures.WHITE_SILK_FLOSS_BIG_TREE;
         }
     }
 }
