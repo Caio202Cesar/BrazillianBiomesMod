@@ -908,7 +908,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PERUVIAN_PEPPER_FANCY_TREE.withChance(0.1F),
                             PERUVIAN_PEPPER_TREE.withChance(0.1F), BRAZILLIAN_PEPPER_BIG_TREE.withChance(0.01F), BRAZILLIAN_PEPPER_STOUT_TREE.withChance(0.2F)),
                             BRAZILLIAN_PEPPER_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                            .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
+                            .configure(new AtSurfaceWithExtraConfig(1, 0.1F, 2))));
 
     public static final ConfiguredFeature<?, ?> SCRUB_PINK_PEEPER_TREES = register("scrub_pink_peeper_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_PEPPER_BIG_TREE.withChance(0.5F),
@@ -922,8 +922,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_UPPER_TREES = register("atlantic_forest_upper_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.1F),
-                    JEQUITIBA_TREE.withChance(0.1F), BRAZILLIAN_SASSAFRAS_TREE.withChance(0.4F), BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.5F),
-                            SILVER_CECROPIA_TREE.withChance(0.1F), SAPUCAIA_TREE.withChance(0.089F), BRAZILLIAN_ROSEWOOD_TREE.withChance(0.3F)),
+                    JEQUITIBA_TREE.withChance(0.1F), BRAZILLIAN_SASSAFRAS_TREE.withChance(0.1F), BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.1F),
+                            SILVER_CECROPIA_TREE.withChance(0.1F), SAPUCAIA_TREE.withChance(0.1F), BRAZILLIAN_ROSEWOOD_TREE.withChance(0.3F)),
                             PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(12, 0.0F, 1))));
 

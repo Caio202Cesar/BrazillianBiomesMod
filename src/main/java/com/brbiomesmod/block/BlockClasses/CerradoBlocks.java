@@ -118,7 +118,14 @@ public class CerradoBlocks {
     public static final RegistryObject<Block> SILK_FLOSS_THORNY_WOOD = registerBlock("silk_floss_thorny_wood",
             SilkFlossLog::new);
     public static final RegistryObject<Block> PINK_SILK_FLOSS_LEAVES = registerBlock("silk_floss_pink_leaves",
-            KapokLeaves::new);
+            () -> new PinkSilkFlossLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), CerradoBlocks.PINK_SILK_FLOSS_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> PINK_SILK_FLOSS_FLOWERING_LEAVES = registerBlock("silk_floss_pink_flowering_leaves",
+            () -> new PinkSilkFlossFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), CerradoBlocks.PINK_SILK_FLOSS_FRUITING_LEAVES));
+    public static final RegistryObject<Block> PINK_SILK_FLOSS_FRUITING_LEAVES = registerBlock("silk_floss_pink_fruiting_leaves",
+            () -> new PinkSilkFlossFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), CerradoBlocks.PINK_SILK_FLOSS_LEAVES));
     public static final RegistryObject<Block> PINK_SILK_FLOSS_SAPLING = registerBlock("silk_floss_pink_sapling",
             PinkSilkFlossSapling::new);
     @SuppressWarnings("deprecation")

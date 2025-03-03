@@ -13,10 +13,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class SapucaiaLeaves extends LeavesBlock implements IForgeShearable {
+public class WhiteSilkFlossLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public SapucaiaLeaves(Properties properties, Supplier<Block> nextStage) {
+    public WhiteSilkFlossLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -38,7 +38,7 @@ public class SapucaiaLeaves extends LeavesBlock implements IForgeShearable {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(50) == 0) {
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
         int distance = state.get(LeavesBlock.DISTANCE);
         boolean persistent = state.get(LeavesBlock.PERSISTENT);

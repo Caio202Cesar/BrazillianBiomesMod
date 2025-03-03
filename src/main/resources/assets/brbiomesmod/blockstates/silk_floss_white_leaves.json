@@ -1,12 +1,7 @@
 {
-  "variants": {
-    "":[
-      {"model": "brbiomesmod:block/silk_floss_white_leaves",
-        "weight": 7},
-      {"model": "brbiomesmod:block/silk_floss_fruiting_leaves",
-        "weight": 2},
-      {"model": "brbiomesmod:block/silk_floss_leaves",
-        "weight": 2}
-    ]
+  "variants":{
+    "": {
+        "model": "brbiomesmod:block/silk_floss_leaves"
+      }
   }
 }

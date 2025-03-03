@@ -64,6 +64,7 @@ private static Biome makeSavannaPlateauBiome(final Supplier<ConfiguredSurfaceBui
     ModDefaultBiomeFeatures.withAraucariaPlateauMyrtaceae(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withXaximPlant(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAraucariaForestFlowers(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withPinkPeeperTrees(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withEmeraldOre(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
