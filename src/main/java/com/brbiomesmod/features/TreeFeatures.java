@@ -431,30 +431,15 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE, PassionFruitVineTrunkDecorator.INSTANCE)).build()));
 
     //Jabuticaba Trees
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FRUITING_JABUTICABA_TREE = register("fruiting_jabuticaba_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_FRUITING_LOG),
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JABUTICABA_TREE = register("jabuticaba_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_LOG),
                     new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FLOWERING_JABUTICABA_TREE = register("flowering_jabuticaba_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_FLOWERING_LOG),
-                    new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new DarkOakTrunkPlacer(6, 2, 1),
-                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
-                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FRUITING_JABUTICABA_TREE_WITH_PASSIONVINE = register("passionvine_fruiting_jabuticaba_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_FRUITING_LOG),
-                    new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new DarkOakTrunkPlacer(6, 2, 1),
-                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
-                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE)).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FLOWERING_JABUTICABA_TREE_WITH_PASSIONVINE = register("passionvine_flowering_jabuticaba_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_FLOWERING_LOG),
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JABUTICABA_TREE_WITH_PASSIONVINE = register("passionvine_jabuticaba_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_LOG),
                     new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new DarkOakTrunkPlacer(6, 2, 1),
@@ -758,8 +743,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState BRAZILLIAN_ROSEWOOD_LOG = AtlanticForestBlocks.BRAZILLIAN_ROSEWOOD_LOG.get().getDefaultState();
         protected static final BlockState BRAZILLIAN_ROSEWOOD_LEAVES = AtlanticForestBlocks.BRAZILLIAN_ROSEWOOD_LEAVES.get().getDefaultState();
 
-        protected static final BlockState JABUTICABA_FRUITING_LOG = AtlanticForestBlocks.JABUTICABA_FRUITING_LOG.get().getDefaultState();
-        protected static final BlockState JABUTICABA_FLOWERING_LOG = AtlanticForestBlocks.JABUTICABA_FLOWERING_LOG.get().getDefaultState();
+        protected static final BlockState JABUTICABA_LOG = AtlanticForestBlocks.JABUTICABA_LOG.get().getDefaultState();
         protected static final BlockState JABUTICABA_LEAVES = AtlanticForestBlocks.JABUTICABA_LEAVES.get().getDefaultState();
 
         protected static final BlockState ALGARROBILLO_LOG = PampasBlocks.ALGARROBILLO_LOG.get().getDefaultState();
@@ -816,7 +800,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_TREES_WITH_PASSIONVINE = register("passionvine_atlantic_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_ROSEWOOD_WITH_PASSIONVINE.withChance(0.7F),
-                    FLOWERING_JABUTICABA_TREE_WITH_PASSIONVINE.withChance(0.09F), FRUITING_JABUTICABA_TREE_WITH_PASSIONVINE.withChance(0.09F),
                     BRAZILLIAN_SASSAFRAS_TREE_WITH_PASSIONVINE.withChance(0.3F), CECROPIA_WITH_PASSIONVINE.withChance(0.3F),
                             SILVER_CECROPIA_WITH_PASSIONVINE.withChance(0.07F), BRAZILWOOD_TREE_WITH_PASSIONVINE.withChance(0.7F),
                     SAPUCAIA_TREE_WITH_PASSIONVINE.withChance(0.06F), MANACA_WITH_PASSIONVINE.withChance(0.1F), CAMBUCI_TREE_WITH_PASSIONVINE.withChance(0.2F)),
@@ -894,10 +877,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     PITANGA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(3, 0.0F, 0))));
 
-    public static final ConfiguredFeature<?, ?> RIO_GRANDE_CHERRY_TREES = register("rio_grande_cherry_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(RIO_GRANDE_CHERRY_TREE.withChance(0.02F)),
-                    RIO_GRANDE_CHERRY_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(3, 0.0F, 0))));
 
     public static final ConfiguredFeature<?, ?> PAMPAS_PITANGA_TREES = register("pampas_pitanga_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_PITANGA_TREE.withChance(0.02F)),
@@ -933,8 +912,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
     public static final ConfiguredFeature<?, ?> JABUTICABA_TREES = register("jabuticaba_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(FLOWERING_JABUTICABA_TREE.withChance(0.4F)),
-                    FRUITING_JABUTICABA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JABUTICABA_TREE_WITH_PASSIONVINE.withChance(0.1F)),
+                    JABUTICABA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> PAMPAS_TREES = register("pampas_trees",
