@@ -1,8 +1,6 @@
 package com.brbiomesmod;
 
 import com.brbiomesmod.block.BlockClasses.*;
-import com.brbiomesmod.features.ModFeature;
-import com.brbiomesmod.features.ModFeatures;
 import com.brbiomesmod.features.ModTreeDecorators;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.*;
@@ -64,7 +62,7 @@ public class BrazillianBiomesMod {
         CerradoBiome.register(eventBus);
         RestingaBeachBiome.register(eventBus);
 
-        ModFeature.FEATURES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        //ModFoliagePlacer.FOLIAGE_PLACERS.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -74,6 +72,7 @@ public class BrazillianBiomesMod {
         event.enqueueWork(() -> {
 
             ModBiomeGeneration.generateBiomes();
+
 
         });
     }
