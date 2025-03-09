@@ -29,7 +29,6 @@ public enum Season {
         Minecraft mc = Minecraft.getInstance();
         ClientPlayerEntity player = mc.player;
         if (player == null) return;
-
         World world = player.world;
 
         String season = getSeason(world.getDayTime());
