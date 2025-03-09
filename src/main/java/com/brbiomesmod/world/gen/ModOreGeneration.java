@@ -33,7 +33,6 @@ public class ModOreGeneration {
 
                 event.getGeneration().withFeature(GenerationStage.Decoration.UNDERGROUND_ORES, oreFeature);
             }
-
     }
 
         private static ConfiguredFeature<?, ?> registerOreFeature(OreType ore, OreFeatureConfig oreFeatureConfig,
