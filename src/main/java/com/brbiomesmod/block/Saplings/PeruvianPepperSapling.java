@@ -41,7 +41,7 @@ public class PeruvianPepperSapling extends SaplingBlock {
     private static class PeruvianPepperTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 0) {
+            if (random.nextInt(10) == 9) {
                 return TreeFeatures.PERUVIAN_PEPPER_FANCY_TREE;
             } else {
                 return TreeFeatures.PERUVIAN_PEPPER_TREE;
