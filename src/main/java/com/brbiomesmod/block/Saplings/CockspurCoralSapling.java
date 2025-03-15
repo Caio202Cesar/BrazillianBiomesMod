@@ -41,7 +41,7 @@ public class CockspurCoralSapling extends SaplingBlock {
     private static class CockspurCoralTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 8) {
+            if (random.nextInt(10) == 9) {
                 return TreeFeatures.COCKSPUR_CORAL_TREE2;
             } else {
                 return TreeFeatures.COCKSPUR_CORAL_TREE2;

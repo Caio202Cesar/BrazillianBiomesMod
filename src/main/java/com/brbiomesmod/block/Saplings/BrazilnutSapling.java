@@ -40,7 +40,7 @@ public class BrazilnutSapling extends SaplingBlock {
     private static class BrazilnutTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 0) {
+            if (random.nextInt(10) == 9) {
                 return TreeFeatures.BRAZILNUT_TREE;
             } else {
                 return TreeFeatures.BRAZILNUT_FANCY_TREE;

@@ -213,7 +213,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GUARANA_SHRUB = register("guarana_shrub",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
                     new SimpleBlockStateProvider(States.GUARANA_LEAVES),
-                    new BushFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0), 2),
+                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
                     new StraightTrunkPlacer(1, 0, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
