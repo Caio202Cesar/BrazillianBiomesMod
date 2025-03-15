@@ -47,7 +47,18 @@ public class ModFoods extends Foods {
             .effect(new EffectInstance(Effects.SPEED, 2400, 0), 1.0F)
             .effect(new EffectInstance(Effects.JUMP_BOOST, 2400, 0), 1.0F).build();
     public static final Food PASSIONFRUIT = (new Food.Builder()).hunger(5).saturation(0.4F).build();
-    public static final Food FRUIT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food PITANGA_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food BLACK_PITANGA_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food CASHEW_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food FEIJOA_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food CAMBUCI_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food JABUTICABA_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food PASSIONFRUIT_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food MANGABA_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food RIO_GRANDE_CHERRY_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food CAMU_CAMU_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food CUPUACU_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food UMBU_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food BACURI_PASTE = (new Food.Builder()).hunger(4).saturation(0.4F).build();
 
 }

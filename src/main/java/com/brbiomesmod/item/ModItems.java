@@ -125,40 +125,40 @@ public class ModItems {
 
     public static final RegistryObject<Item> PITANGA_JUICE = ITEMS.register("pitanga_juice",
             () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
-                    .food(ModFoods.FRUIT_JUICE)));
+                    .food(ModFoods.PITANGA_JUICE)));
     public static final RegistryObject<Item> BLACK_PITANGA_JUICE = ITEMS.register("black_pitanga_juice",
             () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
-                    .food(ModFoods.FRUIT_JUICE)));
+                    .food(ModFoods.BLACK_PITANGA_JUICE)));
     public static final RegistryObject<Item> CASHEW_JUICE = ITEMS.register("cashew_apple_juice",
             () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
-                    .food(ModFoods.FRUIT_JUICE)));
+                    .food(ModFoods.CASHEW_JUICE)));
     public static final RegistryObject<Item> FEIJOA_JUICE = ITEMS.register("feijoa_juice",
             () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
-                    .food(ModFoods.FRUIT_JUICE)));
+                    .food(ModFoods.FEIJOA_JUICE)));
     public static final RegistryObject<Item> CAMBUCI_JUICE = ITEMS.register("cambuci_juice",
             () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
-                    .food(ModFoods.FRUIT_JUICE)));
+                    .food(ModFoods.CAMBUCI_JUICE)));
     public static final RegistryObject<Item> JABUTICABA_JUICE = ITEMS.register("jabuticaba_juice",
             () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
-                    .food(ModFoods.FRUIT_JUICE)));
+                    .food(ModFoods.JABUTICABA_JUICE)));
     public static final RegistryObject<Item> PASSIONFRUIT_JUICE = ITEMS.register("passionfruit_juice",
             () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
-                    .food(ModFoods.FRUIT_JUICE)));
+                    .food(ModFoods.PASSIONFRUIT_JUICE)));
     public static final RegistryObject<Item> MANGABA_JUICE = ITEMS.register("mangaba_juice",
             () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
-                    .food(ModFoods.FRUIT_JUICE)));
+                    .food(ModFoods.MANGABA_JUICE)));
     public static final RegistryObject<Item> RIO_GRANDE_CHERRY_JUICE = ITEMS.register("rio_grande_cherry_juice",
             () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
-                    .food(ModFoods.FRUIT_JUICE)));
+                    .food(ModFoods.RIO_GRANDE_CHERRY_JUICE)));
     public static final RegistryObject<Item> CAMU_CAMU_JUICE = ITEMS.register("camu_camu_juice",
             () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
-                    .food(ModFoods.FRUIT_JUICE)));
+                    .food(ModFoods.CAMU_CAMU_JUICE)));
     public static final RegistryObject<Item> CUPUACU_JUICE = ITEMS.register("cupuacu_juice",
             () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
-                    .food(ModFoods.FRUIT_JUICE)));
+                    .food(ModFoods.CUPUACU_JUICE)));
     public static final RegistryObject<Item> UMBU_JUICE = ITEMS.register("umbu_juice",
             () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
-                    .food(ModFoods.FRUIT_JUICE)));
+                    .food(ModFoods.UMBU_JUICE)));
 
     public static final RegistryObject<Item> BACURI_PASTE = ITEMS.register("bacuri_paste",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.BACURI_PASTE)));
