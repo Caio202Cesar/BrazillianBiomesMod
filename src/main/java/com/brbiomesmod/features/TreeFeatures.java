@@ -377,6 +377,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(7, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LARGE_CECROPIA_TREE = register("large_cecropia_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CECROPIA_LOG),
+                    new SimpleBlockStateProvider(States.CECROPIA_LEAVES),
+                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(15, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CECROPIA_WITH_PASSIONVINE = register("passionvine_cecropia_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CECROPIA_LOG),
                     new SimpleBlockStateProvider(States.CECROPIA_LEAVES),
@@ -770,7 +776,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(KAPOK_TREE.withChance(0.6F),
-                            CUPUACU_TREE.withChance(0.5F), COCOA_TREE.withChance(0.5F), CAMU_CAMU_TREE.withChance(0.5F), SOMBREIRO_TREE.withChance(0.2F)),
+                            CUPUACU_TREE.withChance(0.5F), COCOA_TREE.withChance(0.5F), CAMU_CAMU_TREE.withChance(0.5F), SOMBREIRO_TREE.withChance(0.2F),
+                            CECROPIA_TREE.withChance(0.1F), LARGE_CECROPIA_TREE.withChance(0.09F)),
                             SHARINGA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
