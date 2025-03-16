@@ -58,6 +58,7 @@ public class DunasRestingaBiome {
         DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withRestingaTrumpetTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withRestingaTrees(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withPitangaTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withXananaFlower(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withBeachPepperTrees(biomegenerationsettings$builder);
 
