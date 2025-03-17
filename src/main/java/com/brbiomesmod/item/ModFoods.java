@@ -60,5 +60,8 @@ public class ModFoods extends Foods {
     public static final Food CUPUACU_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food UMBU_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food BACURI_PASTE = (new Food.Builder()).hunger(4).saturation(0.4F).build();
+    public static final Food GUARANA_SODA = (new Food.Builder()).hunger(4).saturation(0.4F)
+            .effect(new EffectInstance(Effects.SPEED, 2400, 0), 1.0F)
+            .effect(new EffectInstance(Effects.JUMP_BOOST, 2400, 0), 1.0F).build();
 
 }

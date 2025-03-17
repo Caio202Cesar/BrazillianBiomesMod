@@ -7,17 +7,17 @@
   ],
   "key": {
     "a": {
-      "item": "minecraft:bowl"
+      "item": "minecraft:glass_bottle"
     },
     "b": {
-      "item": "brbiomesmod:acai_berries"
+      "item": "brbiomesmod:sugar"
     },
     "c": {
       "item": "brbiomesmod:guarana_seeds"
     }
   },
   "result": {
-    "item": "brbiomesmod:acai_bowl",
+    "item": "brbiomesmod:guarana_soda",
     "count": 1
   }
 }
