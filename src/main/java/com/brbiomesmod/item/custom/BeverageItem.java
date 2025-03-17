@@ -16,8 +16,12 @@ import net.minecraft.util.DrinkHelper;
 import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
+import java.util.logging.Level;
+
+import static sun.audio.AudioPlayer.player;
+
 public class BeverageItem extends Item {
-    public BeverageItem(Properties builder) {
+    public BeverageItem(Item.Properties builder) {
         super(builder);
     }
     /**
@@ -42,40 +46,33 @@ public class BeverageItem extends Item {
         return DrinkHelper.startDrinking(worldIn, playerIn, handIn);
     }
 
+    @Override
     public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) {
-        PlayerEntity playerentity = entityLiving instanceof PlayerEntity ? (PlayerEntity)entityLiving : null;
-        if (playerentity instanceof ServerPlayerEntity) {
-            CriteriaTriggers.CONSUME_ITEM.trigger((ServerPlayerEntity)playerentity, stack);
-        }
+        if (entityLiving instanceof PlayerEntity) {
+            PlayerEntity player = (PlayerEntity) entityLiving;
+            player.takeStat(Stats.ITEM_USED.get(this)); // Register the item usage stat
 
-        if (!worldIn.isRemote) {
-            for(EffectInstance effectinstance : PotionUtils.getEffectsFromStack(stack)) {
-                if (effectinstance.getPotion().isInstant()) {
-                    effectinstance.getPotion().affectEntity(playerentity, playerentity, entityLiving, effectinstance.getAmplifier(), 1.0D);
-                } else {
-                    entityLiving.addPotionEffect(new EffectInstance(effectinstance));
+            if (!worldIn.isRemote) {
+                this.applyDrinkEffects(stack, worldIn, player);
+            }
+
+            if (!player.abilities.isCreativeMode) {
+                stack.shrink(1); // Reduce stack size (only in survival mode)
+                ItemStack glassBottle = new ItemStack(Items.GLASS_BOTTLE);
+
+                if (!player.inventory.addItemStackToInventory(glassBottle)) {
+                    player.dropItem(glassBottle, false); // Drop bottle if inventory is full
                 }
             }
         }
+        return stack.isEmpty() ? new ItemStack(Items.GLASS_BOTTLE) : stack;
+    }
 
-        if (playerentity != null) {
-            playerentity.addStat(Stats.ITEM_USED.get(this));
-            if (!playerentity.abilities.isCreativeMode) {
-                stack.shrink(1);
-            }
-        }
-
-        if (playerentity == null || !playerentity.abilities.isCreativeMode) {
-            if (stack.isEmpty()) {
-                return new ItemStack(Items.GLASS_BOTTLE);
-            }
-
-            if (playerentity != null) {
-                playerentity.inventory.addItemStackToInventory(new ItemStack(Items.GLASS_BOTTLE));
-            }
-        }
-
-        return stack;
+    /**
+     * Apply drink effects (override this method if needed).
+     */
+    protected void applyDrinkEffects(ItemStack stack, World worldIn, PlayerEntity player) {
+        player.onFoodEaten(worldIn, stack); // Triggers drinking animation
     }
 
     @Override
@@ -83,3 +80,4 @@ public class BeverageItem extends Item {
         return new net.minecraftforge.fluids.capability.wrappers.FluidBucketWrapper(stack);
     }
 }
+
