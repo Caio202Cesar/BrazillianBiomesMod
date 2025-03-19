@@ -17,7 +17,7 @@ public class CashewFruit extends Item {
     @Override
     public ItemStack getContainerItem(ItemStack itemStack) {
         // Dynamically resolve CASHEW_APPLE at runtime
-        Item containerItem = ModItems.SAPUCAIA_SHELL.get();
+        Item containerItem = ModItems.CASHEW_APPLE.get();
         return new ItemStack(containerItem);
     }
 }
