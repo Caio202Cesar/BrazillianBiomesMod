@@ -56,16 +56,11 @@ public class BeverageItem extends Item {
                 this.applyDrinkEffects(stack, worldIn, player);
             }
 
-            if (!player.abilities.isCreativeMode) {
-                stack.shrink(1); // Reduce stack size (only in survival mode)
-                ItemStack glassBottle = new ItemStack(Items.GLASS_BOTTLE);
-
-                if (!player.inventory.addItemStackToInventory(glassBottle)) {
-                    player.dropItem(glassBottle, false); // Drop bottle if inventory is full
-                }
+            if (!player.isCreative()) {
+                return new ItemStack(Items.GLASS_BOTTLE);
             }
         }
-        return stack.isEmpty() ? new ItemStack(Items.GLASS_BOTTLE) : stack;
+        return super.onItemUseFinish(stack, worldIn, entityLiving);
     }
 
     /**
