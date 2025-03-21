@@ -52,12 +52,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Ipe Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOW_IPE_TREE = register("yellow_ipe_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.IPE_LOG),
-                    new SimpleBlockStateProvider(States.YELLOW_IPE_BLOSSOM),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOW_IPE_FANCY_TREE = register("yellow_ipe_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
                     new SimpleBlockStateProvider(States.YELLOW_IPE_BLOSSOM),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
@@ -84,12 +78,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> APRICOT_IPE_TREE = register("apricot_ipe_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.IPE_LOG),
-                    new SimpleBlockStateProvider(States.APRICOT_IPE_BLOSSOM),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> APRICOT_IPE_FANCY_TREE = register("apricot_ipe_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
                     new SimpleBlockStateProvider(States.APRICOT_IPE_BLOSSOM),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
@@ -827,19 +815,20 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> SAVANNA_TRUMPET_TREES = register("savanna_trumpet_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_IPE_TREE.withChance(0.2F),
-                    PINK_IPE_TREE.withChance(0.3F), APRICOT_IPE_FANCY_TREE.withChance(0.00000034F), PURPLE_IPE_TREE.withChance(0.3F)), YELLOW_IPE_FANCY_TREE))
+                    PINK_IPE_TREE.withChance(0.3F), APRICOT_IPE_TREE.withChance(0.00000034F), PURPLE_IPE_TREE.withChance(0.3F)), YELLOW_IPE_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> FOREST_TRUMPET_TREES = register("forest_trumpet_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_IPE_TREE.withChance(0.025641026F),
-                            PINK_IPE_TREE.withChance(0.30769232F), APRICOT_IPE_FANCY_TREE.withChance(0.00000034F), YELLOW_IPE_FANCY_TREE.withChance(0.33333334F)), PURPLE_IPE_TREE))
+                            PINK_IPE_TREE.withChance(0.30769232F), APRICOT_IPE_TREE.withChance(0.00000034F),
+                            YELLOW_IPE_TREE.withChance(0.33333334F)), PURPLE_IPE_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(1, 0.01F, 0))));
 
     public static final ConfiguredFeature<?, ?> RESTINGA_TRUMPET_TREES = register("restinga_trumpet_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_IPE_TREE.withChance(0.025641026F),
-                            PINK_IPE_TREE.withChance(0.30769232F), YELLOW_IPE_FANCY_TREE.withChance(0.33333334F)), PURPLE_IPE_TREE))
+                            PINK_IPE_TREE.withChance(0.30769232F), YELLOW_IPE_TREE.withChance(0.33333334F)), PURPLE_IPE_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(1, 0.001F, 0))));
 

@@ -43,11 +43,7 @@ public class ApricotIpeSapling extends SaplingBlock {
     private static class ApricotIpeTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 8) {
                 return TreeFeatures.APRICOT_IPE_TREE;
-            } else {
-                return TreeFeatures.APRICOT_IPE_FANCY_TREE;
-            }
         }
     }
 }
