@@ -70,7 +70,8 @@ public class ModItems {
     public static final RegistryObject<Item> COOKED_CASSAVA = ITEMS.register("cooked_cassava",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COOKED_CASSAVA)));
 
-    //public static final RegistryObject<Item> ACAI_BERRIES = ITEMS.register("acai_berries", () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> ACAI_BERRIES = ITEMS.register("acai_berries",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> UMBU = ITEMS.register("umbu",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.UMBU)));

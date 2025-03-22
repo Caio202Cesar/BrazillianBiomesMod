@@ -1,11 +1,13 @@
 package com.brbiomesmod.features;
 
 import com.brbiomesmod.BrazillianBiomesMod;
+import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
@@ -19,87 +21,84 @@ import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 import java.util.Random;
 import java.util.Set;
 
-/*public class PalmFoliagePlacer extends FoliagePlacer {
-    public static final Codec<PalmFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
-            instance.group(
-                    FeatureSpread.CODEC.fieldOf("radius").forGetter(placer -> placer.radius),
-                    FeatureSpread.CODEC.fieldOf("offset").forGetter(placer -> placer.offset)
-            ).apply(instance, PalmFoliagePlacer::new));
-
+public class PalmFoliagePlacer extends FoliagePlacer {
     public PalmFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {
         super(radius, offset);
     }
 
+    public static final Codec<PalmFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
+            instance.group(
+                    FeatureSpread.CODEC.fieldOf("radius").forGetter(p -> p.radius),
+                    FeatureSpread.CODEC.fieldOf("offset").forGetter(p -> p.offset)
+            ).apply(instance, PalmFoliagePlacer::new)
+    );
+
     @Override
     protected FoliagePlacerType<?> getPlacerType() {
-        return ModFoliagePlacer.PALM_FOLIAGE_PLACER.get(); // Replace with your actual registry reference
+        return ModFoliagePlacer.PALM_FOLIAGE_PLACER.get(); // Register your foliage placer type
     }
 
     @Override
-    public void func_236752_a_(IWorldGenerationReader p_236752_1_, Random p_236752_2_, BaseTreeFeatureConfig p_236752_3_, int p_236752_4_, Foliage p_236752_5_, int p_236752_6_, int p_236752_7_, Set<BlockPos> p_236752_8_, MutableBoundingBox p_236752_9_) {
+    protected void func_230372_a_(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, int trunkHeight, Foliage foliage, int radius, int offset, Set<BlockPos> leaves, int height, MutableBoundingBox boundingBox) {
+        BlockPos center = foliage.func_236763_a_(); // Position of the top foliage
 
-        BlockPos startingPos = foliage.func_236763_a_();
+        // Place a central leaf block at the top to connect fronds
+        placeLeafAt(world, center, leaves, boundingBox);
 
-        this.func_230372_a_(p_236752_1_, p_236752_2_, p_236752_3_, p_236752_4_, p_236752_5_, p_236752_6_, p_236752_7_, p_236752_8_, p_236752_9_);
+        // Generate 4-6 fronds extending outward from the top
+        int frondCount = 4 + random.nextInt(3);
+        for (int i = 0; i < frondCount; i++) {
+            double angle = 2 * Math.PI * i / frondCount;
+            int length = 3 + random.nextInt(2); // Fronds extend 3-5 blocks
 
-        createQuadrant(Direction.NORTH, startingPos, pLevel, foliageSetter, pRandom, pConfig);
-        createQuadrant(Direction.EAST, startingPos, pLevel, foliageSetter, pRandom, pConfig);
-        createQuadrant(Direction.SOUTH, startingPos, pLevel, foliageSetter, pRandom, pConfig);
-        createQuadrant(Direction.WEST, startingPos, pLevel, foliageSetter, pRandom, pConfig);
+            // 1st Layer - Normal fronds (outward and slightly downward)
+            generateFrond(world, random, config, center, angle, length, false, leaves, boundingBox);
+
+            // 2nd Layer - Mirrored fronds (upward)
+            generateFrond(world, random, config, center.down(length / 2), angle, length, true, leaves, boundingBox);
+
+            // 3rd Layer - Extra downward fronds (even lower, for more foliage)
+            generateFrond(world, random, config, center.down(length), angle, length, false, leaves, boundingBox);
+        }
 
     }
 
-    @Override
-    protected void func_230372_a_(IWorldGenerationReader p_230372_1_, Random p_230372_2_, BaseTreeFeatureConfig p_230372_3_, int p_230372_4_, Foliage p_230372_5_, int p_230372_6_, int p_230372_7_, Set<BlockPos> p_230372_8_, int p_230372_9_, MutableBoundingBox p_230372_10_) {
+    private void generateFrond(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos center, double angle, int length, boolean inverted, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
+        for (int i = 1; i <= length; i++) {
+            int x = (int) (center.getX() + i * Math.cos(angle));
+            int z = (int) (center.getZ() + i * Math.sin(angle));
 
+            int y;
+            if (inverted) {
+                y = center.getY() + (i / 2); // Mirrored fronds curve slightly upward
+            } else {
+                y = center.getY() - (i / 2); // Normal fronds curve slightly downward
+            }
+
+            BlockPos leafPos = new BlockPos(x, y, z);
+            placeLeafAt(world, leafPos, leaves, boundingBox);
+        }
+    }
+
+    private void placeLeafAt(IWorldGenerationReader world, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
+        if (world.hasBlockState(pos, s -> s.isAir())) {
+            world.setBlockState(pos, AmazonRainforestBlocks.ACAI_LEAVES.get().getDefaultState()
+                    .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
+            leaves.add(pos);
+            boundingBox.expandTo(new MutableBoundingBox(pos, pos));
+        }
     }
 
     @Override
     public int func_230374_a_(Random random, int trunkHeight, BaseTreeFeatureConfig config) {
-        return 0; // Defines foliage height
+        return 2; // Palm trees typically have leaves only at the top
     }
 
     @Override
-    protected boolean func_230373_a_(Random random, int x, int y, int z, int radius, boolean giantTrunk) {
-        return false; // Ensures leaves are properly placed
+    protected boolean func_230373_a_(Random random, int dx, int dy, int dz, int radius, boolean large) {
+        return dx * dx + dz * dz <= radius * radius;
     }
+}
 
-    private static void createQuadrant(Direction direction, BlockPos startingPos, IWorldGenerationReader world, FoliagePlacer foliageSetter, Random random, BaseTreeFeatureConfig config) {
-        BlockPos.Mutable pos = startingPos.toMutable();
-
-        pos.move(direction);
-        placeLeafAt(world, random, config, trunkHeight, foliage, foliageHeight, radius, leaves, offset, boundingBox);
-
-        /*if (random.nextInt(2) == 0) {
-            if (world.hasBlockState(pos.down(), state -> state.isAir())) {
-                foliageSetter.set(pos.below(), ObjectRegistry.HANGING_COCONUT.get().defaultBlockState().setValue(HangingCoconutBlock.AGE, pRandom.nextInt(3)));
-            }
-        }
-        if (pRandom.nextInt(2) == 0) {
-            if (pLevel.isStateAtPosition(pos.below().relative(direction.getCounterClockWise()), BlockBehaviour.BlockStateBase::isAir)) {
-                foliageSetter.set(pos.below().relative(direction.getCounterClockWise()), ObjectRegistry.HANGING_COCONUT.get().defaultBlockState().setValue(HangingCoconutBlock.AGE, pRandom.nextInt(3)));
-            }
-        }
-
-        for (int i = 0; i < 2; i++) {
-            pos.move(direction);
-            placeLeafAt(direction, startingPos, world, foliageSetter, random, config);
-            pos.move(Direction.DOWN);
-            placeLeafAt(direction, startingPos, world, foliageSetter, random, config);
-        }
-
-        pos.add(startingPos);
-        pos.move(direction).move(direction.getOpposite());
-        placeLeafAt(direction, startingPos, world, foliageSetter, random, config);
-        pos.move(Direction.DOWN).move(direction.rotateYCCW());
-        placeLeafAt(direction, startingPos, world, foliageSetter, random, config);
-        pos.move(direction);
-        placeLeafAt(direction, pos.rotate(Rotation.randomRotation(random)), world, foliageSetter, random, config);
-        for (int i = 0; i < 3; i++) {
-            placeLeafAt(direction, startingPos, world, foliageSetter, random, config);
-            pos.move(Direction.DOWN);
-        }
-    }
-}*/
 
 

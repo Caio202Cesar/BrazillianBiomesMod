@@ -33,6 +33,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new MegaJungleTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Acai Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ACAI_PALM = register("acai_palm",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ACAI_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.ACAI_LEAVES),
+                    new PalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(12, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
     //Kapok Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> KAPOK_TREE = register("kapok_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.KAPOK_LOG),
@@ -633,6 +641,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState KAPOK_LOG = AmazonRainforestBlocks.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = AmazonRainforestBlocks.KAPOK_LEAVES.get().getDefaultState();
 
+        protected static final BlockState ACAI_LOG = AmazonRainforestBlocks.ACAI_LOG.get().getDefaultState();
+        protected static final BlockState ACAI_LEAVES = AmazonRainforestBlocks.ACAI_LEAVES.get().getDefaultState();
+
         protected static final BlockState SOMBREIRO_LOG = AmazonRainforestBlocks.SOMBREIRO_LOG.get().getDefaultState();
         protected static final BlockState SOMBREIRO_LEAVES = AmazonRainforestBlocks.SOMBREIRO_LEAVES.get().getDefaultState();
 
@@ -764,9 +775,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(KAPOK_TREE.withChance(0.6F),
-                            CUPUACU_TREE.withChance(0.5F), COCOA_TREE.withChance(0.5F), CAMU_CAMU_TREE.withChance(0.5F), SOMBREIRO_TREE.withChance(0.2F),
-                            CECROPIA_TREE.withChance(0.1F), LARGE_CECROPIA_TREE.withChance(0.09F)),
-                            SHARINGA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            CUPUACU_TREE.withChance(0.5F), COCOA_TREE.withChance(0.5F), CAMU_CAMU_TREE.withChance(0.5F), SOMBREIRO_TREE.withChance(0.5F),
+                            LARGE_CECROPIA_TREE.withChance(0.5F)), SHARINGA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> BRAZILNUT_TREES = register("brazilnut_trees",

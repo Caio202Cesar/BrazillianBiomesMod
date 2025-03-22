@@ -1,6 +1,7 @@
 package com.brbiomesmod;
 
 import com.brbiomesmod.block.BlockClasses.*;
+import com.brbiomesmod.features.ModFoliagePlacer;
 import com.brbiomesmod.features.ModTreeDecorators;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.*;
@@ -66,6 +67,9 @@ public class BrazillianBiomesMod {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        ModFoliagePlacer.register(FMLJavaModLoadingContext.get().getModEventBus());
+
     }
 
     private void setup(final FMLCommonSetupEvent event) {

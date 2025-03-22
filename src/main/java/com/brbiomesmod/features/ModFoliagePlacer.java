@@ -1,12 +1,16 @@
 package com.brbiomesmod.features;
 
+import net.minecraft.world.gen.feature.FeatureSpread;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-/*public class ModFoliagePlacer {
+import java.rmi.registry.RegistryHandler;
+
+public class ModFoliagePlacer {
     public static final DeferredRegister<FoliagePlacerType<?>> FOLIAGE_PLACERS =
             DeferredRegister.create(ForgeRegistries.FOLIAGE_PLACER_TYPES, "brbiomesmod");
 
@@ -17,5 +21,5 @@ import net.minecraftforge.registries.ForgeRegistries;
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
     }
-}*/
+}
 

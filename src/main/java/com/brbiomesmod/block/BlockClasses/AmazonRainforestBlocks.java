@@ -122,6 +122,16 @@ public class AmazonRainforestBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    public static final RegistryObject<Block> ACAI_LEAVES = registerBlock("acai_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> ACAI_LOG = registerBlock("acai_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ACAI_SAPLING = registerBlock("acai_sapling",
+            AcaiSapling::new);
+    public static final RegistryObject<Block> ACAI_BUNCH = registerBlock("acai_bunch",
+            AcaiBunchBlock::new);
+
+
     public static final RegistryObject<Block> BRAZILNUT_LOG = registerBlock("brazilnut_log",
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILNUT_LEAVES = registerBlock("brazilnut_leaves",
