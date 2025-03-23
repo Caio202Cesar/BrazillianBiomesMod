@@ -29,6 +29,12 @@ public class PampasBlocks {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, BrazillianBiomesMod.MOD_ID);
 
+    public static final RegistryObject<Block> JELLY_PALM_LOG = registerBlock("jelly_palm_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> JELLY_PALM_LEAVES = registerBlock("jelly_palm_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> JELLY_PALM_SAPLING = registerBlock("jelly_palm_sapling",
+            JellyPalmSapling::new);
 
     public static final RegistryObject<Block> SCHINUS_LOG = registerBlock("schinus_log",
             ModLogs::new);

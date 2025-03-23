@@ -3,6 +3,7 @@ package com.brbiomesmod.features;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.*;
 import com.brbiomesmod.features.FoliagePlacers.AcaiFoliagePlacer;
+import com.brbiomesmod.features.FoliagePlacers.JellyPalmFoliagePlacer;
 import com.brbiomesmod.features.FoliagePlacers.QueenPalmFoliagePlacer;
 import com.brbiomesmod.features.TreeDecorators.AcaiBunchTreeDecorator;
 import com.brbiomesmod.features.TreeDecorators.PassionFruitVineLeavesDecorator;
@@ -49,6 +50,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.QUEEN_PALM_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.QUEEN_PALM_LEAVES),
                     new QueenPalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(6, 4, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
+    //Jelly Palm
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JELLY_PALM = register("jelly_palm",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JELLY_PALM_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.JELLY_PALM_LEAVES),
+                    new JellyPalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(10, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
@@ -657,6 +666,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState QUEEN_PALM_LOG = AtlanticForestBlocks.QUEEN_PALM_LOG.get().getDefaultState();
         protected static final BlockState QUEEN_PALM_LEAVES = AtlanticForestBlocks.QUEEN_PALM_LEAVES.get().getDefaultState();
+
+        protected static final BlockState JELLY_PALM_LOG = PampasBlocks.JELLY_PALM_LOG.get().getDefaultState();
+        protected static final BlockState JELLY_PALM_LEAVES = PampasBlocks.JELLY_PALM_LEAVES.get().getDefaultState();
 
         protected static final BlockState SOMBREIRO_LOG = AmazonRainforestBlocks.SOMBREIRO_LOG.get().getDefaultState();
         protected static final BlockState SOMBREIRO_LEAVES = AmazonRainforestBlocks.SOMBREIRO_LEAVES.get().getDefaultState();

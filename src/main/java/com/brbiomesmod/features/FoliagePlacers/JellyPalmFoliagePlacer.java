@@ -1,7 +1,7 @@
 package com.brbiomesmod.features.FoliagePlacers;
 
 import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
+import com.brbiomesmod.block.BlockClasses.PampasBlocks;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.LeavesBlock;
@@ -16,25 +16,25 @@ import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 import java.util.Random;
 import java.util.Set;
 
-public class QueenPalmFoliagePlacer extends FoliagePlacer {
-    public QueenPalmFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {
+public class JellyPalmFoliagePlacer extends FoliagePlacer {
+    public JellyPalmFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {
         super(radius, offset);
     }
 
-    public static final Codec<QueenPalmFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final Codec<JellyPalmFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
                     FeatureSpread.CODEC.fieldOf("radius").forGetter(p -> p.radius),
                     FeatureSpread.CODEC.fieldOf("offset").forGetter(p -> p.offset)
-            ).apply(instance, QueenPalmFoliagePlacer::new)
+            ).apply(instance, JellyPalmFoliagePlacer::new)
     );
 
     @Override
     protected FoliagePlacerType<?> getPlacerType() {
-        return ModFoliagePlacer.QUEEN_PALM_FOLIAGE_PLACER.get();
+        return ModFoliagePlacer.JELLY_PALM_FOLIAGE_PLACER.get();
     }
 
     @Override
-    protected void func_230372_a_(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, int trunkHeight, FoliagePlacer.Foliage foliage, int radius, int offset, Set<BlockPos> leaves, int height, MutableBoundingBox boundingBox) {
+    protected void func_230372_a_(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, int trunkHeight, Foliage foliage, int radius, int offset, Set<BlockPos> leaves, int height, MutableBoundingBox boundingBox) {
         BlockPos center = foliage.func_236763_a_();
 
         // First two layers (original canopy structure)
@@ -75,7 +75,7 @@ public class QueenPalmFoliagePlacer extends FoliagePlacer {
 
     private void placeLeafAt(IWorldGenerationReader world, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
         if (world.hasBlockState(pos, s -> s.isAir())) {
-            world.setBlockState(pos, AtlanticForestBlocks.QUEEN_PALM_LEAVES.get().getDefaultState()
+            world.setBlockState(pos, PampasBlocks.JELLY_PALM_LEAVES.get().getDefaultState()
                     .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
             leaves.add(pos);
             boundingBox.expandTo(new MutableBoundingBox(pos, pos));

@@ -18,6 +18,10 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("queen_palm_foliage_placer",
                     () -> new FoliagePlacerType<>(QueenPalmFoliagePlacer.CODEC));
 
+    public static final RegistryObject<FoliagePlacerType<JellyPalmFoliagePlacer>> JELLY_PALM_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("jelly_palm_foliage_placer",
+                    () -> new FoliagePlacerType<>(JellyPalmFoliagePlacer.CODEC));
+
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
     }
