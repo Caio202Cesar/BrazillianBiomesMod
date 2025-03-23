@@ -1,9 +1,7 @@
 {
-  "variants":{
-    "":[
-      {"model": "brbiomesmod:block/parana_pine_leaves",
-        "weight": 4},
-      {"model": "brbiomesmod:block/parana_pine_fruiting_leaves",
-        "weight": 1}
-    ]
-  }}
+  "variants": {
+    "": {
+      "model": "brbiomesmod:block/parana_pine_leaves"
+    }
+  }
+}

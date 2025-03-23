@@ -49,7 +49,7 @@ public class QueenPalmFoliagePlacer extends FoliagePlacer {
         BlockPos lowerCenter = center.down(2);
         for (int i = 0; i < frondCount; i++) {
             double angle = 2 * Math.PI * i / frondCount;
-            int length = 3 + random.nextInt(2);
+            int length = 4 + random.nextInt(2);
             generateFrond(world, random, config, lowerCenter, angle, length, leaves, boundingBox);
         }
 
@@ -58,7 +58,7 @@ public class QueenPalmFoliagePlacer extends FoliagePlacer {
         int denserFrondCount = frondCount + 2; // More fronds for density
         for (int i = 0; i < denserFrondCount; i++) {
             double angle = 2 * Math.PI * i / denserFrondCount;
-            int length = 3 + random.nextInt(1); // Shorter fronds
+            int length = 4 + random.nextInt(1); // Shorter fronds
             generateFrond(world, random, config, thirdLayerCenter, angle, length, leaves, boundingBox);
         }
     }

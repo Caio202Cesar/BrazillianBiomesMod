@@ -33,7 +33,8 @@ public class AcaiFoliagePlacer extends FoliagePlacer {
     }
 
     @Override
-    protected void func_230372_a_(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, int trunkHeight, Foliage foliage, int radius, int offset, Set<BlockPos> leaves, int height, MutableBoundingBox boundingBox) {
+    protected void func_230372_a_(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, int trunkHeight,
+                                  Foliage foliage, int radius, int offset, Set<BlockPos> leaves, int height, MutableBoundingBox boundingBox) {
         BlockPos center = foliage.func_236763_a_(); // Position of the top foliage
 
         // Place a central leaf block at the top to connect fronds
@@ -53,11 +54,13 @@ public class AcaiFoliagePlacer extends FoliagePlacer {
 
             // 3rd Layer - Extra downward fronds (even lower, for more foliage)
             generateFrond(world, random, config, center.down(length), angle, length, false, leaves, boundingBox);
+
         }
 
     }
 
-    private void generateFrond(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos center, double angle, int length, boolean inverted, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
+    private void generateFrond(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos center,
+                               double angle, int length, boolean inverted, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
         for (int i = 1; i <= length; i++) {
             int x = (int) (center.getX() + i * Math.cos(angle));
             int z = (int) (center.getZ() + i * Math.sin(angle));
@@ -80,26 +83,37 @@ public class AcaiFoliagePlacer extends FoliagePlacer {
                     .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
             leaves.add(pos);
             boundingBox.expandTo(new MutableBoundingBox(pos, pos));
+        }
+    }
 
-            // 30% chance to generate an acai bunch beneath the leaf
-            if (isLeafAttachedToTrunk(world, pos)) {
-                BlockPos acaiPos = pos.down(); // Position below the leaf
-                if (world.hasBlockState(acaiPos, s -> s.isAir())) { // Ensure space below is air
-                    world.setBlockState(acaiPos, AmazonRainforestBlocks.ACAI_BUNCH.get().getDefaultState(), 19);
-                }
+    private void placeAcaiOnTrunk(IWorldGenerationReader world, BlockPos trunkPos, Random random) {
+        BlockPos[] sidePositions = {
+                trunkPos.north(), trunkPos.south(), trunkPos.east(), trunkPos.west()
+        };
+
+        for (BlockPos acaiPos : sidePositions) {
+            BlockPos trunkBlock = trunkPos; // The original trunk position
+
+            // Check if the açaí should generate (30% chance)
+            if (random.nextFloat() < 0.3f
+                    && world.hasBlockState(acaiPos, s -> s.isAir()) // Ensure space is air
+                    && world.hasBlockState(trunkBlock, s -> s.getBlock() == AmazonRainforestBlocks.PALMITO_LOG.get())) { // Ensure it's attached to a PALMITO_LOG
+
+                world.setBlockState(acaiPos, AmazonRainforestBlocks.ACAI_BUNCH.get().getDefaultState(), 19);
             }
         }
     }
 
-    private boolean isLeafAttachedToTrunk(IWorldGenerationReader world, BlockPos pos) {
-        BlockPos[] adjacentPositions = {
-                pos.north(), pos.south(), pos.east(), pos.west()};
-        for (BlockPos adjacent : adjacentPositions) {
-            if (world.hasBlockState(adjacent, state -> state.equals(AmazonRainforestBlocks.PALMITO_LOG.get()))) {
-                return true;
-            }
+    private void generateTrunk(IWorldGenerationReader world, BlockPos startPos, int height, Set<BlockPos> trunk, MutableBoundingBox boundingBox, Random random) {
+        for (int y = 0; y < height; y++) {
+            BlockPos trunkPos = startPos.up(y);
+            world.setBlockState(trunkPos, AmazonRainforestBlocks.PALMITO_LOG.get().getDefaultState(), 19);
+            trunk.add(trunkPos);
+            boundingBox.expandTo(new MutableBoundingBox(trunkPos, trunkPos));
+
+            // Try to generate acai on this trunk block
+            placeAcaiOnTrunk(world, trunkPos, random);
         }
-        return true;
     }
 
     @Override

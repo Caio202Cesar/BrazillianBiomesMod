@@ -31,14 +31,16 @@ public class AraucariaPlateauBlocks {
 
     public static final RegistryObject<Block> PARANA_PINE_LOG = registerBlock("parana_pine_log",
             ModLogs::new);
+    public static final RegistryObject<Block> PARANA_PINE_LEAVES = registerBlock("parana_pine_leaves",
+            () -> new ParanaPineLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AraucariaPlateauBlocks.PARANA_PINE_FRUITING_LEAVES));
+    public static final RegistryObject<Block> PARANA_PINE_FRUITING_LEAVES = registerBlock("parana_pine_fruiting_leaves",
+            () -> new ParanaPineFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), AraucariaPlateauBlocks.PARANA_PINE_LEAVES));
     public static final RegistryObject<Block> PARANA_PINE_WOOD = registerBlock("parana_pine_wood",
             ModLogs::new);
     public static final RegistryObject<Block> PARANA_PINE_PLANKS = registerBlock("parana_pine_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> PARANA_PINE_LEAVES = registerBlock("parana_pine_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> PARANA_PINE_SAPLING = registerBlock("parana_pine_sapling",
-            ParanaPineSapling::new);
     public static final RegistryObject<Block> PARANA_PINE_SLAB = registerBlock("parana_pine_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -51,6 +53,8 @@ public class AraucariaPlateauBlocks {
     public static final RegistryObject<Block> PARANA_PINE_FENCE_GATE = registerBlock("parana_pine_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> PARANA_PINE_SAPLING = registerBlock("parana_pine_sapling",
+            ParanaPineSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_PARANA_PINE_SAPLING = BLOCKS.register("potted_parana_pine_sapling",
             () -> new FlowerPotBlock(AraucariaPlateauBlocks.PARANA_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)

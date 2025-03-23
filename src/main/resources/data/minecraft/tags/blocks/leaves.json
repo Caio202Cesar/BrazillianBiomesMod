@@ -14,6 +14,7 @@
     "brbiomesmod:sharinga_leaves",
     "brbiomesmod:brazillian_sassafras_leaves",
     "brbiomesmod:parana_pine_leaves",
+    "brbiomesmod:parana_pine_fruiting_leaves",
     "brbiomesmod:imbuia_leaves",
     "brbiomesmod:yerba_mate_leaves",
     "brbiomesmod:feijoa_leaves",
@@ -82,7 +83,8 @@
     "brbiomesmod:monkey_cajarana_leaves",
     "brbiomesmod:monkey_cajarana_fruiting_leaves",
     "brbiomesmod:sombreiro_leaves",
-    "brbiomesmod:acai_leaves"
-
+    "brbiomesmod:acai_leaves",
+    "brbiomesmod:queen_palm_leaves",
+    "brbiomesmod:jelly_palm_leaves"
   ]
 }
