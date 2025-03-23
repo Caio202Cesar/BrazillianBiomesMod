@@ -36,40 +36,52 @@ public class ParanaPineFoliagePlacer extends FoliagePlacer {
     protected void func_230372_a_(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, int trunkHeight, Foliage foliage, int radius, int offset, Set<BlockPos> leaves, int height, MutableBoundingBox boundingBox) {
         BlockPos center = foliage.func_236763_a_();
 
-        // First layers (original canopy structure)
-        int frondCount = 4 + random.nextInt(3);
-        for (int i = 0; i < frondCount; i++) {
-            double angle = 2 * Math.PI * i / frondCount;
-            int length = 7 + random.nextInt(2); //Shorter
-            generateFrond(world, random, config, center, angle, length, leaves, boundingBox);
+        // Offset for 2x2 trunk
+        BlockPos[] trunkPositions = {
+                center,
+                center.east(),
+                center.south(),
+                center.east().south()
+        };
+
+        // First layer (upper fronds) - UPWARDS & SMALLER
+        int upperFrondCount = 4 + random.nextInt(3);
+        for (BlockPos trunkPos : trunkPositions) {
+            for (int i = 0; i < upperFrondCount; i++) {
+                double angle = 2 * Math.PI * i / upperFrondCount;
+                int length = 4 + random.nextInt(2); // Smaller fronds
+                generateFrond(world, random, config, trunkPos, angle, length, leaves, boundingBox, 1); // 1 = upwards
+            }
         }
 
-        // Second layer (flipped upside-down)
+        // Second layer (middle fronds) - FLAT
         BlockPos lowerCenter = center.down(2);
-        for (int i = 0; i < frondCount; i++) {
-            double angle = 2 * Math.PI * i / frondCount;
-            int length = 7 + random.nextInt(2);
-            generateFrond(world, random, config, lowerCenter, angle, length, leaves, boundingBox);
+        for (BlockPos trunkPos : trunkPositions) {
+            for (int i = 0; i < upperFrondCount; i++) {
+                double angle = 2 * Math.PI * i / upperFrondCount;
+                int length = 7 + random.nextInt(2);
+                generateFrond(world, random, config, trunkPos.down(2), angle, length, leaves, boundingBox, 0); // 0 = flat
+            }
         }
 
-        // Third layer (shorter and denser)
+        // Third layer (lower fronds) - DOWNWARDS & SMALLER
         BlockPos thirdLayerCenter = center.down(3);
-        int denserFrondCount = frondCount + 2; // More fronds for density
-        for (int i = 0; i < denserFrondCount; i++) {
-            double angle = 2 * Math.PI * i / denserFrondCount;
-            int length = 7 + random.nextInt(1); // Larger fronds
-            generateFrond(world, random, config, thirdLayerCenter, angle, length, leaves, boundingBox);
+        int denserFrondCount = upperFrondCount + 2;
+        for (BlockPos trunkPos : trunkPositions) {
+            for (int i = 0; i < denserFrondCount; i++) {
+                double angle = 2 * Math.PI * i / denserFrondCount;
+                int length = 4 + random.nextInt(2); // Same size as upper fronds
+                generateFrond(world, random, config, trunkPos.down(3), angle, length, leaves, boundingBox, -1); // -1 = downwards
+            }
         }
     }
 
-    private void generateFrond(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos trunkBase, double angle, int length, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
-        double trunkCenterX = trunkBase.getX() + 0.5;
-        double trunkCenterZ = trunkBase.getZ() + 0.5;
-
+    private void generateFrond(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, BlockPos center, double angle, int length, Set<BlockPos> leaves, MutableBoundingBox boundingBox, int direction) {
         for (int i = 1; i <= length; i++) {
-            int x = (int) Math.round(trunkCenterX + i * Math.cos(angle));
-            int z = (int) Math.round(trunkCenterZ + i * Math.sin(angle));
-            int y = trunkBase.getY() - (i / 2);
+            int x = (int) (center.getX() + (i * Math.cos(angle)));
+            int z = (int) (center.getZ() + (i * Math.sin(angle)));
+            int y = center.getY() + (direction == 1 ? i / 3 : direction == -1 ? -i / 3 : 0); // Upwards (1), Downwards (-1), or Flat (0)
+
             BlockPos leafPos = new BlockPos(x, y, z);
             placeLeafAt(world, leafPos, leaves, boundingBox);
         }
