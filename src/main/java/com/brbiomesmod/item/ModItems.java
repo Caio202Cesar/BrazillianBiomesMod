@@ -72,6 +72,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> ACAI_BERRIES = ITEMS.register("acai_berries",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
+    public static final RegistryObject<Item> PALM_HEART = ITEMS.register("palm_heart",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD)));
 
     public static final RegistryObject<Item> UMBU = ITEMS.register("umbu",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.UMBU)));

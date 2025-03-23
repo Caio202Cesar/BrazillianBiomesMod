@@ -1,10 +1,9 @@
-package com.brbiomesmod.features;
+package com.brbiomesmod.features.TreeDecorators;
 
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import com.brbiomesmod.block.PassionfruitVine;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.VineBlock;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;

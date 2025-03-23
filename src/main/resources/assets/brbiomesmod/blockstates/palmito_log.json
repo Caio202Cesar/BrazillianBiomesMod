@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "brbiomesmod:block/palmito_log_horizontal",
+      "model": "brbiomesmod:block/acai_log_horizontal",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "brbiomesmod:block/palmito_log"
+      "model": "brbiomesmod:block/acai_log"
     },
     "axis=z": {
-      "model": "brbiomesmod:block/palmito_log_horizontal",
+      "model": "brbiomesmod:block/acai_log_horizontal",
       "x": 90
     }
   }

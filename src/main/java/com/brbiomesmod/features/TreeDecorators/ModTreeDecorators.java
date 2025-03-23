@@ -1,4 +1,4 @@
-package com.brbiomesmod.features;
+package com.brbiomesmod.features.TreeDecorators;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
@@ -18,6 +18,10 @@ public class ModTreeDecorators {
     public static final RegistryObject<TreeDecoratorType<PassionFruitVineTrunkDecorator>> TRUNK_PASSIONVINE_DECORATOR =
             TREE_DECORATORS.register("passionvine_trunk_decorator",
                     () -> new TreeDecoratorType<>(PassionFruitVineTrunkDecorator.CODEC));
+
+    public static final RegistryObject<TreeDecoratorType<AcaiBunchTreeDecorator>> ACAI_BUNCH_DECORATOR =
+            TREE_DECORATORS.register("acai_bunch_decorator",
+                    () -> new TreeDecoratorType<>(AcaiBunchTreeDecorator.CODEC));
 
     public static void register(IEventBus eventBus) {
         TREE_DECORATORS.register(eventBus);

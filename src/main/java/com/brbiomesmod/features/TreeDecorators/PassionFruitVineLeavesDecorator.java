@@ -1,4 +1,4 @@
-package com.brbiomesmod.features;
+package com.brbiomesmod.features.TreeDecorators;
 
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import com.mojang.serialization.Codec;

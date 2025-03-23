@@ -4,6 +4,7 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
 import com.brbiomesmod.block.Custom.Leaves.*;
 import com.brbiomesmod.block.Custom.Log.ModLogs;
+import com.brbiomesmod.block.Custom.Log.PalmitoLog;
 import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -124,8 +125,8 @@ public class AmazonRainforestBlocks {
 
     public static final RegistryObject<Block> ACAI_LEAVES = registerBlock("acai_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> ACAI_LOG = registerBlock("acai_log",
-            ModLogs::new);
+    public static final RegistryObject<Block> PALMITO_LOG = registerBlock("palmito_log",
+            PalmitoLog::new);
     public static final RegistryObject<Block> ACAI_SAPLING = registerBlock("acai_sapling",
             AcaiSapling::new);
     public static final RegistryObject<Block> ACAI_BUNCH = registerBlock("acai_bunch",

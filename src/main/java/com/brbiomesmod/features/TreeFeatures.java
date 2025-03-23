@@ -2,6 +2,9 @@ package com.brbiomesmod.features;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.*;
+import com.brbiomesmod.features.TreeDecorators.AcaiBunchTreeDecorator;
+import com.brbiomesmod.features.TreeDecorators.PassionFruitVineLeavesDecorator;
+import com.brbiomesmod.features.TreeDecorators.PassionFruitVineTrunkDecorator;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -20,8 +23,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.OptionalInt;
 
-import static net.minecraft.world.gen.feature.Features.JUNGLE_TREE;
-
 public abstract class TreeFeatures implements IFeatureConfig {
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, BrazillianBiomesMod.MOD_ID);
 
@@ -35,10 +36,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Acai Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ACAI_PALM = register("acai_palm",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ACAI_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PALMITO_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.ACAI_LEAVES),
                     new PalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(12, 2, 0),
+                    new StraightTrunkPlacer(10, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Kapok Tree
@@ -641,7 +642,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState KAPOK_LOG = AmazonRainforestBlocks.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = AmazonRainforestBlocks.KAPOK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState ACAI_LOG = AmazonRainforestBlocks.ACAI_LOG.get().getDefaultState();
+        protected static final BlockState PALMITO_LOG = AmazonRainforestBlocks.PALMITO_LOG.get().getDefaultState();
         protected static final BlockState ACAI_LEAVES = AmazonRainforestBlocks.ACAI_LEAVES.get().getDefaultState();
 
         protected static final BlockState SOMBREIRO_LOG = AmazonRainforestBlocks.SOMBREIRO_LOG.get().getDefaultState();
