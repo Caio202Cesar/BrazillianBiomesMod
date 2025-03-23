@@ -81,14 +81,25 @@ public class AcaiFoliagePlacer extends FoliagePlacer {
             leaves.add(pos);
             boundingBox.expandTo(new MutableBoundingBox(pos, pos));
 
-            // 20% chance to generate an acai bunch beneath the leaf
-            if (random.nextFloat() < 0.2F) {
+            // 30% chance to generate an acai bunch beneath the leaf
+            if (isLeafAttachedToTrunk(world, pos)) {
                 BlockPos acaiPos = pos.down(); // Position below the leaf
                 if (world.hasBlockState(acaiPos, s -> s.isAir())) { // Ensure space below is air
                     world.setBlockState(acaiPos, AmazonRainforestBlocks.ACAI_BUNCH.get().getDefaultState(), 19);
                 }
             }
         }
+    }
+
+    private boolean isLeafAttachedToTrunk(IWorldGenerationReader world, BlockPos pos) {
+        BlockPos[] adjacentPositions = {
+                pos.north(), pos.south(), pos.east(), pos.west()};
+        for (BlockPos adjacent : adjacentPositions) {
+            if (world.hasBlockState(adjacent, state -> state.equals(AmazonRainforestBlocks.PALMITO_LOG.get()))) {
+                return true;
+            }
+        }
+        return true;
     }
 
     @Override

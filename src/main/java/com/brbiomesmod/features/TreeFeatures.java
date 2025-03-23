@@ -4,6 +4,7 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.*;
 import com.brbiomesmod.features.FoliagePlacers.AcaiFoliagePlacer;
 import com.brbiomesmod.features.FoliagePlacers.JellyPalmFoliagePlacer;
+import com.brbiomesmod.features.FoliagePlacers.ParanaPineFoliagePlacer;
 import com.brbiomesmod.features.FoliagePlacers.QueenPalmFoliagePlacer;
 import com.brbiomesmod.features.TreeDecorators.PassionFruitVineLeavesDecorator;
 import com.brbiomesmod.features.TreeDecorators.PassionFruitVineTrunkDecorator;
@@ -49,7 +50,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.QUEEN_PALM_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.QUEEN_PALM_LEAVES),
                     new QueenPalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(6, 4, 0),
+                    new StraightTrunkPlacer(10, 4, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Jelly Palm
@@ -352,7 +353,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PARANA_PINE_TREE = register("parana_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PARANA_PINE_LOG),
                     new SimpleBlockStateProvider(States.PARANA_PINE_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new ParanaPineFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new GiantTrunkPlacer(13, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));

@@ -22,6 +22,10 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("jelly_palm_foliage_placer",
                     () -> new FoliagePlacerType<>(JellyPalmFoliagePlacer.CODEC));
 
+    public static final RegistryObject<FoliagePlacerType<ParanaPineFoliagePlacer>> PARANA_PINE_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("parana_pine_foliage_placer",
+                    () -> new FoliagePlacerType<>(ParanaPineFoliagePlacer.CODEC));
+
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
     }
