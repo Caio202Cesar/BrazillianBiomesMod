@@ -31,6 +31,15 @@ public class AtlanticForestBlocks {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, BrazillianBiomesMod.MOD_ID);
 
+    public static final RegistryObject<Block> QUEEN_PALM_LOG = registerBlock("queen_palm_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> QUEEN_PALM_LEAVES = registerBlock("queen_palm_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> QUEEN_PALM_SAPLING = registerBlock("queen_palm_sapling",
+            QueenPalmSapling::new);
+
+    public static final RegistryObject<Block> JUSSARA_LEAVES = registerBlock("jussara_leaves",
+            ModLeaves::new);
 
     public static final RegistryObject<Block> BRAZILWOOD_LOG = registerBlock("brazilwood_log",
             ModLogs::new);

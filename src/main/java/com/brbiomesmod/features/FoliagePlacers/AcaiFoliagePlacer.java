@@ -1,15 +1,9 @@
-package com.brbiomesmod.features;
+package com.brbiomesmod.features.FoliagePlacers;
 
-import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.gen.IWorldGenerationReader;
@@ -21,21 +15,21 @@ import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 import java.util.Random;
 import java.util.Set;
 
-public class PalmFoliagePlacer extends FoliagePlacer {
-    public PalmFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {
+public class AcaiFoliagePlacer extends FoliagePlacer {
+    public AcaiFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {
         super(radius, offset);
     }
 
-    public static final Codec<PalmFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
+    public static final Codec<AcaiFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
                     FeatureSpread.CODEC.fieldOf("radius").forGetter(p -> p.radius),
                     FeatureSpread.CODEC.fieldOf("offset").forGetter(p -> p.offset)
-            ).apply(instance, PalmFoliagePlacer::new)
+            ).apply(instance, AcaiFoliagePlacer::new)
     );
 
     @Override
     protected FoliagePlacerType<?> getPlacerType() {
-        return ModFoliagePlacer.PALM_FOLIAGE_PLACER.get(); // Register your foliage placer type
+        return ModFoliagePlacer.ACAI_FOLIAGE_PLACER.get(); // Register your foliage placer type
     }
 
     @Override

@@ -1,7 +1,7 @@
 package com.brbiomesmod;
 
 import com.brbiomesmod.block.BlockClasses.*;
-import com.brbiomesmod.features.ModFoliagePlacer;
+import com.brbiomesmod.features.FoliagePlacers.ModFoliagePlacer;
 import com.brbiomesmod.features.TreeDecorators.ModTreeDecorators;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.*;

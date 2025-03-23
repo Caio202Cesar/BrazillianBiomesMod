@@ -2,6 +2,8 @@ package com.brbiomesmod.features;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.*;
+import com.brbiomesmod.features.FoliagePlacers.AcaiFoliagePlacer;
+import com.brbiomesmod.features.FoliagePlacers.QueenPalmFoliagePlacer;
 import com.brbiomesmod.features.TreeDecorators.AcaiBunchTreeDecorator;
 import com.brbiomesmod.features.TreeDecorators.PassionFruitVineLeavesDecorator;
 import com.brbiomesmod.features.TreeDecorators.PassionFruitVineTrunkDecorator;
@@ -34,11 +36,19 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new MegaJungleTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
-    //Acai Tree
+    //Acai Palm
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ACAI_PALM = register("acai_palm",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PALMITO_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.ACAI_LEAVES),
-                    new PalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new AcaiFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(10, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(AcaiBunchTreeDecorator.INSTANCE)).build()));
+
+    //Queen Palm
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> QUEEN_PALM = register("queen_palm",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.QUEEN_PALM_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.QUEEN_PALM_LEAVES),
+                    new QueenPalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(10, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
@@ -644,6 +654,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState PALMITO_LOG = AmazonRainforestBlocks.PALMITO_LOG.get().getDefaultState();
         protected static final BlockState ACAI_LEAVES = AmazonRainforestBlocks.ACAI_LEAVES.get().getDefaultState();
+
+        protected static final BlockState QUEEN_PALM_LOG = AtlanticForestBlocks.QUEEN_PALM_LOG.get().getDefaultState();
+        protected static final BlockState QUEEN_PALM_LEAVES = AtlanticForestBlocks.QUEEN_PALM_LEAVES.get().getDefaultState();
 
         protected static final BlockState SOMBREIRO_LOG = AmazonRainforestBlocks.SOMBREIRO_LOG.get().getDefaultState();
         protected static final BlockState SOMBREIRO_LEAVES = AmazonRainforestBlocks.SOMBREIRO_LEAVES.get().getDefaultState();
