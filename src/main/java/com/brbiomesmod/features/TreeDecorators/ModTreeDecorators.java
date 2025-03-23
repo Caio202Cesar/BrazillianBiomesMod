@@ -19,10 +19,6 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("passionvine_trunk_decorator",
                     () -> new TreeDecoratorType<>(PassionFruitVineTrunkDecorator.CODEC));
 
-    public static final RegistryObject<TreeDecoratorType<AcaiBunchTreeDecorator>> ACAI_BUNCH_DECORATOR =
-            TREE_DECORATORS.register("acai_bunch_decorator",
-                    () -> new TreeDecoratorType<>(AcaiBunchTreeDecorator.CODEC));
-
     public static void register(IEventBus eventBus) {
         TREE_DECORATORS.register(eventBus);
     }

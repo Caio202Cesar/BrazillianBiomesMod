@@ -5,7 +5,6 @@ import com.brbiomesmod.block.BlockClasses.*;
 import com.brbiomesmod.features.FoliagePlacers.AcaiFoliagePlacer;
 import com.brbiomesmod.features.FoliagePlacers.JellyPalmFoliagePlacer;
 import com.brbiomesmod.features.FoliagePlacers.QueenPalmFoliagePlacer;
-import com.brbiomesmod.features.TreeDecorators.AcaiBunchTreeDecorator;
 import com.brbiomesmod.features.TreeDecorators.PassionFruitVineLeavesDecorator;
 import com.brbiomesmod.features.TreeDecorators.PassionFruitVineTrunkDecorator;
 import com.google.common.collect.ImmutableList;
@@ -43,7 +42,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new SimpleBlockStateProvider(TreeFeatures.States.ACAI_LEAVES),
                     new AcaiFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(10, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(AcaiBunchTreeDecorator.INSTANCE)).build()));
+                    new TwoLayerFeature(1, 0, 1))).build()));
 
     //Queen Palm
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> QUEEN_PALM = register("queen_palm",

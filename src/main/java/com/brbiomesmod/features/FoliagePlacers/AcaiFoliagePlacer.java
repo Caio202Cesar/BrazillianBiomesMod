@@ -37,7 +37,7 @@ public class AcaiFoliagePlacer extends FoliagePlacer {
         BlockPos center = foliage.func_236763_a_(); // Position of the top foliage
 
         // Place a central leaf block at the top to connect fronds
-        placeLeafAt(world, center, leaves, boundingBox);
+        placeLeafAt(world, center, leaves, boundingBox, random);
 
         // Generate 4-6 fronds extending outward from the top
         int frondCount = 4 + random.nextInt(3);
@@ -70,16 +70,24 @@ public class AcaiFoliagePlacer extends FoliagePlacer {
             }
 
             BlockPos leafPos = new BlockPos(x, y, z);
-            placeLeafAt(world, leafPos, leaves, boundingBox);
+            placeLeafAt(world, leafPos, leaves, boundingBox, random);
         }
     }
 
-    private void placeLeafAt(IWorldGenerationReader world, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
+    private void placeLeafAt(IWorldGenerationReader world, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox, Random random) {
         if (world.hasBlockState(pos, s -> s.isAir())) {
             world.setBlockState(pos, AmazonRainforestBlocks.ACAI_LEAVES.get().getDefaultState()
                     .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
             leaves.add(pos);
             boundingBox.expandTo(new MutableBoundingBox(pos, pos));
+
+            // 20% chance to generate an acai bunch beneath the leaf
+            if (random.nextFloat() < 0.2F) {
+                BlockPos acaiPos = pos.down(); // Position below the leaf
+                if (world.hasBlockState(acaiPos, s -> s.isAir())) { // Ensure space below is air
+                    world.setBlockState(acaiPos, AmazonRainforestBlocks.ACAI_BUNCH.get().getDefaultState(), 19);
+                }
+            }
         }
     }
 
