@@ -45,7 +45,7 @@ public class ParanaPineFoliagePlacer extends FoliagePlacer {
         };
 
         // First layer (upper fronds) - UPWARDS & SMALLER
-        int upperFrondCount = 4 + random.nextInt(3);
+        int upperFrondCount = 6 + random.nextInt(3);
         for (BlockPos trunkPos : trunkPositions) {
             for (int i = 0; i < upperFrondCount; i++) {
                 double angle = 2 * Math.PI * i / upperFrondCount;
