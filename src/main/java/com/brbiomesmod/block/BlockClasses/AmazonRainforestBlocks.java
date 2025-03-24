@@ -124,7 +124,11 @@ public class AmazonRainforestBlocks {
 
 
     public static final RegistryObject<Block> ACAI_LEAVES = registerBlock("acai_leaves",
-            ModLeaves::new);
+            () -> new AcaiLeaves(AbstractBlock.Properties.create(Material.LEAVES)
+                    .hardnessAndResistance(0.2f)
+                    .tickRandomly() // Enables random ticks
+                    .notSolid()
+                    .sound(SoundType.PLANT)));
     public static final RegistryObject<Block> PALMITO_LOG = registerBlock("palmito_log",
             PalmitoLog::new);
     public static final RegistryObject<Block> ACAI_SAPLING = registerBlock("acai_sapling",

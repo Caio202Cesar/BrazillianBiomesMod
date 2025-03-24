@@ -6,14 +6,15 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
+import net.minecraft.world.ISeedReader;
+import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.FeatureSpread;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacer;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 public class AcaiFoliagePlacer extends FoliagePlacer {
     public AcaiFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {
@@ -86,35 +87,6 @@ public class AcaiFoliagePlacer extends FoliagePlacer {
         }
     }
 
-    private void placeAcaiOnTrunk(IWorldGenerationReader world, BlockPos trunkPos, Random random) {
-        BlockPos[] sidePositions = {
-                trunkPos.north(), trunkPos.south(), trunkPos.east(), trunkPos.west()
-        };
-
-        for (BlockPos acaiPos : sidePositions) {
-            BlockPos trunkBlock = trunkPos; // The original trunk position
-
-            // Check if the açaí should generate (30% chance)
-            if (random.nextFloat() < 0.3f
-                    && world.hasBlockState(acaiPos, s -> s.isAir()) // Ensure space is air
-                    && world.hasBlockState(trunkBlock, s -> s.getBlock() == AmazonRainforestBlocks.PALMITO_LOG.get())) { // Ensure it's attached to a PALMITO_LOG
-
-                world.setBlockState(acaiPos, AmazonRainforestBlocks.ACAI_BUNCH.get().getDefaultState(), 19);
-            }
-        }
-    }
-
-    private void generateTrunk(IWorldGenerationReader world, BlockPos startPos, int height, Set<BlockPos> trunk, MutableBoundingBox boundingBox, Random random) {
-        for (int y = 0; y < height; y++) {
-            BlockPos trunkPos = startPos.up(y);
-            world.setBlockState(trunkPos, AmazonRainforestBlocks.PALMITO_LOG.get().getDefaultState(), 19);
-            trunk.add(trunkPos);
-            boundingBox.expandTo(new MutableBoundingBox(trunkPos, trunkPos));
-
-            // Try to generate acai on this trunk block
-            placeAcaiOnTrunk(world, trunkPos, random);
-        }
-    }
 
     @Override
     public int func_230374_a_(Random random, int trunkHeight, BaseTreeFeatureConfig config) {
