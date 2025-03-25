@@ -64,6 +64,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(10, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Carnauba Palm
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CARNAUBA_PALM = register("carnauba_palm",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CARNAUBA_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.CARNAUBA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(15, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
     //Kapok Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> KAPOK_TREE = register("kapok_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.KAPOK_LOG),
