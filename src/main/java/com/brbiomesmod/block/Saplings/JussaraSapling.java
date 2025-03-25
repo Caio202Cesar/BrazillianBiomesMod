@@ -1,6 +1,7 @@
 package com.brbiomesmod.block.Saplings;
 
 import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -19,15 +20,15 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Random;
 
-public class AcaiSapling extends SaplingBlock {
-    public AcaiSapling() {
-        super(new AcaiTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class JussaraSapling extends SaplingBlock {
+    public JussaraSapling() {
+        super(new JussaraTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.ACAI_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.JUSSARA_SAPLING.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -38,10 +39,10 @@ public class AcaiSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class AcaiTree extends Tree {
+    private static class JussaraTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.ACAI_PALM;
+            return TreeFeatures.JUSSARA_PALM;
         }
     }
 }

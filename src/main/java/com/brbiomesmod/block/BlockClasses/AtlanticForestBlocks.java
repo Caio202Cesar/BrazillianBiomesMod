@@ -39,7 +39,13 @@ public class AtlanticForestBlocks {
             QueenPalmSapling::new);
 
     public static final RegistryObject<Block> JUSSARA_LEAVES = registerBlock("jussara_leaves",
-            ModLeaves::new);
+            () -> new AcaiLeaves(AbstractBlock.Properties.create(Material.LEAVES)
+                    .hardnessAndResistance(0.2f)
+                    .tickRandomly() // Enables random ticks
+                    .notSolid()
+                    .sound(SoundType.PLANT)));
+    public static final RegistryObject<Block> JUSSARA_SAPLING = registerBlock("jussara_sapling",
+            JussaraSapling::new);
 
     public static final RegistryObject<Block> BRAZILWOOD_LOG = registerBlock("brazilwood_log",
             ModLogs::new);

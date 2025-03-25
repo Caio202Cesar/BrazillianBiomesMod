@@ -2,10 +2,7 @@ package com.brbiomesmod.features;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.*;
-import com.brbiomesmod.features.FoliagePlacers.AcaiFoliagePlacer;
-import com.brbiomesmod.features.FoliagePlacers.JellyPalmFoliagePlacer;
-import com.brbiomesmod.features.FoliagePlacers.ParanaPineFoliagePlacer;
-import com.brbiomesmod.features.FoliagePlacers.QueenPalmFoliagePlacer;
+import com.brbiomesmod.features.FoliagePlacers.*;
 import com.brbiomesmod.features.TreeDecorators.PassionFruitVineLeavesDecorator;
 import com.brbiomesmod.features.TreeDecorators.PassionFruitVineTrunkDecorator;
 import com.google.common.collect.ImmutableList;
@@ -42,7 +39,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PALMITO_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.ACAI_LEAVES),
                     new AcaiFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(10, 2, 0),
+                    new StraightTrunkPlacer(12, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JUSSARA_PALM = register("jussara_palm",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PALMITO_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.JUSSARA_LEAVES),
+                    new JussaraFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(15, 17, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Queen Palm
@@ -663,6 +666,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState PALMITO_LOG = AmazonRainforestBlocks.PALMITO_LOG.get().getDefaultState();
         protected static final BlockState ACAI_LEAVES = AmazonRainforestBlocks.ACAI_LEAVES.get().getDefaultState();
+        protected static final BlockState JUSSARA_LEAVES = AtlanticForestBlocks.JUSSARA_LEAVES.get().getDefaultState();
 
         protected static final BlockState QUEEN_PALM_LOG = AtlanticForestBlocks.QUEEN_PALM_LOG.get().getDefaultState();
         protected static final BlockState QUEEN_PALM_LEAVES = AtlanticForestBlocks.QUEEN_PALM_LEAVES.get().getDefaultState();
@@ -809,6 +813,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILNUT_TREE.withChance(0.5F)),
                     BRAZILNUT_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_PALMS = register("atlantic_forest_palms",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JUSSARA_PALM.withChance(0.5F)),
+                    QUEEN_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(7, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> BALSA_TREES = register("balsa_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BALSA_TREE.withChance(0.5F)),
