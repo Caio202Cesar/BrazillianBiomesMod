@@ -1,11 +1,17 @@
 package com.brbiomesmod.block;
 
 
+import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
 import net.minecraft.block.*;
 import net.minecraft.block.material.PushReaction;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.ToolType;
 
 public class AcaiBunchBlock extends Block {
@@ -14,6 +20,11 @@ public class AcaiBunchBlock extends Block {
                 .sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().harvestTool(ToolType.HOE));
     }
 
+    @OnlyIn(Dist.CLIENT)
+    public static void registerRenderLayer() {
+        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.ACAI_BUNCH.get(), RenderType.getCutout());
+
+    }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 50;
