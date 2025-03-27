@@ -1,6 +1,7 @@
 package com.brbiomesmod.block;
 
 
+import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
 import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
 import net.minecraft.block.*;
@@ -10,19 +11,47 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.ToolType;
 
-public class AcaiBunchBlock extends Block {
-    public AcaiBunchBlock() {
-        super(AbstractBlock.Properties.from(Blocks.BEEHIVE).zeroHardnessAndResistance().tickRandomly()
+import java.util.Random;
+
+public class BananaFlowerBlock extends Block {
+    public BananaFlowerBlock() {
+        super(Properties.from(Blocks.BEEHIVE).zeroHardnessAndResistance().tickRandomly()
                 .sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().harvestTool(ToolType.HOE));
+    }
+
+    public boolean ticksRandomly(BlockState state) {
+        return true;
+    }
+
+    /**
+     * Performs a random tick on a block.
+     *
+     * @param state
+     * @param worldIn
+     * @param pos
+     * @param random
+     */
+    @Override
+    public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        super.randomTick(state, worldIn, pos, random);
+
+        double chance = 0.09;
+
+        if (random.nextDouble() < chance) {
+            worldIn.setBlockState(pos, AmazonRainforestBlocks.BANANA_BUNCH.get().getDefaultState());
+
+        }
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.ACAI_BUNCH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.BANANA_BUNCH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.BANANA_FLOWER.get(), RenderType.getCutout());
 
     }
 

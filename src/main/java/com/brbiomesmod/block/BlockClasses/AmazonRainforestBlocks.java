@@ -147,8 +147,10 @@ public class AmazonRainforestBlocks {
             PalmitoLog::new);
     public static final RegistryObject<Block> BANANA_SAPLING = registerBlock("banana_sapling",
             BananaSapling::new);
+    public static final RegistryObject<Block> BANANA_FLOWER = registerBlock("banana_flower",
+            BananaFlowerBlock::new); //Can be harvested and cooked
     public static final RegistryObject<Block> BANANA_BUNCH = registerBlock("banana_bunch",
-            AcaiBunchBlock::new);
+            BananaFlowerBlock::new);
 
 
     public static final RegistryObject<Block> BRAZILNUT_LOG = registerBlock("brazilnut_log",
