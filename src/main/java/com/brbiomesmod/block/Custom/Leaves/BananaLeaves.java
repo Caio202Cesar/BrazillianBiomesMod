@@ -30,7 +30,7 @@ public class BananaLeaves extends LeavesBlock {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, AmazonRainforestBlocks.BANANA_FLOWER.get().getDefaultState(), 2);
+                world.setBlockState(belowPos, AmazonRainforestBlocks.BANANA_STALK.get().getDefaultState(), 2);
             }
         }
     }
