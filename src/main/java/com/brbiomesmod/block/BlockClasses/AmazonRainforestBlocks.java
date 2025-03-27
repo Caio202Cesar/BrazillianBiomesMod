@@ -150,7 +150,7 @@ public class AmazonRainforestBlocks {
     public static final RegistryObject<Block> BANANA_FLOWER = registerBlock("banana_flower",
             BananaFlowerBlock::new); //Can be harvested and cooked
     public static final RegistryObject<Block> BANANA_BUNCH = registerBlock("banana_bunch",
-            BananaFlowerBlock::new);
+            BananaBunchBlock::new);
     public static final RegistryObject<Block> BANANA_STALK = registerBlock("banana_stalk",
             BananaStalkBlock::new);
 

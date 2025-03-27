@@ -32,8 +32,7 @@ public class BananaStalkBlock extends Block {
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         super.randomTick(state, world, pos, random);
 
-        // 10% chance to grow an acai bunch
-        if (random.nextFloat() < 0.98f) {
+        if (random.nextFloat() < 0.1f) {
             BlockPos belowPos = pos.down();
             BlockState belowState = world.getBlockState(belowPos);
 

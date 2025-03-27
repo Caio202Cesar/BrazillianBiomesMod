@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/banana_bunch",
+    "particle": "brbiomesmod:block/banana_bunch"
+  }
+}
