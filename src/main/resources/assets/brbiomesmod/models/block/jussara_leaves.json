@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/jussara_leaves",
+    "particle": "brbiomesmod:block/jussara_leaves"
+  }
+}
