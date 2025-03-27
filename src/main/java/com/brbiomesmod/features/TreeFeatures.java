@@ -56,11 +56,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(10, 4, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
-    //Acai Palm
+    //Banana Palm
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BANANA_TREE = register("banana_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BANANA_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.BANANA_LEAVES),
-                    new AcaiFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new BananaFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(7, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
@@ -687,11 +687,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState QUEEN_PALM_LOG = AtlanticForestBlocks.QUEEN_PALM_LOG.get().getDefaultState();
         protected static final BlockState QUEEN_PALM_LEAVES = AtlanticForestBlocks.QUEEN_PALM_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BANANA_LOG = AtlanticForestBlocks.QUEEN_PALM_LOG.get().getDefaultState();
-        protected static final BlockState BANANA_LEAVES = AtlanticForestBlocks.QUEEN_PALM_LEAVES.get().getDefaultState();
+        protected static final BlockState BANANA_LOG = AmazonRainforestBlocks.BANANA_LOG.get().getDefaultState();
+        protected static final BlockState BANANA_LEAVES = AmazonRainforestBlocks.BANANA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState QUEEN_PALM_LOG = AtlanticForestBlocks.QUEEN_PALM_LOG.get().getDefaultState();
-        protected static final BlockState QUEEN_PALM_LEAVES = AtlanticForestBlocks.QUEEN_PALM_LEAVES.get().getDefaultState();
+        protected static final BlockState CARNAUBA_LOG = CaatingaBlocks.CARNAUBA_LOG.get().getDefaultState();
+        protected static final BlockState CARNAUBA_LEAVES = CaatingaBlocks.CARNAUBA_LEAVES.get().getDefaultState();
 
         protected static final BlockState JELLY_PALM_LOG = PampasBlocks.JELLY_PALM_LOG.get().getDefaultState();
         protected static final BlockState JELLY_PALM_LEAVES = PampasBlocks.JELLY_PALM_LEAVES.get().getDefaultState();
