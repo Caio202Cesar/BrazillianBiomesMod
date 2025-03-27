@@ -23,6 +23,7 @@ public class AcaiBunchBlock extends Block {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.ACAI_BUNCH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.BANANA_BUNCH.get(), RenderType.getCutout());
 
     }
 

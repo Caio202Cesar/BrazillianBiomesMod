@@ -137,6 +137,20 @@ public class AmazonRainforestBlocks {
             AcaiBunchBlock::new);
 
 
+    public static final RegistryObject<Block> BANANA_LEAVES = registerBlock("banana_leaves",
+            () -> new BananaLeaves(AbstractBlock.Properties.create(Material.LEAVES)
+                    .hardnessAndResistance(0.2f)
+                    .tickRandomly() // Enables random ticks
+                    .notSolid()
+                    .sound(SoundType.PLANT)));
+    public static final RegistryObject<Block> BANANA_LOG = registerBlock("banana_log",
+            PalmitoLog::new);
+    public static final RegistryObject<Block> BANANA_SAPLING = registerBlock("banana_sapling",
+            BananaSapling::new);
+    public static final RegistryObject<Block> BANANA_BUNCH = registerBlock("banana_bunch",
+            AcaiBunchBlock::new);
+
+
     public static final RegistryObject<Block> BRAZILNUT_LOG = registerBlock("brazilnut_log",
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILNUT_LEAVES = registerBlock("brazilnut_leaves",
