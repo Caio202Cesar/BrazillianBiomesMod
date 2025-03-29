@@ -11,6 +11,12 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withAmazonVarzeaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.VARZEA_TREES);
     }
+    public static void withCerradoPalms(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CERRADO_PALM_TREES);
+    }
+    public static void withPampasPalms(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PAMPAS_PALMS);
+    }
     public static void withBrazilnutTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BRAZILNUT_TREES);
     }

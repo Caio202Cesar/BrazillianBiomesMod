@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/jelly_palm_sapling",
+    "particle": "brbiomesmod:block/jelly_palm_sapling"
+  }
+}
