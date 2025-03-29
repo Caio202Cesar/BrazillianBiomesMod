@@ -1,13 +1,13 @@
 package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
+import com.brbiomesmod.block.AcaiBunchBlock;
+import com.brbiomesmod.block.BuritiBunchBlock;
 import com.brbiomesmod.block.Custom.Leaves.*;
 import com.brbiomesmod.block.Custom.Log.ModLogs;
+import com.brbiomesmod.block.Custom.Log.PalmitoLog;
 import com.brbiomesmod.block.ModPlanks;
-import com.brbiomesmod.block.Saplings.BlackSucupiraSapling;
-import com.brbiomesmod.block.Saplings.CagaitaSapling;
-import com.brbiomesmod.block.Saplings.PinkSilkFlossSapling;
-import com.brbiomesmod.block.Saplings.WolfAppleSapling;
+import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.block.Custom.Log.SilkFlossLog;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -109,6 +109,20 @@ public class CerradoBlocks {
     public static final RegistryObject<Block> POTTED_CAGAITA_SAPLING = BLOCKS.register("potted_cagaita_sapling",
             () -> new FlowerPotBlock(CerradoBlocks.CAGAITA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
+
+
+    public static final RegistryObject<Block> BURITI_LEAVES = registerBlock("buriti_leaves",
+            () -> new BuritiLeaves(AbstractBlock.Properties.create(Material.LEAVES)
+                    .hardnessAndResistance(0.2f)
+                    .tickRandomly() // Enables random ticks
+                    .notSolid()
+                    .sound(SoundType.PLANT)));
+    public static final RegistryObject<Block> BURITI_LOG = registerBlock("buriti_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BURITI_SAPLING = registerBlock("buriti_sapling",
+            AcaiSapling::new);
+    public static final RegistryObject<Block> BURITI_BUNCH = registerBlock("buriti_bunch",
+            BuritiBunchBlock::new);
 
 
     public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",

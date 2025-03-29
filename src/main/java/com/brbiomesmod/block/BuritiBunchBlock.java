@@ -1,6 +1,8 @@
 package com.brbiomesmod.block;
 
+
 import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.CerradoBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -18,8 +20,8 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class BananaStalkBlock extends Block {
-    public BananaStalkBlock() {
+public class BuritiBunchBlock extends Block {
+    public BuritiBunchBlock() {
         super(Properties.from(Blocks.BEEHIVE).zeroHardnessAndResistance().tickRandomly()
                 .sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().harvestTool(ToolType.HOE));
     }
@@ -38,14 +40,14 @@ public class BananaStalkBlock extends Block {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, AmazonRainforestBlocks.BANANA_FLOWER.get().getDefaultState(), 2);
+                world.setBlockState(belowPos, CerradoBlocks.BURITI_BUNCH.get().getDefaultState(), 2);
             }
         }
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.BANANA_STALK.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(CerradoBlocks.BURITI_BUNCH.get(), RenderType.getCutout());
 
     }
 
@@ -61,4 +63,3 @@ public class BananaStalkBlock extends Block {
         return PushReaction.DESTROY;
     }
 }
-
