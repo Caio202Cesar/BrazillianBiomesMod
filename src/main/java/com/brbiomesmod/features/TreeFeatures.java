@@ -675,10 +675,21 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(1, 0, 1)))
                     .setDecorators(ImmutableList.of(new CocoaTreeDecorator(0.98F))).setIgnoreVines().build()));
 
+    //Buriti Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BURITI_PALM = register("buriti_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BURITI_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.BURITI_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(15, 2, 4),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
     public static final class States {
 
         protected static final BlockState KAPOK_LOG = AmazonRainforestBlocks.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = AmazonRainforestBlocks.KAPOK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState BURITI_LEAVES = CerradoBlocks.BURITI_LEAVES.get().getDefaultState();
+        protected static final BlockState BURITI_LOG = CerradoBlocks.BURITI_LOG.get().getDefaultState();
 
         protected static final BlockState PALMITO_LOG = AmazonRainforestBlocks.PALMITO_LOG.get().getDefaultState();
         protected static final BlockState ACAI_LEAVES = AmazonRainforestBlocks.ACAI_LEAVES.get().getDefaultState();
@@ -836,6 +847,16 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     BRAZILNUT_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
+    public static final ConfiguredFeature<?, ?> VARZEA_PALMS = register("varzea_palms",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.3F)),
+                    ACAI_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(7, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> PANTANAL_VEGETATION = register("pantanal_vegetation",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.3F)),
+                    CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(0, 0.01F, 1))));
+
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_PALMS = register("atlantic_forest_palms",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JUSSARA_PALM.withChance(0.5F)),
                     QUEEN_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
@@ -967,7 +988,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> CERRADO_FRUIT_TREES = register("cerrado_fruit_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.2F),
-                            CAGAITA_TREE.withChance(0.2F)), WOLF_APPLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            CAGAITA_TREE.withChance(0.2F), WOLF_APPLE_TREE.withChance(0.2F)), BURITI_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
     public static final ConfiguredFeature<?, ?> JABUTICABA_TREES = register("jabuticaba_trees",
