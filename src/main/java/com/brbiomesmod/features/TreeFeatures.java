@@ -950,7 +950,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> CAATINGA_TREES = register("caatinga_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(UMBU_TREE.withChance(0.2F),
-                    JUA_TREE.withChance(0.1F), WHITE_SILK_FLOSS_TREE.withChance(0.01F), WHITE_SILK_FLOSS_BIG_TREE.withChance(0.0198F)), BLACK_JUREMA_TREE))
+                    JUA_TREE.withChance(0.1F), WHITE_SILK_FLOSS_TREE.withChance(0.01F), CARNAUBA_PALM.withChance(0.2F),
+                            WHITE_SILK_FLOSS_BIG_TREE.withChance(0.0198F)), BLACK_JUREMA_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 0))));
 
