@@ -25,7 +25,8 @@ public class ModBiomeGeneration {
         addBiome(CerradoBiome.CERRADO.get(), BiomeManager.BiomeType.DESERT, 25, HOT, OVERWORLD, SPARSE, SAVANNA);
         addBiome(RestingaBeachBiome.RESTINGA_BEACH.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, BEACH, SANDY);
         addBiome(AtlanticForestBiome.ATLANTIC_FOREST.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, DENSE, FOREST, LUSH);
-
+        addBiome(AmazonVarzeaForestBiome.AMAZON_VARZEA_FOREST.get(), BiomeManager.BiomeType.DESERT, 23, OVERWORLD, HOT, DENSE, FOREST,
+                JUNGLE, LUSH, WET, SWAMP);
 
 
     }
