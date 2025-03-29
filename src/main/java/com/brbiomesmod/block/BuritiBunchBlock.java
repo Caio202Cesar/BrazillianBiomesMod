@@ -34,7 +34,7 @@ public class BuritiBunchBlock extends Block {
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         super.randomTick(state, world, pos, random);
 
-        if (random.nextFloat() < 0.9f) {
+        if (random.nextFloat() < 0.2f) {
             BlockPos belowPos = pos.down();
             BlockState belowState = world.getBlockState(belowPos);
 

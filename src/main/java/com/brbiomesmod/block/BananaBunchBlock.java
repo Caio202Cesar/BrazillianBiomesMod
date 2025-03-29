@@ -2,6 +2,7 @@ package com.brbiomesmod.block;
 
 
 import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.CerradoBlocks;
 import net.minecraft.block.*;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.client.renderer.RenderType;
@@ -17,35 +18,28 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class BananaBunchBlock extends Block implements IGrowable {
+public class BananaBunchBlock extends Block {
     public BananaBunchBlock() {
         super(Properties.from(Blocks.BEEHIVE).zeroHardnessAndResistance().tickRandomly()
                 .sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().harvestTool(ToolType.HOE));
     }
 
+    public boolean ticksRandomly(BlockState state) {
+        return true;
+    }
+
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        BlockPos down = pos.down();
-        if (world.isAirBlock(down) && random.nextFloat() < 0.01F) { //1% chance to grow
-            world.setBlockState(down, this.getDefaultState(), 2);
-        }
-    }
+        super.randomTick(state, world, pos, random);
 
-    @Override
-    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-        return true;
-    }
+        if (random.nextFloat() < 0.9f) {
+            BlockPos belowPos = pos.down();
+            BlockState belowState = world.getBlockState(belowPos);
 
-    @Override
-    public boolean canUseBonemeal(World worldIn, Random rand, BlockPos pos, BlockState state) {
-        return true;
-    }
-
-    @Override
-    public void grow(ServerWorld worldIn, Random rand, BlockPos pos, BlockState state) {
-        BlockPos down = pos.down();
-        if (worldIn.isAirBlock(down)) {
-            worldIn.setBlockState(down, AmazonRainforestBlocks.BANANA_FLOWER.get().getDefaultState(), 2);
+            // Check if the space below is air
+            if (belowState.isAir()) {
+                world.setBlockState(belowPos, AmazonRainforestBlocks.BANANA_FLOWER.get().getDefaultState(), 2);
+            }
         }
     }
 
