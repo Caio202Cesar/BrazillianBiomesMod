@@ -1,7 +1,9 @@
 {
-  "variants": {
-    "": {
-      "model": "brbiomesmod:block/buriti_leaves"
-    }
-  }
-}
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/buriti_dead_leaves",
+        "weight": 2},
+      {"model": "brbiomesmod:block/buriti_leaves",
+        "weight": 7}
+    ]
+  }}
