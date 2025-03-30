@@ -68,7 +68,6 @@
   "item.brbiomesmod.umbu_juice": "Umbu Juice",
 
   "block.brbiomesmod.acai_bunch": "Acai Bunch",
-  "block.brbiomesmod.acai_frond": "Acai Frond",
   "block.brbiomesmod.algarrobillo_fence": "Algarrobillo Fence",
   "block.brbiomesmod.algarrobillo_fence_gate": "Algarrobillo Fence Gate",
   "block.brbiomesmod.algarrobillo_log": "Algarrobillo Log",
@@ -456,6 +455,13 @@
   "block.brbiomesmod.acai_leaves": "Açai Leaves",
   "block.brbiomesmod.acai_sapling": "Açai Sapling",
   "block.brbiomesmod.palmito_log": "Palmito Log",
+  "block.brbiomesmod.jelly_palm_leaves": "Jelly Palm Leaves",
+  "block.brbiomesmod.jelly_palm_sapling": "Jelly Palm Sapling",
+  "block.brbiomesmod.jelly_palm_log": "Jelly Palm Log",
+  "block.brbiomesmod.buriti_leaves": "Buriti Leaves",
+  "block.brbiomesmod.buriti_sapling": "Buriti Sapling",
+  "block.brbiomesmod.buriti_log": "Buriti Log",
+  "block.brbiomesmod.buriti_bunch": "Buriti Bunch",
 
   "itemGroup.BRBCaatingaTab": "BRB: Caatinga",
   "itemGroup.BRBAtlanticForestTab": "BRB: Atlantic Forest",

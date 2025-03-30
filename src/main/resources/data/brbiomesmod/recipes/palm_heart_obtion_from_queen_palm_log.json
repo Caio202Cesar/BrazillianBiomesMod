@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:queen_palm_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:palm_heart",
+    "count": 6
+  }
+}

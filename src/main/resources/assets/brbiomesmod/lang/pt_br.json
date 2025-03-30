@@ -68,7 +68,6 @@
   "item.brbiomesmod.umbu_juice": "Suco de Umbu",
 
   "block.brbiomesmod.acai_bunch": "Cacho de Açaí",
-  "block.brbiomesmod.acai_frond": "Palha de Açaí",
   "block.brbiomesmod.algarrobillo_fence": "Cerca de Inhanduvá",
   "block.brbiomesmod.algarrobillo_fence_gate": "Portão de Inhanduvá",
   "block.brbiomesmod.algarrobillo_log": "Tronco de Inhanduvá",
@@ -455,6 +454,13 @@
   "block.brbiomesmod.acai_leaves": "Folhas de Açaí",
   "block.brbiomesmod.acai_sapling": "Muda de Açaí",
   "block.brbiomesmod.palmito_log": "Tronco de Palmito",
+  "block.brbiomesmod.jelly_palm_leaves": "Folhas de Butiá",
+  "block.brbiomesmod.jelly_palm_sapling": "Muda de Butiá",
+  "block.brbiomesmod.jelly_palm_log": "Tronco de Butiá",
+  "block.brbiomesmod.buriti_leaves": "Folhas de Buriti",
+  "block.brbiomesmod.buriti_sapling": "Muda de Buriti",
+  "block.brbiomesmod.buriti_log": "Tronco de Buriti",
+  "block.brbiomesmod.buriti_bunch": "Cacho de Buriti",
 
   "itemGroup.BRBCaatingaTab": "Caatinga",
   "itemGroup.BRBAtlanticForestTab": "Mata Atlântica",

@@ -42,7 +42,7 @@ public class BuritiSapling extends SaplingBlock {
     private static class AcaiTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.CARNAUBA_PALM;
+            return TreeFeatures.BURITI_PALM;
         }
     }
 }
