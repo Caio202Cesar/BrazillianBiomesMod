@@ -210,6 +210,12 @@ public class ModItems {
     public static final RegistryObject<Item> MATE_CUP = ITEMS.register("mate_cup",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
+    public static final RegistryObject<Item> DRIED_CARNAUBA_LEAVES = ITEMS.register("dried_carnauba_leaves",
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+
+    public static final RegistryObject<Item> CARNAUBA_WAX = ITEMS.register("carnauba_wax",
+            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+
     //Tools
     public static final RegistryObject<Item> TOURMALINE_SWORD = ITEMS.register("tourmaline_paraiba_sword",
             () -> new SwordItem(ModItemTier.TOURMALINE, 3, -2.4F,

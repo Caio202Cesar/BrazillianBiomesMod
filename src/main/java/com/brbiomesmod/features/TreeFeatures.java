@@ -69,7 +69,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JELLY_PALM_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.JELLY_PALM_LEAVES),
                     new JellyPalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(8, 2, 0),
+                    new StraightTrunkPlacer(6, 4, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Carnauba Palm

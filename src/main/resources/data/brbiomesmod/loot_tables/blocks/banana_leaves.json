@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:jussara_leaves"
+              "name": "brbiomesmod:banana_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:jussara_sapling"
+              "name": "brbiomesmod:banana_sapling"
             }
           ]
         }
