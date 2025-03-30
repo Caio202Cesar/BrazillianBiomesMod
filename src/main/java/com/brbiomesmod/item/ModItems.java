@@ -73,9 +73,17 @@ public class ModItems {
     public static final RegistryObject<Item> ACAI_BERRIES = ITEMS.register("acai_berries",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.ACAI_BERRIES)));
     public static final RegistryObject<Item> PALM_HEART = ITEMS.register("palm_heart",
-            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COOKED_CASSAVA)));
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.PALM_HEART)));
     public static final RegistryObject<Item> BURITI = ITEMS.register("buriti",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.BURITI)));
+    public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.BANANA)));
+    public static final RegistryObject<Item> ACAI_BOWL = ITEMS.register("acai_bowl",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.ACAI_BOWL)));
+    public static final RegistryObject<Item> ACAI_WITH_BANANA = ITEMS.register("acai_with_banana",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.ACAI_WITH_BANANA)));//extra food
+    public static final RegistryObject<Item> ACAI_WITH_CUPUACU = ITEMS.register("acai_with_cupuacu",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.ACAI_WITH_CUPUACU)));
 
     public static final RegistryObject<Item> UMBU = ITEMS.register("umbu",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.UMBU)));

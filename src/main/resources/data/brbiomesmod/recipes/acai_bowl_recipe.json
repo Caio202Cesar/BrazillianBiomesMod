@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "ab",
+    "c "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:bowl"
+    },
+    "b": {
+      "item": "brbiomesmod:acai_berries"
+    },
+    "c": {
+      "item": "brbiomesmod:guarana_seeds"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:acai_bowl",
+    "count": 1
+  }
+}
