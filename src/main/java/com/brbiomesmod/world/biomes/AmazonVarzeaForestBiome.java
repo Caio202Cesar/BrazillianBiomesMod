@@ -3,6 +3,7 @@ package com.brbiomesmod.world.biomes;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.features.ModDefaultBiomeFeatures;
 import com.brbiomesmod.features.TreeFeatures;
+import com.brbiomesmod.world.biomes.Util.ModConfiguredSurfaceBuilders;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -25,7 +26,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> AMAZON_VARZEA_FOREST = BIOMES.register("amazon_varzea_forest",
-        () -> makeAmazonRainforestBiome(() -> ConfiguredSurfaceBuilders.SWAMP, 0.1f, 0.126f));
+        () -> makeAmazonRainforestBiome(() -> ConfiguredSurfaceBuilders.SWAMP, -0.1f, 0.120f));
 
 //Varzea trees: kapok, sandbox tree, andiroba and buriti
 private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

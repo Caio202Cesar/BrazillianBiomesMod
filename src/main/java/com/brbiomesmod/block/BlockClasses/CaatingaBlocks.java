@@ -114,6 +114,8 @@ public class CaatingaBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> CARNAUBA_LEAVES = registerBlock("carnauba_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> CARNAUBA_SAPLING = registerBlock("carnauba_sapling",
+            CarnaubaSapling::new);
 
     //public static final RegistryObject<Block> CATINGUEIRA_LOG = registerBlock("catingueira_log", ModLogs::new);
     //public static final RegistryObject<Block> CATINGUEIRA_LEAVES = registerBlock("catingueira_leaves", ModLeaves::new);

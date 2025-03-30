@@ -88,5 +88,9 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         ApricotIpeSapling.registerRenderLayer();
         SombreiroSapling.registerRenderLayer();
         QueenPalmSapling.registerRenderLayer();
+        CarnaubaSapling.registerRenderLayer();
+        BuritiSapling.registerRenderLayer();
+        JellyPalmSapling.registerRenderLayer();
+        BananaSapling.registerRenderLayer();
     }
 }

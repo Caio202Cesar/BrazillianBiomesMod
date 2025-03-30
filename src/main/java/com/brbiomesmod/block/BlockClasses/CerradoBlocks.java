@@ -120,7 +120,7 @@ public class CerradoBlocks {
     public static final RegistryObject<Block> BURITI_LOG = registerBlock("buriti_log",
             ModLogs::new);
     public static final RegistryObject<Block> BURITI_SAPLING = registerBlock("buriti_sapling",
-            AcaiSapling::new);
+            BuritiSapling::new);
     public static final RegistryObject<Block> BURITI_BUNCH = registerBlock("buriti_bunch",
             BuritiBunchBlock::new);
 

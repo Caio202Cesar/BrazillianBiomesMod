@@ -31,6 +31,13 @@ public class ModConfiguredSurfaceBuilders {
                     Blocks.SAND.getBlock().getDefaultState() //underwater material
             )));
 
+    public static ConfiguredSurfaceBuilder<?> VARZEA = register("varzea_surface",
+            SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
+                    Blocks.WATER.getBlock().getDefaultState(), //top material
+                    Blocks.PODZOL.getBlock().getDefaultState(), //under material
+                    Blocks.SAND.getBlock().getDefaultState() //underwater material
+            )));
+
     private static <SC extends ISurfaceBuilderConfig>ConfiguredSurfaceBuilder<SC> register(String name, ConfiguredSurfaceBuilder<SC> csb) {
 
         return WorldGenRegistries.register(WorldGenRegistries.CONFIGURED_SURFACE_BUILDER,
