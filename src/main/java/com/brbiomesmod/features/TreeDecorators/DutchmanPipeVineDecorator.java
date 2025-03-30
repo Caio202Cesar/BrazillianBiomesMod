@@ -1,9 +1,10 @@
 package com.brbiomesmod.features.TreeDecorators;
 
+import com.brbiomesmod.block.AristolochiaVine;
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
+import com.brbiomesmod.block.PassionfruitVine;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.VineBlock;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
@@ -17,46 +18,41 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-public class DutchmanPipeVineLeavesDecorator extends TreeDecorator {
-    // Create a unit codec for this decorator.
-    public static final Codec<DutchmanPipeVineLeavesDecorator> CODEC = Codec.unit(DutchmanPipeVineLeavesDecorator::new);
-    public static final DutchmanPipeVineLeavesDecorator INSTANCE = new DutchmanPipeVineLeavesDecorator();
+public class DutchmanPipeVineDecorator extends TreeDecorator {
+    public static final Codec<DutchmanPipeVineDecorator> CODEC = Codec.unit(DutchmanPipeVineDecorator::new);
+    public static final DutchmanPipeVineDecorator INSTANCE = new DutchmanPipeVineDecorator();
 
     @Override
     protected TreeDecoratorType<?> getDecoratorType() {
-        // Return your registered TreeDecoratorType – ensure you've registered it with your mod's modid.
+        // Return your registered type. Replace with your custom type if desired.
         return ModTreeDecorators.DUTCHMAN_PIPE_VINE_DECORATOR.get();
     }
 
-    /**
-     * This method is called during tree decoration.
-     * p_225576_3_ is typically the trunk positions (unused here), while p_225576_4_ is the list of leaves positions.
-     */
     @Override
     public void func_225576_a_(ISeedReader world, Random rand, List<BlockPos> trunkPositions, List<BlockPos> leavesPositions, Set<BlockPos> placed, MutableBoundingBox boundingBox) {
-        leavesPositions.forEach((leafPos) -> {
-            if (rand.nextInt(4) == 0) {
-                BlockPos target = leafPos.west();
-                if (Feature.isAirAt(world, target)) {
-                    this.placeVine(world, target, VineBlock.EAST, placed, boundingBox);
+        trunkPositions.forEach((pos) -> {
+            if (rand.nextInt(3) > 0) {
+                BlockPos blockpos = pos.west();
+                if (Feature.isAirAt(world, blockpos)) {
+                    this.placeVine(world, blockpos, AristolochiaVine.EAST, placed, boundingBox);
                 }
             }
-            if (rand.nextInt(4) == 0) {
-                BlockPos target = leafPos.east();
-                if (Feature.isAirAt(world, target)) {
-                    this.placeVine(world, target, VineBlock.WEST, placed, boundingBox);
+            if (rand.nextInt(3) > 0) {
+                BlockPos blockpos1 = pos.east();
+                if (Feature.isAirAt(world, blockpos1)) {
+                    this.placeVine(world, blockpos1, AristolochiaVine.WEST, placed, boundingBox);
                 }
             }
-            if (rand.nextInt(4) == 0) {
-                BlockPos target = leafPos.north();
-                if (Feature.isAirAt(world, target)) {
-                    this.placeVine(world, target, VineBlock.SOUTH, placed, boundingBox);
+            if (rand.nextInt(3) > 0) {
+                BlockPos blockpos2 = pos.north();
+                if (Feature.isAirAt(world, blockpos2)) {
+                    this.placeVine(world, blockpos2, AristolochiaVine.SOUTH, placed, boundingBox);
                 }
             }
-            if (rand.nextInt(4) == 0) {
-                BlockPos target = leafPos.south();
-                if (Feature.isAirAt(world, target)) {
-                    this.placeVine(world, target, VineBlock.NORTH, placed, boundingBox);
+            if (rand.nextInt(3) > 0) {
+                BlockPos blockpos3 = pos.south();
+                if (Feature.isAirAt(world, blockpos3)) {
+                    this.placeVine(world, blockpos3, AristolochiaVine.NORTH, placed, boundingBox);
                 }
             }
         });
@@ -81,3 +77,4 @@ public class DutchmanPipeVineLeavesDecorator extends TreeDecorator {
         }
     }
 }
+

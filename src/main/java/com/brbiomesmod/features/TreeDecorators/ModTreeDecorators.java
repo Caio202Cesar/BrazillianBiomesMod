@@ -15,9 +15,9 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("passionvine_decorator",
                     () -> new TreeDecoratorType<>(PassionFruitVineLeavesDecorator.CODEC));
 
-    public static final RegistryObject<TreeDecoratorType<DutchmanPipeVineLeavesDecorator>> DUTCHMAN_PIPE_VINE_DECORATOR =
+    public static final RegistryObject<TreeDecoratorType<DutchmanPipeVineDecorator>> DUTCHMAN_PIPE_VINE_DECORATOR =
             TREE_DECORATORS.register("dutchman_pipe_vine_decorator",
-                    () -> new TreeDecoratorType<>(DutchmanPipeVineLeavesDecorator.CODEC));
+                    () -> new TreeDecoratorType<>(DutchmanPipeVineDecorator.CODEC));
 
     public static final RegistryObject<TreeDecoratorType<PassionFruitVineTrunkDecorator>> TRUNK_PASSIONVINE_DECORATOR =
             TREE_DECORATORS.register("passionvine_trunk_decorator",

@@ -3,7 +3,7 @@ package com.brbiomesmod.features;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.BlockClasses.*;
 import com.brbiomesmod.features.FoliagePlacers.*;
-import com.brbiomesmod.features.TreeDecorators.DutchmanPipeVineLeavesDecorator;
+import com.brbiomesmod.features.TreeDecorators.DutchmanPipeVineDecorator;
 import com.brbiomesmod.features.TreeDecorators.PassionFruitVineLeavesDecorator;
 import com.brbiomesmod.features.TreeDecorators.PassionFruitVineTrunkDecorator;
 import com.google.common.collect.ImmutableList;
@@ -62,7 +62,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new QueenPalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(10, 4, 0),
                     new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
-                    DutchmanPipeVineLeavesDecorator.INSTANCE)).build()));
+                    DutchmanPipeVineDecorator.INSTANCE)).build()));
 
     //Banana Palm
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BANANA_TREE = register("banana_tree",
@@ -317,7 +317,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                             new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                            .setDecorators(ImmutableList.of(DutchmanPipeVineLeavesDecorator.INSTANCE)).build()));
+                            .setDecorators(ImmutableList.of(DutchmanPipeVineDecorator.INSTANCE)).build()));
 
     //Umbu Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> UMBU_TREE = register("umbu_tree",
