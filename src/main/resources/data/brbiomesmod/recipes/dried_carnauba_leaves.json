@@ -3,7 +3,7 @@
   "ingredient": {
     "item": "brbiomesmod:carnauba_leaves"
   },
-  "result": "minecraft:dried_carnauba_leaves",
+  "result": "brbiomesmod:dried_carnauba_leaves",
   "experience": 1.0,
   "cookingtime": 200
 }
