@@ -392,6 +392,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new GiantTrunkPlacer(13, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PARANA_PINE_TREE2 = register("parana_pine_tree2",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PARANA_PINE_LOG),
+                    new SimpleBlockStateProvider(States.PARANA_PINE_LEAVES),
+                    new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
+                    new GiantTrunkPlacer(13, 2, 14),
+                    new TwoLayerFeature(1, 1, 2)))
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PARANA_PINE_TREE_YOUNG = register("young_parana_pine_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PARANA_PINE_LOG),
                     new SimpleBlockStateProvider(States.PARANA_PINE_LEAVES),
@@ -950,8 +957,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             .configure(new AtSurfaceWithExtraConfig(1, 0.001F, 0))));
 
     public static final ConfiguredFeature<?, ?> PARANA_PINE_TREES = register("parana_pine_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PARANA_PINE_TREE_YOUNG.withChance(0.1F)),
-                    PARANA_PINE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PARANA_PINE_TREE_YOUNG.withChance(0.1F),
+                    PARANA_PINE_TREE.withChance(0.2F)),
+                    PARANA_PINE_TREE2)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> OCOTEA_TREES = register("ocotea_trees",
