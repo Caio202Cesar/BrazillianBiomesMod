@@ -49,7 +49,7 @@ public class ParanaPineFoliagePlacer extends FoliagePlacer {
         for (BlockPos trunkPos : trunkPositions) {
             for (int i = 0; i < upperFrondCount; i++) {
                 double angle = 2 * Math.PI * i / upperFrondCount;
-                int length = 4 + random.nextInt(2); // Smaller fronds
+                int length = 3 + random.nextInt(2); // Smaller fronds
                 generateFrond(world, random, config, trunkPos, angle, length, leaves, boundingBox, 1); // 1 = upwards
             }
         }
@@ -59,7 +59,7 @@ public class ParanaPineFoliagePlacer extends FoliagePlacer {
         for (BlockPos trunkPos : trunkPositions) {
             for (int i = 0; i < upperFrondCount; i++) {
                 double angle = 2 * Math.PI * i / upperFrondCount;
-                int length = 7 + random.nextInt(2);
+                int length = 4 + random.nextInt(2);
                 generateFrond(world, random, config, trunkPos.down(2), angle, length, leaves, boundingBox, 0); // 0 = flat
             }
         }
@@ -70,7 +70,7 @@ public class ParanaPineFoliagePlacer extends FoliagePlacer {
         for (BlockPos trunkPos : trunkPositions) {
             for (int i = 0; i < denserFrondCount; i++) {
                 double angle = 2 * Math.PI * i / denserFrondCount;
-                int length = 4 + random.nextInt(2); // Same size as upper fronds
+                int length = 2 + random.nextInt(2); // Same size as upper fronds
                 generateFrond(world, random, config, trunkPos.down(3), angle, length, leaves, boundingBox, -1); // -1 = downwards
             }
         }
