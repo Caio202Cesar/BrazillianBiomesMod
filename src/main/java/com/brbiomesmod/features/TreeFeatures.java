@@ -960,7 +960,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PARANA_PINE_TREE_YOUNG.withChance(0.2F),
                     PARANA_PINE_TREE.withChance(0.4F)),
                     PARANA_PINE_TREE2)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(7, 0.1F, 1))));
 
     public static final ConfiguredFeature<?, ?> OCOTEA_TREES = register("ocotea_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_SASSAFRAS_TREE.withChance(0.2F),
