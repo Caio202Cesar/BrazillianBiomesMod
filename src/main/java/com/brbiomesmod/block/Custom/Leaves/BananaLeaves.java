@@ -24,7 +24,7 @@ public class BananaLeaves extends LeavesBlock {
         super.randomTick(state, world, pos, random);
 
         // 10% chance to grow an acai bunch
-        if (random.nextFloat() < 0.01f) {
+        if (random.nextFloat() < 0.00225f) {
             BlockPos belowPos = pos.down();
             BlockState belowState = world.getBlockState(belowPos);
 
