@@ -3,7 +3,8 @@
   "group": "green_dye",
   "ingredients": [
     {
-      "item": "brbiomesmod:mate_leaf"
+      "item": "brbiomesmod:mate_leaf",
+      "count": 5
     }
   ],
   "result": {
