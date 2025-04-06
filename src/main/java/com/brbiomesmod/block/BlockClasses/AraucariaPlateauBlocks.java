@@ -94,7 +94,7 @@ public class AraucariaPlateauBlocks {
     public static final RegistryObject<Block> YERBA_MATE_WOOD = registerBlock("yerba_mate_wood",
             ModLogs::new);
     public static final RegistryObject<Block> YERBA_MATE_LEAVES = registerBlock("yerba_mate_leaves",
-            ModLeaves::new);
+            YerbaMateLeaves::new);
     public static final RegistryObject<Block> YERBA_MATE_PLANKS = registerBlock("yerba_mate_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> YERBA_MATE_SAPLING = registerBlock("yerba_mate_sapling",
