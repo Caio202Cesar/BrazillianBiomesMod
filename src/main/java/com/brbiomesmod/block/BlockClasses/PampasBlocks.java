@@ -2,6 +2,7 @@ package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.*;
+import com.brbiomesmod.block.Custom.Leaves.ButiaLeaves;
 import com.brbiomesmod.block.Custom.Leaves.ModLeaves;
 import com.brbiomesmod.block.Custom.Leaves.PinkPeeperLeaves;
 import com.brbiomesmod.block.Custom.Log.ModLogs;
@@ -32,9 +33,15 @@ public class PampasBlocks {
     public static final RegistryObject<Block> JELLY_PALM_LOG = registerBlock("jelly_palm_log",
             ModLogs::new);
     public static final RegistryObject<Block> JELLY_PALM_LEAVES = registerBlock("jelly_palm_leaves",
-            ModLeaves::new);
+            () -> new ButiaLeaves(AbstractBlock.Properties.create(Material.LEAVES)
+                    .hardnessAndResistance(0.2f)
+                    .tickRandomly() // Enables random ticks
+                    .notSolid()
+                    .sound(SoundType.PLANT)));
     public static final RegistryObject<Block> JELLY_PALM_SAPLING = registerBlock("jelly_palm_sapling",
             JellyPalmSapling::new);
+    public static final RegistryObject<Block> PINDO_BUNCH = registerBlock("pindo_bunch",
+            PindoBunchBlock::new);
 
     public static final RegistryObject<Block> SCHINUS_LOG = registerBlock("schinus_log",
             ModLogs::new);
