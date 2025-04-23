@@ -1,12 +1,10 @@
 package com.brbiomesmod.block.BlockClasses;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.AcaiBunchBlock;
-import com.brbiomesmod.block.BuritiBunchBlock;
+import com.brbiomesmod.block.*;
 import com.brbiomesmod.block.Custom.Leaves.*;
 import com.brbiomesmod.block.Custom.Log.ModLogs;
 import com.brbiomesmod.block.Custom.Log.PalmitoLog;
-import com.brbiomesmod.block.ModPlanks;
 import com.brbiomesmod.block.Saplings.*;
 import com.brbiomesmod.block.Custom.Log.SilkFlossLog;
 import com.brbiomesmod.item.ModItemGroup;
@@ -147,6 +145,9 @@ public class CerradoBlocks {
             () -> new FlowerPotBlock(CerradoBlocks.PINK_SILK_FLOSS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
 
+
+    public static final RegistryObject<Block> VELOZIA = registerBlock("velozia_plant",
+            XaximPlant::new);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -21,6 +21,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
                     new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
 
+    public static final ConfiguredFeature<?, ?> PATCH_VELOZIA_PLANT = register("patch_velozia_plant",
+            Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.VELOZIA),
+                            new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
+
     public static final ConfiguredFeature<?, ?> PATCH_CASSAVA_PLANT = register("patch_cassava_plant",
             Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASSAVA),
                             new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
@@ -159,6 +164,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState NEOREGELIA_MARMORATA = AtlanticForestBlocks.NEOREGELIA_MARMORATA.get().getDefaultState();
         protected static final BlockState AECHMEA_ALBA = AtlanticForestBlocks.AECHMEA_ALBA.get().getDefaultState();
         protected static final BlockState SILVER_VASE_BROMELIAD = AtlanticForestBlocks.SILVER_VASE_BROMELIAD.get().getDefaultState();
+        protected static final BlockState VELOZIA = CerradoBlocks.VELOZIA.get().getDefaultState();
 
     }
 }

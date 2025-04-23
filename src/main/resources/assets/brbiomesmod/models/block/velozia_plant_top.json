@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/velozia_plant_top",
+    "particle": "brbiomesmod:block/velozia_plant_top"
+  }
+}

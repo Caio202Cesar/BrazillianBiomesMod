@@ -1,6 +1,7 @@
 package com.brbiomesmod.block;
 
 import com.brbiomesmod.block.BlockClasses.AraucariaPlateauBlocks;
+import com.brbiomesmod.block.BlockClasses.CerradoBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DoublePlantBlock;
@@ -25,6 +26,8 @@ public class XaximPlant extends DoublePlantBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(AraucariaPlateauBlocks.XAXIM_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(CerradoBlocks.VELOZIA.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

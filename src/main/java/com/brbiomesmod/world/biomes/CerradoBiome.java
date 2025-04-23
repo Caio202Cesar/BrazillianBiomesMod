@@ -55,6 +55,7 @@ public class CerradoBiome {
         ModDefaultBiomeFeatures.withCerradoTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withScrubPinkPeeperTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withCerradoPalms(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withVeloziaPlant(biomegenerationsettings$builder);
 
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
                 .temperature(1.0F).downfall(0.2F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
