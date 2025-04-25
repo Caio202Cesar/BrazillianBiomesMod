@@ -38,6 +38,7 @@ public class AtlanticForestBlocks {
     public static final RegistryObject<Block> QUEEN_PALM_SAPLING = registerBlock("queen_palm_sapling",
             QueenPalmSapling::new);
 
+
     public static final RegistryObject<Block> JUSSARA_LEAVES = registerBlock("jussara_leaves",
             () -> new AcaiLeaves(AbstractBlock.Properties.create(Material.LEAVES)
                     .hardnessAndResistance(0.2f)

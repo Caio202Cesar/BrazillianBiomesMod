@@ -169,6 +169,12 @@ public class AraucariaPlateauBlocks {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    public static final RegistryObject<Block> XAXIM_LOG = registerBlock("xaxim_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> XAXIM_LEAVES = registerBlock("xaxim_leaves",
+            ModLeaves::new);
+
+
     public static final RegistryObject<Block> XAXIM_PLANT = registerBlock("xaxim_plant",
             XaximPlant::new);
 
