@@ -173,6 +173,8 @@ public class AraucariaPlateauBlocks {
             ModLogs::new);
     public static final RegistryObject<Block> XAXIM_LEAVES = registerBlock("xaxim_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> XAXIM_SAPLING = registerBlock("xaxim_sapling",
+            XaximSapling::new);
 
 
     public static final RegistryObject<Block> XAXIM_PLANT = registerBlock("xaxim_plant",

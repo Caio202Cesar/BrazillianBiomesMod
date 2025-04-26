@@ -1,5 +1,6 @@
 package com.brbiomesmod.features.FoliagePlacers;
 
+import com.brbiomesmod.block.BlockClasses.AraucariaPlateauBlocks;
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
@@ -29,35 +30,33 @@ public class XaximFoliagePlacer extends FoliagePlacer {
 
     @Override
     protected FoliagePlacerType<?> getPlacerType() {
-        return ModFoliagePlacer.QUEEN_PALM_FOLIAGE_PLACER.get();
+        return ModFoliagePlacer.XAXIM_FOLIAGE_PLACER.get();
     }
 
     @Override
-    protected void func_230372_a_(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, int trunkHeight, Foliage foliage, int radius, int offset, Set<BlockPos> leaves, int height, MutableBoundingBox boundingBox) {
-        BlockPos center = foliage.func_236763_a_();
+    protected void func_230372_a_(
+            IWorldGenerationReader world,
+            Random random,
+            BaseTreeFeatureConfig config,
+            int trunkHeight,
+            Foliage foliage,
+            int radius,
+            int offset,
+            Set<BlockPos> leaves,
+            int height,
+            MutableBoundingBox boundingBox
+    ) {
+        // Use the top of the trunk
+        BlockPos center = foliage.func_236763_a_().up(height);
 
-        // First two layers (original canopy structure)
-        int frondCount = 4 + random.nextInt(3);
-        for (int i = 0; i < frondCount; i++) {
-            double angle = 2 * Math.PI * i / frondCount;
-            int length = 3 + random.nextInt(2);
-            generateFrond(world, random, config, center, angle, length, leaves, boundingBox);
-        }
+        int frondCount = 6 + random.nextInt(3);
 
-        // Second layer (flipped upside-down)
-        BlockPos lowerCenter = center.down(2);
-        for (int i = 0; i < frondCount; i++) {
-            double angle = 2 * Math.PI * i / frondCount;
-            int length = 4 + random.nextInt(2);
-            generateFrond(world, random, config, lowerCenter, angle, length, leaves, boundingBox);
-        }
-
-        // Third layer (shorter and denser)
+        // Add a dense layer 3 blocks below the top
         BlockPos thirdLayerCenter = center.down(3);
-        int denserFrondCount = frondCount + 2; // More fronds for density
+        int denserFrondCount = frondCount + 2;
         for (int i = 0; i < denserFrondCount; i++) {
             double angle = 2 * Math.PI * i / denserFrondCount;
-            int length = 4 + random.nextInt(1); // Shorter fronds
+            int length = 3 + random.nextInt(1);
             generateFrond(world, random, config, thirdLayerCenter, angle, length, leaves, boundingBox);
         }
     }
@@ -74,7 +73,7 @@ public class XaximFoliagePlacer extends FoliagePlacer {
 
     private void placeLeafAt(IWorldGenerationReader world, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
         if (world.hasBlockState(pos, s -> s.isAir())) {
-            world.setBlockState(pos, AtlanticForestBlocks.QUEEN_PALM_LEAVES.get().getDefaultState()
+            world.setBlockState(pos, AraucariaPlateauBlocks.XAXIM_LEAVES.get().getDefaultState()
                     .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
             leaves.add(pos);
             boundingBox.expandTo(new MutableBoundingBox(pos, pos));

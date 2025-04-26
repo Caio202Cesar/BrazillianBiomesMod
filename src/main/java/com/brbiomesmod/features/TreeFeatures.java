@@ -706,10 +706,22 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(15, 2, 4),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Xaxim
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> XAXIM_TREE = register("xaxim_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.XAXIM_LOG),
+                    new SimpleBlockStateProvider(States.XAXIM_LEAVES),
+                    new XaximFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
+
     public static final class States {
 
         protected static final BlockState KAPOK_LOG = AmazonRainforestBlocks.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = AmazonRainforestBlocks.KAPOK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState XAXIM_LOG = AraucariaPlateauBlocks.XAXIM_LOG.get().getDefaultState();
+        protected static final BlockState XAXIM_LEAVES = AraucariaPlateauBlocks.XAXIM_LEAVES.get().getDefaultState();
 
         protected static final BlockState BURITI_LEAVES = CerradoBlocks.BURITI_LEAVES.get().getDefaultState();
         protected static final BlockState BURITI_LOG = CerradoBlocks.BURITI_LOG.get().getDefaultState();
@@ -958,7 +970,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> PARANA_PINE_TREES = register("parana_pine_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PARANA_PINE_TREE_YOUNG.withChance(0.2F),
-                    PARANA_PINE_TREE.withChance(0.4F)),
+                    PARANA_PINE_TREE.withChance(0.4F), XAXIM_TREE.withChance(0.5F)),
                     PARANA_PINE_TREE2)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(7, 0.1F, 1))));
 
