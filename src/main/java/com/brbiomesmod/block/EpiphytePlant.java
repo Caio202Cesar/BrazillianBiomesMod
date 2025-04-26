@@ -1,5 +1,6 @@
 package com.brbiomesmod.block;
 
+import com.brbiomesmod.block.BlockClasses.AraucariaPlateauBlocks;
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
@@ -21,6 +22,7 @@ public class EpiphytePlant extends BushBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.TILLANDSIA_STRICTA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(AraucariaPlateauBlocks.SMALL_XAXIM_PLANT.get(), RenderType.getCutout());
 
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.SILVER_VASE_BROMELIAD.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_SILVER_VASE_BROMELIAD.get(), RenderType.getCutout());

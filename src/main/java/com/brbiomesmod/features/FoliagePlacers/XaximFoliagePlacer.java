@@ -34,30 +34,15 @@ public class XaximFoliagePlacer extends FoliagePlacer {
     }
 
     @Override
-    protected void func_230372_a_(
-            IWorldGenerationReader world,
-            Random random,
-            BaseTreeFeatureConfig config,
-            int trunkHeight,
-            Foliage foliage,
-            int radius,
-            int offset,
-            Set<BlockPos> leaves,
-            int height,
-            MutableBoundingBox boundingBox
-    ) {
-        // Use the top of the trunk
-        BlockPos center = foliage.func_236763_a_().up(height);
+    protected void func_230372_a_(IWorldGenerationReader world, Random random, BaseTreeFeatureConfig config, int trunkHeight, FoliagePlacer.Foliage foliage, int radius, int offset, Set<BlockPos> leaves, int height, MutableBoundingBox boundingBox) {
+        BlockPos center = foliage.func_236763_a_();
 
+        // First two layers (original canopy structure)
         int frondCount = 6 + random.nextInt(3);
-
-        // Add a dense layer 3 blocks below the top
-        BlockPos thirdLayerCenter = center.down(3);
-        int denserFrondCount = frondCount + 2;
-        for (int i = 0; i < denserFrondCount; i++) {
-            double angle = 2 * Math.PI * i / denserFrondCount;
-            int length = 3 + random.nextInt(1);
-            generateFrond(world, random, config, thirdLayerCenter, angle, length, leaves, boundingBox);
+        for (int i = 0; i < frondCount; i++) {
+            double angle = 2 * Math.PI * i / frondCount;
+            int length = 3 + random.nextInt(2);
+            generateFrond(world, random, config, center, angle, length, leaves, boundingBox);
         }
     }
 

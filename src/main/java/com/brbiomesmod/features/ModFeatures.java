@@ -98,7 +98,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
         public static final BlockClusterFeatureConfig ARAUCARIA_FLOWERS_CONFIG =
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
-                        .addWeightedBlockstate(States.CATTLEYA_COCCINEA, 1),
+                        .addWeightedBlockstate(States.CATTLEYA_COCCINEA, 1)
+                        .addWeightedBlockstate(States.SMALL_XAXIM, 2),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig IPOMAEA_PES_CAPRAE_CONFIG =
@@ -136,6 +137,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
 
     public static final class States {
         protected static final BlockState XAXIM = AraucariaPlateauBlocks.XAXIM_PLANT.get().getDefaultState();
+        protected static final BlockState SMALL_XAXIM = AraucariaPlateauBlocks.SMALL_XAXIM_PLANT.get().getDefaultState();
         protected static final BlockState CATTLEYA_COCCINEA = AraucariaPlateauBlocks.CATTLEYA_COCCINEA.get().getDefaultState();
         protected static final BlockState CASSAVA = AmazonRainforestBlocks.CASSAVA_PLANT.get().getDefaultState();
         protected static final BlockState BULL_NETTLE = CaatingaBlocks.CNIDOSCOLUS_URENS.get().getDefaultState();
