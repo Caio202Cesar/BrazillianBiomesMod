@@ -5,7 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraftforge.common.util.Lazy;
 
 public enum OreType {
-    TOURMALINE_PARAIBA(Lazy.of(CaatingaBlocks.TOURMALINE_PARAIBA_ORE), 8, 25, 50, 3);
+    TOURMALINE_PARAIBA(Lazy.of(CaatingaBlocks.TOURMALINE_PARAIBA_ORE), 5, 30, 80, 1);
 
     private final Lazy<Block> block;
     private final int maxVeinSize;
