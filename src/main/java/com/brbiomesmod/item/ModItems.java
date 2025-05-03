@@ -185,6 +185,9 @@ public class ModItems {
     public static final RegistryObject<Item> BACURI_PASTE = ITEMS.register("bacuri_paste",
             () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.BACURI_PASTE)));
 
+    public static final RegistryObject<Item> COOKED_BANANA_FLOWER = ITEMS.register("cooked_banana_flower",
+            () -> new Item(new Item.Properties().group(ItemGroup.FOOD).food(ModFoods.COOKED_CASSAVA)));
+
     //Materials
     public static final RegistryObject<Item> TOURMALINE_PARAIBA = ITEMS.register("tourmaline_paraiba",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
