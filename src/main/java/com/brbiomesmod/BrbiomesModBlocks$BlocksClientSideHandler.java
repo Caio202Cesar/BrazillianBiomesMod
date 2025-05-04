@@ -36,6 +36,7 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         BananaBunchBlock.registerRenderLayer();
         BananaStalkBlock.registerRenderLayer();
         BuritiBunchBlock.registerRenderLayer();
+        PindoBunchBlock.registerRenderLayer();
 
         AlgarrobilloSapling.registerRenderLayer();
         CavenThornSapling.registerRenderLayer();

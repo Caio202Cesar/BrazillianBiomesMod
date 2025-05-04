@@ -1,14 +1,19 @@
 package com.brbiomesmod.block;
 
 import com.brbiomesmod.Seasons.Season;
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
@@ -17,6 +22,12 @@ public class PindoBunchBlock extends Block {
     public PindoBunchBlock() {
         super(Properties.create(Material.PLANTS).hardnessAndResistance(0.2F).tickRandomly()
                 .sound(SoundType.WET_GRASS).harvestTool(ToolType.HOE));
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public static void registerRenderLayer() {
+        RenderTypeLookup.setRenderLayer(TreesGroup.PINDO_BUNCH.get(), RenderType.getCutout());
+
     }
 
     public boolean ticksRandomly(BlockState state) {
