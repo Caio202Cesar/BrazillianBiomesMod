@@ -1,6 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
+import com.brbiomesmod.block.BlockClasses.MiscBlocks;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
@@ -24,8 +24,8 @@ public class UmbuSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(CaatingaBlocks.UMBU_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(CaatingaBlocks.POTTED_UMBU_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(MiscBlocks.UMBU_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(MiscBlocks.POTTED_UMBU_SAPLING.get(), RenderType.getCutout());
 
     }
 

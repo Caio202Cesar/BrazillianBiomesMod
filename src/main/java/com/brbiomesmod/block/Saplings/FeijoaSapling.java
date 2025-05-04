@@ -1,6 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.AraucariaPlateauBlocks;
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
@@ -24,8 +24,8 @@ public class FeijoaSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AraucariaPlateauBlocks.FEIJOA_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AraucariaPlateauBlocks.POTTED_FEIJOA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.FEIJOA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_FEIJOA_SAPLING.get(), RenderType.getCutout());
 
     }
 

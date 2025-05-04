@@ -1,12 +1,12 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.AraucariaPlateauBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.block.BlockClasses.CerradoBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DoublePlantBlock;
 import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
@@ -25,8 +25,8 @@ public class XaximPlant extends DoublePlantBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AraucariaPlateauBlocks.XAXIM_PLANT.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(CerradoBlocks.VELOZIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.XAXIM_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.VELOZIA.get(), RenderType.getCutout());
 
     }
 

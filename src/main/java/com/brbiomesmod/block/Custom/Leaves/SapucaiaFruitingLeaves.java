@@ -1,8 +1,7 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.Seasons.Season;
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
-import com.brbiomesmod.block.BlockClasses.RestingaBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -74,7 +73,7 @@ public class SapucaiaFruitingLeaves extends LeavesBlock implements IForgeShearab
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, AtlanticForestBlocks.SAPUCAIA_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, PlantsGroup.SAPUCAIA_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 

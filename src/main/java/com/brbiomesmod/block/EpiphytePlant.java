@@ -1,8 +1,8 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
-import com.brbiomesmod.block.BlockClasses.AraucariaPlateauBlocks;
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
+import com.brbiomesmod.block.BlockClasses.WoodGroup;
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -22,34 +22,34 @@ public class EpiphytePlant extends BushBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.TILLANDSIA_STRICTA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AraucariaPlateauBlocks.SMALL_XAXIM_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.TILLANDSIA_STRICTA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.SMALL_XAXIM_PLANT.get(), RenderType.getCutout());
 
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.SILVER_VASE_BROMELIAD.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_SILVER_VASE_BROMELIAD.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.SILVER_VASE_BROMELIAD.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_SILVER_VASE_BROMELIAD.get(), RenderType.getCutout());
 
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.FIREBALL_NEOREGELIA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_FIREBALL_NEOREGELIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.FIREBALL_NEOREGELIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_FIREBALL_NEOREGELIA.get(), RenderType.getCutout());
 
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.AECHMEA_ALBA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_AECHMEA_ALBA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.AECHMEA_ALBA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_AECHMEA_ALBA.get(), RenderType.getCutout());
 
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.NEOREGELIA_MARMORATA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_NEOREGELIA_MARMORATA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.NEOREGELIA_MARMORATA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_NEOREGELIA_MARMORATA.get(), RenderType.getCutout());
 
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.RED_GUZMANIA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_RED_GUZMANIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.RED_GUZMANIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_RED_GUZMANIA.get(), RenderType.getCutout());
 
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.YELLOW_GUZMANIA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_YELLOW_GUZMANIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.YELLOW_GUZMANIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_YELLOW_GUZMANIA.get(), RenderType.getCutout());
 
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.PINK_GUZMANIA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_PINK_GUZMANIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.PINK_GUZMANIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_PINK_GUZMANIA.get(), RenderType.getCutout());
 
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.ORANGE_GUZMANIA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_ORANGE_GUZMANIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.ORANGE_GUZMANIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_ORANGE_GUZMANIA.get(), RenderType.getCutout());
 
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.AMAZONIAN_ZEBRA_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.AMAZONIAN_ZEBRA_PLANT.get(), RenderType.getCutout());
 
     }
 

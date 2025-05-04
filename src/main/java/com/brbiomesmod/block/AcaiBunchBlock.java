@@ -1,8 +1,7 @@
 package com.brbiomesmod.block;
 
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
+import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import net.minecraft.block.*;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.client.renderer.RenderType;
@@ -22,7 +21,7 @@ public class AcaiBunchBlock extends Block {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.ACAI_BUNCH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(WoodGroup.ACAI_BUNCH.get(), RenderType.getCutout());
 
     }
 

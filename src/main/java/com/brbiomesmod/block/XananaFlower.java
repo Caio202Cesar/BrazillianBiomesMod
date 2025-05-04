@@ -1,9 +1,7 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
 import com.brbiomesmod.block.BlockClasses.RestingaBlocks;
 import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.potion.Effects;
@@ -13,7 +11,6 @@ import net.minecraft.world.IBlockReader;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.PlantType;
-import net.minecraftforge.common.ToolType;
 
 public class XananaFlower extends FlowerBlock {
     public XananaFlower() {

@@ -1,7 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
+import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -28,8 +27,8 @@ public class SharingaSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.SHARINGA_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.POTTED_SHARINGA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(WoodGroup.SHARINGA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(WoodGroup.POTTED_SHARINGA_SAPLING.get(), RenderType.getCutout());
 
     }
 

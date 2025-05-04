@@ -10,7 +10,6 @@ import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.feature.NoFeatureConfig;
 
 import java.util.function.Supplier;
 
@@ -145,16 +144,16 @@ public class ModFeatures extends Features implements IFeatureConfig {
     }
 
     public static final class States {
-        protected static final BlockState XAXIM = AraucariaPlateauBlocks.XAXIM_PLANT.get().getDefaultState();
-        protected static final BlockState SMALL_XAXIM = AraucariaPlateauBlocks.SMALL_XAXIM_PLANT.get().getDefaultState();
-        protected static final BlockState CATTLEYA_COCCINEA = AraucariaPlateauBlocks.CATTLEYA_COCCINEA.get().getDefaultState();
-        protected static final BlockState CASSAVA = AmazonRainforestBlocks.CASSAVA_PLANT.get().getDefaultState();
-        protected static final BlockState BULL_NETTLE = CaatingaBlocks.CNIDOSCOLUS_URENS.get().getDefaultState();
-        protected static final BlockState BULL_NETTLE_FRUITS = CaatingaBlocks.CNIDOSCOLUS_URENS_FRUITING.get().getDefaultState();
-        protected static final BlockState TURK_TURBAN = CaatingaBlocks.TURK_TURBAN_CACTUS.get().getDefaultState();
-        protected static final BlockState TURK_TURBAN_FRUITING = CaatingaBlocks.TURK_TURBAN_FRUITING_CACTUS.get().getDefaultState();
-        protected static final BlockState CATTLEYA_PURPURATA = AtlanticForestBlocks.CATTLEYA_PURPURATA.get().getDefaultState();
-        protected static final BlockState CATTLEYA_LADY_ACKLAND = AtlanticForestBlocks.CATTLEYA_LADY_ACKLAND.get().getDefaultState();
+        protected static final BlockState XAXIM = PlantsGroup.XAXIM_PLANT.get().getDefaultState();
+        protected static final BlockState SMALL_XAXIM = PlantsGroup.SMALL_XAXIM_PLANT.get().getDefaultState();
+        protected static final BlockState CATTLEYA_COCCINEA = PlantsGroup.CATTLEYA_COCCINEA.get().getDefaultState();
+        protected static final BlockState CASSAVA = PlantsGroup.CASSAVA_PLANT.get().getDefaultState();
+        protected static final BlockState BULL_NETTLE = PlantsGroup.CNIDOSCOLUS_URENS.get().getDefaultState();
+        protected static final BlockState BULL_NETTLE_FRUITS = PlantsGroup.CNIDOSCOLUS_URENS_FRUITING.get().getDefaultState();
+        protected static final BlockState TURK_TURBAN = PlantsGroup.TURK_TURBAN_CACTUS.get().getDefaultState();
+        protected static final BlockState TURK_TURBAN_FRUITING = PlantsGroup.TURK_TURBAN_FRUITING_CACTUS.get().getDefaultState();
+        protected static final BlockState CATTLEYA_PURPURATA = PlantsGroup.CATTLEYA_PURPURATA.get().getDefaultState();
+        protected static final BlockState CATTLEYA_LADY_ACKLAND = PlantsGroup.CATTLEYA_LADY_ACKLAND.get().getDefaultState();
         protected static final BlockState IPOMAEA_PES_CAPRAE = RestingaBlocks.IPOMAEA_PES_CAPRAE.get().getDefaultState();
         protected static final BlockState XANANA1 = RestingaBlocks.XANANA.get().getDefaultState();
         protected static final BlockState XANANA2 = RestingaBlocks.XANANA_BIG.get().getDefaultState();
@@ -162,21 +161,22 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState VELAME_OF_RIO_GRANDE = PampasBlocks.VELAME_OF_RIO_GRANDE.get().getDefaultState();
         protected static final BlockState MANDEVILLA_COCCINEA = PampasBlocks.MANDEVILLA_COCCINEA.get().getDefaultState();
         protected static final BlockState ASPILIA_MONTEVIDENSIS = PampasBlocks.ASPILIA_MONTEVIDENSIS.get().getDefaultState();
-        protected static final BlockState ANGEL_TRUMPET_WHITE = AtlanticForestBlocks.WHITE_ANGEL_TRUMPET.get().getDefaultState();
-        protected static final BlockState ANGEL_TRUMPET_ORANGE = AtlanticForestBlocks.ORANGE_ANGEL_TRUMPET.get().getDefaultState();
-        protected static final BlockState ANGEL_TRUMPET_PINK = AtlanticForestBlocks.PINK_ANGEL_TRUMPET.get().getDefaultState();
-        protected static final BlockState ANGEL_TRUMPET_SALMON = AtlanticForestBlocks.SALMON_ANGEL_TRUMPET.get().getDefaultState();
-        protected static final BlockState ANGEL_TRUMPET_YELLOW = AtlanticForestBlocks.YELLOW_ANGEL_TRUMPET.get().getDefaultState();
-        protected static final BlockState GUZMANIA_RED = AtlanticForestBlocks.RED_GUZMANIA.get().getDefaultState();
-        protected static final BlockState GUZMANIA_YELLOW = AtlanticForestBlocks.YELLOW_GUZMANIA.get().getDefaultState();
-        protected static final BlockState GUZMANIA_PINK = AtlanticForestBlocks.PINK_GUZMANIA.get().getDefaultState();
-        protected static final BlockState GUZMANIA_ORANGE = AtlanticForestBlocks.ORANGE_GUZMANIA.get().getDefaultState();
-        protected static final BlockState FIREBALL_NEOREGELIA = AtlanticForestBlocks.FIREBALL_NEOREGELIA.get().getDefaultState();
-        protected static final BlockState NEOREGELIA_MARMORATA = AtlanticForestBlocks.NEOREGELIA_MARMORATA.get().getDefaultState();
-        protected static final BlockState AECHMEA_ALBA = AtlanticForestBlocks.AECHMEA_ALBA.get().getDefaultState();
-        protected static final BlockState SILVER_VASE_BROMELIAD = AtlanticForestBlocks.SILVER_VASE_BROMELIAD.get().getDefaultState();
-        protected static final BlockState VELOZIA = CerradoBlocks.VELOZIA.get().getDefaultState();
-        protected static final BlockState ZEBRA_PLANT = AmazonRainforestBlocks.AMAZONIAN_ZEBRA_PLANT.get().getDefaultState();
+        protected static final BlockState ANGEL_TRUMPET_WHITE = PlantsGroup.WHITE_ANGEL_TRUMPET.get().getDefaultState();
+        protected static final BlockState ANGEL_TRUMPET_ORANGE = PlantsGroup.ORANGE_ANGEL_TRUMPET.get().getDefaultState();
+        protected static final BlockState ANGEL_TRUMPET_PINK = PlantsGroup.PINK_ANGEL_TRUMPET.get().getDefaultState();
+        protected static final BlockState ANGEL_TRUMPET_SALMON = PlantsGroup.SALMON_ANGEL_TRUMPET.get().getDefaultState();
+        protected static final BlockState ANGEL_TRUMPET_YELLOW = PlantsGroup.YELLOW_ANGEL_TRUMPET.get().getDefaultState();
+        protected static final BlockState GUZMANIA_RED = PlantsGroup.RED_GUZMANIA.get().getDefaultState();
+        protected static final BlockState GUZMANIA_YELLOW = PlantsGroup.YELLOW_GUZMANIA.get().getDefaultState();
+        protected static final BlockState GUZMANIA_PINK = PlantsGroup.PINK_GUZMANIA.get().getDefaultState();
+        protected static final BlockState GUZMANIA_ORANGE = PlantsGroup.ORANGE_GUZMANIA.get().getDefaultState();
+        protected static final BlockState FIREBALL_NEOREGELIA = PlantsGroup.FIREBALL_NEOREGELIA.get().getDefaultState();
+        protected static final BlockState NEOREGELIA_MARMORATA = PlantsGroup.NEOREGELIA_MARMORATA.get().getDefaultState();
+        protected static final BlockState AECHMEA_ALBA = PlantsGroup.AECHMEA_ALBA.get().getDefaultState();
+        protected static final BlockState SILVER_VASE_BROMELIAD = PlantsGroup.SILVER_VASE_BROMELIAD.get().getDefaultState();
+        protected static final BlockState VELOZIA = PlantsGroup.VELOZIA.get().getDefaultState();
+        protected static final BlockState ZEBRA_PLANT = PlantsGroup.AMAZONIAN_ZEBRA_PLANT.get().getDefaultState();
+        protected static final BlockState BLACK_ORCHID = PlantsGroup.BLACK_ORCHID.get().getDefaultState();
 
     }
 }

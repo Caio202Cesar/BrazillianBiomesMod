@@ -1,6 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
@@ -24,8 +24,8 @@ public class BrazilnutSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.BRAZILNUT_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.POTTED_BRAZILNUT_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(WoodGroup.BRAZILNUT_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(WoodGroup.POTTED_BRAZILNUT_SAPLING.get(), RenderType.getCutout());
 
     }
 

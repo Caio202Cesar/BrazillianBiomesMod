@@ -1,7 +1,6 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DoublePlantBlock;
 import net.minecraft.block.SoundType;
@@ -24,11 +23,11 @@ public class AngelTrumpetPlant extends DoublePlantBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.WHITE_ANGEL_TRUMPET.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.YELLOW_ANGEL_TRUMPET.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.PINK_ANGEL_TRUMPET.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.SALMON_ANGEL_TRUMPET.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.ORANGE_ANGEL_TRUMPET.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.WHITE_ANGEL_TRUMPET.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.YELLOW_ANGEL_TRUMPET.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.PINK_ANGEL_TRUMPET.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.SALMON_ANGEL_TRUMPET.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.ORANGE_ANGEL_TRUMPET.get(), RenderType.getCutout());
 
     }
 

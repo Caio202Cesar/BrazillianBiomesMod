@@ -1,14 +1,12 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
+import com.brbiomesmod.block.BlockClasses.MiscBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BushBlock;
 import net.minecraft.block.SoundType;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.item.ItemEntity;
@@ -21,8 +19,6 @@ import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
 
@@ -54,7 +50,7 @@ public class FruitingCactusPlant extends BushBlock {
         double chance = 0.09;
 
         if (random.nextDouble() < chance) {
-            worldIn.setBlockState(pos, CaatingaBlocks.TURK_TURBAN_CACTUS.get().getDefaultState());
+            worldIn.setBlockState(pos, PlantsGroup.TURK_TURBAN_CACTUS.get().getDefaultState());
 
         }
     }
@@ -68,7 +64,7 @@ public class FruitingCactusPlant extends BushBlock {
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, CaatingaBlocks.TURK_TURBAN_CACTUS.get().getDefaultState());
+            worldIn.setBlockState(pos, PlantsGroup.TURK_TURBAN_CACTUS.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_HIT, SoundCategory.BLOCKS, 1.0F, 1.0F);
 

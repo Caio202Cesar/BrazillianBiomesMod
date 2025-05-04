@@ -1,13 +1,11 @@
 package com.brbiomesmod.features.FoliagePlacers;
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
-import net.minecraft.world.ISeedReader;
-import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.FeatureSpread;
@@ -80,7 +78,7 @@ public class AcaiFoliagePlacer extends FoliagePlacer {
 
     private void placeLeafAt(IWorldGenerationReader world, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox, Random random) {
         if (world.hasBlockState(pos, s -> s.isAir())) {
-            world.setBlockState(pos, AmazonRainforestBlocks.ACAI_LEAVES.get().getDefaultState()
+            world.setBlockState(pos, WoodGroup.ACAI_LEAVES.get().getDefaultState()
                     .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
             leaves.add(pos);
             boundingBox.expandTo(new MutableBoundingBox(pos, pos));

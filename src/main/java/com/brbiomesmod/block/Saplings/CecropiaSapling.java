@@ -1,6 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -27,8 +27,8 @@ public class CecropiaSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.CECROPIA_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_CECROPIA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.CECROPIA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_CECROPIA_SAPLING.get(), RenderType.getCutout());
 
     }
 

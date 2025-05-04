@@ -1,8 +1,7 @@
 package com.brbiomesmod.block;
 
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
-import com.brbiomesmod.block.BlockClasses.CerradoBlocks;
+import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import net.minecraft.block.*;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.client.renderer.RenderType;
@@ -10,7 +9,6 @@ import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -38,14 +36,14 @@ public class BananaBunchBlock extends Block {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, AmazonRainforestBlocks.BANANA_FLOWER.get().getDefaultState(), 2);
+                world.setBlockState(belowPos, WoodGroup.BANANA_FLOWER.get().getDefaultState(), 2);
             }
         }
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.BANANA_BUNCH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(WoodGroup.BANANA_BUNCH.get(), RenderType.getCutout());
 
     }
 

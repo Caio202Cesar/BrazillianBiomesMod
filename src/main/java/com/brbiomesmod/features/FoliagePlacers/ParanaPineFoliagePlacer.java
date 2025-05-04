@@ -1,6 +1,6 @@
 package com.brbiomesmod.features.FoliagePlacers;
 
-import com.brbiomesmod.block.BlockClasses.AraucariaPlateauBlocks;
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.LeavesBlock;
@@ -89,7 +89,7 @@ public class ParanaPineFoliagePlacer extends FoliagePlacer {
 
     private void placeLeafAt(IWorldGenerationReader world, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox) {
         if (world.hasBlockState(pos, s -> s.isAir())) {
-            world.setBlockState(pos, AraucariaPlateauBlocks.PARANA_PINE_LEAVES.get().getDefaultState()
+            world.setBlockState(pos, TreesGroup.PARANA_PINE_LEAVES.get().getDefaultState()
                     .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
             leaves.add(pos);
             boundingBox.expandTo(new MutableBoundingBox(pos, pos));

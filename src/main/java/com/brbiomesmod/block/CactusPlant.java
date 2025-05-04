@@ -1,6 +1,7 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
+import com.brbiomesmod.block.BlockClasses.MiscBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BushBlock;
@@ -11,9 +12,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.Direction;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
@@ -51,15 +49,15 @@ public class CactusPlant extends BushBlock {
         double chance = 0.07;
 
         if (random.nextDouble() < chance) {
-            worldIn.setBlockState(pos, CaatingaBlocks.TURK_TURBAN_FRUITING_CACTUS.get().getDefaultState());
+            worldIn.setBlockState(pos, PlantsGroup.TURK_TURBAN_FRUITING_CACTUS.get().getDefaultState());
 
         }
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(CaatingaBlocks.TURK_TURBAN_CACTUS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(CaatingaBlocks.TURK_TURBAN_FRUITING_CACTUS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.TURK_TURBAN_CACTUS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.TURK_TURBAN_FRUITING_CACTUS.get(), RenderType.getCutout());
 
     }
 

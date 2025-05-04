@@ -1,6 +1,7 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
+import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
@@ -21,7 +22,7 @@ public class CassavaPlant extends DoublePlantBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.CASSAVA_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.CASSAVA_PLANT.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

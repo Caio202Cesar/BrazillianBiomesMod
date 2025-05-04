@@ -1,7 +1,6 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -43,7 +42,7 @@ public class PassionfruitVine extends VineBlock {
         if (random.nextDouble() < chance) {
             BlockState currentState = state;
 
-            BlockState newState = AtlanticForestBlocks.PASSION_FRUIT_FLOWERING_VINE.get().getDefaultState();
+            BlockState newState = PlantsGroup.PASSION_FRUIT_FLOWERING_VINE.get().getDefaultState();
 
             newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
@@ -54,9 +53,9 @@ public class PassionfruitVine extends VineBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.PASSION_FRUIT_VINE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.PASSION_FRUIT_FLOWERING_VINE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.PASSION_FRUIT_FRUITING_VINE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.PASSION_FRUIT_VINE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.PASSION_FRUIT_FLOWERING_VINE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.PASSION_FRUIT_FRUITING_VINE.get(), RenderType.getCutout());
 
     }
 

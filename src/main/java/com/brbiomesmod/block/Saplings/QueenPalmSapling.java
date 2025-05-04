@@ -1,7 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
-import com.brbiomesmod.block.BlockClasses.RestingaBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -28,7 +27,7 @@ public class QueenPalmSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.QUEEN_PALM_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.QUEEN_PALM_SAPLING.get(), RenderType.getCutout());
 
     }
 

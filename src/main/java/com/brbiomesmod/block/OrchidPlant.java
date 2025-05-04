@@ -1,8 +1,7 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.AraucariaPlateauBlocks;
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
-import com.brbiomesmod.block.BlockClasses.RestingaBlocks;
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BushBlock;
@@ -25,13 +24,13 @@ public class OrchidPlant extends BushBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.CATTLEYA_PURPURATA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.CATTLEYA_LADY_ACKLAND.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AraucariaPlateauBlocks.CATTLEYA_COCCINEA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_CATTLEYA_PURPURATA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_CATTLEYA_LADY_ACKLAND.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AraucariaPlateauBlocks.POTTED_CATTLEYA_COCCINEA.get(), RenderType.getCutout());
-
+        RenderTypeLookup.setRenderLayer(PlantsGroup.CATTLEYA_PURPURATA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.CATTLEYA_LADY_ACKLAND.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.CATTLEYA_COCCINEA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_CATTLEYA_PURPURATA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_CATTLEYA_LADY_ACKLAND.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_CATTLEYA_COCCINEA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.BLACK_ORCHID.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

@@ -1,6 +1,6 @@
 package com.brbiomesmod.features.FoliagePlacers;
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.LeavesBlock;
@@ -79,7 +79,7 @@ public class BananaFoliagePlacer extends FoliagePlacer {
 
     private void placeLeafAt(IWorldGenerationReader world, BlockPos pos, Set<BlockPos> leaves, MutableBoundingBox boundingBox, Random random) {
         if (world.hasBlockState(pos, s -> s.isAir())) {
-            world.setBlockState(pos, AmazonRainforestBlocks.BANANA_LEAVES.get().getDefaultState()
+            world.setBlockState(pos, WoodGroup.BANANA_LEAVES.get().getDefaultState()
                     .with(LeavesBlock.PERSISTENT, true).with(LeavesBlock.DISTANCE, 1), 19);
             leaves.add(pos);
             boundingBox.expandTo(new MutableBoundingBox(pos, pos));

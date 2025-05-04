@@ -38,10 +38,10 @@ public class BrazillianBiomesMod {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
-        CaatingaBlocks.register(eventBus);
-        AraucariaPlateauBlocks.register(eventBus);
-        AtlanticForestBlocks.register(eventBus);
-        AmazonRainforestBlocks.register(eventBus);
+        MiscBlocks.register(eventBus);
+        TreesGroup.register(eventBus);
+        PlantsGroup.register(eventBus);
+        WoodGroup.register(eventBus);
         RestingaBlocks.register(eventBus);
         CerradoBlocks.register(eventBus);
         PampasBlocks.register(eventBus);
@@ -84,7 +84,7 @@ public class BrazillianBiomesMod {
         event.enqueueWork(() -> {
             LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().fontRenderer);
 
-            RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.CASSAVA_CROP.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(PlantsGroup.CASSAVA_CROP.get(), RenderType.getCutout());
         });
     }
 

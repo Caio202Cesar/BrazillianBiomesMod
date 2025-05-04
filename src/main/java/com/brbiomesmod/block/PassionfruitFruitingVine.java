@@ -1,7 +1,6 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -55,9 +54,9 @@ public class PassionfruitFruitingVine extends VineBlock {
         if (random.nextDouble() < chance) {
 
             BlockState currentState = state;
-            BlockState newState = AtlanticForestBlocks.PASSION_FRUIT_VINE.get().getDefaultState();
+            BlockState newState = PlantsGroup.PASSION_FRUIT_VINE.get().getDefaultState();
 
-            worldIn.setBlockState(pos, AtlanticForestBlocks.PASSION_FRUIT_VINE.get().getDefaultState());
+            worldIn.setBlockState(pos, PlantsGroup.PASSION_FRUIT_VINE.get().getDefaultState());
 
             newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
@@ -76,7 +75,7 @@ public class PassionfruitFruitingVine extends VineBlock {
             worldIn.addEntity(itemEntity);
 
             BlockState currentState = state;
-            BlockState newState = AtlanticForestBlocks.PASSION_FRUIT_VINE.get().getDefaultState();
+            BlockState newState = PlantsGroup.PASSION_FRUIT_VINE.get().getDefaultState();
 
             newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));

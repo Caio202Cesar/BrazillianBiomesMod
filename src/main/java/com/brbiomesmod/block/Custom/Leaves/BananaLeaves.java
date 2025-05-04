@@ -1,6 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -30,7 +30,7 @@ public class BananaLeaves extends LeavesBlock {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, AmazonRainforestBlocks.BANANA_STALK.get().getDefaultState(), 2);
+                world.setBlockState(belowPos, WoodGroup.BANANA_STALK.get().getDefaultState(), 2);
             }
         }
     }

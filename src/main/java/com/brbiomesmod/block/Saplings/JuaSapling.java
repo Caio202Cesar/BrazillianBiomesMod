@@ -1,6 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
+import com.brbiomesmod.block.BlockClasses.MiscBlocks;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
@@ -24,8 +24,8 @@ public class JuaSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(CaatingaBlocks.JUA_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(CaatingaBlocks.POTTED_JUA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(MiscBlocks.JUA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(MiscBlocks.POTTED_JUA_SAPLING.get(), RenderType.getCutout());
 
     }
 

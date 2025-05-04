@@ -1,7 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
+import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
@@ -25,8 +24,8 @@ public class LophanteraSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.LOPHANTERA_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.POTTED_LOPHANTERA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(WoodGroup.LOPHANTERA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(WoodGroup.POTTED_LOPHANTERA_SAPLING.get(), RenderType.getCutout());
 
     }
 

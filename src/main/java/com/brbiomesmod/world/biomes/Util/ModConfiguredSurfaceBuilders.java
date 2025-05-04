@@ -1,10 +1,9 @@
 package com.brbiomesmod.world.biomes.Util;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
+import com.brbiomesmod.block.BlockClasses.MiscBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.gen.surfacebuilders.*;
 
@@ -13,8 +12,8 @@ public class ModConfiguredSurfaceBuilders {
     public static ConfiguredSurfaceBuilder<?> CAATINGA_SURFACE = register("caatinga_surface",
             SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
             Blocks.COARSE_DIRT.getBlock().getDefaultState(), //top material
-            CaatingaBlocks.CAATINGA_SAND.get().getDefaultState(), //under material
-            CaatingaBlocks.CAATINGA_SAND.get().getDefaultState() //underwater material
+            MiscBlocks.CAATINGA_SAND.get().getDefaultState(), //under material
+            MiscBlocks.CAATINGA_SAND.get().getDefaultState() //underwater material
     )));
 
     public static ConfiguredSurfaceBuilder<?> FOREST_SURFACE = register("forest_surface",

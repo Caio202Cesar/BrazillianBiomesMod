@@ -1,9 +1,7 @@
 package com.brbiomesmod.block;
 
 
-import com.brbiomesmod.Seasons.Season;
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
+import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import net.minecraft.block.*;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.client.renderer.RenderType;
@@ -43,14 +41,14 @@ public class BananaFlowerBlock extends Block {
         double chance = 0.00145f;
 
         if (random.nextDouble() < chance) {
-            worldIn.setBlockState(pos, AmazonRainforestBlocks.BANANA_BUNCH.get().getDefaultState());
+            worldIn.setBlockState(pos, WoodGroup.BANANA_BUNCH.get().getDefaultState());
 
         }
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.BANANA_FLOWER.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(WoodGroup.BANANA_FLOWER.get(), RenderType.getCutout());
 
     }
 

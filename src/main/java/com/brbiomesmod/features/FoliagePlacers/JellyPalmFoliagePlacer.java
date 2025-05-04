@@ -1,6 +1,5 @@
 package com.brbiomesmod.features.FoliagePlacers;
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
 import com.brbiomesmod.block.BlockClasses.PampasBlocks;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

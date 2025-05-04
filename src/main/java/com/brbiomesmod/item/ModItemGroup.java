@@ -1,8 +1,6 @@
 package com.brbiomesmod.item;
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
-import com.brbiomesmod.block.BlockClasses.PampasBlocks;
-import com.brbiomesmod.block.BlockClasses.RestingaBlocks;
+import com.brbiomesmod.block.BlockClasses.*;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
@@ -21,7 +19,7 @@ public class ModItemGroup {
         @Override
         public ItemStack createIcon()
         {
-            return new ItemStack(AmazonRainforestBlocks.AMAZONIAN_ZEBRA_PLANT.get());
+            return new ItemStack(PlantsGroup.AMAZONIAN_ZEBRA_PLANT.get());
         }};
 
     public static final ItemGroup WOOD_GROUP = new ItemGroup("BrazilianBiomes:Woods")
@@ -29,8 +27,25 @@ public class ModItemGroup {
         @Override
         public ItemStack createIcon()
         {
-            return new ItemStack(AmazonRainforestBlocks.AMAZONIAN_ZEBRA_PLANT.get());
+            return new ItemStack(WoodGroup.BALSA_PLANKS.get());
         }};
+
+    public static final ItemGroup TREE_GROUP = new ItemGroup("BrazilianBiomes:Trees")
+    {
+        @Override
+        public ItemStack createIcon()
+        {
+            return new ItemStack(PlantsGroup.BRAZILWOOD_SAPLING.get());
+        }};
+
+    public static final ItemGroup MISC_GROUP = new ItemGroup("BrazilianBiomes:Miscellaneous")
+    {
+        @Override
+        public ItemStack createIcon()
+        {
+            return new ItemStack(MiscBlocks.CAATINGA_SAND.get());
+        }};
+
 
 
 

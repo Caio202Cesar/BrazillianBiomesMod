@@ -1,7 +1,8 @@
 package com.brbiomesmod.item;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
+import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import com.brbiomesmod.block.BlockClasses.PampasBlocks;
 import com.brbiomesmod.item.custom.*;
 import net.minecraft.item.*;
@@ -194,7 +195,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
     public static final RegistryObject<Item> CASSAVA_SEEDS = ITEMS.register("cassava_seeds",
-            () -> new BlockItem(AmazonRainforestBlocks.CASSAVA_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));
+            () -> new BlockItem(PlantsGroup.CASSAVA_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));
 
     public static final RegistryObject<Item> CALABASH_SEEDS = ITEMS.register("calabash_seeds",
             () -> new BlockItem(PampasBlocks.CALABASH_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));

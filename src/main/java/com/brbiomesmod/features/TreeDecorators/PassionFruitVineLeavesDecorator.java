@@ -1,6 +1,6 @@
 package com.brbiomesmod.features.TreeDecorators;
 
-import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.VineBlock;
@@ -71,7 +71,7 @@ public class PassionFruitVineLeavesDecorator extends TreeDecorator {
 
     private void placeVine(IWorldGenerationReader world, BlockPos pos, BooleanProperty property, Set<BlockPos> placed, MutableBoundingBox boundingBox) {
         // Get the passion fruit vine default state and apply the directional property.
-        BlockState vineState = AtlanticForestBlocks.PASSION_FRUIT_VINE.get().getDefaultState().with(property, true);
+        BlockState vineState = PlantsGroup.PASSION_FRUIT_VINE.get().getDefaultState().with(property, true);
         // Use our custom helper instead of the vanilla one.
         this.placeCustomVine(world, pos, vineState, placed, boundingBox);
         int i = 4;

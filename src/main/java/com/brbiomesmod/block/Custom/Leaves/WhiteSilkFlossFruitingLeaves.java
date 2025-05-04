@@ -1,8 +1,7 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.Seasons.Season;
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
-import com.brbiomesmod.block.BlockClasses.CerradoBlocks;
+import com.brbiomesmod.block.BlockClasses.MiscBlocks;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -74,7 +73,7 @@ public class WhiteSilkFlossFruitingLeaves extends LeavesBlock implements IForgeS
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, CaatingaBlocks.WHITE_SILK_FLOSS_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, MiscBlocks.WHITE_SILK_FLOSS_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 

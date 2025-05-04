@@ -1,6 +1,5 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.CaatingaBlocks;
 import com.brbiomesmod.block.BlockClasses.RestingaBlocks;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;

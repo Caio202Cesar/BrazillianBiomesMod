@@ -1,6 +1,6 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
+import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -38,14 +38,14 @@ public class BananaStalkBlock extends Block {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, AmazonRainforestBlocks.BANANA_FLOWER.get().getDefaultState(), 2);
+                world.setBlockState(belowPos, WoodGroup.BANANA_FLOWER.get().getDefaultState(), 2);
             }
         }
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.BANANA_STALK.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(WoodGroup.BANANA_STALK.get(), RenderType.getCutout());
 
     }
 
