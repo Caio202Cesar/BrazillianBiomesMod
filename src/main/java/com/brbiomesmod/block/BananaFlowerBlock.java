@@ -1,6 +1,7 @@
 package com.brbiomesmod.block;
 
 
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import net.minecraft.block.*;
 import net.minecraft.block.material.PushReaction;
@@ -41,14 +42,14 @@ public class BananaFlowerBlock extends Block {
         double chance = 0.00145f;
 
         if (random.nextDouble() < chance) {
-            worldIn.setBlockState(pos, WoodGroup.BANANA_BUNCH.get().getDefaultState());
+            worldIn.setBlockState(pos, TreesGroup.BANANA_BUNCH.get().getDefaultState());
 
         }
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(WoodGroup.BANANA_FLOWER.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.BANANA_FLOWER.get(), RenderType.getCutout());
 
     }
 

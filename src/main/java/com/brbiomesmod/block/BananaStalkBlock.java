@@ -1,5 +1,6 @@
 package com.brbiomesmod.block;
 
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -38,14 +39,14 @@ public class BananaStalkBlock extends Block {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, WoodGroup.BANANA_FLOWER.get().getDefaultState(), 2);
+                world.setBlockState(belowPos, TreesGroup.BANANA_FLOWER.get().getDefaultState(), 2);
             }
         }
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(WoodGroup.BANANA_STALK.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.BANANA_STALK.get(), RenderType.getCutout());
 
     }
 

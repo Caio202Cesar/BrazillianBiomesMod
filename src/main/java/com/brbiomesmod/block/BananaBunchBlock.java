@@ -1,6 +1,7 @@
 package com.brbiomesmod.block;
 
 
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import net.minecraft.block.*;
 import net.minecraft.block.material.PushReaction;
@@ -36,14 +37,14 @@ public class BananaBunchBlock extends Block {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, WoodGroup.BANANA_FLOWER.get().getDefaultState(), 2);
+                world.setBlockState(belowPos, TreesGroup.BANANA_FLOWER.get().getDefaultState(), 2);
             }
         }
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(WoodGroup.BANANA_BUNCH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.BANANA_BUNCH.get(), RenderType.getCutout());
 
     }
 
