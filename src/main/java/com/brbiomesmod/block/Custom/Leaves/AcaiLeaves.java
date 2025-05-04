@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -30,7 +31,7 @@ public class AcaiLeaves extends LeavesBlock {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, WoodGroup.ACAI_BUNCH.get().getDefaultState(), 2);
+                world.setBlockState(belowPos, TreesGroup.ACAI_BUNCH.get().getDefaultState(), 2);
             }
         }
     }

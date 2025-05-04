@@ -1,6 +1,7 @@
 package com.brbiomesmod.block;
 
 
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -38,14 +39,14 @@ public class BuritiBunchBlock extends Block {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, CerradoBlocks.BURITI_BUNCH.get().getDefaultState(), 2);
+                world.setBlockState(belowPos, TreesGroup.BURITI_BUNCH.get().getDefaultState(), 2);
             }
         }
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(CerradoBlocks.BURITI_BUNCH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.BURITI_BUNCH.get(), RenderType.getCutout());
 
     }
 

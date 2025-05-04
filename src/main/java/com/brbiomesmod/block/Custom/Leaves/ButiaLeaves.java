@@ -1,6 +1,7 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.Seasons.Season;
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -30,7 +31,7 @@ public class ButiaLeaves extends LeavesBlock {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                worldIn.setBlockState(belowPos, PampasBlocks.PINDO_BUNCH.get().getDefaultState(), 2);
+                worldIn.setBlockState(belowPos, TreesGroup.PINDO_BUNCH.get().getDefaultState(), 2);
             }
         }
     }

@@ -1,6 +1,7 @@
 package com.brbiomesmod.block;
 
 
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import net.minecraft.block.*;
 import net.minecraft.block.material.PushReaction;
@@ -21,7 +22,7 @@ public class AcaiBunchBlock extends Block {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(WoodGroup.ACAI_BUNCH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.ACAI_BUNCH.get(), RenderType.getCutout());
 
     }
 

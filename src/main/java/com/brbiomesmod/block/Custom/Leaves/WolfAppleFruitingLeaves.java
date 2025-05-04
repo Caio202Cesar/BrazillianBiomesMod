@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -69,7 +70,7 @@ public class WolfAppleFruitingLeaves extends LeavesBlock implements IForgeSheara
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, CerradoBlocks.WOLF_APPLE_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreesGroup.WOLF_APPLE_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 

@@ -717,36 +717,36 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final class States {
 
-        protected static final BlockState KAPOK_LOG = WoodGroup.KAPOK_LOG.get().getDefaultState();
-        protected static final BlockState KAPOK_LEAVES = WoodGroup.KAPOK_LEAVES.get().getDefaultState();
+        protected static final BlockState KAPOK_LOG = TreesGroup.KAPOK_LOG.get().getDefaultState();
+        protected static final BlockState KAPOK_LEAVES = TreesGroup.KAPOK_LEAVES.get().getDefaultState();
 
         protected static final BlockState XAXIM_LOG = TreesGroup.XAXIM_LOG.get().getDefaultState();
         protected static final BlockState XAXIM_LEAVES = TreesGroup.XAXIM_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BURITI_LEAVES = CerradoBlocks.BURITI_LEAVES.get().getDefaultState();
-        protected static final BlockState BURITI_LOG = CerradoBlocks.BURITI_LOG.get().getDefaultState();
+        protected static final BlockState BURITI_LEAVES = TreesGroup.BURITI_LEAVES.get().getDefaultState();
+        protected static final BlockState BURITI_LOG = TreesGroup.BURITI_LOG.get().getDefaultState();
 
-        protected static final BlockState PALMITO_LOG = WoodGroup.PALMITO_LOG.get().getDefaultState();
-        protected static final BlockState ACAI_LEAVES = WoodGroup.ACAI_LEAVES.get().getDefaultState();
-        protected static final BlockState JUSSARA_LEAVES = PlantsGroup.JUSSARA_LEAVES.get().getDefaultState();
+        protected static final BlockState PALMITO_LOG = TreesGroup.PALMITO_LOG.get().getDefaultState();
+        protected static final BlockState ACAI_LEAVES = TreesGroup.ACAI_LEAVES.get().getDefaultState();
+        protected static final BlockState JUSSARA_LEAVES = TreesGroup.JUSSARA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState QUEEN_PALM_LOG = PlantsGroup.QUEEN_PALM_LOG.get().getDefaultState();
-        protected static final BlockState QUEEN_PALM_LEAVES = PlantsGroup.QUEEN_PALM_LEAVES.get().getDefaultState();
+        protected static final BlockState QUEEN_PALM_LOG = TreesGroup.QUEEN_PALM_LOG.get().getDefaultState();
+        protected static final BlockState QUEEN_PALM_LEAVES = TreesGroup.QUEEN_PALM_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BANANA_LOG = WoodGroup.BANANA_LOG.get().getDefaultState();
-        protected static final BlockState BANANA_LEAVES = WoodGroup.BANANA_LEAVES.get().getDefaultState();
+        protected static final BlockState BANANA_LOG = TreesGroup.BANANA_LOG.get().getDefaultState();
+        protected static final BlockState BANANA_LEAVES = TreesGroup.BANANA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CARNAUBA_LOG = MiscBlocks.CARNAUBA_LOG.get().getDefaultState();
-        protected static final BlockState CARNAUBA_LEAVES = MiscBlocks.CARNAUBA_LEAVES.get().getDefaultState();
+        protected static final BlockState CARNAUBA_LOG = TreesGroup.CARNAUBA_LOG.get().getDefaultState();
+        protected static final BlockState CARNAUBA_LEAVES = TreesGroup.CARNAUBA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState JELLY_PALM_LOG = PampasBlocks.JELLY_PALM_LOG.get().getDefaultState();
-        protected static final BlockState JELLY_PALM_LEAVES = PampasBlocks.JELLY_PALM_LEAVES.get().getDefaultState();
+        protected static final BlockState JELLY_PALM_LOG = TreesGroup.JELLY_PALM_LOG.get().getDefaultState();
+        protected static final BlockState JELLY_PALM_LEAVES = TreesGroup.JELLY_PALM_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SOMBREIRO_LOG = WoodGroup.SOMBREIRO_LOG.get().getDefaultState();
-        protected static final BlockState SOMBREIRO_LEAVES = WoodGroup.SOMBREIRO_LEAVES.get().getDefaultState();
+        protected static final BlockState SOMBREIRO_LOG = TreesGroup.SOMBREIRO_LOG.get().getDefaultState();
+        protected static final BlockState SOMBREIRO_LEAVES = TreesGroup.SOMBREIRO_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CASHEW_LOG = RestingaBlocks.CASHEW_LOG.get().getDefaultState();
-        protected static final BlockState CASHEW_LEAVES = RestingaBlocks.CASHEW_LEAVES.get().getDefaultState();
+        protected static final BlockState CASHEW_LOG = TreesGroup.CASHEW_LOG.get().getDefaultState();
+        protected static final BlockState CASHEW_LEAVES = TreesGroup.CASHEW_LEAVES.get().getDefaultState();
 
         protected static final BlockState YERBA_MATE_LOG = TreesGroup.YERBA_MATE_LOG.get().getDefaultState();
         protected static final BlockState YERBA_MATE_LEAVES = TreesGroup.YERBA_MATE_LEAVES.get().getDefaultState();
@@ -754,75 +754,75 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState FEIJOA_LOG = TreesGroup.FEIJOA_LOG.get().getDefaultState();
         protected static final BlockState FEIJOA_LEAVES = TreesGroup.FEIJOA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BLACK_JUREMA_LOG = MiscBlocks.BLACK_JUREMA_LOG.get().getDefaultState();
-        protected static final BlockState BLACK_JUREMA_LEAVES = MiscBlocks.BLACK_JUREMA_LEAVES.get().getDefaultState();
+        protected static final BlockState BLACK_JUREMA_LOG = TreesGroup.BLACK_JUREMA_LOG.get().getDefaultState();
+        protected static final BlockState BLACK_JUREMA_LEAVES = TreesGroup.BLACK_JUREMA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SILK_FLOSS_LOG = CerradoBlocks.SILK_FLOSS_LOG.get().getDefaultState();
-        protected static final BlockState WHITE_SILK_FLOSS_LEAVES = MiscBlocks.WHITE_SILK_FLOSS_LEAVES.get().getDefaultState();
-        protected static final BlockState PINK_SILK_FLOSS_LEAVES = CerradoBlocks.PINK_SILK_FLOSS_LEAVES.get().getDefaultState();
+        protected static final BlockState SILK_FLOSS_LOG = TreesGroup.SILK_FLOSS_LOG.get().getDefaultState();
+        protected static final BlockState WHITE_SILK_FLOSS_LEAVES = TreesGroup.WHITE_SILK_FLOSS_LEAVES.get().getDefaultState();
+        protected static final BlockState PINK_SILK_FLOSS_LEAVES = TreesGroup.PINK_SILK_FLOSS_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BACURI_LOG = WoodGroup.BACURI_LOG.get().getDefaultState();
-        protected static final BlockState BACURI_LEAVES = WoodGroup.BACURI_LEAVES.get().getDefaultState();
+        protected static final BlockState BACURI_LOG = TreesGroup.BACURI_LOG.get().getDefaultState();
+        protected static final BlockState BACURI_LEAVES = TreesGroup.BACURI_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CAMU_CAMU_LOG = WoodGroup.CAMU_CAMU_LOG.get().getDefaultState();
-        protected static final BlockState CAMU_CAMU_LEAVES = WoodGroup.CAMU_CAMU_LEAVES.get().getDefaultState();
+        protected static final BlockState CAMU_CAMU_LOG = TreesGroup.CAMU_CAMU_LOG.get().getDefaultState();
+        protected static final BlockState CAMU_CAMU_LEAVES = TreesGroup.CAMU_CAMU_LEAVES.get().getDefaultState();
 
-        protected static final BlockState IPE_LOG = PlantsGroup.IPE_LOG.get().getDefaultState();
-        protected static final BlockState YELLOW_IPE_BLOSSOM = PlantsGroup.YELLOW_IPE_BLOSSOM.get().getDefaultState();
-        protected static final BlockState PURPLE_IPE_BLOSSOM = PlantsGroup.PURPLE_IPE_BLOSSOM.get().getDefaultState();
-        protected static final BlockState PINK_IPE_BLOSSOM = PlantsGroup.PINK_IPE_BLOSSOM.get().getDefaultState();
-        protected static final BlockState WHITE_IPE_BLOSSOM = PlantsGroup.WHITE_IPE_BLOSSOM.get().getDefaultState();
-        protected static final BlockState APRICOT_IPE_BLOSSOM = PlantsGroup.APRICOT_IPE_BLOSSOM.get().getDefaultState();
+        protected static final BlockState IPE_LOG = TreesGroup.IPE_LOG.get().getDefaultState();
+        protected static final BlockState YELLOW_IPE_BLOSSOM = TreesGroup.YELLOW_IPE_BLOSSOM.get().getDefaultState();
+        protected static final BlockState PURPLE_IPE_BLOSSOM = TreesGroup.PURPLE_IPE_BLOSSOM.get().getDefaultState();
+        protected static final BlockState PINK_IPE_BLOSSOM = TreesGroup.PINK_IPE_BLOSSOM.get().getDefaultState();
+        protected static final BlockState WHITE_IPE_BLOSSOM = TreesGroup.WHITE_IPE_BLOSSOM.get().getDefaultState();
+        protected static final BlockState APRICOT_IPE_BLOSSOM = TreesGroup.APRICOT_IPE_BLOSSOM.get().getDefaultState();
 
-        protected static final BlockState CAMBUCI_LOG = PlantsGroup.CAMBUCI_LOG.get().getDefaultState();
-        protected static final BlockState CAMBUCI_LEAVES = PlantsGroup.CAMBUCI_LEAVES.get().getDefaultState();
+        protected static final BlockState CAMBUCI_LOG = TreesGroup.CAMBUCI_LOG.get().getDefaultState();
+        protected static final BlockState CAMBUCI_LEAVES = TreesGroup.CAMBUCI_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SCHINUS_LOG = PampasBlocks.SCHINUS_LOG.get().getDefaultState();
-        protected static final BlockState BRAZILLIAN_PEPPER_LEAVES = PampasBlocks.BRAZILLIAN_PEPPER_LEAVES.get().getDefaultState();
-        protected static final BlockState PERUVIAN_PEPPER_LEAVES = PampasBlocks.PERUVIAN_PEPPER_LEAVES.get().getDefaultState();
-        protected static final BlockState SILVER_PEPPER_LEAVES = PampasBlocks.SILVER_PEPPER_LEAVES.get().getDefaultState();
-        protected static final BlockState URUGUAYAN_PEPPER_LEAVES = PampasBlocks.URUGUAYAN_PEPPER_LEAVES.get().getDefaultState();
+        protected static final BlockState SCHINUS_LOG = TreesGroup.SCHINUS_LOG.get().getDefaultState();
+        protected static final BlockState BRAZILLIAN_PEPPER_LEAVES = TreesGroup.BRAZILLIAN_PEPPER_LEAVES.get().getDefaultState();
+        protected static final BlockState PERUVIAN_PEPPER_LEAVES = TreesGroup.PERUVIAN_PEPPER_LEAVES.get().getDefaultState();
+        protected static final BlockState SILVER_PEPPER_LEAVES = TreesGroup.SILVER_PEPPER_LEAVES.get().getDefaultState();
+        protected static final BlockState URUGUAYAN_PEPPER_LEAVES = TreesGroup.URUGUAYAN_PEPPER_LEAVES.get().getDefaultState();
 
-        protected static final BlockState WOLF_APPLE_LOG = CerradoBlocks.WOLF_APPLE_LOG.get().getDefaultState();
-        protected static final BlockState WOLF_APPLE_LEAVES = CerradoBlocks.WOLF_APPLE_LEAVES.get().getDefaultState();
+        protected static final BlockState WOLF_APPLE_LOG = TreesGroup.WOLF_APPLE_LOG.get().getDefaultState();
+        protected static final BlockState WOLF_APPLE_LEAVES = TreesGroup.WOLF_APPLE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState MANGABA_LOG = RestingaBlocks.MANGABA_LOG.get().getDefaultState();
-        protected static final BlockState MANGABA_LEAVES = RestingaBlocks.MANGABA_LEAVES.get().getDefaultState();
+        protected static final BlockState MANGABA_LOG = TreesGroup.MANGABA_LOG.get().getDefaultState();
+        protected static final BlockState MANGABA_LEAVES = TreesGroup.MANGABA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BRAZILNUT_LOG = WoodGroup.BRAZILNUT_LOG.get().getDefaultState();
-        protected static final BlockState BRAZILNUT_LEAVES = WoodGroup.BRAZILNUT_LEAVES.get().getDefaultState();
+        protected static final BlockState BRAZILNUT_LOG = TreesGroup.BRAZILNUT_LOG.get().getDefaultState();
+        protected static final BlockState BRAZILNUT_LEAVES = TreesGroup.BRAZILNUT_LEAVES.get().getDefaultState();
 
-        protected static final BlockState GUARANA_LEAVES = WoodGroup.GUARANA_LEAVES.get().getDefaultState();
-        protected static final BlockState CUPUACU_LEAVES = WoodGroup.CUPUACU_LEAVES.get().getDefaultState();
+        protected static final BlockState GUARANA_LEAVES = TreesGroup.GUARANA_LEAVES.get().getDefaultState();
+        protected static final BlockState CUPUACU_LEAVES = TreesGroup.CUPUACU_LEAVES.get().getDefaultState();
         protected static final BlockState JUNGLE_LOG = Blocks.JUNGLE_LOG.getDefaultState();
         protected static final BlockState JUNGLE_LEAVES = Blocks.JUNGLE_LEAVES.getDefaultState();
 
-        protected static final BlockState BRAZILWOOD_LOG = PlantsGroup.BRAZILWOOD_LOG.get().getDefaultState();
-        protected static final BlockState BRAZILWOOD_LEAVES = PlantsGroup.BRAZILWOOD_LEAVES.get().getDefaultState();
+        protected static final BlockState BRAZILWOOD_LOG = TreesGroup.BRAZILWOOD_LOG.get().getDefaultState();
+        protected static final BlockState BRAZILWOOD_LEAVES = TreesGroup.BRAZILWOOD_LEAVES.get().getDefaultState();
 
-        protected static final BlockState JUA_LOG = MiscBlocks.JUA_LOG.get().getDefaultState();
-        protected static final BlockState JUA_LEAVES = MiscBlocks.JUA_LEAVES.get().getDefaultState();
+        protected static final BlockState JUA_LOG = TreesGroup.JUA_LOG.get().getDefaultState();
+        protected static final BlockState JUA_LEAVES = TreesGroup.JUA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BRAZILLIAN_SASSAFRAS_LOG = PlantsGroup.BRAZILLIAN_SASSAFRAS_LOG.get().getDefaultState();
-        protected static final BlockState BRAZILLIAN_SASSAFRAS_LEAVES = PlantsGroup.BRAZILLIAN_SASSAFRAS_LEAVES.get().getDefaultState();
+        protected static final BlockState BRAZILLIAN_SASSAFRAS_LOG = TreesGroup.BRAZILLIAN_SASSAFRAS_LOG.get().getDefaultState();
+        protected static final BlockState BRAZILLIAN_SASSAFRAS_LEAVES = TreesGroup.BRAZILLIAN_SASSAFRAS_LEAVES.get().getDefaultState();
 
-        protected static final BlockState UMBU_LOG = MiscBlocks.UMBU_LOG.get().getDefaultState();
-        protected static final BlockState UMBU_LEAVES = MiscBlocks.UMBU_LEAVES.get().getDefaultState();
+        protected static final BlockState UMBU_LOG = TreesGroup.UMBU_LOG.get().getDefaultState();
+        protected static final BlockState UMBU_LEAVES = TreesGroup.UMBU_LEAVES.get().getDefaultState();
 
-        protected static final BlockState LOPHANTERA_LOG = WoodGroup.LOPHANTERA_LOG.get().getDefaultState();
-        protected static final BlockState LOPHANTERA_LEAVES = WoodGroup.LOPHANTERA_LEAVES.get().getDefaultState();
+        protected static final BlockState LOPHANTERA_LOG = TreesGroup.LOPHANTERA_LOG.get().getDefaultState();
+        protected static final BlockState LOPHANTERA_LEAVES = TreesGroup.LOPHANTERA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState MANACA_DA_SERRA_LOG = PlantsGroup.MANACA_DA_SERRA_LOG.get().getDefaultState();
-        protected static final BlockState MANACA_DA_SERRA_LEAVES = PlantsGroup.MANACA_DA_SERRA_LEAVES.get().getDefaultState();
+        protected static final BlockState MANACA_DA_SERRA_LOG = TreesGroup.MANACA_DA_SERRA_LOG.get().getDefaultState();
+        protected static final BlockState MANACA_DA_SERRA_LEAVES = TreesGroup.MANACA_DA_SERRA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState EUGENIA_LOG = PlantsGroup.EUGENIA_LOG.get().getDefaultState();
-        protected static final BlockState PITANGA_LEAVES = PlantsGroup.PITANGA_LEAVES.get().getDefaultState();
-        protected static final BlockState BLACK_PITANGA_LEAVES = PlantsGroup.BLACK_PITANGA_LEAVES.get().getDefaultState();
-        protected static final BlockState CAGAITA_LEAVES = CerradoBlocks.CAGAITA_LEAVES.get().getDefaultState();
+        protected static final BlockState EUGENIA_LOG = TreesGroup.EUGENIA_LOG.get().getDefaultState();
+        protected static final BlockState PITANGA_LEAVES = TreesGroup.PITANGA_LEAVES.get().getDefaultState();
+        protected static final BlockState BLACK_PITANGA_LEAVES = TreesGroup.BLACK_PITANGA_LEAVES.get().getDefaultState();
+        protected static final BlockState CAGAITA_LEAVES = TreesGroup.CAGAITA_LEAVES.get().getDefaultState();
         protected static final BlockState RIO_GRANDE_CHERRY_LEAVES = TreesGroup.RIO_GRANDE_CHERRY_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SHARINGA_LOG = WoodGroup.SHARINGA_LOG.get().getDefaultState();
-        protected static final BlockState SHARINGA_LEAVES = WoodGroup.SHARINGA_LEAVES.get().getDefaultState();
+        protected static final BlockState SHARINGA_LOG = TreesGroup.SHARINGA_LOG.get().getDefaultState();
+        protected static final BlockState SHARINGA_LEAVES = TreesGroup.SHARINGA_LEAVES.get().getDefaultState();
 
         protected static final BlockState PARANA_PINE_LOG = TreesGroup.PARANA_PINE_LOG.get().getDefaultState();
         protected static final BlockState PARANA_PINE_LEAVES = TreesGroup.PARANA_PINE_LEAVES.get().getDefaultState();
@@ -830,42 +830,42 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState IMBUIA_LOG = TreesGroup.IMBUIA_LOG.get().getDefaultState();
         protected static final BlockState IMBUIA_LEAVES = TreesGroup.IMBUIA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CECROPIA_LOG = PlantsGroup.CECROPIA_LOG.get().getDefaultState();
-        protected static final BlockState CECROPIA_LEAVES = PlantsGroup.CECROPIA_LEAVES.get().getDefaultState();
-        protected static final BlockState SILVER_CECROPIA_LEAVES = PlantsGroup.CECROPIA_SILVER_LEAVES.get().getDefaultState();
+        protected static final BlockState CECROPIA_LOG = TreesGroup.CECROPIA_LOG.get().getDefaultState();
+        protected static final BlockState CECROPIA_LEAVES = TreesGroup.CECROPIA_LEAVES.get().getDefaultState();
+        protected static final BlockState SILVER_CECROPIA_LEAVES = TreesGroup.CECROPIA_SILVER_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PINK_PEROBA_LOG = PlantsGroup.PINK_PEROBA_LOG.get().getDefaultState();
-        protected static final BlockState PINK_PEROBA_LEAVES = PlantsGroup.PINK_PEROBA_LEAVES.get().getDefaultState();
+        protected static final BlockState PINK_PEROBA_LOG = TreesGroup.PINK_PEROBA_LOG.get().getDefaultState();
+        protected static final BlockState PINK_PEROBA_LEAVES = TreesGroup.PINK_PEROBA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState JEQUITIBA_LOG = PlantsGroup.JEQUITIBA_LOG.get().getDefaultState();
-        protected static final BlockState JEQUITIBA_LEAVES = PlantsGroup.JEQUITIBA_LEAVES.get().getDefaultState();
+        protected static final BlockState JEQUITIBA_LOG = TreesGroup.JEQUITIBA_LOG.get().getDefaultState();
+        protected static final BlockState JEQUITIBA_LEAVES = TreesGroup.JEQUITIBA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BRAZILLIAN_ROSEWOOD_LOG = PlantsGroup.BRAZILLIAN_ROSEWOOD_LOG.get().getDefaultState();
-        protected static final BlockState BRAZILLIAN_ROSEWOOD_LEAVES = PlantsGroup.BRAZILLIAN_ROSEWOOD_LEAVES.get().getDefaultState();
+        protected static final BlockState BRAZILLIAN_ROSEWOOD_LOG = TreesGroup.BRAZILLIAN_ROSEWOOD_LOG.get().getDefaultState();
+        protected static final BlockState BRAZILLIAN_ROSEWOOD_LEAVES = TreesGroup.BRAZILLIAN_ROSEWOOD_LEAVES.get().getDefaultState();
 
-        protected static final BlockState JABUTICABA_LOG = PlantsGroup.JABUTICABA_LOG.get().getDefaultState();
-        protected static final BlockState JABUTICABA_LEAVES = PlantsGroup.JABUTICABA_LEAVES.get().getDefaultState();
+        protected static final BlockState JABUTICABA_LOG = TreesGroup.JABUTICABA_LOG.get().getDefaultState();
+        protected static final BlockState JABUTICABA_LEAVES = TreesGroup.JABUTICABA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState ALGARROBILLO_LOG = PampasBlocks.ALGARROBILLO_LOG.get().getDefaultState();
-        protected static final BlockState ALGARROBILLO_LEAVES = PampasBlocks.ALGARROBILLO_LEAVES.get().getDefaultState();
+        protected static final BlockState ALGARROBILLO_LOG = TreesGroup.ALGARROBILLO_LOG.get().getDefaultState();
+        protected static final BlockState ALGARROBILLO_LEAVES = TreesGroup.ALGARROBILLO_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CAVEN_THORN_LOG = PampasBlocks.CAVEN_THORN_LOG.get().getDefaultState();
-        protected static final BlockState CAVEN_THORN_LEAVES = PampasBlocks.CAVEN_THORN_LEAVES.get().getDefaultState();
+        protected static final BlockState CAVEN_THORN_LOG = TreesGroup.CAVEN_THORN_LOG.get().getDefaultState();
+        protected static final BlockState CAVEN_THORN_LEAVES = TreesGroup.CAVEN_THORN_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BLACK_SUCUPIRA_LOG = CerradoBlocks.BLACK_SUCUPIRA_LOG.get().getDefaultState();
-        protected static final BlockState BLACK_SUCUPIRA_LEAVES = CerradoBlocks.BLACK_SUCUPIRA_LEAVES.get().getDefaultState();
+        protected static final BlockState BLACK_SUCUPIRA_LOG = TreesGroup.BLACK_SUCUPIRA_LOG.get().getDefaultState();
+        protected static final BlockState BLACK_SUCUPIRA_LEAVES = TreesGroup.BLACK_SUCUPIRA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BALSA_LOG = WoodGroup.BALSA_LOG.get().getDefaultState();
-        protected static final BlockState BALSA_LEAVES = WoodGroup.BALSA_LEAVES.get().getDefaultState();
+        protected static final BlockState BALSA_LOG = TreesGroup.BALSA_LOG.get().getDefaultState();
+        protected static final BlockState BALSA_LEAVES = TreesGroup.BALSA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState COCKSPUR_CORAL_LOG = PampasBlocks.COCKSPUR_CORAL_LOG.get().getDefaultState();
-        protected static final BlockState COCKSPUR_CORAL_LEAVES = PampasBlocks.COCKSPUR_CORAL_LEAVES.get().getDefaultState();
+        protected static final BlockState COCKSPUR_CORAL_LOG = TreesGroup.COCKSPUR_CORAL_LOG.get().getDefaultState();
+        protected static final BlockState COCKSPUR_CORAL_LEAVES = TreesGroup.COCKSPUR_CORAL_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SAPUCAIA_LOG = PlantsGroup.SAPUCAIA_LOG.get().getDefaultState();
-        protected static final BlockState SAPUCAIA_LEAVES = PlantsGroup.SAPUCAIA_LEAVES.get().getDefaultState();
+        protected static final BlockState SAPUCAIA_LOG = TreesGroup.SAPUCAIA_LOG.get().getDefaultState();
+        protected static final BlockState SAPUCAIA_LEAVES = TreesGroup.SAPUCAIA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState MONKEY_CAJARANA_LOG = RestingaBlocks.MONKEY_CAJARANA_LOG.get().getDefaultState();
-        protected static final BlockState MONKEY_CAJARANA_LEAVES = RestingaBlocks.MONKEY_CAJARANA_LEAVES.get().getDefaultState();
+        protected static final BlockState MONKEY_CAJARANA_LOG = TreesGroup.MONKEY_CAJARANA_LOG.get().getDefaultState();
+        protected static final BlockState MONKEY_CAJARANA_LEAVES = TreesGroup.MONKEY_CAJARANA_LEAVES.get().getDefaultState();
 
         protected static final BlockState PODZOL = Blocks.PODZOL.getDefaultState();
 

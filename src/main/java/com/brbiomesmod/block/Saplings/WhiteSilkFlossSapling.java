@@ -1,6 +1,7 @@
 package com.brbiomesmod.block.Saplings;
 
 import com.brbiomesmod.block.BlockClasses.MiscBlocks;
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.BigTree;
@@ -25,8 +26,8 @@ public class WhiteSilkFlossSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(MiscBlocks.WHITE_SILK_FLOSS_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(MiscBlocks.POTTED_WHITE_SILK_FLOSS_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.WHITE_SILK_FLOSS_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_WHITE_SILK_FLOSS_SAPLING.get(), RenderType.getCutout());
 
     }
 
