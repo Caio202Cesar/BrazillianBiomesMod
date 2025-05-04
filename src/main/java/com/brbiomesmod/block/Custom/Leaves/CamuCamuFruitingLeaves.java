@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
@@ -70,7 +71,7 @@ public class CamuCamuFruitingLeaves extends LeavesBlock implements IForgeShearab
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, WoodGroup.CAMU_CAMU_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreesGroup.CAMU_CAMU_LEAVES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
