@@ -1,5 +1,6 @@
 package com.brbiomesmod.block;
 
+import com.brbiomesmod.block.BlockClasses.AmazonRainforestBlocks;
 import com.brbiomesmod.block.BlockClasses.AraucariaPlateauBlocks;
 import com.brbiomesmod.block.BlockClasses.AtlanticForestBlocks;
 import net.minecraft.block.*;
@@ -47,6 +48,9 @@ public class EpiphytePlant extends BushBlock {
 
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.ORANGE_GUZMANIA.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(AtlanticForestBlocks.POTTED_ORANGE_GUZMANIA.get(), RenderType.getCutout());
+
+        RenderTypeLookup.setRenderLayer(AmazonRainforestBlocks.AMAZONIAN_ZEBRA_PLANT.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

@@ -35,6 +35,10 @@ public class ModFeatures extends Features implements IFeatureConfig {
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.BULL_NETTLE_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
 
+    public static final ConfiguredFeature<?, ?> AMAZONIAN_PLANTS = register("amazonian_plants",
+            Feature.FLOWER.withConfiguration(Configs.AMAZONIAN_PLANTS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
+
     public static final ConfiguredFeature<?, ?> TURK_TURBAN_CACTUS = register("turk_turban_cactus",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.TURK_TURBAN_CACTUS_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
@@ -74,6 +78,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
                 (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
                         .addWeightedBlockstate(States.BULL_NETTLE, 1)
                         .addWeightedBlockstate(States.BULL_NETTLE_FRUITS, 1),
+                        SimpleBlockPlacer.PLACER)).tries(64).build();
+
+        public static final BlockClusterFeatureConfig AMAZONIAN_PLANTS_CONFIG =
+                (new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider())
+                        .addWeightedBlockstate(States.ZEBRA_PLANT, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig TURK_TURBAN_CACTUS_CONFIG =
@@ -167,6 +176,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState AECHMEA_ALBA = AtlanticForestBlocks.AECHMEA_ALBA.get().getDefaultState();
         protected static final BlockState SILVER_VASE_BROMELIAD = AtlanticForestBlocks.SILVER_VASE_BROMELIAD.get().getDefaultState();
         protected static final BlockState VELOZIA = CerradoBlocks.VELOZIA.get().getDefaultState();
+        protected static final BlockState ZEBRA_PLANT = AmazonRainforestBlocks.AMAZONIAN_ZEBRA_PLANT.get().getDefaultState();
 
     }
 }

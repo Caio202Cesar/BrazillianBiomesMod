@@ -307,6 +307,8 @@ public class AmazonRainforestBlocks {
             () -> new FlowerPotBlock(AmazonRainforestBlocks.SOMBREIRO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+    public static final RegistryObject<Block> AMAZONIAN_ZEBRA_PLANT = registerBlock("amazonian_zebra_plant",
+            EpiphytePlant::new);
 
     public static final RegistryObject<Block> CASSAVA_PLANT = registerBlock("cassava_plant",
             CassavaPlant::new);
