@@ -1,6 +1,7 @@
 package com.brbiomesmod.block.Saplings;
 
 import com.brbiomesmod.block.BlockClasses.PlantsGroup;
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
@@ -24,8 +25,8 @@ public class BrazillianSassafrasSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(PlantsGroup.BRAZILLIAN_SASSAFRAS_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_BRAZILLIAN_SASSAFRAS_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.BRAZILLIAN_SASSAFRAS_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_BRAZILLIAN_SASSAFRAS_SAPLING.get(), RenderType.getCutout());
 
     }
 

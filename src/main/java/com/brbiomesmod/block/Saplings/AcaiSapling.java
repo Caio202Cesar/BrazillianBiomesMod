@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.BlockState;
@@ -27,7 +28,7 @@ public class AcaiSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(WoodGroup.ACAI_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.ACAI_SAPLING.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

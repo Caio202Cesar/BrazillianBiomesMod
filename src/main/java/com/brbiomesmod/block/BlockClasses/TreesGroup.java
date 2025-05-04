@@ -801,7 +801,7 @@ public class TreesGroup {
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().group(ModItemGroup.ARAUCARIA_PLATEAU_GROUP)));
+                new Item.Properties().group(ModItemGroup.TREE_GROUP)));
     }
 
     public static void register(IEventBus eventBus) {

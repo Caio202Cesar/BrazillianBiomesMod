@@ -1,6 +1,7 @@
 package com.brbiomesmod.block.Saplings;
 
 import com.brbiomesmod.block.BlockClasses.MiscBlocks;
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -27,7 +28,7 @@ public class CarnaubaSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(MiscBlocks.CARNAUBA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.CARNAUBA_SAPLING.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

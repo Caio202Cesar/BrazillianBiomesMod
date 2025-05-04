@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -26,8 +27,8 @@ public class MonkeyCajaranaSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(RestingaBlocks.MONKEY_CAJARANA_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(RestingaBlocks.POTTED_MONKEY_CAJARANA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.MONKEY_CAJARANA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_MONKEY_CAJARANA_SAPLING.get(), RenderType.getCutout());
 
     }
 

@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.block.BlockClasses.WoodGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
@@ -24,8 +25,8 @@ public class CamuCamuSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(WoodGroup.CAMU_CAMU_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(WoodGroup.POTTED_CAMU_CAMU_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.CAMU_CAMU_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_CAMU_CAMU_SAPLING.get(), RenderType.getCutout());
 
     }
 

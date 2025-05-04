@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -26,8 +27,8 @@ public class CavenThornSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(PampasBlocks.CAVEN_THORN_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PampasBlocks.POTTED_CAVEN_THORN_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.CAVEN_THORN_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_CAVEN_THORN_SAPLING.get(), RenderType.getCutout());
 
     }
 

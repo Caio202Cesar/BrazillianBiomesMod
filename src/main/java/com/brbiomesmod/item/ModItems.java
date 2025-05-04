@@ -14,7 +14,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, BrazillianBiomesMod.MOD_ID);
 
-    //Fruits And Vegetables
+    //Food
     public static final RegistryObject<Item> CASHEW_FRUIT = ITEMS.register("cashew_fruit",
             () -> new CashewFruit(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
     public static final RegistryObject<Item> CASHEW_APPLE = ITEMS.register("cashew_apple",
@@ -116,34 +116,24 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BANANA)));
     public static final RegistryObject<Item> PINK_PEEPER = ITEMS.register("pink_peeper",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PINK_PEPPER)));
-
-
-
     public static final RegistryObject<Item> PINEAPPLE_GUAVA = ITEMS.register("pineapple_guava",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PINEAPPLE_GUAVA)));
     public static final RegistryObject<Item> FEIJOA_JUICE = ITEMS.register("feijoa_juice",
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
                     .food(ModFoods.FEIJOA_JUICE)));
-
     public static final RegistryObject<Item> JABUTICABA = ITEMS.register("jabuticaba",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.JABUTICABA)));
     public static final RegistryObject<Item> JABUTICABA_JUICE = ITEMS.register("jabuticaba_juice",
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
                     .food(ModFoods.JABUTICABA_JUICE)));
-
-
     public static final RegistryObject<Item> PASSIONFRUIT = ITEMS.register("passionfruit",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PASSIONFRUIT)));
     public static final RegistryObject<Item> PASSIONFRUIT_JUICE = ITEMS.register("passionfruit_juice",
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
                     .food(ModFoods.PASSIONFRUIT_JUICE)));
-
-
-
     public static final RegistryObject<Item> CAMU_CAMU_JUICE = ITEMS.register("camu_camu_juice",
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
                     .food(ModFoods.CAMU_CAMU_JUICE)));
-
     public static final RegistryObject<Item> TURK_TURBAN_BERRIES = ITEMS.register("turk_turban_berries",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.TURK_TURBAN_BERRIES)));
     public static final RegistryObject<Item> MATE_LEAF = ITEMS.register("mate_leaf",
@@ -152,9 +142,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CAGAITA)));
     public static final RegistryObject<Item> CECROPIA_FRUITS = ITEMS.register("cecropia_fruits",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CECROPIA_FRUITS)));
-
-
-
     public static final RegistryObject<Item> BACURI = ITEMS.register("bacuri",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BACURI)));
     public static final RegistryObject<Item> MONKEY_CAJARANA = ITEMS.register("monkey_cajarana",
@@ -171,62 +158,47 @@ public class ModItems {
 
     //Materials
     public static final RegistryObject<Item> BRAZILNUT_SHELL = ITEMS.register("brazilnut_shell",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> SAPUCAIA_SHELL = ITEMS.register("sapucaia_shell",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> TOURMALINE_PARAIBA = ITEMS.register("tourmaline_paraiba",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
-
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> PURPLE_IPE_FLOWERS = ITEMS.register("purple_ipe_flowers",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
-
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> WHITE_IPE_FLOWERS = ITEMS.register("white_ipe_flowers",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
-
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> PINK_IPE_FLOWERS = ITEMS.register("pink_ipe_flowers",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
-
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> YELLOW_IPE_FLOWERS = ITEMS.register("yellow_ipe_flowers",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
-
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> SILK_COTTON = ITEMS.register("silk_cotton",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
-
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> CASSAVA_SEEDS = ITEMS.register("cassava_seeds",
-            () -> new BlockItem(MiscBlocks.CASSAVA_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));
-
+            () -> new BlockItem(MiscBlocks.CASSAVA_CROP.get(), new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> CALABASH_SEEDS = ITEMS.register("calabash_seeds",
             () -> new BlockItem(MiscBlocks.CALABASH_CROP.get(), new Item.Properties().group(ModItemGroup.MISC_GROUP)));
-
     public static final RegistryObject<Item> CALABASH = ITEMS.register("calabash",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
-
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> MATE_CUP = ITEMS.register("mate_cup",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
-
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> DRIED_CARNAUBA_LEAVES = ITEMS.register("dried_carnauba_leaves",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
-
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> CARNAUBA_WAX = ITEMS.register("carnauba_wax",
-            () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
 
     //Tools
     public static final RegistryObject<Item> TOURMALINE_SWORD = ITEMS.register("tourmaline_paraiba_sword",
             () -> new SwordItem(ModItemTier.TOURMALINE, 3, -2.4F,
                     new Item.Properties().group(ItemGroup.COMBAT)));
-
     public static final RegistryObject<Item> TOURMALINE_PICKAXE = ITEMS.register("tourmaline_paraiba_pickaxe",
             () -> new PickaxeItem(ModItemTier.TOURMALINE, 1, -2.8F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
-
     public static final RegistryObject<Item> TOURMALINE_SHOVEL = ITEMS.register("tourmaline_paraiba_shovel",
             () -> new ShovelItem(ModItemTier.TOURMALINE, 1.5F, -3.0F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
-
     public static final RegistryObject<Item> TOURMALINE_AXE = ITEMS.register("tourmaline_paraiba_axe",
             () -> new AxeItem(ModItemTier.TOURMALINE, 5.0F, -3.0F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
-
     public static final RegistryObject<Item> TOURMALINE_HOE = ITEMS.register("tourmaline_paraiba_hoe",
             () -> new HoeItem(ModItemTier.TOURMALINE, -3, 0.0F,
                     new Item.Properties().group(ItemGroup.TOOLS)));

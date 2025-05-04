@@ -11,7 +11,7 @@ public class ModItemGroup {
         @Override
         public ItemStack createIcon()
         {
-            return new ItemStack(ModItems.CAMBUCI.get());
+            return new ItemStack(ModItems.PARANA_PINE_CONE.get());
         }};
 
     public static final ItemGroup PLANTS_GROUP = new ItemGroup("BrazilianBiomes:Plants")
@@ -43,38 +43,6 @@ public class ModItemGroup {
         @Override
         public ItemStack createIcon()
         {
-            return new ItemStack(MiscBlocks.CAATINGA_SAND.get());
+            return new ItemStack(ModItems.TOURMALINE_PARAIBA.get());
         }};
-
-
-
-
-
-
-    public static final ItemGroup ATLANTIC_FOREST_GROUP = new ItemGroup("BRBAtlanticForestTab")
-    {
-        @Override
-        public ItemStack createIcon()
-        {
-            return new ItemStack(ModItems.CAMBUCI.get());
-        }
-    };
-
-    public static final ItemGroup ARAUCARIA_PLATEAU_GROUP = new ItemGroup("BRBAraucariaPlateauTab")
-    {
-        @Override
-        public ItemStack createIcon()
-        {
-            return new ItemStack(ModItems.PARANA_PINE_CONE.get());
-        }
-    };
-
-    public static final ItemGroup AMAZON_RAINFOREST_GROUP = new ItemGroup("BRBAmazonRainforestTab")
-    {
-        @Override
-        public ItemStack createIcon()
-        {
-            return new ItemStack(ModItems.GUARANA_FRUIT.get());
-        }
-    };
 }

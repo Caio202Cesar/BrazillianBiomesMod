@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
+import com.brbiomesmod.block.BlockClasses.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
@@ -23,8 +24,8 @@ public class WolfAppleSapling extends SaplingBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(CerradoBlocks.WOLF_APPLE_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(CerradoBlocks.POTTED_WOLF_APPLE_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.WOLF_APPLE_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_WOLF_APPLE_SAPLING.get(), RenderType.getCutout());
 
     }
 
