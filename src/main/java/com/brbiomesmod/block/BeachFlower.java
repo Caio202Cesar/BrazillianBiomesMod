@@ -1,8 +1,7 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.RestingaBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.potion.Effects;
@@ -12,7 +11,6 @@ import net.minecraft.world.IBlockReader;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.PlantType;
-import net.minecraftforge.common.ToolType;
 
 public class BeachFlower extends FlowerBlock {
     public BeachFlower() {
@@ -21,8 +19,8 @@ public class BeachFlower extends FlowerBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(RestingaBlocks.IPOMAEA_PES_CAPRAE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(RestingaBlocks.POTTED_IPOMAEA_PES_CAPRAE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.IPOMAEA_PES_CAPRAE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_IPOMAEA_PES_CAPRAE.get(), RenderType.getCutout());
 
     }
 

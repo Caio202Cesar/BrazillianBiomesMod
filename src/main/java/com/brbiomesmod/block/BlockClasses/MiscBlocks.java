@@ -27,66 +27,15 @@ public class MiscBlocks {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, BrazillianBiomesMod.MOD_ID);
 
+
+
     public static final RegistryObject<Block> CAATINGA_SAND = registerBlock("caatinga_sand",
             CaatingaSand::new);
 
-    public static final RegistryObject<Block> JUA_LOG = registerBlock("jua_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> JUA_WOOD = registerBlock("jua_wood",
-            ModLogs::new);
-    //public static final RegistryObject<Block> JUA_STRIPPED_LOG = registerBlock("jua_stripped_log", ModLogs::new);
-    //public static final RegistryObject<Block> JUA_STRIPPED_WOOD = registerBlock("jua_stripped_wood", ModLogs::new);
-    public static final RegistryObject<Block> JUA_PLANKS = registerBlock("jua_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> JUA_LEAVES = registerBlock("jua_leaves",
-            () -> new JuaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), MiscBlocks.JUA_FRUITING_LEAVES));
-    public static final RegistryObject<Block> JUA_FRUITING_LEAVES = registerBlock("jua_fruiting_leaves",
-            () -> new JuaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), MiscBlocks.JUA_LEAVES));
-    public static final RegistryObject<Block> JUA_SAPLING = registerBlock("jua_sapling",
-            JuaSapling::new);
-    public static final RegistryObject<Block> JUA_SLAB = registerBlock("jua_slab",
-            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> JUA_STAIRS = registerBlock("jua_stairs",
-            () -> new StairsBlock(() -> JUA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> JUA_FENCE = registerBlock("jua_fence",
-            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> JUA_FENCE_GATE = registerBlock("jua_fence_gate",
-            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_JUA_SAPLING = BLOCKS.register("potted_jua_sapling",
-            () -> new FlowerPotBlock(MiscBlocks.JUA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance()));
-
-
-    public static final RegistryObject<Block> BLACK_JUREMA_LOG = registerBlock("black_jurema_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> BLACK_JUREMA_WOOD = registerBlock("black_jurema_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> BLACK_JUREMA_LEAVES = registerBlock("black_jurema_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> BLACK_JUREMA_SAPLING = registerBlock("black_jurema_sapling",
-            BlackJuremaSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_BLACK_JUREMA_SAPLING = BLOCKS.register("potted_black_jurema_sapling",
-            () -> new FlowerPotBlock(MiscBlocks.BLACK_JUREMA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance()));
-
-
-
-
-
-
-
-
-
-
-
+    public static final  RegistryObject<Block> CALABASH_CROP = BLOCKS.register("calabash_crop",
+            () -> new CalabashCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
+    public static final  RegistryObject<Block> CASSAVA_CROP = BLOCKS.register("cassava_crop",
+            () -> new CassavaCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
 
     public static final RegistryObject<Block> TOURMALINE_PARAIBA_ORE = registerBlock("tourmaline_paraiba_ore",
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK).harvestLevel(2).harvestTool(ToolType.PICKAXE)
@@ -94,6 +43,7 @@ public class MiscBlocks {
     public static final RegistryObject<Block> TOURMALINE_PARAIBA_BLOCK = registerBlock("tourmaline_paraiba_block",
             () -> new Block(AbstractBlock.Properties.create(Material.IRON).harvestLevel(2).harvestTool(ToolType.PICKAXE)
                     .setRequiresTool().hardnessAndResistance(5f)));
+
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {

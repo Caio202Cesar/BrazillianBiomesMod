@@ -1,7 +1,6 @@
 package com.brbiomesmod.block;
 
 
-import com.brbiomesmod.block.BlockClasses.CerradoBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

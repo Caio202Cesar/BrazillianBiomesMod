@@ -1,7 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.Seasons.Season;
-import com.brbiomesmod.block.BlockClasses.PampasBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;

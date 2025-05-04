@@ -42,9 +42,6 @@ public class BrazillianBiomesMod {
         TreesGroup.register(eventBus);
         PlantsGroup.register(eventBus);
         WoodGroup.register(eventBus);
-        RestingaBlocks.register(eventBus);
-        CerradoBlocks.register(eventBus);
-        PampasBlocks.register(eventBus);
 
         ModTreeDecorators.register(eventBus);
 
@@ -84,7 +81,7 @@ public class BrazillianBiomesMod {
         event.enqueueWork(() -> {
             LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().fontRenderer);
 
-            RenderTypeLookup.setRenderLayer(PlantsGroup.CASSAVA_CROP.get(), RenderType.getCutout());
+            RenderTypeLookup.setRenderLayer(MiscBlocks.CASSAVA_CROP.get(), RenderType.getCutout());
         });
     }
 

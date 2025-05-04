@@ -1,9 +1,7 @@
 package com.brbiomesmod.item;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.BlockClasses.PlantsGroup;
-import com.brbiomesmod.block.BlockClasses.WoodGroup;
-import com.brbiomesmod.block.BlockClasses.PampasBlocks;
+import com.brbiomesmod.block.BlockClasses.MiscBlocks;
 import com.brbiomesmod.item.custom.*;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -195,10 +193,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
 
     public static final RegistryObject<Item> CASSAVA_SEEDS = ITEMS.register("cassava_seeds",
-            () -> new BlockItem(PlantsGroup.CASSAVA_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));
+            () -> new BlockItem(MiscBlocks.CASSAVA_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));
 
     public static final RegistryObject<Item> CALABASH_SEEDS = ITEMS.register("calabash_seeds",
-            () -> new BlockItem(PampasBlocks.CALABASH_CROP.get(), new Item.Properties().group(ItemGroup.MATERIALS)));
+            () -> new BlockItem(MiscBlocks.CALABASH_CROP.get(), new Item.Properties().group(ModItemGroup.MISC_GROUP)));
 
     public static final RegistryObject<Item> CALABASH = ITEMS.register("calabash",
             () -> new Item(new Item.Properties().group(ItemGroup.MATERIALS)));

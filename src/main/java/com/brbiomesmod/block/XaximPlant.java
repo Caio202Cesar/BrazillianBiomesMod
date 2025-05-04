@@ -1,8 +1,6 @@
 package com.brbiomesmod.block;
 
 import com.brbiomesmod.block.BlockClasses.PlantsGroup;
-import com.brbiomesmod.block.BlockClasses.TreesGroup;
-import com.brbiomesmod.block.BlockClasses.CerradoBlocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.DoublePlantBlock;

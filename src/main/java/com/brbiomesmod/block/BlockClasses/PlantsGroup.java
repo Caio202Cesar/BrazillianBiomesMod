@@ -32,24 +32,29 @@ public class PlantsGroup {
             = DeferredRegister.create(ForgeRegistries.BLOCKS, BrazillianBiomesMod.MOD_ID);
 
 
+
     public static final RegistryObject<Block> CATTLEYA_COCCINEA = registerBlock("cattleya_coccinea",
             () -> new FlowerBlock(Effects.NIGHT_VISION, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_CATTLEYA_COCCINEA = BLOCKS.register("potted_cattleya_coccinea",
             () -> new FlowerPotBlock(PlantsGroup.CATTLEYA_COCCINEA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> VELOZIA = registerBlock("velozia_plant",
             XaximPlant::new);
+
     public static final RegistryObject<Block> SMALL_XAXIM_PLANT = registerBlock("small_xaxim_plant",
             EpiphytePlant::new);
+
     public static final RegistryObject<Block> XAXIM_PLANT = registerBlock("xaxim_plant",
             XaximPlant::new);
+
     public static final RegistryObject<Block> AMAZONIAN_ZEBRA_PLANT = registerBlock("amazonian_zebra_plant",
             EpiphytePlant::new);
+
     public static final RegistryObject<Block> CASSAVA_PLANT = registerBlock("cassava_plant",
             CassavaPlant::new);
-    public static final  RegistryObject<Block> CASSAVA_CROP = BLOCKS.register("cassava_crop",
-            () -> new CassavaCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
+
     public static final RegistryObject<Block> WHITE_ANGEL_TRUMPET = registerBlock("angel_trumpet_white",
             AngelTrumpetPlant::new);
     public static final RegistryObject<Block> PINK_ANGEL_TRUMPET = registerBlock("angel_trumpet_pink",
@@ -60,20 +65,25 @@ public class PlantsGroup {
             AngelTrumpetPlant::new);
     public static final RegistryObject<Block> ORANGE_ANGEL_TRUMPET = registerBlock("angel_trumpet_orange",
             AngelTrumpetPlant::new);
+
     public static final RegistryObject<Block> PASSION_FRUIT_VINE = registerBlock("passion_fruit_vine",
             PassionfruitVine::new);
     public static final RegistryObject<Block> PASSION_FRUIT_FLOWERING_VINE = registerBlock("passion_fruit_flowering_vine",
             PassionfruitFloweringVine::new);
     public static final RegistryObject<Block> PASSION_FRUIT_FRUITING_VINE = registerBlock("passion_fruit_fruiting_vine",
             PassionfruitFruitingVine::new);
+
     public static final RegistryObject<Block> BRAZILLIAN_DUTCHMAN_PIPE_VINE = registerBlock("brazillian_dutchman_pipe_vine",
             AristolochiaVine::new);
+
     public static final RegistryObject<Block> TILLANDSIA_STRICTA = registerBlock("tillandsia_stricta",
             EpiphytePlant::new);
+
     public static final RegistryObject<Block> TURK_TURBAN_CACTUS = registerBlock("turk_turban_cactus",
             CactusPlant::new);
     public static final RegistryObject<Block> TURK_TURBAN_FRUITING_CACTUS = registerBlock("turk_turban_fruiting_cactus",
             FruitingCactusPlant::new);
+
     public static final RegistryObject<Block> CNIDOSCOLUS_URENS = registerBlock("bull_nettle",
             BullNettlePlant::new);
     public static final RegistryObject<Block> CNIDOSCOLUS_URENS_FRUITING = registerBlock("bull_nettle_fruiting",
@@ -159,6 +169,54 @@ public class PlantsGroup {
 
     public static final RegistryObject<Block> BLACK_ORCHID = registerBlock("black_orchid",
             OrchidPlant::new);
+
+    public static final RegistryObject<Block> MACELA = registerBlock("macela",
+            () -> new FlowerBlock(Effects.REGENERATION, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_MACELA = BLOCKS.register("potted_macela",
+            () -> new FlowerPotBlock(PlantsGroup.MACELA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> ASPILIA_MONTEVIDENSIS = registerBlock("aspilia_montevidensis",
+            () -> new FlowerBlock(Effects.JUMP_BOOST, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_ASPILIA_MONTEVIDENSIS = BLOCKS.register("potted_aspilia_montevidensis",
+            () -> new FlowerPotBlock(PlantsGroup.ASPILIA_MONTEVIDENSIS.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> MANDEVILLA_COCCINEA = registerBlock("mandevilla_coccinea",
+            () -> new FlowerBlock(Effects.REGENERATION, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_MANDEVILLA_COCCINEA = BLOCKS.register("potted_mandevilla_coccinea",
+            () -> new FlowerPotBlock(PlantsGroup.MANDEVILLA_COCCINEA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> VELAME_OF_RIO_GRANDE = registerBlock("velame_of_rio_grande",
+            () -> new FlowerBlock(Effects.BLINDNESS, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_VELAME_OF_RIO_GRANDE = BLOCKS.register("potted_velame_of_rio_grande",
+            () -> new FlowerPotBlock(PlantsGroup.VELAME_OF_RIO_GRANDE.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> XANANA = registerBlock("xanana",
+            XananaFlower::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_XANANA = BLOCKS.register("potted_xanana",
+            () -> new FlowerPotBlock(PlantsGroup.XANANA.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+    public static final RegistryObject<Block> XANANA_BIG = registerBlock("xanana_big",
+            XananaFlower::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BIG_XANANA = BLOCKS.register("potted_big_xanana",
+            () -> new FlowerPotBlock(PlantsGroup.XANANA_BIG.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+    public static final RegistryObject<Block> IPOMAEA_PES_CAPRAE = registerBlock("ipomaea_pes_caprae",
+            BeachFlower::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_IPOMAEA_PES_CAPRAE = BLOCKS.register("potted_ipomaea_pes_caprae",
+            () -> new FlowerPotBlock(PlantsGroup.IPOMAEA_PES_CAPRAE.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

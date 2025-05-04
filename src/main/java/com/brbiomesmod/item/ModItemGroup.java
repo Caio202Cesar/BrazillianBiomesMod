@@ -35,7 +35,7 @@ public class ModItemGroup {
         @Override
         public ItemStack createIcon()
         {
-            return new ItemStack(PlantsGroup.BRAZILWOOD_SAPLING.get());
+            return new ItemStack(TreesGroup.BRAZILWOOD_SAPLING.get());
         }};
 
     public static final ItemGroup MISC_GROUP = new ItemGroup("BrazilianBiomes:Miscellaneous")
@@ -49,14 +49,7 @@ public class ModItemGroup {
 
 
 
-    public static final ItemGroup CAATINGA_GROUP = new ItemGroup("BRBCaatingaTab")
-    {
-        @Override
-        public ItemStack createIcon()
-        {
-            return new ItemStack(ModItems.JUA_BERRIES.get());
-        }
-    };
+
 
     public static final ItemGroup ATLANTIC_FOREST_GROUP = new ItemGroup("BRBAtlanticForestTab")
     {
@@ -82,33 +75,6 @@ public class ModItemGroup {
         public ItemStack createIcon()
         {
             return new ItemStack(ModItems.GUARANA_FRUIT.get());
-        }
-    };
-
-    public static final ItemGroup RESTINGA_GROUP = new ItemGroup("BRBRestingaTab")
-    {
-        @Override
-        public ItemStack createIcon()
-        {
-            return new ItemStack(RestingaBlocks.IPOMAEA_PES_CAPRAE.get());
-        }
-    };
-
-    public static final ItemGroup CERRADO_SAVANNA_GROUP = new ItemGroup("BRBCerradoSavannaTab")
-    {
-        @Override
-        public ItemStack createIcon()
-        {
-            return new ItemStack(ModItems.WOLF_APPLE.get());
-        }
-    };
-
-    public static final ItemGroup PAMPAS_GROUP = new ItemGroup("BRBPampasTab")
-    {
-        @Override
-        public ItemStack createIcon()
-        {
-            return new ItemStack(PampasBlocks.CAVEN_THORN_SAPLING.get());
         }
     };
 }

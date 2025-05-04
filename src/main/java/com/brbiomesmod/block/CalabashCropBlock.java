@@ -1,6 +1,6 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.PampasBlocks;
+import com.brbiomesmod.block.BlockClasses.MiscBlocks;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -33,7 +33,7 @@ public class CalabashCropBlock extends CropsBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(PampasBlocks.CALABASH_CROP.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(MiscBlocks.CALABASH_CROP.get(), RenderType.getCutout());
     }
 
     @Override

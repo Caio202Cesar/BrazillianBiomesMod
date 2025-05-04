@@ -30,12 +30,20 @@ public class WoodGroup {
             = DeferredRegister.create(ForgeRegistries.BLOCKS, BrazillianBiomesMod.MOD_ID);
 
 
+    public static final RegistryObject<Block> CECROPIA_WOOD = registerBlock("cecropia_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> BLACK_JUREMA_WOOD = registerBlock("black_jurema_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> CAVEN_THORN_WOOD = registerBlock("caven_thorn_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> KAPOK_WOOD = registerBlock("kapok_wood",
             ModLogs::new);
     public static final RegistryObject<Block> SILK_FLOSS_WOOD = registerBlock("silk_floss_thornless_wood",
             ModLogs::new);
     public static final RegistryObject<Block> SILK_FLOSS_THORNY_WOOD = registerBlock("silk_floss_thorny_wood",
             SilkFlossLog::new);
+
+
     public static final RegistryObject<Block> BALSA_LOG = registerBlock("balsa_log",
             ModLogs::new);
     public static final RegistryObject<Block> BALSA_LEAVES = registerBlock("balsa_leaves",
@@ -289,6 +297,78 @@ public class WoodGroup {
     public static final RegistryObject<Block> POTTED_SOMBREIRO_SAPLING = BLOCKS.register("potted_sombreiro_sapling",
             () -> new FlowerPotBlock(WoodGroup.SOMBREIRO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+    public static final RegistryObject<Block> COCKSPUR_CORAL_WOOD = registerBlock("cockspur_coral_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> COCKSPUR_CORAL_PLANKS = registerBlock("cockspur_coral_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> COCKSPUR_CORAL_SLAB = registerBlock("cockspur_coral_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> COCKSPUR_CORAL_STAIRS = registerBlock("cockspur_coral_stairs",
+            () -> new StairsBlock(() -> COCKSPUR_CORAL_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> COCKSPUR_CORAL_FENCE = registerBlock("cockspur_coral_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> COCKSPUR_CORAL_FENCE_GATE = registerBlock("cockspur_coral_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+
+    public static final RegistryObject<Block> ALGARROBILLO_WOOD = registerBlock("algarrobillo_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> ALGARROBILLO_PLANKS = registerBlock("algarrobillo_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> ALGARROBILLO_SLAB = registerBlock("algarrobillo_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> ALGARROBILLO_STAIRS = registerBlock("algarrobillo_stairs",
+            () -> new StairsBlock(() -> ALGARROBILLO_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> ALGARROBILLO_FENCE = registerBlock("algarrobillo_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> ALGARROBILLO_FENCE_GATE = registerBlock("algarrobillo_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+
+    public static final RegistryObject<Block> SCHINUS_WOOD = registerBlock("schinus_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> SCHINUS_PLANKS = registerBlock("schinus_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> SCHINUS_SLAB = registerBlock("schinus_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> SCHINUS_STAIRS = registerBlock("schinus_stairs",
+            () -> new StairsBlock(() -> SCHINUS_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> SCHINUS_FENCE = registerBlock("schinus_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> SCHINUS_FENCE_GATE = registerBlock("schinus_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+
+    public static final RegistryObject<Block> JUA_WOOD = registerBlock("jua_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> JUA_PLANKS = registerBlock("jua_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> JUA_SLAB = registerBlock("jua_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> JUA_STAIRS = registerBlock("jua_stairs",
+            () -> new StairsBlock(() -> JUA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> JUA_FENCE = registerBlock("jua_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> JUA_FENCE_GATE = registerBlock("jua_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
 
     public static final RegistryObject<Block> FEIJOA_WOOD = registerBlock("feijoa_wood",
@@ -597,8 +677,78 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-    public static final RegistryObject<Block> CECROPIA_WOOD = registerBlock("cecropia_wood",
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_WOOD = registerBlock("black_sucupira_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_PLANKS = registerBlock("black_sucupira_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_SLAB = registerBlock("black_sucupira_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_STAIRS = registerBlock("black_sucupira_stairs",
+            () -> new StairsBlock(() -> BLACK_SUCUPIRA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_FENCE = registerBlock("black_sucupira_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_FENCE_GATE = registerBlock("black_sucupira_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+
+    public static final RegistryObject<Block> CASHEW_WOOD = registerBlock("cashew_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> CASHEW_PLANKS = registerBlock("cashew_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> CASHEW_SLAB = registerBlock("cashew_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> CASHEW_STAIRS = registerBlock("cashew_stairs",
+            () -> new StairsBlock(() -> CASHEW_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> CASHEW_FENCE = registerBlock("cashew_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> CASHEW_FENCE_GATE = registerBlock("cashew_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+
+    public static final RegistryObject<Block> MANGABA_WOOD = registerBlock("mangaba_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> MANGABA_PLANKS = registerBlock("mangaba_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> MANGABA_SLAB = registerBlock("mangaba_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MANGABA_STAIRS = registerBlock("mangaba_stairs",
+            () -> new StairsBlock(() -> MANGABA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> MANGABA_FENCE = registerBlock("mangaba_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MANGABA_FENCE_GATE = registerBlock("mangaba_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+
+    public static final RegistryObject<Block> MONKEY_CAJARANA_WOOD = registerBlock("monkey_cajarana_wood",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> MONKEY_CAJARANA_PLANKS = registerBlock("monkey_cajarana_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> MONKEY_CAJARANA_SLAB = registerBlock("monkey_cajarana_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MONKEY_CAJARANA_STAIRS = registerBlock("monkey_cajarana_stairs",
+            () -> new StairsBlock(() -> MONKEY_CAJARANA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> MONKEY_CAJARANA_FENCE = registerBlock("monkey_cajarana_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> MONKEY_CAJARANA_FENCE_GATE = registerBlock("monkey_cajarana_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

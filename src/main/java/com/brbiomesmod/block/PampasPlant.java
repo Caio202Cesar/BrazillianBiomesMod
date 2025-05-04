@@ -1,6 +1,6 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.PampasBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BushBlock;
@@ -23,14 +23,14 @@ public class PampasPlant extends BushBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(PampasBlocks.MACELA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PampasBlocks.ASPILIA_MONTEVIDENSIS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PampasBlocks.MANDEVILLA_COCCINEA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PampasBlocks.VELAME_OF_RIO_GRANDE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PampasBlocks.POTTED_MACELA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PampasBlocks.POTTED_ASPILIA_MONTEVIDENSIS.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PampasBlocks.POTTED_MANDEVILLA_COCCINEA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PampasBlocks.POTTED_VELAME_OF_RIO_GRANDE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.MACELA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.ASPILIA_MONTEVIDENSIS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.MANDEVILLA_COCCINEA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.VELAME_OF_RIO_GRANDE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_MACELA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_ASPILIA_MONTEVIDENSIS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_MANDEVILLA_COCCINEA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_VELAME_OF_RIO_GRANDE.get(), RenderType.getCutout());
 
     }
 

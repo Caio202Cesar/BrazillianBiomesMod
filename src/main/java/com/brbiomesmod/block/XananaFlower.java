@@ -1,6 +1,6 @@
 package com.brbiomesmod.block;
 
-import com.brbiomesmod.block.BlockClasses.RestingaBlocks;
+import com.brbiomesmod.block.BlockClasses.PlantsGroup;
 import net.minecraft.block.*;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -19,10 +19,10 @@ public class XananaFlower extends FlowerBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(RestingaBlocks.XANANA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(RestingaBlocks.XANANA_BIG.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(RestingaBlocks.POTTED_XANANA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(RestingaBlocks.POTTED_BIG_XANANA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.XANANA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.XANANA_BIG.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_XANANA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.POTTED_BIG_XANANA.get(), RenderType.getCutout());
     }
 
     protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {

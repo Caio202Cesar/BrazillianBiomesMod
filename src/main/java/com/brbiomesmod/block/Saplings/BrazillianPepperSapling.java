@@ -1,10 +1,8 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.PampasBlocks;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.BigTree;
-import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
