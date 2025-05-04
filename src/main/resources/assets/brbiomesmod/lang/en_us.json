@@ -489,13 +489,9 @@
   "itemGroup.BRBCerradoSavannaTab": "BRB: Cerrado",
   "itemGroup.BRBPampasTab": "BRB: Pampas",
 
-  "biome.brbiomesmod.amazon_rainforest": "Amazon Rainforest",
-  "biome.brbiomesmod.atlantic_forest": "Atlantic Forest",
-  "biome.brbiomesmod.araucaria_plateau": "Araucaria Plateau",
-  "biome.brbiomesmod.caatinga_shrubland": "Caatinga Xeric Shrubland",
-  "biome.brbiomesmod.pantanal": "Pantanal",
-  "biome.brbiomesmod.pampas": "Pampas",
-  "biome.brbiomesmod.dunas_restinga": "Dunas Restinga",
-  "biome.brbiomesmod.cerrado": "Cerrado Savanna",
-  "biome.brbiomesmod.restinga_beach": "Restinga Beach"
+  "biome.brbiomesmod.BrazilianBiomes:Food": "Brazilian Biomes: Food",
+  "biome.brbiomesmod.BrazilianBiomes:Plants": "Brazilian Biomes: Plants",
+  "biome.brbiomesmod.BrazilianBiomes:Woods": "Brazilian Biomes: Wood",
+  "biome.brbiomesmod.BrazilianBiomes:Trees": "Brazilian Biomes: Trees",
+  "biome.brbiomesmod.BrazilianBiomes:Miscellaneous": "Brazilian Biomes: Miscellaneous"
 }

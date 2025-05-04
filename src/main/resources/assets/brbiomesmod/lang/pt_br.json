@@ -488,15 +488,10 @@
   "itemGroup.BRBCerradoSavannaTab": "Cerrado",
   "itemGroup.BRBPampasTab": "Pampas",
 
-  "biome.brbiomesmod.amazon_rainforest": "Floresta Amazônica",
-  "biome.brbiomesmod.atlantic_forest": "Mata Atlântica",
-  "biome.brbiomesmod.araucaria_plateau": "Mata de Araucária",
-  "biome.brbiomesmod.caatinga_shrubland": "Caatinga",
-  "biome.brbiomesmod.pantanal": "Pantanal",
-  "biome.brbiomesmod.pampas": "Pampas",
-  "biome.brbiomesmod.dunas_restinga": "Restinga das Dunas",
-  "biome.brbiomesmod.cerrado": "Cerrado",
-  "biome.brbiomesmod.restinga_beach": "Praia da Restinga",
-  "block.brbiomesmod.jua_stripped_log": "Jua Stripped Log"
+  "biome.brbiomesmod.BrazilianBiomes:Food": "Brazilian Biomes: Comida",
+  "biome.brbiomesmod.BrazilianBiomes:Plants": "Brazilian Biomes: Plantas",
+  "biome.brbiomesmod.BrazilianBiomes:Woods": "Brazilian Biomes: Madeira",
+  "biome.brbiomesmod.BrazilianBiomes:Trees": "Brazilian Biomes: Árvores",
+  "biome.brbiomesmod.BrazilianBiomes:Miscellaneous": "Brazilian Biomes: Diversos"
 
 }
