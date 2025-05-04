@@ -136,8 +136,6 @@ public class ModItems {
                     .food(ModFoods.CAMU_CAMU_JUICE)));
     public static final RegistryObject<Item> TURK_TURBAN_BERRIES = ITEMS.register("turk_turban_berries",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.TURK_TURBAN_BERRIES)));
-    public static final RegistryObject<Item> MATE_LEAF = ITEMS.register("mate_leaf",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
     public static final RegistryObject<Item> CAGAITA = ITEMS.register("cagaita_fruits",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CAGAITA)));
     public static final RegistryObject<Item> CECROPIA_FRUITS = ITEMS.register("cecropia_fruits",
@@ -154,7 +152,7 @@ public class ModItems {
     public static final RegistryObject<Item> BACURI_PASTE = ITEMS.register("bacuri_paste",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BACURI_PASTE)));
     public static final RegistryObject<Item> COOKED_BANANA_FLOWER = ITEMS.register("cooked_banana_flower",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.COOKED_CASSAVA)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.COOKED_BANANA_FLOWER)));
 
     //Materials
     public static final RegistryObject<Item> BRAZILNUT_SHELL = ITEMS.register("brazilnut_shell",
@@ -184,6 +182,8 @@ public class ModItems {
     public static final RegistryObject<Item> DRIED_CARNAUBA_LEAVES = ITEMS.register("dried_carnauba_leaves",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> CARNAUBA_WAX = ITEMS.register("carnauba_wax",
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
+    public static final RegistryObject<Item> MATE_LEAF = ITEMS.register("mate_leaf",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
 
     //Tools

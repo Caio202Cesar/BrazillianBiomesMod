@@ -80,4 +80,6 @@ public class ModFoods extends Foods {
     public static final Food ACAI_WITH_CUPUACU = (new Food.Builder()).hunger(6).saturation(0.6F)
             .effect(new EffectInstance(Effects.SPEED, 2400, 0), 1.0F)
             .effect(new EffectInstance(Effects.JUMP_BOOST, 2400, 0), 1.0F).build();
+    public static final Food COOKED_BANANA_FLOWER = (new Food.Builder()).hunger(5).saturation(0.6F).build();
+
 }
