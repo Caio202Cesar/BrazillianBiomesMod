@@ -1,6 +1,9 @@
 package com.brbiomesmod.block;
 
 import com.brbiomesmod.BrazillianBiomesMod;
+import com.brbiomesmod.block.Custom.CaatingaSand;
+import com.brbiomesmod.block.Custom.CalabashCropBlock;
+import com.brbiomesmod.block.Custom.CassavaCropBlock;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
@@ -24,7 +27,6 @@ public class MiscBlocks {
             = DeferredRegister.create(ForgeRegistries.BLOCKS, BrazillianBiomesMod.MOD_ID);
 
 
-
     public static final RegistryObject<Block> CAATINGA_SAND = registerBlock("caatinga_sand",
             CaatingaSand::new);
 
@@ -39,7 +41,6 @@ public class MiscBlocks {
     public static final RegistryObject<Block> TOURMALINE_PARAIBA_BLOCK = registerBlock("tourmaline_paraiba_block",
             () -> new Block(AbstractBlock.Properties.create(Material.IRON).harvestLevel(2).harvestTool(ToolType.PICKAXE)
                     .setRequiresTool().hardnessAndResistance(5f)));
-
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {

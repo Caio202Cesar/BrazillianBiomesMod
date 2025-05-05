@@ -3,6 +3,7 @@ package com.brbiomesmod.block;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.Custom.Log.ModLogs;
 import com.brbiomesmod.block.Custom.Log.SilkFlossLog;
+import com.brbiomesmod.block.Custom.ModPlanks;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
