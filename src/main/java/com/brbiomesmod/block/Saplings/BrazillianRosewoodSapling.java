@@ -1,7 +1,6 @@
 package com.brbiomesmod.block.Saplings;
 
-import com.brbiomesmod.block.BlockClasses.PlantsGroup;
-import com.brbiomesmod.block.BlockClasses.TreesGroup;
+import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

@@ -1,6 +1,9 @@
 package com.brbiomesmod;
 
-import com.brbiomesmod.block.BlockClasses.*;
+import com.brbiomesmod.block.MiscBlocks;
+import com.brbiomesmod.block.PlantsGroup;
+import com.brbiomesmod.block.TreesGroup;
+import com.brbiomesmod.block.WoodGroup;
 import com.brbiomesmod.features.FoliagePlacers.ModFoliagePlacer;
 import com.brbiomesmod.features.TreeDecorators.ModTreeDecorators;
 import com.brbiomesmod.item.ModItems;

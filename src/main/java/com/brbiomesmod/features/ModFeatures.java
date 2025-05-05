@@ -1,6 +1,6 @@
 package com.brbiomesmod.features;
 
-import com.brbiomesmod.block.BlockClasses.*;
+import com.brbiomesmod.block.PlantsGroup;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.registry.Registry;

@@ -1,7 +1,7 @@
 package com.brbiomesmod.item;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.BlockClasses.MiscBlocks;
+import com.brbiomesmod.block.MiscBlocks;
 import com.brbiomesmod.item.custom.*;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;

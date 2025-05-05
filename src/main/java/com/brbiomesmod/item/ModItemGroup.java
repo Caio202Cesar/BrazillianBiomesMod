@@ -1,6 +1,8 @@
 package com.brbiomesmod.item;
 
-import com.brbiomesmod.block.BlockClasses.*;
+import com.brbiomesmod.block.PlantsGroup;
+import com.brbiomesmod.block.TreesGroup;
+import com.brbiomesmod.block.WoodGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 

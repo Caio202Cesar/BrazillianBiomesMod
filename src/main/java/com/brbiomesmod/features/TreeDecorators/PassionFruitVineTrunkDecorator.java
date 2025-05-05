@@ -1,6 +1,6 @@
 package com.brbiomesmod.features.TreeDecorators;
 
-import com.brbiomesmod.block.BlockClasses.PlantsGroup;
+import com.brbiomesmod.block.PlantsGroup;
 import com.brbiomesmod.block.PassionfruitVine;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;

@@ -1,7 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
-import com.brbiomesmod.block.BlockClasses.TreesGroup;
-import com.brbiomesmod.block.BlockClasses.WoodGroup;
+import com.brbiomesmod.block.TreesGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;

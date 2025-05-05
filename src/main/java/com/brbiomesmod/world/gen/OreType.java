@@ -1,6 +1,6 @@
 package com.brbiomesmod.world.gen;
 
-import com.brbiomesmod.block.BlockClasses.MiscBlocks;
+import com.brbiomesmod.block.MiscBlocks;
 import net.minecraft.block.Block;
 import net.minecraftforge.common.util.Lazy;
 

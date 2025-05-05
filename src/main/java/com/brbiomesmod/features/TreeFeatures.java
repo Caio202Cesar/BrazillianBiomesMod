@@ -1,7 +1,7 @@
 package com.brbiomesmod.features;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.BlockClasses.*;
+import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.FoliagePlacers.*;
 import com.brbiomesmod.features.TreeDecorators.DutchmanPipeVineDecorator;
 import com.brbiomesmod.features.TreeDecorators.PassionFruitVineLeavesDecorator;

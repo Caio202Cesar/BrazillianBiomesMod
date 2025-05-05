@@ -1,7 +1,7 @@
 package com.brbiomesmod.world.biomes.Util;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.BlockClasses.MiscBlocks;
+import com.brbiomesmod.block.MiscBlocks;
 import net.minecraft.block.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.WorldGenRegistries;
