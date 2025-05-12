@@ -85,10 +85,12 @@ public class PlantsGroup {
     public static final RegistryObject<Block> TILLANDSIA_STRICTA = registerBlock("tillandsia_stricta",
             EpiphytePlant::new);
 
+
     public static final RegistryObject<Block> TURK_TURBAN_CACTUS = registerBlock("turk_turban_cactus",
             CactusPlant::new);
     public static final RegistryObject<Block> TURK_TURBAN_FRUITING_CACTUS = registerBlock("turk_turban_fruiting_cactus",
             FruitingCactusPlant::new);
+
 
     public static final RegistryObject<Block> CNIDOSCOLUS_URENS = registerBlock("bull_nettle",
             BullNettlePlant::new);
@@ -102,6 +104,8 @@ public class PlantsGroup {
     public static final RegistryObject<Block> POTTED_CNIDOSCOLUS_URENS_FRUITING = BLOCKS.register("potted_bull_nettle_fruiting",
             () -> new FlowerPotBlock(PlantsGroup.CNIDOSCOLUS_URENS_FRUITING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
+
+
 
     public static final RegistryObject<Block> CATTLEYA_PURPURATA = registerBlock("cattleya_purpurata",
             () -> new FlowerBlock(Effects.JUMP_BOOST, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)));

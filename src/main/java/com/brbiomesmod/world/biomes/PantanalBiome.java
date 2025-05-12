@@ -60,6 +60,7 @@ public class PantanalBiome {
         ModDefaultBiomeFeatures.withSavannaTrumpetTrees(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withWetlandSeaGrass(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PANTANAL_VEGETATION);
 

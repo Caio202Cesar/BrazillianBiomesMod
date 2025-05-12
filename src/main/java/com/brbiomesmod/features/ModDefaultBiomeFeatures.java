@@ -143,4 +143,7 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withBalsaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BALSA_TREES);
     }
+    public static void withWetlandSeaGrass(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.SEAGRASS_SWAMP);
+    }
 }
