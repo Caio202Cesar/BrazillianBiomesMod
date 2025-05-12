@@ -375,6 +375,18 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PITANGA_BUSH = register("pitanga_bush",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUGENIA_LOG),
+                    new SimpleBlockStateProvider(States.PITANGA_LEAVES),
+                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
+                    new StraightTrunkPlacer(1, 0, 0),
+                    new TwoLayerFeature(0, 0, 0))).setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_PITANGA_BUSH = register("black_pitanga_bush",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUGENIA_LOG),
+                    new SimpleBlockStateProvider(States.BLACK_PITANGA_LEAVES),
+                    new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
+                    new StraightTrunkPlacer(1, 0, 0),
+                    new TwoLayerFeature(0, 0, 0))).setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
 
     //Sharinga Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SHARINGA_TREE = register("sharinga_tree",
