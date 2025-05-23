@@ -815,16 +815,16 @@ public class TreesGroup {
     public static final RegistryObject<Block> PEQUI_LOG = registerBlock("pequi_log",
             ModLogs::new);
     public static final RegistryObject<Block> PEQUI_LEAVES = registerBlock("pequi_leaves",
-            () -> new JenipapoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new PequiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PEQUI_FLOWERING_LEAVES));
     public static final RegistryObject<Block> PEQUI_FLOWERING_LEAVES = registerBlock("pequi_flowering_leaves",
-            () -> new JenipapoFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new PequiFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PEQUI_FRUITING_LEAVES));
     public static final RegistryObject<Block> PEQUI_FRUITING_LEAVES = registerBlock("pequi_fruiting_leaves",
-            () -> new JenipapoFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new PequiFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PEQUI_LEAVES));
     public static final RegistryObject<Block> PEQUI_SAPLING = registerBlock("pequi_sapling",
-            JenipapoSapling::new);
+            PequiSapling::new);
 
 
     public static final RegistryObject<Block> PURPLEHEART_LOG = registerBlock("purpleheart_log",
