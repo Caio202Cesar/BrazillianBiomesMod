@@ -37,7 +37,7 @@ public class PassionfruitVine extends VineBlock {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         super.randomTick(state, worldIn, pos, random);
 
-        double chance = 0.07;
+        double chance = 0.001;
 
         if (random.nextDouble() < chance) {
             BlockState currentState = state;

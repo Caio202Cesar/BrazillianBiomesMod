@@ -49,7 +49,7 @@ public class PassionfruitFruitingVine extends VineBlock {
 
         worldIn.addEntity(itemEntity);
 
-        double chance = 0.02;
+        double chance = 0.002;
 
         if (random.nextDouble() < chance) {
 
