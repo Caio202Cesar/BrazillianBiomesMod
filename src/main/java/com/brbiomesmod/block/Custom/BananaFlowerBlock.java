@@ -38,7 +38,7 @@ public class BananaFlowerBlock extends Block {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         super.randomTick(state, worldIn, pos, random);
 
-        double chance = 0.00145f;
+        double chance = 0.00015f;
 
         if (random.nextDouble() < chance) {
             worldIn.setBlockState(pos, TreesGroup.BANANA_BUNCH.get().getDefaultState());

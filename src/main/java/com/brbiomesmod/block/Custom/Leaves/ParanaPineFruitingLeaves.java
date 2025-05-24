@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
+import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
@@ -41,7 +42,9 @@ public class ParanaPineFruitingLeaves extends LeavesBlock implements IForgeShear
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(75) == 0) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
+
+        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
             int dropCount = 2 + random.nextInt(3);
 

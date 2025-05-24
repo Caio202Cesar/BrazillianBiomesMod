@@ -36,7 +36,9 @@ public class ParanaPineLeaves extends LeavesBlock implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(75) == 0) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
+
+        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(45) == 0) {
 
         int distance = state.get(LeavesBlock.DISTANCE);
         boolean persistent = state.get(LeavesBlock.PERSISTENT);
