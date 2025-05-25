@@ -155,6 +155,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.COOKED_BANANA_FLOWER)));
     public static final RegistryObject<Item> BUTIA_FRUITS = ITEMS.register("butia_fruits",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BUTIA)));
+    public static final RegistryObject<Item> JENIPAPO = ITEMS.register("jenipapo",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.JENIPAPO)));
 
     //Materials
     public static final RegistryObject<Item> BRAZILNUT_SHELL = ITEMS.register("brazilnut_shell",
