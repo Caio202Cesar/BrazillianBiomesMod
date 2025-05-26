@@ -15,7 +15,6 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.ToolType;
 
 public class VitoriaRegiaBlock extends LilyPadBlock {
-
     public VitoriaRegiaBlock() {
         super(FlowerBlock.Properties.from(Blocks.LILY_PAD).tickRandomly().doesNotBlockMovement().notSolid()
                 .zeroHardnessAndResistance().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
