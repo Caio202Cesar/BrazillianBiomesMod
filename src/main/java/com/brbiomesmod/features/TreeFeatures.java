@@ -79,6 +79,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new JellyPalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(6, 4, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> TALL_JELLY_PALM = register("tall_jelly_palm",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JELLY_PALM_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.JELLY_PALM_LEAVES),
+                    new JellyPalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(10, 4, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
 
     //Carnauba Palm
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CARNAUBA_PALM = register("carnauba_palm",
@@ -904,6 +910,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(QUEEN_PALM.withChance(0.2F)),
                     JELLY_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
+
+    public static final ConfiguredFeature<?, ?> BUTIA_SAVANNA_VEGETATION = register("butia_savanna_vegetation",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(TALL_JELLY_PALM.withChance(0.5F)),
+                    JELLY_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
 
     //Add pupunha too
     public static final ConfiguredFeature<?, ?> VARZEA_PALMS = register("varzea_palms",

@@ -63,6 +63,8 @@ public class PantanalBiome {
         ModDefaultBiomeFeatures.withWetlandSeaGrass(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PANTANAL_VEGETATION);
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
+
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.SWAMP).depth(depth).scale(scale)
                 .temperature(0.9F).downfall(0.7F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4757429)
