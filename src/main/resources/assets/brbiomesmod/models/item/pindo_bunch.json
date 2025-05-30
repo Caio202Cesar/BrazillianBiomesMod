@@ -1,3 +1,6 @@
 {
-  "parent": "brbiomesmod:block/pindo_bunch"
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/pindo_bunch"
+  }
 }
