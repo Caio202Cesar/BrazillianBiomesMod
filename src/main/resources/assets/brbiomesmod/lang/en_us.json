@@ -78,7 +78,8 @@
   "item.brbiomesmod.guarana_soda": "Guarana Soda",
   "item.brbiomesmod.buriti": "Buriti",
   "item.brbiomesmod.banana": "Banana",
-
+  "item.brbiomesmod.cooked_banana_flower": "Cooked Banana Flower",
+  "item.brbiomesmod.butia_fruits": "Butia Fruits",
 
   "block.brbiomesmod.acai_bunch": "Acai Bunch",
   "block.brbiomesmod.algarrobillo_fence": "Algarrobillo Fence",
@@ -484,6 +485,7 @@
   "block.brbiomesmod.carnauba_leaves": "Carnauba Leaves",
   "block.brbiomesmod.carnauba_sapling": "Carnauba Sapling",
   "block.brbiomesmod.carnauba_log": "Carnauba Log",
+  "block.brbiomesmod.velozia_plant": "Velozia Plant",
 
   "itemGroup.BRBCaatingaTab": "BRB: Caatinga",
   "itemGroup.BRBAtlanticForestTab": "BRB: Atlantic Forest",
