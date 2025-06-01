@@ -210,7 +210,6 @@
   "block.brbiomesmod.cashew_planks": "Cashew Planks",
   "block.brbiomesmod.cashew_stairs": "Cashew Stairs",
   "block.brbiomesmod.cashew_sapling": "Cashew Sapling",
-  "block.brbiomesmod.cashew_stripped_log": "Cashew Stripped Log",
   "block.brbiomesmod.cashew_wood": "Cashew Wood",
   "block.brbiomesmod.cashew_slab": "Cashew Slab",
   "block.brbiomesmod.cassava_plant": "Cassava Plant",
@@ -485,17 +484,17 @@
   "block.brbiomesmod.carnauba_log": "Carnauba Log",
   "block.brbiomesmod.velozia_plant": "Velozia Plant",
 
-  "itemGroup.BRBCaatingaTab": "BRB: Caatinga",
-  "itemGroup.BRBAtlanticForestTab": "BRB: Atlantic Forest",
-  "itemGroup.BRBAraucariaPlateauTab": "BRB: Araucaria Plateau",
-  "itemGroup.BRBAmazonRainforestTab": "BRB: Amazon Rainforest",
-  "itemGroup.BRBRestingaTab": "BRB: Restinga",
-  "itemGroup.BRBCerradoSavannaTab": "BRB: Cerrado",
-  "itemGroup.BRBPampasTab": "BRB: Pampas",
+  "biome.brbiomesmod.": "Caatinga",
+  "biome.brbiomesmod.BRBAtlanticForestTab": "Mata Atlântica",
+  "biome.brbiomesmod.BRBAraucariaPlateauTab": "Mata de Araucária",
+  "biome.brbiomesmod.BRBAmazonRainforestTab": "Floresta Amazônica",
+  "biome.brbiomesmod.BRBRestingaTab": "Restinga",
+  "biome.brbiomesmod.BRBCerradoSavannaTab": "Cerrado",
+  "biome.brbiomesmod.BRBPampasTab": "Pampas",
 
-  "biome.brbiomesmod.BrazilianBiomes:Food": "Brazilian Biomes: Food",
-  "biome.brbiomesmod.BrazilianBiomes:Plants": "Brazilian Biomes: Plants",
-  "biome.brbiomesmod.BrazilianBiomes:Woods": "Brazilian Biomes: Wood",
-  "biome.brbiomesmod.BrazilianBiomes:Trees": "Brazilian Biomes: Trees",
-  "biome.brbiomesmod.BrazilianBiomes:Miscellaneous": "Brazilian Biomes: Miscellaneous"
+  "itemGroup.brbiomesmod.BrazilianBiomes:Food": "Brazilian Biomes: Food",
+  "itemGroup.brbiomesmod.BrazilianBiomes:Plants": "Brazilian Biomes: Plants",
+  "itemGroup.brbiomesmod.BrazilianBiomes:Woods": "Brazilian Biomes: Wood",
+  "itemGroup.brbiomesmod.BrazilianBiomes:Trees": "Brazilian Biomes: Trees",
+  "itemGroup..brbiomesmod.BrazilianBiomes:Miscellaneous": "Brazilian Biomes: Miscellaneous"
 }
