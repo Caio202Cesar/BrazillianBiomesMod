@@ -774,7 +774,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> JENIPAPO_LOG = registerBlock("jenipapo_log",
+    /*public static final RegistryObject<Block> JENIPAPO_LOG = registerBlock("jenipapo_log",
             ModLogs::new);
     public static final RegistryObject<Block> JENIPAPO_LEAVES = registerBlock("jenipapo_leaves",
             () -> new JenipapoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -845,7 +845,7 @@ public class TreesGroup {
             ModLeaves::new);
     public static final RegistryObject<Block> SANDBOX_TREE_SAPLING = registerBlock("sandbox_tree_sapling",
             SandboxTreeSapling::new);
-
+*/
 
     public static final RegistryObject<Block> BANANA_LOG = registerBlock("banana_log",
             PalmitoLog::new);
