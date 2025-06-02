@@ -113,7 +113,7 @@ public class ModItems {
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
                     .food(ModFoods.BURITI_JUICE)));
     public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BANANA)));
+            () -> new ExoticItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BANANA)));
     public static final RegistryObject<Item> PINK_PEEPER = ITEMS.register("pink_peeper",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PINK_PEPPER)));
     public static final RegistryObject<Item> PINEAPPLE_GUAVA = ITEMS.register("pineapple_guava",
@@ -180,7 +180,7 @@ public class ModItems {
     public static final RegistryObject<Item> CALABASH_SEEDS = ITEMS.register("calabash_seeds",
             () -> new BlockItem(MiscBlocks.CALABASH_CROP.get(), new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> CALABASH = ITEMS.register("calabash",
-            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
+            () -> new ExoticItem(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> MATE_CUP = ITEMS.register("mate_cup",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> DRIED_CARNAUBA_LEAVES = ITEMS.register("dried_carnauba_leaves",
