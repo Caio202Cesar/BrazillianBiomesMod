@@ -64,6 +64,7 @@ public class BrazillianBiomesMod {
         RestingaBeachBiome.register(eventBus);
         AmazonVarzeaForestBiome.register(eventBus);
         ButiaPampasBiome.register(eventBus);
+        PampasCoastalFields.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
