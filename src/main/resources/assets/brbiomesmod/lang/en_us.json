@@ -484,17 +484,21 @@
   "block.brbiomesmod.carnauba_log": "Carnauba Log",
   "block.brbiomesmod.velozia_plant": "Velozia Plant",
 
-  "biome.brbiomesmod.": "Caatinga",
-  "biome.brbiomesmod.BRBAtlanticForestTab": "Mata Atlântica",
-  "biome.brbiomesmod.BRBAraucariaPlateauTab": "Mata de Araucária",
-  "biome.brbiomesmod.BRBAmazonRainforestTab": "Floresta Amazônica",
-  "biome.brbiomesmod.BRBRestingaTab": "Restinga",
-  "biome.brbiomesmod.BRBCerradoSavannaTab": "Cerrado",
-  "biome.brbiomesmod.BRBPampasTab": "Pampas",
+  "biome.brbiomesmod.caatinga_shrubland": "Caatinga Xeric Shrubland",
+  "biome.brbiomesmod.atlantic_forest": "Atlantic Forest",
+  "biome.brbiomesmod.araucaria_plateau": "Araucaria Plateau",
+  "biome.brbiomesmod.cerrado": "Cerrado",
+  "biome.brbiomesmod.dunas_restinga": "Dunas Restinga",
+  "biome.brbiomesmod.pampas": "Pampas",
+  "biome.brbiomesmod.pantanal": "Pantanal",
+  "biome.brbiomesmod.restinga_beach": "Beach of Restinga",
+  "biome.brbiomesmod.amazon_rainforest": "Amazon Rainforest",
+  "biome.brbiomesmod.amazon_varzea_forest": "Amazon Rainforest Varzea",
+  "biome.brbiomesmod.butia_pampas": "Pampas' Butia Savanna",
 
   "itemGroup.brbiomesmod.BrazilianBiomes:Food": "Brazilian Biomes: Food",
   "itemGroup.brbiomesmod.BrazilianBiomes:Plants": "Brazilian Biomes: Plants",
   "itemGroup.brbiomesmod.BrazilianBiomes:Woods": "Brazilian Biomes: Wood",
   "itemGroup.brbiomesmod.BrazilianBiomes:Trees": "Brazilian Biomes: Trees",
-  "itemGroup..brbiomesmod.BrazilianBiomes:Miscellaneous": "Brazilian Biomes: Miscellaneous"
+  "itemGroup.brbiomesmod.BrazilianBiomes:Miscellaneous": "Brazilian Biomes: Miscellaneous"
 }

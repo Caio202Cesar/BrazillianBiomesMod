@@ -484,18 +484,22 @@
   "block.brbiomesmod.carnauba_log": "Tronco de carnaúba",
   "block.brbiomesmod.velozia_plant": "Canela-de-ema",
 
-  "biome.brbiomesmod.BRBCaatingaTab": "Caatinga",
-  "biome.brbiomesmod.BRBAtlanticForestTab": "Mata Atlântica",
-  "biome.brbiomesmod.BRBAraucariaPlateauTab": "Mata de Araucária",
-  "biome.brbiomesmod.BRBAmazonRainforestTab": "Floresta Amazônica",
-  "biome.brbiomesmod.BRBRestingaTab": "Restinga",
-  "biome.brbiomesmod.BRBCerradoSavannaTab": "Cerrado",
-  "biome.brbiomesmod.BRBPampasTab": "Pampas",
+  "biome.brbiomesmod.caatinga_shrubland": "Caatinga",
+  "biome.brbiomesmod.atlantic_forest": "Mata Atlântica",
+  "biome.brbiomesmod.araucaria_plateau": "Mata de Araucarias",
+  "biome.brbiomesmod.cerrado": "Floresta Amazônica",
+  "biome.brbiomesmod.dunas_restinga": "Restinga das Dunas",
+  "biome.brbiomesmod.pampas": "Pampas",
+  "biome.brbiomesmod.pantanal": "Pantanal",
+  "biome.brbiomesmod.restinga_beach": "Praia da Restinga",
+  "biome.brbiomesmod.amazon_rainforest": "Floresta Amazônica",
+  "biome.brbiomesmod.amazon_varzea_forest": "Várzea Amazônica",
+  "biome.brbiomesmod.butia_pampas": "Pampas",
 
-  "biome.brbiomesmod.BrazilianBiomes:Food": "Biomas brasileiros: comida",
-  "biome.brbiomesmod.BrazilianBiomes:Plants": "Biomas brasileiros: plantas",
-  "biome.brbiomesmod.BrazilianBiomes:Woods": "Biomas brasileiros: madeira",
-  "biome.brbiomesmod.BrazilianBiomes:Trees": "Biomas brasileiros: árvores",
-  "biome.brbiomesmod.BrazilianBiomes:Miscellaneous": "Biomas brasileiros: diversos"
+  "itemGroup.brbiomesmod.BrazilianBiomes:Food": "Biomas brasileiros: comida",
+  "itemGroup.brbiomesmod.BrazilianBiomes:Plants": "Biomas brasileiros: plantas",
+  "itemGroup.brbiomesmod.BrazilianBiomes:Woods": "Biomas brasileiros: madeira",
+  "itemGroup.brbiomesmod.BrazilianBiomes:Trees": "Biomas brasileiros: árvores",
+  "itemGroup.brbiomesmod.BrazilianBiomes:Miscellaneous": "Biomas brasileiros: diversos"
 
 }
