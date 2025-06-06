@@ -86,7 +86,10 @@
     "brbiomesmod:acai_leaves",
     "brbiomesmod:queen_palm_leaves",
     "brbiomesmod:jelly_palm_leaves",
-    "brbiomesmod:buriti_leaves"
-
+    "brbiomesmod:buriti_leaves",
+    "brbiomesmod:xaxim_leaves",
+    "brbiomesmod:jenipapo_leaves",
+    "brbiomesmod:jenipapo_flowering_leaves",
+    "brbiomesmod:jenipapo_fruiting_leaves"
   ]
 }

@@ -737,7 +737,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
                     new SimpleBlockStateProvider(States.JENIPAPO_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
+                    new StraightTrunkPlacer(5, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setIgnoreVines().build()));
 

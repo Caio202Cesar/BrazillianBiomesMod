@@ -96,5 +96,6 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         AcaiSapling.registerRenderLayer();
         JussaraSapling.registerRenderLayer();
         XaximSapling.registerRenderLayer();
+        JenipapoSapling.registerRenderLayer();
     }
 }
