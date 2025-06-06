@@ -732,6 +732,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Cocoa Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JENIPAPO_TREE = register("jenipapo_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
+                    new SimpleBlockStateProvider(States.JENIPAPO_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setIgnoreVines().build()));
 
     public static final class States {
 
@@ -740,6 +748,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState XAXIM_LOG = TreesGroup.XAXIM_LOG.get().getDefaultState();
         protected static final BlockState XAXIM_LEAVES = TreesGroup.XAXIM_LEAVES.get().getDefaultState();
+
+        protected static final BlockState JENIPAPO_LEAVES = TreesGroup.JENIPAPO_LEAVES.get().getDefaultState();
 
         protected static final BlockState BURITI_LEAVES = TreesGroup.BURITI_LEAVES.get().getDefaultState();
         protected static final BlockState BURITI_LOG = TreesGroup.BURITI_LOG.get().getDefaultState();

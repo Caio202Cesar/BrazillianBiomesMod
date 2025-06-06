@@ -774,8 +774,6 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    /*public static final RegistryObject<Block> JENIPAPO_LOG = registerBlock("jenipapo_log",
-            ModLogs::new);
     public static final RegistryObject<Block> JENIPAPO_LEAVES = registerBlock("jenipapo_leaves",
             () -> new JenipapoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.JENIPAPO_FLOWERING_LEAVES));
@@ -788,7 +786,7 @@ public class TreesGroup {
     public static final RegistryObject<Block> JENIPAPO_SAPLING = registerBlock("jenipapo_sapling",
             JenipapoSapling::new);
 
-
+    /*
     public static final RegistryObject<Block> YELLOW_MOMBIN_LOG = registerBlock("yellow_mombin_log",
             ModLogs::new);
     public static final RegistryObject<Block> YELLOW_MOMBIN_LEAVES = registerBlock("yellow_mombin_leaves",

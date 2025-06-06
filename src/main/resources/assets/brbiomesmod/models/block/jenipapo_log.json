@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "brbiomesmod:block/jenipapo_log_middle",
-    "side": "brbiomesmod:block/jenipapo_bark"
-  }
-}
