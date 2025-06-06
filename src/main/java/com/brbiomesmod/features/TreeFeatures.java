@@ -732,7 +732,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
-    //Cocoa Tree
+    //Jenipapo Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JENIPAPO_TREE = register("jenipapo_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
                     new SimpleBlockStateProvider(States.JENIPAPO_LEAVES),
@@ -741,10 +741,22 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(1, 0, 1)))
                     .setIgnoreVines().build()));
 
+    //Guapuruvu
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GUAPURUVU_TREE = register("guapuruvu_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.GUAPURUVU_LOG),
+                    new SimpleBlockStateProvider(States.GUAPURUVU_LEAVES),
+                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(15, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
+
     public static final class States {
 
         protected static final BlockState KAPOK_LOG = TreesGroup.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = TreesGroup.KAPOK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState GUAPURUVU_LOG = TreesGroup.GUAPURUVU_LOG.get().getDefaultState();
+        protected static final BlockState GUAPURUVU_LEAVES = TreesGroup.GUAPURUVU_LEAVES.get().getDefaultState();
 
         protected static final BlockState XAXIM_LOG = TreesGroup.XAXIM_LOG.get().getDefaultState();
         protected static final BlockState XAXIM_LEAVES = TreesGroup.XAXIM_LEAVES.get().getDefaultState();

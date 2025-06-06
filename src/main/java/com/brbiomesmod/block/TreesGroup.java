@@ -786,6 +786,34 @@ public class TreesGroup {
     public static final RegistryObject<Block> JENIPAPO_SAPLING = registerBlock("jenipapo_sapling",
             JenipapoSapling::new);
 
+
+    public static final RegistryObject<Block> PURPLEHEART_LOG = registerBlock("purpleheart_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PURPLEHEART_LEAVES = registerBlock("purpleheart_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PURPLEHEART_SAPLING = registerBlock("purpleheart_sapling",
+            PurpleheartSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PURPLEHEART_SAPLING = BLOCKS.register("potted_purpleheart_sapling",
+            () -> new FlowerPotBlock(TreesGroup.PURPLEHEART_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+
+    public static final RegistryObject<Block> CANNONBALL_TREE_LOG = registerBlock("cannonball_tree_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CANNONBALL_TREE_LEAVES = registerBlock("cannonball_tree_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CANNONBALL_TREE_SAPLING = registerBlock("cannonball_tree_sapling",
+            CannonballTreeSapling::new);
+
+
+    public static final RegistryObject<Block> GUAPURUVU_LOG = registerBlock("guapuruvu_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> GUAPURUVU_LEAVES = registerBlock("guapuruvu_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> GUAPURUVU_SAPLING = registerBlock("guapuruvu_sapling",
+            GuapuruvuSapling::new);
+
     /*
     public static final RegistryObject<Block> YELLOW_MOMBIN_LOG = registerBlock("yellow_mombin_log",
             ModLogs::new);
@@ -824,17 +852,6 @@ public class TreesGroup {
     public static final RegistryObject<Block> PEQUI_SAPLING = registerBlock("pequi_sapling",
             PequiSapling::new);
 
-
-    public static final RegistryObject<Block> PURPLEHEART_LOG = registerBlock("purpleheart_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> PURPLEHEART_LEAVES = registerBlock("purpleheart_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> PURPLEHEART_SAPLING = registerBlock("purpleheart_sapling",
-            PurpleheartSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_PURPLEHEART_SAPLING = BLOCKS.register("potted_purpleheart_sapling",
-            () -> new FlowerPotBlock(TreeBlocks.PURPLEHEART_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
     //Varzea Plant
     public static final RegistryObject<Block> SANDBOX_TREE_LOG = registerBlock("sandbox_tree_log",
