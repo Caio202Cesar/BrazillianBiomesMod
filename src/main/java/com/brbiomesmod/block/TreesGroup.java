@@ -830,14 +830,6 @@ public class TreesGroup {
             JenipapoSapling::new);
 
 
-    public static final RegistryObject<Block> GUAPURUVU_LOG = registerBlock("guapuruvu_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> GUAPURUVU_LEAVES = registerBlock("guapuruvu_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> GUAPURUVU_SAPLING = registerBlock("guapuruvu_sapling",
-            SombreiroSapling::new);
-
-
     public static final RegistryObject<Block> PEQUI_LOG = registerBlock("pequi_log",
             ModLogs::new);
     public static final RegistryObject<Block> PEQUI_LEAVES = registerBlock("pequi_leaves",
