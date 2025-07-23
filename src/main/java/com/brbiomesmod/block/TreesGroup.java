@@ -806,7 +806,7 @@ public class TreesGroup {
     public static final RegistryObject<Block> GUAPURUVU_SAPLING = registerBlock("guapuruvu_sapling",
             GuapuruvuSapling::new);
 
-    /*
+
     public static final RegistryObject<Block> YELLOW_MOMBIN_LOG = registerBlock("yellow_mombin_log",
             ModLogs::new);
     public static final RegistryObject<Block> YELLOW_MOMBIN_LEAVES = registerBlock("yellow_mombin_leaves",

@@ -757,11 +757,22 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new MegaJungleTrunkPlacer(10, 2, 19),
                     new TwoLayerFeature(1, 1, 2))).build()));
 
+    //Pequi Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PEQUI_TREE = register("pequi_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PEQUI_LOG),
+                    new SimpleBlockStateProvider(States.PEQUI_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new ForkyTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
 
     public static final class States {
 
         protected static final BlockState KAPOK_LOG = TreesGroup.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = TreesGroup.KAPOK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState PEQUI_LOG = TreesGroup.PEQUI_LOG.get().getDefaultState();
+        protected static final BlockState PEQUI_LEAVES = TreesGroup.PEQUI_LEAVES.get().getDefaultState();
 
         protected static final BlockState PURPLEHEART_LOG = TreesGroup.PURPLEHEART_LOG.get().getDefaultState();
         protected static final BlockState PURPLEHEART_LEAVES = TreesGroup.PURPLEHEART_LEAVES.get().getDefaultState();
