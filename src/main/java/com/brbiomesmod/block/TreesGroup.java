@@ -799,14 +799,6 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> CANNONBALL_TREE_LOG = registerBlock("cannonball_tree_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CANNONBALL_TREE_LEAVES = registerBlock("cannonball_tree_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> CANNONBALL_TREE_SAPLING = registerBlock("cannonball_tree_sapling",
-            CannonballTreeSapling::new);
-
-
     public static final RegistryObject<Block> GUAPURUVU_LOG = registerBlock("guapuruvu_log",
             ModLogs::new);
     public static final RegistryObject<Block> GUAPURUVU_LEAVES = registerBlock("guapuruvu_leaves",
@@ -828,6 +820,14 @@ public class TreesGroup {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.YELLOW_MOMBIN_LEAVES));
     public static final RegistryObject<Block> YELLOW_MOMBIN_SAPLING = registerBlock("yellow_mombin_sapling",
             JenipapoSapling::new);
+
+
+    public static final RegistryObject<Block> CANNONBALL_TREE_LOG = registerBlock("cannonball_tree_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CANNONBALL_TREE_LEAVES = registerBlock("cannonball_tree_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CANNONBALL_TREE_SAPLING = registerBlock("cannonball_tree_sapling",
+            CannonballTreeSapling::new);
 
 
     public static final RegistryObject<Block> PEQUI_LOG = registerBlock("pequi_log",

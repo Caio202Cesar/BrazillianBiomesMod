@@ -749,11 +749,22 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(17, 3, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Purpleheart
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLEHEART_TREE = register("purpleheart_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PURPLEHEART_LOG),
+                    new SimpleBlockStateProvider(States.PURPLEHEART_LEAVES),
+                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
+                    new MegaJungleTrunkPlacer(10, 2, 19),
+                    new TwoLayerFeature(1, 1, 2))).build()));
+
 
     public static final class States {
 
         protected static final BlockState KAPOK_LOG = TreesGroup.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = TreesGroup.KAPOK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState PURPLEHEART_LOG = TreesGroup.PURPLEHEART_LOG.get().getDefaultState();
+        protected static final BlockState PURPLEHEART_LEAVES = TreesGroup.PURPLEHEART_LEAVES.get().getDefaultState();
 
         protected static final BlockState GUAPURUVU_LOG = TreesGroup.GUAPURUVU_LOG.get().getDefaultState();
         protected static final BlockState GUAPURUVU_LEAVES = TreesGroup.GUAPURUVU_LEAVES.get().getDefaultState();
