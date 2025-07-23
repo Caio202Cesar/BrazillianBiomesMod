@@ -852,7 +852,7 @@ public class TreesGroup {
             ModLeaves::new);
     public static final RegistryObject<Block> SANDBOX_TREE_SAPLING = registerBlock("sandbox_tree_sapling",
             SandboxTreeSapling::new);
-*/
+
 
     public static final RegistryObject<Block> BANANA_LOG = registerBlock("banana_log",
             PalmitoLog::new);
