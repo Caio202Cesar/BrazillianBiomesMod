@@ -18,8 +18,6 @@ import net.minecraft.world.World;
 
 import java.util.logging.Level;
 
-import static sun.audio.AudioPlayer.player;
-
 public class BeverageItem extends Item {
     public BeverageItem(Item.Properties builder) {
         super(builder);
