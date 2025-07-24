@@ -765,6 +765,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new ForkyTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Yellow Mombin tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOW_MOMBIN_TREE = register("yellow_mombin_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.YELLOW_MOMBIN_LOG),
+                    new SimpleBlockStateProvider(States.YELLOW_MOMBIN_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
 
     public static final class States {
 
@@ -773,6 +781,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState PEQUI_LOG = TreesGroup.PEQUI_LOG.get().getDefaultState();
         protected static final BlockState PEQUI_LEAVES = TreesGroup.PEQUI_LEAVES.get().getDefaultState();
+
+        protected static final BlockState YELLOW_MOMBIN_LOG = TreesGroup.YELLOW_MOMBIN_LOG.get().getDefaultState();
+        protected static final BlockState YELLOW_MOMBIN_LEAVES = TreesGroup.YELLOW_MOMBIN_LEAVES.get().getDefaultState();
 
         protected static final BlockState PURPLEHEART_LOG = TreesGroup.PURPLEHEART_LOG.get().getDefaultState();
         protected static final BlockState PURPLEHEART_LEAVES = TreesGroup.PURPLEHEART_LEAVES.get().getDefaultState();
@@ -1105,9 +1116,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             .configure(new AtSurfaceWithExtraConfig(12, 0.0F, 1))));
 
     public static final ConfiguredFeature<?, ?> CERRADO_FRUIT_TREES = register("cerrado_fruit_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.2F),
-                            CAGAITA_TREE.withChance(0.2F)), WOLF_APPLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.1985F),
+                            CAGAITA_TREE.withChance(0.1895F), PEQUI_TREE.withChance(0.3F)), WOLF_APPLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.3F, 2))));
 
     public static final ConfiguredFeature<?, ?> CERRADO_PALM_TREES = register("cerrado_palm_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(QUEEN_PALM.withChance(0.5F)),
