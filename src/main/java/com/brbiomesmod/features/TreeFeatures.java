@@ -773,11 +773,23 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    //Sandbox Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SANDBOX_TREE = register("sandbox_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SANDBOX_TREE_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.SANDBOX_TREE_LEAVES),
+                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new MegaJungleTrunkPlacer(10, 18, 4),
+                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
+                    TrunkVineTreeDecorator.INSTANCE, LeaveVineTreeDecorator.field_236871_b_)).setIgnoreVines().build()));
+
 
     public static final class States {
 
         protected static final BlockState KAPOK_LOG = TreesGroup.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = TreesGroup.KAPOK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState SANDBOX_TREE_LOG = TreesGroup.SANDBOX_TREE_LOG.get().getDefaultState();
+        protected static final BlockState SANDBOX_TREE_LEAVES = TreesGroup.SANDBOX_TREE_LEAVES.get().getDefaultState();
 
         protected static final BlockState PEQUI_LOG = TreesGroup.PEQUI_LOG.get().getDefaultState();
         protected static final BlockState PEQUI_LEAVES = TreesGroup.PEQUI_LEAVES.get().getDefaultState();
@@ -952,9 +964,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Copaiba, Sandbox tree, Andiroba
     public static final ConfiguredFeature<?, ?> VARZEA_TREES = register("varzea_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.6F)),
-                            KAPOK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 0))));
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.09F),
+                            SANDBOX_TREE.withChance(0.3F)), KAPOK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 
     public static final ConfiguredFeature<?, ?> BRAZILNUT_TREES = register("brazilnut_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILNUT_TREE.withChance(0.5F)),

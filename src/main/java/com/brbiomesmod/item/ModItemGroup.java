@@ -45,6 +45,6 @@ public class ModItemGroup {
         @Override
         public ItemStack createIcon()
         {
-            return new ItemStack(ModItems.TOURMALINE_PARAIBA.get());
+            return new ItemStack(ModItems.BRAZILNUT_SHELL.get());
         }};
 }
