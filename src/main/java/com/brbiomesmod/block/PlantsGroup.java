@@ -1,26 +1,14 @@
 package com.brbiomesmod.block;
 
 import com.brbiomesmod.BrazillianBiomesMod;
+import com.brbiomesmod.block.Custom.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
-import com.brbiomesmod.block.Custom.OrchidPlant;
-import com.brbiomesmod.block.Custom.XaximPlant;
-import com.brbiomesmod.block.Custom.EpiphytePlant;
-import com.brbiomesmod.block.Custom.CassavaPlant;
-import com.brbiomesmod.block.Custom.AngelTrumpetPlant;
-import com.brbiomesmod.block.Custom.PassionfruitVine;
-import com.brbiomesmod.block.Custom.PassionfruitFruitingVine;
-import com.brbiomesmod.block.Custom.PassionfruitFloweringVine;
-import com.brbiomesmod.block.Custom.AristolochiaVine;
-import com.brbiomesmod.block.Custom.XananaFlower;
-import com.brbiomesmod.block.Custom.BeachFlower;
-import com.brbiomesmod.block.Custom.BullNettlePlant;
-import com.brbiomesmod.block.Custom.CactusPlant;
-import com.brbiomesmod.block.Custom.FruitingCactusPlant;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.potion.Effects;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -30,6 +18,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
+
+import static com.brbiomesmod.item.ModItems.ITEMS;
 
 public class PlantsGroup {
     public static List<Block> blocksList = new ArrayList<>();
@@ -228,6 +218,11 @@ public class PlantsGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    public static final RegistryObject<Block> VICTORIA_LILY_PAD = BLOCKS.register("victoria_lily_pad",
+            VictoriaLilyPadBlock::new);
+    public static final RegistryObject<Item> VICTORIA_LILY_PAD_ITEM = ITEMS.register("victoria_lily_pad",
+            () -> new BlockItem(VICTORIA_LILY_PAD.get(), new Item.Properties().group(ModItemGroup.PLANTS_GROUP)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -236,7 +231,7 @@ public class PlantsGroup {
     }
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+        ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().group(ModItemGroup.PLANTS_GROUP)));
     }
 
