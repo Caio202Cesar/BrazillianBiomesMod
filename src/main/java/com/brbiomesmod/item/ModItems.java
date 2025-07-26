@@ -4,6 +4,7 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.MiscBlocks;
 import com.brbiomesmod.item.custom.*;
 import net.minecraft.item.*;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -161,6 +162,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
     public static final RegistryObject<Item> COOKED_PEQUI = ITEMS.register("cooked_pequi_fruit",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+    public static final RegistryObject<Item> PITANGA_ICE_CREAM = ITEMS.register("pitanga_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
 
     //Materials
     public static final RegistryObject<Item> BRAZILNUT_SHELL = ITEMS.register("brazilnut_shell",
@@ -213,10 +216,18 @@ public class ModItems {
             () -> new HoeItem(ModItemTier.TOURMALINE, -3, 0.0F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
 
-
+    public static RegistryObject<Item> ICE_CREAM_CONE;
 
     public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
+        ResourceLocation coneId = new ResourceLocation("caiocesarbiomes", "ice_cream_cone");
+        if (ForgeRegistries.ITEMS.containsKey(coneId)) {
+            // Don't register your own, use the existing one
+            ICE_CREAM_CONE = RegistryObject.of(coneId, ForgeRegistries.ITEMS);
+        } else {
+            // Register your own
+            ICE_CREAM_CONE = ITEMS.register("ice_cream_cone", () ->
+                    new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            ITEMS.register(eventBus);
+        }
     }
-
 }

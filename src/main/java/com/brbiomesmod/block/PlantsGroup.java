@@ -218,12 +218,6 @@ public class PlantsGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> VICTORIA_LILY_PAD = BLOCKS.register("victoria_lily_pad",
-            VictoriaLilyPadBlock::new);
-    public static final RegistryObject<Item> VICTORIA_LILY_PAD_ITEM = ITEMS.register("victoria_lily_pad",
-            () -> new BlockItem(VICTORIA_LILY_PAD.get(), new Item.Properties().group(ModItemGroup.PLANTS_GROUP)));
-
-
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
