@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X X",
+    "X#X",
+    " X "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:wheat"
+    },
+    "#": {
+      "item": "minecraft:egg"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:ice_cream_cone",
+    "count": 8
+  }
+}
