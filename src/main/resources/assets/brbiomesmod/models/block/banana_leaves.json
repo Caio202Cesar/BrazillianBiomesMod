@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "brbiomesmod:block/banana_leaves",
-    "particle": "brbiomesmod:block/banana_leaves"
-  }
-}

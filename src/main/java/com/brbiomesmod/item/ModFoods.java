@@ -70,7 +70,6 @@ public class ModFoods extends Foods {
     public static final Food BURITI = (new Food.Builder()).hunger(2).saturation(0.3F).build();
     public static final Food ACAI_BERRIES = (new Food.Builder()).hunger(2).saturation(0.3F).build();
     public static final Food PALM_HEART = (new Food.Builder()).hunger(4).saturation(0.4F).build();
-    public static final Food BANANA = (new Food.Builder()).hunger(5).saturation(0.4F).build();
     public static final Food ACAI_BOWL = (new Food.Builder()).hunger(6).saturation(0.6F)
             .effect(new EffectInstance(Effects.SPEED, 2400, 0), 1.0F)
             .effect(new EffectInstance(Effects.JUMP_BOOST, 2400, 0), 1.0F).build();
@@ -80,7 +79,6 @@ public class ModFoods extends Foods {
     public static final Food ACAI_WITH_CUPUACU = (new Food.Builder()).hunger(6).saturation(0.6F)
             .effect(new EffectInstance(Effects.SPEED, 2400, 0), 1.0F)
             .effect(new EffectInstance(Effects.JUMP_BOOST, 2400, 0), 1.0F).build();
-    public static final Food COOKED_BANANA_FLOWER = (new Food.Builder()).hunger(5).saturation(0.6F).build();
     public static final Food BUTIA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food JENIPAPO = (new Food.Builder()).hunger(4).saturation(0.3F).build();
 

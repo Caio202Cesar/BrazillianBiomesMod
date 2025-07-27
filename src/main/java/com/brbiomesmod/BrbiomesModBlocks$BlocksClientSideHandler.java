@@ -32,9 +32,6 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         CalabashCropBlock.registerRenderLayer();
         AngelTrumpetPlant.registerRenderLayer();
         AcaiBunchBlock.registerRenderLayer();
-        BananaFlowerBlock.registerRenderLayer();
-        BananaBunchBlock.registerRenderLayer();
-        BananaStalkBlock.registerRenderLayer();
         BuritiBunchBlock.registerRenderLayer();
         PindoBunchBlock.registerRenderLayer();
 
@@ -92,7 +89,6 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         CarnaubaSapling.registerRenderLayer();
         BuritiSapling.registerRenderLayer();
         JellyPalmSapling.registerRenderLayer();
-        BananaSapling.registerRenderLayer();
         AcaiSapling.registerRenderLayer();
         JussaraSapling.registerRenderLayer();
         XaximSapling.registerRenderLayer();

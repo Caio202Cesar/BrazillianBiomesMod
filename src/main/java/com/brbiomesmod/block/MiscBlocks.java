@@ -26,12 +26,9 @@ public class MiscBlocks {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, BrazillianBiomesMod.MOD_ID);
 
-
     public static final RegistryObject<Block> CAATINGA_SAND = registerBlock("caatinga_sand",
             CaatingaSand::new);
 
-    public static final  RegistryObject<Block> CALABASH_CROP = BLOCKS.register("calabash_crop",
-            () -> new CalabashCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
     public static final  RegistryObject<Block> CASSAVA_CROP = BLOCKS.register("cassava_crop",
             () -> new CassavaCropBlock(AbstractBlock.Properties.from(Blocks.WHEAT).sound(SoundType.CROP)));
 

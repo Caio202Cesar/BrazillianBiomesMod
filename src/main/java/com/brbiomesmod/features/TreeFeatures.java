@@ -64,14 +64,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
                     DutchmanPipeVineDecorator.INSTANCE)).build()));
 
-    //Banana Palm
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BANANA_TREE = register("banana_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BANANA_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.BANANA_LEAVES),
-                    new BananaFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(7, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).build()));
-
     //Jelly Palm
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JELLY_PALM = register("jelly_palm",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JELLY_PALM_LOG),
@@ -817,9 +809,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState QUEEN_PALM_LOG = TreesGroup.QUEEN_PALM_LOG.get().getDefaultState();
         protected static final BlockState QUEEN_PALM_LEAVES = TreesGroup.QUEEN_PALM_LEAVES.get().getDefaultState();
-
-        protected static final BlockState BANANA_LOG = TreesGroup.BANANA_LOG.get().getDefaultState();
-        protected static final BlockState BANANA_LEAVES = TreesGroup.BANANA_LEAVES.get().getDefaultState();
 
         protected static final BlockState CARNAUBA_LOG = TreesGroup.CARNAUBA_LOG.get().getDefaultState();
         protected static final BlockState CARNAUBA_LEAVES = TreesGroup.CARNAUBA_LEAVES.get().getDefaultState();

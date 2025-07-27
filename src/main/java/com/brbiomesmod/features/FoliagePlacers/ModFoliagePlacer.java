@@ -30,10 +30,6 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("parana_pine_foliage_placer",
                     () -> new FoliagePlacerType<>(ParanaPineFoliagePlacer.CODEC));
 
-    public static final RegistryObject<FoliagePlacerType<BananaFoliagePlacer>> BANANA_FOLIAGE_PLACER =
-            FOLIAGE_PLACERS.register("banana_foliage_placer",
-                    () -> new FoliagePlacerType<>(BananaFoliagePlacer.CODEC));
-
     public static final RegistryObject<FoliagePlacerType<XaximFoliagePlacer>> XAXIM_FOLIAGE_PLACER =
             FOLIAGE_PLACERS.register("xaxim_foliage_placer",
                     () -> new FoliagePlacerType<>(XaximFoliagePlacer.CODEC));

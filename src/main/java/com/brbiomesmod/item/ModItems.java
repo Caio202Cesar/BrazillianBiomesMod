@@ -15,6 +15,8 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, BrazillianBiomesMod.MOD_ID);
 
+    //Fruits and Vegetables
+
     //Food
     public static final RegistryObject<Item> CASHEW_FRUIT = ITEMS.register("cashew_fruit",
             () -> new CashewFruit(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
@@ -113,8 +115,6 @@ public class ModItems {
     public static final RegistryObject<Item> BURITI_JUICE = ITEMS.register("buriti_juice",
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
                     .food(ModFoods.BURITI_JUICE)));
-    public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
-            () -> new ExoticItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BANANA)));
     public static final RegistryObject<Item> PINK_PEEPER = ITEMS.register("pink_peeper",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PINK_PEPPER)));
     public static final RegistryObject<Item> PINEAPPLE_GUAVA = ITEMS.register("pineapple_guava",
@@ -152,8 +152,6 @@ public class ModItems {
                     .food(ModFoods.MATE)));
     public static final RegistryObject<Item> BACURI_PASTE = ITEMS.register("bacuri_paste",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BACURI_PASTE)));
-    public static final RegistryObject<Item> COOKED_BANANA_FLOWER = ITEMS.register("cooked_banana_flower",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.COOKED_BANANA_FLOWER)));
     public static final RegistryObject<Item> BUTIA_FRUITS = ITEMS.register("butia_fruits",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BUTIA)));
     public static final RegistryObject<Item> JENIPAPO = ITEMS.register("jenipapo",
@@ -184,10 +182,6 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> CASSAVA_SEEDS = ITEMS.register("cassava_seeds",
             () -> new BlockItem(MiscBlocks.CASSAVA_CROP.get(), new Item.Properties().group(ModItemGroup.MISC_GROUP)));
-    public static final RegistryObject<Item> CALABASH_SEEDS = ITEMS.register("calabash_seeds",
-            () -> new BlockItem(MiscBlocks.CALABASH_CROP.get(), new Item.Properties().group(ModItemGroup.MISC_GROUP)));
-    public static final RegistryObject<Item> CALABASH = ITEMS.register("calabash",
-            () -> new ExoticItem(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> MATE_CUP = ITEMS.register("mate_cup",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> DRIED_CARNAUBA_LEAVES = ITEMS.register("dried_carnauba_leaves",
@@ -217,6 +211,8 @@ public class ModItems {
                     new Item.Properties().group(ItemGroup.TOOLS)));
 
     public static RegistryObject<Item> ICE_CREAM_CONE;
+    public static RegistryObject<Item> BANANA;
+    public static RegistryObject<Item> CALABASH;
 
     public static void register(IEventBus eventBus) {
         ResourceLocation coneId = new ResourceLocation("caiocesarbiomes", "ice_cream_cone");
