@@ -215,14 +215,38 @@ public class ModItems {
     public static RegistryObject<Item> CALABASH;
 
     public static void register(IEventBus eventBus) {
-        ResourceLocation coneId = new ResourceLocation("caiocesarbiomes", "ice_cream_cone");
+        String modA = "caiocesarbiomes";
+        ResourceLocation coneId = new ResourceLocation(modA, "ice_cream_cone");
+        ResourceLocation bananaId = new ResourceLocation(modA, "banana");
+        ResourceLocation calabashId = new ResourceLocation(modA, "calabash");
+
+        boolean shouldRegisterItems = false;
+
         if (ForgeRegistries.ITEMS.containsKey(coneId)) {
-            // Don't register your own, use the existing one
             ICE_CREAM_CONE = RegistryObject.of(coneId, ForgeRegistries.ITEMS);
         } else {
-            // Register your own
             ICE_CREAM_CONE = ITEMS.register("ice_cream_cone", () ->
                     new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            shouldRegisterItems = true;
+        }
+
+        if (ForgeRegistries.ITEMS.containsKey(bananaId)) {
+            BANANA = RegistryObject.of(bananaId, ForgeRegistries.ITEMS);
+        } else {
+            BANANA = ITEMS.register("banana", () ->
+                    new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            shouldRegisterItems = true;
+        }
+
+        if (ForgeRegistries.ITEMS.containsKey(calabashId)) {
+            CALABASH = RegistryObject.of(calabashId, ForgeRegistries.ITEMS);
+        } else {
+            CALABASH = ITEMS.register("calabash", () ->
+                    new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            shouldRegisterItems = true;
+        }
+
+        if (shouldRegisterItems) {
             ITEMS.register(eventBus);
         }
     }

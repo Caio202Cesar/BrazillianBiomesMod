@@ -29,7 +29,6 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         OrchidPlant.registerRenderLayer();
         PampasPlant.registerRenderLayer();
         CactusPlant.registerRenderLayer();
-        CalabashCropBlock.registerRenderLayer();
         AngelTrumpetPlant.registerRenderLayer();
         AcaiBunchBlock.registerRenderLayer();
         BuritiBunchBlock.registerRenderLayer();
