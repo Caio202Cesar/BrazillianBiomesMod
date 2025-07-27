@@ -954,7 +954,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Copaiba, Sandbox tree, Andiroba
     public static final ConfiguredFeature<?, ?> VARZEA_TREES = register("varzea_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.09F),
-                            SANDBOX_TREE.withChance(0.3F)), KAPOK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            SANDBOX_TREE.withChance(0.5F)), KAPOK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 
     public static final ConfiguredFeature<?, ?> BRAZILNUT_TREES = register("brazilnut_trees",

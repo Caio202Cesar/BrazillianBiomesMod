@@ -70,8 +70,8 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
             .temperature(0.95F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(10788964)
-                    .setWaterFogColor(10788964).withSkyColor(4169700).withFoliageColor(2968617)
-                    .withGrassColor(5884220).setFogColor(14807295)
+                    .setWaterFogColor(10788964).withSkyColor(4169700).withFoliageColor(3830303)
+                    .withGrassColor(6604607).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                     .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                     .build())
