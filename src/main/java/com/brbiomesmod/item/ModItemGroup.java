@@ -13,6 +13,14 @@ public class ModItemGroup {
         @Override
         public ItemStack createIcon()
         {
+            return new ItemStack(ModItems.ACAI_BOWL.get());
+        }};
+
+    public static final ItemGroup FRUITS_AND_VEGETABLES_GROUP = new ItemGroup("BrazilianBiomes:Fruits&Vegetables")
+    {
+        @Override
+        public ItemStack createIcon()
+        {
             return new ItemStack(ModItems.PARANA_PINE_CONE.get());
         }};
 
