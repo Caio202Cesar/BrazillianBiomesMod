@@ -242,7 +242,7 @@ public class ModItems {
             CALABASH = RegistryObject.of(calabashId, ForgeRegistries.ITEMS);
         } else {
             CALABASH = ITEMS.register("calabash", () ->
-                    new Item(new Item.Properties().group(ItemGroup.FOOD)));
+                    new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
             shouldRegisterItems = true;
         }
 
