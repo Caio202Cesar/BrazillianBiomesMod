@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "CCC",
-    "DBD",
+    "DBE",
     " A "
   ],
   "key": {
@@ -17,6 +17,9 @@
     },
     "D": {
       "item": "minecraft:snowball"
+    },
+    "E": {
+      "item": "minecraft:sugar"
     }
   },
   "result": {

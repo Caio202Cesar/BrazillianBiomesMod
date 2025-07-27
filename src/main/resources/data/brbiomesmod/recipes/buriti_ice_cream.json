@@ -13,7 +13,7 @@
       "item": "minecraft:milk_bucket"
     },
     "C": {
-      "item": "brbiomesmod:black_pitanga"
+      "item": "brbiomesmod:buriti"
     },
     "D": {
       "item": "minecraft:snowball"
@@ -23,6 +23,6 @@
     }
   },
   "result": {
-    "item": "brbiomesmod:black_pitanga_ice_cream"
+    "item": "brbiomesmod:buriti_ice_cream"
   }
 }
