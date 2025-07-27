@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    "dbe",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "caiocesarbiomes:ice_cream_cone"
+    },
+    "b": {
+      "item": "minecraft:milk_bucket"
+    },
+    "c": {
+      "item": "brbiomesmod:black_pitanga"
+    },
+    "d": {
+      "item": "minecraft:snowball"
+    },
+    "e": {
+      "item": "minecraft:sugar"
+  },
+  "result": {
+    "item": "brbiomesmod:black_pitanga_ice_cream"
+  }
+}}
