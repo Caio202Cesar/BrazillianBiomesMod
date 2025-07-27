@@ -839,7 +839,7 @@ public class TreesGroup {
 
     //Varzea Plant
     public static final RegistryObject<Block> SANDBOX_TREE_LOG = registerBlock("sandbox_tree_log",
-            ModLogs::new);
+            SilkFlossLog::new);
     public static final RegistryObject<Block> SANDBOX_TREE_LEAVES = registerBlock("sandbox_tree_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> SANDBOX_TREE_SAPLING = registerBlock("sandbox_tree_sapling",
