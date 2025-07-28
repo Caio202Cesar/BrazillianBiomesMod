@@ -1,6 +1,6 @@
 {
   "name": "Açai Palm",
-  "icon": "brbiomesmod:acai_palm_sapling",
+  "icon": "brbiomesmod:acai_sapling",
   "category": "brbiomesmod:trees",
   "pages": [
     {
@@ -10,7 +10,7 @@
     },
     {
       "type": "spotlight",
-      "item": "brbiomesmod:acai_palm_sapling",
+      "item": "brbiomesmod:acai_sapling",
       "title": "Tree Spotlight",
       "text": "Tree Sapling."
     }
