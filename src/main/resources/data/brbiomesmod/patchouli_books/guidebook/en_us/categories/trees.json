@@ -1,0 +1,8 @@
+{
+  "name": "Trees",
+  "description": "Brazilian native trees and the biomes where they are found.",
+  "icon": "brbiomesmod:monkey_cajarana_sapling",
+  "entries": [
+    "brbiomesmod:monkey_cajarana"
+  ]
+}
