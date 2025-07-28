@@ -1,0 +1,18 @@
+{
+  "name": "Pitanga",
+  "icon": "brbiomesmod:pitanga_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Eugenia uniflora$(br)$(bold)Biomes:$(reset) Dunas Restinga, Atlantic Forest, Pampas, Araucaria Plateau"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:pitanga_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}
