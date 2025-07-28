@@ -1,0 +1,18 @@
+{
+  "name": "Lophantera",
+  "icon": "brbiomesmod:lophantera_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Lophanthera lactescens$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:lophantera_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}
