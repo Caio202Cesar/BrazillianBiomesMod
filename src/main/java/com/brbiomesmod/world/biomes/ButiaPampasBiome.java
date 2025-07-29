@@ -59,7 +59,6 @@ public class ButiaPampasBiome {
         ModDefaultBiomeFeatures.withPampasPitangaTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPampasTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPampasFlowers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withPampasShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPampasPalms(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BUTIA_SAVANNA_VEGETATION);

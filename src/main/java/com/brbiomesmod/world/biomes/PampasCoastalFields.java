@@ -61,7 +61,6 @@ public class PampasCoastalFields {
         ModDefaultBiomeFeatures.withPampasPitangaTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPampasTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPampasFlowers(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withPampasShrubs(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPampasPalms(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
