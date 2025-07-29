@@ -39,7 +39,7 @@ public class TreesGroup {
             () -> new WhiteSilkFlossFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_SILK_FLOSS_LEAVES));
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_SAPLING = registerBlock("silk_floss_white_sapling",
-            KapokLeaves::new);
+            WhiteSilkFlossSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_WHITE_SILK_FLOSS_SAPLING = BLOCKS.register("potted_silk_floss_white_sapling",
             () -> new FlowerPotBlock(TreesGroup.WHITE_SILK_FLOSS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
@@ -64,7 +64,11 @@ public class TreesGroup {
     public static final RegistryObject<Block> KAPOK_LOG = registerBlock("kapok_log",
             ModLogs::new);
     public static final RegistryObject<Block> KAPOK_LEAVES = registerBlock("kapok_leaves",
-            KapokLeaves::new);
+            () -> new KapokLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.KAPOK_FRUITING_LEAVES));
+    public static final RegistryObject<Block> KAPOK_FRUITING_LEAVES = registerBlock("kapok_fruiting_leaves",
+            () -> new KapokFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.KAPOK_LEAVES));
     public static final RegistryObject<Block> KAPOK_SAPLING = registerBlock("kapok_sapling",
             KapokSapling::new);
     @SuppressWarnings("deprecation")

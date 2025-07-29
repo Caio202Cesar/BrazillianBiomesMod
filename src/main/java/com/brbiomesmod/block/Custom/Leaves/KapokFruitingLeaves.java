@@ -1,12 +1,11 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.Seasons.Season;
+import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -17,19 +16,18 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
-import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class KapokLeaves extends LeavesBlock implements IForgeShearable {
+//dry season
+public class KapokFruitingLeaves extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public KapokLeaves(Properties properties, Supplier<Block> nextStage) {
+    public KapokFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
-
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -47,7 +45,14 @@ public class KapokLeaves extends LeavesBlock implements IForgeShearable {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(10) == 0) {
+
+            int dropCount = 1;
+
+            ItemStack itemStack = new ItemStack(ModItems.SILK_COTTON.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -55,8 +60,26 @@ public class KapokLeaves extends LeavesBlock implements IForgeShearable {
             BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
             worldIn.setBlockState(pos, newState, 2);
+        }
+    }
+
+    @Override
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        if (!worldIn.isRemote) {
+
+            int dropCount = 1;
+
+            ItemStack itemStack = new ItemStack(ModItems.SILK_COTTON.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
+
+            worldIn.setBlockState(pos, TreesGroup.KAPOK_LEAVES.get().getDefaultState());
+
+            worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
         }
+        return ActionResultType.SUCCESS;
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -67,3 +90,5 @@ public class KapokLeaves extends LeavesBlock implements IForgeShearable {
         return 100;
     }
 }
+
+
