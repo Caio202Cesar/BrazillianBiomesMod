@@ -23,6 +23,14 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("passionvine_trunk_decorator",
                     () -> new TreeDecoratorType<>(PassionFruitVineTrunkDecorator.CODEC));
 
+    public static final RegistryObject<TreeDecoratorType<CaatingaPassionFruitVineLeavesDecorator>> CAATINGA_PASSIONVINE_DECORATOR =
+            TREE_DECORATORS.register("caatinga_passionvine_decorator",
+                    () -> new TreeDecoratorType<>(CaatingaPassionFruitVineLeavesDecorator.CODEC));
+
+    public static final RegistryObject<TreeDecoratorType<CaatingaPassionFruitVineTrunkDecorator>> CAATINGA_TRUNK_PASSIONVINE_DECORATOR =
+            TREE_DECORATORS.register("caatinga_passionvine_trunk_decorator",
+                    () -> new TreeDecoratorType<>(CaatingaPassionFruitVineTrunkDecorator.CODEC));
+
     public static void register(IEventBus eventBus) {
         TREE_DECORATORS.register(eventBus);
     }
