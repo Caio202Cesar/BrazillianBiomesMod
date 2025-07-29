@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    "DBE",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "caiocesarbiomes:ice_cream_cone"
+    },
+    "B": {
+      "item": "minecraft:milk_bucket"
+    },
+    "C": {
+      "item": "brbiomesmod:cambuci"
+    },
+    "D": {
+      "item": "minecraft:snowball"
+    },
+    "E": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:cambuci_ice_cream"
+  }
+}

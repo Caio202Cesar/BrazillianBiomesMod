@@ -19,13 +19,13 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class AtlanticForestBiome {
+public class AtlanticForestHillsBiome {
 public static final DeferredRegister<Biome> BIOMES
         = DeferredRegister.create(ForgeRegistries.BIOMES, BrazillianBiomesMod.MOD_ID);
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-public static final RegistryObject<Biome> ATLANTIC_FOREST = BIOMES.register("atlantic_forest",
-        () -> makeAtlanticForestBiome(() -> ModConfiguredSurfaceBuilders.FOREST_SURFACE, 0.1f, 0.3f));
+public static final RegistryObject<Biome> ATLANTIC_FOREST_HILLS = BIOMES.register("atlantic_forest_hills",
+        () -> makeAtlanticForestBiome(() -> ModConfiguredSurfaceBuilders.FOREST_SURFACE, 1.4f, 1.5f));
 
 
 private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -55,21 +55,22 @@ private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBui
     DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withForestTrumpetTrees(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withCambuciTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withManacaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withPitangaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withBrazilwoodTrees(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withAtlanticForestUpperTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAtlanticForestFlowers(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withJabuticabaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAngelTrumpetBushes(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withPassionvineAtlanticForestTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAtlanticForestPalms(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
-            .temperature(1.0F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
+            .temperature(0.9F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                     .setWaterFogColor(993300).withSkyColor(4169700).withFoliageColor(5877296)
                     .withGrassColor(7979098).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
