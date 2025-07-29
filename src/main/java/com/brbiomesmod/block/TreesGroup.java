@@ -575,14 +575,6 @@ public class TreesGroup {
     public static final RegistryObject<Block> POTTED_SILVER_PEPPER_SAPLING = BLOCKS.register("potted_silver_pepper_sapling",
             () -> new FlowerPotBlock(TreesGroup.SILVER_PEPPER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-    public static final RegistryObject<Block> URUGUAYAN_PEPPER_LEAVES = registerBlock("uruguayan_pepper_leaves",
-            PinkPeeperLeaves::new);
-    public static final RegistryObject<Block> URUGUAYAN_PEPPER_SAPLING = registerBlock("uruguayan_pepper_sapling",
-            UruguayanPepperSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_URUGUAYAN_PEPPER_SAPLING = BLOCKS.register("potted_uruguayan_pepper_sapling",
-            () -> new FlowerPotBlock(TreesGroup.URUGUAYAN_PEPPER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> JUA_LOG = registerBlock("jua_log",
