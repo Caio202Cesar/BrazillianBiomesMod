@@ -33,6 +33,7 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         AcaiBunchBlock.registerRenderLayer();
         BuritiBunchBlock.registerRenderLayer();
         PindoBunchBlock.registerRenderLayer();
+        CaatingaPassionfruitVine.registerRenderLayer();
 
         AlgarrobilloSapling.registerRenderLayer();
         CavenThornSapling.registerRenderLayer();

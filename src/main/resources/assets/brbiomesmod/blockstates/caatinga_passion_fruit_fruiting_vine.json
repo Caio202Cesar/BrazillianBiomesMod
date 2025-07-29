@@ -1,0 +1,20 @@
+{
+  "multipart": [
+    {   "when": { "south": "true" },
+      "apply": { "model": "brbiomesmod:block/caatinga_passion_fruit_fruiting_vine" }
+    },
+    {   "when": { "west": "true" },
+      "apply": { "model": "brbiomesmod:block/caatinga_passion_fruit_fruiting_vine", "y": 90 }
+    },
+    {   "when": { "north": "true" },
+      "apply": { "model": "brbiomesmod:block/caatinga_passion_fruit_fruiting_vine", "y": 180 }
+    },
+    {   "when": { "east": "true" },
+      "apply": { "model": "brbiomesmod:block/caatinga_passion_fruit_fruiting_vine", "y": 270 }
+    },
+    {   "when": {"up": "true" },
+      "apply": { "model": "brbiomesmod:block/caatinga_passion_fruit_fruiting_vine_up" }
+    },
+    {   "when": {"up": "false", "north": "false", "west": "false", "south": "false", "east": "false"  },
+      "apply": { "model": "brbiomesmod:block/caatinga_passion_fruit_fruiting_vine_up" }
+    }]}

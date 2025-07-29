@@ -69,6 +69,13 @@ public class PlantsGroup {
     public static final RegistryObject<Block> PASSION_FRUIT_FRUITING_VINE = registerBlock("passion_fruit_fruiting_vine",
             PassionfruitFruitingVine::new);
 
+    public static final RegistryObject<Block> CAATINGA_PASSION_FRUIT_VINE = registerBlock("caatinga_passion_fruit_vine",
+            CaatingaPassionfruitVine::new);
+    public static final RegistryObject<Block> CAATINGA_PASSION_FRUIT_FLOWERING_VINE = registerBlock("caatinga_passion_fruit_flowering_vine",
+            CaatingaPassionfruitFloweringVine::new);
+    public static final RegistryObject<Block> CAATINGA_PASSION_FRUIT_FRUITING_VINE = registerBlock("caatinga_passion_fruit_fruiting_vine",
+            CaatingaPassionfruitFruitingVine::new);
+
     public static final RegistryObject<Block> BRAZILLIAN_DUTCHMAN_PIPE_VINE = registerBlock("brazillian_dutchman_pipe_vine",
             AristolochiaVine::new);
 

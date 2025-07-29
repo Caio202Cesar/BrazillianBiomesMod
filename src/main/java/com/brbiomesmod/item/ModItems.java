@@ -88,6 +88,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.JENIPAPO)));
     public static final RegistryObject<Item> PEQUI = ITEMS.register("pequi_fruit",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP)));
+    public static final RegistryObject<Item> CAATINGA_PASSIONFRUIT = ITEMS.register("caatinga_passionfruit",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.CAATINGA_PASSIONFRUIT)));
 
     //Food
     public static final RegistryObject<Item> COOKED_CASHEWNUT = ITEMS.register("cooked_cashewnut",
