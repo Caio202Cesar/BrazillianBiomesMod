@@ -790,7 +790,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
                     new SimpleBlockStateProvider(States.JENIPAPO_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(5, 2, 0),
+                    new StraightTrunkPlacer(7, 5, 0),
                     new TwoLayerFeature(1, 0, 1)))
                     .setIgnoreVines().build()));
 
@@ -1023,7 +1023,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     JEQUITIBA_TREE.withChance(0.2F), BRAZILLIAN_SASSAFRAS_TREE.withChance(0.3F),
                     BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.3F), MANACA_FANCY_TREE.withChance(0.4F), MANACA_TREE.withChance(0.3F),
                     SILVER_CECROPIA_TREE.withChance(0.2F), SAPUCAIA_TREE.withChance(0.2F), BRAZILLIAN_ROSEWOOD_TREE.withChance(0.3F),
-                    BRAZILWOOD_TREE.withChance(0.2F),BRAZILWOOD_FANCY_TREE.withChance(0.43F), JABUTICABA_TREE.withChance(0.3F)),
+                    BRAZILWOOD_TREE.withChance(0.2F),BRAZILWOOD_FANCY_TREE.withChance(0.43F),  JENIPAPO_TREE.withChance(0.1F), JABUTICABA_TREE.withChance(0.3F)),
                     PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 3))));
     public static final ConfiguredFeature<?, ?> CAMBUCI_TREES = register("cambuci_trees",
@@ -1043,7 +1043,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             CUPUACU_TREE.withChance(0.4F), COCOA_TREE.withChance(0.4F), CAMU_CAMU_TREE.withChance(0.25F), SOMBREIRO_TREE.withChance(0.3F),
                             LARGE_CECROPIA_TREE.withChance(0.2F), SHARINGA_TREE.withChance(0.5F), LOPHANTERA_TREE2.withChance(0.25F),
                             BACURI_TREE.withChance(0.25F), MEGA_BACURI_TREE.withChance(0.35F), BALSA_TREE.withChance(0.3F),
-                            MEGA_BALSA_TREE.withChance(0.25F), BRAZILNUT_TREE.withChance(0.3F), BRAZILNUT_FANCY_TREE.withChance(0.25F)),
+                            MEGA_BALSA_TREE.withChance(0.25F), BRAZILNUT_TREE.withChance(0.3F), JENIPAPO_TREE.withChance(0.22F), BRAZILNUT_FANCY_TREE.withChance(0.25F)),
                             LOPHANTERA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.6F, 2))));
     public static final ConfiguredFeature<?, ?> VARZEA_TREES = register("varzea_trees",
@@ -1073,7 +1073,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Pantanal Vegetation
     public static final ConfiguredFeature<?, ?> PANTANAL_VEGETATION = register("pantanal_vegetation",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.3F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.3F),
+                    JENIPAPO_TREE.withChance(0.4F)),
                     CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
@@ -1132,7 +1133,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Restinga vegetation
     public static final ConfiguredFeature<?, ?> RESTINGA_TREES = register("restinga_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.1F),
-                            CECROPIA_TREE.withChance(0.2F), MONKEY_CAJARANA_TREE1.withChance(0.1F), MONKEY_CAJARANA_TREE2.withChance(0.2F)), CASHEW_SHRUB))
+                            CECROPIA_TREE.withChance(0.2F), MONKEY_CAJARANA_TREE1.withChance(0.1F), MONKEY_CAJARANA_TREE2.withChance(0.2F),
+                            JENIPAPO_TREE.withChance(0.1F)), CASHEW_SHRUB))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
@@ -1164,7 +1166,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Cerrado vegetation
     public static final ConfiguredFeature<?, ?> CERRADO_FRUIT_TREES = register("cerrado_fruit_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.1985F),
-                            CAGAITA_TREE.withChance(0.1895F), PEQUI_TREE.withChance(0.3F)), WOLF_APPLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            CAGAITA_TREE.withChance(0.1895F), JENIPAPO_TREE.withChance(0.35F), PEQUI_TREE.withChance(0.35F)), WOLF_APPLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.3F, 2))));
     public static final ConfiguredFeature<?, ?> CERRADO_PALM_TREES = register("cerrado_palm_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(QUEEN_PALM.withChance(0.5F), JELLY_PALM.withChance(0.2F)),
