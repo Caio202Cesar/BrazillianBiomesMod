@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Genipa americana$(br)$(bold)Biomes:$(reset) ..."
+      "text": "$(bold)Scientific Name:$(reset) Genipa americana$(br)$(bold)Biomes:$(reset) Amazon Varzea, Cerrado, Atlantic Forest, Pantanal, Dunas Restinga"
     },
     {
       "type": "spotlight",
