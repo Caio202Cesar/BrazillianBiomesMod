@@ -344,7 +344,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(DutchmanPipeVineDecorator.INSTANCE)).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_PEROBA_TREE_WITH_DUTCHMAN_VINE_ = register("dutchman_vine_pink_peroba",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_PEROBA_TREE_WITH_DUTCHMAN_VINE = register("dutchman_vine_pink_peroba",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PINK_PEROBA_LOG),
                     new SimpleBlockStateProvider(States.PINK_PEROBA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
@@ -358,6 +358,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(DutchmanPipeVineDecorator.INSTANCE)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JABUTICABA_TREE_WITH_DUTCHMAN_VINE = register("dutchman_vine_jabuticaba_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_LOG),
+                    new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new DarkOakTrunkPlacer(6, 2, 1),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(DutchmanPipeVineDecorator.INSTANCE)).setIgnoreVines().build()));
 
 
     //Umbu Tree
@@ -1021,11 +1029,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> CAMBUCI_TREES = register("cambuci_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAMBUCI_TREE_WITH_PASSIONVINE.withChance(0.005F)),
                     CAMBUCI_TREE)).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(12, 0.0F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(5, 0.0F, 0))));
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_TREE_WITH_DUTCHMAN_VINE = register("atlantic_forest_trees_with_dutchman_vine",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_SASSAFRAS_TREE_WITH_VINE.withChance(0.14F)),
-                    )).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(12, 0.0F, 1))));
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of
+                    (BRAZILLIAN_SASSAFRAS_TREE_WITH_VINE.withChance(0.14F), JABUTICABA_TREE_WITH_DUTCHMAN_VINE.withChance(0.15F),
+                            DUTCHMAN_VINE_BRAZILWOOD.withChance(0.2F), PINK_PEROBA_TREE_WITH_DUTCHMAN_VINE.withChance(0.3F))
+                    , BRAZILLIAN_ROSEWOOD_WITH_DUTCHMAN_VINE)).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(0, 0.5F, 3))));
 
     //Amazon Rainforest Vegetation
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",

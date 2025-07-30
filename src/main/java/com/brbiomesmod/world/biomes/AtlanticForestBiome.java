@@ -56,19 +56,17 @@ private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBui
     DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withForestTrumpetTrees(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withManacaTrees(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withDutchmanVineTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withPitangaTrees(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withBrazilwoodTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAtlanticForestUpperTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAtlanticForestFlowers(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withJabuticabaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAngelTrumpetBushes(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withPassionvineAtlanticForestTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAtlanticForestPalms(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-    return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.FOREST).depth(depth).scale(scale)
+    return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
             .temperature(1.0F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
                     .setWaterFogColor(993300).withSkyColor(4169700).withFoliageColor(5877296)
                     .withGrassColor(7979098).setFogColor(14807295)
