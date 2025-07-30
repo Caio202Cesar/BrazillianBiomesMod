@@ -1042,8 +1042,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(KAPOK_TREE.withChance(0.5F),
                             CUPUACU_TREE.withChance(0.4F), COCOA_TREE.withChance(0.4F), CAMU_CAMU_TREE.withChance(0.25F), SOMBREIRO_TREE.withChance(0.3F),
                             LARGE_CECROPIA_TREE.withChance(0.2F), SHARINGA_TREE.withChance(0.5F), LOPHANTERA_TREE2.withChance(0.25F),
-                            BACURI_TREE.withChance(0.25F), MEGA_BACURI_TREE.withChance(0.35F), BALSA_TREE.withChance(0.3F),
-                            MEGA_BALSA_TREE.withChance(0.25F), BRAZILNUT_TREE.withChance(0.3F), BRAZILNUT_FANCY_TREE.withChance(0.25F)),
+                            BACURI_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.4F), BALSA_TREE.withChance(0.4F),
+                            MEGA_BALSA_TREE.withChance(0.4F), BRAZILNUT_TREE.withChance(0.5F), BRAZILNUT_FANCY_TREE.withChance(0.5F)),
                             LOPHANTERA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.6F, 2))));
     public static final ConfiguredFeature<?, ?> VARZEA_TREES = register("varzea_trees",
@@ -1076,7 +1076,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.3F),
                     JENIPAPO_TREE.withChance(0.4F)),
                     CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
+                    .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 
 
     //Araucaria Plateau
