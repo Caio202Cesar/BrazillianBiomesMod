@@ -1,5 +1,6 @@
 package com.brbiomesmod.features.TreeDecorators;
 
+import com.brbiomesmod.block.Custom.CaatingaPassionfruitVine;
 import com.brbiomesmod.block.PlantsGroup;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
@@ -38,25 +39,25 @@ public class CaatingaPassionFruitVineLeavesDecorator extends TreeDecorator {
             if (rand.nextInt(4) == 0) {
                 BlockPos target = leafPos.west();
                 if (Feature.isAirAt(world, target)) {
-                    this.placeVine(world, target, VineBlock.EAST, placed, boundingBox);
+                    this.placeVine(world, target, CaatingaPassionfruitVine.EAST, placed, boundingBox);
                 }
             }
             if (rand.nextInt(4) == 0) {
                 BlockPos target = leafPos.east();
                 if (Feature.isAirAt(world, target)) {
-                    this.placeVine(world, target, VineBlock.WEST, placed, boundingBox);
+                    this.placeVine(world, target, CaatingaPassionfruitVine.WEST, placed, boundingBox);
                 }
             }
             if (rand.nextInt(4) == 0) {
                 BlockPos target = leafPos.north();
                 if (Feature.isAirAt(world, target)) {
-                    this.placeVine(world, target, VineBlock.SOUTH, placed, boundingBox);
+                    this.placeVine(world, target, CaatingaPassionfruitVine.SOUTH, placed, boundingBox);
                 }
             }
             if (rand.nextInt(4) == 0) {
                 BlockPos target = leafPos.south();
                 if (Feature.isAirAt(world, target)) {
-                    this.placeVine(world, target, VineBlock.NORTH, placed, boundingBox);
+                    this.placeVine(world, target, CaatingaPassionfruitVine.NORTH, placed, boundingBox);
                 }
             }
         });

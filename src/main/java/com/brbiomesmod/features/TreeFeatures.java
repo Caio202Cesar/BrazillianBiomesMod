@@ -113,7 +113,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
-                    TrunkVineTreeDecorator.INSTANCE, LeaveVineTreeDecorator.field_236871_b_)).build()));
+                    CaatingaPassionFruitVineLeavesDecorator.INSTANCE, CaatingaPassionFruitVineTrunkDecorator.INSTANCE)).build()));
 
     //Ipe Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOW_IPE_TREE = register("yellow_ipe_tree",
@@ -304,7 +304,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new DarkOakFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new DarkOakTrunkPlacer(3, 4, 1),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE, PassionFruitVineTrunkDecorator.INSTANCE)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    .setDecorators(ImmutableList.of(CaatingaPassionFruitVineLeavesDecorator.INSTANCE,
+                            CaatingaPassionFruitVineTrunkDecorator.INSTANCE)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Brazillian Sassafras Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_SASSAFRAS_TREE = register("brazillian_sassafras_tree",
@@ -675,16 +676,18 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE,
-                            PassionFruitVineTrunkDecorator.INSTANCE)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                            OptionalInt.of(4)))).setDecorators(ImmutableList.of(
+                    CaatingaPassionFruitVineLeavesDecorator.INSTANCE, CaatingaPassionFruitVineTrunkDecorator.INSTANCE))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_SILK_FLOSS_BIG_TREE_PASSIONVINE = register("white_silk_floss_big_tree_passionvine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SILK_FLOSS_LOG),
                     new SimpleBlockStateProvider(States.WHITE_SILK_FLOSS_LEAVES),
                     new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new MegaJungleTrunkPlacer(3, 7, 0),
                     new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE,
-                            PassionFruitVineTrunkDecorator.INSTANCE)).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                            OptionalInt.of(4)))).setDecorators(ImmutableList.of(
+                    CaatingaPassionFruitVineLeavesDecorator.INSTANCE, CaatingaPassionFruitVineTrunkDecorator.INSTANCE))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_SILK_FLOSS_TREE = register("pink_silk_floss_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SILK_FLOSS_LOG),
                     new SimpleBlockStateProvider(States.PINK_SILK_FLOSS_LEAVES),
