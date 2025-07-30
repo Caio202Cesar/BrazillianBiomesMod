@@ -184,7 +184,14 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
     public static final RegistryObject<Item> CASHEWNUT_ICE_CREAM = ITEMS.register("cashewnut_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
-
+    public static final RegistryObject<Item> CASHEW_APPLE_ICE_CREAM = ITEMS.register("cashew_apple_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+    public static final RegistryObject<Item> CHOCOLATE_SPICY_ICE_CREAM = ITEMS.register("chocolate_spicy_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+    public static final RegistryObject<Item> FEIJOA_ICE_CREAM = ITEMS.register("feijoa_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+    public static final RegistryObject<Item> GUARANA_ICE_CREAM = ITEMS.register("guarana_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
 
     public static final RegistryObject<Item> PITANGA_ICE_CREAM = ITEMS.register("pitanga_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));

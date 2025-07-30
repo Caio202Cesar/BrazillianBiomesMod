@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "CCC",
+    " C ",
     "DBE",
     " A "
   ],
@@ -13,7 +13,7 @@
       "item": "minecraft:milk_bucket"
     },
     "C": {
-      "item": "brbiomesmod:cocked_cashewnut"
+      "item": "brbiomesmod:pineapple_guava"
     },
     "D": {
       "item": "minecraft:snowball"
@@ -23,6 +23,6 @@
     }
   },
   "result": {
-    "item": "brbiomesmod:cashewnut_ice_cream"
+    "item": "brbiomesmod:feijoa_ice_cream"
   }
 }

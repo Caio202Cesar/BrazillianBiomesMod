@@ -13,7 +13,7 @@
       "item": "minecraft:milk_bucket"
     },
     "C": {
-      "item": "brbiomesmod:cocked_cashewnut"
+      "item": "brbiomesmod:guarana_seeds"
     },
     "D": {
       "item": "minecraft:snowball"
@@ -23,6 +23,6 @@
     }
   },
   "result": {
-    "item": "brbiomesmod:cashewnut_ice_cream"
+    "item": "brbiomesmod:guarana_ice_cream"
   }
 }
