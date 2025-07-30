@@ -1005,7 +1005,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     }
 
-    //Atlantic Forest Vegetation
+    //Atlantic forest vegetation
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_PALMS = register("atlantic_forest_palms",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JUSSARA_PALM.withChance(0.5F)),
                     QUEEN_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
@@ -1033,40 +1033,27 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_TREE_WITH_DUTCHMAN_VINE = register("atlantic_forest_trees_with_dutchman_vine",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of
                     (BRAZILLIAN_SASSAFRAS_TREE_WITH_VINE.withChance(0.14F), JABUTICABA_TREE_WITH_DUTCHMAN_VINE.withChance(0.15F),
-                            DUTCHMAN_VINE_BRAZILWOOD.withChance(0.2F), PINK_PEROBA_TREE_WITH_DUTCHMAN_VINE.withChance(0.3F))
-                    , BRAZILLIAN_ROSEWOOD_WITH_DUTCHMAN_VINE)).withPlacement(Placement.COUNT_EXTRA
+                            DUTCHMAN_VINE_BRAZILWOOD.withChance(0.2F), PINK_PEROBA_TREE_WITH_DUTCHMAN_VINE.withChance(0.3F)),
+                    BRAZILLIAN_ROSEWOOD_WITH_DUTCHMAN_VINE)).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.5F, 3))));
 
-    //Amazon Rainforest Vegetation
+    //Amazon rainforest vegetation
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(KAPOK_TREE.withChance(0.6F),
-                            CUPUACU_TREE.withChance(0.5F), COCOA_TREE.withChance(0.5F), CAMU_CAMU_TREE.withChance(0.5F), SOMBREIRO_TREE.withChance(0.5F),
-                            LARGE_CECROPIA_TREE.withChance(0.5F)), SHARINGA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(KAPOK_TREE.withChance(0.5F),
+                            CUPUACU_TREE.withChance(0.4F), COCOA_TREE.withChance(0.4F), CAMU_CAMU_TREE.withChance(0.25F), SOMBREIRO_TREE.withChance(0.3F),
+                            LARGE_CECROPIA_TREE.withChance(0.2F), SHARINGA_TREE.withChance(0.5F), LOPHANTERA_TREE2.withChance(0.25F),
+                            BACURI_TREE.withChance(0.25F), MEGA_BACURI_TREE.withChance(0.35F), BALSA_TREE.withChance(0.3F),
+                            MEGA_BALSA_TREE.withChance(0.25F), BRAZILNUT_TREE.withChance(0.3F), BRAZILNUT_FANCY_TREE.withChance(0.25F)),
+                            LOPHANTERA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.6F, 2))));
     public static final ConfiguredFeature<?, ?> VARZEA_TREES = register("varzea_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.09F),
                             SANDBOX_TREE.withChance(0.25F)), KAPOK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.3F, 1))));//Add copaiba and andiroba
-    public static final ConfiguredFeature<?, ?> BRAZILNUT_TREES = register("brazilnut_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILNUT_TREE.withChance(0.5F)),
-                    BRAZILNUT_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> VARZEA_PALMS = register("varzea_palms",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.3F)),
                     ACAI_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));//Add pupunha too
-    public static final ConfiguredFeature<?, ?> BALSA_TREES = register("balsa_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BALSA_TREE.withChance(0.5F)),
-                    MEGA_BALSA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
-    public static final ConfiguredFeature<?, ?> BACURI_TREES = register("bacuri_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BACURI_TREE.withChance(0.5F)),
-                    MEGA_BACURI_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(6, 0.1F, 0))));
-    public static final ConfiguredFeature<?, ?> LOPHANTERA_TREES = register("lophantera_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(LOPHANTERA_TREE.withChance(0.5F)),
-                    LOPHANTERA_TREE2)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 
 
     //Pampas Vegetation

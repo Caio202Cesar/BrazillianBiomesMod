@@ -17,14 +17,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withPampasPalms(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PAMPAS_PALMS);
     }
-    public static void withBrazilnutTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BRAZILNUT_TREES);
-    }
     public static void withGuaranaShrubs(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.GUARANA_SHRUB);
-    }
-    public static void withLophanteraTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.LOPHANTERA_TREES);
     }
     public static void withDutchmanVineTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ATLANTIC_FOREST_TREE_WITH_DUTCHMAN_VINE);
@@ -127,12 +121,6 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     }
     public static void withCerradoTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CERRADO_TREES);
-    }
-    public static void withBacuriTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BACURI_TREES);
-    }
-    public static void withBalsaTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BALSA_TREES);
     }
     public static void withWetlandSeaGrass(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.SEAGRASS_SWAMP);
