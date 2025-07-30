@@ -38,13 +38,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PALMITO_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.ACAI_LEAVES),
                     new AcaiFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(10, 2, 0),
+                    new StraightTrunkPlacer(10, 7, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JUSSARA_PALM = register("jussara_palm",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PALMITO_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.JUSSARA_LEAVES),
                     new JussaraFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(16, 18, 0),
+                    new StraightTrunkPlacer(16, 8, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Queen Palm
