@@ -267,8 +267,6 @@ public class ModItems {
     public static final RegistryObject<Item> TOURMALINE_HOE = ITEMS.register("tourmaline_paraiba_hoe",
             () -> new HoeItem(ModItemTier.TOURMALINE, -3, 0.0F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
-    public static final RegistryObject<Item> FLORA_GUIDE_BOOK = ITEMS.register("flora_guide_book",
-            () -> new WrittenBookItem(new Item.Properties().group(ItemGroup.MISC)));
 
 
     public static RegistryObject<Item> ICE_CREAM_CONE;
