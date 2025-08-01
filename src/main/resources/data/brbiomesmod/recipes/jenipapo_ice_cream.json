@@ -13,7 +13,7 @@
       "item": "minecraft:milk_bucket"
     },
     "C": {
-      "item": "brbiomesmod:cooked_cashewnut"
+      "item": "brbiomesmod:jenipapo"
     },
     "D": {
       "item": "minecraft:snowball"
@@ -23,7 +23,7 @@
     }
   },
   "result": {
-    "item": "brbiomesmod:cashewnut_ice_cream",
+    "item": "brbiomesmod:jenipapo_ice_cream",
     "count": 3
   }
 }
