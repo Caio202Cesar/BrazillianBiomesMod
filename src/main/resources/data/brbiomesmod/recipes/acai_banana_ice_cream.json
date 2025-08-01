@@ -3,7 +3,7 @@
   "pattern": [
     "CCC",
     "DBE",
-    " A "
+    "AAA"
   ],
   "key": {
     "A": {
@@ -23,6 +23,7 @@
     }
   },
   "result": {
-    "item": "brbiomesmod:acai_banana_ice_cream"
+    "item": "brbiomesmod:acai_banana_ice_cream",
+    "count": 3
   }
 }

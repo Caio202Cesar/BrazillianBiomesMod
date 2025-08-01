@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " C ",
+    "CCC",
     "DBE",
     " A "
   ],
@@ -23,6 +23,7 @@
     }
   },
   "result": {
-    "item": "brbiomesmod:cambuci_ice_cream"
+    "item": "brbiomesmod:cambuci_ice_cream",
+    "count": 3
   }
 }
