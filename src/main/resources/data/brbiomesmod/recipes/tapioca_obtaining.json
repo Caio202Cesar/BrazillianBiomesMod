@@ -9,11 +9,11 @@
       "item": "minecraft:water_bucket"
     },
     "X": {
-      "item": "brrbiomesmod:cassava"
+      "item": "brbiomesmod:cassava"
     }
   },
   "result": {
-    "item": "brrbiomesmod:tapioca",
+    "item": "brbiomesmod:tapioca",
     "count": 1
   }
 }
