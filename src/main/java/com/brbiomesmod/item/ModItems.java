@@ -274,12 +274,14 @@ public class ModItems {
     public static RegistryObject<Item> ICE_CREAM_CONE;
     public static RegistryObject<Item> BANANA;
     public static RegistryObject<Item> CALABASH;
+    public static RegistryObject<Item> COCONUT;
 
     public static void register(IEventBus eventBus) {
         String modA = "caiocesarbiomes";
         ResourceLocation coneId = new ResourceLocation(modA, "ice_cream_cone");
         ResourceLocation bananaId = new ResourceLocation(modA, "banana");
         ResourceLocation calabashId = new ResourceLocation(modA, "calabash");
+        ResourceLocation coconutId = new ResourceLocation(modA, "coconut");
 
         boolean shouldRegisterItems = false;
 
@@ -304,6 +306,14 @@ public class ModItems {
         } else {
             CALABASH = ITEMS.register("calabash", () ->
                     new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
+            shouldRegisterItems = true;
+        }
+
+        if (ForgeRegistries.ITEMS.containsKey(coconutId)) {
+            COCONUT = RegistryObject.of(coconutId, ForgeRegistries.ITEMS);
+        } else {
+            COCONUT = ITEMS.register("coconut", () ->
+                    new Item(new Item.Properties().group(ItemGroup.FOOD)));
             shouldRegisterItems = true;
         }
 
