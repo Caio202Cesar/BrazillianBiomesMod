@@ -6,13 +6,13 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Bowdichia virgilioides$(br)$(bold)Biomas:$(reset) Cerrado, Mata Atlântica, Amazon Rainforest, Pantanal, Caatinga, Restinga das Dunas"
+      "text": "$(bold)Nome Científico:$(reset) Bowdichia virgilioides$(br)$(bold)Biomas:$(reset) Cerrado, Mata Atlântica, Floresta Amazônica, Pantanal, Caatinga, Restinga das Dunas"
     },
     {
       "type": "spotlight",
       "item": "brbiomesmod:black_sucupira_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }

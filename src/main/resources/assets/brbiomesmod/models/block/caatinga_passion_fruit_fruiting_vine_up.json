@@ -1,8 +1,8 @@
 {
   "ambientocclusion": false,
   "textures": {
-    "particle": "brbiomesmod:block/caatinga_passion_fruit_vine_fruiting",
-    "vine": "brbiomesmod:block/caatinga_passion_fruit_vine_fruiting"
+    "particle": "brbiomesmod:block/caatinga_passion_fruit_fruiting_vine",
+    "vine": "brbiomesmod:block/caatinga_passion_fruit_fruiting_vine"
   },
   "elements": [
     {   "from": [ 0, 15.2, 0 ],

@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Lecythis pisonis$(br)$(bold)Biomes:$(reset) Atlantic Forest"
+      "text": "$(bold)Nome Científico:$(reset) Lecythis pisonis$(br)$(bold)Biomes:$(reset) Atlantic Forest"
     },
     {
       "type": "spotlight",

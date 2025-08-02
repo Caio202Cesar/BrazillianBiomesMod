@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Hura crepitans$(br)$(bold)Biomes:$(reset) Amazon Varzea"
+      "text": "$(bold)Nome Científico:$(reset) Hura crepitans$(br)$(bold)Biomes:$(reset) Amazon Varzea"
     },
     {
       "type": "spotlight",

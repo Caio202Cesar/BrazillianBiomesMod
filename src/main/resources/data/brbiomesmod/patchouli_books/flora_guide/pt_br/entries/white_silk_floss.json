@@ -1,12 +1,12 @@
 {
-  "name": "White Silk Floss",
+  "name": "Barriguda",
   "icon": "brbiomesmod:silk_floss_white_sapling",
   "category": "brbiomesmod:trees",
   "pages": [
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Ceiba glaziovii$(br)$(bold)Biomes:$(reset) Caatinga"
+      "text": "$(bold)Nome Científico:$(reset) Ceiba glaziovii$(br)$(bold)Biomes:$(reset) Caatinga"
     },
     {
       "type": "spotlight",

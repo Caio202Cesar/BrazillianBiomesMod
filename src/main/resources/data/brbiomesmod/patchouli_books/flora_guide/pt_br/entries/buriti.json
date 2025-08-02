@@ -6,13 +6,13 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Mauritia flexuosa$(br)$(bold)Biomes:$(reset) Cerrado, Pantanal, Amazon Varzea"
+      "text": "$(bold)Nome Científico:$(reset) Mauritia flexuosa$(br)$(bold)Biomas:$(reset) Cerrado, Pantanal, Várzea Amazônica"
     },
     {
       "type": "spotlight",
       "item": "brbiomesmod:buriti_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }

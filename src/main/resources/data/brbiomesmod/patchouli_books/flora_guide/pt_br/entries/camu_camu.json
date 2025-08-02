@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Myrciaria dubia$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
+      "text": "$(bold)Nome Científico:$(reset) Myrciaria dubia$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
     },
     {
       "type": "spotlight",

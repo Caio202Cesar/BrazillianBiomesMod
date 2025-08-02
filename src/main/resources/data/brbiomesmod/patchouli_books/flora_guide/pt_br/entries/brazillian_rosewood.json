@@ -1,18 +1,18 @@
 {
-  "name": "Brazillian Rosewood",
+  "name": "Jacarandá-da-Bahia",
   "icon": "brbiomesmod:brazillian_rosewood_sapling",
   "category": "brbiomesmod:trees",
   "pages": [
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Dalbergia nigra$(br)$(bold)Biomes:$(reset) Atlantic Forest"
+      "text": "$(bold)Nome Científico:$(reset) Dalbergia nigra$(br)$(bold)Biomas:$(reset) Mata Atlântica"
     },
     {
       "type": "spotlight",
       "item": "brbiomesmod:brazillian_rosewood_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }

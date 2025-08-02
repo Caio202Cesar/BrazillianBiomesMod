@@ -1,18 +1,18 @@
 {
-  "name": "Brazilnut",
+  "name": "Castanheira-do-Pará",
   "icon": "brbiomesmod:brazilnut_sapling",
   "category": "brbiomesmod:trees",
   "pages": [
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Bertholletia excelsa$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
+      "text": "$(bold)Nome Científico:$(reset) Bertholletia excelsa$(br)$(bold)Biomas:$(reset) Floresta Amazônica"
     },
     {
       "type": "spotlight",
       "item": "brbiomesmod:brazilnut_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }

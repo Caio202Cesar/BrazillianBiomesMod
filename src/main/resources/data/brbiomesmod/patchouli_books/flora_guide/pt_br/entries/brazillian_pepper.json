@@ -1,18 +1,18 @@
 {
-  "name": "Brazillian Peeper",
+  "name": "Aroeira-vermelha",
   "icon": "brbiomesmod:brazillian_pepper_sapling",
   "category": "brbiomesmod:trees",
   "pages": [
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Schinus terebinthifolia$(br)$(bold)Biomes:$(reset) Atlantic Forest, Araucaria Plateau, Pampas, Caatinga, Dunas Restinga, Cerrado"
+      "text": "$(bold)Nome Científico:$(reset) Schinus terebinthifolia$(br)$(bold)Biomas:$(reset) Mata Atlântica, Mata de Araucarias, Pampas, Caatinga, Restinga das Dunas, Cerrado"
     },
     {
       "type": "spotlight",
       "item": "brbiomesmod:brazillian_pepper_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }

@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Clitoria fairchildiana$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
+      "text": "$(bold)Nome Científico:$(reset) Clitoria fairchildiana$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
     },
     {
       "type": "spotlight",

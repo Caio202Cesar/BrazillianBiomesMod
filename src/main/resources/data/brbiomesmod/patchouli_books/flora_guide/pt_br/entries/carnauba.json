@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Copernicia prunifera$(br)$(bold)Biomes:$(reset) Caatinga"
+      "text": "$(bold)Nome Científico:$(reset) Copernicia prunifera$(br)$(bold)Biomes:$(reset) Caatinga"
     },
     {
       "type": "spotlight",

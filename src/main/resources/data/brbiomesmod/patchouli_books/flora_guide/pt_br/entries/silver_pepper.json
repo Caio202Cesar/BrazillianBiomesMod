@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Schinus lentiscifolius$(br)$(bold)Biomes:$(reset) Pampas"
+      "text": "$(bold)Nome Científico:$(reset) Schinus lentiscifolius$(br)$(bold)Biomes:$(reset) Pampas"
     },
     {
       "type": "spotlight",

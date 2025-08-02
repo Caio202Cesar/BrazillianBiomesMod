@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Eugenia dysenterica$(br)$(bold)Biomes:$(reset) Cerrado"
+      "text": "$(bold)Nome Científico:$(reset) Eugenia dysenterica$(br)$(bold)Biomes:$(reset) Cerrado"
     },
     {
       "type": "spotlight",
