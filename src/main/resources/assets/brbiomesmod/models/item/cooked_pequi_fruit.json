@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "brbiomesmod:item/cooked_pequi_fruit"
+    "layer0": "brbiomesmod:item/cooked_seedless_pequi"
   }
 }

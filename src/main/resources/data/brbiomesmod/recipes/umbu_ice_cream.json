@@ -13,7 +13,7 @@
       "item": "minecraft:milk_bucket"
     },
     "C": {
-      "item": "brbiomesmod:pineapple_guava"
+      "item": "brbiomesmod:umbu"
     },
     "D": {
       "item": "minecraft:snowball"
@@ -23,7 +23,7 @@
     }
   },
   "result": {
-    "item": "brbiomesmod:feijoa_ice_cream",
+    "item": "brbiomesmod:umbu_ice_cream",
     "count": 3
   }
 }

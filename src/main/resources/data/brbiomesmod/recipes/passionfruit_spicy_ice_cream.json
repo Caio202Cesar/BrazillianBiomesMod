@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "CCC",
+    "CFC",
     "DBE",
-    "AAA"
+    " A "
   ],
   "key": {
     "A": {
@@ -13,17 +13,19 @@
       "item": "minecraft:milk_bucket"
     },
     "C": {
-      "item": "brbiomesmod:pineapple_guava"
+      "item": "minecraft:cocoa_beans"
     },
     "D": {
       "item": "minecraft:snowball"
     },
     "E": {
       "item": "minecraft:sugar"
+    },
+    "F": {
+      "item": "brbiomesmod:pink_peeper"
     }
   },
   "result": {
-    "item": "brbiomesmod:feijoa_ice_cream",
-    "count": 3
+    "item": "brbiomesmod:chocolate_spicy_ice_cream"
   }
 }

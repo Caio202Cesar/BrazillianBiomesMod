@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "ingredient": {
+    "item": "brbiomesmod:pequi_fruit"
+  },
+  "result": "brbiomesmod:cooked_pequi_fruit",
+  "experience": 0.35,
+  "cookingtime": 600
+}

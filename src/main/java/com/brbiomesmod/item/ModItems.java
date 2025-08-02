@@ -208,6 +208,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
     public static final RegistryObject<Item> PASSIONFRUIT_ICE_CREAM = ITEMS.register("passionfruit_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+    public static final RegistryObject<Item> PASSIONFRUIT_CHOCOLATE_ICE_CREAM = ITEMS.register("passionfruit_chocolate_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
     public static final RegistryObject<Item> PASSIONFRUIT_SPICY_ICE_CREAM = ITEMS.register("passionfruit_spicy_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
     public static final RegistryObject<Item> PITANGA_ICE_CREAM = ITEMS.register("pitanga_ice_cream",
