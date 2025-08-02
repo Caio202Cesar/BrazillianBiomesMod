@@ -3,7 +3,7 @@
   "pattern": [
     "CFC",
     "DBE",
-    " A "
+    "AAA"
   ],
   "key": {
     "A": {
@@ -26,6 +26,7 @@
     }
   },
   "result": {
-    "item": "brbiomesmod:chocolate_spicy_ice_cream"
+    "item": "brbiomesmod:chocolate_spicy_ice_cream",
+    "count": 3
   }
 }
