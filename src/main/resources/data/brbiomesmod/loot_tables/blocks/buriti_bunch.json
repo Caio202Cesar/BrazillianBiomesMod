@@ -6,12 +6,12 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:acai_berries",
+          "name": "brbiomesmod:buriti",
           "functions": [
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 6.0,
+                "min": 3,
                 "max": 10,
                 "type": "minecraft:uniform"
               }
