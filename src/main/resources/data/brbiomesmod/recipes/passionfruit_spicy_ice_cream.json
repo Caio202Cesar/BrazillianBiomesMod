@@ -13,7 +13,7 @@
       "item": "minecraft:milk_bucket"
     },
     "C": {
-      "item": "minecraft:cocoa_beans"
+      "item": "brbiomesmod:passionfruit"
     },
     "D": {
       "item": "minecraft:snowball"
@@ -26,6 +26,6 @@
     }
   },
   "result": {
-    "item": "brbiomesmod:chocolate_spicy_ice_cream"
+    "item": "brbiomesmod:passionfruit_spicy_ice_cream"
   }
 }
