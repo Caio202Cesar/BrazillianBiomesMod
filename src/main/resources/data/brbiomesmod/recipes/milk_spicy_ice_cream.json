@@ -13,7 +13,7 @@
       "item": "minecraft:milk_bucket"
     },
     "C": {
-      "item": "brbiomesmod:guarana_seeds"
+      "item": "brbiomesmod:pink_peeper"
     },
     "D": {
       "item": "minecraft:snowball"
@@ -23,7 +23,7 @@
     }
   },
   "result": {
-    "item": "brbiomesmod:guarana_ice_cream",
+    "item": "brbiomesmod:milk_spicy_ice_cream",
     "count": 3
   }
 }

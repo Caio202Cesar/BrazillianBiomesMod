@@ -13,7 +13,7 @@
       "item": "minecraft:milk_bucket"
     },
     "C": {
-      "item": "brbiomesmod:guarana_seeds"
+      "item": "brbiomesmod:parana_pine_cooked_pinenuts"
     },
     "D": {
       "item": "minecraft:snowball"
@@ -23,7 +23,7 @@
     }
   },
   "result": {
-    "item": "brbiomesmod:guarana_ice_cream",
+    "item": "brbiomesmod:parana_pine_nut_ice_cream",
     "count": 3
   }
 }

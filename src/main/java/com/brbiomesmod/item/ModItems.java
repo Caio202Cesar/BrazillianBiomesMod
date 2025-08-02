@@ -80,6 +80,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.BACURI)));
     public static final RegistryObject<Item> MONKEY_CAJARANA = ITEMS.register("monkey_cajarana",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.MONKEY_CAJARANA)));
+    public static final RegistryObject<Item> MATE_LEAF = ITEMS.register("mate_leaf",
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> CAMU_CAMU_FRUITS = ITEMS.register("camu_camu_fruits",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.CAMU_CAMU_FRUITS)));
     public static final RegistryObject<Item> BUTIA_FRUITS = ITEMS.register("butia_fruits",
@@ -247,8 +249,6 @@ public class ModItems {
     public static final RegistryObject<Item> DRIED_CARNAUBA_LEAVES = ITEMS.register("dried_carnauba_leaves",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> CARNAUBA_WAX = ITEMS.register("carnauba_wax",
-            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
-    public static final RegistryObject<Item> MATE_LEAF = ITEMS.register("mate_leaf",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> ASSACU_POISON_SAP = ITEMS.register("assacu_poison_sap",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
