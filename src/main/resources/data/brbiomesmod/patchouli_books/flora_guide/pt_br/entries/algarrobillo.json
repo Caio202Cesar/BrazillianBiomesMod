@@ -1,11 +1,11 @@
 {
-  "name": "Algarrobillo",
+  "name": "Inhaduvá",
   "icon": "brbiomesmod:algarrobillo_sapling",
   "category": "brbiomesmod:trees",
   "pages": [
     {
       "type": "text",
-      "title": "Informação Botânica",
+      "title": "Plant Info",
       "text": "$(bold)Nome Científico:$(reset) Neltuma affinis$(br)$(bold)Biomas:$(reset) Pampas"
     },
     {

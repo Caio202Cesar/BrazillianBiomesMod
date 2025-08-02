@@ -6,13 +6,13 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Ochroma pyramidale$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
+      "text": "$(bold)Nome Científico:$(reset) Ochroma pyramidale$(br)$(bold)Biomas:$(reset) Floresta Amazônica"
     },
     {
       "type": "spotlight",
       "item": "brbiomesmod:balsa_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }

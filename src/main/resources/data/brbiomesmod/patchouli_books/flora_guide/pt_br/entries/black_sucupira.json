@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Bowdichia virgilioides$(br)$(bold)Biomes:$(reset) Cerrado"
+      "text": "$(bold)Nome Científico:$(reset) Bowdichia virgilioides$(br)$(bold)Biomas:$(reset) Cerrado, Mata Atlântica, Amazon Rainforest, Pantanal, Caatinga, Restinga das Dunas"
     },
     {
       "type": "spotlight",
