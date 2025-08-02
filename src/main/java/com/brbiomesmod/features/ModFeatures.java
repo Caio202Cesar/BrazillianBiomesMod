@@ -101,7 +101,8 @@ public class ModFeatures extends Features implements IFeatureConfig {
                         .addWeightedBlockstate(States.GUZMANIA_YELLOW, 1)
                         .addWeightedBlockstate(States.AECHMEA_ALBA, 1)
                         .addWeightedBlockstate(States.FIREBALL_NEOREGELIA, 1)
-                        .addWeightedBlockstate(States.NEOREGELIA_MARMORATA, 1),
+                        .addWeightedBlockstate(States.NEOREGELIA_MARMORATA, 1)
+                        .addWeightedBlockstate(States.BLACK_ORCHID, 1),
                         SimpleBlockPlacer.PLACER)).tries(64).build();
 
         public static final BlockClusterFeatureConfig ARAUCARIA_FLOWERS_CONFIG =
