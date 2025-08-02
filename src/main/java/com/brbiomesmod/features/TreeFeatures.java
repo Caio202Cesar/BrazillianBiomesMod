@@ -1014,19 +1014,20 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     QUEEN_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(7, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_TREES_WITH_PASSIONVINE = register("passionvine_atlantic_forest_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_ROSEWOOD_WITH_PASSIONVINE.withChance(0.7F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_ROSEWOOD_WITH_PASSIONVINE.withChance(0.5F),
                             BRAZILLIAN_SASSAFRAS_TREE_WITH_PASSIONVINE.withChance(0.3F), CECROPIA_WITH_PASSIONVINE.withChance(0.3F),
-                            SILVER_CECROPIA_WITH_PASSIONVINE.withChance(0.07F), BRAZILWOOD_TREE_WITH_PASSIONVINE.withChance(0.7F),
-                            SAPUCAIA_TREE_WITH_PASSIONVINE.withChance(0.06F), MANACA_WITH_PASSIONVINE.withChance(0.1F),
-                            JABUTICABA_TREE_WITH_PASSIONVINE.withChance(0.14F)),
+                            SILVER_CECROPIA_WITH_PASSIONVINE.withChance(0.17F), BRAZILWOOD_TREE_WITH_PASSIONVINE.withChance(0.5F),
+                            SAPUCAIA_TREE_WITH_PASSIONVINE.withChance(0.3F), MANACA_WITH_PASSIONVINE.withChance(0.1F),
+                            JABUTICABA_TREE_WITH_PASSIONVINE.withChance(0.3F)),
                             PINK_PEROBA_TREE_WITH_PASSIONFRUIT)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.5F, 3))));
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_UPPER_TREES = register("atlantic_forest_upper_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.2F),
-                    JEQUITIBA_TREE.withChance(0.2F), BRAZILLIAN_SASSAFRAS_TREE.withChance(0.3F),
+                    JEQUITIBA_TREE.withChance(0.09F), BRAZILLIAN_SASSAFRAS_TREE.withChance(0.3F), GUAPURUVU_TREE.withChance(0.2F),
                     BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.3F), MANACA_FANCY_TREE.withChance(0.4F), MANACA_TREE.withChance(0.3F),
                     SILVER_CECROPIA_TREE.withChance(0.2F), SAPUCAIA_TREE.withChance(0.2F), BRAZILLIAN_ROSEWOOD_TREE.withChance(0.3F),
-                    BRAZILWOOD_TREE.withChance(0.2F),BRAZILWOOD_FANCY_TREE.withChance(0.43F),  JENIPAPO_TREE.withChance(0.1F), JABUTICABA_TREE.withChance(0.3F)),
+                    BRAZILWOOD_TREE.withChance(0.2F),BRAZILWOOD_FANCY_TREE.withChance(0.43F),  JENIPAPO_TREE.withChance(0.15F),
+                    JABUTICABA_TREE.withChance(0.3F), PURPLEHEART_TREE.withChance(0.3F), YELLOW_MOMBIN_TREE.withChance(0.4F)),
                     PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 3))));
     public static final ConfiguredFeature<?, ?> CAMBUCI_TREES = register("cambuci_trees",
@@ -1042,16 +1043,16 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Amazon rainforest vegetation
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(KAPOK_TREE.withChance(0.5F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(KAPOK_TREE.withChance(0.4F),
                             CUPUACU_TREE.withChance(0.4F), COCOA_TREE.withChance(0.4F), CAMU_CAMU_TREE.withChance(0.25F), SOMBREIRO_TREE.withChance(0.3F),
                             LARGE_CECROPIA_TREE.withChance(0.2F), SHARINGA_TREE.withChance(0.5F), LOPHANTERA_TREE2.withChance(0.25F),
                             BACURI_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.5F), BALSA_TREE.withChance(0.5F),
-                            MEGA_BALSA_TREE.withChance(0.5F), BRAZILNUT_TREE.withChance(0.5F), BRAZILNUT_FANCY_TREE.withChance(0.5F)),
-                            LOPHANTERA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(10, 0.6F, 2))));
+                            MEGA_BALSA_TREE.withChance(0.5F), YELLOW_MOMBIN_TREE.withChance(0.2F), BRAZILNUT_TREE.withChance(0.5F),  BRAZILNUT_FANCY_TREE.withChance(0.5F),
+                            PURPLEHEART_TREE.withChance(0.4F)), LOPHANTERA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.0F, 2))));
     public static final ConfiguredFeature<?, ?> VARZEA_TREES = register("varzea_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.09F),
-                            SANDBOX_TREE.withChance(0.25F), JENIPAPO_TREE.withChance(0.22F)), KAPOK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            SANDBOX_TREE.withChance(0.25F), YELLOW_MOMBIN_TREE.withChance(0.17F), JENIPAPO_TREE.withChance(0.22F)), KAPOK_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.3F, 1))));//Add copaiba and andiroba
     public static final ConfiguredFeature<?, ?> VARZEA_PALMS = register("varzea_palms",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.3F)),
@@ -1136,7 +1137,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Restinga vegetation
     public static final ConfiguredFeature<?, ?> RESTINGA_TREES = register("restinga_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.1F),
-                            CECROPIA_TREE.withChance(0.2F), MONKEY_CAJARANA_TREE1.withChance(0.1F), MONKEY_CAJARANA_TREE2.withChance(0.2F),
+                            CECROPIA_TREE.withChance(0.2F), YELLOW_MOMBIN_TREE.withChance(0.2F), MONKEY_CAJARANA_TREE1.withChance(0.1F), MONKEY_CAJARANA_TREE2.withChance(0.2F),
                             JENIPAPO_TREE.withChance(0.1F)), CASHEW_SHRUB))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
@@ -1169,7 +1170,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Cerrado vegetation
     public static final ConfiguredFeature<?, ?> CERRADO_FRUIT_TREES = register("cerrado_fruit_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.1985F),
-                            CAGAITA_TREE.withChance(0.1895F), JENIPAPO_TREE.withChance(0.35F), PEQUI_TREE.withChance(0.35F)), WOLF_APPLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            CAGAITA_TREE.withChance(0.1895F), YELLOW_MOMBIN_TREE.withChance(0.13F), JENIPAPO_TREE.withChance(0.2F), PEQUI_TREE.withChance(0.35F)), WOLF_APPLE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.3F, 2))));
     public static final ConfiguredFeature<?, ?> CERRADO_PALM_TREES = register("cerrado_palm_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(QUEEN_PALM.withChance(0.5F), JELLY_PALM.withChance(0.2F)),

@@ -1,0 +1,18 @@
+{
+  "name": "Silver Cecropia",
+  "icon": "brbiomesmod:cecropia_silver_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Cecropia hololeuca$(br)$(bold)Biomes:$(reset) Atlantic Forest"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:cecropia_silver_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}
