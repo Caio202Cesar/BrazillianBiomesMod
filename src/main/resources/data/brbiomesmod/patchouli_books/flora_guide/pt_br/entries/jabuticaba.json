@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Plinia cauliflora$(br)$(bold)Biomes:$(reset) Atlantic Forest"
+      "text": "$(bold)Nome Científico:$(reset) Plinia cauliflora$(br)$(bold)Biomes:$(reset) Atlantic Forest"
     },
     {
       "type": "spotlight",

@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Butia spp$(br)$(bold)Biomes:$(reset) Pampas"
+      "text": "$(bold)Nome Científico:$(reset) Butia spp$(br)$(bold)Biomes:$(reset) Pampas"
     },
     {
       "type": "spotlight",

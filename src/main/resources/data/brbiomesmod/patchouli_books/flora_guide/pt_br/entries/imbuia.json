@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Ocotea porosa$(br)$(bold)Biomes:$(reset) Araucaria Plateau"
+      "text": "$(bold)Nome Científico:$(reset) Ocotea porosa$(br)$(bold)Biomes:$(reset) Araucaria Plateau"
     },
     {
       "type": "spotlight",

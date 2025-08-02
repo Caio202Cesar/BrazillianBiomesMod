@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Ceiba pentandra$(br)$(bold)Biomes:$(reset) Amazon Rainforest, Amazon Varzea"
+      "text": "$(bold)Nome Científico:$(reset) Ceiba pentandra$(br)$(bold)Biomes:$(reset) Amazon Rainforest, Amazon Varzea"
     },
     {
       "type": "spotlight",

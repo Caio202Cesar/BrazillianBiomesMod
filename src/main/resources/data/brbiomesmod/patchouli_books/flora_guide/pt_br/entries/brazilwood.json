@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Paubrasilia echinata$(br)$(bold)Biomas:$(reset) Mata Atlântica"
+      "text": "$(bold)Nome Científico:$(reset) Paubrasilia echinata$(br)$(bold)Biomas:$(reset) Mata atlântica, restinga das dunas"
     },
     {
       "type": "spotlight",

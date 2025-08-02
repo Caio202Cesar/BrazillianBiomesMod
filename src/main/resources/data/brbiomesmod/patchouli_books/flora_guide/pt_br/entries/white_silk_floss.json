@@ -6,13 +6,13 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Ceiba glaziovii$(br)$(bold)Biomes:$(reset) Caatinga"
+      "text": "$(bold)Nome Científico:$(reset) Ceiba glaziovii$(br)$(bold)Biomas:$(reset) Caatinga"
     },
     {
       "type": "spotlight",
       "item": "brbiomesmod:silk_floss_white_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }

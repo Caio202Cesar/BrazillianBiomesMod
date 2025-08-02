@@ -6,13 +6,13 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Clitoria fairchildiana$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
+      "text": "$(bold)Nome Científico:$(reset) Clitoria fairchildiana$(br)$(bold)Biomas:$(reset) Floresta amazônica"
     },
     {
       "type": "spotlight",
       "item": "brbiomesmod:sombreiro_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }

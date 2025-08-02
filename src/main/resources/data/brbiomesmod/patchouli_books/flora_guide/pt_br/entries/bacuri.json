@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Informação Botânica",
-      "text": "$(bold)Nome Científico:$(reset) Platonia insignis$(br)$(bold)Biomas:$(reset) Floresta Amazônica"
+      "text": "$(bold)Nome Científico:$(reset) Platonia insignis$(br)$(bold)Biomas:$(reset) Floresta amazônica"
     },
     {
       "type": "spotlight",

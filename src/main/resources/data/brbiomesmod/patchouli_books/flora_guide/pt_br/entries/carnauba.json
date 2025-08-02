@@ -1,5 +1,5 @@
 {
-  "name": "Carnauba",
+  "name": "Carnaúba",
   "icon": "brbiomesmod:carnauba_sapling",
   "category": "brbiomesmod:trees",
   "pages": [
@@ -12,7 +12,7 @@
       "type": "spotlight",
       "item": "brbiomesmod:carnauba_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }

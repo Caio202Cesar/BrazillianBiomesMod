@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Erythrina crista-galli$(br)$(bold)Biomes:$(reset) Pampas"
+      "text": "$(bold)Nome Científico:$(reset) Erythrina crista-galli$(br)$(bold)Biomes:$(reset) Pampas"
     },
     {
       "type": "spotlight",

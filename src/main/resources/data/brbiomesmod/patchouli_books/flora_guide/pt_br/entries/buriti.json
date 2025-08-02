@@ -1,12 +1,12 @@
 {
-  "name": "Buriti",
+  "name": "Buritizeiro",
   "icon": "brbiomesmod:buriti_sapling",
   "category": "brbiomesmod:trees",
   "pages": [
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Mauritia flexuosa$(br)$(bold)Biomas:$(reset) Cerrado, Pantanal, Várzea Amazônica"
+      "text": "$(bold)Nome Científico:$(reset) Mauritia flexuosa$(br)$(bold)Biomas:$(reset) Cerrado, pantanal, várzea amazônica"
     },
     {
       "type": "spotlight",

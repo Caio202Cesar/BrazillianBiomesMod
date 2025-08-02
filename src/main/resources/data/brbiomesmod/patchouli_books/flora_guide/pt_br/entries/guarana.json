@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Paullinia cupana$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
+      "text": "$(bold)Nome Científico:$(reset) Paullinia cupana$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
     },
     {
       "type": "spotlight",

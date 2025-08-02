@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Dalbergia nigra$(br)$(bold)Biomas:$(reset) Mata Atlântica"
+      "text": "$(bold)Nome Científico:$(reset) Dalbergia nigra$(br)$(bold)Biomas:$(reset) Mata atlântica"
     },
     {
       "type": "spotlight",

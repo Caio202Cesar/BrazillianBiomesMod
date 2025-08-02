@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Bertholletia excelsa$(br)$(bold)Biomas:$(reset) Floresta Amazônica"
+      "text": "$(bold)Nome Científico:$(reset) Bertholletia excelsa$(br)$(bold)Biomas:$(reset) Floresta amazônica"
     },
     {
       "type": "spotlight",

@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Schinus terebinthifolia$(br)$(bold)Biomas:$(reset) Mata Atlântica, Mata de Araucarias, Pampas, Caatinga, Restinga das Dunas, Cerrado"
+      "text": "$(bold)Nome Científico:$(reset) Schinus terebinthifolia$(br)$(bold)Biomas:$(reset) Mata atlântica, mata de araucarias, pampas, caatinga, testinga das dunas, cerrado"
     },
     {
       "type": "spotlight",

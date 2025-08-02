@@ -1,18 +1,18 @@
 {
-  "name": "Cashew",
+  "name": "Cajueiro",
   "icon": "brbiomesmod:cashew_sapling",
   "category": "brbiomesmod:trees",
   "pages": [
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Anacardium occidentale$(br)$(bold)Biomes:$(reset) Dunas Restinga"
+      "text": "$(bold)Nome Científico:$(reset) Anacardium occidentale$(br)$(bold)Biomes:$(reset) Restinga das dunas"
     },
     {
       "type": "spotlight",
       "item": "brbiomesmod:cashew_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }

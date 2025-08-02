@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Cecropia spp$(br)$(bold)Biomes:$(reset) Atlantic Forest, Dunas Restinga, Amazon Rainforest, Pantanal"
+      "text": "$(bold)Nome Científico:$(reset) Cecropia spp$(br)$(bold)Biomes:$(reset) Atlantic Forest, Dunas Restinga, Amazon Rainforest, Pantanal"
     },
     {
       "type": "spotlight",

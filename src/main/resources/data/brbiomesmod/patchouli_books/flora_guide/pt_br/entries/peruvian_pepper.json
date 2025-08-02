@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Schinus molle$(br)$(bold)Biomes:$(reset) Pampas, Araucaria Plateau"
+      "text": "$(bold)Nome Científico:$(reset) Schinus molle$(br)$(bold)Biomes:$(reset) Pampas, Araucaria Plateau"
     },
     {
       "type": "spotlight",

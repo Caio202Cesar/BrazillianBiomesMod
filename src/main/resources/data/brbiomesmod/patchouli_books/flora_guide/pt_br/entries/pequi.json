@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Caryocar brasiliense$(br)$(bold)Biomes:$(reset) Cerrado"
+      "text": "$(bold)Nome Científico:$(reset) Caryocar brasiliense$(br)$(bold)Biomes:$(reset) Cerrado"
     },
     {
       "type": "spotlight",

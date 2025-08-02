@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Ocotea odorifera$(br)$(bold)Biomas:$(reset) Mata Atlântica, Mata de Araucarias"
+      "text": "$(bold)Nome Científico:$(reset) Ocotea odorifera$(br)$(bold)Biomas:$(reset) Mata atlântica, mata de araucarias"
     },
     {
       "type": "spotlight",

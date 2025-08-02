@@ -6,13 +6,13 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Spondias tuberosa$(br)$(bold)Biomes:$(reset) Caatinga"
+      "text": "$(bold)Nome Científico:$(reset) Spondias tuberosa$(br)$(bold)Biomas:$(reset) Caatinga"
     },
     {
       "type": "spotlight",
       "item": "brbiomesmod:umbu_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }

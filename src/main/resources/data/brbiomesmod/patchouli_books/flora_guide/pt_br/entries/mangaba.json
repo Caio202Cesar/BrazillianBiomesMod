@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Hancornia speciosa$(br)$(bold)Biomes:$(reset) Dunas Restinga, Cerrado"
+      "text": "$(bold)Nome Científico:$(reset) Hancornia speciosa$(br)$(bold)Biomes:$(reset) Dunas Restinga, Cerrado"
     },
     {
       "type": "spotlight",

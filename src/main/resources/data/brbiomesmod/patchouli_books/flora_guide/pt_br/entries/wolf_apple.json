@@ -1,18 +1,18 @@
 {
-  "name": "Wolf Apple",
+  "name": "Lobeira",
   "icon": "brbiomesmod:wolf_apple_sapling",
   "category": "brbiomesmod:trees",
   "pages": [
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Solanum lycocarpum$(br)$(bold)Biomes:$(reset) Cerrado"
+      "text": "$(bold)Nome Científico:$(reset) Solanum lycocarpum$(br)$(bold)Biomas:$(reset) Cerrado"
     },
     {
       "type": "spotlight",
       "item": "brbiomesmod:wolf_apple_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }

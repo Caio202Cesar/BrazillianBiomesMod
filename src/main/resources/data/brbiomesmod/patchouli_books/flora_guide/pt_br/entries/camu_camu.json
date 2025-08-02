@@ -6,13 +6,13 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Myrciaria dubia$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
+      "text": "$(bold)Nome Científico:$(reset) Myrciaria dubia$(br)$(bold)Biomes:$(reset) Floresta Amazônica"
     },
     {
       "type": "spotlight",
       "item": "brbiomesmod:camu_camu_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }

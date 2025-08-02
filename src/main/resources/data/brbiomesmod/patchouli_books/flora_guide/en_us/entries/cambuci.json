@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Campomanesia phaea$(br)$(bold)Biomes:$(reset) Atlantic Forest"
+      "text": "$(bold)Scientific Name:$(reset) Campomanesia phaea$(br)$(bold)Biomes:$(reset) Atlantic Forest Hills (exclusively)"
     },
     {
       "type": "spotlight",

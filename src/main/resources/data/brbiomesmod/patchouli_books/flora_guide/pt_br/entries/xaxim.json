@@ -6,13 +6,13 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Dicksonia sellowiana$(br)$(bold)Biomes:$(reset) Araucaria Plateau"
+      "text": "$(bold)Nome Científico:$(reset) Dicksonia sellowiana$(br)$(bold)Biomas:$(reset) Mata de araucaria"
     },
     {
       "type": "spotlight",
       "item": "brbiomesmod:xaxim_sapling",
       "title": "Tree Spotlight",
-      "text": "Tree Sapling."
+      "text": "Muda."
     }
   ]
 }
