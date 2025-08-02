@@ -92,6 +92,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP)));
     public static final RegistryObject<Item> CAATINGA_PASSIONFRUIT = ITEMS.register("caatinga_passionfruit",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.CAATINGA_PASSIONFRUIT)));
+    public static final RegistryObject<Item> YELLOW_MOMBIN = ITEMS.register("yellow_mombin",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP)));
 
     //Food
     public static final RegistryObject<Item> COOKED_CASHEWNUT = ITEMS.register("cooked_cashewnut",

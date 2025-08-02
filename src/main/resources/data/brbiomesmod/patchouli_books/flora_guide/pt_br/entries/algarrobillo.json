@@ -5,7 +5,7 @@
   "pages": [
     {
       "type": "text",
-      "title": "Plant Info",
+      "title": "Informação Botânica",
       "text": "$(bold)Nome Científico:$(reset) Neltuma affinis$(br)$(bold)Biomas:$(reset) Pampas"
     },
     {
