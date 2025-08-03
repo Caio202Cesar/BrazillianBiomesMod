@@ -65,8 +65,8 @@ public class ModFoods extends Foods {
             .effect(new EffectInstance(Effects.JUMP_BOOST, 2400, 0), 1.0F).build();
     public static final Food BURITI_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
     public static final Food GUARANA_SODA = (new Food.Builder()).hunger(2).saturation(0.1F)
-            .effect(new EffectInstance(Effects.SPEED, 2400, 0), 1.0F)
-            .effect(new EffectInstance(Effects.JUMP_BOOST, 2400, 0), 1.0F).build();
+            .effect(new EffectInstance(Effects.JUMP_BOOST, 100, 0), 0.6F)
+            .effect(new EffectInstance(Effects.SPEED, 100, 0), 0.6F).build();
     public static final Food BURITI = (new Food.Builder()).hunger(2).saturation(0.3F).build();
     public static final Food ACAI_BERRIES = (new Food.Builder()).hunger(2).saturation(0.3F).build();
     public static final Food PALM_HEART = (new Food.Builder()).hunger(4).saturation(0.4F).build();

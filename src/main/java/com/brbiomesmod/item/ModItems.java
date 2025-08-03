@@ -41,7 +41,7 @@ public class ModItems {
     public static final RegistryObject<Item> PARANA_PINE_CONE = ITEMS.register("parana_pine_cone",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP)));
     public static final RegistryObject<Item> GUARANA_FRUIT = ITEMS.register("guarana_fruit",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.GUARANA_FRUIT)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP)));
     public static final RegistryObject<Item> GUARANA_SEEDS = ITEMS.register("guarana_seeds",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP)));
     public static final RegistryObject<Item> BRAZILNUT_FRUIT = ITEMS.register("brazilnut_fruit",
@@ -81,7 +81,7 @@ public class ModItems {
     public static final RegistryObject<Item> MONKEY_CAJARANA = ITEMS.register("monkey_cajarana",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.MONKEY_CAJARANA)));
     public static final RegistryObject<Item> MATE_LEAF = ITEMS.register("mate_leaf",
-            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP)));
     public static final RegistryObject<Item> CAMU_CAMU_FRUITS = ITEMS.register("camu_camu_fruits",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.CAMU_CAMU_FRUITS)));
     public static final RegistryObject<Item> BUTIA_FRUITS = ITEMS.register("butia_fruits",
@@ -93,7 +93,7 @@ public class ModItems {
     public static final RegistryObject<Item> CAATINGA_PASSIONFRUIT = ITEMS.register("caatinga_passionfruit",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.CAATINGA_PASSIONFRUIT)));
     public static final RegistryObject<Item> YELLOW_MOMBIN = ITEMS.register("yellow_mombin",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.YELLOW_MOMBIN)));
 
     //Food
     public static final RegistryObject<Item> COOKED_CASHEWNUT = ITEMS.register("cooked_cashewnut",
