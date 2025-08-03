@@ -165,69 +165,69 @@ public class ModItems {
     public static final RegistryObject<Item> BACURI_PASTE = ITEMS.register("bacuri_paste",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BACURI_PASTE)));
     public static final RegistryObject<Item> COOKED_PEQUI = ITEMS.register("cooked_pequi_fruit",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.COOKED_PEQUI)));
     public static final RegistryObject<Item> ACAI_ICE_CREAM = ITEMS.register("acai_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.ACAI_ICE_CREAM)));
     public static final RegistryObject<Item> ACAI_BANANA_ICE_CREAM = ITEMS.register("acai_banana_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.ACAI_BANANA_ICE_CREAM)));
     public static final RegistryObject<Item> BLACK_PITANGA_ICE_CREAM = ITEMS.register("black_pitanga_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BLACK_PITANGA_ICE_CREAM)));
     public static final RegistryObject<Item> BACURI_ICE_CREAM = ITEMS.register("bacuri_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BACURI_ICE_CREAM)));
     public static final RegistryObject<Item> BRAZILNUT_ICE_CREAM = ITEMS.register("brazilnut_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BRAZILNUT_ICE_CREAM)));
     public static final RegistryObject<Item> BURITI_ICE_CREAM = ITEMS.register("buriti_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BURITI_ICE_CREAM)));
     public static final RegistryObject<Item> BUTIA_ICE_CREAM = ITEMS.register("butia_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BUTIA_ICE_CREAM)));
     public static final RegistryObject<Item> CAGAITA_ICE_CREAM = ITEMS.register("cagaita_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CAGAITA_ICE_CREAM)));
     public static final RegistryObject<Item> CAMBUCI_ICE_CREAM = ITEMS.register("cambuci_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CAMBUCI_ICE_CREAM)));
     public static final RegistryObject<Item> CAMU_CAMU_ICE_CREAM = ITEMS.register("camu_camu_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CAMU_CAMU_ICE_CREAM)));
     public static final RegistryObject<Item> CASHEWNUT_ICE_CREAM = ITEMS.register("cashewnut_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CASHEWNUT_ICE_CREAM)));
     public static final RegistryObject<Item> CASHEW_APPLE_ICE_CREAM = ITEMS.register("cashew_apple_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CASHEW_APPLE_ICE_CREAM)));
     public static final RegistryObject<Item> CHOCOLATE_SPICY_ICE_CREAM = ITEMS.register("chocolate_spicy_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods. CHOCOLATE_SPICY_ICE_CREAM)));
     public static final RegistryObject<Item> COCONUT_TAPIOCA_ICE_CREAM = ITEMS.register("coconut_tapioca_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.COCONUT_TAPIOCA_ICE_CREAM)));
     public static final RegistryObject<Item> FEIJOA_ICE_CREAM = ITEMS.register("feijoa_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.FEIJOA_ICE_CREAM)));
     public static final RegistryObject<Item> GUARANA_ICE_CREAM = ITEMS.register("guarana_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.GUARANA_ICE_CREAM)));
     public static final RegistryObject<Item> JABUTICABA_ICE_CREAM = ITEMS.register("jabuticaba_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.JABUTICABA_ICE_CREAM)));
     public static final RegistryObject<Item> JENIPAPO_ICE_CREAM = ITEMS.register("jenipapo_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.JENIPAPO_ICE_CREAM)));
     public static final RegistryObject<Item> JUA_BERRIES_ICE_CREAM = ITEMS.register("jua_berries_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.JUA_BERRIES_ICE_CREAM)));
     public static final RegistryObject<Item> MANGABA_ICE_CREAM = ITEMS.register("mangaba_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.MANGABA_ICE_CREAM)));
     public static final RegistryObject<Item> MATE_ICE_CREAM = ITEMS.register("mate_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.MATE_ICE_CREAM)));
     public static final RegistryObject<Item> SPICY_MILK_ICE_CREAM = ITEMS.register("milk_spicy_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.SPICY_MILK_ICE_CREAM)));
     public static final RegistryObject<Item> PARANA_PINE_NUT_ICE_CREAM = ITEMS.register("parana_pine_nut_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PARANA_PINE_NUT_ICE_CREAM)));
     public static final RegistryObject<Item> PASSIONFRUIT_ICE_CREAM = ITEMS.register("passionfruit_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PASSIONFRUIT_ICE_CREAM)));
     public static final RegistryObject<Item> PASSIONFRUIT_CHOCOLATE_ICE_CREAM = ITEMS.register("passionfruit_chocolate_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PASSIONFRUIT_CHOCOLATE_ICE_CREAM)));
     public static final RegistryObject<Item> PASSIONFRUIT_SPICY_ICE_CREAM = ITEMS.register("passionfruit_spicy_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PASSIONFRUIT_SPICY_ICE_CREAM)));
     public static final RegistryObject<Item> PITANGA_ICE_CREAM = ITEMS.register("pitanga_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PITANGA_ICE_CREAM)));
     public static final RegistryObject<Item> PEQUI_CREAM = ITEMS.register("pequi_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PEQUI_ICE_CREAM)));
     public static final RegistryObject<Item> RIO_GRANDE_CHERRY_ICE_CREAM = ITEMS.register("rio_grande_cherry_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.RIO_GRANDE_CHERRY_ICE_CREAM)));
     public static final RegistryObject<Item> UMBU_ICE_CREAM = ITEMS.register("umbu_ice_cream",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.UMBU_ICE_CREAM)));
     public static final RegistryObject<Item> TAPIOCA = ITEMS.register("tapioca",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.TAPIOCA)));
 
     //Materials
     public static final RegistryObject<Item> BRAZILNUT_SHELL = ITEMS.register("brazilnut_shell",
