@@ -228,6 +228,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.UMBU_ICE_CREAM)));
     public static final RegistryObject<Item> TAPIOCA = ITEMS.register("tapioca",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.TAPIOCA)));
+    public static final RegistryObject<Item> PASSIONFRUIT_MOUSSE = ITEMS.register("passionfruit_mousse",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.TAPIOCA)));
 
     //Materials
     public static final RegistryObject<Item> BRAZILNUT_SHELL = ITEMS.register("brazilnut_shell",
