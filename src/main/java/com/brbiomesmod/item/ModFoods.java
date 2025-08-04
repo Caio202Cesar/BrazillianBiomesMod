@@ -99,7 +99,9 @@ public class ModFoods extends Foods {
     public static final Food CHOCOLATE_SPICY_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food COCONUT_TAPIOCA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food FEIJOA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
-    public static final Food GUARANA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food GUARANA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F)
+            .effect(new EffectInstance(Effects.JUMP_BOOST, 100, 0), 0.6F)
+            .effect(new EffectInstance(Effects.SPEED, 100, 0), 0.6F).build();
     public static final Food JABUTICABA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food JENIPAPO_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food JUA_BERRIES_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
