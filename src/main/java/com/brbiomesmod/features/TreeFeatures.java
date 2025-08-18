@@ -1078,7 +1078,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Pantanal Vegetation
     public static final ConfiguredFeature<?, ?> PANTANAL_VEGETATION = register("pantanal_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.3F),
-                    JENIPAPO_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F)),
+                    JENIPAPO_TREE.withChance(0.3F), PINK_SILK_FLOSS_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F)),
                     CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 
