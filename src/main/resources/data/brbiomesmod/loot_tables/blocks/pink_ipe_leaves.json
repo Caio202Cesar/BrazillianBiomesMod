@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:purple_ipe_blossom"
+              "name": "brbiomesmod:pink_ipe_leaves"
             },
             {
               "type": "minecraft:item",
@@ -54,7 +54,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:purple_ipe_sapling"
+              "name": "brbiomesmod:pink_ipe_sapling"
             }
           ]
         }

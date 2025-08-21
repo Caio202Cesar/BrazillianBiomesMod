@@ -29,9 +29,15 @@
     "brbiomesmod:cecropia_silver_leaves",
     "brbiomesmod:manaca_da_serra_leaves",
     "brbiomesmod:yellow_ipe_blossom",
+    "brbiomesmod:yellow_ipe_leaves",
     "brbiomesmod:purple_ipe_blossom",
+    "brbiomesmod:purple_ipe_leaves",
+    "brbiomesmod:purple_ipe_fall_leaves",
     "brbiomesmod:pink_ipe_blossom",
+    "brbiomesmod:pink_ipe_leaves",
+    "brbiomesmod:pink_ipe_fall_leaves",
     "brbiomesmod:white_ipe_blossom",
+    "brbiomesmod:white_ipe_leaves",
     "brbiomesmod:apricot_ipe_blossom",
     "brbiomesmod:pitanga_leaves",
     "brbiomesmod:pitanga_flowering_leaves",
@@ -89,15 +95,6 @@
     "brbiomesmod:xaxim_leaves",
     "brbiomesmod:jenipapo_leaves",
     "brbiomesmod:jenipapo_flowering_leaves",
-    "brbiomesmod:jenipapo_fruiting_leaves",
-    "brbiomesmod:pequi_leaves",
-    "brbiomesmod:pequi_flowering_leaves",
-    "brbiomesmod:pequi_fruiting_leaves",
-    "brbiomesmod:yellow_mombin_leaves",
-    "brbiomesmod:yellow_mombin_flowering_leaves",
-    "brbiomesmod:yellow_mombin_fruiting_leaves",
-    "brbiomesmod:guapuruvu_leaves",
-    "brbiomesmod:sandbox_tree_leaves"
-
+    "brbiomesmod:jenipapo_fruiting_leaves"
   ]
 }
