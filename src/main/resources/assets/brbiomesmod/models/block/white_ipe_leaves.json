@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/white_ipe_leaves",
+    "particle": "brbiomesmod:block/white_ipe_leaves"
+  }
+}
