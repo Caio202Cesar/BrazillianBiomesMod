@@ -118,27 +118,27 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Ipe Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOW_IPE_TREE = register("yellow_ipe_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
-                    new SimpleBlockStateProvider(States.YELLOW_IPE_BLOSSOM),
+                    new SimpleBlockStateProvider(States.YELLOW_IPE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLE_IPE_TREE = register("purple_ipe_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
-                    new SimpleBlockStateProvider(States.PURPLE_IPE_BLOSSOM),
+                    new SimpleBlockStateProvider(States.PURPLE_IPE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_IPE_TREE = register("pink_ipe_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
-                    new SimpleBlockStateProvider(States.PINK_IPE_BLOSSOM),
+                    new SimpleBlockStateProvider(States.PINK_IPE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_IPE_TREE = register("white_ipe_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.IPE_LOG),
-                    new SimpleBlockStateProvider(States.WHITE_IPE_BLOSSOM),
+                    new SimpleBlockStateProvider(States.WHITE_IPE_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
@@ -906,10 +906,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState CAMU_CAMU_LEAVES = TreesGroup.CAMU_CAMU_LEAVES.get().getDefaultState();
 
         protected static final BlockState IPE_LOG = TreesGroup.IPE_LOG.get().getDefaultState();
-        protected static final BlockState YELLOW_IPE_BLOSSOM = TreesGroup.YELLOW_IPE_BLOSSOM.get().getDefaultState();
-        protected static final BlockState PURPLE_IPE_BLOSSOM = TreesGroup.PURPLE_IPE_BLOSSOM.get().getDefaultState();
-        protected static final BlockState PINK_IPE_BLOSSOM = TreesGroup.PINK_IPE_BLOSSOM.get().getDefaultState();
-        protected static final BlockState WHITE_IPE_BLOSSOM = TreesGroup.WHITE_IPE_BLOSSOM.get().getDefaultState();
+        protected static final BlockState YELLOW_IPE_LEAVES = TreesGroup.YELLOW_IPE_LEAVES.get().getDefaultState();
+        protected static final BlockState PURPLE_IPE_LEAVES = TreesGroup.PURPLE_IPE_LEAVES.get().getDefaultState();
+        protected static final BlockState PINK_IPE_LEAVES = TreesGroup.PINK_IPE_LEAVES.get().getDefaultState();
+        protected static final BlockState WHITE_IPE_LEAVES = TreesGroup.WHITE_IPE_LEAVES.get().getDefaultState();
         protected static final BlockState APRICOT_IPE_BLOSSOM = TreesGroup.APRICOT_IPE_BLOSSOM.get().getDefaultState();
 
         protected static final BlockState CAMBUCI_LOG = TreesGroup.CAMBUCI_LOG.get().getDefaultState();
