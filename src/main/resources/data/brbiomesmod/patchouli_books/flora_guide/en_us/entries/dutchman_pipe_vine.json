@@ -1,0 +1,18 @@
+{
+  "name": "Brazillian Dutchman Pipe Vine",
+  "icon": "brbiomesmod:brazillian_dutchman_pipe_vine",
+  "category": "brbiomesmod:vines",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Aristolochia gigantea$(br)$(bold)Biomes:$(reset) Atlantic Forest"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:brazillian_dutchman_pipe_vine",
+      "title": "Tree Spotlight",
+      "text": "Flowering vine."
+    }
+  ]
+}
