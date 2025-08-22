@@ -3,7 +3,7 @@
   "group": "food",
   "ingredients": [
     {
-      "item": "minecraft:cobblestone"
+      "item": "minecraft:shears"
     },
     {
       "item": "brbiomesmod:brazilnut_with_pell"
