@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Passiflora cincinnata$(br)$(bold)Biomes:$(reset) Caatinga"
+      "text": "$(bold)Scientific Name:$(reset) Passiflora cincinnata$(br)$(bold)Biomes:$(reset) Caatinga, Cerrado, Dunas Restinga"
     },
     {
       "type": "spotlight",
