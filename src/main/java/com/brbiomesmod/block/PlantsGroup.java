@@ -82,6 +82,8 @@ public class PlantsGroup {
     public static final RegistryObject<Block> TILLANDSIA_STRICTA = registerBlock("tillandsia_stricta",
             EpiphytePlant::new);
 
+    public static final RegistryObject<Block> PAMPAS_GRASS = registerBlock("pampas_grass",
+            CassavaPlant::new);
 
     public static final RegistryObject<Block> TURK_TURBAN_CACTUS = registerBlock("turk_turban_cactus",
             CactusPlant::new);

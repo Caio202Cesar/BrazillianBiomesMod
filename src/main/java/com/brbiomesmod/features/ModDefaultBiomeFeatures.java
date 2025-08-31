@@ -62,6 +62,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withVeloziaPlant(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_VELOZIA_PLANT);
     }
+    public static void withPampasGrass(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.PATCH_PAMPAS_GRASS);
+    }
     public static void withAraucariaPlateauMyrtaceae(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ARAUCARIA_PLATEAU_MYRTACEAE);
     }

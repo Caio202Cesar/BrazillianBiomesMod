@@ -22,6 +22,8 @@ public class CassavaPlant extends DoublePlantBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(PlantsGroup.CASSAVA_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.PAMPAS_GRASS.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

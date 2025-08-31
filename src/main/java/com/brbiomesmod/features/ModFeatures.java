@@ -30,6 +30,11 @@ public class ModFeatures extends Features implements IFeatureConfig {
                             new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
 
+    public static final ConfiguredFeature<?, ?> PATCH_PAMPAS_GRASS = register("patch_pampas_grass",
+            Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(States.PAMPAS_GRASS),
+                            new DoublePlantBlockPlacer())).tries(64).preventProjection().build()).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(7));
+
     public static final ConfiguredFeature<?, ?> BULL_NETTLES = register("bull_nettles",
             Feature.FLOWER.withConfiguration(ModFeatures.Configs.BULL_NETTLE_CONFIG).withPlacement(Features.Placements.VEGETATION_PLACEMENT)
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).count(4));
@@ -178,6 +183,7 @@ public class ModFeatures extends Features implements IFeatureConfig {
         protected static final BlockState VELOZIA = PlantsGroup.VELOZIA.get().getDefaultState();
         protected static final BlockState ZEBRA_PLANT = PlantsGroup.AMAZONIAN_ZEBRA_PLANT.get().getDefaultState();
         protected static final BlockState BLACK_ORCHID = PlantsGroup.BLACK_ORCHID.get().getDefaultState();
+        protected static final BlockState PAMPAS_GRASS = PlantsGroup.PAMPAS_GRASS.get().getDefaultState();
 
     }
 }

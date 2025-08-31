@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "brbiomesmod:block/pampas_grass_top"
+    },
+    "half=lower": {
+      "model": "brbiomesmod:block/pampas_grass_bottom"
+    }
+  }
+}
