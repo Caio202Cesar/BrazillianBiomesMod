@@ -220,7 +220,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PASSIONFRUIT_SPICY_ICE_CREAM)));
     public static final RegistryObject<Item> PITANGA_ICE_CREAM = ITEMS.register("pitanga_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PITANGA_ICE_CREAM)));
-    public static final RegistryObject<Item> PEQUI_CREAM = ITEMS.register("pequi_ice_cream",
+    public static final RegistryObject<Item> PEQUI_ICE_CREAM = ITEMS.register("pequi_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PEQUI_ICE_CREAM)));
     public static final RegistryObject<Item> RIO_GRANDE_CHERRY_ICE_CREAM = ITEMS.register("rio_grande_cherry_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.RIO_GRANDE_CHERRY_ICE_CREAM)));
@@ -229,7 +229,9 @@ public class ModItems {
     public static final RegistryObject<Item> TAPIOCA = ITEMS.register("tapioca",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.TAPIOCA)));
     public static final RegistryObject<Item> PASSIONFRUIT_MOUSSE = ITEMS.register("passionfruit_mousse",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.TAPIOCA)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PASSIONFRUIT_MOUSSE)));
+    public static final RegistryObject<Item> CECROPIA_ICE_CREAM = ITEMS.register("cecropia_fruit_ice_cream",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CECROPIA_ICE_CREAM)));
 
     //Materials
     public static final RegistryObject<Item> BRAZILNUT_SHELL = ITEMS.register("brazilnut_shell",
