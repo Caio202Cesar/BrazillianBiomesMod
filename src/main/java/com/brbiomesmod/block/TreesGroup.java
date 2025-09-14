@@ -131,8 +131,12 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.PURPLE_IPE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+    public static final RegistryObject<Block> APRICOT_IPE_LEAVES = registerBlock("apricot_ipe_leaves",
+            () -> new ApricotIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.APRICOT_IPE_BLOSSOM));
     public static final RegistryObject<Block> APRICOT_IPE_BLOSSOM = registerBlock("apricot_ipe_blossom",
-            ModLeaves::new);
+            () -> new ApricotIpeBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.APRICOT_IPE_LEAVES));
     public static final RegistryObject<Block> APRICOT_IPE_SAPLING = registerBlock("apricot_ipe_sapling",
             ApricotIpeSapling::new);
     @SuppressWarnings("deprecation")

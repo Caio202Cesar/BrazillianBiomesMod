@@ -1,0 +1,18 @@
+{
+  "name": "Apricot Ipe",
+  "icon": "brbiomesmod:apricot_ipe_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset)  Handroanthus × lewisii$(br)$(bold)Biomes:$(reset) Cerrado, Atlantic Forest, Dunas Restinga, Pantanal"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:apricot_ipe_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}
