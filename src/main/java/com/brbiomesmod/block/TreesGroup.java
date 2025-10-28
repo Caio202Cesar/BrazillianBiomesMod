@@ -585,13 +585,18 @@ public class TreesGroup {
     public static final RegistryObject<Block> SCHINUS_LOG = registerBlock("schinus_log",
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILLIAN_PEPPER_LEAVES = registerBlock("brazillian_pepper_leaves",
-            PinkPeeperLeaves::new);
+            () -> new BrazillianPepperLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_PEPPER_FRUITING_LEAVES));
+    public static final RegistryObject<Block> BRAZILLIAN_PEPPER_FRUITING_LEAVES = registerBlock("brazillian_pepper_fruiting_leaves",
+            () -> new BrazillianPepperFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_PEPPER_LEAVES));
     public static final RegistryObject<Block> BRAZILLIAN_PEPPER_SAPLING = registerBlock("brazillian_pepper_sapling",
             BrazillianPepperSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_BRAZILLIAN_PEPPER_SAPLING = BLOCKS.register("potted_brazillian_pepper_sapling",
             () -> new FlowerPotBlock(TreesGroup.BRAZILLIAN_PEPPER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
     public static final RegistryObject<Block> PERUVIAN_PEPPER_LEAVES = registerBlock("peruvian_pepper_leaves",
             PinkPeeperLeaves::new);
     public static final RegistryObject<Block> PERUVIAN_PEPPER_SAPLING = registerBlock("peruvian_pepper_sapling",
