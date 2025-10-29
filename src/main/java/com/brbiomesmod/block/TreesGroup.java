@@ -737,7 +737,11 @@ public class TreesGroup {
     public static final RegistryObject<Block> BRAZILNUT_LOG = registerBlock("brazilnut_log",
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILNUT_LEAVES = registerBlock("brazilnut_leaves",
-            BrazilnutLeaves::new);
+            () -> new BrazilnutLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILNUT_FRUITING_LEAVES));
+    public static final RegistryObject<Block> BRAZILNUT_FRUITING_LEAVES = registerBlock("brazilnut_fruiting_leaves",
+            () -> new BrazilnutFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILNUT_LEAVES));
     public static final RegistryObject<Block> BRAZILNUT_SAPLING = registerBlock("brazilnut_sapling",
             BrazilnutSapling::new);
     @SuppressWarnings("deprecation")
