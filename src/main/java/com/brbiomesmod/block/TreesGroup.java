@@ -4,7 +4,7 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.Custom.*;
 import com.brbiomesmod.block.Custom.Leaves.*;
 import com.brbiomesmod.block.Custom.Log.*;
-import com.brbiomesmod.block.Saplings.*;
+import com.brbiomesmod.block.Custom.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
@@ -721,7 +721,11 @@ public class TreesGroup {
 
 
     public static final RegistryObject<Block> GUARANA_LEAVES = registerBlock("guarana_leaves",
-            GuaranaLeaves::new);
+            () -> new GuaranaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.GUARANA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> GUARANA_FRUITING_LEAVES = registerBlock("guarana_fruiting_leaves",
+            () -> new GuaranaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.GUARANA_LEAVES));
     public static final RegistryObject<Block> GUARANA_SAPLING = registerBlock("guarana_sapling",
             GuaranaSapling::new);
     @SuppressWarnings("deprecation")

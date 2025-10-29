@@ -1,7 +1,7 @@
 package com.brbiomesmod;
 
 import com.brbiomesmod.block.Custom.*;
-import com.brbiomesmod.block.Saplings.*;
+import com.brbiomesmod.block.Custom.Saplings.*;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
