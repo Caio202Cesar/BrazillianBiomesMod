@@ -13,11 +13,11 @@ public enum Season {
         long days = dayTime / 24000; // Convert ticks to days
         long cycle = days % 120; // Assume a full year is 120 days (30 per season)
 
-        if (cycle < 23) {
+        if (cycle < 24) {
             return "SPRING";
-        } else if (cycle < 46) {
+        } else if (cycle < 47) {
             return "SUMMER";
-        } else if (cycle < 69) {
+        } else if (cycle < 70) {
             return "FALL";
         } else {
             return "WINTER";
