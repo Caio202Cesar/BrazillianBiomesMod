@@ -46,7 +46,7 @@ public class ParanaPineFruitingLeaves extends LeavesBlock implements IForgeShear
 
         if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
-            int dropCount = 2 + random.nextInt(3);
+            int dropCount = 1 + random.nextInt(1);
 
             ItemStack itemStack = new ItemStack(ModItems.PARANA_PINE_CONE.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);

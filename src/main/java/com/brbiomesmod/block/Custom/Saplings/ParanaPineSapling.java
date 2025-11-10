@@ -52,7 +52,7 @@ public class ParanaPineSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
-            if (rand.nextInt(10) == 5) {
+            if (rand.nextInt(10) == 8) {
                 return TreeFeatures.PARANA_PINE_TREE;
             } else {
                 return TreeFeatures.PARANA_PINE_TREE2;
