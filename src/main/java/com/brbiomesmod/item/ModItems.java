@@ -250,6 +250,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> YELLOW_IPE_FLOWERS = ITEMS.register("yellow_ipe_flowers",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
+    public static final RegistryObject<Item> APRICOT_IPE_FLOWERS = ITEMS.register("apricot_ipe_flowers",
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> SILK_COTTON = ITEMS.register("silk_cotton",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> CASSAVA_SEEDS = ITEMS.register("cassava_seeds",
