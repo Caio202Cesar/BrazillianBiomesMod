@@ -115,7 +115,7 @@
   "item.brbiomesmod.assacu_poison_sap": "Seiva venenosa de açacu",
   "item.brbiomesmod.yellow_mombin": "Cajá",
   "item.brbiomesmod.passionfruit_mousse": "Mousse de maracujá",
-  "item.brbiomesmod.apricot_ipe_flowers": "Flores de ipê-damasco-bicolor",
+  "item.brbiomesmod.apricot_ipe_flowers": "Flores de ipê-bicolor-damasco",
 
   "block.brbiomesmod.acai_bunch": "Cacho de açaí",
   "block.brbiomesmod.algarrobillo_fence": "Cerca de inhanduvá",
@@ -596,10 +596,10 @@
   "itemGroup.brbiomesmod.BrazilianBiomes:Trees": "Biomas brasileiros: árvores",
   "itemGroup.brbiomesmod.BrazilianBiomes:Miscellaneous": "Biomas brasileiros: diversos",
 
-  "block.brbiomesmod.pink_ipe_leaves": "Folhas de ipê rosa",
-  "block.brbiomesmod.pink_ipe_fall_leaves": "Folhas de ipê rosa",
-  "block.brbiomesmod.purple_ipe_leaves": "Folhas de ipê roxo",
-  "block.brbiomesmod.purple_ipe_fall_leaves": "Folhas de ipê roxo",
-  "block.brbiomesmod.white_ipe_leaves": "Folhas de ipê branco"
-
+  "block.brbiomesmod.pink_ipe_leaves": "Folhas de ipê-rosa",
+  "block.brbiomesmod.pink_ipe_fall_leaves": "Galhos secos de ipê-rosa",
+  "block.brbiomesmod.purple_ipe_leaves": "Folhas de ipê-roxo",
+  "block.brbiomesmod.purple_ipe_fall_leaves": "Galhos secos de ipê-roxo",
+  "block.brbiomesmod.white_ipe_leaves": "Folhas de ipê-branco",
+  "block.brbiomesmod.apricot_ipe_leaves": "Folhas de ipê-bicolor-damasco"
 }
