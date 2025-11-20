@@ -38,7 +38,7 @@ public class BlackPitangaLeaves extends LeavesBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        // === 4. If biome is coller (< 0.9 MC temp) AND it's WINTER, change to winter leaves ===
+        //If biome is coller (< 0.9 MC temp) AND it's WINTER, change to winter leaves ===
         if (temp < 0.9F && "WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
