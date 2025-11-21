@@ -74,7 +74,7 @@ public class KapokFruitingLeaves extends LeavesBlock implements IForgeShearable 
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreesGroup.KAPOK_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreesGroup.KAPOK_BRANCHES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
