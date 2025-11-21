@@ -67,7 +67,7 @@ public class PantanalBiome {
 
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.SWAMP).depth(depth).scale(scale)
-                .temperature(0.9F).downfall(0.7F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4757429)
+                .temperature(1.5F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4757429)
                         .setWaterFogColor(4765085).withSkyColor(8569325).withFoliageColor(4110351)
                         .withGrassColor(6604607).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
