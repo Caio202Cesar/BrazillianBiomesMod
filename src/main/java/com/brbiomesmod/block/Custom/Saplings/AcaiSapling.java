@@ -39,15 +39,9 @@ public class AcaiSapling extends SaplingBlock {
     }
 
     @Override
-    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-        // Only allow growth from bonemeal
-        return true;
-    }
-
-    @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.89f;
+        float minTemp = 0.9f;
         float maxTemp = 1.6f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
@@ -58,36 +52,38 @@ public class AcaiSapling extends SaplingBlock {
     }
 
     @Override
+    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
+        if (!(worldIn instanceof World)) {
+            return false;
+        }
+
+        World world = (World) worldIn;
+
+        Biome biome = world.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
+        // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
+        boolean tooHot = temp > 1.6F;
+        boolean tooCold = temp < 0.9F;
+
+        if (tooHot || tooCold) {
+            return false;
+        }
+
+        return super.canGrow(worldIn, pos, state, isClient);
+    }
+
+    @Override
     public boolean canUseBonemeal(World worldIn, Random random, BlockPos pos, BlockState state) {
         // Always allow for the check, we'll block in grow()
         return true;
     }
 
     @Override
-    public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
-        float temp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.89f;
-        float maxTemp = 1.6f;
-
-        if (temp < minTemp) {
-            // Too cold for this sapling; cancel growth.
-            // You cannot send a message to the player here!
-            return;
-        }
-        if (temp > maxTemp) {
-            // Too hot for this sapling; cancel growth.
-            // You cannot send a message to the player here!
-            return;
-        }
-        // Temperature is valid, proceed with normal tree growth
-        super.grow(world, random, pos, state);
-    }
-
-    @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.89f, maxTemp = 1.6f;
+            float minTemp = 0.9f, maxTemp = 1.6f;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -107,6 +103,7 @@ public class AcaiSapling extends SaplingBlock {
 
             // If temp is in range, optionally allow normal processing:
             // return super.onBlockActivated(...);
+            return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
         }
         return ActionResultType.SUCCESS;
     }
