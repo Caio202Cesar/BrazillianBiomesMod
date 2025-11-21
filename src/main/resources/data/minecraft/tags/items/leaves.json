@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "brbiomesmod:kapok_leaves",
+    "brbiomesmod:kapok_branches",
+    "brbiomesmod:kapok_fruiting_leaves",
     "brbiomesmod:cashew_leaves",
     "brbiomesmod:cashew_fruiting_leaves",
     "brbiomesmod:bacuri_leaves",
