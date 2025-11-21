@@ -1,7 +1,9 @@
 package com.brbiomesmod.block.Custom.Saplings;
 
+import com.brbiomesmod.block.PlantsGroup;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
+import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SaplingBlock;
@@ -9,12 +11,12 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Direction;
-import net.minecraft.util.Hand;
+import net.minecraft.util.*;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.text.ITextComponent;
@@ -38,58 +40,75 @@ public class AcaiSapling extends SaplingBlock {
 
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-        if (!(worldIn instanceof World)) {
-            return false;
-        }
-
-        World world = (World) worldIn;
-
-        Biome biome = world.getBiome(pos);
-        float temp = biome.getTemperature(pos);
-
-        // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 1.5F;
-        boolean tooCold = temp < 0.89F;
-
-        if (tooHot || tooCold) {
-            return false;
-        }
-
-        return super.canGrow(worldIn, pos, state, isClient);
+        // Only allow growth from bonemeal
+        return true;
     }
 
-    public ActionResultType use(BlockState state, World world, BlockPos pos,
-                                PlayerEntity player, Hand hand, BlockRayTraceResult hit) {
+    @Override
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+        float biomeTemp = world.getBiome(pos).getTemperature(pos);
+        float minTemp = 0.89f;
+        float maxTemp = 1.6f;
 
-        ItemStack stack = player.getHeldItem(hand);
-
-        // Make sure we have an item and it's bone meal
-        if (stack != null && stack.getItem() == Items.BONE_MEAL) {
-
-            Biome biome = world.getBiome(pos);
-            float temp = biome.getTemperature(pos);
-
-            boolean tooHot  = temp > 1.5F;
-            boolean tooCold = temp < 0.88F;
-
-            if (tooHot || tooCold) {
-                // Only send server->client message from server side
-                if (!world.isRemote) {
-                    ITextComponent msg = tooHot
-                            ? new StringTextComponent("§cThe climate is too hot for this sapling!")
-                            : new StringTextComponent("§bThe climate is too cold for this sapling!");
-
-                    // Use Util.NIL_UUID to avoid needing the player's UUID method variant
-                    player.sendMessage(msg, player.getUniqueID());
-                }
-
-                // Return sidedSuccess so client and server behave correctly and we prevent bonemeal effect
-                return ActionResultType.SUCCESS;
-            }
+        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
+            // Only attempt natural growth in suitable biomes
+            super.randomTick(state, world, pos, random);
         }
+        // If biome temperature is too low/high, do nothing (block natural growth)
+    }
 
-        // Otherwise keep normal behavior
-        return super.onBlockActivated(state, world, pos, player, hand, hit);
+    @Override
+    public boolean canUseBonemeal(World worldIn, Random random, BlockPos pos, BlockState state) {
+        // Always allow for the check, we'll block in grow()
+        return true;
+    }
+
+    @Override
+    public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
+        float temp = world.getBiome(pos).getTemperature(pos);
+        float minTemp = 0.89f;
+        float maxTemp = 1.6f;
+
+        if (temp < minTemp) {
+            // Too cold for this sapling; cancel growth.
+            // You cannot send a message to the player here!
+            return;
+        }
+        if (temp > maxTemp) {
+            // Too hot for this sapling; cancel growth.
+            // You cannot send a message to the player here!
+            return;
+        }
+        // Temperature is valid, proceed with normal tree growth
+        super.grow(world, random, pos, state);
+    }
+
+    @Override
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        if (!worldIn.isRemote) {
+            float temp = worldIn.getBiome(pos).getTemperature(pos);
+            float minTemp = 0.89f, maxTemp = 1.6f;
+
+            if (temp < minTemp) {
+                player.sendMessage(
+                        new StringTextComponent("This biome is too cold for this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS; // Prevent further processing if needed
+            }
+
+            if (temp > maxTemp) {
+                player.sendMessage(
+                        new StringTextComponent("This biome is too hot for this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS; // Prevent further processing if needed
+            }
+
+            // If temp is in range, optionally allow normal processing:
+            // return super.onBlockActivated(...);
+        }
+        return ActionResultType.SUCCESS;
     }
 
     @OnlyIn(Dist.CLIENT)
