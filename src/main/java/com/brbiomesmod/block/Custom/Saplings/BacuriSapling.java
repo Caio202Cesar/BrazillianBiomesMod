@@ -3,6 +3,7 @@ package com.brbiomesmod.block.Custom.Saplings;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -14,6 +15,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 public class BacuriSapling extends SaplingBlock {
@@ -38,13 +40,22 @@ public class BacuriSapling extends SaplingBlock {
     }
 
 
-    private static class BacuriTree extends Tree {
+    private static class BacuriTree extends BigTree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            if (random.nextInt(10) == 5) {
+            return TreeFeatures.BACURI_TREE;
+        }
+
+        /**
+         * Get a {@link ConfiguredFeature} of the huge variant of this tree
+         *
+         * @param rand
+         */
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
                 return TreeFeatures.MEGA_BACURI_TREE;
-            } else {
-                return TreeFeatures.BACURI_TREE;
-            }}
+
+        }
     }
 }

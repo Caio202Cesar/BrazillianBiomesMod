@@ -113,6 +113,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new MegaJungleTrunkPlacer(10, 20, 4),
                     new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
                     TrunkVineTreeDecorator.INSTANCE, LeaveVineTreeDecorator.field_236871_b_)).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YOUNG_KAPOK_TREE = register("young_kapok_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SILK_FLOSS_LOG),
+                            new SimpleBlockStateProvider(TreeFeatures.States.KAPOK_LEAVES),
+                            new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                            new StraightTrunkPlacer(4, 8, 0),
+                            new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Black Jurema Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_JUREMA_TREE = register("black_jurema_tree",
