@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "brbiomesmod:block/black_pitanga_flowering_leaves"
+      "model": "brbiomesmod:block/pitanga_flowering_leaves"
     }
   }
 }

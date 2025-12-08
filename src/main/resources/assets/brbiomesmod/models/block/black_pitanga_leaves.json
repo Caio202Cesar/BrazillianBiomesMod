@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "brbiomesmod:block/black_pitanga_leaves",
-    "particle": "brbiomesmod:block/black_pitanga_leaves"
-  }
-}
