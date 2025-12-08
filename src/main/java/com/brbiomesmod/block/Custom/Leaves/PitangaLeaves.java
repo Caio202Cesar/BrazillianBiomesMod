@@ -45,7 +45,7 @@ public class PitangaLeaves extends LeavesBlock implements IForgeShearable {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreesGroup.BLACK_PITANGA_WINTER_LEAVES.get()
+            worldIn.setBlockState(pos, TreesGroup.PITANGA_WINTER_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
