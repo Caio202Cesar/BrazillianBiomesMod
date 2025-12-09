@@ -62,7 +62,7 @@ public class PitangaFloweringLeaves extends LeavesBlock implements IForgeShearab
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if ("FALL".equals(currentSeason) && random.nextInt(15) == 0) {
+        if ("FALL".equals(currentSeason) && random.nextInt(5) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
