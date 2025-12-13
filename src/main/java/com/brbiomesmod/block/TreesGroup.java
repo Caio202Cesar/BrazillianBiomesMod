@@ -108,7 +108,7 @@ public class TreesGroup {
             ModLogs::new);
     public static final RegistryObject<Block> YELLOW_IPE_LEAVES = registerBlock("yellow_ipe_leaves",
             () -> new YellowIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.YELLOW_IPE_BLOSSOM));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.YELLOW_IPE_FALL_LEAVES));
     public static final RegistryObject<Block> YELLOW_IPE_BLOSSOM = registerBlock("yellow_ipe_blossom",
             () -> new YellowIpeBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.YELLOW_IPE_LEAVES));
@@ -149,7 +149,7 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> PINK_IPE_LEAVES = registerBlock("pink_ipe_leaves",
             () -> new PinkIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PINK_IPE_FALL_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
     public static final RegistryObject<Block> PINK_IPE_FALL_LEAVES = registerBlock("pink_ipe_fall_leaves",
             () -> new PinkIpeFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PINK_IPE_BLOSSOM));
