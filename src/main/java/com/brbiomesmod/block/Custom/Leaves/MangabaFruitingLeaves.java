@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
+import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
@@ -41,9 +42,11 @@ public class MangabaFruitingLeaves extends LeavesBlock implements IForgeShearabl
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(10) == 3) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-            int dropCount = 1 + random.nextInt(3);
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(40) == 0) {
+
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.MANGABA_FRUITS.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -63,7 +66,7 @@ public class MangabaFruitingLeaves extends LeavesBlock implements IForgeShearabl
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 3;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.MANGABA_FRUITS.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
