@@ -1,6 +1,7 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.Seasons.Season;
+import com.brbiomesmod.block.TreesGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -15,11 +16,8 @@ import java.util.Random;
 import java.util.function.Supplier;
 
 public class YellowIpeFallLeaves extends LeavesBlock implements IForgeShearable {
-    private final Supplier<Block> nextStage;
-
-    public YellowIpeFallLeaves(Properties properties, Supplier<Block> nextStage) {
+    public YellowIpeFallLeaves(Properties properties) {
         super(properties);
-        this.nextStage = nextStage;
     }
 
 
@@ -42,33 +40,39 @@ public class YellowIpeFallLeaves extends LeavesBlock implements IForgeShearable 
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        if (temp < 0.89F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(65) == 0) {
+        //Pattern for subtropical climates
+        if (temp < 0.89F && "SPRING".equals(currentSeason) && random.nextInt(65) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+            worldIn.setBlockState(pos, TreesGroup.YELLOW_IPE_BLOSSOM.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+        if (temp < 0.89F && "SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, newState, 2);
+            worldIn.setBlockState(pos, TreesGroup.YELLOW_IPE_BLOSSOM.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if (temp < 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        //Pattern for tropical climates
+        if (temp > 0.9F && "SUMMER".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
+            worldIn.setBlockState(pos, TreesGroup.YELLOW_IPE_BLOSSOM.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
-
-        if (temp > 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(45) == 0) {
+        if (temp > 0.9F && "WINTER".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
+            worldIn.setBlockState(pos, TreesGroup.YELLOW_IPE_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
+
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;
