@@ -156,7 +156,7 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> PINK_IPE_LEAVES = registerBlock("pink_ipe_leaves",
             () -> new PinkIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PINK_IPE_FALL_LEAVES);
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PINK_IPE_FALL_LEAVES));
     public static final RegistryObject<Block> PINK_IPE_FALL_LEAVES = registerBlock("pink_ipe_fall_leaves",
             () -> new PinkIpeFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PINK_IPE_BLOSSOM));
