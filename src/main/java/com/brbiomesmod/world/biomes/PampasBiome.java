@@ -67,7 +67,7 @@ public class PampasBiome {
 
 
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(depth).scale(scale)
-                .temperature(0.8F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.85F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(7842607)
                         .withGrassColor(9551193).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
