@@ -27,6 +27,7 @@ public class ModBiomeGeneration {
         addBiome(AtlanticForestHillsBiome.ATLANTIC_FOREST_HILLS.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, HOT, DENSE, HILLS, JUNGLE,
                 MAGICAL);
         addBiome(AmazonVarzeaForestBiome.AMAZON_VARZEA_FOREST.get(), BiomeManager.BiomeType.DESERT, 23, OVERWORLD, HOT, JUNGLE);
+        addBiome(CoxilhasBiome.COXILHAS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, PLAINS);
 
 
     }
