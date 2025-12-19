@@ -591,6 +591,7 @@
   "biome.brbiomesmod.butia_pampas": "Butiazal dos pampas",
   "biome.brbiomesmod.atlantic_forest_hills": "Colinas de mata atlântica",
   "biome.brbiomesmod.pampas_coastal_fields": "Campos costeiros de pampas",
+  "biome.brbiomesmod.pampas_hills": "Coxilhas",
 
   "itemGroup.brbiomesmod.BrazilianBiomes:Food": "Biomas brasileiros: comida",
   "itemGroup.brbiomesmod.BrazilianBiomes:Plants": "Biomas brasileiros: plantas",
@@ -603,5 +604,8 @@
   "block.brbiomesmod.purple_ipe_leaves": "Folhas de ipê-roxo",
   "block.brbiomesmod.purple_ipe_fall_leaves": "Galhos secos de ipê-roxo",
   "block.brbiomesmod.white_ipe_leaves": "Folhas de ipê-branco",
-  "block.brbiomesmod.apricot_ipe_leaves": "Folhas de ipê-bicolor-damasco"
+  "block.brbiomesmod.apricot_ipe_leaves": "Folhas de ipê-damasco-bicolor",
+  "block.brbiomesmod.apricot_ipe_fall_leaves": "Galhos secos de ipê-damasco-bicolor",
+  "block.brbiomesmod.white_ipe_fall_leaves": "Galhos secos de ipê-branco",
+  "block.brbiomesmod.yellow_ipe_fall_leaves": "Galhos secos de ipê-amarelo"
 }
