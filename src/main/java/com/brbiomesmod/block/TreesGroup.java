@@ -174,7 +174,10 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> WHITE_IPE_LEAVES = registerBlock("white_ipe_leaves",
             () -> new WhiteIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_IPE_BLOSSOM));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_IPE_FALL_LEAVES));
+    public static final RegistryObject<Block> WHITE_IPE_FALL_LEAVES = registerBlock("apricot_ipe_fall_leaves",
+            () -> new WhiteIpeFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> WHITE_IPE_BLOSSOM = registerBlock("white_ipe_blossom",
             () -> new WhiteIpeBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_IPE_LEAVES));
