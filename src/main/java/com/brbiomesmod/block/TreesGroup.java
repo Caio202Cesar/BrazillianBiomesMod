@@ -124,7 +124,6 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.YELLOW_IPE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-
     public static final RegistryObject<Block> PURPLE_IPE_LEAVES = registerBlock("purple_ipe_leaves",
             () -> new PurpleIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PURPLE_IPE_FALL_LEAVES));

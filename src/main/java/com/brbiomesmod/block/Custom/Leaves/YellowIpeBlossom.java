@@ -5,8 +5,6 @@ import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -18,7 +16,6 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
-import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 import java.util.function.Supplier;
@@ -50,8 +47,8 @@ public class YellowIpeBlossom extends LeavesBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-
-        if (temp < 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        //Pattern for subtropical climates
+        if (temp < 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -60,7 +57,8 @@ public class YellowIpeBlossom extends LeavesBlock implements IForgeShearable {
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp > 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        //Pattern for tropical climates
+        if (temp > 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

@@ -2,7 +2,6 @@ package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.block.TreesGroup;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -13,7 +12,6 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
-import java.util.function.Supplier;
 
 public class YellowIpeFallLeaves extends LeavesBlock implements IForgeShearable {
     public YellowIpeFallLeaves(Properties properties) {
@@ -41,30 +39,38 @@ public class YellowIpeFallLeaves extends LeavesBlock implements IForgeShearable 
         float temp = biome.getTemperature(pos);
 
         //Pattern for subtropical climates
-        if (temp < 0.89F && "SPRING".equals(currentSeason) && random.nextInt(65) == 0) {
+        if (temp < 0.89F && "SPRING".equals(currentSeason) && random.nextInt(15) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
             worldIn.setBlockState(pos, TreesGroup.YELLOW_IPE_BLOSSOM.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
-        if (temp < 0.89F && "SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
+
+        if (temp < 0.89F && "SUMMER".equals(currentSeason) && random.nextInt(5) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreesGroup.YELLOW_IPE_BLOSSOM.get()
+            worldIn.setBlockState(pos, TreesGroup.YELLOW_IPE_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
         //Pattern for tropical climates
-        if (temp > 0.9F && "SUMMER".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp > 0.9F && "FALL".equals(currentSeason) && random.nextInt(15) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
             worldIn.setBlockState(pos, TreesGroup.YELLOW_IPE_BLOSSOM.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
-        if (temp > 0.9F && "WINTER".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp > 0.9F && "WINTER".equals(currentSeason) && random.nextInt(15) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.YELLOW_IPE_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+        if (temp > 0.9F && "SPRING".equals(currentSeason) && random.nextInt(15) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

@@ -47,8 +47,8 @@ public class PurpleIpeBlossom extends LeavesBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-
-        if (temp < 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        //Pattern for subtropical climates
+        if (temp < 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -57,7 +57,8 @@ public class PurpleIpeBlossom extends LeavesBlock implements IForgeShearable {
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp > 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        //Pattern for tropical climates
+        if (temp > 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

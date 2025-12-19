@@ -42,8 +42,8 @@ public class PurpleIpeLeaves extends LeavesBlock implements IForgeShearable {
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        //If biome is coller (< 0.85 MC temp - Hardiness zone 9) AND it's WINTER, change to winter leaves ===
-        if (temp < 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(45) == 0) {
+        //Pattern for subtropical climates
+        if (temp < 0.89F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -52,25 +52,8 @@ public class PurpleIpeLeaves extends LeavesBlock implements IForgeShearable {
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp < 0.89F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(10) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
-        }
-
-        if (temp > 0.89F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(45) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
-        }
-
-        if (temp > 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(10) == 0) {
+        //Pattern for tropical climates
+        if (temp > 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
