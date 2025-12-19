@@ -142,7 +142,10 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> APRICOT_IPE_LEAVES = registerBlock("apricot_ipe_leaves",
             () -> new ApricotIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.APRICOT_IPE_BLOSSOM));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.APRICOT_IPE_FALL_LEAVES));
+    public static final RegistryObject<Block> APRICOT_IPE_FALL_LEAVES = registerBlock("apricot_ipe_fall_leaves",
+            () -> new ApricotIpeFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> APRICOT_IPE_BLOSSOM = registerBlock("apricot_ipe_blossom",
             () -> new ApricotIpeBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.APRICOT_IPE_LEAVES));
