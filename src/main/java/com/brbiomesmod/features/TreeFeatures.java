@@ -117,7 +117,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SILK_FLOSS_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.KAPOK_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(2, 1), FeatureSpread.create(0, 2), FeatureSpread.create(1, 1)),
-                    new StraightTrunkPlacer(5, 8, 0),
+                    new StraightTrunkPlacer(7, 8, 0),
                     new TwoLayerFeature(2, 0, 2))).setIgnoreVines().build()));
 
     //Black Jurema Tree
