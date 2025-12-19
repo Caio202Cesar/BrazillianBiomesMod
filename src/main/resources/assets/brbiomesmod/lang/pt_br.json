@@ -341,7 +341,7 @@
   "block.brbiomesmod.jua_stairs": "Escadas de juazeiro",
   "block.brbiomesmod.jua_wood": "Madeira de juazeiro",
   "block.brbiomesmod.kapok_leaves": "Folhas de samaúma",
-  "block.brbiomesmod.kapok_fruiting_leaves": "Folhas de samaúma com frutos",
+  "block.brbiomesmod.kapok_fruiting_leaves": "Galhos de samaúma com frutos",
   "block.brbiomesmod.kapok_log": "Tronco de de samaúma",
   "block.brbiomesmod.kapok_sapling": "Muda de samaúma",
   "block.brbiomesmod.lophantera_fence": "Cerca de lofântera",
@@ -607,5 +607,6 @@
   "block.brbiomesmod.apricot_ipe_leaves": "Folhas de ipê-damasco-bicolor",
   "block.brbiomesmod.apricot_ipe_fall_leaves": "Galhos secos de ipê-damasco-bicolor",
   "block.brbiomesmod.white_ipe_fall_leaves": "Galhos secos de ipê-branco",
-  "block.brbiomesmod.yellow_ipe_fall_leaves": "Galhos secos de ipê-amarelo"
+  "block.brbiomesmod.yellow_ipe_fall_leaves": "Galhos secos de ipê-amarelo",
+  "block.brbiomesmod.kapok_dried_branches": "Galhos secos de samaúma"
 }

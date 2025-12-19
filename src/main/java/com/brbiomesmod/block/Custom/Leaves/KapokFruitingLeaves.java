@@ -45,7 +45,7 @@ public class KapokFruitingLeaves extends LeavesBlock implements IForgeShearable 
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
             int dropCount = 1;
 
@@ -74,7 +74,7 @@ public class KapokFruitingLeaves extends LeavesBlock implements IForgeShearable 
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreesGroup.KAPOK_BRANCHES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreesGroup.KAPOK_DRIED_BRANCHES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
