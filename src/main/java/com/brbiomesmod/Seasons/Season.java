@@ -7,7 +7,7 @@ import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 public enum Season {
-    SPRING, SUMMER, AUTUMN, WINTER;
+    SPRING, SUMMER, FALL, WINTER;
 
     public static String getSeason(long dayTime) {
         long days = dayTime / 24000; // Convert ticks to days
