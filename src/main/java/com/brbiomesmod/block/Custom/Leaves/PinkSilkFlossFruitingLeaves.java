@@ -56,7 +56,7 @@ public class PinkSilkFlossFruitingLeaves extends LeavesBlock implements IForgeSh
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreesGroup.PINK_SILK_DRIED_BRANCHES.get()
+            worldIn.setBlockState(pos, TreesGroup.PINK_SILK_FLOSS_DRIED_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
@@ -72,7 +72,7 @@ public class PinkSilkFlossFruitingLeaves extends LeavesBlock implements IForgeSh
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreesGroup.PINK_SILK_DRIED_BRANCHES.get()
+            worldIn.setBlockState(pos, TreesGroup.PINK_SILK_FLOSS_DRIED_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }

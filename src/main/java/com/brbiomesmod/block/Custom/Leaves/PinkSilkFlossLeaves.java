@@ -49,7 +49,7 @@ public class PinkSilkFlossLeaves extends LeavesBlock implements IForgeShearable 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreesGroup.PINK_SILK_DRIED_BRANCHES.get()
+            worldIn.setBlockState(pos, TreesGroup.PINK_SILK_FLOSS_DRIED_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
