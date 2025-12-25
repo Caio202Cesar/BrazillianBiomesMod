@@ -31,6 +31,7 @@ public class AcaiSapling extends SaplingBlock {
                 .sound(SoundType.PLANT));
     }
 
+    //Hardy to zone 11
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
