@@ -1,10 +1,8 @@
-package com.brbiomesmod.block.Custom;
+package com.brbiomesmod.block.Custom.TallPlants;
 
 import com.brbiomesmod.block.PlantsGroup;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.DoublePlantBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.util.Direction;
@@ -15,21 +13,21 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
 
-public class XaximPlant extends DoublePlantBlock {
-    public XaximPlant() {
-        super(Properties.from(Blocks.CHORUS_PLANT).tickRandomly().hardnessAndResistance(0.1f)
-                .sound(SoundType.PLANT).harvestTool(ToolType.HOE));
+public class CassavaPlant extends DoublePlantBlock {
+    public CassavaPlant() {
+        super(AbstractBlock.Properties.create(Material.TALL_PLANTS).tickRandomly().doesNotBlockMovement().notSolid()
+                .zeroHardnessAndResistance().sound(SoundType.PLANT).harvestTool(ToolType.HOE));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(PlantsGroup.XAXIM_PLANT.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PlantsGroup.VELOZIA.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.CASSAVA_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.PAMPAS_GRASS.get(), RenderType.getCutout());
 
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-        return 60;
+        return 80;
     }
 
     public int getFireSpreadSpeed(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
@@ -37,6 +35,6 @@ public class XaximPlant extends DoublePlantBlock {
     }
 
     public PlantType getPlantType(IBlockReader world, BlockPos pos) {
-        return PlantType.PLAINS;
+        return PlantType.CROP;
     }
 }

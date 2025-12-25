@@ -2,7 +2,7 @@ package com.brbiomesmod.block;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.Custom.CaatingaSand;
-import com.brbiomesmod.block.Custom.CassavaCropBlock;
+import com.brbiomesmod.block.Custom.Crops.CassavaCropBlock;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;

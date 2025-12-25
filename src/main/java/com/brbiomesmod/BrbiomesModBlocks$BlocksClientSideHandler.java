@@ -1,7 +1,17 @@
 package com.brbiomesmod;
 
 import com.brbiomesmod.block.Custom.*;
+import com.brbiomesmod.block.Custom.Fruiting.AcaiBunchBlock;
+import com.brbiomesmod.block.Custom.Fruiting.BuritiBunchBlock;
+import com.brbiomesmod.block.Custom.Fruiting.PindoBunchBlock;
+import com.brbiomesmod.block.Custom.Plants.*;
 import com.brbiomesmod.block.Custom.Saplings.*;
+import com.brbiomesmod.block.Custom.TallPlants.AngelTrumpetPlant;
+import com.brbiomesmod.block.Custom.TallPlants.CassavaPlant;
+import com.brbiomesmod.block.Custom.TallPlants.XaximPlant;
+import com.brbiomesmod.block.Custom.Vines.AristolochiaVine;
+import com.brbiomesmod.block.Custom.Vines.CaatingaPassionfruitVine;
+import com.brbiomesmod.block.Custom.Vines.PassionfruitVine;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;

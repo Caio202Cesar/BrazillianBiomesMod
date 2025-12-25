@@ -1,7 +1,9 @@
 package com.brbiomesmod.block;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.Custom.*;
+import com.brbiomesmod.block.Custom.Fruiting.AcaiBunchBlock;
+import com.brbiomesmod.block.Custom.Fruiting.BuritiBunchBlock;
+import com.brbiomesmod.block.Custom.Fruiting.PindoBunchBlock;
 import com.brbiomesmod.block.Custom.Leaves.*;
 import com.brbiomesmod.block.Custom.Log.*;
 import com.brbiomesmod.block.Custom.Saplings.*;

@@ -1,6 +1,6 @@
 package com.brbiomesmod.features.TreeDecorators;
 
-import com.brbiomesmod.block.Custom.AristolochiaVine;
+import com.brbiomesmod.block.Custom.Vines.AristolochiaVine;
 import com.brbiomesmod.block.PlantsGroup;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;

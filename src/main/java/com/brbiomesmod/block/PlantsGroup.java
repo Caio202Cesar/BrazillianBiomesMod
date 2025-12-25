@@ -2,13 +2,16 @@ package com.brbiomesmod.block;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.Custom.*;
+import com.brbiomesmod.block.Custom.Plants.*;
+import com.brbiomesmod.block.Custom.TallPlants.AngelTrumpetPlant;
+import com.brbiomesmod.block.Custom.TallPlants.CassavaPlant;
+import com.brbiomesmod.block.Custom.TallPlants.XaximPlant;
+import com.brbiomesmod.block.Custom.Vines.*;
 import com.brbiomesmod.item.ModItemGroup;
-import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.potion.Effects;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;

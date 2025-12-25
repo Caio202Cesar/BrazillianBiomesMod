@@ -1,4 +1,4 @@
-package com.brbiomesmod.block.Custom;
+package com.brbiomesmod.block.Custom.TallPlants;
 
 import com.brbiomesmod.block.PlantsGroup;
 import net.minecraft.block.BlockState;

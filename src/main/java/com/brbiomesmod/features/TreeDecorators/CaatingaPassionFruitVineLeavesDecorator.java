@@ -1,10 +1,9 @@
 package com.brbiomesmod.features.TreeDecorators;
 
-import com.brbiomesmod.block.Custom.CaatingaPassionfruitVine;
+import com.brbiomesmod.block.Custom.Vines.CaatingaPassionfruitVine;
 import com.brbiomesmod.block.PlantsGroup;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.VineBlock;
 import net.minecraft.state.BooleanProperty;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
