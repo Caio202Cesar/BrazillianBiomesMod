@@ -1,6 +1,5 @@
 package com.brbiomesmod;
 
-import com.brbiomesmod.block.Custom.*;
 import com.brbiomesmod.block.Custom.Fruiting.AcaiBunchBlock;
 import com.brbiomesmod.block.Custom.Fruiting.BuritiBunchBlock;
 import com.brbiomesmod.block.Custom.Fruiting.PindoBunchBlock;

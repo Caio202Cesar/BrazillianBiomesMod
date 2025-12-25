@@ -1,7 +1,6 @@
 package com.brbiomesmod.block;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.Custom.*;
 import com.brbiomesmod.block.Custom.Plants.*;
 import com.brbiomesmod.block.Custom.TallPlants.AngelTrumpetPlant;
 import com.brbiomesmod.block.Custom.TallPlants.CassavaPlant;
