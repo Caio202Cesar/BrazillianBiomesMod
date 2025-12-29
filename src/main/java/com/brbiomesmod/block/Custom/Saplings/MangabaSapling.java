@@ -30,10 +30,18 @@ public class MangabaSapling extends SaplingBlock {
                 .sound(SoundType.PLANT));
     }
 
+    @OnlyIn(Dist.CLIENT)
+    public static void registerRenderLayer() {
+        RenderTypeLookup.setRenderLayer(TreesGroup.MANGABA_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_MANGABA_SAPLING.get(), RenderType.getCutout());
+
+    }
+
+    //Hardy to zone 11
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.9f;
+        float minTemp = 0.89f;
         float maxTemp = 2.0f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
@@ -56,7 +64,7 @@ public class MangabaSapling extends SaplingBlock {
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 2.0F;
-        boolean tooCold = temp < 0.9F;
+        boolean tooCold = temp < 0.89F;
 
         if (tooHot || tooCold) {
             return false;
@@ -98,13 +106,6 @@ public class MangabaSapling extends SaplingBlock {
             return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
         }
         return ActionResultType.SUCCESS;
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreesGroup.MANGABA_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_MANGABA_SAPLING.get(), RenderType.getCutout());
-
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
