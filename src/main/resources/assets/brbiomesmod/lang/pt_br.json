@@ -400,9 +400,9 @@
   "block.brbiomesmod.pink_peroba_log": "Tronco de peroba-rosa",
   "block.brbiomesmod.pink_peroba_stairs": "Escadas de peroba-rosa",
   "block.brbiomesmod.pink_peroba_sapling": "Muda de peroba-rosa",
-  "block.brbiomesmod.pitanga_black_leaves": "Folhas de pitangueira negra",
-  "block.brbiomesmod.pitanga_black_flowering_leaves": "Folhas de pitangueira negra com flores",
-  "block.brbiomesmod.pitanga_black_fruiting_leaves": "Folhas de pitangueira negra com frutos",
+  "block.brbiomesmod.pitanga_black_leaves": "Folhas de pitangueira-negra",
+  "block.brbiomesmod.pitanga_black_flowering_leaves": "Folhas de pitangueira-negra com flores",
+  "block.brbiomesmod.pitanga_black_fruiting_leaves": "Folhas de pitangueira-negra com frutos",
   "block.brbiomesmod.pitanga_leaves": "Folhas de pitangueira",
   "block.brbiomesmod.pitanga_flowering_leaves": "Folhas de pitangueira com flores",
   "block.brbiomesmod.pitanga_fruiting_leaves": "Folhas de pitangueira com frutos",
@@ -600,13 +600,18 @@
   "itemGroup.brbiomesmod.BrazilianBiomes:Miscellaneous": "Biomas brasileiros: diversos",
 
   "block.brbiomesmod.pink_ipe_leaves": "Folhas de ipê-rosa",
-  "block.brbiomesmod.pink_ipe_fall_leaves": "Galhos secos de ipê-rosa",
+  "block.brbiomesmod.pink_ipe_fall_leaves": "Galhos de ipê-rosa",
   "block.brbiomesmod.purple_ipe_leaves": "Folhas de ipê-roxo",
-  "block.brbiomesmod.purple_ipe_fall_leaves": "Galhos secos de ipê-roxo",
+  "block.brbiomesmod.purple_ipe_fall_leaves": "Galhos de ipê-roxo",
   "block.brbiomesmod.white_ipe_leaves": "Folhas de ipê-branco",
   "block.brbiomesmod.apricot_ipe_leaves": "Folhas de ipê-damasco-bicolor",
-  "block.brbiomesmod.apricot_ipe_fall_leaves": "Galhos secos de ipê-damasco-bicolor",
-  "block.brbiomesmod.white_ipe_fall_leaves": "Galhos secos de ipê-branco",
-  "block.brbiomesmod.yellow_ipe_fall_leaves": "Galhos secos de ipê-amarelo",
-  "block.brbiomesmod.kapok_dried_branches": "Galhos secos de samaúma"
+  "block.brbiomesmod.apricot_ipe_fall_leaves": "Galhos de ipê-damasco-bicolor",
+  "block.brbiomesmod.white_ipe_fall_leaves": "Galhos de ipê-branco",
+  "block.brbiomesmod.yellow_ipe_fall_leaves": "Galhos de ipê-amarelo",
+  "block.brbiomesmod.kapok_dried_branches": "Galhos de samaúma",
+
+  "item.brbiomesmod.cecropia_fruit_ice_cream": "Sorvete de embaúba",
+  "item.brbiomesmod.yellow_mombin_ice_cream": "Sorvete de cajá",
+  "block.brbiomesmod.pitanga_black_winter_leaves": "Folhas de pitangueira-negra",
+  "block.brbiomesmod.pitanga_winter_leaves": "Folhas de pitangueira"
 }
