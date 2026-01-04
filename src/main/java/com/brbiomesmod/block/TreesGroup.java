@@ -390,13 +390,13 @@ public class TreesGroup {
             ModLogs::new);
     public static final RegistryObject<Block> UMBU_LEAVES = registerBlock("umbu_leaves",
             () -> new UmbuLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.UMBU_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> UMBU_DRIED_BRANCHES = registerBlock("umbu_dried_branches",
             () -> new UmbuDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.UMBU_FRUITING_LEAVES));
     public static final RegistryObject<Block> UMBU_FRUITING_LEAVES = registerBlock("umbu_fruiting_leaves",
-            () -> new UmbuLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.UMBU_FRUITING_LEAVES));
+            () -> new UmbuFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.UMBU_LEAVES));
     public static final RegistryObject<Block> UMBU_SAPLING = registerBlock("umbu_sapling",
             UmbuSapling::new);
     @SuppressWarnings("deprecation")
