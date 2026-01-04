@@ -212,6 +212,10 @@ public class TreesGroup {
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LEAVES = registerBlock("brazillian_rosewood_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_DRIED_BRANCHES = registerBlock("brazillian_rosewood_dried_branches",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_BLOSSOM = registerBlock("brazillian_rosewood_blossom",
+            ModLeaves::new);
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_SAPLING = registerBlock("brazillian_rosewood_sapling",
             BrazillianRosewoodSapling::new);
     @SuppressWarnings("deprecation")
@@ -327,12 +331,16 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.PITANGA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+
     public static final RegistryObject<Block> CAGAITA_LEAVES = registerBlock("cagaita_leaves",
             () -> new CagaitaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CAGAITA_FLOWERING_LEAVES));
     public static final RegistryObject<Block> CAGAITA_FLOWERING_LEAVES = registerBlock("cagaita_flowering_leaves",
             () -> new CagaitaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CAGAITA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> CAGAITA_DRIED_BRANCHES = registerBlock("cagaita_dried_branches",
+            () -> new CagaitaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CAGAITA_FLOWERING_LEAVES));
     public static final RegistryObject<Block> CAGAITA_FRUITING_LEAVES = registerBlock("cagaita_fruiting_leaves",
             () -> new CagaitaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CAGAITA_LEAVES));
@@ -342,6 +350,8 @@ public class TreesGroup {
     public static final RegistryObject<Block> POTTED_CAGAITA_SAPLING = BLOCKS.register("potted_cagaita_sapling",
             () -> new FlowerPotBlock(TreesGroup.CAGAITA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
+
+
     public static final RegistryObject<Block> RIO_GRANDE_CHERRY_LEAVES = registerBlock("rio_grande_cherry_leaves",
             () -> new RioGrandeCherryLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.RIO_GRANDE_CHERRY_FLOWERING_LEAVES));
