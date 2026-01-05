@@ -403,6 +403,10 @@ public class TreesGroup {
             ModLeaves::new);
     public static final RegistryObject<Block> CARNAUBA_SAPLING = registerBlock("carnauba_sapling",
             CarnaubaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CARNAUBA_SAPLING = BLOCKS.register("potted_carnauba_sapling",
+            () -> new FlowerPotBlock(TreesGroup.CARNAUBA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
 
 
     public static final RegistryObject<Block> UMBU_LOG = registerBlock("umbu_log",

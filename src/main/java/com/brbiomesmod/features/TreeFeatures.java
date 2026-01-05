@@ -1137,7 +1137,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> PAMPAS_PALMS = register("pampas_palms",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(QUEEN_PALM.withChance(0.2F)),
                     JELLY_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(0, 0.3F, 4))));
     public static final ConfiguredFeature<?, ?> BUTIA_SAVANNA_VEGETATION = register("butia_savanna_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(TALL_JELLY_PALM.withChance(0.5F)),
                     JELLY_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA

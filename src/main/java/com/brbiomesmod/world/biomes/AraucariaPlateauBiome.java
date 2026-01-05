@@ -70,7 +70,7 @@ private static Biome makeSavannaPlateauBiome(final Supplier<ConfiguredSurfaceBui
     DefaultBiomeFeatures.withEmeraldOre(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
 
-    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.QUEEN_PALM);
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PAMPAS_PALMS);
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
     //Hardiness zone 10: 0.85F - 0.89F (but high altitude can make it reaches colder zones by the formula: (base temp - ((Y - 64)*0.0016))F
