@@ -1,10 +1,7 @@
 {
-  "variants":{
-    "":[
-      {"model": "brbiomesmod:block/cagaita_leaves",
-        "weight": 1},
-      {"model": "brbiomesmod:block/cagaita_fruiting_leaves",
-        "weight": 4}
-    ]
+  "variants": {
+    "": {
+      "model": "brbiomesmod:block/cagaita_fruiting_leaves"
+    }
   }
 }

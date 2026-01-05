@@ -13,10 +13,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class CagaitaLeaves extends LeavesBlock implements IForgeShearable {
+public class CagaitaDriedBranches extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public CagaitaLeaves(Properties properties, Supplier<Block> nextStage) {
+    public CagaitaDriedBranches(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
