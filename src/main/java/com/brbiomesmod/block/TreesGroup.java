@@ -217,13 +217,13 @@ public class TreesGroup {
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LEAVES = registerBlock("brazillian_rosewood_leaves",
             () -> new BrazillianRosewoodLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_ROSEWOOD_DRIED_BRANCHES));
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_DRIED_BRANCHES = registerBlock("brazillian_rosewood_dried_branches",
             () -> new BrazillianRosewoodDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_IPE_FALL_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_ROSEWOOD_BLOSSOM));
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_BLOSSOM = registerBlock("brazillian_rosewood_flowering_leaves",
             () -> new BrazillianRosewoodBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_IPE_FALL_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_ROSEWOOD_LEAVES));
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_SAPLING = registerBlock("brazillian_rosewood_sapling",
             BrazillianRosewoodSapling::new);
     @SuppressWarnings("deprecation")
