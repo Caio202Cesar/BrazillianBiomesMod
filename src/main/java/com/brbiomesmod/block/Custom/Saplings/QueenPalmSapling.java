@@ -36,6 +36,7 @@ public class QueenPalmSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreesGroup.QUEEN_PALM_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_QUEEN_PALM_SAPLING.get(), RenderType.getCutout());
 
     }
 

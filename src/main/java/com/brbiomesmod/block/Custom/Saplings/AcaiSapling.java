@@ -31,6 +31,12 @@ public class AcaiSapling extends SaplingBlock {
                 .sound(SoundType.PLANT));
     }
 
+    @OnlyIn(Dist.CLIENT)
+    public static void registerRenderLayer() {
+        RenderTypeLookup.setRenderLayer(TreesGroup.ACAI_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_ACAI_SAPLING.get(), RenderType.getCutout());
+    }
+
     //Hardy to zone 11
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
@@ -100,11 +106,6 @@ public class AcaiSapling extends SaplingBlock {
             return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
         }
         return ActionResultType.SUCCESS;
-    }
-
-    @OnlyIn(Dist.CLIENT)
-    public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreesGroup.ACAI_SAPLING.get(), RenderType.getCutout());
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

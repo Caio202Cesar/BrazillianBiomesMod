@@ -430,6 +430,10 @@ public class TreesGroup {
             ModLeaves::new);
     public static final RegistryObject<Block> XAXIM_SAPLING = registerBlock("xaxim_sapling",
             XaximSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_XAXIM_SAPLING = BLOCKS.register("potted_xaxim_sapling",
+            () -> new FlowerPotBlock(TreesGroup.XAXIM_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
 
 
     public static final RegistryObject<Block> SAPUCAIA_LOG = registerBlock("sapucaia_log",
@@ -480,6 +484,10 @@ public class TreesGroup {
             ModLeaves::new);
     public static final RegistryObject<Block> QUEEN_PALM_SAPLING = registerBlock("queen_palm_sapling",
             QueenPalmSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_QUEEN_PALM_SAPLING = BLOCKS.register("potted_queen_palm_sapling",
+            () -> new FlowerPotBlock(TreesGroup.QUEEN_PALM_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
 
     public static final RegistryObject<Block> JABUTICABA_LOG = registerBlock("jabuticaba_log",
@@ -520,6 +528,11 @@ public class TreesGroup {
                     .sound(SoundType.PLANT)));
     public static final RegistryObject<Block> ACAI_SAPLING = registerBlock("acai_sapling",
             AcaiSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_ACAI_SAPLING = BLOCKS.register("potted_acai_sapling",
+            () -> new FlowerPotBlock(TreesGroup.ACAI_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
+
     public static final RegistryObject<Block> ACAI_BUNCH = registerBlock("acai_bunch",
             AcaiBunchBlock::new);
     public static final RegistryObject<Block> JUSSARA_LEAVES = registerBlock("jussara_leaves",
@@ -530,6 +543,10 @@ public class TreesGroup {
                     .sound(SoundType.PLANT)));
     public static final RegistryObject<Block> JUSSARA_SAPLING = registerBlock("jussara_sapling",
             JussaraSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_JUSSARA_SAPLING = BLOCKS.register("potted_jussara_sapling",
+            () -> new FlowerPotBlock(TreesGroup.JUSSARA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
 
 
     public static final RegistryObject<Block> BLACK_SUCUPIRA_LOG = registerBlock("black_sucupira_log",

@@ -36,6 +36,8 @@ public class XaximSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreesGroup.XAXIM_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_XAXIM_SAPLING.get(), RenderType.getCutout());
+
     }
 
     //Hardy to zone 8
