@@ -31,18 +31,20 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
             SilkFlossLog::new);
+
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_LEAVES = registerBlock("silk_floss_white_leaves",
             () -> new WhiteSilkFlossLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_SILK_FLOSS_FLOWERING_LEAVES));
-    public static final RegistryObject<Block> WHITE_SILK_FLOSS_FLOWERING_LEAVES = registerBlock("silk_floss_white_flowering_leaves",
-            () -> new WhiteSilkFlossFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_SILK_FLOSS_DRIED_BRANCHES));
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_DRIED_BRANCHES = registerBlock("silk_floss_white_dried_branches",
             () -> new WhiteSilkFlossDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_SILK_FLOSS_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> WHITE_SILK_FLOSS_FLOWERING_LEAVES = registerBlock("silk_floss_white_flowering_leaves",
+            () -> new WhiteSilkFlossFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_SILK_FLOSS_FRUITING_LEAVES));
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_FRUITING_LEAVES = registerBlock("silk_floss_white_fruiting_leaves",
             () -> new WhiteSilkFlossFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_SILK_FLOSS_LEAVES));
+
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_SAPLING = registerBlock("silk_floss_white_sapling",
             WhiteSilkFlossSapling::new);
     @SuppressWarnings("deprecation")
