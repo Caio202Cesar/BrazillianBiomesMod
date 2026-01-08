@@ -40,12 +40,12 @@ public class XaximSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 8
+    //Hardy from zone 9 to 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.75f;
-        float maxTemp = 1.6f;
+        float minTemp = 0.8f;
+        float maxTemp = 0.89f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
             // Only attempt natural growth in suitable biomes
@@ -66,8 +66,8 @@ public class XaximSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 1.6F;
-        boolean tooCold = temp < 0.75F;
+        boolean tooHot = temp > 0.89F;
+        boolean tooCold = temp < 0.8F;
 
         if (tooHot || tooCold) {
             return false;
@@ -86,7 +86,7 @@ public class XaximSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.75f, maxTemp = 1.6f;
+            float minTemp = 0.8f, maxTemp = 0.89f;
 
             if (temp < minTemp) {
                 player.sendMessage(
