@@ -264,6 +264,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> ASSACU_POISON_SAP = ITEMS.register("assacu_poison_sap",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
+    public static final RegistryObject<Item> BOMBILLA = ITEMS.register("bombilla",
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
 
     //Tools
     public static final RegistryObject<Item> TOURMALINE_SWORD = ITEMS.register("tourmaline_paraiba_sword",

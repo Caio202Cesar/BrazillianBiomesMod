@@ -3,7 +3,7 @@
   "group": "food",
   "ingredients": [
     {
-      "item": "minecraft:iron_ingot"
+      "item": "brbiomesmod:bombilla"
     },
     {
       "item": "caiocesarbiomes:calabash"
