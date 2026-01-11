@@ -121,7 +121,7 @@ public class ModItems {
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
                     .food(ModFoods.ACAI_JUICE)));
     public static final RegistryObject<Item> CASHEW_JUICE = ITEMS.register("cashew_apple_juice",
-            () -> new BeverageItem(new Item.Properties().group(ItemGroup.FOOD).maxStackSize(1)
+            () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
                     .food(ModFoods.CASHEW_JUICE)));
     public static final RegistryObject<Item> CAMBUCI_JUICE = ITEMS.register("cambuci_juice",
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
