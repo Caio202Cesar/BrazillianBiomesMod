@@ -444,7 +444,7 @@ public class TreesGroup {
             ModLogs::new);
     public static final RegistryObject<Block> SAPUCAIA_LEAVES = registerBlock("sapucaia_leaves",
             () -> new SapucaiaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.SAPUCAIA_DRIED_BRANCHES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> SAPUCAIA_DRIED_BRANCHES = registerBlock("sapucaia_dried_branches",
             () -> new SapucaiaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.SAPUCAIA_FLOWERING_LEAVES));
@@ -453,7 +453,7 @@ public class TreesGroup {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.SAPUCAIA_LEAVES));
     public static final RegistryObject<Block> SAPUCAIA_FRUITING_LEAVES = registerBlock("sapucaia_fruiting_leaves",
             () -> new SapucaiaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.SAPUCAIA_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> SAPUCAIA_SAPLING = registerBlock("sapucaia_sapling",
             SapucaiaSapling::new);
     @SuppressWarnings("deprecation")
