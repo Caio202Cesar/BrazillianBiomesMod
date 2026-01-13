@@ -562,8 +562,11 @@ public class TreesGroup {
             () -> new BlackSucupiraLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BLACK_SUCUPIRA_BLOSSOM));
     public static final RegistryObject<Block> BLACK_SUCUPIRA_BLOSSOM = registerBlock("black_sucupira_blossom",
-            () -> new SapucaiaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.SAPUCAIA_FLOWERING_LEAVES));
+            () -> new BlackSucupiraBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BLACK_SUCUPIRA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_FRUITING_LEAVES = registerBlock("black_sucupira_fruiting_leaves",
+            () -> new BlackSucupiraFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BLACK_SUCUPIRA_LEAVES));
     public static final RegistryObject<Block> BLACK_SUCUPIRA_SAPLING = registerBlock("black_sucupira_sapling",
             BlackSucupiraSapling::new);
     @SuppressWarnings("deprecation")

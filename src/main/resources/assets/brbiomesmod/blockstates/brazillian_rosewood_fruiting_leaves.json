@@ -4,7 +4,7 @@
       {"model": "brbiomesmod:block/brazillian_rosewood_fruiting_leaves",
         "weight": 6},
       {"model": "brbiomesmod:block/brazillian_rosewood_leaves",
-        "weight": 1}
+        "weight": 2}
     ]
   }
 }
