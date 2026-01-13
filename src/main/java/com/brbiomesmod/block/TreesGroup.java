@@ -223,6 +223,9 @@ public class TreesGroup {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_ROSEWOOD_BLOSSOM));
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_BLOSSOM = registerBlock("brazillian_rosewood_flowering_leaves",
             () -> new BrazillianRosewoodBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_ROSEWOOD_FRUITING_LEAVES));
+    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_FRUITING_LEAVES = registerBlock("brazillian_rosewood_fruiting_leaves",
+            () -> new BrazillianRosewoodFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_ROSEWOOD_LEAVES));
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_SAPLING = registerBlock("brazillian_rosewood_sapling",
             BrazillianRosewoodSapling::new);
@@ -556,7 +559,11 @@ public class TreesGroup {
     public static final RegistryObject<Block> BLACK_SUCUPIRA_LOG = registerBlock("black_sucupira_log",
             ModLogs::new);
     public static final RegistryObject<Block> BLACK_SUCUPIRA_LEAVES = registerBlock("black_sucupira_leaves",
-            ModLeaves::new);
+            () -> new BlackSucupiraLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BLACK_SUCUPIRA_BLOSSOM));
+    public static final RegistryObject<Block> BLACK_SUCUPIRA_BLOSSOM = registerBlock("black_sucupira_blossom",
+            () -> new SapucaiaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.SAPUCAIA_FLOWERING_LEAVES));
     public static final RegistryObject<Block> BLACK_SUCUPIRA_SAPLING = registerBlock("black_sucupira_sapling",
             BlackSucupiraSapling::new);
     @SuppressWarnings("deprecation")
