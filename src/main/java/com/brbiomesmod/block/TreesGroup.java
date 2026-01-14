@@ -578,11 +578,8 @@ public class TreesGroup {
     public static final RegistryObject<Block> BURITI_LOG = registerBlock("buriti_log",
             ModLogs::new);
     public static final RegistryObject<Block> BURITI_LEAVES = registerBlock("buriti_leaves",
-            () -> new BuritiLeaves(AbstractBlock.Properties.create(Material.LEAVES)
-                    .hardnessAndResistance(0.2f)
-                    .tickRandomly() // Enables random ticks
-                    .notSolid()
-                    .sound(SoundType.PLANT)));
+            () -> new BuritiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT)));
     public static final RegistryObject<Block> BURITI_SAPLING = registerBlock("buriti_sapling",
             BuritiSapling::new);
     public static final RegistryObject<Block> BURITI_BUNCH = registerBlock("buriti_bunch",
@@ -621,10 +618,10 @@ public class TreesGroup {
             ModLogs::new);
     public static final RegistryObject<Block> BLACK_JUREMA_LEAVES = registerBlock("black_jurema_leaves",
             () -> new BlackJuremaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BLACK_JUREMA_DRIED_BRANCHES));
     public static final RegistryObject<Block> BLACK_JUREMA_DRIED_BRANCHES = registerBlock("black_jurema_dried_branches",
             () -> new BlackJuremaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BLACK_JUREMA_LEAVES));
     public static final RegistryObject<Block> BLACK_JUREMA_SAPLING = registerBlock("black_jurema_sapling",
             BlackJuremaSapling::new);
     @SuppressWarnings("deprecation")
@@ -636,7 +633,11 @@ public class TreesGroup {
     public static final RegistryObject<Block> ALGARROBILLO_LOG = registerBlock("algarrobillo_log",
             ModLogs::new);
     public static final RegistryObject<Block> ALGARROBILLO_LEAVES = registerBlock("algarrobillo_leaves",
-            ModLeaves::new);
+            () -> new AlgarrobilloLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.ALGARROBILLO_BRANCHES));
+    public static final RegistryObject<Block> ALGARROBILLO_BRANCHES = registerBlock("algarrobillo_branches",
+            () -> new AlgarrobilloDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.ALGARROBILLO_LEAVES));
     public static final RegistryObject<Block> ALGARROBILLO_SAPLING = registerBlock("algarrobillo_sapling",
             AlgarrobilloSapling::new);
     @SuppressWarnings("deprecation")
