@@ -616,5 +616,8 @@
 
   "block.brbiomesmod.pitanga_black_winter_leaves": "Folhas de pitangueira-negra",
   "block.brbiomesmod.pitanga_winter_leaves": "Folhas de pitangueira",
-  "block.brbiomesmod.pampas_grass": "Capim-dos-pampas"
+  "block.brbiomesmod.pampas_grass": "Capim-dos-pampas",
+  "block.brbiomesmod.wolf_apple_dried_branches": "Galhos de lobeira",
+  "block.brbiomesmod.wolf_apple_flowering_dried_branches": "Galhos de lobeira em flor",
+  "block.brbiomesmod.wolf_apple_fruiting_dried_branches": "Galhos de lobeira com frutos"
 }
