@@ -620,7 +620,11 @@ public class TreesGroup {
     public static final RegistryObject<Block> BLACK_JUREMA_LOG = registerBlock("black_jurema_log",
             ModLogs::new);
     public static final RegistryObject<Block> BLACK_JUREMA_LEAVES = registerBlock("black_jurema_leaves",
-            ModLeaves::new);
+            () -> new BlackJuremaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> BLACK_JUREMA_DRIED_BRANCHES = registerBlock("black_jurema_dried_branches",
+            () -> new BlackJuremaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> BLACK_JUREMA_SAPLING = registerBlock("black_jurema_sapling",
             BlackJuremaSapling::new);
     @SuppressWarnings("deprecation")
