@@ -1,25 +1,23 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
-import net.minecraft.block.Block;
+import com.brbiomesmod.Seasons.Season;
+import com.brbiomesmod.block.TreesGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
-import java.util.function.Supplier;
 
 public class WolfAppleLeaves extends LeavesBlock implements IForgeShearable {
-    private final Supplier<Block> nextStage;
+     public WolfAppleLeaves(Properties properties) {
+         super(properties);
 
-    public WolfAppleLeaves(Properties properties, Supplier<Block> nextStage) {
-        super(properties);
-        this.nextStage = nextStage;
-    }
-
+     }
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -35,14 +33,30 @@ public class WolfAppleLeaves extends LeavesBlock implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(30) == 0) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        int distance = state.get(LeavesBlock.DISTANCE);
-        boolean persistent = state.get(LeavesBlock.PERSISTENT);
+        if ("SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-        BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+            worldIn.setBlockState(pos, TreesGroup.WOLF_APPLE_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
 
-            worldIn.setBlockState(pos, newState, 2);
+        if ("FALL".equals(currentSeason) && random.nextInt(2) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.WOLF_APPLE_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        if (random.nextInt(65) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.WOLF_APPLE_FLOWERING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
 

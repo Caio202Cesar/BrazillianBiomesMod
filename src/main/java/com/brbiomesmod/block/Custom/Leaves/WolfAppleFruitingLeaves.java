@@ -1,8 +1,8 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
+import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.item.ModItems;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.entity.item.ItemEntity;
@@ -17,15 +17,12 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
-import java.util.function.Supplier;
 
 public class WolfAppleFruitingLeaves extends LeavesBlock implements IForgeShearable {
-    private final Supplier<Block> nextStage;
+     public WolfAppleFruitingLeaves(Properties properties) {
+         super(properties);
 
-    public WolfAppleFruitingLeaves(Properties properties, Supplier<Block> nextStage) {
-        super(properties);
-        this.nextStage = nextStage;
-    }
+     }
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -41,21 +38,38 @@ public class WolfAppleFruitingLeaves extends LeavesBlock implements IForgeSheara
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(30) == 0) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-            int dropCount = 1;
+        if ("SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.WOLF_APPLE_FRUITING_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        if ("FALL".equals(currentSeason) && random.nextInt(2) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.WOLF_APPLE_FRUITING_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        if (random.nextInt(45) == 0) {
+
+            int dropCount = 2 + random.nextInt(8);
 
             ItemStack itemStack = new ItemStack(ModItems.WOLF_APPLE.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
-        int distance = state.get(LeavesBlock.DISTANCE);
-        boolean persistent = state.get(LeavesBlock.PERSISTENT);
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-        BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
+            worldIn.setBlockState(pos, TreesGroup.WOLF_APPLE_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
 
@@ -63,7 +77,7 @@ public class WolfAppleFruitingLeaves extends LeavesBlock implements IForgeSheara
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 1;
+            int dropCount = 12;
 
             ItemStack itemStack = new ItemStack(ModItems.WOLF_APPLE.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);

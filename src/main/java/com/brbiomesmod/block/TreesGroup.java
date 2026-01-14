@@ -593,13 +593,22 @@ public class TreesGroup {
             ModLogs::new);
     public static final RegistryObject<Block> WOLF_APPLE_LEAVES = registerBlock("wolf_apple_leaves",
             () -> new WolfAppleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WOLF_APPLE_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> WOLF_APPLE_FLOWERING_LEAVES = registerBlock("wolf_apple_flowering_leaves",
             () -> new WolfAppleFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WOLF_APPLE_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> WOLF_APPLE_FRUITING_LEAVES = registerBlock("wolf_apple_fruiting_leaves",
             () -> new WolfAppleFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WOLF_APPLE_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> WOLF_APPLE_DRIED_BRANCHES = registerBlock("wolf_apple_dried_branches",
+            () -> new WolfAppleDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> WOLF_APPLE_FLOWERING_DRIED_BRANCHES = registerBlock("wolf_apple_flowering_dried_branches",
+            () -> new WolfAppleFloweringDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> WOLF_APPLE_FRUITING_DRIED_BRANCHES = registerBlock("wolf_apple_fruiting_dried_branches",
+            () -> new WolfAppleFruitingDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> WOLF_APPLE_SAPLING = registerBlock("wolf_apple_sapling",
             WolfAppleSapling::new);
     @SuppressWarnings("deprecation")
