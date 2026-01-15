@@ -854,7 +854,10 @@ public class TreesGroup {
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILNUT_LEAVES = registerBlock("brazilnut_leaves",
             () -> new BrazilnutLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILNUT_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE))); //leaf sheed in dry season, fruiting in wet season
+    public static final RegistryObject<Block> BRAZILNUT_DRIED_BRANCHES = registerBlock("brazilnut_dried_branches",
+            () -> new BrazilnutDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILNUT_LEAVES));
     public static final RegistryObject<Block> BRAZILNUT_FRUITING_LEAVES = registerBlock("brazilnut_fruiting_leaves",
             () -> new BrazilnutFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILNUT_LEAVES));

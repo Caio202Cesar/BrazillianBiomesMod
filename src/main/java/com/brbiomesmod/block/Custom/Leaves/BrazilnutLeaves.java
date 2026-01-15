@@ -1,26 +1,23 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.Seasons.Season;
-import net.minecraft.block.Block;
+import com.brbiomesmod.block.TreesGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
-import java.util.function.Supplier;
 
 public class BrazilnutLeaves extends LeavesBlock implements IForgeShearable {
-    private final Supplier<Block> nextStage;
+     public BrazilnutLeaves(Properties properties) {
+         super(properties);
 
-    public BrazilnutLeaves(Properties properties, Supplier<Block> nextStage) {
-        super(properties);
-        this.nextStage = nextStage;
-    }
-
+     }
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -38,15 +35,30 @@ public class BrazilnutLeaves extends LeavesBlock implements IForgeShearable {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        //Dry season = leaf shed
+        if ("SUMMER".equals(currentSeason) && random.nextInt(75) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-        int distance = state.get(LeavesBlock.DISTANCE);
-        boolean persistent = state.get(LeavesBlock.PERSISTENT);
+            worldIn.setBlockState(pos, TreesGroup.BRAZILNUT_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
 
-        BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+        if ("FALL".equals(currentSeason) && random.nextInt(10) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, newState, 2);
+            worldIn.setBlockState(pos, TreesGroup.BRAZILNUT_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
 
+        //Wet season = fruiting season
+        if ("WINTER".equals(currentSeason) && random.nextInt(55) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.BRAZILNUT_FRUITING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
 
