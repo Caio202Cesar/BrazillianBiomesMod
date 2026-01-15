@@ -771,12 +771,20 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> MONKEY_CAJARANA_LOG = registerBlock("monkey_cajarana_log",
             ModLogs::new);
-    public static final RegistryObject<Block> MONKEY_CAJARANA_LEAVES = registerBlock("monkey_cajarana_leaves",
-            () -> new MonkeyCajaranaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.MONKEY_CAJARANA_FRUITING_LEAVES));
+
+    public static final RegistryObject<Block> MONKEY_CAJARANA_YOUNG_LEAVES = registerBlock("monkey_cajarana_young_leaves",
+            () -> new MonkeyCajaranaYoungLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.MONKEY_CAJARANA_LEAVES));
     public static final RegistryObject<Block> MONKEY_CAJARANA_FRUITING_LEAVES = registerBlock("monkey_cajarana_fruiting_leaves",
             () -> new MonkeyCajaranaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.MONKEY_CAJARANA_LEAVES));;
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.MONKEY_CAJARANA_LEAVES));
+    public static final RegistryObject<Block> MONKEY_CAJARANA_LEAVES = registerBlock("monkey_cajarana_leaves",
+            () -> new MonkeyCajaranaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> MONKEY_CAJARANA_DRIED_BRANCHES = registerBlock("monkey_cajarana_dried_branches",
+            () -> new MonkeyCajaranaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.MONKEY_CAJARANA_YOUNG_LEAVES));
+
     public static final RegistryObject<Block> MONKEY_CAJARANA_SAPLING = registerBlock("monkey_cajarana_sapling",
             MonkeyCajaranaSapling::new);
     @SuppressWarnings("deprecation")
