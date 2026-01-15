@@ -793,6 +793,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    //Can be deciduous in drier areas. But since it is not possible to programe it to NONE precipitaion biomes...
     public static final RegistryObject<Block> BALSA_LOG = registerBlock("balsa_log",
             ModLogs::new);
     public static final RegistryObject<Block> BALSA_LEAVES = registerBlock("balsa_leaves",
