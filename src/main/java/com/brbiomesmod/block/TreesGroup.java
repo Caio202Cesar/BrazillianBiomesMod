@@ -889,9 +889,12 @@ public class TreesGroup {
     public static final RegistryObject<Block> BACURI_DRIED_BRANCHES = registerBlock("bacuri_dried_branches",
             () -> new BacuriDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BACURI_LEAVES));
+    public static final RegistryObject<Block> BACURI_FLOWERING_DRIED_BRANCHES = registerBlock("bacuri_flowering_dried_branches",
+            () -> new BacuriFloweringDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BACURI_FRUITING_LEAVES));
     public static final RegistryObject<Block> BACURI_FLOWERING_LEAVES = registerBlock("bacuri_flowering_leaves",
             () -> new BacuriFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BACURI_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BACURI_LEAVES));
     public static final RegistryObject<Block> BACURI_FRUITING_LEAVES = registerBlock("bacuri_fruiting_leaves",
             () -> new BacuriFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BACURI_LEAVES));

@@ -47,7 +47,7 @@ public class BacuriLeaves extends LeavesBlock implements IForgeShearable {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreesGroup.BACURI_FLOWERING_LEAVES.get()
+            worldIn.setBlockState(pos, TreesGroup.BACURI_FLOWERING_DRIED_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
@@ -59,6 +59,15 @@ public class BacuriLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
         if ("FALL".equals(currentSeason) && random.nextInt(5) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.BACURI_FLOWERING_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        //Wet season's flowering = purely ornamental
+        if ("WINTER".equals(currentSeason) && random.nextInt(10) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
