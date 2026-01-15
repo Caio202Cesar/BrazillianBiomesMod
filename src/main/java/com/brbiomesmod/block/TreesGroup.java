@@ -661,7 +661,11 @@ public class TreesGroup {
     public static final RegistryObject<Block> COCKSPUR_CORAL_LOG = registerBlock("cockspur_coral_log",
             ModLogs::new);
     public static final RegistryObject<Block> COCKSPUR_CORAL_LEAVES = registerBlock("cockspur_coral_leaves",
-            ModLeaves::new);
+            () -> new CockspurCoralLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.COCKSPUR_CORAL_WINTER_BRANCHES));
+    public static final RegistryObject<Block> COCKSPUR_CORAL_WINTER_BRANCHES = registerBlock("cockspur_coral_winter_branches",
+            () -> new CockspurCoralWinterBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.COCKSPUR_CORAL_LEAVES));
     public static final RegistryObject<Block> COCKSPUR_CORAL_SAPLING = registerBlock("cockspur_coral_sapling",
             CockspurCoralSapling::new);
     @SuppressWarnings("deprecation")
@@ -673,11 +677,8 @@ public class TreesGroup {
     public static final RegistryObject<Block> JELLY_PALM_LOG = registerBlock("jelly_palm_log",
             ModLogs::new);
     public static final RegistryObject<Block> JELLY_PALM_LEAVES = registerBlock("jelly_palm_leaves",
-            () -> new ButiaLeaves(AbstractBlock.Properties.create(Material.LEAVES)
-                    .hardnessAndResistance(0.2f)
-                    .tickRandomly() // Enables random ticks
-                    .notSolid()
-                    .sound(SoundType.PLANT)));
+            () -> new ButiaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT)));
     public static final RegistryObject<Block> JELLY_PALM_SAPLING = registerBlock("jelly_palm_sapling",
             JellyPalmSapling::new);
     public static final RegistryObject<Block> PINDO_BUNCH = registerBlock("pindo_bunch",

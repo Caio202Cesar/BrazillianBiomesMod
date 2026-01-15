@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/cockspur_coral_winter_branches",
+    "particle": "brbiomesmod:block/cockspur_coral_winter_branches"
+  }
+}
