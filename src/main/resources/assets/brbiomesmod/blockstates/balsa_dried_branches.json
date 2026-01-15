@@ -1,0 +1,12 @@
+{
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/balsa_dried_branches",
+        "weight": 5},
+      {"model": "brbiomesmod:block/balsa_flowering_dried_branches",
+        "weight": 1},
+      {"model": "brbiomesmod:block/balsa_fruiting_dried_branches",
+        "weight": 2}
+    ]
+  }
+}

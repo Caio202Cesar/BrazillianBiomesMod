@@ -793,11 +793,15 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    //Can be deciduous in drier areas. But since it is not possible to programe it to NONE precipitaion biomes...
+    //Can be deciduous in drier areas.
     public static final RegistryObject<Block> BALSA_LOG = registerBlock("balsa_log",
             ModLogs::new);
     public static final RegistryObject<Block> BALSA_LEAVES = registerBlock("balsa_leaves",
-            ModLeaves::new);
+            () -> new BalsaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BALSA_DRIED_BRANCHES));
+    public static final RegistryObject<Block> BALSA_DRIED_BRANCHES = registerBlock("balsa_dried_branches",
+            () -> new BalsaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BALSA_LEAVES));
     public static final RegistryObject<Block> BALSA_SAPLING = registerBlock("balsa_sapling",
             BalsaSapling::new);
     @SuppressWarnings("deprecation")
