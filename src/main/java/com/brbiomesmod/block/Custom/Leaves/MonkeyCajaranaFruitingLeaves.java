@@ -45,13 +45,9 @@ public class MonkeyCajaranaFruitingLeaves extends LeavesBlock implements IForgeS
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        Biome biome = worldIn.getBiome(pos);
-        float temp = biome.getTemperature(pos);
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
-        //Pattern for tropical climates
-        if (temp > 0.9F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
-
-            int dropCount = 2 + random.nextInt(3);
+            int dropCount = 1 + random.nextInt(2);
 
             ItemStack itemStack = new ItemStack(ModItems.MONKEY_CAJARANA.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -66,9 +62,9 @@ public class MonkeyCajaranaFruitingLeaves extends LeavesBlock implements IForgeS
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp > 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
-            int dropCount = 2 + random.nextInt(3);
+            int dropCount = 1 + random.nextInt(2);
 
             ItemStack itemStack = new ItemStack(ModItems.MONKEY_CAJARANA.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -83,9 +79,9 @@ public class MonkeyCajaranaFruitingLeaves extends LeavesBlock implements IForgeS
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp > 0.9F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
-            int dropCount = 2 + random.nextInt(3);
+            int dropCount = 1 + random.nextInt(2);
 
             ItemStack itemStack = new ItemStack(ModItems.MONKEY_CAJARANA.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
