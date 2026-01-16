@@ -14,17 +14,18 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class JenipapoFruitingLeaves extends LeavesBlock implements IForgeShearable {
-    public JenipapoFruitingLeaves(Properties properties) {
-        super(properties);
+public class JenipapoFruitingDriedBranches extends LeavesBlock implements IForgeShearable {
+    private final Supplier<Block> nextStage;
 
+    public JenipapoFruitingDriedBranches(Properties properties, Supplier<Block> nextStage) {
+        super(properties);
+        this.nextStage = nextStage;
     }
 
     public boolean ticksRandomly(BlockState state) {
@@ -43,33 +44,24 @@ public class JenipapoFruitingLeaves extends LeavesBlock implements IForgeShearab
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        Biome biome = worldIn.getBiome(pos);
+        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
-        //Tropical dry season
-        if ("SUMMER".equals(currentSeason)
-                && biome.getPrecipitation() == Biome.RainType.NONE
-                && random.nextInt(35) == 0) {
+            int dropCount = 1 + random.nextInt(3);
 
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+            ItemStack itemStack = new ItemStack(ModItems.RIPE_JENIPAPO.get(), dropCount);
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
-            worldIn.setBlockState(pos, TreesGroup.JENIPAPO_FRUITING_DRIED_BRANCHES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            worldIn.addEntity(itemEntity);
+
+        int distance = state.get(LeavesBlock.DISTANCE);
+        boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+        BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
         }
 
-        if ("FALL".equals(currentSeason)
-                && biome.getPrecipitation() == Biome.RainType.NONE
-                && random.nextInt(10) == 0) {
-
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            worldIn.setBlockState(pos, TreesGroup.JENIPAPO_FRUITING_DRIED_BRANCHES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-        }
-
-        //Tropical wet season
-        if ("WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
             int dropCount = 1 + random.nextInt(3);
 
@@ -81,8 +73,9 @@ public class JenipapoFruitingLeaves extends LeavesBlock implements IForgeShearab
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreesGroup.JENIPAPO_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
         }
     }
 
@@ -97,7 +90,7 @@ public class JenipapoFruitingLeaves extends LeavesBlock implements IForgeShearab
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreesGroup.JENIPAPO_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreesGroup.JENIPAPO_DRIED_BRANCHES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 

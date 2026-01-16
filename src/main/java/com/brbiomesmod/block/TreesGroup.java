@@ -946,12 +946,15 @@ public class TreesGroup {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> JENIPAPO_DRIED_BRANCHES = registerBlock("jenipapo_dried_branches",
             () -> new JenipapoDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.JENIPAPO_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.JENIPAPO_LEAVES));
     public static final RegistryObject<Block> JENIPAPO_FLOWERING_LEAVES = registerBlock("jenipapo_flowering_leaves",
             () -> new JenipapoFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.JENIPAPO_FRUITING_LEAVES));
     public static final RegistryObject<Block> JENIPAPO_FRUITING_LEAVES = registerBlock("jenipapo_fruiting_leaves",
             () -> new JenipapoFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> JENIPAPO_FRUITING_DRIED_BRANCHES = registerBlock("jenipapo_fruiting_dried_branches",
+            () -> new JenipapoFruitingDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.JENIPAPO_LEAVES));
     public static final RegistryObject<Block> JENIPAPO_SAPLING = registerBlock("jenipapo_sapling",
             JenipapoSapling::new);
