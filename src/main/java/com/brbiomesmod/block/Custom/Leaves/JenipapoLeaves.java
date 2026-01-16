@@ -1,12 +1,14 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.Seasons.Season;
+import com.brbiomesmod.block.TreesGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
@@ -14,11 +16,8 @@ import java.util.Random;
 import java.util.function.Supplier;
 
 public class JenipapoLeaves extends LeavesBlock implements IForgeShearable {
-    private final Supplier<Block> nextStage;
-
-    public JenipapoLeaves(Properties properties, Supplier<Block> nextStage) {
+    public JenipapoLeaves(Properties properties) {
         super(properties);
-        this.nextStage = nextStage;
     }
 
 
@@ -36,15 +35,40 @@ public class JenipapoLeaves extends LeavesBlock implements IForgeShearable {
      */
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        if (nextStage != null && random.nextInt(85) == 0) {
+        String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        int distance = state.get(LeavesBlock.DISTANCE);
-        boolean persistent = state.get(LeavesBlock.PERSISTENT);
+        Biome biome = worldIn.getBiome(pos);
 
-        BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+        //Tropical dry season
+        if ("SUMMER".equals(currentSeason)
+                && biome.getPrecipitation() == Biome.RainType.NONE
+                && random.nextInt(35) == 0) {
 
-            worldIn.setBlockState(pos, newState, 2);
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
+            worldIn.setBlockState(pos, TreesGroup.JENIPAPO_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        if ("FALL".equals(currentSeason)
+                && biome.getPrecipitation() == Biome.RainType.NONE
+                && random.nextInt(10) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.JENIPAPO_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        //Flowering
+        if ("WINTER".equals(currentSeason) && random.nextInt(45) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.JENIPAPO_FLOWERING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
 

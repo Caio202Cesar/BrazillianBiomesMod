@@ -66,7 +66,7 @@ public class JenipapoFruitingLeaves extends LeavesBlock implements IForgeShearab
 
             int dropCount = 3;
 
-            ItemStack itemStack = new ItemStack(ModItems.JENIPAPO.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.RIPE_JENIPAPO.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);

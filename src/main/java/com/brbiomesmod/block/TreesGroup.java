@@ -943,6 +943,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> JENIPAPO_LEAVES = registerBlock("jenipapo_leaves",
             () -> new JenipapoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
+    public static final RegistryObject<Block> JENIPAPO_DRIED_BRANCHES = registerBlock("jenipapo_dried_branches",
+            () -> new JenipapoDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.JENIPAPO_FLOWERING_LEAVES));
     public static final RegistryObject<Block> JENIPAPO_FLOWERING_LEAVES = registerBlock("jenipapo_flowering_leaves",
             () -> new JenipapoFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()

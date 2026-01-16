@@ -81,6 +81,8 @@ public class ModFoods extends Foods {
             .effect(new EffectInstance(Effects.JUMP_BOOST, 2400, 0), 1.0F).build();
     public static final Food BUTIA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food JENIPAPO = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food GREEN_JENIPAPO = (new Food.Builder()).hunger(4).saturation(0.3F)
+            .effect(new EffectInstance(Effects.HUNGER, 300, 2), 1.0F).build();
     public static final Food CAATINGA_PASSIONFRUIT = (new Food.Builder()).hunger(5).saturation(0.4F).build();
     public static final Food YELLOW_MOMBIN = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food COOKED_PEQUI = (new Food.Builder()).hunger(2).saturation(0.3F).build();

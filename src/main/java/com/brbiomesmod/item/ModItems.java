@@ -87,6 +87,8 @@ public class ModItems {
     public static final RegistryObject<Item> BUTIA_FRUITS = ITEMS.register("butia_fruits",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.BUTIA)));
     public static final RegistryObject<Item> JENIPAPO = ITEMS.register("jenipapo",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.GREEN_JENIPAPO)));
+    public static final RegistryObject<Item> RIPE_JENIPAPO = ITEMS.register("ripe_jenipapo",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.JENIPAPO)));
     public static final RegistryObject<Item> PEQUI = ITEMS.register("pequi_fruit",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP)));
