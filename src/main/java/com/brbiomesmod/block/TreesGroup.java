@@ -928,7 +928,11 @@ public class TreesGroup {
     public static final RegistryObject<Block> SOMBREIRO_LOG = registerBlock("sombreiro_log",
             ModLogs::new);
     public static final RegistryObject<Block> SOMBREIRO_LEAVES = registerBlock("sombreiro_leaves",
-            ModLeaves::new);
+            () -> new SombreiroLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.SOMBREIRO_DRIED_BRANCHES));
+    public static final RegistryObject<Block> SOMBREIRO_DRIED_BRANCHES = registerBlock("sombreiro_dried_branches",
+            () -> new SombreiroDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.SOMBREIRO_LEAVES));
     public static final RegistryObject<Block> SOMBREIRO_SAPLING = registerBlock("sombreiro_sapling",
             SombreiroSapling::new);
     @SuppressWarnings("deprecation")
