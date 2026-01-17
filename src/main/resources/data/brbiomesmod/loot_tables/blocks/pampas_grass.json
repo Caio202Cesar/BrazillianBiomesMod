@@ -1,8 +1,14 @@
 {
   "type": "minecraft:block",
+  "random_sequence": "brbiomesmod:blocks/pampas_grass",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": 2.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
       "entries": [
         {
           "type": "minecraft:item",
