@@ -1,16 +1,18 @@
 {
   "variants": {
-    "axis=x": {
-      "model": "brbiomesmod:block/sharinga_tappered_log_horizontal",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y": {
-      "model": "brbiomesmod:block/sharinga_tappered_log"
-    },
-    "axis=z": {
-      "model": "brbiomesmod:block/sharinga_tappered_log_horizontal",
-      "x": 90
-    }
+    "axis=y,latex=0": { "model": "brbiomesmod:block/sharinga_tappered_log" },
+    "axis=y,latex=1": { "model": "brbiomesmod:block/sharinga_tappered_log_latex1" },
+    "axis=y,latex=2": { "model": "brbiomesmod:block/sharinga_tappered_log_latex2" },
+    "axis=y,latex=3": { "model": "brbiomesmod:block/sharinga_tappered_log_latex3" },
+
+    "axis=x,latex=0": { "model": "brbiomesmod:block/sharinga_tappered_log", "x": 90, "y": 90 },
+    "axis=x,latex=1": { "model": "brbiomesmod:block/sharinga_tappered_log_latex1", "x": 90, "y": 90 },
+    "axis=x,latex=2": { "model": "brbiomesmod:block/sharinga_tappered_log_latex2", "x": 90, "y": 90 },
+    "axis=x,latex=3": { "model": "brbiomesmod:block/sharinga_tappered_log_latex3", "x": 90, "y": 90 },
+
+    "axis=z,latex=0": { "model": "brbiomesmod:block/sharinga_tappered_log", "x": 90 },
+    "axis=z,latex=1": { "model": "brbiomesmod:block/sharinga_tappered_log_latex1", "x": 90 },
+    "axis=z,latex=2": { "model": "brbiomesmod:block/sharinga_tappered_log_latex2", "x": 90 },
+    "axis=z,latex=3": { "model": "brbiomesmod:block/sharinga_tappered_log_latex3", "x": 90 }
   }
 }
