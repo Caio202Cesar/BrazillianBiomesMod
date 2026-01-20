@@ -993,12 +993,15 @@ public class TreesGroup {
             ModLogs::new);
     public static final RegistryObject<Block> YELLOW_MOMBIN_LEAVES = registerBlock("yellow_mombin_leaves",
             () -> new YellowMombinLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.YELLOW_MOMBIN_FLOWERING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> YELLOW_MOMBIN_FLOWERING_LEAVES = registerBlock("yellow_mombin_flowering_leaves",
             () -> new YellowMombinFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.YELLOW_MOMBIN_FRUITING_LEAVES));
     public static final RegistryObject<Block> YELLOW_MOMBIN_FRUITING_LEAVES = registerBlock("yellow_mombin_fruiting_leaves",
             () -> new YellowMombinFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.YELLOW_MOMBIN_LEAVES));
+    public static final RegistryObject<Block> YELLOW_MOMBIN_DRIED_BRANCHES = registerBlock("yellow_mombin_dried_branches",
+            () -> new YellowMombinDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.YELLOW_MOMBIN_LEAVES));
     public static final RegistryObject<Block> YELLOW_MOMBIN_SAPLING = registerBlock("yellow_mombin_sapling",
             YellowMombinSapling::new);

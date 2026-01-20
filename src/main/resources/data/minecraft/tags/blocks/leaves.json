@@ -135,6 +135,10 @@
     "brbiomesmod:black_sucupira_blossom",
     "brbiomesmod:guapuruvu_leaves",
     "brbiomesmod:guapuruvu_blossom",
-    "brbiomesmod:guapuruvu_dried_branches"
+    "brbiomesmod:guapuruvu_dried_branches",
+    "brbiomesmod:yellow_mombin_leaves",
+    "brbiomesmod:yellow_mombin_flowering_leaves",
+    "brbiomesmod:yellow_mombin_fruiting_leaves",
+    "brbiomesmod:yellow_mombin_dried_branches"
   ]
 }

@@ -63,7 +63,7 @@ public class JenipapoLeaves extends LeavesBlock implements IForgeShearable {
         }
 
         //Flowering
-        if ("WINTER".equals(currentSeason) && random.nextInt(45) == 0) {
+        if ("WINTER".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
