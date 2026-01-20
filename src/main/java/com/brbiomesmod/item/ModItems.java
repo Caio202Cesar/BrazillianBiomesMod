@@ -272,6 +272,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> LATEX_BUCKET = ITEMS.register("latex_bucket",
             () -> new Item((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.MISC_GROUP)));
+    public static final RegistryObject<Item> RUBBER_INGOT = ITEMS.register("rubber_ingot",
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
 
     //Tools
     public static final RegistryObject<Item> TOURMALINE_SWORD = ITEMS.register("tourmaline_paraiba_sword",

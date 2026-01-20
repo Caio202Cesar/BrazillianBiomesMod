@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "brbiomesmod:latex_bucket"
+  },
+  "result": "brbiomesmod:rubber_ingot",
+  "experience": 0.2,
+  "cookingtime": 200
+}
