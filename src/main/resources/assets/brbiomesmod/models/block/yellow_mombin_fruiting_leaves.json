@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/yellow_mombin_fruiting_leaves",
+    "particle": "brbiomesmod:block/yellow_mombin_fruiting_leaves"
+  }
+}

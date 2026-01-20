@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/bull_nettle",
+    "particle": "brbiomesmod:block/bull_nettle"
+  }
+}

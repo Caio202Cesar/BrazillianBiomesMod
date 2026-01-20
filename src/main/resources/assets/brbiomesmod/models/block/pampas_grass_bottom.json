@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/pampas_grass_bottom",
+    "particle": "brbiomesmod:block/pampas_grass_bottom"
+  }
+}

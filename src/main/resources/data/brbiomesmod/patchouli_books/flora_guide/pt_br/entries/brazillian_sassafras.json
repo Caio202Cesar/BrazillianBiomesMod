@@ -1,0 +1,18 @@
+{
+  "name": "Canela-sassafras",
+  "icon": "brbiomesmod:brazillian_sassafras_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Nome Científico:$(reset) Ocotea odorifera$(br)$(bold)Biomas:$(reset) Mata atlântica, mata de araucarias"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:brazillian_sassafras_sapling",
+      "title": "Tree Spotlight",
+      "text": "Muda."
+    }
+  ]
+}

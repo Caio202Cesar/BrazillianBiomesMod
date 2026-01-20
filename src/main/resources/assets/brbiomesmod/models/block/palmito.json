@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/palmito_middle",
+    "side": "brbiomesmod:block/palmito"
+  }
+}

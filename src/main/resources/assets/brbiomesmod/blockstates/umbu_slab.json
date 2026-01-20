@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/umbu_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/umbu_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/umbu_slab_top"
+    }
+  }
+}

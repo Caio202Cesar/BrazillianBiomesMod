@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/bacuri_leaves",
+    "particle": "brbiomesmod:block/bacuri_leaves"
+  }
+}

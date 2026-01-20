@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/camu_camu_sapling",
+    "particle": "brbiomesmod:block/camu_camu_sapling"
+  }
+}

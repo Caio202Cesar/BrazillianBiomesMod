@@ -1,0 +1,18 @@
+{
+  "name": "Pau-brasil",
+  "icon": "brbiomesmod:brazilwood_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Nome Científico:$(reset) Paubrasilia echinata$(br)$(bold)Biomas:$(reset) mata atlântica, restinga das dunas"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:brazilwood_sapling",
+      "title": "Tree Spotlight",
+      "text": "Muda."
+    }
+  ]
+}

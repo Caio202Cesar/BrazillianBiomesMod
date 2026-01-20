@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:pink_peroba_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:pink_peroba_wood",
+    "count": 3
+  }
+}

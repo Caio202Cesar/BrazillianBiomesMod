@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "string",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:silk_cotton"
+    }
+  ],
+  "result": {
+    "item": "minecraft:string",
+    "count": 3
+  }
+}

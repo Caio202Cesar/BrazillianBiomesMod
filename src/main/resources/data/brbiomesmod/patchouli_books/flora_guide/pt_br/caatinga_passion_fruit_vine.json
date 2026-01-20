@@ -1,0 +1,18 @@
+{
+  "name": "Passionfruit Vine",
+  "icon": "brbiomesmod:caatinga_passion_fruit_flowering_vine",
+  "category": "brbiomesmod:vines",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Passiflora cincinnata$(br)$(bold)Biomes:$(reset) Caatinga"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:caatinga_passion_fruit_flowering_vine",
+      "title": "Tree Spotlight",
+      "text": "Flowering vine."
+    }
+  ]
+}

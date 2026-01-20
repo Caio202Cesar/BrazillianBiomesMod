@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/angel_trumpet_orange_top",
+    "particle": "brbiomesmod:block/angel_trumpet_orange_top"
+  }
+}

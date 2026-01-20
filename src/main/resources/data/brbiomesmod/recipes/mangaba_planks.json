@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:mangaba_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:mangaba_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:cashew_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:cashew_planks",
+    "count": 4
+  }
+}

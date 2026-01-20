@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/jua_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/jua_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/jua_slab_top"
+    }
+  }
+}

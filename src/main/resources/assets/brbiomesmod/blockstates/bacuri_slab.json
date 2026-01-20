@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/bacuri_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/bacuri_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/bacuri_slab_top"
+    }
+  }
+}

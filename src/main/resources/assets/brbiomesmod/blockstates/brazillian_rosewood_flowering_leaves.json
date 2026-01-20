@@ -1,0 +1,10 @@
+{
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/brazillian_rosewood_flowering_leaves",
+        "weight": 6},
+      {"model": "brbiomesmod:block/brazillian_rosewood_leaves",
+        "weight": 1}
+    ]
+  }
+}

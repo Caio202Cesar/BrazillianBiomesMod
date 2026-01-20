@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/cattleya_coccinea",
+    "particle": "brbiomesmod:block/cattleya_coccinea"
+  }
+}

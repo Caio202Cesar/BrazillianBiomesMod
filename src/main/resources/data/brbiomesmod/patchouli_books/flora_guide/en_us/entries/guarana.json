@@ -1,0 +1,18 @@
+{
+  "name": "Guarana",
+  "icon": "brbiomesmod:guarana_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Paullinia cupana$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:guarana_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

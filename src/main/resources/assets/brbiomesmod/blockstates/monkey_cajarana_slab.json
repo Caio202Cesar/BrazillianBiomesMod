@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/monkey_cajarana_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/monkey_cajarana_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/monkey_cajarana_slab_top"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:yerba_mate_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:yerba_mate_planks",
+    "count": 4
+  }
+}

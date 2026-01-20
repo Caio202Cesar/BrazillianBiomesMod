@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:cashew_apple"
+    },
+    "W": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:cashew_apple_juice",
+    "count": 1
+  }
+}

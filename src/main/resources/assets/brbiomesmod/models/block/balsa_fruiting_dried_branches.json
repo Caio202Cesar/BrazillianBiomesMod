@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/balsa_fruiting_dried_branches",
+    "particle": "brbiomesmod:block/balsa_fruiting_dried_branches"
+  }
+}

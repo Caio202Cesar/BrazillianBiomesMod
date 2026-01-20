@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "food",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:guarana_fruit"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:guarana_seeds",
+    "count": 1
+  }
+}

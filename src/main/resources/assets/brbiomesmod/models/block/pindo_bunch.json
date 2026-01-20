@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/pindo_bunch",
+    "particle": "brbiomesmod:block/pindo_bunch"
+  }
+}

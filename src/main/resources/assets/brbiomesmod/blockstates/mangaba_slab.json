@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/mangaba_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/mangaba_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/mangaba_slab_top"
+    }
+  }
+}

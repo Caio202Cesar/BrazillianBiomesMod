@@ -1,0 +1,6 @@
+{
+  "parent":"item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:item/velame_of_rio_grande"
+  }
+}

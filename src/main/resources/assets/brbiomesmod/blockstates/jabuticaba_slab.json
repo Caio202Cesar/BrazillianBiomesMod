@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/jabuticaba_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/jabuticaba_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/jabuticaba_slab_top"
+    }
+  }
+}

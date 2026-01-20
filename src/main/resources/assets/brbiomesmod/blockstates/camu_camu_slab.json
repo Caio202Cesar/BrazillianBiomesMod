@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/camu_camu_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/camu_camu_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/camu_camu_slab_top"
+    }
+  }
+}

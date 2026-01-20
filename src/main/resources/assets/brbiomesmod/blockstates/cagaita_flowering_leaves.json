@@ -1,0 +1,10 @@
+{
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/cagaita_flowers",
+        "weight": 4},
+      {"model": "brbiomesmod:block/cagaita_young_leaves",
+        "weight": 1}
+    ]
+  }
+}

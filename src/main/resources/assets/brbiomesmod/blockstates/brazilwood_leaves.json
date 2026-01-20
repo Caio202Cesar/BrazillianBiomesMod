@@ -1,0 +1,7 @@
+{
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/brazilwood_leaves"},
+      {"model": "brbiomesmod:block/brazilwood_flowering_leaves"}
+    ]
+  }}

@@ -1,0 +1,7 @@
+{
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/yerba_mate_leaves", "weight": 5},
+      {"model": "brbiomesmod:block/yerba_mate_fruiting_leaves", "weight": 1}
+    ]
+  }}

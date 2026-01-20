@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/cambuci_bark",
+    "side": "brbiomesmod:block/cambuci_bark"
+  }
+}

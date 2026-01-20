@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "brbiomesmod:block/jussara_frond"
+    },
+    "facing=east": {
+      "model": "brbiomesmod:block/jussara_frond",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "brbiomesmod:block/jussara_frond",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "brbiomesmod:block/jussara_frond",
+      "y": 270
+    }
+  }
+}

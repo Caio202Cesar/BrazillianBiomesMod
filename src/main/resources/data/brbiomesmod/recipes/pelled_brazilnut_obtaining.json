@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "food",
+  "ingredients": [
+    {
+      "item": "minecraft:shears"
+    },
+    {
+      "item": "brbiomesmod:brazilnut_with_pell"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:pelled_brazilnut"
+  }
+}

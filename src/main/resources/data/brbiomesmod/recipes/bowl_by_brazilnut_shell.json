@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:brazilnut_shell"
+    }
+  ],
+  "result": {
+    "item": "minecraft:bowl",
+    "count": 1
+  }
+}

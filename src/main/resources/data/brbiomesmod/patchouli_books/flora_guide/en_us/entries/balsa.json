@@ -1,0 +1,18 @@
+{
+  "name": "Balsa",
+  "icon": "brbiomesmod:balsa_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Ochroma pyramidale$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:balsa_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

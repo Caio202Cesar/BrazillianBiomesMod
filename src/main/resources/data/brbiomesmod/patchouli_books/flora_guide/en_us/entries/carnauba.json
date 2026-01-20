@@ -1,0 +1,18 @@
+{
+  "name": "Carnauba",
+  "icon": "brbiomesmod:carnauba_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Copernicia prunifera$(br)$(bold)Biomes:$(reset) Caatinga"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:carnauba_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

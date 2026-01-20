@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "entries": [
+    "brbiomesmod:apricot_ipe_sapling_in_abandoned_mineshaft",
+    "brbiomesmod:apricot_ipe_sapling_in_desert_pyramid",
+    "brbiomesmod:apricot_ipe_sapling_in_dungeon",
+    "brbiomesmod:apricot_ipe_sapling_in_jungle_temple",
+    "brbiomesmod:apricot_ipe_sapling_in_pillager_outpost",
+    "brbiomesmod:apricot_ipe_sapling_in_shipwreck_supply",
+    "brbiomesmod:apricot_ipe_sapling_in_shipwreck_treasure",
+    "brbiomesmod:apricot_ipe_sapling_in_stronghold_library",
+    "brbiomesmod:apricot_ipe_sapling_in_underwater_ruin_big",
+    "brbiomesmod:mate_cup_in_pillager_outpost",
+    "brbiomesmod:mate_cup_in_dungeon",
+    "brbiomesmod:mate_cup_in_abandoned_mineshaft",
+    "brbiomesmod:mate_cup_in_stronghold",
+    "brbiomesmod:mate_cup_in_bonus_chest",
+    "brbiomesmod:cocoa_fruit_from_cocoa_pod"
+  ]
+}

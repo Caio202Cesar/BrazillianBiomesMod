@@ -1,0 +1,18 @@
+{
+  "name": "Imbuia",
+  "icon": "brbiomesmod:imbuia_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Ocotea porosa$(br)$(bold)Biomes:$(reset) Araucaria Plateau"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:imbuia_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

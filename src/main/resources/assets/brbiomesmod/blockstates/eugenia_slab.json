@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/eugenia_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/eugenia_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/eugenia_slab_top"
+    }
+  }
+}

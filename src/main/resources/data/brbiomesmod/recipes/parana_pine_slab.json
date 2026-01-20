@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_slab",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:parana_pine_planks"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:parana_pine_slab",
+    "count": 6
+  }
+}

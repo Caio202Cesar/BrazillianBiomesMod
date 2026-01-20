@@ -1,0 +1,18 @@
+{
+  "name": "Mangaba",
+  "icon": "brbiomesmod:mangaba_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Hancornia speciosa$(br)$(bold)Biomes:$(reset) Dunas Restinga, Cerrado"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:mangaba_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

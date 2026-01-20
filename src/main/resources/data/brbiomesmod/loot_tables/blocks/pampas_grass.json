@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "brbiomesmod:blocks/pampas_grass",
+  "pools": [
+    {
+      "rolls": 2.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "brbiomesmod:pampas_grass",
+          "conditions": [
+            {
+              "block": "brbiomesmod:pampas_grass",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

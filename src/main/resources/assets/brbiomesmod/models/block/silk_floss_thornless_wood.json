@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/silk_floss_thornless_bark",
+    "side": "brbiomesmod:block/silk_floss_thornless_bark"
+  }
+}

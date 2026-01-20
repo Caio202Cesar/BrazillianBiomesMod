@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "brbiomesmod:block/yerba_mate_planks",
+    "top": "brbiomesmod:block/yerba_mate_planks",
+    "side": "brbiomesmod:block/yerba_mate_planks"
+  }
+}

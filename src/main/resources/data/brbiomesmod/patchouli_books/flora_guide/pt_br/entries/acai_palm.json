@@ -1,0 +1,18 @@
+{
+  "name": "Açaizeiro",
+  "icon": "brbiomesmod:acai_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Informação Botânica",
+      "text": "$(bold)Nome Científico:$(reset) Euterpe oleracea$(br)$(bold)Biomas:$(reset) Várzea amazônica"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:acai_sapling",
+      "title": "Tree Spotlight",
+      "text": "Muda."
+    }
+  ]
+}

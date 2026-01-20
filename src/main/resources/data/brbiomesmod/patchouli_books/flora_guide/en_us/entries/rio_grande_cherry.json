@@ -1,0 +1,18 @@
+{
+  "name": "Cherry of Rio-Grande",
+  "icon": "brbiomesmod:rio_grande_cherry_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Eugenia involucrata$(br)$(bold)Biomes:$(reset) Araucaria Plateau"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:rio_grande_cherry_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

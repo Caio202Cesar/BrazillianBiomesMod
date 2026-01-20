@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "brbiomesmod:block/silk_floss_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "brbiomesmod:block/silk_floss_log"
+    },
+    "axis=z": {
+      "model": "brbiomesmod:block/silk_floss_log_horizontal",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Aroeira-prateada",
+  "icon": "brbiomesmod:silver_pepper_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Nome Científico:$(reset) Schinus lentiscifolius$(br)$(bold)Biomas:$(reset) pampas, mata de araucárias"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:silver_pepper_sapling",
+      "title": "Tree Spotlight",
+      "text": "Muda."
+    }
+  ]
+}

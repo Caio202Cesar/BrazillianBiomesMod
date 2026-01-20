@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "brbiomesmod:block/victoria_lily_pad"
+      },
+      {
+        "model": "brbiomesmod:block/victoria_lily_pad",
+        "y": 90
+      },
+      {
+        "model": "brbiomesmod:block/victoria_lily_pad",
+        "y": 180
+      },
+      {
+        "model": "brbiomesmod:block/victoria_lily_pad",
+        "y": 270
+      }
+    ]
+  }
+}

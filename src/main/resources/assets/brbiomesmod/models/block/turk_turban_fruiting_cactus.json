@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/turk_turban_fruiting_cactus",
+    "particle": "brbiomesmod:block/turk_turban_fruiting_cactus"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "brbiomesmod:block/angel_trumpet_pink_top"
+    },
+    "half=lower": {
+      "model": "brbiomesmod:block/angel_trumpet_pink_bottom"
+    }
+  }
+}

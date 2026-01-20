@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:cambuci_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:cambuci_wood",
+    "count": 3
+  }
+}

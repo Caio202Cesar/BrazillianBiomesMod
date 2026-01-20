@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:sombreiro_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:sombreiro_wood",
+    "count": 3
+  }
+}

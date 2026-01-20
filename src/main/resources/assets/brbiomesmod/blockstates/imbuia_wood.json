@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "brbiomesmod:block/imbuia_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "brbiomesmod:block/imbuia_wood"
+    },
+    "axis=z": {
+      "model": "brbiomesmod:block/imbuia_wood",
+      "x": 90
+    }
+  }
+}

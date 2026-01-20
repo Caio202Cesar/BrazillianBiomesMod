@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:caven_thorn_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:caven_thorn_wood",
+    "count": 3
+  }
+}

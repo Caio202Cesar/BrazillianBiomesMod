@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "brbiomesmod:block/cassava_plant_top"
+    },
+    "half=lower": {
+      "model": "brbiomesmod:block/cassava_plant_bottom"
+    }
+  }
+}

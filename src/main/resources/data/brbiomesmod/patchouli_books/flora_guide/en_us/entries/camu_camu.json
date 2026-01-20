@@ -1,0 +1,18 @@
+{
+  "name": "Camu-camu",
+  "icon": "brbiomesmod:camu_camu_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Myrciaria dubia$(br)$(bold)Biomes:$(reset) Amazon Rainforest"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:camu_camu_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

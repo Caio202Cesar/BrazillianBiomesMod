@@ -1,0 +1,18 @@
+{
+  "name": "Cagaita",
+  "icon": "brbiomesmod:cagaita_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Eugenia dysenterica$(br)$(bold)Biomes:$(reset) Cerrado"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:cagaita_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

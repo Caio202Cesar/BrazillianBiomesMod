@@ -1,0 +1,10 @@
+{
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/black_sucupira_fruiting_leaves",
+        "weight": 6},
+      {"model": "brbiomesmod:block/black_sucupira_leaves",
+        "weight": 2}
+    ]
+  }
+}

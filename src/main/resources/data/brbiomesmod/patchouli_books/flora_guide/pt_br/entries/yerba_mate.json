@@ -1,0 +1,18 @@
+{
+  "name": "Erva-mate",
+  "icon": "brbiomesmod:yerba_mate_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Nome Científico:$(reset) Ilex paraguariensis$(br)$(bold)Biomas:$(reset) Mata de araucaria"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:yerba_mate_sapling",
+      "title": "Tree Spotlight",
+      "text": "Muda."
+    }
+  ]
+}

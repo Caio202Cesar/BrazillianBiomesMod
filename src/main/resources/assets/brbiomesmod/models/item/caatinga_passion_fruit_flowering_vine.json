@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "brbiomesmod:block/caatinga_passion_fruit_flowering_vine"
+  }
+}

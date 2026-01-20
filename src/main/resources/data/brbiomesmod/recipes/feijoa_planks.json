@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:feijoa_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:feijoa_planks",
+    "count": 4
+  }
+}

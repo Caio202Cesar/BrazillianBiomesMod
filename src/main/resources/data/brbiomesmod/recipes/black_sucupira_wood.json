@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:black_sucupira_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:black_sucupira_wood",
+    "count": 3
+  }
+}

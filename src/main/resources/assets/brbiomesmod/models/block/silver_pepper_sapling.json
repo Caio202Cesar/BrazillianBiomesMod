@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/silver_pepper_sapling",
+    "particle": "brbiomesmod:block/silver_pepper_sapling"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Jussara Palm",
+  "icon": "brbiomesmod:jussara_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Nome Científico:$(reset) Euterpe edulis$(br)$(bold)Biomes:$(reset) Atlantic Forest"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:jussara_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

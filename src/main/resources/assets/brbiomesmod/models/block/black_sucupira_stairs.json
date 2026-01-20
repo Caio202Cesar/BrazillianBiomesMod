@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "brbiomesmod:block/black_sucupira_planks",
+    "top": "brbiomesmod:block/black_sucupira_planks",
+    "side": "brbiomesmod:block/black_sucupira_planks"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Brazillian Peeper",
+  "icon": "brbiomesmod:brazillian_pepper_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Schinus terebinthifolia$(br)$(bold)Biomes:$(reset) Atlantic Forest, Araucaria Plateau, Pampas, Caatinga, Dunas Restinga, Cerrado"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:brazillian_pepper_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

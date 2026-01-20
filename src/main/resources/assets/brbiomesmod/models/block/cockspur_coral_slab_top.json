@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "brbiomesmod:block/cockspur_coral_planks",
+    "top": "brbiomesmod:block/cockspur_coral_planks",
+    "side": "brbiomesmod:block/cockspur_coral_planks"
+  }
+}

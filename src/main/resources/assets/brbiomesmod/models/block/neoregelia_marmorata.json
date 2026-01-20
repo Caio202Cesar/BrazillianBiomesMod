@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/neoregelia_marmorata",
+    "particle": "brbiomesmod:block/neoregelia_marmorata"
+  }
+}

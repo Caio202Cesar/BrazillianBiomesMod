@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:sapucaia_fruit"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:sapucaia_nuts",
+    "count": 1
+  }
+}

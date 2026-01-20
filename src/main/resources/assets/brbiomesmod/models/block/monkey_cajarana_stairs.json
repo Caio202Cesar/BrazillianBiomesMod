@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "brbiomesmod:block/monkey_cajarana_planks",
+    "top": "brbiomesmod:block/monkey_cajarana_planks",
+    "side": "brbiomesmod:block/monkey_cajarana_planks"
+  }
+}

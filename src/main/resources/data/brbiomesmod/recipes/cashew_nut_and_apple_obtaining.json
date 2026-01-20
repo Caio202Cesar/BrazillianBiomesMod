@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:cashew_fruit"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:cashewnut",
+    "count": 1
+  }
+}

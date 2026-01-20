@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:silk_floss_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:silk_floss_thorny_wood",
+    "count": 3
+  }
+}

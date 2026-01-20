@@ -1,0 +1,18 @@
+{
+  "name": "Jequitiba",
+  "icon": "brbiomesmod:jequitiba_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Nome Científico:$(reset) Cariniana spp$(br)$(bold)Biomes:$(reset) Atlantic Forest"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:jequitiba_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

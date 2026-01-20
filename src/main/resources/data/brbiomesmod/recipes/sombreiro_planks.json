@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:sombreiro_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:sombreiro_planks",
+    "count": 4
+  }
+}

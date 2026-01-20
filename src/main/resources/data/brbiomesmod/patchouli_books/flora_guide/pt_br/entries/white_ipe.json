@@ -1,0 +1,18 @@
+{
+  "name": "Ipê-branco",
+  "icon": "brbiomesmod:white_ipe_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Nome Científico:$(reset) Tabebuia roseoalba$(br)$(bold)Biomes:$(reset) CCerrado, mata atlântica, restinga das dunas, pantanal"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:white_ipe_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

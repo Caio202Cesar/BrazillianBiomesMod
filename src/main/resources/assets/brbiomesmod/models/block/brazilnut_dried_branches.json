@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/brazilnut_dried_branches",
+    "particle": "brbiomesmod:block/brazilnut_dried_branches"
+  }
+}

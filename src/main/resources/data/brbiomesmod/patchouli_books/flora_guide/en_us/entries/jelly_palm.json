@@ -1,0 +1,18 @@
+{
+  "name": "Jelly Palm",
+  "icon": "brbiomesmod:jelly_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Butia spp$(br)$(bold)Biomes:$(reset) Pampas"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:jelly_palm_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

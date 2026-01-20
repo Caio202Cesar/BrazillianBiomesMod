@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/manaca_da_serra_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/manaca_da_serra_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/manaca_da_serra_slab_top"
+    }
+  }
+}

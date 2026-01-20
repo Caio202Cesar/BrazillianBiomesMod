@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:jabuticaba_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:jabuticaba_planks",
+    "count": 4
+  }
+}

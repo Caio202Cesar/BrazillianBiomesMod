@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/caven_thorn_sapling",
+    "particle": "brbiomesmod:block/caven_thorn_sapling"
+  }
+}

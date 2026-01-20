@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/macela",
+    "particle": "brbiomesmod:block/macela"
+  }
+}

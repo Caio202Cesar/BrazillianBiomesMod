@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/sharinga_log_middle",
+    "side": "brbiomesmod:block/sharinga_bark"
+  }
+}

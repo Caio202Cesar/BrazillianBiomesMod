@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "ab",
+    "c "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:glass_bottle"
+    },
+    "b": {
+      "item": "minecraft:sugar"
+    },
+    "c": {
+      "item": "brbiomesmod:guarana_seeds"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:guarana_soda",
+    "count": 1
+  }
+}

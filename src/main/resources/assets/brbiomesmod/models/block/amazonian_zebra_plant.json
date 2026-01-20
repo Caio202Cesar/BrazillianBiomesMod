@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/amazonian_zebra_plant",
+    "particle": "brbiomesmod:block/amazonian_zebra_plant"
+  }
+}

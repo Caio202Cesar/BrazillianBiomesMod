@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/sapucaia_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/sapucaia_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/sapucaia_slab_top"
+    }
+  }
+}

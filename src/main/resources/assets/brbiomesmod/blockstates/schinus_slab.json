@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/schinus_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/schinus_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/schinus_slab_top"
+    }
+  }
+}

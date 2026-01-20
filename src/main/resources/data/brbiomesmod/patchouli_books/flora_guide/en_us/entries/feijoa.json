@@ -1,0 +1,18 @@
+{
+  "name": "Feijoa",
+  "icon": "brbiomesmod:feijoa_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Feijoa sellowiana$(br)$(bold)Biomes:$(reset) Araucaria Plateau"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:feijoa_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

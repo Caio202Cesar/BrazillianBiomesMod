@@ -1,0 +1,18 @@
+{
+  "name": "Cajá",
+  "icon": "brbiomesmod:yellow_mombin_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Nome Científico:$(reset) Spondias mombin$(br)$(bold)Biomes:$(reset) Floresta amazônica, várzea amazônica, mata atlântica, cerrado"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:yellow_mombin_sapling",
+      "title": "Tree Spotlight",
+      "text": "Muda."
+    }
+  ]
+}

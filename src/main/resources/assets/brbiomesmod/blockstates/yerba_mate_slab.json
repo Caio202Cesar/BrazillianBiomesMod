@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/yerba_mate_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/yerba_mate_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/yerba_mate_slab_top"
+    }
+  }
+}

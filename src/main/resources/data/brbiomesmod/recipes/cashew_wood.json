@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:cashew_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:cashew_wood",
+    "count": 3
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/ipomaea_pescaprae",
+    "particle": "brbiomesmod:block/ipomaea_pescaprae"
+  }
+}

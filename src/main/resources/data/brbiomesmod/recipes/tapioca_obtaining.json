@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:water_bucket"
+    },
+    "X": {
+      "item": "brbiomesmod:cassava"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:tapioca",
+    "count": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Jenipapo",
+  "icon": "brbiomesmod:jenipapo_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Genipa americana$(br)$(bold)Biomes:$(reset) Amazon Varzea, Cerrado, Atlantic Forest, Pantanal, Dunas Restinga"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:jenipapo_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

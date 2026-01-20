@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:schinus_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:schinus_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Vines",
+  "description": "Brazilian native vines and the biomes where they are found.",
+  "icon": "brbiomesmod:caatinga_passion_fruit_flowering_vine",
+  "entries": [
+    "brbiomesmod:passion_fruit_vine",
+    "brbiomesmod:caatinga_passion_fruit_vine",
+    "brbiomesmod:dutchman_pipe_vine"
+
+  ]
+}

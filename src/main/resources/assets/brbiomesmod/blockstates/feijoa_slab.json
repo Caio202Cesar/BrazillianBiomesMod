@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/feijoa_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/feijoa_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/feijoa_slab_top"
+    }
+  }
+}

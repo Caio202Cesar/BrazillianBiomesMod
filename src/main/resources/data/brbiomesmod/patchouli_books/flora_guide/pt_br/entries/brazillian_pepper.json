@@ -1,0 +1,18 @@
+{
+  "name": "Aroeira-vermelha",
+  "icon": "brbiomesmod:brazillian_pepper_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Nome Científico:$(reset) Schinus terebinthifolia$(br)$(bold)Biomas:$(reset) Mata atlântica, mata de araucarias, pampas, caatinga, testinga das dunas, cerrado"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:brazillian_pepper_sapling",
+      "title": "Tree Spotlight",
+      "text": "Muda."
+    }
+  ]
+}

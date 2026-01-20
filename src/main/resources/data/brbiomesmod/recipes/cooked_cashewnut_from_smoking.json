@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "brbiomesmod:cashewnut"
+  },
+  "result": "brbiomesmod:cooked_cashewnut",
+  "experience": 0.35,
+  "cookingtime": 200
+}

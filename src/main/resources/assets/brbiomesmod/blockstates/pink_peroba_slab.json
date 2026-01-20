@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/pink_peroba_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/pink_peroba_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/pink_peroba_slab_top"
+    }
+  }
+}

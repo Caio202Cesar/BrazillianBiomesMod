@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/queen_palm_leaves",
+    "particle": "brbiomesmod:block/queen_palm_leaves"
+  }
+}

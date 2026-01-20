@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "brbiomesmod:block/monkey_cajarana_planks"
+  }
+}

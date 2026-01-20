@@ -1,0 +1,9 @@
+{
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/cockspur_coral_leaves",
+        "weight": 1},
+      {"model": "brbiomesmod:block/cockspur_coral_flowering_leaves",
+        "weight": 4}
+    ]
+  }}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/cashew_leaves",
+    "particle": "brbiomesmod:block/cashew_leaves"
+  }
+}

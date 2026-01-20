@@ -1,0 +1,18 @@
+{
+  "name": "Xaxim",
+  "icon": "brbiomesmod:xaxim_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Dicksonia sellowiana$(br)$(bold)Biomes:$(reset) Araucaria Plateau"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:xaxim_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

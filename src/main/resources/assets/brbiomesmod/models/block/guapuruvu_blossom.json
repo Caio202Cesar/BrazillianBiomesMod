@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/guapuruvu_blossom",
+    "particle": "brbiomesmod:block/guapuruvu_blossom"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:wolf_apple_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:wolf_apple_planks",
+    "count": 4
+  }
+}

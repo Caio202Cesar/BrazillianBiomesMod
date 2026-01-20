@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:algarrobillo_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:algarrobillo_wood",
+    "count": 3
+  }
+}

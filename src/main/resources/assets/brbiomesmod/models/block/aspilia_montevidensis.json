@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/aspilia_montevidensis",
+    "particle": "brbiomesmod:block/aspilia_montevidensis"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:algarrobillo_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:algarrobillo_planks",
+    "count": 4
+  }
+}

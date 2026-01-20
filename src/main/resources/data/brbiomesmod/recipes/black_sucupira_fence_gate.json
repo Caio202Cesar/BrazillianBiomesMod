@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_fence_gate",
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "brbiomesmod:black_sucupira_planks"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:black_sucupira_fence_gate"
+  }
+}
