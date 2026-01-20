@@ -12,5 +12,5 @@ public class ModParticles {
             DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, BrazillianBiomesMod.MOD_ID);
 
     public static final RegistryObject<BasicParticleType> LATEX_DRIP =
-            PARTICLES.register("latex_drip", () -> new BasicParticleType(false));
+            PARTICLES.register("latex_drip", () -> new BasicParticleType(true));
 }
