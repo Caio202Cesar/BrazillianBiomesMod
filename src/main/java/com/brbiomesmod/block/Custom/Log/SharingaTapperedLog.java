@@ -57,28 +57,27 @@ public class SharingaTapperedLog extends RotatedPillarBlock {
 
     @Override
     public void animateTick(BlockState state, World world, BlockPos pos, Random random) {
-        if (state.get(LATEX) == 0 || random.nextInt(5) != 0)
+
+        if (state.get(LATEX) == 0 || random.nextInt(6) != 0)
             return;
 
-        Direction.Axis axis = state.get(AXIS);
+        Direction direction = Direction.Plane.HORIZONTAL.random(random);
 
         double x = pos.getX() + 0.5D;
-        double y = pos.getY() + 0.5D;
+        double y = pos.getY() + random.nextDouble();
         double z = pos.getZ() + 0.5D;
 
-        // Spawn from exposed face
-        if (axis == Direction.Axis.Y) {
-            y = pos.getY() + 0.05D;
-        } else if (axis == Direction.Axis.X) {
-            x = pos.getX() + (random.nextBoolean() ? 0.05D : 0.95D);
-        } else {
-            z = pos.getZ() + (random.nextBoolean() ? 0.05D : 0.95D);
-        }
+        double offset = 0.52D;
+
+        x += direction.getXOffset() * offset;
+        z += direction.getZOffset() * offset;
 
         world.addParticle(
                 ModParticles.LATEX_DRIP.get(),
                 x, y, z,
-                0.0D, -0.02D, 0.0D
+                0.0D,
+                -0.01D,
+                0.0D
         );
     }
 

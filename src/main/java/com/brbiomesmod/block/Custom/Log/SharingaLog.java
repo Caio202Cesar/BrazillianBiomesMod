@@ -41,14 +41,14 @@ public class SharingaLog extends RotatedPillarBlock {
             return;
 
         // Prevent re-stripping
-        if (state.getBlock() == TreesGroup.SHARINGA_STRIPPED_LOG.get())
+        if (state.getBlock() == TreesGroup.SHARINGA_TAPPERED_LOG.get())
             return;
 
         Direction.Axis axis = state.get(RotatedPillarBlock.AXIS);
 
         worldIn.setBlockState(
                 pos,
-                TreesGroup.SHARINGA_STRIPPED_LOG.get()
+                TreesGroup.SHARINGA_TAPPERED_LOG.get()
                         .getDefaultState()
                         .with(RotatedPillarBlock.AXIS, axis),
                 3
