@@ -139,6 +139,10 @@
     "brbiomesmod:yellow_mombin_leaves",
     "brbiomesmod:yellow_mombin_flowering_leaves",
     "brbiomesmod:yellow_mombin_fruiting_leaves",
-    "brbiomesmod:yellow_mombin_dried_branches"
+    "brbiomesmod:yellow_mombin_dried_branches",
+    "brbiomesmod:pequi_leaves",
+    "brbiomesmod:pequi_flowering_leaves",
+    "brbiomesmod:pequi_dried_branches",
+    "brbiomesmod:pequi_fruiting_leaves"
   ]
 }

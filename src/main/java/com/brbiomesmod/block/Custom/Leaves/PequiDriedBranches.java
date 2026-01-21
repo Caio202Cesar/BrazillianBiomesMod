@@ -13,10 +13,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class PequiFloweringLeaves extends LeavesBlock implements IForgeShearable {
+public class PequiDriedBranches extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public PequiFloweringLeaves(Properties properties, Supplier<Block> nextStage) {
+    public PequiDriedBranches(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
@@ -38,17 +38,8 @@ public class PequiFloweringLeaves extends LeavesBlock implements IForgeShearable
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
-
-        int distance = state.get(LeavesBlock.DISTANCE);
-        boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-        BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
-        }
-
-        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        //Dry season
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(45) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -56,6 +47,18 @@ public class PequiFloweringLeaves extends LeavesBlock implements IForgeShearable
             BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
             worldIn.setBlockState(pos, newState, 2);
+
+        }
+
+        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
+
         }
     }
 

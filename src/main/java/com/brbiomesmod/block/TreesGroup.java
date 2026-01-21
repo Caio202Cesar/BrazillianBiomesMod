@@ -1011,6 +1011,9 @@ public class TreesGroup {
             ModLogs::new);
     public static final RegistryObject<Block> PEQUI_LEAVES = registerBlock("pequi_leaves",
             () -> new PequiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PEQUI_DRIED_BRANCHES));
+    public static final RegistryObject<Block> PEQUI_DRIED_BRANCHES = registerBlock("pequi_dried_branches",
+            () -> new PequiDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PEQUI_FLOWERING_LEAVES));
     public static final RegistryObject<Block> PEQUI_FLOWERING_LEAVES = registerBlock("pequi_flowering_leaves",
             () -> new PequiFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
