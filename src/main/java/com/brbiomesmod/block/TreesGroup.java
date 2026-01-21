@@ -528,11 +528,8 @@ public class TreesGroup {
     public static final RegistryObject<Block> PALMITO_LOG = registerBlock("palmito_log",
             PalmitoLog::new);
     public static final RegistryObject<Block> ACAI_LEAVES = registerBlock("acai_leaves",
-            () -> new AcaiLeaves(AbstractBlock.Properties.create(Material.LEAVES)
-                    .hardnessAndResistance(0.2f)
-                    .tickRandomly() // Enables random ticks
-                    .notSolid()
-                    .sound(SoundType.PLANT)));
+            () -> new AcaiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT)));
     public static final RegistryObject<Block> ACAI_SAPLING = registerBlock("acai_sapling",
             AcaiSapling::new);
     @SuppressWarnings("deprecation")
@@ -543,11 +540,8 @@ public class TreesGroup {
     public static final RegistryObject<Block> ACAI_BUNCH = registerBlock("acai_bunch",
             AcaiBunchBlock::new);
     public static final RegistryObject<Block> JUSSARA_LEAVES = registerBlock("jussara_leaves",
-            () -> new AcaiLeaves(AbstractBlock.Properties.create(Material.LEAVES)
-                    .hardnessAndResistance(0.2f)
-                    .tickRandomly() // Enables random ticks
-                    .notSolid()
-                    .sound(SoundType.PLANT)));
+            () -> new AcaiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT)));
     public static final RegistryObject<Block> JUSSARA_SAPLING = registerBlock("jussara_sapling",
             JussaraSapling::new);
     @SuppressWarnings("deprecation")
@@ -573,17 +567,6 @@ public class TreesGroup {
     public static final RegistryObject<Block> POTTED_BLACK_SUCUPIRA_SAPLING = BLOCKS.register("potted_black_sucupira_sapling",
             () -> new FlowerPotBlock(TreesGroup.BLACK_SUCUPIRA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
-
-
-    public static final RegistryObject<Block> BURITI_LOG = registerBlock("buriti_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> BURITI_LEAVES = registerBlock("buriti_leaves",
-            () -> new BuritiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT)));
-    public static final RegistryObject<Block> BURITI_SAPLING = registerBlock("buriti_sapling",
-            BuritiSapling::new);
-    public static final RegistryObject<Block> BURITI_BUNCH = registerBlock("buriti_bunch",
-            BuritiBunchBlock::new);
 
 
     public static final RegistryObject<Block> WOLF_APPLE_LOG = registerBlock("wolf_apple_log",
@@ -672,17 +655,6 @@ public class TreesGroup {
     public static final RegistryObject<Block> POTTED_COCKSPUR_CORAL_SAPLING = BLOCKS.register("potted_cockspur_coral_sapling",
             () -> new FlowerPotBlock(TreesGroup.COCKSPUR_CORAL_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
-
-    public static final RegistryObject<Block> JELLY_PALM_LOG = registerBlock("jelly_palm_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> JELLY_PALM_LEAVES = registerBlock("jelly_palm_leaves",
-            () -> new ButiaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT)));
-    public static final RegistryObject<Block> JELLY_PALM_SAPLING = registerBlock("jelly_palm_sapling",
-            JellyPalmSapling::new);
-    public static final RegistryObject<Block> PINDO_BUNCH = registerBlock("pindo_bunch",
-            PindoBunchBlock::new);
 
 
     public static final RegistryObject<Block> SCHINUS_LOG = registerBlock("schinus_log",
@@ -1040,6 +1012,35 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.PEQUI_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+
+    public static final RegistryObject<Block> BURITI_LOG = registerBlock("buriti_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BURITI_LEAVES = registerBlock("buriti_leaves",
+            () -> new BuritiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT)));
+    public static final RegistryObject<Block> BURITI_SAPLING = registerBlock("buriti_sapling",
+            BuritiSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BURITI_SAPLING = BLOCKS.register("potted_buriti_sapling",
+            () -> new FlowerPotBlock(TreesGroup.BURITI_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
+    public static final RegistryObject<Block> BURITI_BUNCH = registerBlock("buriti_bunch",
+            BuritiBunchBlock::new);
+
+
+    public static final RegistryObject<Block> JELLY_PALM_LOG = registerBlock("jelly_palm_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> JELLY_PALM_LEAVES = registerBlock("jelly_palm_leaves",
+            () -> new ButiaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT)));
+    public static final RegistryObject<Block> JELLY_PALM_SAPLING = registerBlock("jelly_palm_sapling",
+            JellyPalmSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_JELLY_PALM_SAPLING = BLOCKS.register("potted_jelly_palm_sapling",
+            () -> new FlowerPotBlock(TreesGroup.JELLY_PALM_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
+    public static final RegistryObject<Block> PINDO_BUNCH = registerBlock("pindo_bunch",
+            PindoBunchBlock::new);
 
     //Varzea Plant
     public static final RegistryObject<Block> SANDBOX_TREE_LEAVES = registerBlock("sandbox_tree_leaves",

@@ -28,6 +28,8 @@ public class SandboxTreeSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreesGroup.SANDBOX_TREE_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_SANDBOX_TREE_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

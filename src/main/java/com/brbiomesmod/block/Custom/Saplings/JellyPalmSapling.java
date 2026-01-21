@@ -28,6 +28,7 @@ public class JellyPalmSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreesGroup.JELLY_PALM_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_JELLY_PALM_SAPLING.get(), RenderType.getCutout());
 
     }
 

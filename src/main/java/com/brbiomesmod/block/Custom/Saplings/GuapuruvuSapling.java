@@ -36,6 +36,8 @@ public class GuapuruvuSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreesGroup.GUAPURUVU_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_GUAPURUVU_SAPLING.get(), RenderType.getCutout());
+
     }
 
     //Hardy from zone 9

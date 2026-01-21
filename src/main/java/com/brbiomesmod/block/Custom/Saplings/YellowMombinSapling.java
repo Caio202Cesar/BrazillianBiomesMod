@@ -28,6 +28,8 @@ public class YellowMombinSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreesGroup.YELLOW_MOMBIN_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_YELLOW_MOMBIN_SAPLING.get(), RenderType.getCutout());
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

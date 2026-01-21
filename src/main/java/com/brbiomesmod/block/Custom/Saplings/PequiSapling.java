@@ -36,6 +36,8 @@ public class PequiSapling extends SaplingBlock {
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
         RenderTypeLookup.setRenderLayer(TreesGroup.PEQUI_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_PEQUI_SAPLING.get(), RenderType.getCutout());
+
     }
 
     //Hardy to zone 11
