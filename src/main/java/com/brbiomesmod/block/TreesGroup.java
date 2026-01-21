@@ -1042,8 +1042,6 @@ public class TreesGroup {
 
 
     //Varzea Plant
-    public static final RegistryObject<Block> SANDBOX_TREE_LOG = registerBlock("sandbox_tree_log",
-            SilkFlossLog::new);
     public static final RegistryObject<Block> SANDBOX_TREE_LEAVES = registerBlock("sandbox_tree_leaves",
             () -> new SandboxTreeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.SANDBOX_TREE_DRIED_BRANCHES));
@@ -1062,9 +1060,14 @@ public class TreesGroup {
             ModLogs::new);
     public static final RegistryObject<Block> CANNONBALL_TREE_LEAVES = registerBlock("cannonball_tree_leaves",
             ModLeaves::new);
+    public static final RegistryObject<Block> CANNONBALL_TREE_DRIED_BRANCHES = registerBlock("cannonball_tree_dried_branches",
+            ModLeaves::new);
     public static final RegistryObject<Block> CANNONBALL_TREE_SAPLING = registerBlock("cannonball_tree_sapling",
-            CannonballTreeSapling::new);*/
-
+            CannonballTreeSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CANNONBALL_TREE_SAPLING = BLOCKS.register("potted_cannonball_tree_sapling",
+            () -> new FlowerPotBlock(TreesGroup.SANDBOX_TREE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));*/
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
