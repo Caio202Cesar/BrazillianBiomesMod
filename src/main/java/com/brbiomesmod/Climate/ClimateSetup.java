@@ -54,6 +54,22 @@ public class ClimateSetup {
             SummerHeatRegistry.register("caiocesarbiomes:salt_desert", SummerHeat.SCHORCHING);
             SummerHeatRegistry.register("caiocesarbiomes:socotra_dryland", SummerHeat.SCHORCHING);
             SummerHeatRegistry.register("caiocesarbiomes:southern_beech_forest", SummerHeat.COOLER);
+            SummerHeatRegistry.register("caiocesarbiomes:stony_mediterranean_shore", SummerHeat.SCHORCHING);
+            SummerHeatRegistry.register("caiocesarbiomes:subtropical_eucalyptus_dry_forest", SummerHeat.WARM);
+            SummerHeatRegistry.register("caiocesarbiomes:subtropical_extreme_hills", SummerHeat.WARM);
+            SummerHeatRegistry.register("caiocesarbiomes:subtropical_laurel_forest", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:subtropical_laurel_jungle", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:subtropical_pine_dry_forest", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:subtropical_seasonal_forest", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:temperate_desert", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:temperate_rainforest", SummerHeat.WARM);
+            SummerHeatRegistry.register("caiocesarbiomes:tropical_bamboo_marsh", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:tropical_beach", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:tropical_desert", SummerHeat.SCHORCHING);
+            SummerHeatRegistry.register("caiocesarbiomes:tropical_eucalyptus_dry_forest", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:tropical_seasonal_forest", SummerHeat.HOT);
+            SummerHeatRegistry.register("caiocesarbiomes:tussock_tundra", SummerHeat.TUNDRA_COLD);
+            SummerHeatRegistry.register("caiocesarbiomes:volcanic_site", SummerHeat.SCHORCHING);
 
             SummerHeatRegistry.register("brbiomesmod:amazon_rainforest", SummerHeat.HOT);
             SummerHeatRegistry.register("brbiomesmod:amazon_varzea_forest", SummerHeat.HOT);
