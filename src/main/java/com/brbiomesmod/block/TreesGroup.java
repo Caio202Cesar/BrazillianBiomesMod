@@ -1043,6 +1043,9 @@ public class TreesGroup {
             PindoBunchBlock::new);
 
     //Varzea Plant
+    public static final RegistryObject<Block> SANDBOX_TREE_LOG = registerBlock("sandbox_tree_log",
+            SilkFlossLog::new);
+
     public static final RegistryObject<Block> SANDBOX_TREE_LEAVES = registerBlock("sandbox_tree_leaves",
             () -> new SandboxTreeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.SANDBOX_TREE_DRIED_BRANCHES));

@@ -590,14 +590,16 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_ROSEWOOD_LOG),
                     new SimpleBlockStateProvider(States.BRAZILLIAN_ROSEWOOD_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new ForkyTrunkPlacer(5, 2, 2),
-                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_ROSEWOOD_WITH_PASSIONVINE = register("brazillian_rosewood_with_passionvine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_ROSEWOOD_LOG),
                     new SimpleBlockStateProvider(States.BRAZILLIAN_ROSEWOOD_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new ForkyTrunkPlacer(5, 2, 2),
-                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines()
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines()
                     .setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE, PassionFruitVineTrunkDecorator.INSTANCE)).build()));
 
     //Jabuticaba Trees
