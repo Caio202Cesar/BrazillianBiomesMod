@@ -386,14 +386,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(DutchmanPipeVineDecorator.INSTANCE)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_ROSEWOOD_WITH_DUTCHMAN_VINE = register("dutchman_vine_brazillian_rosewood",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(
-                    new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_ROSEWOOD_LOG),
-                    new SimpleBlockStateProvider(States.BRAZILLIAN_ROSEWOOD_LEAVES),
-                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new ForkyTrunkPlacer(5, 2, 2),
-                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines()
-                    .setDecorators(ImmutableList.of(DutchmanPipeVineDecorator.INSTANCE)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JABUTICABA_TREE_WITH_DUTCHMAN_VINE = register("dutchman_vine_jabuticaba_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_LOG),
                     new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
@@ -589,18 +581,27 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_ROSEWOOD_TREE = register("brazillian_rosewood_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_ROSEWOOD_LOG),
                     new SimpleBlockStateProvider(States.BRAZILLIAN_ROSEWOOD_LEAVES),
-                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new FancyTrunkPlacer(3, 11, 0),
-                    new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
+                    new AcaciaFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0)),
+                    new FancyTrunkPlacer(6, 10, 0),
+                    new TwoLayerFeature(1, 1, 2, OptionalInt.of(4)))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build())));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_ROSEWOOD_WITH_PASSIONVINE = register("brazillian_rosewood_with_passionvine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_ROSEWOOD_LOG),
                     new SimpleBlockStateProvider(States.BRAZILLIAN_ROSEWOOD_LEAVES),
-                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new FancyTrunkPlacer(3, 11, 0),
-                    new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines()
-                    .setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE, PassionFruitVineTrunkDecorator.INSTANCE)).build()));
+                    new AcaciaFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0)),
+                    new FancyTrunkPlacer(6, 10, 0),
+                    new TwoLayerFeature(1, 1, 2, OptionalInt.of(4)))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines()
+                    .setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE, PassionFruitVineTrunkDecorator.INSTANCE)).build())));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_ROSEWOOD_WITH_DUTCHMAN_VINE = register("dutchman_vine_brazillian_rosewood",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(
+                    new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_ROSEWOOD_LOG),
+                    new SimpleBlockStateProvider(States.BRAZILLIAN_ROSEWOOD_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0)),
+                    new FancyTrunkPlacer(6, 10, 0),
+                    new TwoLayerFeature(1, 1, 2, OptionalInt.of(4)))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines()
+                    .setDecorators(ImmutableList.of(DutchmanPipeVineDecorator.INSTANCE)).build())));
 
     //Jabuticaba Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JABUTICABA_TREE = register("jabuticaba_tree",
