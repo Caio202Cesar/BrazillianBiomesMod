@@ -26,11 +26,8 @@ public class ComposterHandler {
             CompostingHelper.registerCompostable(ModItems.PARANA_PINE_CONE.get(), 0.85F);
             CompostingHelper.registerCompostable(ModItems.GUARANA_FRUIT.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.GUARANA_SEEDS.get(), 0.3F);
-            CompostingHelper.registerCompostable(ModItems.BRAZILNUT_FRUIT.get(), 0.85F);
             CompostingHelper.registerCompostable(ModItems.BRAZILNUT_WITH_PELL.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.PELLED_BRAZILNUT.get(), 0.65F);
-            CompostingHelper.registerCompostable(ModItems.SAPUCAIA_FRUIT.get(), 0.85F);
-            CompostingHelper.registerCompostable(ModItems.SAPUCAIA_NUTS.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.SAPUCAIA_NUTS.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.CASSAVA.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.ACAI_BERRIES.get(), 0.3F);
@@ -38,7 +35,7 @@ public class ComposterHandler {
             CompostingHelper.registerCompostable(ModItems.BURITI.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.PINK_PEEPER.get(), 0.3F);
             CompostingHelper.registerCompostable(ModItems.PINEAPPLE_GUAVA.get(), 0.65F);
-            CompostingHelper.registerCompostable(ModItems.JABUTICABA.get(), 0.3F);
+            CompostingHelper.registerCompostable(ModItems.JABUTICABA.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.PASSIONFRUIT.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.TURK_TURBAN_BERRIES.get(), 0.3F);
             CompostingHelper.registerCompostable(ModItems.CAGAITA.get(), 0.65F);
@@ -46,19 +43,30 @@ public class ComposterHandler {
             CompostingHelper.registerCompostable(ModItems.BACURI.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.MONKEY_CAJARANA.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.MATE_LEAF.get(), 0.3F);
-            CompostingHelper.registerCompostable(ModItems.CAMU_CAMU_FRUITS.get(), 0.3F);
-            CompostingHelper.registerCompostable(ModItems.YELLOW_IPE_FALL_LEAVES.get(), 0.3F);
-            CompostingHelper.registerCompostable(ModItems.YELLOW_IPE_SAPLING.get(), 0.3F);
-            CompostingHelper.registerCompostable(ModItems.APRICOT_IPE_BLOSSOM.get(), 0.3F);
-            CompostingHelper.registerCompostable(ModItems.APRICOT_IPE_LEAVES.get(), 0.3F);
-            CompostingHelper.registerCompostable(ModItems.APRICOT_IPE_FALL_LEAVES.get(), 0.3F);
-            CompostingHelper.registerCompostable(ModItems.APRICOT_IPE_SAPLING.get(), 0.3F);
-            CompostingHelper.registerCompostable(ModItems.WHITE_IPE_BLOSSOM.get(), 0.3F);
-            CompostingHelper.registerCompostable(ModItems.WHITE_IPE_LEAVES.get(), 0.3F);
-            CompostingHelper.registerCompostable(ModItems.WHITE_IPE_FALL_LEAVES.get(), 0.3F);
-            CompostingHelper.registerCompostable(ModItems.WHITE_IPE_SAPLING.get(), 0.3F);
-            CompostingHelper.registerCompostable(ModItems.JELLY_PALM_SAPLING.get(), 0.3F);
-
+            CompostingHelper.registerCompostable(ModItems.CAMU_CAMU_FRUITS.get(), 0.65F);
+            CompostingHelper.registerCompostable(ModItems.BUTIA_FRUITS.get(), 0.3F);
+            CompostingHelper.registerCompostable(ModItems.JENIPAPO.get(), 0.65F);
+            CompostingHelper.registerCompostable(ModItems.RIPE_JENIPAPO.get(), 0.65F);
+            CompostingHelper.registerCompostable(ModItems.PEQUI.get(), 0.65F);
+            CompostingHelper.registerCompostable(ModItems.CAATINGA_PASSIONFRUIT.get(), 0.65F);
+            CompostingHelper.registerCompostable(ModItems.YELLOW_MOMBIN.get(), 0.65F);
+            CompostingHelper.registerCompostable(ModItems.COOKED_CASHEWNUT.get(), 0.65F);
+            CompostingHelper.registerCompostable(ModItems.PARANA_PINE_COOKED_PINENUTS.get(), 0.65F);
+            CompostingHelper.registerCompostable(ModItems.ROASTED_BRAZILNUT.get(), 0.65F);
+            CompostingHelper.registerCompostable(ModItems.COOKED_CASSAVA.get(), 0.85F);
+            CompostingHelper.registerCompostable(ModItems.PALM_HEART.get(), 0.85F);
+            CompostingHelper.registerCompostable(ModItems.BACURI_PASTE.get(), 1.0F);
+            CompostingHelper.registerCompostable(ModItems.COOKED_PEQUI.get(), 0.85F);
+            CompostingHelper.registerCompostable(ModItems.TAPIOCA.get(), 0.85F);
+            CompostingHelper.registerCompostable(ModItems.PURPLE_IPE_FLOWERS.get(), 0.3F);
+            CompostingHelper.registerCompostable(ModItems.WHITE_IPE_FLOWERS.get(), 0.3F);
+            CompostingHelper.registerCompostable(ModItems.APRICOT_IPE_FLOWERS.get(), 0.3F);
+            CompostingHelper.registerCompostable(ModItems.PINK_IPE_FLOWERS.get(), 0.3F);
+            CompostingHelper.registerCompostable(ModItems.YELLOW_IPE_FLOWERS.get(), 0.3F);
+            CompostingHelper.registerCompostable(ModItems.SILK_COTTON.get(), 0.5F);
+            CompostingHelper.registerCompostable(ModItems.CASSAVA_SEEDS.get(), 0.3F);
+            CompostingHelper.registerCompostable(ModItems.DRIED_CARNAUBA_LEAVES.get(), 0.5F);
+            CompostingHelper.registerCompostable(ModItems.ASSACU_POISON_SAP.get(), 0.3F);
 
         });
     }
