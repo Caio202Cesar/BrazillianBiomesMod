@@ -32,8 +32,8 @@ public class SummerHeatRegistry {
                 .getRegistry(Registry.BIOME_KEY)
                 .getKey(biome);
 
-        if (id == null) return SummerHeat.HOT; // safe fallback
+        if (id == null) return SummerHeat.WARM; // safe fallback
 
-        return MAP.getOrDefault(id, SummerHeat.HOT);
+        return MAP.getOrDefault(id, SummerHeat.WARM);
     }
 }
