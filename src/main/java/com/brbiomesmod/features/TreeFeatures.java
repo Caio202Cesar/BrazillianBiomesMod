@@ -21,6 +21,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.OptionalInt;
+import java.util.function.Supplier;
 
 public abstract class TreeFeatures implements IFeatureConfig {
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, BrazillianBiomesMod.MOD_ID);
@@ -908,7 +909,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Sandbox Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SANDBOX_TREE = register("sandbox_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SANDBOX_TREE_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.SANDBOX_TREE_LEAVES),
+                    new SimpleBlockStateProvider(States.SANDBOX_TREE_LEAVES),
                     new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(10, 18, 4),
                     new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(

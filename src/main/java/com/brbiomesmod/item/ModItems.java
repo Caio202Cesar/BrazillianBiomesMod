@@ -278,6 +278,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> VULCANIZED_RUBBER = ITEMS.register("vulcanized_rubber",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
+    public static final RegistryObject<Item> SANDBOX_TREE_SEEDS = ITEMS.register("sandbox_tree_seeds",
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
 
     //Tools
     public static final RegistryObject<Item> TOURMALINE_SWORD = ITEMS.register("tourmaline_paraiba_sword",

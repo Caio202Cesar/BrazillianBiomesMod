@@ -6,6 +6,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.tags.ITag;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tileentity.FurnaceTileEntity;
@@ -23,6 +25,24 @@ public class ModEventSubscriber {
     @SubscribeEvent
     public static void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
         Season.onRenderGameOverlay(event);
+    }
+
+    @SubscribeEvent
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+        if (event.phase != TickEvent.Phase.END) return;
+
+        PlayerEntity player = event.player;
+        ItemStack heldItem = player.getHeldItemMainhand(); // or getHeldItemOffhand()
+
+        if (!heldItem.isEmpty() && heldItem.getItem() == ModItems.ASSACU_POISON_SAP.get()) {
+            // Apply nausea effect if not already present
+            if (!player.isPotionActive(Effects.POISON)) {
+                player.addPotionEffect(new EffectInstance(Effects.POISON, 200, 100, false, false));
+            }
+            if (!player.isPotionActive(Effects.BLINDNESS)) {
+                player.addPotionEffect(new EffectInstance(Effects.POISON, 200, 100, false, false));
+            }
+        }
     }
 
     @SubscribeEvent

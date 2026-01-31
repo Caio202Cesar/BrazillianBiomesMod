@@ -4,6 +4,7 @@ import com.brbiomesmod.block.MiscBlocks;
 import com.brbiomesmod.block.PlantsGroup;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.block.WoodGroup;
+import com.brbiomesmod.events.ModEntities;
 import com.brbiomesmod.events.ModParticles;
 import com.brbiomesmod.features.FoliagePlacers.ModFoliagePlacer;
 import com.brbiomesmod.features.TreeDecorators.ModTreeDecorators;
@@ -73,6 +74,7 @@ public class BrazillianBiomesMod {
         MinecraftForge.EVENT_BUS.register(this);
 
         ModParticles.PARTICLES.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModEntities.ENTITY_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModFoliagePlacer.register(FMLJavaModLoadingContext.get().getModEventBus());
 
     }
