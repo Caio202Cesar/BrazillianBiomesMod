@@ -1050,7 +1050,7 @@ public class TreesGroup {
             () -> new SandboxTreeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.SANDBOX_TREE_DRIED_BRANCHES));
     public static final RegistryObject<Block> SANDBOX_TREE_DRIED_BRANCHES = registerBlock("sandbox_tree_dried_branches",
-            () -> new SandboxTreeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new SandboxTreeDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.SANDBOX_TREE_LEAVES));
     public static final RegistryObject<Block> SANDBOX_TREE_SAPLING = registerBlock("sandbox_tree_sapling",
             SandboxTreeSapling::new);
