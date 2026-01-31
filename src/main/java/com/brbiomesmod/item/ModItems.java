@@ -272,7 +272,9 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> LATEX_BUCKET = ITEMS.register("latex_bucket",
             () -> new Item((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.MISC_GROUP)));
-    public static final RegistryObject<Item> RUBBER_INGOT = ITEMS.register("rubber_ingot",
+    public static final RegistryObject<Item> RAW_RUBBER_INGOT = ITEMS.register("raw_rubber_ingot",
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
+    public static final RegistryObject<Item> VULCANIZED_RUBBER_INGOT = ITEMS.register("vulcanized_rubber_ingot",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
 
     //Tools
