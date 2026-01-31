@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X "
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:raw_rubber"
+    },
+    "X": {
+      "item": "caiocesarbiomes:sulphur"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:sulfured_rubber",
+    "count": 1
+  }
+}

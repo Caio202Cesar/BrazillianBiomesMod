@@ -274,6 +274,8 @@ public class ModItems {
             () -> new LatexBucket((new Item.Properties()).containerItem(BUCKET).maxStackSize(1).group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> RAW_RUBBER = ITEMS.register("raw_rubber",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
+    public static final RegistryObject<Item> SULFURED_RUBBER = ITEMS.register("sulfured_rubber",
+            () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> VULCANIZED_RUBBER = ITEMS.register("vulcanized_rubber",
             () -> new Item(new Item.Properties().group(ModItemGroup.MISC_GROUP)));
 
