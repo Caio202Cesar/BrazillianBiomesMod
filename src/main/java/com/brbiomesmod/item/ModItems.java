@@ -300,7 +300,7 @@ public class ModItems {
     public static final RegistryObject<Item> TAPPING_KNIFE = ITEMS.register("tapping_knife",
             () -> new TappingKnifeItem(new Item.Properties()
                     .maxStackSize(1)
-                    .maxDamage(128)
+                    .maxDamage(70)
                     .group(ItemGroup.TOOLS)));
 
     public static RegistryObject<Item> ICE_CREAM_CONE;
