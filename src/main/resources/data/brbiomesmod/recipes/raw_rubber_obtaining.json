@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#X "
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:latex_bucket"
+    },
+    "X": {
+      "item": "brbiomesmod:assacu_poison_sap"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:raw_rubber",
+    "count": 1
+  }
+}
