@@ -40,7 +40,10 @@ public class ModEventSubscriber {
                 player.addPotionEffect(new EffectInstance(Effects.POISON, 200, 100, false, false));
             }
             if (!player.isPotionActive(Effects.BLINDNESS)) {
-                player.addPotionEffect(new EffectInstance(Effects.POISON, 200, 100, false, false));
+                player.addPotionEffect(new EffectInstance(Effects.BLINDNESS, 200, 100, false, false));
+            }
+            if (!player.isPotionActive(Effects.INSTANT_DAMAGE)) {
+                player.addPotionEffect(new EffectInstance(Effects.INSTANT_DAMAGE, 200, 100, false, false));
             }
         }
     }
