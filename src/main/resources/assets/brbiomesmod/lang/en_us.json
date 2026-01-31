@@ -121,8 +121,9 @@
   "item.brbiomesmod.bombilla": "Bombilla",
   "item.brbiomesmod.ripe_jenipapo": "Ripe Jenipapo",
   "item.brbiomesmod.latex_bucket": "Latex Bucket",
-  "item.brbiomesmod.raw_rubber_ingot": "Raw Rubber Ingot",
-  "item.brbiomesmod.vulcanized_rubber_ingot": "Vulcanized Rubber Ingot",
+  "item.brbiomesmod.raw_rubber": "Raw Rubber",
+  "item.brbiomesmod.sulfured_rubber": "Sulfured Rubber",
+  "item.brbiomesmod.vulcanized_rubber": "Vulcanized Rubber",
   "item.brbiomesmod.tapping_knife": "Tapping Knife",
 
   "block.brbiomesmod.acai_bunch": "Acai Bunch",
