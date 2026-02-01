@@ -301,7 +301,7 @@ public class ModItems {
             () -> new TappingKnifeItem(new Item.Properties()
                     .maxStackSize(1)
                     .maxDamage(70)
-                    .group(ItemGroup.TOOLS)));
+                    .group(ModItemGroup.MISC_GROUP)));
 
     public static RegistryObject<Item> ICE_CREAM_CONE;
     public static RegistryObject<Item> BANANA;
