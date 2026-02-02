@@ -26,45 +26,6 @@ public class PassionfruitFruitingVine extends VineBlock {
                 .sound(SoundType.PLANT).doesNotBlockMovement().notSolid().harvestTool(ToolType.HOE));
     }
 
-    public boolean ticksRandomly(BlockState state) {
-        return true;
-    }
-
-    /**
-     * Performs a random tick on a block.
-     *
-     * @param state
-     * @param worldIn
-     * @param pos
-     * @param random
-     */
-    @Override
-    public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
-        super.randomTick(state, worldIn, pos, random);
-
-        int dropCount = 1;
-
-        ItemStack itemStack = new ItemStack(ModItems.PASSIONFRUIT.get(), dropCount);
-        ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, itemStack);
-
-        worldIn.addEntity(itemEntity);
-
-        double chance = 0.002;
-
-        if (random.nextDouble() < chance) {
-
-            BlockState currentState = state;
-            BlockState newState = PlantsGroup.PASSION_FRUIT_VINE.get().getDefaultState();
-
-            worldIn.setBlockState(pos, PlantsGroup.PASSION_FRUIT_VINE.get().getDefaultState());
-
-            newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
-                    .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
-
-            worldIn.setBlockState(pos, newState, 3);
-        }
-    }
-
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
