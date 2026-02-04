@@ -3,6 +3,7 @@ package com.brbiomesmod.item;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.MiscBlocks;
 import com.brbiomesmod.item.custom.*;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -302,6 +303,24 @@ public class ModItems {
                     .maxStackSize(1)
                     .maxDamage(70)
                     .group(ModItemGroup.MISC_GROUP)));
+
+    //Armor
+    public static final RegistryObject<Item> RUBBER_BOOTS = ITEMS.register("rubber_boots",
+            () -> new ArmorItem(ModArmorMaterial.RUBBER, EquipmentSlotType.FEET,
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
+
+    public static final RegistryObject<Item> RUBBER_CHESTPLATE = ITEMS.register("rubber_chestplate",
+            () -> new ArmorItem(ModArmorMaterial.RUBBER, EquipmentSlotType.CHEST,
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
+
+    public static final RegistryObject<Item> RUBBER_LEGGINGS = ITEMS.register("rubber_leggings",
+            () -> new ArmorItem(ModArmorMaterial.RUBBER, EquipmentSlotType.LEGS,
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
+
+    public static final RegistryObject<Item> RUBBER_HELMET = ITEMS.register("rubber_helmet",
+            () -> new ArmorItem(ModArmorMaterial.RUBBER, EquipmentSlotType.HEAD,
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
+
 
     public static RegistryObject<Item> ICE_CREAM_CONE;
     public static RegistryObject<Item> BANANA;
