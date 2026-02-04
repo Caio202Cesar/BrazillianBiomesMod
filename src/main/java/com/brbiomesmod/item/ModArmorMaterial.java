@@ -13,7 +13,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.util.function.Supplier;
 
 //Ctrl + h
-public class ModArmorMaterial implements IArmorMaterial {
+public enum ModArmorMaterial implements IArmorMaterial {
 
     RUBBER("rubber", 25, new int[] { 2, 5, 6, 2 }, 9,
     SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 2.0f, 0.3f, () -> {
