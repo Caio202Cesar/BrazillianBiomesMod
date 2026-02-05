@@ -39,11 +39,11 @@ public class MiscBlocks {
                     .setRequiresTool().hardnessAndResistance(5f)));
 
     public static final RegistryObject<Block> RAW_RUBBER_BLOCK = registerBlock("raw_rubber_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.BAMBOO).harvestLevel(2).harvestTool(ToolType.PICKAXE)
-                    .setRequiresTool().hardnessAndResistance(5f)));
+            () -> new Block(AbstractBlock.Properties.create(Material.WOOL).harvestLevel(2).harvestTool(ToolType.PICKAXE)
+                    .hardnessAndResistance(1f)));
     public static final RegistryObject<Block> VULCANIZED_RUBBER_BLOCK = registerBlock("vulcanized_rubber_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.BAMBOO).harvestLevel(2).harvestTool(ToolType.PICKAXE)
-                    .setRequiresTool().hardnessAndResistance(5f)));
+            () -> new Block(AbstractBlock.Properties.create(Material.WOOL).harvestLevel(2).harvestTool(ToolType.PICKAXE)
+                    .hardnessAndResistance(1f)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
