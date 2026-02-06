@@ -48,6 +48,17 @@ public class KapokDriedBranches extends LeavesBlock implements IForgeShearable {
             worldIn.setBlockState(pos, newState, 2);
 
         }
+
+        if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+
+            worldIn.setBlockState(pos, newState, 2);
+
+        }
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

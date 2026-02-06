@@ -80,7 +80,7 @@ public class TreesGroup {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.KAPOK_FRUITING_LEAVES));
     public static final RegistryObject<Block> KAPOK_FRUITING_LEAVES = registerBlock("kapok_fruiting_leaves",
             () -> new KapokFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.KAPOK_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.KAPOK_DRIED_BRANCHES));
     public static final RegistryObject<Block> KAPOK_DRIED_BRANCHES = registerBlock("kapok_dried_branches",
             () -> new KapokDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.KAPOK_LEAVES));
