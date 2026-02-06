@@ -10,6 +10,9 @@ import java.util.function.Supplier;
 public enum ModItemTier implements IItemTier {
     TOURMALINE(3, 1561, 8.0F, 3.0F, 10, () -> {
         return Ingredient.fromItems(ModItems.TOURMALINE_PARAIBA.get());
+    }),
+    RUBBER(3, 1561, 8.0F, 3.0F, 10, () -> {
+        return Ingredient.fromItems(ModItems.VULCANIZED_RUBBER.get());
     });
 
     private final int harvestLevel;
