@@ -15,8 +15,8 @@ import java.util.function.Supplier;
 //Ctrl + h
 public enum ModArmorMaterial implements IArmorMaterial {
 
-    RUBBER("rubber", 25, new int[] { 2, 5, 6, 2 }, 9,
-    SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 2.5f, 0.3f, () -> {
+    RUBBER("rubber", 3, new int[] { 1, 4, 5, 2 }, 4,
+    SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0f, 0.0f, () -> {
         return Ingredient.fromItems(ModItems.VULCANIZED_RUBBER.get());
     });
 

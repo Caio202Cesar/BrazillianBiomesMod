@@ -78,6 +78,14 @@ public class RubberClothingEvents {
             event.setCanceled(true);
         }
 
+        //Protection from spines
+        if (event.getSource() != DamageSource.CACTUS &&
+                event.getSource() != DamageSource.SWEET_BERRY_BUSH) return;
+
+        if (!isFullRubber(player)) return;
+
+        event.setCanceled(true);
+
         //Full rubber armor absorbs certain projectiles damage
         boolean allowedProjectile =
                 src instanceof AbstractArrowEntity
