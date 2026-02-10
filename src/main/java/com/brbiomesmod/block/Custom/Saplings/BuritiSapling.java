@@ -29,7 +29,7 @@ import java.util.Random;
 
 public class BuritiSapling extends SaplingBlock {
     public BuritiSapling() {
-        super(new AcaiTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+        super(new BuritiTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
@@ -119,7 +119,7 @@ public class BuritiSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class AcaiTree extends Tree {
+    private static class BuritiTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             return TreeFeatures.BURITI_PALM;

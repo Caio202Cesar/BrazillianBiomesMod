@@ -915,6 +915,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
                     TrunkVineTreeDecorator.INSTANCE, LeaveVineTreeDecorator.field_236871_b_)).setIgnoreVines().build()));
 
+    //Humboldt Willow
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> HUMBOLDT_WILLOW_TREE = register("humboldt_willow_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.HUMBOLDT_WILLOW_LOG),
+                    new SimpleBlockStateProvider(States.HUMBOLDT_WILLOW_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
 
     public static final class States {
 
@@ -923,6 +931,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState SANDBOX_TREE_LOG = TreesGroup.SANDBOX_TREE_LOG.get().getDefaultState();
         protected static final BlockState SANDBOX_TREE_LEAVES = TreesGroup.SANDBOX_TREE_LEAVES.get().getDefaultState();
+
+        protected static final BlockState HUMBOLDT_WILLOW_LOG = TreesGroup.HUMBOLDT_WILLOW_LOG.get().getDefaultState();
+        protected static final BlockState HUMBOLDT_WILLOW_LEAVES = TreesGroup.HUMBOLDT_WILLOW_LEAVES.get().getDefaultState();
 
         protected static final BlockState PEQUI_LOG = TreesGroup.PEQUI_LOG.get().getDefaultState();
         protected static final BlockState PEQUI_LEAVES = TreesGroup.PEQUI_LEAVES.get().getDefaultState();
@@ -1150,7 +1161,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> PAMPAS_TREES = register("pampas_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAVEN_THORN_TREE.withChance(0.3F),
-                    COCKSPUR_CORAL_TREE1.withChance(0.1F), COCKSPUR_CORAL_TREE2.withChance(0.2F)), ALGARROBILLO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    COCKSPUR_CORAL_TREE1.withChance(0.1F), COCKSPUR_CORAL_TREE2.withChance(0.2F), HUMBOLDT_WILLOW_TREE.withChance(0.089F)),
+                    ALGARROBILLO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
 

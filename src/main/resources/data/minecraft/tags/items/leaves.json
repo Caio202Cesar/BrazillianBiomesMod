@@ -143,7 +143,9 @@
     "brbiomesmod:pequi_dried_branches",
     "brbiomesmod:pequi_fruiting_leaves",
     "brbiomesmod:sandbox_tree_leaves",
-    "brbiomesmod:sandbox_tree_dried_branches"
-
+    "brbiomesmod:sandbox_tree_dried_branches",
+    "brbiomesmod:humboldt_willow_leaves",
+    "brbiomesmod:humboldt_willow_fall_leaves",
+    "brbiomesmod:humboldt_willow_branches"
   ]
 }

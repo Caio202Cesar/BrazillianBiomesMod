@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/humboldt_willow_fall_leaves",
+    "particle": "brbiomesmod:block/humboldt_willow_fall_leaves"
+  }
+}

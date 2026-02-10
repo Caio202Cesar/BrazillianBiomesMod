@@ -1076,6 +1076,26 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.SANDBOX_TREE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));*/
 
+    public static final RegistryObject<Block> HUMBOLDT_WILLOW_LOG = registerBlock("humboldt_willow_log",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> HUMBOLDT_WILLOW_LEAVES = registerBlock("humboldt_willow_leaves",
+            () -> new HumboldtWillowLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.HUMBOLDT_WILLOW_FALL_LEAVES));
+    public static final RegistryObject<Block> HUMBOLDT_WILLOW_FALL_LEAVES = registerBlock("humboldt_willow_fall_leaves",
+            () -> new HumboldtWillowFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.HUMBOLDT_WILLOW_BRANCHES));
+    public static final RegistryObject<Block> HUMBOLDT_WILLOW_BRANCHES = registerBlock("humboldt_willow_branches",
+            () -> new HumboldtWillowBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.HUMBOLDT_WILLOW_LEAVES));
+
+    public static final RegistryObject<Block> HUMBOLDT_WILLOW_SAPLING = registerBlock("humboldt_willow_sapling",
+            HumboldtWillowSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_HUMBOLDT_WILLOW_SAPLING = BLOCKS.register("potted_humboldt_willow_sapling",
+            () -> new FlowerPotBlock(TreesGroup.HUMBOLDT_WILLOW_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

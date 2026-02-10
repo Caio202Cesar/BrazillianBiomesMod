@@ -2,8 +2,12 @@ package com.brbiomesmod.block.Custom.Saplings;
 
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
-import net.minecraft.block.*;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SaplingBlock;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.trees.BigTree;
+import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.player.PlayerEntity;
@@ -25,16 +29,16 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class BrazillianPepperSapling extends SaplingBlock {
-    public BrazillianPepperSapling() {
-        super(new BrazillianPepperTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class HumboldtWillowSapling extends SaplingBlock {
+    public HumboldtWillowSapling() {
+        super(new HumboldtWillowTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreesGroup.BRAZILLIAN_PEPPER_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_BRAZILLIAN_PEPPER_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.HUMBOLDT_WILLOW_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_HUMBOLDT_WILLOW_SAPLING.get(), RenderType.getCutout());
 
     }
 
@@ -43,7 +47,7 @@ public class BrazillianPepperSapling extends SaplingBlock {
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.8f;
-        float maxTemp = 2f;
+        float maxTemp = 1.6f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
             // Only attempt natural growth in suitable biomes
@@ -64,7 +68,7 @@ public class BrazillianPepperSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 2F;
+        boolean tooHot = temp > 1.6F;
         boolean tooCold = temp < 0.8F;
 
         if (tooHot || tooCold) {
@@ -84,7 +88,7 @@ public class BrazillianPepperSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.8f, maxTemp = 2f;
+            float minTemp = 0.8f, maxTemp = 1.6f;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -118,25 +122,10 @@ public class BrazillianPepperSapling extends SaplingBlock {
     }
 
 
-    private static class BrazillianPepperTree extends BigTree {
+    private static class HumboldtWillowTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.BRAZILLIAN_PEPPER_TREE;
-        }
-
-        /**
-         * Get a {@link ConfiguredFeature} of the huge variant of this tree
-         *
-         * @param rand
-         */
-        @Nullable
-        @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
-            if (rand.nextInt(10) == 5) {
-                return TreeFeatures.BRAZILLIAN_PEPPER_BIG_TREE;
-            } else {
-                return TreeFeatures.BRAZILLIAN_PEPPER_STOUT_TREE;
-            }
+            return TreeFeatures.HUMBOLDT_WILLOW_TREE;
         }
     }
 }
