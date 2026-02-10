@@ -658,5 +658,11 @@
   "block.brbiomesmod.guapuruvu_blossom": "Florada de guapuruvu",
   "block.brbiomesmod.yellow_mombin_dried_branches": "Galhos de cajazeira",
   "block.brbiomesmod.pequi_dried_branches": "Galhos de pequizeiro",
-  "block.brbiomesmod.sandbox_tree_dried_branches": "Galhos de açacu"
+  "block.brbiomesmod.sandbox_tree_dried_branches": "Galhos de açacu",
+  "block.brbiomesmod.mangaba_dried_branches": "Galhos de mangabeira",
+  "block.brbiomesmod.humboldt_willow_log": "Tronco de salgueiro-de-Humboldt",
+  "block.brbiomesmod.humboldt_willow_leaves": "Folhas de salgueiro-de-Humboldt",
+  "block.brbiomesmod.humboldt_willow_fall_leaves": "Folhas de salgueiro-de-Humboldt",
+  "block.brbiomesmod.humboldt_willow_branches": "Galhos de salgueiro-de-Humboldt",
+  "block.brbiomesmod.humboldt_willow_sapling": "Muda de salgueiro-de-Humboldt"
 }
