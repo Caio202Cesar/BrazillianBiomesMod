@@ -620,7 +620,11 @@
   "block.brbiomesmod.yellow_guzmania": "Yellow Guzmania",
   "block.brbiomesmod.orange_guzmania": "Orange Guzmania",
   "block.brbiomesmod.black_orchid": "Black Orchid",
-
+  "block.brbiomesmod.humboldt_willow_log": "Humboldt Willow Log",
+  "block.brbiomesmod.humboldt_willow_leaves": "Humboldt Willow Leaves",
+  "block.brbiomesmod.humboldt_willow_fall_leaves": "Humboldt Willow Leaves",
+  "block.brbiomesmod.humboldt_willow_branches": "Humboldt Willow Branches",
+  "block.brbiomesmod.humboldt_willow_sapling": "Humboldt Willow Sapling",
   "block.brbiomesmod.kapok_wood": "Kapok Wood",
   "block.brbiomesmod.silk_floss_thornless_wood": "Silk Floss Thornless Wood",
   "block.brbiomesmod.silk_floss_thorny_wood": "Silk Floss Thorny Wood",

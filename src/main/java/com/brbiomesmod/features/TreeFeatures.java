@@ -1161,7 +1161,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> PAMPAS_TREES = register("pampas_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAVEN_THORN_TREE.withChance(0.3F),
-                    COCKSPUR_CORAL_TREE1.withChance(0.1F), COCKSPUR_CORAL_TREE2.withChance(0.2F), HUMBOLDT_WILLOW_TREE.withChance(0.089F)),
+                    COCKSPUR_CORAL_TREE1.withChance(0.1F), COCKSPUR_CORAL_TREE2.withChance(0.2F), HUMBOLDT_WILLOW_TREE.withChance(0.15F)),
                     ALGARROBILLO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
@@ -1169,7 +1169,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Pantanal Vegetation
     public static final ConfiguredFeature<?, ?> PANTANAL_VEGETATION = register("pantanal_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.3F),
-                    JENIPAPO_TREE.withChance(0.3F), PINK_SILK_FLOSS_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F)),
+                    JENIPAPO_TREE.withChance(0.3F), PINK_SILK_FLOSS_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F), HUMBOLDT_WILLOW_TREE.withChance(0.2F)),
                     CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
 
@@ -1182,7 +1182,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> PARANA_PINE_TREES = register("parana_pine_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PARANA_PINE_TREE_YOUNG.withChance(0.2F),
-                    PARANA_PINE_TREE.withChance(0.4F), XAXIM_TREE.withChance(0.5F)),
+                    PARANA_PINE_TREE.withChance(0.4F), XAXIM_TREE.withChance(0.5F), HUMBOLDT_WILLOW_TREE.withChance(0.2F)),
                     PARANA_PINE_TREE2)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(7, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> OCOTEA_TREES = register("ocotea_trees",
