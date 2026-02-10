@@ -38,12 +38,12 @@ public class BlackSucupiraLeaves extends LeavesBlock implements IForgeShearable 
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
-        int distance = state.get(LeavesBlock.DISTANCE);
-        boolean persistent = state.get(LeavesBlock.PERSISTENT);
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-        BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
             worldIn.setBlockState(pos, newState, 2);
 
