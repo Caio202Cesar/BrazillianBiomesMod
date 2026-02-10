@@ -25,7 +25,7 @@ public class RestingaBeachBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> RESTINGA_BEACH = BIOMES.register("restinga_beach",
-            () -> makeGenericBeachBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.1f, 0.4f));
+            () -> makeGenericBeachBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.45F, 0.3F));
 
 
     private static Biome makeGenericBeachBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
