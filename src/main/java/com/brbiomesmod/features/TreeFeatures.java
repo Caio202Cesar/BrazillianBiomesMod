@@ -1113,7 +1113,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.3F),
                     JEQUITIBA_TREE.withChance(0.4F), BRAZILLIAN_SASSAFRAS_TREE.withChance(0.3F), GUAPURUVU_TREE.withChance(0.2F),
                     BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.3F), MANACA_FANCY_TREE.withChance(0.4F), MANACA_TREE.withChance(0.3F),
-                    SILVER_CECROPIA_TREE.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.3F), SAPUCAIA_TREE.withChance(0.4F),
+                    SILVER_CECROPIA_TREE.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.3F), HUMBOLDT_WILLOW_TREE.withChance(0.18F), SAPUCAIA_TREE.withChance(0.4F),
                     BRAZILLIAN_ROSEWOOD_TREE.withChance(0.5F), BRAZILWOOD_TREE.withChance(0.4F),BRAZILWOOD_FANCY_TREE.withChance(0.5F),
                     JENIPAPO_TREE.withChance(0.3F), JABUTICABA_TREE.withChance(0.5F), PURPLEHEART_TREE.withChance(0.3F), YELLOW_MOMBIN_TREE.withChance(0.4F)),
                     PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
@@ -1161,7 +1161,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> PAMPAS_TREES = register("pampas_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAVEN_THORN_TREE.withChance(0.3F),
-                    COCKSPUR_CORAL_TREE1.withChance(0.1F), COCKSPUR_CORAL_TREE2.withChance(0.2F), HUMBOLDT_WILLOW_TREE.withChance(0.15F)),
+                    COCKSPUR_CORAL_TREE1.withChance(0.1F), COCKSPUR_CORAL_TREE2.withChance(0.2F), HUMBOLDT_WILLOW_TREE.withChance(0.18F)),
                     ALGARROBILLO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
