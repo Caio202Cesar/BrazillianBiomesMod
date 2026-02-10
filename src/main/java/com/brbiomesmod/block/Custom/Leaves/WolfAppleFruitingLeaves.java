@@ -58,7 +58,7 @@ public class WolfAppleFruitingLeaves extends LeavesBlock implements IForgeSheara
 
         if (random.nextInt(45) == 0) {
 
-            int dropCount = 2 + random.nextInt(8);
+            int dropCount = 1 + random.nextInt(2);
 
             ItemStack itemStack = new ItemStack(ModItems.WOLF_APPLE.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -77,7 +77,7 @@ public class WolfAppleFruitingLeaves extends LeavesBlock implements IForgeSheara
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 12;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.WOLF_APPLE.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);

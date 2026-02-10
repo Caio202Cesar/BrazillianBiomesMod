@@ -46,7 +46,7 @@ public class UmbuFruitingLeaves extends LeavesBlock implements IForgeShearable {
 
         if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(10) == 0) {
 
-            int dropCount = 2 + random.nextInt(8);
+            int dropCount = 1 + random.nextInt(2);
 
             ItemStack itemStack = new ItemStack(ModItems.UMBU.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -63,7 +63,7 @@ public class UmbuFruitingLeaves extends LeavesBlock implements IForgeShearable {
 
         if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
-            int dropCount = 2 + random.nextInt(8);
+            int dropCount = 1 + random.nextInt(2);
 
             ItemStack itemStack = new ItemStack(ModItems.UMBU.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -80,7 +80,7 @@ public class UmbuFruitingLeaves extends LeavesBlock implements IForgeShearable {
 
         if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
-            int dropCount = 2 + random.nextInt(8);
+            int dropCount = 1 + random.nextInt(2);
 
             ItemStack itemStack = new ItemStack(ModItems.UMBU.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -100,7 +100,7 @@ public class UmbuFruitingLeaves extends LeavesBlock implements IForgeShearable {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 12;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.UMBU.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);

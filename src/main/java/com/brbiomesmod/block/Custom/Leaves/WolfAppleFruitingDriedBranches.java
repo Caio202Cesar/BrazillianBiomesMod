@@ -40,7 +40,7 @@ public class WolfAppleFruitingDriedBranches extends LeavesBlock implements IForg
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SUMMER".equals(currentSeason) && random.nextInt(15) == 0) {
+        if ("WINTER".equals(currentSeason) && random.nextInt(15) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -48,7 +48,7 @@ public class WolfAppleFruitingDriedBranches extends LeavesBlock implements IForg
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if ("FALL".equals(currentSeason) && random.nextInt(2) == 0) {
+        if ("SPRING".equals(currentSeason) && random.nextInt(2) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -58,7 +58,7 @@ public class WolfAppleFruitingDriedBranches extends LeavesBlock implements IForg
 
         if (random.nextInt(45) == 0) {
 
-            int dropCount = 2 + random.nextInt(8);
+            int dropCount = 1 + random.nextInt(2);
 
             ItemStack itemStack = new ItemStack(ModItems.WOLF_APPLE.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -77,7 +77,7 @@ public class WolfAppleFruitingDriedBranches extends LeavesBlock implements IForg
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            int dropCount = 12;
+            int dropCount = 1;
 
             ItemStack itemStack = new ItemStack(ModItems.WOLF_APPLE.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
