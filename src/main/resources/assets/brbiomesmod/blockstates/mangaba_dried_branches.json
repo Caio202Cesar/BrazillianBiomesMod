@@ -1,0 +1,8 @@
+{
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/mangaba_dried_branches", "weight": 6},
+      {"model": "brbiomesmod:block/mangaba_leaves", "weight": 1}
+    ]
+  }
+}
