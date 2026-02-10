@@ -46,7 +46,7 @@ public class BrazilnutFruitingLeaves extends LeavesBlock implements IForgeSheara
 
         if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
 
-            int dropCount = 2 + random.nextInt(3);
+            int dropCount = 1 + random.nextInt(3);
 
             ItemStack itemStack = new ItemStack(ModItems.BRAZILNUT_FRUIT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -63,7 +63,7 @@ public class BrazilnutFruitingLeaves extends LeavesBlock implements IForgeSheara
 
         if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
-            int dropCount = 2 + random.nextInt(3);
+            int dropCount = 1 + random.nextInt(3);
 
             ItemStack itemStack = new ItemStack(ModItems.BRAZILNUT_FRUIT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
@@ -80,7 +80,7 @@ public class BrazilnutFruitingLeaves extends LeavesBlock implements IForgeSheara
 
         if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
-            int dropCount = 2 + random.nextInt(3);
+            int dropCount = 1 + random.nextInt(3);
 
             ItemStack itemStack = new ItemStack(ModItems.BRAZILNUT_FRUIT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);

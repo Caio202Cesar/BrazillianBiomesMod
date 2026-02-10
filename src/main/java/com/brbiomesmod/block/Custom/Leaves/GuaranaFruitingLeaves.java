@@ -46,7 +46,7 @@ public class GuaranaFruitingLeaves extends LeavesBlock implements IForgeShearabl
 
         if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
-            int dropCount = 2 + random.nextInt(3);
+            int dropCount = 1 + random.nextInt(2);
 
             ItemStack itemStack = new ItemStack(ModItems.GUARANA_FRUIT.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);

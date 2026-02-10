@@ -1,7 +1,8 @@
 {
-  "variants": {
-    "": {
-      "model": "brbiomesmod:block/bacuri_flowering_leaves"
-    }
+  "variants":{
+    "":[
+      {"model": "brbiomesmod:block/BACURI_leaves"},
+      {"model": "brbiomesmod:block/bacuri_flowering_leaves"}
+    ]
   }
 }
