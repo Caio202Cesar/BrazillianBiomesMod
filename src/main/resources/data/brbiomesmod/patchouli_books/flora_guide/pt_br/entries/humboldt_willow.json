@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Salix humboldtiana$(br)$(bold)Biomes:$(reset) Pampas"
+      "text": "$(bold)Scientific Name:$(reset) Salix humboldtiana$(br)$(bold)Biomes:$(reset) Araucaria Plateau, Atlantic Forest, Atlantic Forest Hills, Pantanal, Pampas"
     },
     {
       "type": "spotlight",

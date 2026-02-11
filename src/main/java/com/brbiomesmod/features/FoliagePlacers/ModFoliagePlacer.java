@@ -34,6 +34,10 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("xaxim_foliage_placer",
                     () -> new FoliagePlacerType<>(XaximFoliagePlacer.CODEC));
 
+    public static final RegistryObject<FoliagePlacerType<YoungKapokFoliagePlacer>> YOUNG_KAPOK_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("young_kapok_foliage_placer",
+                    () -> new FoliagePlacerType<>(YoungKapokFoliagePlacer.CODEC));
+
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
     }
