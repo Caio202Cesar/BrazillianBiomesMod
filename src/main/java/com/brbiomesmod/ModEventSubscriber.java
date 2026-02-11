@@ -37,13 +37,13 @@ public class ModEventSubscriber {
         if (!heldItem.isEmpty() && heldItem.getItem() == ModItems.ASSACU_POISON_SAP.get()) {
             // Apply nausea effect if not already present
             if (!player.isPotionActive(Effects.POISON)) {
-                player.addPotionEffect(new EffectInstance(Effects.POISON, 60, 30, false, false));
+                player.addPotionEffect(new EffectInstance(Effects.POISON, 60, 30, true, true));
             }
             if (!player.isPotionActive(Effects.BLINDNESS)) {
-                player.addPotionEffect(new EffectInstance(Effects.BLINDNESS, 200, 100, false, false));
+                player.addPotionEffect(new EffectInstance(Effects.BLINDNESS, 400, 300, true, true));
             }
             if (!player.isPotionActive(Effects.INSTANT_DAMAGE)) {
-                player.addPotionEffect(new EffectInstance(Effects.INSTANT_DAMAGE, 200, 100, false, false));
+                player.addPotionEffect(new EffectInstance(Effects.INSTANT_DAMAGE, 60, 70, true, true));
             }
         }
     }
