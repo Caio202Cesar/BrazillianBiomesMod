@@ -1,35 +1,23 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.Seasons.Season;
-import com.brbiomesmod.item.ModItems;
-import net.minecraft.block.Block;
+import com.brbiomesmod.block.TreesGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.material.Material;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.*;
+import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
-import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
-import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
-import java.util.function.Supplier;
 
 public class KapokLeaves extends LeavesBlock implements IForgeShearable {
-    private final Supplier<Block> nextStage;
+     public KapokLeaves(Properties properties) {
+         super(properties);
 
-    public KapokLeaves(Properties properties, Supplier<Block> nextStage) {
-        super(properties);
-        this.nextStage = nextStage;
-    }
-
+     }
 
     public boolean ticksRandomly(BlockState state) {
         return true;
@@ -47,26 +35,37 @@ public class KapokLeaves extends LeavesBlock implements IForgeShearable {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(35) == 0) {
-
+        //Dry season
+        if ("SUMMER".equals(currentSeason) && random.nextInt(65) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
-
+            worldIn.setBlockState(pos, TreesGroup.KAPOK_FRUITING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
-
+        if ("SUMMER".equals(currentSeason) && random.nextInt(27) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+            worldIn.setBlockState(pos, TreesGroup.KAPOK_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
 
-            worldIn.setBlockState(pos, newState, 2);
+        if ("FALL".equals(currentSeason) && random.nextInt(65) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
+            worldIn.setBlockState(pos, TreesGroup.KAPOK_FRUITING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        if ("FALL".equals(currentSeason) && random.nextInt(27) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.KAPOK_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
     }
 

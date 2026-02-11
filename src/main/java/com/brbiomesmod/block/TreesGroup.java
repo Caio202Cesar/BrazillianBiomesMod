@@ -77,7 +77,7 @@ public class TreesGroup {
             ModLogs::new);
     public static final RegistryObject<Block> KAPOK_LEAVES = registerBlock("kapok_leaves",
             () -> new KapokLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.KAPOK_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> KAPOK_FRUITING_LEAVES = registerBlock("kapok_fruiting_leaves",
             () -> new KapokFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.KAPOK_DRIED_BRANCHES));
