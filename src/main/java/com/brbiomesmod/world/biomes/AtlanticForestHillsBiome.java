@@ -2,6 +2,7 @@ package com.brbiomesmod.world.biomes;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.features.ModDefaultBiomeFeatures;
+import com.brbiomesmod.features.TreeFeatures;
 import com.brbiomesmod.world.biomes.Util.ModConfiguredSurfaceBuilders;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
@@ -12,6 +13,7 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
+import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,7 +27,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> ATLANTIC_FOREST_HILLS = BIOMES.register("atlantic_forest_hills",
-        () -> makeAtlanticForestBiome(() -> ModConfiguredSurfaceBuilders.FOREST_SURFACE, 1.4f, 0.3f));
+        () -> makeAtlanticForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 1.4f, 0.3f));
 
 
 private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -66,6 +68,7 @@ private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBui
     ModDefaultBiomeFeatures.withAngelTrumpetBushes(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAtlanticForestPalms(biomegenerationsettings$builder);
 
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.XAXIM_TREE);
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
