@@ -658,5 +658,12 @@
   "block.brbiomesmod.humboldt_willow_leaves": "Folhas de salgueiro-de-Humboldt",
   "block.brbiomesmod.humboldt_willow_fall_leaves": "Folhas de salgueiro-de-Humboldt",
   "block.brbiomesmod.humboldt_willow_branches": "Galhos de salgueiro-de-Humboldt",
-  "block.brbiomesmod.humboldt_willow_sapling": "Muda de salgueiro-de-Humboldt"
+  "block.brbiomesmod.humboldt_willow_sapling": "Muda de salgueiro-de-Humboldt",
+
+
+  "itemGroup.brbiomesmod.BrazilianBiomes:Food": "Brazilian Biomes: Food",
+  "itemGroup.brbiomesmod.BrazilianBiomes:Plants": "Brazilian Biomes: Plants",
+  "itemGroup.brbiomesmod.BrazilianBiomes:Woods": "Brazilian Biomes: Wood",
+  "itemGroup.brbiomesmod.BrazilianBiomes:Trees": "Brazilian Biomes: Trees",
+  "itemGroup.brbiomesmod.BrazilianBiomes:Miscellaneous": "Brazilian Biomes: Miscellaneous"
 }
