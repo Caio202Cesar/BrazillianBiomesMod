@@ -73,7 +73,7 @@ public class ImbuiaSapling extends SaplingBlock {
         boolean protectedByLeaves = isProtectedByLeaves(world, pos);
 
         if ("WINTER".equals(currentSeason) && temp <= 0.84F && !protectedByLeaves) {
-            if (random.nextInt(5) == 0) {
+            if (random.nextInt(2) == 0) {
                 world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState(), 3);
             }
         }
