@@ -64,18 +64,39 @@ public class ImbuiaSapling extends SaplingBlock {
         boolean validTemp = temp >= minTemp && temp <= maxTemp;
         boolean hasRain = biome.getPrecipitation() != Biome.RainType.NONE;
 
-        // ❄ Winter kill logic (Zone 9 vulnerability)
-        if ("WINTER".equals(currentSeason) && temp <= 0.84F) {
-            if (random.nextInt(5) == 0) { // 20% chance
-                world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState(), 3);
-                return; // Stop further processing
-            }
-        }
-
         // 🌱 Growth logic
         if (validTemp && hasRain) {
             super.randomTick(state, world, pos, random);
         }
+
+        // ❄ Winter kill logic (Zone 9 vulnerability)
+        boolean protectedByLeaves = isProtectedByLeaves(world, pos);
+
+        if ("WINTER".equals(currentSeason) && temp <= 0.84F && !protectedByLeaves) {
+            if (random.nextInt(5) == 0) {
+                world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState(), 3);
+            }
+        }
+    }
+
+    private boolean isProtectedByLeaves(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable mutable = new BlockPos.Mutable();
+
+        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
+            mutable.setPos(pos.getX(), y, pos.getZ());
+            BlockState state = world.getBlockState(mutable);
+
+            if (state.getBlock() instanceof LeavesBlock) {
+                return true; // Found canopy → protected
+            }
+
+            if (world.canSeeSky(mutable)) {
+                return false; // Open sky → not protected
+            }
+        }
+
+        return false;
     }
 
     @Override
