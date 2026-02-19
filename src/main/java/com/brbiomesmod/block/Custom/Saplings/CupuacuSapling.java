@@ -37,37 +37,104 @@ public class CupuacuSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 11 (Tropical)
+    public boolean ticksRandomly(BlockState state) {
+        return true;
+    }
+
+    /**
+     * Performs a random tick on a block.
+     *
+     * @param state
+     * @param world
+     * @param pos
+     * @param random
+     */
+    //Hardy to zone 11 without protection
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.9f;
-        float maxTemp = 1.6f;
+        float maxTemp = 1.2f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
-            // Only attempt natural growth in suitable biomes
+        boolean isProtectedByGlass = isUnderGlass(world, pos);
+
+        if ((biomeTemp >= minTemp && biomeTemp <= maxTemp)
+                || (biomeTemp < minTemp && isProtectedByGlass)) {
+
             super.randomTick(state, world, pos, random);
         }
-        // If biome temperature is too low/high, do nothing (block natural growth)
+    }
+
+    private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable mutable = new BlockPos.Mutable();
+
+        // Step 1: Find the first block above that blocks the sky (roof height)
+        int roofY = -1;
+
+        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
+            mutable.setPos(pos.getX(), y, pos.getZ());
+
+            if (!world.isAirBlock(mutable)) {
+                roofY = y;
+                break;
+            }
+        }
+
+        if (roofY == -1) {
+            return false; // No roof found
+        }
+
+        // (radius 2 → 5x5 small green house)
+        // (radius 3 → 7x7 medium green house)
+        // (radius 4 → 9x9 large green house)
+        int radius = 2;
+
+        for (int x = -radius; x <= radius; x++) {
+            for (int z = -radius; z <= radius; z++) {
+
+                mutable.setPos(pos.getX() + x, roofY, pos.getZ() + z);
+                BlockState state = world.getBlockState(mutable);
+
+                if (!(state.getBlock() instanceof GlassBlock)) {
+                    return false; // If any block is not glass → fail
+                }
+            }
+        }
+
+        return true; // Entire roof area is glass
     }
 
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
+
         if (!(worldIn instanceof World)) {
             return false;
         }
 
         World world = (World) worldIn;
+        float temp = world.getBiome(pos).getTemperature(pos);
 
-        Biome biome = world.getBiome(pos);
-        float temp = biome.getTemperature(pos);
+        boolean isProtectedByGlass = false;
 
-        // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 1.6F;
-        boolean tooCold = temp < 0.9F;
+        if (world instanceof ServerWorld) {
+            isProtectedByGlass = isUnderGlass((ServerWorld) world, pos);
+        }
 
-        if (tooHot || tooCold) {
-            return false;
+        float minTemp = 0.9F;
+        float maxTemp = 1.2F;
+
+        // If protected, ignore cold restriction
+        if (!isProtectedByGlass) {
+            if (temp < minTemp || temp > maxTemp) {
+                return false;
+            }
+        } else {
+            // Under glass → only block extreme heat
+            if (temp > maxTemp) {
+                return false;
+            }
         }
 
         return super.canGrow(worldIn, pos, state, isClient);
@@ -80,17 +147,28 @@ public class CupuacuSapling extends SaplingBlock {
     }
 
     @Override
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        if (!worldIn.isRemote) {
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.9f, maxTemp = 1.6f;
+    public ActionResultType onBlockActivated(BlockState state, World worldIn,
+                                             BlockPos pos, PlayerEntity player,
+                                             Hand handIn, BlockRayTraceResult hit) {
 
-            if (temp < minTemp) {
+        if (!worldIn.isRemote) {
+
+            float temp = worldIn.getBiome(pos).getTemperature(pos);
+            float minTemp = 0.9f;
+            float maxTemp = 1.2f;
+
+            boolean isProtectedByGlass = false;
+
+            if (worldIn instanceof ServerWorld) {
+                isProtectedByGlass = isUnderGlass((ServerWorld) worldIn, pos);
+            }
+
+            if (temp < minTemp && !isProtectedByGlass) {
                 player.sendMessage(
                         new StringTextComponent("This biome is too cold for this sapling."),
                         player.getUniqueID()
                 );
-                return ActionResultType.SUCCESS; // Prevent further processing if needed
+                return ActionResultType.SUCCESS;
             }
 
             if (temp > maxTemp) {
@@ -98,13 +176,12 @@ public class CupuacuSapling extends SaplingBlock {
                         new StringTextComponent("This biome is too hot for this sapling."),
                         player.getUniqueID()
                 );
-                return ActionResultType.SUCCESS; // Prevent further processing if needed
+                return ActionResultType.SUCCESS;
             }
 
-            // If temp is in range, optionally allow normal processing:
-            // return super.onBlockActivated(...);
             return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
         }
+
         return ActionResultType.SUCCESS;
     }
 
