@@ -146,17 +146,28 @@ public class GuaranaSapling extends SaplingBlock {
     }
 
     @Override
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        if (!worldIn.isRemote) {
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.9f, maxTemp = 1.2f;
+    public ActionResultType onBlockActivated(BlockState state, World worldIn,
+                                             BlockPos pos, PlayerEntity player,
+                                             Hand handIn, BlockRayTraceResult hit) {
 
-            if (temp < minTemp) {
+        if (!worldIn.isRemote) {
+
+            float temp = worldIn.getBiome(pos).getTemperature(pos);
+            float minTemp = 0.9f;
+            float maxTemp = 1.2f;
+
+            boolean isProtectedByGlass = false;
+
+            if (worldIn instanceof ServerWorld) {
+                isProtectedByGlass = isUnderGlass((ServerWorld) worldIn, pos);
+            }
+
+            if (temp < minTemp && !isProtectedByGlass) {
                 player.sendMessage(
                         new StringTextComponent("This biome is too cold for this sapling."),
                         player.getUniqueID()
                 );
-                return ActionResultType.SUCCESS; // Prevent further processing if needed
+                return ActionResultType.SUCCESS;
             }
 
             if (temp > maxTemp) {
@@ -164,13 +175,12 @@ public class GuaranaSapling extends SaplingBlock {
                         new StringTextComponent("This biome is too hot for this sapling."),
                         player.getUniqueID()
                 );
-                return ActionResultType.SUCCESS; // Prevent further processing if needed
+                return ActionResultType.SUCCESS;
             }
 
-            // If temp is in range, optionally allow normal processing:
-            // return super.onBlockActivated(...);
             return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
         }
+
         return ActionResultType.SUCCESS;
     }
 
