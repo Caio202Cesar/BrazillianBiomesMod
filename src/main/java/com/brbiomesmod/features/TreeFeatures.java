@@ -1119,9 +1119,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 3))));
     public static final ConfiguredFeature<?, ?> CAMBUCI_TREES = register("cambuci_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAMBUCI_TREE_WITH_PASSIONVINE.withChance(0.005F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAMBUCI_TREE_WITH_PASSIONVINE.withChance(0.015F),
+                    XAXIM_TREE.withChance(0.5F)),
                     CAMBUCI_TREE)).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(5, 0.0F, 0))));
+                    .configure(new AtSurfaceWithExtraConfig(5, 0.5F, 4))));
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_TREE_WITH_DUTCHMAN_VINE = register("atlantic_forest_trees_with_dutchman_vine",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of
                     (BRAZILLIAN_SASSAFRAS_TREE_WITH_VINE.withChance(0.14F), JABUTICABA_TREE_WITH_DUTCHMAN_VINE.withChance(0.15F),
