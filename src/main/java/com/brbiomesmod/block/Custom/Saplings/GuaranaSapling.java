@@ -87,8 +87,10 @@ public class GuaranaSapling extends SaplingBlock {
             return false; // No roof found
         }
 
-        // Step 2: Check 6x6 area (radius 3 → 7x7 actually)
-        int radius = 3;
+        // (radius 2 → 5x5 small green house)
+        // (radius 3 → 7x7 medium green house)
+        // (radius 4 → 9x9 large green house)
+        int radius = 2;
 
         for (int x = -radius; x <= radius; x++) {
             for (int z = -radius; z <= radius; z++) {
