@@ -53,6 +53,7 @@ public class ImbuiaSapling extends SaplingBlock {
     //Hardy from zone 9 to 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
+
         String currentSeason = Season.getSeason(world.getDayTime());
         Biome biome = world.getBiome(pos);
         float temp = biome.getTemperature(pos);
@@ -63,14 +64,17 @@ public class ImbuiaSapling extends SaplingBlock {
         boolean validTemp = temp >= minTemp && temp <= maxTemp;
         boolean hasRain = biome.getPrecipitation() != Biome.RainType.NONE;
 
+        // ❄ Winter kill logic (Zone 9 vulnerability)
+        if ("WINTER".equals(currentSeason) && temp <= 0.84F) {
+            if (random.nextInt(5) == 0) { // 20% chance
+                world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState(), 3);
+                return; // Stop further processing
+            }
+        }
+
+        // 🌱 Growth logic
         if (validTemp && hasRain) {
             super.randomTick(state, world, pos, random);
-        }
-        // If biome temperature is too low/high, do nothing (block natural growth)
-
-        //The sapling can die in winter
-        if (temp <= 0.84F && "WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
-            world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState());
         }
     }
 
