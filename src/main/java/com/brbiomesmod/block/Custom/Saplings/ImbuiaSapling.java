@@ -99,6 +99,26 @@ public class ImbuiaSapling extends SaplingBlock {
         return false;
     }
 
+    private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable mutable = new BlockPos.Mutable();
+
+        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
+            mutable.setPos(pos.getX(), y, pos.getZ());
+            BlockState state = world.getBlockState(mutable);
+
+            if (state.getBlock() instanceof GlassBlock) {
+                return true; // Found glass → protected
+            }
+
+            if (world.canSeeSky(mutable)) {
+                return false; // Open sky → not protected
+            }
+        }
+
+        return false;
+    }
+
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
 
