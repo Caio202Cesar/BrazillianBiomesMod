@@ -108,9 +108,9 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
             float swimSpeed = 0.15F;
             float swimDegree = 0.6F;
 
-            body.rotateAngleY = MathHelper.cos(ageInTicks * swimSpeed) * swimDegree * 0.2F;
-            tail.rotateAngleY = MathHelper.cos(ageInTicks * swimSpeed) * swimDegree;
-            tailFin.rotateAngleY = MathHelper.cos(ageInTicks * swimSpeed) * swimDegree * 1.5F;
+            body.rotateAngleX = MathHelper.cos(ageInTicks * swimSpeed) * swimDegree * 0.2F;
+            tail.rotateAngleX = MathHelper.cos(ageInTicks * swimSpeed) * swimDegree;
+            tailFin.rotateAngleX = MathHelper.cos(ageInTicks * swimSpeed) * swimDegree * 1.5F;
         }
 
         // Fins subtle movement
