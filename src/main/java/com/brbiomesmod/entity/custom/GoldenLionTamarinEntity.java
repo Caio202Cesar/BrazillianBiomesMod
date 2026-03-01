@@ -9,6 +9,7 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.nbt.CompoundNBT;
@@ -126,6 +127,11 @@ public class GoldenLionTamarinEntity extends AnimalEntity {
     @Override
     public AgeableEntity createChild(ServerWorld world, AgeableEntity mate) {
         return ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get().create(world);
+    }
+
+    @Override
+    public boolean isBreedingItem(ItemStack stack) {
+        return stack.getItem() == ModItems.JABUTICABA.get();
     }
 
     @Override
