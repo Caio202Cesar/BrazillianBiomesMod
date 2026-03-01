@@ -12,6 +12,8 @@ import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.DolphinEntity;
 import net.minecraft.entity.passive.WaterMobEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
@@ -44,10 +46,11 @@ import java.util.*;
 import java.util.function.Predicate;
 
 public class BotoEntity extends DolphinEntity {
+
     public BotoEntity(EntityType<? extends DolphinEntity> type, World worldIn) {
         super(type, worldIn);
-        this.moveController = new BotoEntity.MoveHelperController(this);
-        this.lookController = new DolphinLookController(this, 10);
+        this.moveController = new MovementController(this);
+        this.navigator = new SwimmerPathNavigator(this, world);
         this.setCanPickUpLoot(true);
     }
 
@@ -131,7 +134,21 @@ public class BotoEntity extends DolphinEntity {
                 itemEntity.remove();
             }
         }
+    }
 
+    @Override
+    public boolean canTriggerWalking() {
+        return false;
+    }
+
+    @Override
+    public boolean func_230285_a_(Fluid fluidIn) {
+        return fluidIn == Fluids.WATER;
+    }
+
+    @Override
+    public boolean canBePushed() {
+        return false;
     }
 
     @Override

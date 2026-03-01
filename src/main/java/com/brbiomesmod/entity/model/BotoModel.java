@@ -74,8 +74,8 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
                                   float ageInTicks, float netHeadYaw, float headPitch) {
 
         // Swimming animation
-        float speed = 0.1F;
-        float degree = 0.4F;
+        float speed = 0.2F;
+        float degree = 0.5F;
 
         body.rotateAngleX = 0;
         tail.rotateAngleX = 0;
