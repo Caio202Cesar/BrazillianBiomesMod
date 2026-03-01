@@ -12,6 +12,7 @@ import net.minecraft.util.math.MathHelper;
 public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
 
     private final ModelRenderer head;
+    private final ModelRenderer snout;
     private final ModelRenderer body;
     private final ModelRenderer tail;
     private final ModelRenderer tailFin;
@@ -33,8 +34,17 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
         head = new ModelRenderer(this);
         head.setRotationPoint(0.0F, -2.0F, -6.0F);
         body.addChild(head);
+        // Main skull
         head.setTextureOffset(0, 0)
-                .addBox(-4.0F, -3.0F, -6.0F, 8, 7, 6);
+                .addBox(-4.0F, -3.0F, -4.0F, 8, 7, 4);
+
+        // SNOUT (Rostrum)
+        snout = new ModelRenderer(this);
+        snout.setRotationPoint(0.0F, 0.0F, -4.0F);
+        head.addChild(snout);
+
+        snout.setTextureOffset(0, 32)
+                .addBox(-1.0F, -1.5F, -8.0F, 2, 3, 8);
 
         // TAIL BASE
         tail = new ModelRenderer(this);
@@ -77,22 +87,31 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
                                   float ageInTicks, float netHeadYaw, float headPitch) {
 
         // Reset rotations
+        head.rotateAngleX = 0;
+        head.rotateAngleY = 0;
+        head.rotateAngleZ = 0;
+
         body.rotateAngleX = 0;
         body.rotateAngleY = 0;
-        tail.rotateAngleY = 0;
-        tailFin.rotateAngleY = 0;
+        body.rotateAngleZ = 0;
 
-        // Head rotation
-        head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
-        head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
+        tail.rotateAngleX = 0;
+        tail.rotateAngleY = 0;
+        tail.rotateAngleZ = 0;
+
+        tailFin.rotateAngleX = 0;
+        tailFin.rotateAngleY = 0;
+        tailFin.rotateAngleZ = 0;
 
         // Swimming animation
-        float swimSpeed = 0.4F;
-        float swimDegree = 0.6F;
+        if (entity.getMotion().lengthSquared() > 0.0001D) {
+            float swimSpeed = 0.15F;
+            float swimDegree = 0.6F;
 
-        body.rotateAngleY = MathHelper.cos(ageInTicks * swimSpeed) * swimDegree * 0.2F;
-        tail.rotateAngleY = MathHelper.cos(ageInTicks * swimSpeed) * swimDegree;
-        tailFin.rotateAngleY = MathHelper.cos(ageInTicks * swimSpeed) * swimDegree * 1.5F;
+            body.rotateAngleY = MathHelper.cos(ageInTicks * swimSpeed) * swimDegree * 0.2F;
+            tail.rotateAngleY = MathHelper.cos(ageInTicks * swimSpeed) * swimDegree;
+            tailFin.rotateAngleY = MathHelper.cos(ageInTicks * swimSpeed) * swimDegree * 1.5F;
+        }
 
         // Fins subtle movement
         rightFin.rotateAngleZ = -0.2F;
