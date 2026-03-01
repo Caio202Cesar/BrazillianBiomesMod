@@ -32,7 +32,7 @@ public class MapinguariModel<T extends MapinguariEntity> extends EntityModel<T> 
 
         // ================= RIGHT ARM =================
         right_arm = new ModelRenderer(this);
-        right_arm.setRotationPoint(0.0F, -7.0F, 0.0F);
+        right_arm.setRotationPoint(-5.0F, -7.0F, 0.0F);
         right_arm.setTextureOffset(60, 21)
                 .addBox(-13.0F, -2.5F, -3.0F,
                         4.0F, 30.0F, 6.0F,
@@ -40,7 +40,7 @@ public class MapinguariModel<T extends MapinguariEntity> extends EntityModel<T> 
 
         // ================= LEFT ARM =================
         left_arm = new ModelRenderer(this);
-        left_arm.setRotationPoint(0.0F, -7.0F, 0.0F);
+        left_arm.setRotationPoint(5.0F, -7.0F, 0.0F);
         left_arm.setTextureOffset(60, 58)
                 .addBox(9.0F, -2.5F, -3.0F,
                         4.0F, 30.0F, 6.0F,
@@ -96,6 +96,7 @@ public class MapinguariModel<T extends MapinguariEntity> extends EntityModel<T> 
             this.right_arm.rotateAngleX = -2.0F * attackProgress;
             this.left_arm.rotateAngleX = -2.0F * attackProgress;
         }
+
     }
 
 
