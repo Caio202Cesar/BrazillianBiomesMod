@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.util.math.MathHelper;
 
 public class GoldenLionTamarinModel<T extends GoldenLionTamarinEntity> extends EntityModel<T> {
+
     private final ModelRenderer bb_main;
     private final ModelRenderer head;
     private final ModelRenderer front_limb_right;
@@ -78,16 +79,24 @@ public class GoldenLionTamarinModel<T extends GoldenLionTamarinEntity> extends E
         // TAIL
         // =========================
         tail = new ModelRenderer(this);
-        tail.setRotationPoint(0.0F, 24.0F, 0.0F);
-        tail.setTextureOffset(12, 15).addBox(-1.0F, -7.0F, 2.0F, 1.0F, 1.0F, 3.0F, 0.0F, false);
+        tail.setRotationPoint(-0.5F, -6.0F, 2.0F);
+        bb_main.addChild(tail);
+        tail.setTextureOffset(12, 15)
+                .addBox(-0.5F, -1.0F, 0.0F, 1.0F, 1.0F, 3.0F, 0.0F, false);
+
         tail_middle_r1 = new ModelRenderer(this);
-        tail_middle_r1.setRotationPoint(0.0F, -5.0F, 6.0F);
-        tail.addChild(tail_middle_r1); setRotationAngle(tail_middle_r1, 0.48F, 0.0F, 0.0F);
-        tail_middle_r1.setTextureOffset(16, 10).addBox(-1.0F, -2.0F, -1.0F, 1.0F, 2.0F, 1.0F, 0.0F, false);
+        tail_middle_r1.setRotationPoint(0.0F, 0.0F, 3.0F);
+        tail.addChild(tail_middle_r1);
+        setRotationAngle(tail_middle_r1, 0.48F, 0.0F, 0.0F);
+        tail_middle_r1.setTextureOffset(16, 10)
+                .addBox(-0.5F, -1.0F, 0.0F, 1.0F, 2.0F, 1.0F, 0.0F, false);
+
         tail_top_r1 = new ModelRenderer(this);
-        tail_top_r1.setRotationPoint(0.0F, -10.0F, 4.0F);
-        tail.addChild(tail_top_r1); setRotationAngle(tail_top_r1, -1.5708F, 0.0F, 0.0F);
-        tail_top_r1.setTextureOffset(0, 15).addBox(-1.0F, -2.0F, 5.0F, 1.0F, 1.0F, 5.0F, 0.0F, false);
+        tail_top_r1.setRotationPoint(0.0F, 1.0F, 1.0F);
+        tail_middle_r1.addChild(tail_top_r1);
+        setRotationAngle(tail_top_r1, -1.0F, 0.0F, 0.0F);
+        tail_top_r1.setTextureOffset(0, 15)
+                .addBox(-0.5F, -1.0F, 0.0F, 1.0F, 1.0F, 5.0F, 0.0F, false);
     }
 
     // =========================
