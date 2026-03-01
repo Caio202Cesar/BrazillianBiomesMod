@@ -30,21 +30,17 @@ public class MapinguariModel<T extends MapinguariEntity> extends EntityModel<T> 
                         9.0F, 5.0F, 6.0F,
                         0.5F);
 
-        // ================= RIGHT ARM =================
+        // RIGHT ARM (pivot at shoulder)
         right_arm = new ModelRenderer(this);
-        right_arm.setRotationPoint(-5.0F, -7.0F, 0.0F);
+        right_arm.setRotationPoint(-9.0F, -7.0F, 0.0F);
         right_arm.setTextureOffset(60, 21)
-                .addBox(-13.0F, -2.5F, -3.0F,
-                        4.0F, 30.0F, 6.0F,
-                        0.0F);
+                .addBox(-4.0F, -2.5F, -3.0F, 4.0F, 30.0F, 6.0F, 0.0F);
 
-        // ================= LEFT ARM =================
+        // LEFT ARM (pivot at shoulder)
         left_arm = new ModelRenderer(this);
-        left_arm.setRotationPoint(5.0F, -7.0F, 0.0F);
+        left_arm.setRotationPoint(9.0F, -7.0F, 0.0F);
         left_arm.setTextureOffset(60, 58)
-                .addBox(9.0F, -2.5F, -3.0F,
-                        4.0F, 30.0F, 6.0F,
-                        0.0F);
+                .addBox(0.0F, -2.5F, -3.0F, 4.0F, 30.0F, 6.0F, 0.0F);
 
         // ================= RIGHT LEG =================
         right_leg = new ModelRenderer(this);
