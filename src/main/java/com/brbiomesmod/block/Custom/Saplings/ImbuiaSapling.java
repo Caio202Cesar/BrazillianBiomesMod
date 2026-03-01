@@ -50,7 +50,7 @@ public class ImbuiaSapling extends SaplingBlock {
      * @param pos
      * @param random
      */
-    //Hardy from zone 9 to 10
+    //Hardy from zone 9 to 10 (but the tree only grow under shadowing canopy of other trees), as well as wet biomes.
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 
@@ -63,15 +63,14 @@ public class ImbuiaSapling extends SaplingBlock {
 
         boolean validTemp = temp >= minTemp && temp <= maxTemp;
         boolean hasRain = biome.getPrecipitation() != Biome.RainType.NONE;
+        boolean protectedByLeaves = isProtectedByLeaves(world, pos);
 
         // 🌱 Growth logic
-        if (validTemp && hasRain) {
+        if (validTemp && hasRain && protectedByLeaves) {
             super.randomTick(state, world, pos, random);
         }
 
         // ❄ Winter kill logic (Zone 9 vulnerability)
-        boolean protectedByLeaves = isProtectedByLeaves(world, pos);
-
         if ("WINTER".equals(currentSeason) && temp <= 0.84F && !protectedByLeaves) {
             if (random.nextInt(2) == 0) {
                 world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState(), 3);
@@ -99,43 +98,24 @@ public class ImbuiaSapling extends SaplingBlock {
         return false;
     }
 
-    private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
-
-        BlockPos.Mutable mutable = new BlockPos.Mutable();
-
-        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
-            mutable.setPos(pos.getX(), y, pos.getZ());
-            BlockState state = world.getBlockState(mutable);
-
-            if (state.getBlock() instanceof GlassBlock) {
-                return true; // Found glass → protected
-            }
-
-            if (world.canSeeSky(mutable)) {
-                return false; // Open sky → not protected
-            }
-        }
-
-        return false;
-    }
-
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
 
-        if (!(worldIn instanceof World)) {
+        if (!(worldIn instanceof ServerWorld)) {
             return false;
         }
 
-        World world = (World) worldIn;
+        ServerWorld world = (ServerWorld) worldIn;
         Biome biome = world.getBiome(pos);
-
         float temp = biome.getTemperature(pos);
 
         boolean tooHot = temp > 0.89F;
         boolean tooCold = temp < 0.8F;
         boolean noRain = biome.getPrecipitation() == Biome.RainType.NONE;
 
-        if (tooHot || tooCold || noRain) {
+        boolean protectedByLeaves = isProtectedByLeaves(world, pos);
+
+        if (tooHot || tooCold || noRain || !protectedByLeaves) {
             return false;
         }
 
@@ -180,12 +160,40 @@ public class ImbuiaSapling extends SaplingBlock {
                 return ActionResultType.SUCCESS;
             }
 
+            if(!isProtectedByLeaves((ServerWorld) worldIn, pos)) {
+                player.sendMessage(
+                        new StringTextComponent("This sapling needs shadowy under a canopy to thrive."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS;
+            }
+
             // If temp is in range, optionally allow normal processing:
             // return super.onBlockActivated(...);
             return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
         }
         return ActionResultType.SUCCESS;
 
+    }
+
+    private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable mutable = new BlockPos.Mutable();
+
+        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
+            mutable.setPos(pos.getX(), y, pos.getZ());
+            BlockState state = world.getBlockState(mutable);
+
+            if (state.getBlock() instanceof GlassBlock) {
+                return true; // Found glass → protected
+            }
+
+            if (world.canSeeSky(mutable)) {
+                return false; // Open sky → not protected
+            }
+        }
+
+        return false;
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

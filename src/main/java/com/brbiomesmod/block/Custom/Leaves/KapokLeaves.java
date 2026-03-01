@@ -35,8 +35,11 @@ public class KapokLeaves extends LeavesBlock implements IForgeShearable {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        //Dry season
-        if ("SUMMER".equals(currentSeason) && random.nextInt(65) == 0) {
+        Biome biome = worldIn.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
+        //Pattern for tropical climates = Dry season
+        if (temp >= 0.9F && "SUMMER".equals(currentSeason) && random.nextInt(65) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -44,7 +47,7 @@ public class KapokLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if ("SUMMER".equals(currentSeason) && random.nextInt(27) == 0) {
+        if (temp >= 0.9F && "SUMMER".equals(currentSeason) && random.nextInt(27) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -52,7 +55,16 @@ public class KapokLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if ("FALL".equals(currentSeason) && random.nextInt(65) == 0) {
+        if (temp >= 0.9F && "FALL".equals(currentSeason) && random.nextInt(27) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.KAPOK_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        //Pattern for subtropical climates = cold season
+        if (temp <= 0.89F && "FALL".equals(currentSeason) && random.nextInt(65) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -60,7 +72,15 @@ public class KapokLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if ("FALL".equals(currentSeason) && random.nextInt(27) == 0) {
+        if (temp <= 0.89F && "FALL".equals(currentSeason) && random.nextInt(27) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.KAPOK_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        if (temp <= 0.89F && "WINTER".equals(currentSeason) && random.nextInt(27) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

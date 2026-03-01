@@ -44,15 +44,59 @@ public class CockspurCoralSapling extends SaplingBlock {
         float minTemp = 0.8f;
         float maxTemp = 0.94f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
-            // Only attempt natural growth in suitable biomes
+        boolean isProtectedByGlass = isUnderGlass(world, pos);
+
+        if ((biomeTemp >= minTemp && biomeTemp <= maxTemp)
+                || (biomeTemp < minTemp && isProtectedByGlass)) {
+
             super.randomTick(state, world, pos, random);
         }
         // If biome temperature is too low/high, do nothing (block natural growth)
     }
 
+    private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable mutable = new BlockPos.Mutable();
+
+        // Step 1: Find the first block above that blocks the sky (roof height)
+        int roofY = -1;
+
+        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
+            mutable.setPos(pos.getX(), y, pos.getZ());
+
+            if (!world.isAirBlock(mutable)) {
+                roofY = y;
+                break;
+            }
+        }
+
+        if (roofY == -1) {
+            return false; // No roof found
+        }
+
+        // (radius 2 → 5x5 small green house)
+        // (radius 3 → 7x7 medium green house)
+        // (radius 4 → 9x9 large green house)
+        int radius = 2 - 3;
+
+        for (int x = -radius; x <= radius; x++) {
+            for (int z = -radius; z <= radius; z++) {
+
+                mutable.setPos(pos.getX() + x, roofY, pos.getZ() + z);
+                BlockState state = world.getBlockState(mutable);
+
+                if (!(state.getBlock() instanceof GlassBlock)) {
+                    return false; // If any block is not glass → fail
+                }
+            }
+        }
+
+        return true; // Entire roof area is glass
+    }
+
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
+
         if (!(worldIn instanceof World)) {
             return false;
         }
@@ -62,12 +106,25 @@ public class CockspurCoralSapling extends SaplingBlock {
         Biome biome = world.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 0.94F;
-        boolean tooCold = temp < 0.8F;
+        boolean isProtectedByGlass = false;
 
-        if (tooHot || tooCold) {
-            return false;
+        if (world instanceof ServerWorld) {
+            isProtectedByGlass = isUnderGlass((ServerWorld) world, pos);
+        }
+
+        float minTemp = 0.8F;
+        float maxTemp = 0.94f;
+
+        // If protected, ignore cold restriction
+        if (!isProtectedByGlass) {
+            if (temp < minTemp || temp > maxTemp) {
+                return false;
+            }
+        } else {
+            // Under glass → only block extreme heat
+            if (temp > maxTemp) {
+                return false;
+            }
         }
 
         return super.canGrow(worldIn, pos, state, isClient);
@@ -85,12 +142,18 @@ public class CockspurCoralSapling extends SaplingBlock {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
             float minTemp = 0.8f, maxTemp = 0.94f;
 
-            if (temp < minTemp) {
+            boolean isProtectedByGlass = false;
+
+            if (worldIn instanceof ServerWorld) {
+                isProtectedByGlass = isUnderGlass((ServerWorld) worldIn, pos);
+            }
+
+            if (temp < minTemp && !isProtectedByGlass) {
                 player.sendMessage(
                         new StringTextComponent("This biome is too cold for this sapling."),
                         player.getUniqueID()
                 );
-                return ActionResultType.SUCCESS; // Prevent further processing if needed
+                return ActionResultType.SUCCESS;
             }
 
             if (temp > maxTemp) {

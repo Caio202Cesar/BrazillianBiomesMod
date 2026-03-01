@@ -47,7 +47,17 @@ public class BlackPitangaLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if ("SPRING".equals(currentSeason) && random.nextInt(5) == 0) {
+        //Pattern for tropical climates = flowering at start of wet season
+        if (temp >= 0.9F && "WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.BLACK_PITANGA_FLOWERING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        //Pattern for subtropical climates = flowering at spring
+        if (temp <= 0.89F && "SPRING".equals(currentSeason) && random.nextInt(5) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

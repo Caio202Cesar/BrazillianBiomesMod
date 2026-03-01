@@ -36,9 +36,10 @@ public class YellowMombinLeaves extends LeavesBlock implements IForgeShearable {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
         Biome biome = worldIn.getBiome(pos);
+        float temp = biome.getTemperature(pos);
 
         //Tropical dry season
-        if ("SUMMER".equals(currentSeason) && random.nextInt(35) == 0) {
+        if (temp >= 0.9F && "SUMMER".equals(currentSeason) && random.nextInt(35) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -47,7 +48,7 @@ public class YellowMombinLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if ("FALL".equals(currentSeason) && random.nextInt(15) == 0) {
+        if (temp >= 0.9F && "FALL".equals(currentSeason) && random.nextInt(15) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -56,8 +57,36 @@ public class YellowMombinLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        //Flowering
-        if ("WINTER".equals(currentSeason) && random.nextInt(35) == 0) {
+        //Tropical flowering
+        if (temp >= 0.9F && "WINTER".equals(currentSeason) && random.nextInt(35) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.YELLOW_MOMBIN_FLOWERING_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        //Subtropical cold season
+        if (temp <= 0.89F && "FALL".equals(currentSeason) && random.nextInt(35) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.YELLOW_MOMBIN_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        if (temp <= 0.89F && "WINTER".equals(currentSeason) && random.nextInt(15) == 0) {
+
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.YELLOW_MOMBIN_DRIED_BRANCHES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+
+        //Subtropical flowering
+        if (temp <= 0.89F && "SPRING".equals(currentSeason) && random.nextInt(35) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

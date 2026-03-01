@@ -3,6 +3,7 @@ package com.brbiomesmod.block;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.Custom.CaatingaSand;
 import com.brbiomesmod.block.Custom.Crops.CassavaCropBlock;
+import com.brbiomesmod.block.Custom.RawRubberBlock;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
@@ -39,11 +40,11 @@ public class MiscBlocks {
                     .setRequiresTool().hardnessAndResistance(5f)));
 
     public static final RegistryObject<Block> RAW_RUBBER_BLOCK = registerBlock("raw_rubber_block",
-            () -> new Block(AbstractBlock.Properties.create(Material.WOOL).harvestLevel(2).harvestTool(ToolType.PICKAXE)
-                    .hardnessAndResistance(1f)));
+            () -> new RawRubberBlock(AbstractBlock.Properties.create(Material.WOOL).harvestLevel(2).harvestTool(ToolType.PICKAXE)
+                    .hardnessAndResistance(1f).sound(SoundType.BAMBOO)));
     public static final RegistryObject<Block> VULCANIZED_RUBBER_BLOCK = registerBlock("vulcanized_rubber_block",
             () -> new Block(AbstractBlock.Properties.create(Material.WOOL).harvestLevel(2).harvestTool(ToolType.PICKAXE)
-                    .hardnessAndResistance(1f)));
+                    .hardnessAndResistance(1f).sound(SoundType.BAMBOO)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

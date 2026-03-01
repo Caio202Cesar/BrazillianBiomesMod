@@ -471,7 +471,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.SHARINGA_LOG),
                     new SimpleBlockStateProvider(States.SHARINGA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    new FancyTrunkPlacer(8, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Araucaria Trees
@@ -641,6 +641,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAGAITA_TREE = register("cagaita_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.EUGENIA_LOG),
                     new SimpleBlockStateProvider(States.CAGAITA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CERRADO_CAGAITA_TREE = register("cerrado_cagaita_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.EUGENIA_LOG),
+                    new SimpleBlockStateProvider(States.CAGAITA_BLOSSOM),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
@@ -1044,6 +1051,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState PITANGA_LEAVES = TreesGroup.PITANGA_LEAVES.get().getDefaultState();
         protected static final BlockState BLACK_PITANGA_LEAVES = TreesGroup.BLACK_PITANGA_LEAVES.get().getDefaultState();
         protected static final BlockState CAGAITA_LEAVES = TreesGroup.CAGAITA_LEAVES.get().getDefaultState();
+        protected static final BlockState CAGAITA_BLOSSOM = TreesGroup.CAGAITA_FLOWERING_LEAVES.get().getDefaultState();
         protected static final BlockState RIO_GRANDE_CHERRY_LEAVES = TreesGroup.RIO_GRANDE_CHERRY_LEAVES.get().getDefaultState();
 
         protected static final BlockState SHARINGA_LOG = TreesGroup.SHARINGA_LOG.get().getDefaultState();
@@ -1221,7 +1229,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     JUA_TREE.withChance(0.1F), JUA_TREE_WITH_PASSIONVINE.withChance(0.03F), WHITE_SILK_FLOSS_TREE.withChance(0.01F),
                             CARNAUBA_PALM.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.03F), CARNAUBA_PALM_WITH_PASSIONVINE.withChance(0.03F),
                             BLACK_JUREMA_TREE_WITH_PASSIONVINE.withChance(0.05F), WHITE_SILK_FLOSS_BIG_TREE_PASSIONVINE.withChance(0.025F),
-                            WHITE_SILK_FLOSS_TREE_PASSIONVINE.withChance(0.045F), WHITE_SILK_FLOSS_BIG_TREE.withChance(0.0198F)), BLACK_JUREMA_TREE))
+                            WHITE_SILK_FLOSS_TREE_PASSIONVINE.withChance(0.045F), WHITE_SILK_FLOSS_BIG_TREE.withChance(0.0198F),
+                            WHITE_IPE_TREE.withChance(0.1F)), BLACK_JUREMA_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 2))));
 
@@ -1232,7 +1241,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             MONKEY_CAJARANA_TREE1.withChance(0.1F), JUA_TREE.withChance(0.089F), JUA_TREE_WITH_PASSIONVINE.withChance(0.0079F),
                             MONKEY_CAJARANA_TREE2.withChance(0.2F), BRAZILWOOD_TREE.withChance(0.1F), BRAZILWOOD_FANCY_TREE.withChance(0.09F),
                             JENIPAPO_TREE.withChance(0.1F), BLACK_SUCUPIRA_TREE.withChance(0.1F), CASHEW_TREE_WITH_PASSIONVINE.withChance(0.02F),
-                            YELLOW_MOMBIN_TREE_WITH_VINE.withChance(0.015F), MANGABA_TREE_WITH_VINE.withChance(0.015F)), CASHEW_SHRUB))
+                            YELLOW_MOMBIN_TREE_WITH_VINE.withChance(0.015F), MANGABA_TREE_WITH_VINE.withChance(0.015F),
+                            SAPUCAIA_TREE.withChance(0.08F)), CASHEW_SHRUB))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
@@ -1264,7 +1274,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Cerrado vegetation
     public static final ConfiguredFeature<?, ?> CERRADO_FRUIT_TREES = register("cerrado_fruit_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.1985F),
-                            CAGAITA_TREE.withChance(0.1895F), YELLOW_MOMBIN_TREE.withChance(0.13F), JENIPAPO_TREE.withChance(0.2F),
+                            CERRADO_CAGAITA_TREE.withChance(0.1895F), YELLOW_MOMBIN_TREE.withChance(0.13F), JENIPAPO_TREE.withChance(0.2F),
                             YELLOW_MOMBIN_TREE_WITH_VINE.withChance(0.0095F), PEQUI_TREE.withChance(0.35F), MANGABA_TREE_WITH_VINE.withChance(0.0003F),
                             WOLF_APPLE_TREE_WITH_VINE.withChance(0.0025F), PEQUI_TREE_WITH_VINE.withChance(0.0005F), CECROPIA_TREE.withChance(0.08F),
                             CECROPIA_WITH_CAATINGA_PASSIONVINE.withChance(0.0003F)),

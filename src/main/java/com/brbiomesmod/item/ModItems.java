@@ -2,6 +2,7 @@ package com.brbiomesmod.item;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.MiscBlocks;
+import com.brbiomesmod.entity.ModEntityTypes;
 import com.brbiomesmod.item.custom.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
@@ -320,6 +321,23 @@ public class ModItems {
     public static final RegistryObject<Item> RUBBER_HELMET = ITEMS.register("rubber_helmet",
             () -> new ArmorItem(ModArmorMaterial.RUBBER, EquipmentSlotType.HEAD,
                     new Item.Properties().group(ModItemGroup.MISC_GROUP)));
+
+    //Mobs
+    public static final RegistryObject<ModSpawnEggItem> TOCO_TOUCAN_SPAWN_EGG = ITEMS.register("toco_toucan_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.TOCO_TOUCAN_ENTITY, 0x191919, 0xf59805,
+                    new Item.Properties().group(ItemGroup.MISC)));
+
+    public static final RegistryObject<ModSpawnEggItem> MAPINGUARI_SPAWN_EGG = ITEMS.register("mapinguari_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.MAPINGUARI_ENTITY, 0x9e8777, 0x8A7F78,
+                    new Item.Properties().group(ItemGroup.MISC)));
+
+    public static final RegistryObject<ModSpawnEggItem> BOTO_SPAWN_EGG = ITEMS.register("boto_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.BOTO_ENTITY, 0xed71a8, 0xf2b8d2,
+                    new Item.Properties().group(ItemGroup.MISC)));
+
+    public static final RegistryObject<ModSpawnEggItem> GOLDEN_LION_TAMARIN_SPAWN_EGG = ITEMS.register("golden_tamarin_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY, 0xe59400, 0x4c3100,
+                    new Item.Properties().group(ItemGroup.MISC)));
 
 
     public static RegistryObject<Item> ICE_CREAM_CONE;

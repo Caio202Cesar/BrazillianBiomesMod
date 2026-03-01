@@ -40,15 +40,22 @@ public class CavenThornSapling extends SaplingBlock {
 
     }
 
-    //Hardy from zone 8 to 11 (the latter, if the biome is DRY - not implemented yet)
+    //Hardy from zone 8 to 11
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        float biomeTemp = world.getBiome(pos).getTemperature(pos);
+        Biome biome = world.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
         float minTemp = 0.75f;
         float maxTemp = 0.94f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
-            // Only attempt natural growth in suitable biomes
+        float downfall = biome.getDownfall();
+        float maxDownfall = 0.55f;
+
+        boolean validTemp = temp >= minTemp && temp <= maxTemp;
+        boolean suitableHumidity = downfall < maxDownfall;
+
+        if (validTemp && suitableHumidity) {
             super.randomTick(state, world, pos, random);
         }
         // If biome temperature is too low/high, do nothing (block natural growth)
@@ -61,15 +68,17 @@ public class CavenThornSapling extends SaplingBlock {
         }
 
         World world = (World) worldIn;
-
         Biome biome = world.getBiome(pos);
+
         float temp = biome.getTemperature(pos);
+        float downfall = biome.getDownfall();
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
         boolean tooHot = temp > 0.94f;
         boolean tooCold = temp < 0.75F;
+        boolean tooHumid = downfall > 0.55F;
 
-        if (tooHot || tooCold) {
+        if (tooHot || tooCold || tooHumid) {
             return false;
         }
 
@@ -85,8 +94,12 @@ public class CavenThornSapling extends SaplingBlock {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.75f, maxTemp = 0.94f;
+
+            Biome biome = worldIn.getBiome(pos);
+
+            float temp = biome.getTemperature(pos);
+            float downfall = biome.getDownfall();
+            float minTemp = 0.75f, maxTemp = 0.94f, maxDownfall = 0.55F;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -99,6 +112,14 @@ public class CavenThornSapling extends SaplingBlock {
             if (temp > maxTemp) {
                 player.sendMessage(
                         new StringTextComponent("This biome is too hot for this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS; // Prevent further processing if needed
+            }
+
+            if (downfall > maxDownfall) {
+                player.sendMessage(
+                        new StringTextComponent("This biome is too wet for this sapling."),
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS; // Prevent further processing if needed

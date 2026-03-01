@@ -113,7 +113,7 @@ public class FeijoaSapling extends SaplingBlock {
 
             if (!isSummerAllowed(worldIn, pos)) {
                 player.sendMessage(
-                        new StringTextComponent("Summers are too hot for this sapling."),
+                        new StringTextComponent("Summers are too hot or too cold for this sapling."),
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS;

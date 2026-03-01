@@ -1,5 +1,8 @@
 package com.brbiomesmod.block.Custom.Saplings;
 
+import com.brbiomesmod.Climate.SummerHeat;
+import com.brbiomesmod.Climate.SummerHeatRegistry;
+import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
@@ -37,37 +40,143 @@ public class YerbaMateSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 9
+    public boolean ticksRandomly(BlockState state) {
+        return true;
+    }
+
+    /**
+     * Performs a random tick on a block.
+     *
+     * @param state
+     * @param world
+     * @param pos
+     * @param random
+     */
+    //Hardy from zone 9 to 11 (8 with protection)
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.8f;
-        float maxTemp = 1.6f;
 
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
-            // Only attempt natural growth in suitable biomes
+        String currentSeason = Season.getSeason(world.getDayTime());
+        Biome biome = world.getBiome(pos);
+        float temp = biome.getTemperature(pos);
+
+        float minTemp = 0.8f;
+        float maxTemp = 0.94f;
+
+        boolean isProtectedByGlass = isUnderGlass(world, pos);
+
+        // 🌱 Growth logic
+        if ((temp >= minTemp && temp <= maxTemp)
+                || (temp < minTemp && isProtectedByGlass)) {
+
             super.randomTick(state, world, pos, random);
         }
-        // If biome temperature is too low/high, do nothing (block natural growth)
+
+        boolean protectedByLeaves = isProtectedByLeaves(world, pos);
+
+        if ("SUMMER".equals(currentSeason) && isSummerHot(world, pos) && !protectedByLeaves) {
+            if (random.nextInt(10) == 0) {
+                world.setBlockState(pos, Blocks.DEAD_BUSH.getDefaultState(), 3);
+            }
+        }
+    }
+
+    private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable mutable = new BlockPos.Mutable();
+
+        // Step 1: Find the first block above that blocks the sky (roof height)
+        int roofY = -1;
+
+        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
+            mutable.setPos(pos.getX(), y, pos.getZ());
+
+            if (!world.isAirBlock(mutable)) {
+                roofY = y;
+                break;
+            }
+        }
+
+        if (roofY == -1) {
+            return false; // No roof found
+        }
+
+        // (radius 2 → 5x5 small green house)
+        // (radius 3 → 7x7 medium green house)
+        // (radius 4 → 9x9 large green house)
+        int radius = 2;
+
+        for (int x = -radius; x <= radius; x++) {
+            for (int z = -radius; z <= radius; z++) {
+
+                mutable.setPos(pos.getX() + x, roofY, pos.getZ() + z);
+                BlockState state = world.getBlockState(mutable);
+
+                if (!(state.getBlock() instanceof GlassBlock)) {
+                    return false; // If any block is not glass → fail
+                }
+            }
+        }
+
+        return true; // Entire roof area is glass
+    }
+
+    private static boolean isSummerHot(World world, BlockPos pos) {
+        SummerHeat heat = SummerHeatRegistry.get(world, pos);
+        return heat == SummerHeat.HOT;
+    }
+
+    private boolean isProtectedByLeaves(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable mutable = new BlockPos.Mutable();
+
+        for (int y = pos.getY() + 1; y < world.getHeight(); y++) {
+            mutable.setPos(pos.getX(), y, pos.getZ());
+            BlockState state = world.getBlockState(mutable);
+
+            if (state.getBlock() instanceof LeavesBlock) {
+                return true; // Found canopy → protected
+            }
+
+            if (world.canSeeSky(mutable)) {
+                return false; // Open sky → not protected
+            }
+        }
+
+        return false;
     }
 
     @Override
     public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
+
         if (!(worldIn instanceof World)) {
             return false;
         }
 
         World world = (World) worldIn;
-
         Biome biome = world.getBiome(pos);
+
         float temp = biome.getTemperature(pos);
 
-        // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 1.6F;
-        boolean tooCold = temp < 0.8F;
+        boolean isProtectedByGlass = false;
 
-        if (tooHot || tooCold) {
-            return false;
+        if (world instanceof ServerWorld) {
+            isProtectedByGlass = isUnderGlass((ServerWorld) world, pos);
+        }
+
+        float maxTemp = 0.94F;
+        float minTemp = 0.8F;
+
+        // If protected, ignore cold restriction
+        if (!isProtectedByGlass) {
+            if (temp < minTemp || temp > maxTemp) {
+                return false;
+            }
+        } else {
+            // Under glass → only block extreme heat
+            if (temp > maxTemp) {
+                return false;
+            }
         }
 
         return super.canGrow(worldIn, pos, state, isClient);
@@ -82,10 +191,18 @@ public class YerbaMateSapling extends SaplingBlock {
     @Override
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.8f, maxTemp = 1.6f;
+            Biome biome = worldIn.getBiome(pos);
+            float temp = biome.getTemperature(pos);
 
-            if (temp < minTemp) {
+            float minTemp = 0.8f, maxTemp = 0.94f;
+
+            boolean isProtectedByGlass = false;
+
+            if (worldIn instanceof ServerWorld) {
+                isProtectedByGlass = isUnderGlass((ServerWorld) worldIn, pos);
+            }
+
+            if (temp < minTemp && !isProtectedByGlass) {
                 player.sendMessage(
                         new StringTextComponent("This biome is too cold for this sapling."),
                         player.getUniqueID()
@@ -106,6 +223,7 @@ public class YerbaMateSapling extends SaplingBlock {
             return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
         }
         return ActionResultType.SUCCESS;
+
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

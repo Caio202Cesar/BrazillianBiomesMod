@@ -1,9 +1,15 @@
 package com.brbiomesmod;
 
+import com.brbiomesmod.Util.ModSoundEvents;
 import com.brbiomesmod.block.MiscBlocks;
 import com.brbiomesmod.block.PlantsGroup;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.block.WoodGroup;
+import com.brbiomesmod.entity.ModEntityTypes;
+import com.brbiomesmod.entity.render.BotoRenderer;
+import com.brbiomesmod.entity.render.GoldenLionTamarinRenderer;
+import com.brbiomesmod.entity.render.MapinguariRenderer;
+import com.brbiomesmod.entity.render.TocoToucanRenderer;
 import com.brbiomesmod.events.ModEntities;
 import com.brbiomesmod.events.ModParticles;
 import com.brbiomesmod.features.FoliagePlacers.ModFoliagePlacer;
@@ -19,6 +25,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -49,6 +56,8 @@ public class BrazillianBiomesMod {
         WoodGroup.register(eventBus);
 
         ModTreeDecorators.register(eventBus);
+        ModEntityTypes.register(eventBus);
+        ModSoundEvents.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);
@@ -94,6 +103,12 @@ public class BrazillianBiomesMod {
 
             RenderTypeLookup.setRenderLayer(MiscBlocks.CASSAVA_CROP.get(), RenderType.getCutout());
         });
+
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.TOCO_TOUCAN_ENTITY.get(), TocoToucanRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.MAPINGUARI_ENTITY.get(), MapinguariRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.BOTO_ENTITY.get(), BotoRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get(), GoldenLionTamarinRenderer::new);
+
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

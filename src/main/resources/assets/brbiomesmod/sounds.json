@@ -1,0 +1,9 @@
+{
+  "toco_toucan_sound_call": {
+    "category": "biomes",
+    "subtitle": "brbiomesmod.toco_toucan_sound_call",
+    "sounds": [
+      "brbiomesmod:toco_toucan_sound_call"
+    ]
+  }
+}

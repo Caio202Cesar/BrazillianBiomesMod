@@ -2,7 +2,6 @@ package com.brbiomesmod.block.Custom.Leaves;
 
 import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.block.TreesGroup;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -13,7 +12,6 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
-import java.util.function.Supplier;
 
 public class PitangaLeaves extends LeavesBlock implements IForgeShearable {
      public PitangaLeaves(Properties properties) {
@@ -41,7 +39,7 @@ public class PitangaLeaves extends LeavesBlock implements IForgeShearable {
         float temp = biome.getTemperature(pos);
 
         //If biome is coller (< 0.85 MC temp - Hardiness zone 9) AND it's WINTER, change to winter leaves ===
-        if (temp < 0.84F && "WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
+        if (temp <= 0.84F && "WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -49,7 +47,8 @@ public class PitangaLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if ("SPRING".equals(currentSeason) && random.nextInt(5) == 0) {
+        //Pattern for tropical climates = flowering at start of wet season
+        if (temp >= 0.9F && "WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
@@ -57,15 +56,8 @@ public class PitangaLeaves extends LeavesBlock implements IForgeShearable {
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
-        if ("SUMMER".equals(currentSeason) && random.nextInt(2) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            worldIn.setBlockState(pos, TreesGroup.PITANGA_FLOWERING_LEAVES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-        }
-
-        if ("FALL".equals(currentSeason) && random.nextInt(2) == 0) {
+        //Pattern for subtropical climates = flowering at spring
+        if (temp <= 0.89F && "SPRING".equals(currentSeason) && random.nextInt(5) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
