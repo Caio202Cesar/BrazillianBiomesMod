@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.vector.Vector3f;
 
 public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
 
@@ -72,15 +73,12 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
     public void setRotationAngles(T entity, float limbSwing, float limbSwingAmount,
                                   float ageInTicks, float netHeadYaw, float headPitch) {
 
-        // Head movement
-        head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
-        head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
-
         // Swimming animation
-        float speed = 0.3F;
-        float degree = 0.6F;
+        float speed = 0.1F;
+        float degree = 0.4F;
 
-        body.rotateAngleY = MathHelper.cos(ageInTicks * speed) * degree * 0.2F;
+        body.rotateAngleX = 0;
+        tail.rotateAngleX = 0;
         tail.rotateAngleY = MathHelper.cos(ageInTicks * speed) * degree;
         tail_fin.rotateAngleY = MathHelper.cos(ageInTicks * speed) * degree * 1.5F;
     }
@@ -89,6 +87,10 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
     public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight,
                        int packedOverlay, float red, float green, float blue, float alpha) {
 
+        matrixStack.push();
+        matrixStack.rotate(Vector3f.XP.rotationDegrees(180F));
+        matrixStack.translate(0.0D, -1.5D, 0.0D);
+
         head.render(matrixStack, buffer, packedLight, packedOverlay);
         body.render(matrixStack, buffer, packedLight, packedOverlay);
         tail.render(matrixStack, buffer, packedLight, packedOverlay);
@@ -96,5 +98,7 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
         left_fin.render(matrixStack, buffer, packedLight, packedOverlay);
         back_fin.render(matrixStack, buffer, packedLight, packedOverlay);
         tail_fin.render(matrixStack, buffer, packedLight, packedOverlay);
+
+        matrixStack.pop();
     }
 }
