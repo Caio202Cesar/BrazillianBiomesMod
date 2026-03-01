@@ -33,7 +33,7 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<BotoEntity>> BOTO_ENTITY =
             ENTITY_TYPES.register("boto_dolphin",
                     () -> EntityType.Builder.create(BotoEntity::new,
-                                    EntityClassification.WATER_CREATURE).size(1.3F, 0.7F)
+                                    EntityClassification.WATER_CREATURE).size(0.9F, 0.6F)
                             .build(new ResourceLocation(BrazillianBiomesMod.MOD_ID, "boto_dolphin").toString()));
 
     public static final RegistryObject<EntityType<GoldenLionTamarinEntity>> GOLDEN_LION_TAMARIN_ENTITY =
