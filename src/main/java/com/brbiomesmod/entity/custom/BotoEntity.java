@@ -64,9 +64,10 @@ public class BotoEntity extends DolphinEntity {
         this.dataManager.register(MOISTNESS, 2400);
     }
 
+
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_().createMutableAttribute(Attributes.MAX_HEALTH, 10.0D).
-                createMutableAttribute(Attributes.MOVEMENT_SPEED, (double)1.2F).
+                createMutableAttribute(Attributes.MOVEMENT_SPEED, (double)0.25F).
                 createMutableAttribute(Attributes.ATTACK_DAMAGE, 3.0D);
 
     }
