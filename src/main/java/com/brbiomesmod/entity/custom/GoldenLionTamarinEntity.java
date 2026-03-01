@@ -135,6 +135,11 @@ public class GoldenLionTamarinEntity extends AnimalEntity {
     }
 
     @Override
+    public boolean canBreed() {
+        return super.canBreed() && !this.isChild() && !this.isPassenger();
+    }
+
+    @Override
     public boolean isOnLadder() {
         return this.collidedHorizontally;
     }
