@@ -49,8 +49,6 @@ public class BotoEntity extends DolphinEntity {
 
     public BotoEntity(EntityType<? extends DolphinEntity> type, World worldIn) {
         super(type, worldIn);
-        this.moveController = new MoveHelperController(this);
-        this.navigator = new SwimmerPathNavigator(this, world);
         this.setCanPickUpLoot(true);
     }
 
@@ -173,54 +171,6 @@ public class BotoEntity extends DolphinEntity {
         return true;
     }
 
-    static class MoveHelperController extends MovementController {
-        private final BotoEntity botoEntity;
-
-        public MoveHelperController(BotoEntity botoIn) {
-            super(botoIn);
-            this.botoEntity = botoIn;
-        }
-
-        public void tick() {
-            if (this.botoEntity.isInWater()) {
-                this.botoEntity.setMotion(this.botoEntity.getMotion().add(0.0D, 0.005D, 0.0D));
-            }
-
-            if (this.action == MovementController.Action.MOVE_TO && !this.botoEntity.getNavigator().noPath()) {
-                double d0 = this.posX - this.botoEntity.getPosX();
-                double d1 = this.posY - this.botoEntity.getPosY();
-                double d2 = this.posZ - this.botoEntity.getPosZ();
-                double d3 = d0 * d0 + d1 * d1 + d2 * d2;
-                if (d3 < (double)2.5000003E-7F) {
-                    this.mob.setMoveForward(0.0F);
-                } else {
-                    float f = (float)(MathHelper.atan2(d2, d0) * (double)(180F / (float)Math.PI)) - 90.0F;
-                    this.botoEntity.rotationYaw = this.limitAngle(this.botoEntity.rotationYaw, f, 10.0F);
-                    this.botoEntity.renderYawOffset = this.botoEntity.rotationYaw;
-                    this.botoEntity.rotationYawHead = this.botoEntity.rotationYaw;
-                    float f1 = (float)(this.speed * this.botoEntity.getAttributeValue(Attributes.MOVEMENT_SPEED));
-                    if (this.botoEntity.isInWater()) {
-                        this.botoEntity.setAIMoveSpeed(f1 * 0.02F);
-                        float f2 = -((float)(MathHelper.atan2(d1, (double)MathHelper.sqrt(d0 * d0 + d2 * d2)) * (double)(180F / (float)Math.PI)));
-                        f2 = MathHelper.clamp(MathHelper.wrapDegrees(f2), -85.0F, 85.0F);
-                        this.botoEntity.rotationPitch = this.limitAngle(this.botoEntity.rotationPitch, f2, 5.0F);
-                        float f3 = MathHelper.cos(this.botoEntity.rotationPitch * ((float)Math.PI / 180F));
-                        float f4 = MathHelper.sin(this.botoEntity.rotationPitch * ((float)Math.PI / 180F));
-                        this.botoEntity.moveForward = f3 * f1;
-                        this.botoEntity.moveVertical = -f4 * f1;
-                    } else {
-                        this.botoEntity.setAIMoveSpeed(f1 * 0.1F);
-                    }
-                }
-
-            } else {
-                this.botoEntity.setAIMoveSpeed(0.0F);
-                this.botoEntity.setMoveStrafing(0.0F);
-                this.botoEntity.setMoveVertical(0.0F);
-                this.botoEntity.setMoveForward(0.0F);
-            }
-        }
-    }
 
     public void tick() {
         super.tick();
