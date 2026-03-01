@@ -15,7 +15,7 @@ public class MapinguariRenderer extends MobRenderer<MapinguariEntity, Mapinguari
             new ResourceLocation(BrazillianBiomesMod.MOD_ID, "textures/entity/mapinguari.png");
 
     public MapinguariRenderer(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new MapinguariModel<>(), 2F);
+        super(renderManagerIn, new MapinguariModel<>(), 0.7F);
     }
 
     @Override
