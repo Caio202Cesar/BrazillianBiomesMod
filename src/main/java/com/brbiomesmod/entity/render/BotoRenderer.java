@@ -9,19 +9,13 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.vector.Vector3f;
 
-public class BotoRenderer extends MobRenderer<BotoEntity, BotoModel<BotoEntity>>
-{
+public class BotoRenderer extends MobRenderer<BotoEntity, BotoModel<BotoEntity>> {
+
     protected static final ResourceLocation TEXTURE =
             new ResourceLocation(BrazillianBiomesMod.MOD_ID, "textures/entity/boto.png");
 
     public BotoRenderer(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new BotoModel<>(), 1F);
-    }
-
-    @Override
-    protected void applyRotations(BotoEntity entity, MatrixStack matrixStack, float ageInTicks, float rotationYaw, float partialTicks) {
-        super.applyRotations(entity, matrixStack, ageInTicks, rotationYaw, partialTicks);
-        matrixStack.rotate(Vector3f.XP.rotationDegrees(180.0F));
+        super(renderManagerIn, new BotoModel<>(), 0.7F); // 1F is too large for dolphin
     }
 
     @Override

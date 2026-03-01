@@ -14,6 +14,7 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
 
     private final ModelRenderer head;
     private final ModelRenderer body;
+    private final ModelRenderer snout;
     private final ModelRenderer tail;
     private final ModelRenderer right_fin;
     private final ModelRenderer left_fin;
@@ -24,13 +25,7 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
         textureWidth = 64;
         textureHeight = 64;
 
-        // Head
-        head = new ModelRenderer(this);
-        head.setRotationPoint(0.0F, 20.0F, -6.0F);
-        head.setTextureOffset(0, 0)
-                .addBox(-4.0F, -3.0F, -3.0F, 8.0F, 7.0F, 6.0F);
-
-        // Body
+        // BODY (root reference)
         body = new ModelRenderer(this);
         body.setRotationPoint(0.0F, 24.0F, -3.0F);
         body.setTextureOffset(0, 13)
@@ -38,67 +33,73 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
         body.setTextureOffset(22, 0)
                 .addBox(-4.0F, -7.0F, 0.0F, 8.0F, 7.0F, 13.0F);
 
-        // Tail
-        tail = new ModelRenderer(this);
-        tail.setRotationPoint(0.0F, 21.5F, 11.0F);
-        tail.setTextureOffset(0, 19)
-                .addBox(-2.0F, -2.5F, -1.0F, 4.0F, 5.0F, 11.0F);
+        // HEAD
+        head = new ModelRenderer(this);
+        head.setRotationPoint(0.0F, 24.0F, -9.0F);
+        head.setTextureOffset(0, 0)
+                .addBox(-4.0F, -7.0F, 0.0F, 8.0F, 7.0F, 6.0F);
 
-        // Right Fin
+        // SNOUT (properly attached visually)
+        snout = new ModelRenderer(this);
+        snout.setRotationPoint(0.0F, 0.0F, -4.0F);
+        snout.setTextureOffset(0, 19)
+                .addBox(-1.5F, -1.0F, -5.0F, 3.0F, 2.0F, 5.0F, 0.0F, false);
+        head.addChild(snout);
+
+        // TAIL
+        tail = new ModelRenderer(this);
+        tail.setRotationPoint(0.0F, 24.0F, 8.0F);
+        tail.setTextureOffset(0, 19)
+                .addBox(-2.0F, -5.5F, 0.0F, 4.0F, 5.0F, 11.0F);
+
+        // RIGHT FIN
         right_fin = new ModelRenderer(this);
         right_fin.setRotationPoint(-4.5F, 24.0F, -2.0F);
         right_fin.setTextureOffset(48, 20)
                 .addBox(-0.5F, -4.0F, 0.0F, 1.0F, 4.0F, 7.0F);
 
-        // Left Fin
+        // LEFT FIN
         left_fin = new ModelRenderer(this);
         left_fin.setRotationPoint(4.5F, 24.0F, -2.0F);
         left_fin.setTextureOffset(48, 20)
                 .addBox(-0.5F, -4.0F, 0.0F, 1.0F, 4.0F, 7.0F);
 
-        // Back Fin
+        // BACK FIN
         back_fin = new ModelRenderer(this);
-        back_fin.setRotationPoint(0.0F, 13.0F, -5.0F);
+        back_fin.setRotationPoint(0.0F, 24.0F, -5.0F);
         back_fin.setTextureOffset(51, 0)
-                .addBox(-0.5F, 0.0F, 8.0F, 1.0F, 4.0F, 5.0F);
+                .addBox(-0.5F, -11.0F, 8.0F, 1.0F, 4.0F, 5.0F);
 
-        // Tail Fin
+        // TAIL FIN
         tail_fin = new ModelRenderer(this);
-        tail_fin.setRotationPoint(0.0F, 21.5F, 20.0F);
+        tail_fin.setRotationPoint(0.0F, 24.0F, 19.0F);
         tail_fin.setTextureOffset(19, 20)
-                .addBox(-5.0F, -0.5F, -1.0F, 10.0F, 1.0F, 6.0F);
+                .addBox(-5.0F, -3.5F, 0.0F, 10.0F, 1.0F, 6.0F);
     }
 
     @Override
     public void setRotationAngles(T entity, float limbSwing, float limbSwingAmount,
                                   float ageInTicks, float netHeadYaw, float headPitch) {
 
-        // Swimming animation
         float speed = 0.2F;
         float degree = 0.5F;
 
-        body.rotateAngleX = 0;
-        tail.rotateAngleX = 0;
         tail.rotateAngleY = MathHelper.cos(ageInTicks * speed) * degree;
         tail_fin.rotateAngleY = MathHelper.cos(ageInTicks * speed) * degree * 1.5F;
     }
 
     @Override
-    public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight,
-                       int packedOverlay, float red, float green, float blue, float alpha) {
-
-        matrixStack.push();
-        matrixStack.rotate(Vector3f.XP.rotationDegrees(180F));
-        matrixStack.translate(0.0D, -1.5D, 0.0D);
+    public void render(MatrixStack matrixStack, IVertexBuilder buffer,
+                       int packedLight, int packedOverlay,
+                       float red, float green, float blue, float alpha) {
 
         head.render(matrixStack, buffer, packedLight, packedOverlay);
+        snout.render(matrixStack, buffer, packedLight, packedOverlay);
         body.render(matrixStack, buffer, packedLight, packedOverlay);
         tail.render(matrixStack, buffer, packedLight, packedOverlay);
         right_fin.render(matrixStack, buffer, packedLight, packedOverlay);
         left_fin.render(matrixStack, buffer, packedLight, packedOverlay);
         back_fin.render(matrixStack, buffer, packedLight, packedOverlay);
         tail_fin.render(matrixStack, buffer, packedLight, packedOverlay);
-
-        matrixStack.pop();
     }
 }
