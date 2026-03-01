@@ -135,9 +135,26 @@ public class GoldenLionTamarinModel<T extends GoldenLionTamarinEntity> extends E
                        int packedLight,
                        int packedOverlay,
                        float red, float green, float blue, float alpha) {
+        if (this.isChild) {
+
+            matrixStack.push();
+
+            // Make baby smaller
+            matrixStack.scale(0.5F, 0.5F, 0.5F);
+
+            // Adjust height so it doesn't render inside ground
+            matrixStack.translate(0.0D, 1.5D, 0.0D);
+
+            // Render model parts
+            bb_main.render(matrixStack, buffer, packedLight, packedOverlay);
+
+            matrixStack.pop();
+
+        } else {
 
         bb_main.render(matrixStack, buffer, packedLight, packedOverlay,
                 red, green, blue, alpha);
+        }
     }
 
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

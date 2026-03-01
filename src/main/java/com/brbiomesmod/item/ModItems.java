@@ -336,7 +336,7 @@ public class ModItems {
                     new Item.Properties().group(ItemGroup.MISC)));
 
     public static final RegistryObject<ModSpawnEggItem> GOLDEN_LION_TAMARIN_SPAWN_EGG = ITEMS.register("golden_tamarin_spawn_egg",
-            () -> new ModSpawnEggItem(ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY, 0xe59400, 0x4c3100,
+            () -> new ModSpawnEggItem(ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY, 0xcc5500, 0x4c3100,
                     new Item.Properties().group(ItemGroup.MISC)));
 
 
