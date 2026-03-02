@@ -1180,7 +1180,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.3F),
                     JENIPAPO_TREE.withChance(0.3F), PINK_SILK_FLOSS_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F), HUMBOLDT_WILLOW_TREE.withChance(0.2F)),
                     CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 0))));
+                    .configure(new AtSurfaceWithExtraConfig(0, 0.5F, 5))));
 
 
     //Araucaria Plateau
