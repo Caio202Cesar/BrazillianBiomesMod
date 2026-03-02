@@ -661,6 +661,11 @@
   "biome.brbiomesmod.pampas_coastal_fields": "Pampas Coastal Fields",
   "biome.brbiomesmod.pampas_hills": "Pampas Hills",
 
+  "entity.brbiomesmod.mapinguari": "Mapinguary",
+  "entity.brbiomesmod.toco_toucan": "Toco Toucan",
+  "entity.brbiomesmod.golden_lion_tamarin": "Golden Lion Tamarin",
+  "entity.brbiomesmod.boto_dolphin": "Pink Boto",
+
   "itemGroup.brbiomesmod.BrazilianBiomes:Food": "Brazilian Biomes: Food",
   "itemGroup.brbiomesmod.BrazilianBiomes:Plants": "Brazilian Biomes: Plants",
   "itemGroup.brbiomesmod.BrazilianBiomes:Woods": "Brazilian Biomes: Wood",

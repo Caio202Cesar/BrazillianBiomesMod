@@ -674,5 +674,10 @@
   "block.brbiomesmod.pitanga_black_winter_flowering_leaves": "Folhas de pitangueira-negra em flor",
   "block.brbiomesmod.pitanga_winter_flowering_leaves": "Folhas de pitangueira em flor",
   "block.brbiomesmod.raw_rubber_block": "Bloco de borracha crua",
-  "block.brbiomesmod.vulcanized_rubber_block": "Bloco de borracha vulcanizada"
+  "block.brbiomesmod.vulcanized_rubber_block": "Bloco de borracha vulcanizada",
+
+  "entity.brbiomesmod.mapinguari": "Mapinguari",
+  "entity.brbiomesmod.toco_toucan": "Tucano",
+  "entity.brbiomesmod.golden_lion_tamarin": "Mico-leão-dourado",
+  "entity.brbiomesmod.boto_dolphin": "Boto-cor-de-rosa"
 }

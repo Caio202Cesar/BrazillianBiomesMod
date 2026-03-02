@@ -53,7 +53,7 @@ public class TocoToucanEntity extends ParrotEntity {
 
     @Override
     public SoundEvent getAmbientSound() {
-        this.playSound(ModSoundEvents.TOCO_TOUCAN_CALL_SOUND.get(), 0.1F, 1.0F);
+        this.playSound(ModSoundEvents.TOCO_TOUCAN_CALL_SOUND.get(), 0.7F, 1.0F);
         return null;
     }
 

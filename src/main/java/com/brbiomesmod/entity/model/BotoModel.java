@@ -1,20 +1,17 @@
 package com.brbiomesmod.entity.model;
 
 import com.brbiomesmod.entity.custom.BotoEntity;
-import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.util.math.vector.Vector3f;
 
 public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
 
     private final ModelRenderer head;
-    private final ModelRenderer body;
     private final ModelRenderer snout;
+    private final ModelRenderer body;
     private final ModelRenderer tail;
     private final ModelRenderer right_fin;
     private final ModelRenderer left_fin;
@@ -25,7 +22,7 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
         textureWidth = 64;
         textureHeight = 64;
 
-        // BODY (root reference)
+        // BODY
         body = new ModelRenderer(this);
         body.setRotationPoint(0.0F, 24.0F, -3.0F);
         body.setTextureOffset(0, 13)
@@ -33,7 +30,7 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
         body.setTextureOffset(22, 0)
                 .addBox(-4.0F, -7.0F, 0.0F, 8.0F, 7.0F, 13.0F);
 
-        // HEAD
+        // HEAD (aligned with body top)
         head = new ModelRenderer(this);
         head.setRotationPoint(0.0F, 24.0F, -9.0F);
         head.setTextureOffset(0, 0)
@@ -41,10 +38,9 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
 
         // SNOUT (properly attached visually)
         snout = new ModelRenderer(this);
-        snout.setRotationPoint(0.0F, 0.0F, -4.0F);
-        snout.setTextureOffset(0, 19)
-                .addBox(-1.5F, -1.0F, -5.0F, 3.0F, 2.0F, 5.0F, 0.0F, false);
-        head.addChild(snout);
+        snout.setRotationPoint(0.0F, 24.0F, -15.0F);
+        snout.setTextureOffset(0, 0)
+                .addBox(-1.5F, -5.0F, 0.0F, 3.0F, 3.0F, 6.0F);
 
         // TAIL
         tail = new ModelRenderer(this);
