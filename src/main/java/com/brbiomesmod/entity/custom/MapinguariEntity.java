@@ -8,6 +8,8 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.passive.ParrotEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.potion.EffectInstance;
@@ -99,6 +101,37 @@ public class MapinguariEntity extends MonsterEntity {
                 );
             }
         }
+    }
+
+    //Burn in sunlight
+    public void livingTick() {
+        if (this.isAlive()) {
+            boolean flag = this.shouldBurnInDay() && this.isInDaylight();
+            if (flag) {
+                ItemStack itemstack = this.getItemStackFromSlot(EquipmentSlotType.HEAD);
+                if (!itemstack.isEmpty()) {
+                    if (itemstack.isDamageable()) {
+                        itemstack.setDamage(itemstack.getDamage() + this.rand.nextInt(2));
+                        if (itemstack.getDamage() >= itemstack.getMaxDamage()) {
+                            this.sendBreakAnimation(EquipmentSlotType.HEAD);
+                            this.setItemStackToSlot(EquipmentSlotType.HEAD, ItemStack.EMPTY);
+                        }
+                    }
+
+                    flag = false;
+                }
+
+                if (flag) {
+                    this.setFire(8);
+                }
+            }
+        }
+
+        super.livingTick();
+    }
+
+    protected boolean shouldBurnInDay() {
+        return true;
     }
 
     @Override
