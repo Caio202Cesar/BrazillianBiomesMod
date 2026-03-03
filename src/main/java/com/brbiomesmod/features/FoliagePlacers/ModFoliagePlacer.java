@@ -38,6 +38,10 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("young_kapok_foliage_placer",
                     () -> new FoliagePlacerType<>(YoungKapokFoliagePlacer.CODEC));
 
+    public static final RegistryObject<FoliagePlacerType<BabassuFoliagePlacer>> BABASSU_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("babassu_foliage_placer",
+                    () -> new FoliagePlacerType<>(BabassuFoliagePlacer.CODEC));
+
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
     }
