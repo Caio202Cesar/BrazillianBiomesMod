@@ -107,5 +107,6 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         YellowMombinSapling.registerRenderLayer();
         PurpleheartSapling.registerRenderLayer();
         HumboldtWillowSapling.registerRenderLayer();
+        BabassuSapling.registerRenderLayer();
     }
 }
