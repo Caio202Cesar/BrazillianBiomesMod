@@ -55,6 +55,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(16, 8, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Acai Palm
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BABASSU_PALM = register("babassu_palm",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BABASSU_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.BABASSU_LEAVES),
+                    new BabassuFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(16, 8, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
     //Queen Palm
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> QUEEN_PALM = register("queen_palm",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.QUEEN_PALM_LOG),
@@ -962,6 +970,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState BURITI_LEAVES = TreesGroup.BURITI_LEAVES.get().getDefaultState();
         protected static final BlockState BURITI_LOG = TreesGroup.BURITI_LOG.get().getDefaultState();
 
+        protected static final BlockState BABASSU_LOG = TreesGroup.BABASSU_LOG.get().getDefaultState();
+        protected static final BlockState BABASSU_LEAVES = TreesGroup.BABASSU_LEAVES.get().getDefaultState();
+
         protected static final BlockState PALMITO_LOG = TreesGroup.PALMITO_LOG.get().getDefaultState();
         protected static final BlockState ACAI_LEAVES = TreesGroup.ACAI_LEAVES.get().getDefaultState();
         protected static final BlockState JUSSARA_LEAVES = TreesGroup.JUSSARA_LEAVES.get().getDefaultState();
@@ -1151,12 +1162,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> AMAZON_EDGE_TREES = register("amazon_edge_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YOUNG_KAPOK_TREE.withChance(0.4F), KAPOK_TREE.withChance(0.35F),
                             BURITI_PALM.withChance(0.4F), COCOA_TREE.withChance(0.4F), SOMBREIRO_TREE.withChance(0.3F),
-                            LARGE_CECROPIA_TREE.withChance(0.2F), SHARINGA_TREE.withChance(0.5F), LOPHANTERA_TREE2.withChance(0.25F),
+                            LARGE_CECROPIA_TREE.withChance(0.2F), SHARINGA_TREE.withChance(0.5F), LOPHANTERA_TREE2.withChance(0.25F), LOPHANTERA_TREE.withChance(0.25F),
                             BACURI_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.34F),
                             BALSA_TREE.withChance(0.5F), SANDBOX_TREE.withChance(0.4F), JENIPAPO_TREE.withChance(0.3F),
                             MEGA_BALSA_TREE.withChance(0.5F), YELLOW_MOMBIN_TREE.withChance(0.2F), BRAZILNUT_TREE.withChance(0.5F),  BRAZILNUT_FANCY_TREE.withChance(0.5F),
-                            PURPLEHEART_TREE.withChance(0.4F)), LOPHANTERA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.0F, 2))));
+                            PURPLEHEART_TREE.withChance(0.4F)), BABASSU_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> VARZEA_TREES = register("varzea_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.09F),
                             KAPOK_TREE.withChance(0.25F), YELLOW_MOMBIN_TREE.withChance(0.17F), JENIPAPO_TREE.withChance(0.22F),

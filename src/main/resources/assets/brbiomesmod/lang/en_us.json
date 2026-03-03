@@ -649,7 +649,7 @@
   "block.brbiomesmod.babassu_leaves": "Babassu Leaves",
   "block.brbiomesmod.babassu_sapling": "Babassu Sapling",
 
-  "biome.brbiomesmod.caatinga_shrubland": "Caatinga Xeric Shrubland",
+  "biome.brbiomesmod.caatinga_shrubland": "Caatinga",
   "biome.brbiomesmod.atlantic_forest": "Atlantic Forest",
   "biome.brbiomesmod.araucaria_plateau": "Araucaria Plateau",
   "biome.brbiomesmod.cerrado": "Cerrado",
@@ -663,6 +663,7 @@
   "biome.brbiomesmod.atlantic_forest_hills": "Serra do Mar Coastal Forest",
   "biome.brbiomesmod.pampas_coastal_fields": "Pampas Coastal Fields",
   "biome.brbiomesmod.pampas_hills": "Pampas Hills",
+  "biome.brbiomesmod.amazon_rainforest_edge": "Amazon Rainforest Edge",
 
   "entity.brbiomesmod.mapinguari": "Mapinguary",
   "entity.brbiomesmod.toco_toucan": "Toco Toucan",
