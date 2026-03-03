@@ -88,9 +88,51 @@ public class ModEntityGeneration {
                     3,  // min
                     10   // max
             ));
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
         }
 
-        if (event.getName().equals(AtlanticForestHillsBiome.ATLANTIC_FOREST_HILLS.get().getRegistryName())) {
+        if (event.getName().equals(AmazonRainforestEdgeBiome.AMAZON_RAINFOREST_EDGE.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(AmazonRainforestBiome.AMAZON_RAINFOREST.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(AmazonVarzeaForestBiome.AMAZON_VARZEA_FOREST.get().getRegistryName())) {
 
             event.getSpawns().getSpawner(
                     ModEntityTypes.TOCO_TOUCAN_ENTITY.get().getClassification()

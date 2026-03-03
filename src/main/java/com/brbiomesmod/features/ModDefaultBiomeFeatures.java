@@ -8,6 +8,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withAmazonTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.AMAZON_TREES);
     }
+    public static void withCocalForestTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.COCAL_FOREST_TREES);
+    }
     public static void withAmazonEdgeTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.AMAZON_EDGE_TREES);
     }
