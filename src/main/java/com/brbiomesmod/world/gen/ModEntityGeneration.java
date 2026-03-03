@@ -17,7 +17,7 @@ public class ModEntityGeneration {
         // Safety check
         if (event.getName() == null) return;
 
-        // Compare registry names properly
+        // Endemic from Amazon Rainforest
         if (event.getName().equals(AmazonRainforestBiome.AMAZON_RAINFOREST.get().getRegistryName())) {
 
             event.getSpawns().getSpawner(
