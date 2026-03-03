@@ -647,6 +647,18 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    public static final RegistryObject<Block> BABASSU_LOG = registerBlock("babassu_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BABASSU_LEAVES = registerBlock("babassu_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BABASSU_SAPLING = registerBlock("babassu_sapling",
+            BabassuSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BABASSU_SAPLING = BLOCKS.register("potted_babassu_sapling",
+            () -> new FlowerPotBlock(TreesGroup.BABASSU_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+
     public static final RegistryObject<Block> COCKSPUR_CORAL_LOG = registerBlock("cockspur_coral_log",
             ModLogs::new);
     public static final RegistryObject<Block> COCKSPUR_CORAL_LEAVES = registerBlock("cockspur_coral_leaves",
