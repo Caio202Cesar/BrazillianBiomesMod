@@ -2,9 +2,7 @@ package com.brbiomesmod.world.gen;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.entity.ModEntityTypes;
-import com.brbiomesmod.world.biomes.AmazonRainforestBiome;
-import com.brbiomesmod.world.biomes.CerradoBiome;
-import com.brbiomesmod.world.biomes.PantanalBiome;
+import com.brbiomesmod.world.biomes.*;
 import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -45,6 +43,54 @@ public class ModEntityGeneration {
         }
 
         if (event.getName().equals(PantanalBiome.PANTANAL.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(PantanalBiome.PANTANAL.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(AtlanticForestBiome.ATLANTIC_FOREST.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(AtlanticForestHillsBiome.ATLANTIC_FOREST_HILLS.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(AtlanticForestHillsBiome.ATLANTIC_FOREST_HILLS.get().getRegistryName())) {
 
             event.getSpawns().getSpawner(
                     ModEntityTypes.TOCO_TOUCAN_ENTITY.get().getClassification()
