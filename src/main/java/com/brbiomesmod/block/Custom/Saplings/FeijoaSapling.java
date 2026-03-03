@@ -39,22 +39,14 @@ public class FeijoaSapling extends SaplingBlock {
 
     }
 
-    private static boolean isSummerAllowed(World world, BlockPos pos) {
-        SummerHeat heat = SummerHeatRegistry.get(world, pos);
-        return heat == SummerHeat.WARM;
-    }
-
-    //Hardy to zone 8 to 11
+    //Hardy to zone 8 to 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.75f;
-        float maxTemp = 0.94f;
+        float maxTemp = 0.89f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) return;
-
-        // Summer heat check (NEW)
-        if (!isSummerAllowed(world, pos)) return;
 
         super.randomTick(state, world, pos, random);
     }
@@ -71,14 +63,12 @@ public class FeijoaSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 0.94F;
+        boolean tooHot = temp > 0.89F;
         boolean tooCold = temp < 0.75F;
 
         if (tooHot || tooCold) {
             return false;
         }
-
-        if (!isSummerAllowed(world, pos)) return false;
 
         return super.canGrow(worldIn, pos, state, isClient);
     }
@@ -93,7 +83,7 @@ public class FeijoaSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.75f, maxTemp = 0.94f;
+            float minTemp = 0.75f, maxTemp = 0.89f;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -109,14 +99,6 @@ public class FeijoaSapling extends SaplingBlock {
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
-            }
-
-            if (!isSummerAllowed(worldIn, pos)) {
-                player.sendMessage(
-                        new StringTextComponent("Summers are too hot or too cold for this sapling."),
-                        player.getUniqueID()
-                );
-                return ActionResultType.SUCCESS;
             }
 
             // If temp is in range, optionally allow normal processing:
