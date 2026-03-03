@@ -1205,12 +1205,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             SAPUCAIA_TREE.withChance(0.34F), AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F),
                             LARGE_CECROPIA_TREE.withChance(0.2F), PEQUI_TREE.withChance(0.25F), PEQUI_TREE_WITH_VINE.withChance(0.05F),
                             BRAZILLIAN_TIGERWOOD_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.34F), BLACK_SUCUPIRA_TREE.withChance(0.3F),
-                            MANGABA_TREE.withChance(0.3F),
-
-                            SANDBOX_TREE.withChance(0.4F), JENIPAPO_TREE.withChance(0.3F),
-                            MEGA_BALSA_TREE.withChance(0.5F), YELLOW_MOMBIN_TREE.withChance(0.2F), BRAZILNUT_TREE.withChance(0.5F),  BRAZILNUT_FANCY_TREE.withChance(0.5F),
+                            MANGABA_TREE.withChance(0.3F), JENIPAPO_TREE.withChance(0.3F), YELLOW_MOMBIN_TREE.withChance(0.2F),
                             PURPLEHEART_TREE.withChance(0.4F)), OITICICA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
 
     //Pampas Vegetation
     public static final ConfiguredFeature<?, ?> PAMPAS_PALMS = register("pampas_palms",
