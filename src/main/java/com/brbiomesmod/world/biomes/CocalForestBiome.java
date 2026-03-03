@@ -63,10 +63,10 @@ private static Biome makeCocalForestBiome(final Supplier<ConfiguredSurfaceBuilde
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.COCAL_FOREST_PALMS);
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-    return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
-            .temperature(1.2F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(10788964)
-                    .setWaterFogColor(10788964).withSkyColor(4169700).withFoliageColor(3830303)
-                    .withGrassColor(6604607).setFogColor(14807295)
+    return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
+            .temperature(1.2F).downfall(0.5F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                    .setWaterFogColor(4159204).withSkyColor(7254527).withFoliageColor(7441937)
+                    .withGrassColor(12564309).setFogColor(13494015)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                     .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                     .build())
