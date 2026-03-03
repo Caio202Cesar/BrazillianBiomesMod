@@ -56,6 +56,8 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
     DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withNoiseTallGrass(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAmazonEdgeTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withCassavaPlants(biomegenerationsettings$builder);
