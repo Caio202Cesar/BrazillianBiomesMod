@@ -14,10 +14,10 @@ import net.minecraftforge.common.IForgeShearable;
 import java.util.Random;
 import java.util.function.Supplier;
 
-public class BrazillianTigerwoodDriedBranches extends LeavesBlock implements IForgeShearable {
+public class BrazillianTigerwoodBranches extends LeavesBlock implements IForgeShearable {
     private final Supplier<Block> nextStage;
 
-    public BrazillianTigerwoodDriedBranches(Properties properties, Supplier<Block> nextStage) {
+    public BrazillianTigerwoodBranches(Properties properties, Supplier<Block> nextStage) {
         super(properties);
         this.nextStage = nextStage;
     }
