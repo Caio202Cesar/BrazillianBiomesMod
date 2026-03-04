@@ -1127,6 +1127,25 @@ public class TreesGroup {
                     .zeroHardnessAndResistance()));
 
 
+    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_LOG = registerBlock("brazillian_tigerwood_log",
+            ModLogs::new);
+
+    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_LEAVES = registerBlock("brazillian_tigerwood_leaves",
+            () -> new BrazillianTigerwoodLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_TIGERWOOD_FALL_LEAVES));
+    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_FALL_LEAVES = registerBlock("brazillian_tigerwood_fall_leaves",
+            () -> new BrazillianTigerwoodFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_TIGERWOOD_BRANCHES));
+    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_BRANCHES = registerBlock("brazillian_tigerwood_dried_branches",
+            () -> new BrazillianTigerwoodBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_TIGERWOOD_LEAVES));
+
+    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_SAPLING = registerBlock("brazillian_tigerwood_sapling",
+            BrazillianTigerwoodSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BRAZILLIAN_TIGERWOOD_SAPLING = BLOCKS.register("potted_brazillian_tigerwood_sapling",
+            () -> new FlowerPotBlock(TreesGroup.BRAZILLIAN_TIGERWOOD_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
