@@ -1241,7 +1241,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     BURITI_PALM_WITH_VINE.withChance(0.008F),
                     CARNAUBA_PALM.withChance(0.5F), CARNAUBA_PALM_WITH_PASSIONVINE.withChance(0.007F), BABASSU_PALM_WITH_VINE.withChance(0.0047F)),
                     BABASSU_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(6, 0.4F, 0))));
+                    .configure(new AtSurfaceWithExtraConfig(2, 0.4F, 0))));
     public static final ConfiguredFeature<?, ?> COCAL_FOREST_TREES = register("cocal_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SOMBREIRO_TREE.withChance(0.3F),
                             SAPUCAIA_TREE.withChance(0.34F), AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F),
