@@ -634,21 +634,21 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .setDecorators(ImmutableList.of(DutchmanPipeVineDecorator.INSTANCE)).build())));
 
     //Jabuticaba Trees
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JABUTICABA_TREE = register("jabuticaba_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_LOG),
-                    new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new DarkOakTrunkPlacer(6, 2, 1),
-                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
-                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JABUTICABA_TREE_WITH_PASSIONVINE = register("passionvine_jabuticaba_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JABUTICABA_BIG_TREE = register("jabuticaba_big_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_LOG),
                     new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new DarkOakTrunkPlacer(6, 2, 1),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE, PassionFruitVineTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JABUTICABA_FANCY_TREE = register("jabuticaba_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.JABUTICABA_LOG),
+                    new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).build()));
 
     //Algarrobillo Tree (Pampas)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ALGARROBILLO_TREE = register("algarrobillo_tree",
