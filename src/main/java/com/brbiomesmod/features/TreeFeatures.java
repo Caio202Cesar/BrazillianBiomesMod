@@ -1209,16 +1209,19 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             CUPUACU_TREE.withChance(0.4F), COCOA_TREE.withChance(0.4F), CAMU_CAMU_TREE.withChance(0.25F), SOMBREIRO_TREE.withChance(0.3F),
                             LARGE_CECROPIA_TREE.withChance(0.2F), SHARINGA_TREE.withChance(0.5F), LOPHANTERA_TREE2.withChance(0.25F),
                             BACURI_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.34F),
-                            BALSA_TREE.withChance(0.5F), SANDBOX_TREE.withChance(0.4F), JENIPAPO_TREE.withChance(0.3F), SAPUCAIA_TREE.withChance(0.34F),
+                            BALSA_TREE.withChance(0.5F), SANDBOX_TREE.withChance(0.4F), BRAZILLIAN_TIGERWOOD_TREE.withChance(0.2F),
+                            BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.22F),
+                            JENIPAPO_TREE.withChance(0.3F), SAPUCAIA_TREE.withChance(0.34F),
                             MEGA_BALSA_TREE.withChance(0.5F), YELLOW_MOMBIN_TREE.withChance(0.2F), BRAZILNUT_TREE.withChance(0.5F),  BRAZILNUT_FANCY_TREE.withChance(0.5F),
                             PURPLEHEART_TREE.withChance(0.4F), AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F)), LOPHANTERA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.0F, 2))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.5F, 2))));
     public static final ConfiguredFeature<?, ?> AMAZON_EDGE_TREES = register("amazon_edge_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YOUNG_KAPOK_TREE.withChance(0.4F), KAPOK_TREE.withChance(0.35F),
                             BURITI_PALM.withChance(0.4F), COCOA_TREE.withChance(0.4F), SOMBREIRO_TREE.withChance(0.3F),
                             LARGE_CECROPIA_TREE.withChance(0.2F), SHARINGA_TREE.withChance(0.5F), LOPHANTERA_TREE2.withChance(0.25F), LOPHANTERA_TREE.withChance(0.25F),
                             BACURI_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.34F),
-                            BALSA_TREE.withChance(0.5F), SANDBOX_TREE.withChance(0.4F), JENIPAPO_TREE.withChance(0.3F), SAPUCAIA_TREE.withChance(0.34F),
+                            BALSA_TREE.withChance(0.5F), SANDBOX_TREE.withChance(0.4F), BRAZILLIAN_TIGERWOOD_TREE.withChance(0.2F),
+                            BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.22F), JENIPAPO_TREE.withChance(0.3F), SAPUCAIA_TREE.withChance(0.34F),
                             MEGA_BALSA_TREE.withChance(0.5F), YELLOW_MOMBIN_TREE.withChance(0.2F), BRAZILNUT_TREE.withChance(0.5F),  BRAZILNUT_FANCY_TREE.withChance(0.5F),
                             PURPLEHEART_TREE.withChance(0.4F), AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F)), BABASSU_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
@@ -1243,7 +1246,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SOMBREIRO_TREE.withChance(0.3F),
                             SAPUCAIA_TREE.withChance(0.34F), AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F),
                             LARGE_CECROPIA_TREE.withChance(0.2F), PEQUI_TREE.withChance(0.25F), PEQUI_TREE_WITH_VINE.withChance(0.05F),
-                            BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.35F), BRAZILLIAN_TIGERWOOD_TREE.withChance(0.3F),
+                            BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.4F), BRAZILLIAN_TIGERWOOD_TREE.withChance(0.35F),
                             BACURI_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.34F),
                             BLACK_SUCUPIRA_TREE.withChance(0.3F), MANGABA_TREE.withChance(0.3F), JENIPAPO_TREE.withChance(0.3F),
                             YELLOW_MOMBIN_TREE.withChance(0.2F)), OITICICA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
