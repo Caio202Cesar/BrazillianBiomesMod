@@ -1241,7 +1241,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     BURITI_PALM_WITH_VINE.withChance(0.008F), OITICICA_TREE.withChance(0.089F),
                     CARNAUBA_PALM.withChance(0.5F), CARNAUBA_PALM_WITH_PASSIONVINE.withChance(0.007F), BABASSU_PALM_WITH_VINE.withChance(0.0047F)),
                     BABASSU_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(2, 0.4F, 0))));
+                    .configure(new AtSurfaceWithExtraConfig(2, 0.4F, 3))));
     public static final ConfiguredFeature<?, ?> COCAL_FOREST_TREES = register("cocal_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             SAPUCAIA_TREE.withChance(0.34F), AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F),
@@ -1250,7 +1250,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             BACURI_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.34F),
                             BLACK_SUCUPIRA_TREE.withChance(0.3F), MANGABA_TREE.withChance(0.3F), JENIPAPO_TREE.withChance(0.3F),
                             YELLOW_MOMBIN_TREE.withChance(0.2F)), SOMBREIRO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.3F, 4))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
 
     //Pampas Vegetation
     public static final ConfiguredFeature<?, ?> PAMPAS_PALMS = register("pampas_palms",
