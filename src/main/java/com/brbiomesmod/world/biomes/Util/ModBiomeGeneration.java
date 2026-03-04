@@ -29,6 +29,7 @@ public class ModBiomeGeneration {
         addBiome(AmazonVarzeaForestBiome.AMAZON_VARZEA_FOREST.get(), BiomeManager.BiomeType.DESERT, 23, OVERWORLD, HOT, JUNGLE);
         addBiome(CoxilhasBiome.COXILHAS.get(), BiomeManager.BiomeType.WARM, 20, OVERWORLD, SPARSE, PLAINS);
         addBiome(AmazonRainforestEdgeBiome.AMAZON_RAINFOREST_EDGE.get(), BiomeManager.BiomeType.DESERT, 27, OVERWORLD, HOT, JUNGLE, SPARSE);
+        addBiome(CocalForestBiome.COCAL_FOREST_BIOME.get(), BiomeManager.BiomeType.DESERT, 27, OVERWORLD, HOT, SAVANNA, SPARSE);
 
 
     }

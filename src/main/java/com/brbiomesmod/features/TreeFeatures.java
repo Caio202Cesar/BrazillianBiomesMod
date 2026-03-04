@@ -55,13 +55,20 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(16, 8, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
-    //Acai Palm
+    //Babassu Palm
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BABASSU_PALM = register("babassu_palm",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BABASSU_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.BABASSU_LEAVES),
                     new BabassuFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(16, 8, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BABASSU_PALM_WITH_VINE = register("babassu_palm_with_vine",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BABASSU_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.BABASSU_LEAVES),
+                    new BabassuFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(16, 8, 0),
+                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
+                    CaatingaPassionFruitVineLeavesDecorator.INSTANCE, CaatingaPassionFruitVineTrunkDecorator.INSTANCE)).build()));
 
     //Queen Palm
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> QUEEN_PALM = register("queen_palm",
@@ -871,6 +878,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(15, 2, 4),
                     new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BURITI_PALM_WITH_VINE = register("buriti_tree_with_vine",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BURITI_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.BURITI_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(15, 2, 4),
+                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
+                    CaatingaPassionFruitVineLeavesDecorator.INSTANCE, CaatingaPassionFruitVineTrunkDecorator.INSTANCE)).build()));
 
     //Xaxim
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> XAXIM_TREE = register("xaxim_tree",
@@ -952,11 +966,39 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
+    //Oiticica Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OITICICA_TREE = register("oiticica_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OITI_LOG),
+                    new SimpleBlockStateProvider(States.OITICICA_LEAVES),
+                    new DarkOakFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new DarkOakTrunkPlacer(3, 4, 1),
+                    new TwoLayerFeature(1, 0, 1))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
+    //Gonçalo Alves
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_TIGERWOOD_FANCY_TREE = register("brazillian_tigerwood_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BRAZILLIAN_TIGERWOOD_LOG),
+                    new SimpleBlockStateProvider(States.BRAZILLIAN_TIGERWOOD_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_TIGERWOOD_TREE = register("brazillian_tigerwood_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BRAZILLIAN_TIGERWOOD_LOG),
+                    new SimpleBlockStateProvider(States.BRAZILLIAN_TIGERWOOD_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(5, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
 
     public static final class States {
 
         protected static final BlockState KAPOK_LOG = TreesGroup.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = TreesGroup.KAPOK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState OITI_LOG = TreesGroup.OITI_LOG.get().getDefaultState();
+        protected static final BlockState OITICICA_LEAVES = TreesGroup.OITICICA_LEAVES.get().getDefaultState();
+
+        protected static final BlockState BRAZILLIAN_TIGERWOOD_LOG = TreesGroup.BRAZILLIAN_TIGERWOOD_LOG.get().getDefaultState();
+        protected static final BlockState BRAZILLIAN_TIGERWOOD_LEAVES = TreesGroup.BRAZILLIAN_TIGERWOOD_LEAVES.get().getDefaultState();
 
         protected static final BlockState SANDBOX_TREE_LOG = TreesGroup.SANDBOX_TREE_LOG.get().getDefaultState();
         protected static final BlockState SANDBOX_TREE_LEAVES = TreesGroup.SANDBOX_TREE_LEAVES.get().getDefaultState();
@@ -1198,15 +1240,19 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Mata dos cocais
     public static final ConfiguredFeature<?, ?> COCAL_FOREST_PALMS = register("cocal_forest_palms",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.5F),
-                    CARNAUBA_PALM.withChance(0.5F)), BABASSU_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 5))));
+                    BURITI_PALM_WITH_VINE.withChance(0.008F),
+                    CARNAUBA_PALM.withChance(0.5F), CARNAUBA_PALM_WITH_PASSIONVINE.withChance(0.007F), BABASSU_PALM_WITH_VINE.withChance(0.0047F)),
+                    BABASSU_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(6, 0.4F, 0))));
     public static final ConfiguredFeature<?, ?> COCAL_FOREST_TREES = register("cocal_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(SOMBREIRO_TREE.withChance(0.3F),
                             SAPUCAIA_TREE.withChance(0.34F), AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F),
                             LARGE_CECROPIA_TREE.withChance(0.2F), PEQUI_TREE.withChance(0.25F), PEQUI_TREE_WITH_VINE.withChance(0.05F),
-                            BRAZILLIAN_TIGERWOOD_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.34F), BLACK_SUCUPIRA_TREE.withChance(0.3F),
-                            MANGABA_TREE.withChance(0.3F), JENIPAPO_TREE.withChance(0.3F), YELLOW_MOMBIN_TREE.withChance(0.2F)), OITICICA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 1))));
+                            BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.35F),
+                            BRAZILLIAN_TIGERWOOD_TREE.withChance(0.3F), BACURI_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.34F),
+                            BLACK_SUCUPIRA_TREE.withChance(0.3F), MANGABA_TREE.withChance(0.3F), JENIPAPO_TREE.withChance(0.3F),
+                            YELLOW_MOMBIN_TREE.withChance(0.2F)), OITICICA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.3F, 4))));
 
     //Pampas Vegetation
     public static final ConfiguredFeature<?, ?> PAMPAS_PALMS = register("pampas_palms",

@@ -59,11 +59,12 @@ private static Biome makeCocalForestBiome(final Supplier<ConfiguredSurfaceBuilde
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withCocalForestTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withCassavaPlants(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withScrubPinkPeeperTrees(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.COCAL_FOREST_PALMS);
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-    return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
+    return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
             .temperature(1.2F).downfall(0.5F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                     .setWaterFogColor(4159204).withSkyColor(7254527).withFoliageColor(7441937)
                     .withGrassColor(12564309).setFogColor(13494015)
