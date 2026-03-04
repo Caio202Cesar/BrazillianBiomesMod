@@ -1205,7 +1205,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> JABUTICABA_TREES = register("jabuticaba_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JABUTICABA_TREE.withChance(0.4F),
                     JABUTICABA_FANCY_TREE.withChance(0.6F)), JABUTICABA_BIG_TREE)).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(5, 0.5F, 4))));
+                    .configure(new AtSurfaceWithExtraConfig(3, 0.0F, 0))));
 
     //Amazon rainforest vegetation
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
