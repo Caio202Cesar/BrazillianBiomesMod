@@ -1115,6 +1115,19 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    public static final RegistryObject<Block> OITI_LOG = registerBlock("oiti_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> OITICICA_LEAVES = registerBlock("oiticica_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> OITICICA_SAPLING = registerBlock("oiticica_sapling",
+            OiticicaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_OITICICA_SAPLING = BLOCKS.register("potted_oiticica_sapling",
+            () -> new FlowerPotBlock(TreesGroup.OITICICA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
+
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
