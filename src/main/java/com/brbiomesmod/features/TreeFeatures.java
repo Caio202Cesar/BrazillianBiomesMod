@@ -1322,7 +1322,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             CARNAUBA_PALM.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.03F), CARNAUBA_PALM_WITH_PASSIONVINE.withChance(0.03F),
                             BLACK_JUREMA_TREE_WITH_PASSIONVINE.withChance(0.05F), WHITE_SILK_FLOSS_BIG_TREE_PASSIONVINE.withChance(0.025F),
                             WHITE_SILK_FLOSS_TREE_PASSIONVINE.withChance(0.045F), WHITE_SILK_FLOSS_BIG_TREE.withChance(0.0198F),
-                            WHITE_IPE_TREE.withChance(0.1F)), BLACK_JUREMA_TREE))
+                            WHITE_IPE_TREE.withChance(0.1F), OITICICA_TREE.withChance(0.172F)), BLACK_JUREMA_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 2))));
 
@@ -1334,7 +1334,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             MONKEY_CAJARANA_TREE2.withChance(0.2F), BRAZILWOOD_TREE.withChance(0.1F), BRAZILWOOD_FANCY_TREE.withChance(0.09F),
                             JENIPAPO_TREE.withChance(0.1F), BLACK_SUCUPIRA_TREE.withChance(0.1F), CASHEW_TREE_WITH_PASSIONVINE.withChance(0.02F),
                             YELLOW_MOMBIN_TREE_WITH_VINE.withChance(0.015F), MANGABA_TREE_WITH_VINE.withChance(0.015F),
-                            SAPUCAIA_TREE.withChance(0.08F)), CASHEW_SHRUB))
+                            SAPUCAIA_TREE.withChance(0.08F), OITICICA_TREE.withChance(0.089F)), CASHEW_SHRUB))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 

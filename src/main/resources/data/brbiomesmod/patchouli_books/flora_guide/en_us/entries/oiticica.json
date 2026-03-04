@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Licania rigida$(br)$(bold)Biomes:$(reset) Cocal Forest"
+      "text": "$(bold)Scientific Name:$(reset) Licania rigida$(br)$(bold)Biomes:$(reset) Cocal Forest, Caatinga, Dunas Restinga"
     },
     {
       "type": "spotlight",
