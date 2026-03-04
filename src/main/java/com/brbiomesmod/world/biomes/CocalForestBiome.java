@@ -65,7 +65,7 @@ private static Biome makeCocalForestBiome(final Supplier<ConfiguredSurfaceBuilde
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
-            .temperature(1.2F).downfall(0.5F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+            .temperature(1.6F).downfall(0.5F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                     .setWaterFogColor(4159204).withSkyColor(7254527).withFoliageColor(7441937)
                     .withGrassColor(12564309).setFogColor(13494015)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
