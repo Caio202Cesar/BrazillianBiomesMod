@@ -61,6 +61,7 @@ private static Biome makeCocalForestBiome(final Supplier<ConfiguredSurfaceBuilde
     ModDefaultBiomeFeatures.withCocalForestTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withCassavaPlants(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withScrubPinkPeeperTrees(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withSavannaTrumpetTrees(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.COCAL_FOREST_PALMS);
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
