@@ -1249,7 +1249,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             BRAZILLIAN_TIGERWOOD_TREE.withChance(0.35F), BACURI_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.34F),
                             BLACK_SUCUPIRA_TREE.withChance(0.3F), MANGABA_TREE.withChance(0.3F), JENIPAPO_TREE.withChance(0.3F),
                             YELLOW_MOMBIN_TREE.withChance(0.2F)), SOMBREIRO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
-                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 0))));
 
     //Pampas Vegetation
     public static final ConfiguredFeature<?, ?> PAMPAS_PALMS = register("pampas_palms",
