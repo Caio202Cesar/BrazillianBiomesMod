@@ -3,6 +3,7 @@ package com.brbiomesmod.block.Custom.Saplings;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -22,6 +23,7 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 public class JabuticabaSapling extends SaplingBlock {
@@ -118,10 +120,25 @@ public class JabuticabaSapling extends SaplingBlock {
     }
 
 
-    private static class JabuticabaTree extends Tree {
+    private static class JabuticabaTree extends BigTree {
         @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean largeHive) {
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.JABUTICABA_FANCY_TREE;
+            } else {
                 return TreeFeatures.JABUTICABA_TREE;
+            }
         }
+
+        /**
+         * Get a {@link ConfiguredFeature} of the huge variant of this tree
+         *
+         * @param rand
+         */
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+                return TreeFeatures.JABUTICABA_BIG_TREE;
+            }
     }
 }

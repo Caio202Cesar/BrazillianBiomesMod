@@ -416,15 +416,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(DutchmanPipeVineDecorator.INSTANCE)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JABUTICABA_TREE_WITH_DUTCHMAN_VINE = register("dutchman_vine_jabuticaba_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_LOG),
-                    new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new DarkOakTrunkPlacer(6, 2, 1),
-                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
-                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(DutchmanPipeVineDecorator.INSTANCE)).setIgnoreVines().build()));
-
 
     //Umbu Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> UMBU_TREE = register("umbu_tree",
@@ -649,6 +640,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JABUTICABA_TREE = register("jabuticaba_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JABUTICABA_LOG),
+                    new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).build()));
 
     //Algarrobillo Tree (Pampas)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ALGARROBILLO_TREE = register("algarrobillo_tree",
@@ -1180,8 +1177,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_ROSEWOOD_WITH_PASSIONVINE.withChance(0.5F),
                             BRAZILLIAN_SASSAFRAS_TREE_WITH_PASSIONVINE.withChance(0.3F), CECROPIA_WITH_PASSIONVINE.withChance(0.3F),
                             SILVER_CECROPIA_WITH_PASSIONVINE.withChance(0.17F), BRAZILWOOD_TREE_WITH_PASSIONVINE.withChance(0.5F),
-                            SAPUCAIA_TREE_WITH_PASSIONVINE.withChance(0.3F), MANACA_WITH_PASSIONVINE.withChance(0.1F),
-                            JABUTICABA_TREE_WITH_PASSIONVINE.withChance(0.3F)),
+                            SAPUCAIA_TREE_WITH_PASSIONVINE.withChance(0.3F), MANACA_WITH_PASSIONVINE.withChance(0.1F)),
                             PINK_PEROBA_TREE_WITH_PASSIONFRUIT)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.5F, 3))));
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_UPPER_TREES = register("atlantic_forest_upper_trees",
@@ -1190,18 +1186,18 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.3F), MANACA_FANCY_TREE.withChance(0.4F), MANACA_TREE.withChance(0.3F),
                     SILVER_CECROPIA_TREE.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.3F), HUMBOLDT_WILLOW_TREE.withChance(0.18F), SAPUCAIA_TREE.withChance(0.4F),
                     BRAZILLIAN_ROSEWOOD_TREE.withChance(0.5F), BRAZILWOOD_TREE.withChance(0.4F),BRAZILWOOD_FANCY_TREE.withChance(0.5F),
-                    JENIPAPO_TREE.withChance(0.3F), JABUTICABA_TREE.withChance(0.5F), PURPLEHEART_TREE.withChance(0.3F), YELLOW_MOMBIN_TREE.withChance(0.4F)),
+                    JENIPAPO_TREE.withChance(0.3F), JABUTICABA_TREE.withChance(0.15F), JABUTICABA_BIG_TREE.withChance(0.25F),
+                    JABUTICABA_FANCY_TREE.withChance(0.4F), PURPLEHEART_TREE.withChance(0.3F), YELLOW_MOMBIN_TREE.withChance(0.4F)),
                     PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 3))));
     public static final ConfiguredFeature<?, ?> CAMBUCI_TREES = register("cambuci_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAMBUCI_TREE_WITH_PASSIONVINE.withChance(0.015F),
-                    XAXIM_TREE.withChance(0.5F)),
-                    CAMBUCI_TREE)).withPlacement(Placement.COUNT_EXTRA
+                    XAXIM_TREE.withChance(0.5F)), CAMBUCI_TREE)).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(5, 0.5F, 4))));
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_TREE_WITH_DUTCHMAN_VINE = register("atlantic_forest_trees_with_dutchman_vine",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of
-                    (BRAZILLIAN_SASSAFRAS_TREE_WITH_VINE.withChance(0.14F), JABUTICABA_TREE_WITH_DUTCHMAN_VINE.withChance(0.15F),
-                            DUTCHMAN_VINE_BRAZILWOOD.withChance(0.2F), PINK_PEROBA_TREE_WITH_DUTCHMAN_VINE.withChance(0.3F)),
+                    (BRAZILLIAN_SASSAFRAS_TREE_WITH_VINE.withChance(0.14F), DUTCHMAN_VINE_BRAZILWOOD.withChance(0.2F),
+                            PINK_PEROBA_TREE_WITH_DUTCHMAN_VINE.withChance(0.3F)),
                     BRAZILLIAN_ROSEWOOD_WITH_DUTCHMAN_VINE)).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.5F, 3))));
 
