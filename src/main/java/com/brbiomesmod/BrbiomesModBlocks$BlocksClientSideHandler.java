@@ -108,5 +108,7 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         PurpleheartSapling.registerRenderLayer();
         HumboldtWillowSapling.registerRenderLayer();
         BabassuSapling.registerRenderLayer();
+        OiticicaSapling.registerRenderLayer();
+        BrazillianTigerwoodSapling.registerRenderLayer();
     }
 }
