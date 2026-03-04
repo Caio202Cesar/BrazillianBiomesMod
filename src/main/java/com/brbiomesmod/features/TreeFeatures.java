@@ -1187,7 +1187,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     SILVER_CECROPIA_TREE.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.3F), HUMBOLDT_WILLOW_TREE.withChance(0.18F), SAPUCAIA_TREE.withChance(0.4F),
                     BRAZILLIAN_ROSEWOOD_TREE.withChance(0.5F), BRAZILWOOD_TREE.withChance(0.4F),BRAZILWOOD_FANCY_TREE.withChance(0.5F),
                     JENIPAPO_TREE.withChance(0.3F), JABUTICABA_TREE.withChance(0.15F), JABUTICABA_BIG_TREE.withChance(0.25F),
-                    JABUTICABA_FANCY_TREE.withChance(0.4F), PURPLEHEART_TREE.withChance(0.3F), YELLOW_MOMBIN_TREE.withChance(0.4F)),
+                    JABUTICABA_FANCY_TREE.withChance(0.4F), PURPLEHEART_TREE.withChance(0.3F),
+                    YELLOW_MOMBIN_TREE.withChance(0.4F), BRAZILLIAN_TIGERWOOD_TREE.withChance(0.07F),
+                    BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.5F)),
                     PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 3))));
     public static final ConfiguredFeature<?, ?> CAMBUCI_TREES = register("cambuci_trees",
@@ -1266,7 +1268,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Pantanal Vegetation
     public static final ConfiguredFeature<?, ?> PANTANAL_VEGETATION = register("pantanal_vegetation",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.3F),
-                    JENIPAPO_TREE.withChance(0.3F), PINK_SILK_FLOSS_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F), HUMBOLDT_WILLOW_TREE.withChance(0.2F)),
+                    JENIPAPO_TREE.withChance(0.3F), PINK_SILK_FLOSS_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F),
+                    HUMBOLDT_WILLOW_TREE.withChance(0.2F), BRAZILLIAN_TIGERWOOD_TREE.withChance(0.22F),
+                    BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.4F)),
                     CECROPIA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.5F, 5))));
 
@@ -1318,7 +1322,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             CARNAUBA_PALM.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.03F), CARNAUBA_PALM_WITH_PASSIONVINE.withChance(0.03F),
                             BLACK_JUREMA_TREE_WITH_PASSIONVINE.withChance(0.05F), WHITE_SILK_FLOSS_BIG_TREE_PASSIONVINE.withChance(0.025F),
                             WHITE_SILK_FLOSS_TREE_PASSIONVINE.withChance(0.045F), WHITE_SILK_FLOSS_BIG_TREE.withChance(0.0198F),
-                            WHITE_IPE_TREE.withChance(0.1F), OITICICA_TREE.withChance(0.172F)), BLACK_JUREMA_TREE))
+                            WHITE_IPE_TREE.withChance(0.1F), OITICICA_TREE.withChance(0.172F),
+                            BRAZILLIAN_TIGERWOOD_TREE.withChance(0.05F),
+                            BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.076F)), BLACK_JUREMA_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 2))));
 
@@ -1375,7 +1381,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> CERRADO_TREES = register("cerrado_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_SUCUPIRA_TREE.withChance(0.8F),
-                    BLACK_SUCUPIRA_TREE_WITH_PASSIONFRUIT.withChance(0.0004F), PINK_SILK_FLOSS_TREE_WITH_PASSIONVINE.withChance(0.00054F)),
+                    BLACK_SUCUPIRA_TREE_WITH_PASSIONFRUIT.withChance(0.0004F), BRAZILLIAN_TIGERWOOD_TREE.withChance(0.35F),
+                    BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.6F), PINK_SILK_FLOSS_TREE_WITH_PASSIONVINE.withChance(0.00054F)),
                     PINK_SILK_FLOSS_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
 

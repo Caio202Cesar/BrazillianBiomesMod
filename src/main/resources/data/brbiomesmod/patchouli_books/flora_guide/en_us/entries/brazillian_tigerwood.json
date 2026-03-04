@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Astronium fraxinifolium$(br)$(bold)Biomes:$(reset) Cocal Forest"
+      "text": "$(bold)Scientific Name:$(reset) Astronium fraxinifolium$(br)$(bold)Biomes:$(reset) Cocal Forest, Cerrado, Pantanal, Atlantic Forest, Caatinga"
     },
     {
       "type": "spotlight",
