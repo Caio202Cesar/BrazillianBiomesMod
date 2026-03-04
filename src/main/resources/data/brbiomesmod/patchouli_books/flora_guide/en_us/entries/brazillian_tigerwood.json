@@ -1,0 +1,18 @@
+{
+  "name": "Brazillian Tigerwood",
+  "icon": "brbiomesmod:brazillian_tigerwood_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Astronium fraxinifolium$(br)$(bold)Biomes:$(reset) Cocal Forest"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:brazillian_tigerwood_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

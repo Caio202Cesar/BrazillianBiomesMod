@@ -1,0 +1,18 @@
+{
+  "name": "Gonçalo-alves",
+  "icon": "brbiomesmod:brazillian_tigerwood_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Astronium fraxinifolium$(br)$(bold)Biomes:$(reset) Mata de cocais"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:brazillian_tigerwood_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

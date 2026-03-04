@@ -1,0 +1,18 @@
+{
+  "name": "Oiticica",
+  "icon": "brbiomesmod:oiticica_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Scientific Name:$(reset) Licania rigida$(br)$(bold)Biomes:$(reset) Mata de cocais"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:oiticica_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}

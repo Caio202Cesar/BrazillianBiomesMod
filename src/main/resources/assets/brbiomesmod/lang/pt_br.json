@@ -594,6 +594,7 @@
   "biome.brbiomesmod.atlantic_forest_hills": "Floresta da Serra do mar",
   "biome.brbiomesmod.pampas_coastal_fields": "Campos costeiros de pampas",
   "biome.brbiomesmod.pampas_hills": "Coxilhas",
+  "biome.brbiomesmod.cocal_forest": "Mata de cocais",
 
   "block.brbiomesmod.pink_ipe_leaves": "Folhas de ipê-rosa",
   "block.brbiomesmod.pink_ipe_fall_leaves": "Galhos de ipê-rosa",
@@ -672,6 +673,7 @@
   "item.brbiomesmod.rubber_leggings": "Calça de borracha",
   "item.brbiomesmod.rubber_helmet": "Capacete de borracha",
   "item.brbiomesmod.rubber_chestplate": "Peitoral de borracha",
+
   "block.brbiomesmod.pitanga_black_winter_flowering_leaves": "Folhas de pitangueira-negra em flor",
   "block.brbiomesmod.pitanga_winter_flowering_leaves": "Folhas de pitangueira em flor",
   "block.brbiomesmod.raw_rubber_block": "Bloco de borracha crua",
