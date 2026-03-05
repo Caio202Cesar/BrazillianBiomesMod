@@ -40,6 +40,15 @@ public class ModEntityGeneration {
                     3,  // min
                     10   // max
             ));
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.MANED_WOLF_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.MANED_WOLF_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
         }
 
         if (event.getName().equals(PantanalBiome.PANTANAL.get().getRegistryName())) {
@@ -168,6 +177,18 @@ public class ModEntityGeneration {
                     70, // weight
                     5,  // min
                     7   // max
+            ));
+        }
+
+        if (event.getName().equals(AraucariaPlateauBiome.ARAUCARIA_PLATEAU.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
             ));
         }
     }
