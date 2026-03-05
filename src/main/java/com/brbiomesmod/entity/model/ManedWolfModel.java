@@ -1,6 +1,12 @@
 package com.brbiomesmod.entity.model;
 
-public class ManedWolfModel extends EntityModel<Entity> {
+import com.brbiomesmod.entity.custom.GoldenLionTamarinEntity;
+import com.mojang.blaze3d.matrix.MatrixStack;
+import com.mojang.blaze3d.vertex.IVertexBuilder;
+import net.minecraft.client.renderer.entity.model.EntityModel;
+import net.minecraft.client.renderer.model.ModelRenderer;
+
+public class ManedWolfModel<T extends ManedWolfEntity> extends EntityModel<T> {
     private final ModelRenderer head;
     private final ModelRenderer body;
     private final ModelRenderer leg1;
@@ -48,8 +54,8 @@ public class ManedWolfModel extends EntityModel<Entity> {
     }
 
     @Override
-    public void setRotationAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch){
-        //previously the render function, render code was moved to a method below
+    public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+
     }
 
     @Override

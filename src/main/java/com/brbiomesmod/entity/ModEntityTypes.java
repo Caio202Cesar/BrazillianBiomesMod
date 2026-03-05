@@ -1,10 +1,7 @@
 package com.brbiomesmod.entity;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.entity.custom.BotoEntity;
-import com.brbiomesmod.entity.custom.GoldenLionTamarinEntity;
-import com.brbiomesmod.entity.custom.MapinguariEntity;
-import com.brbiomesmod.entity.custom.TocoToucanEntity;
+import com.brbiomesmod.entity.custom.*;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
 import net.minecraft.util.ResourceLocation;
@@ -42,6 +39,11 @@ public class ModEntityTypes {
                                     EntityClassification.CREATURE).size(0.5F, 0.7F)
                             .build(new ResourceLocation(BrazillianBiomesMod.MOD_ID, "golden_lion_tamarin").toString()));
 
+    public static final RegistryObject<EntityType<ManedWolfEntity>> MANED_WOLF_ENTITY =
+            ENTITY_TYPES.register("maned_wolf",
+                    () -> EntityType.Builder.create(ManedWolfEntity::new,
+                                    EntityClassification.CREATURE).size(0.5F, 0.7F)
+                            .build(new ResourceLocation(BrazillianBiomesMod.MOD_ID, "maned_wolf").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

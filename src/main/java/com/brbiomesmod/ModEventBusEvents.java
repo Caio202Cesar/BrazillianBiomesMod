@@ -1,10 +1,7 @@
 package com.brbiomesmod;
 
 import com.brbiomesmod.entity.ModEntityTypes;
-import com.brbiomesmod.entity.custom.BotoEntity;
-import com.brbiomesmod.entity.custom.GoldenLionTamarinEntity;
-import com.brbiomesmod.entity.custom.MapinguariEntity;
-import com.brbiomesmod.entity.custom.TocoToucanEntity;
+import com.brbiomesmod.entity.custom.*;
 import com.brbiomesmod.item.custom.ModSpawnEggItem;
 import net.minecraft.entity.EntityType;
 import net.minecraftforge.event.RegistryEvent;
@@ -20,6 +17,7 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.MAPINGUARI_ENTITY.get(), MapinguariEntity.setCustomAttributes().create());
         event.put(ModEntityTypes.BOTO_ENTITY.get(), BotoEntity.setCustomAttributes().create());
         event.put(ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get(), GoldenLionTamarinEntity.setCustomAttributes().create());
+        event.put(ModEntityTypes.MANED_WOLF_ENTITY.get(), ManedWolfEntity.setCustomAttributes().create());
 
     }
 
