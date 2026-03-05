@@ -74,13 +74,37 @@ public class ManedWolfModel<T extends ManedWolfEntity> extends EntityModel<T> {
 
     @Override
     public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
-        head.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-        body.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-        leg1.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-        leg2.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-        leg3.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-        leg4.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
-        tail.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+        if (this.isChild) {
+
+            matrixStack.push();
+
+            // Make baby smaller
+            matrixStack.scale(0.5F, 0.5F, 0.5F);
+
+            // Adjust height so it doesn't render inside ground
+            matrixStack.translate(0.0D, 1.5D, 0.0D);
+
+            // Render model parts
+            head.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            body.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            leg1.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            leg2.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            leg3.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            leg4.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            tail.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+
+            matrixStack.pop();
+
+        } else {
+
+            head.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            body.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            leg1.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            leg2.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            leg3.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            leg4.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            tail.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+        }
     }
 
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {

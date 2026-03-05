@@ -63,7 +63,6 @@ public class GoldenLionTamarinModel<T extends GoldenLionTamarinEntity> extends E
 
         bb_main = new ModelRenderer(this);
         bb_main.setRotationPoint(0.0F, 24.0F, 0.0F);
-        bb_main.setTextureOffset(0, 0).addBox(-2.0F, -8.0F, -3.0F, 3.0F, 3.0F, 5.0F, 0.0F, false);
         bb_main.setTextureOffset(10, 19).addBox(-3.0F, -8.0F, -4.0F, 5.0F, 5.0F, 7.0F, 0.0F, false);
     }
 
@@ -114,14 +113,24 @@ public class GoldenLionTamarinModel<T extends GoldenLionTamarinEntity> extends E
             matrixStack.translate(0.0D, 1.5D, 0.0D);
 
             // Render model parts
+            front_limb_right.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            front_limb_left.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            back_limb_left.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            back_limb_right.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            tail.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            head.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
             bb_main.render(matrixStack, buffer, packedLight, packedOverlay);
 
             matrixStack.pop();
 
         } else {
-
-        bb_main.render(matrixStack, buffer, packedLight, packedOverlay,
-                red, green, blue, alpha);
+            front_limb_right.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            front_limb_left.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            back_limb_left.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            back_limb_right.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            tail.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            head.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
+            bb_main.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
         }
     }
 
