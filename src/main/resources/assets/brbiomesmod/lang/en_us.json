@@ -680,12 +680,13 @@
   "entity.brbiomesmod.boto_dolphin": "Pink Boto",
   "entity.brbiomesmod.maned_wolf": "Maned Wolf",
 
-  "itemGroup.brbiomesmod.BrazilianBiomes:Food": "Brazilian Biomes: Food",
-  "itemGroup.brbiomesmod.BrazilianBiomes:Plants": "Brazilian Biomes: Plants",
-  "itemGroup.brbiomesmod.BrazilianBiomes:Woods": "Brazilian Biomes: Wood",
-  "itemGroup.brbiomesmod.BrazilianBiomes:Trees": "Brazilian Biomes: Trees",
-  "itemGroup.brbiomesmod.BrazilianBiomes:Miscellaneous": "Brazilian Biomes: Miscellaneous",
-  "itemGroup.brbiomesmod.BrazilianBiomes:Creatures": "Brazilian Biomes: Creatures",
+  "itemGroup.brbiomesmod.brazilian_biomes_food": "Brazilian Biomes: Food",
+  "itemGroup.brbiomesmod.brazilian_biomes_fruits_vegetables": "Brazilian Biomes: Fruits & Vegetables",
+  "itemGroup.brbiomesmod.brazilian_biomes_plants": "Brazilian Biomes: Plants",
+  "itemGroup.brbiomesmod.brazilian_biomes_woods": "Brazilian Biomes: Wood",
+  "itemGroup.brbiomesmod.brazilian_biomes_trees": "Brazilian Biomes: Trees",
+  "itemGroup.brbiomesmod.brazilian_biomes_miscellaneous": "Brazilian Biomes: Miscellaneous",
+  "itemGroup.brbiomesmod.brazilian_biomes_creatures": "Brazilian Biomes: Creatures",
 
   "tooltip.brbiomesmod.tapping_knife": "Left-click the sharinga log to strip it and extract the latex with a bucket by right-clicking the stripped log with it."
 }

@@ -662,13 +662,6 @@
   "block.brbiomesmod.humboldt_willow_branches": "Galhos de salgueiro-de-Humboldt",
   "block.brbiomesmod.humboldt_willow_sapling": "Muda de salgueiro-de-Humboldt",
 
-
-  "itemGroup.brbiomesmod.BrazilianBiomes:Food": "Brazilian Biomes: Food",
-  "itemGroup.brbiomesmod.BrazilianBiomes:Plants": "Brazilian Biomes: Plants",
-  "itemGroup.brbiomesmod.BrazilianBiomes:Woods": "Brazilian Biomes: Wood",
-  "itemGroup.brbiomesmod.BrazilianBiomes:Trees": "Brazilian Biomes: Trees",
-  "itemGroup.brbiomesmod.BrazilianBiomes:Miscellaneous": "Brazilian Biomes: Miscellaneous",
-
   "item.brbiomesmod.rubber_boots": "Botas de borracha",
   "item.brbiomesmod.rubber_leggings": "Calça de borracha",
   "item.brbiomesmod.rubber_helmet": "Capacete de borracha",
@@ -694,10 +687,5 @@
   "entity.brbiomesmod.toco_toucan": "Tucano-toco",
   "entity.brbiomesmod.golden_lion_tamarin": "Mico-leão-dourado",
   "entity.brbiomesmod.boto_dolphin": "Boto-cor-de-rosa",
-  "entity.brbiomesmod.maned_wolf": "Lobo-guará",
-
-  "itemGroup.brbiomesmod.BrazilianBiomes:Creatures": "Brazilian Biomes: Creatures"
-
-
-
+  "entity.brbiomesmod.maned_wolf": "Lobo-guará"
 }
