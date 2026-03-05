@@ -129,44 +129,10 @@ public class ManedWolfEntity extends AnimalEntity {
     public void tick() {
         super.tick();
 
-        if (this.isChild() && !this.isPassenger()) {
-
-            List<ManedWolfEntity> adults =
-                    this.world.getEntitiesWithinAABB(
-                            ManedWolfEntity.class,
-                            this.getBoundingBox().grow(4.0D),
-                            entity -> !entity.isChild()
-                    );
-
-            if (!adults.isEmpty()) {
-                ManedWolfEntity parent = adults.get(0);
-
-                if (this.getDistance(parent) < 2.0F) {
-                    this.startRiding(parent, true);
-                }
-            }
-        }
-
         LivingEntity target = this.getAttackTarget();
 
         if(target != null && this.getDistance(target) < 2.0F) {
             this.attackEntityAsMob(target);
-        }
-    }
-
-    @Override
-    public void updatePassenger(Entity passenger) {
-        super.updatePassenger(passenger);
-
-        if (passenger instanceof ManedWolfEntity) {
-
-            float yOffset = this.isChild() ? 0.3F : 0.6F;
-
-            passenger.setPosition(
-                    this.getPosX(),
-                    this.getPosY() + yOffset,
-                    this.getPosZ()
-            );
         }
     }
 

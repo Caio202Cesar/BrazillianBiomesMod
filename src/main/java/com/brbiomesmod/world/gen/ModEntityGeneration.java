@@ -46,8 +46,8 @@ public class ModEntityGeneration {
             ).add(new MobSpawnInfo.Spawners(
                     ModEntityTypes.MANED_WOLF_ENTITY.get(),
                     50, // weight
-                    3,  // min
-                    10   // max
+                    1,  // min
+                    3   // max
             ));
         }
 
