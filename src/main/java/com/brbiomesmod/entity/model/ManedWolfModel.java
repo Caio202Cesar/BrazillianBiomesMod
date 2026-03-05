@@ -6,6 +6,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.util.math.MathHelper;
 
 public class ManedWolfModel<T extends ManedWolfEntity> extends EntityModel<T> {
     private final ModelRenderer head;
@@ -56,6 +57,18 @@ public class ManedWolfModel<T extends ManedWolfEntity> extends EntityModel<T> {
 
     @Override
     public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+
+        head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
+        head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
+
+        leg1.rotateAngleX =
+                MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
+        leg2.rotateAngleX =
+                MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+        leg3.rotateAngleX =
+                MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.4F * limbSwingAmount;
+        leg4.rotateAngleX =
+                MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount;
 
     }
 
