@@ -20,6 +20,8 @@ import net.minecraft.world.server.ServerWorld;
 import javax.annotation.Nullable;
 import java.util.List;
 
+import static net.minecraft.entity.ai.attributes.AttributeModifierMap.createMutableAttribute;
+
 public class ManedWolfEntity extends AnimalEntity {
 
     public ManedWolfEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
@@ -28,10 +30,12 @@ public class ManedWolfEntity extends AnimalEntity {
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
         return MobEntity.func_233666_p_()
-                .createMutableAttribute(Attributes.MAX_HEALTH, 16.0D)
-                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.30D)
+                .createMutableAttribute(Attributes.MAX_HEALTH, 20.0D)
+                .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.35D)
                 .createMutableAttribute(Attributes.FOLLOW_RANGE, 24.0D)
-                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 3.0D);
+                .createMutableAttribute(Attributes.ATTACK_DAMAGE, 3.0D)
+                .createMutableAttribute(Attributes.ATTACK_KNOCKBACK, 0.5D);
+
     }
 
     @Override
@@ -52,8 +56,9 @@ public class ManedWolfEntity extends AnimalEntity {
                         10.0F,
                         1.3D,
                         1.5D,
-                        (player) -> !this.isStarving()));
+                        (player) -> !this.isStarving())); //It will not attack player unless its starving or is attacked.
         this.goalSelector.addGoal(4, new ManedWolfStalkGoal(this));
+        this.goalSelector.addGoal(8, new MeleeAttackGoal(this, 1.25D, true));
 
         // TARGETS
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
