@@ -23,80 +23,48 @@ public class GoldenLionTamarinModel<T extends GoldenLionTamarinEntity> extends E
         textureWidth = 32;
         textureHeight = 32;
 
-        // =========================
-        // BODY ROOT
-        // =========================
-        bb_main = new ModelRenderer(this);
-        bb_main.setRotationPoint(0.0F, 24.0F, 0.0F);
-        bb_main.setTextureOffset(0, 0)
-                .addBox(-2.0F, -8.0F, -3.0F, 3.0F, 3.0F, 5.0F, 0.0F, false);
-
-        // =========================
-        // HEAD
-        // =========================
-        head = new ModelRenderer(this);
-        head.setRotationPoint(-0.5F, -5.0F, -3.0F);
-        bb_main.addChild(head);
-
-        head.setTextureOffset(0, 8)
-                .addBox(-2.5F, -4.0F, -3.0F, 5.0F, 4.0F, 3.0F, 0.0F, false);
-        head.setTextureOffset(0, 1)
-                .addBox(-1.5F, -2.0F, -5.0F, 3.0F, 2.0F, 1.0F, 0.0F, false);
-        head.setTextureOffset(16, 0)
-                .addBox(-1.5F, -3.0F, -4.0F, 3.0F, 3.0F, 1.0F, 0.0F, false);
-
-        // =========================
-        // FRONT LIMBS
-        // =========================
         front_limb_right = new ModelRenderer(this);
-        front_limb_right.setRotationPoint(1.0F, -5.0F, -2.0F);
-        bb_main.addChild(front_limb_right);
-        front_limb_right.setTextureOffset(20, 4)
-                .addBox(0.0F, 0.0F, -1.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
+        front_limb_right.setRotationPoint(0.0F, 24.0F, 0.0F);
+        front_limb_right.setTextureOffset(20, 4).addBox(0.0F, -5.0F, -3.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
 
         front_limb_left = new ModelRenderer(this);
-        front_limb_left.setRotationPoint(-2.0F, -5.0F, -2.0F);
-        bb_main.addChild(front_limb_left);
-        front_limb_left.setTextureOffset(16, 19)
-                .addBox(0.0F, 0.0F, -1.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
-
-        // =========================
-        // BACK LIMBS
-        // =========================
-        back_limb_right = new ModelRenderer(this);
-        back_limb_right.setRotationPoint(1.0F, -5.0F, 1.0F);
-        bb_main.addChild(back_limb_right);
-        back_limb_right.setTextureOffset(16, 4)
-                .addBox(0.0F, 0.0F, 0.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
+        front_limb_left.setRotationPoint(0.0F, 24.0F, 0.0F);
+        front_limb_left.setTextureOffset(16, 19).addBox(-2.0F, -5.0F, -3.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
 
         back_limb_left = new ModelRenderer(this);
-        back_limb_left.setRotationPoint(-2.0F, -5.0F, 1.0F);
-        bb_main.addChild(back_limb_left);
-        back_limb_left.setTextureOffset(12, 19)
-                .addBox(0.0F, 0.0F, 0.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
+        back_limb_left.setRotationPoint(0.0F, 24.0F, 0.0F);
+        back_limb_left.setTextureOffset(12, 19).addBox(-2.0F, -5.0F, 1.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
 
-        // =========================
-        // TAIL
-        // =========================
+        back_limb_right = new ModelRenderer(this);
+        back_limb_right.setRotationPoint(0.0F, 24.0F, 0.0F);
+        back_limb_right.setTextureOffset(16, 4).addBox(0.0F, -5.0F, 1.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
+
         tail = new ModelRenderer(this);
-        tail.setRotationPoint(-0.5F, -6.0F, 2.0F);
-        bb_main.addChild(tail);
-        tail.setTextureOffset(12, 15)
-                .addBox(-0.5F, -1.0F, 0.0F, 1.0F, 1.0F, 3.0F, 0.0F, false);
+        tail.setRotationPoint(0.0F, 24.0F, 0.0F);
+        tail.setTextureOffset(12, 15).addBox(-1.0F, -7.0F, 2.0F, 1.0F, 1.0F, 3.0F, 0.0F, false);
 
         tail_middle_r1 = new ModelRenderer(this);
-        tail_middle_r1.setRotationPoint(0.0F, 0.0F, 3.0F);
+        tail_middle_r1.setRotationPoint(0.0F, -5.0F, 6.0F);
         tail.addChild(tail_middle_r1);
         setRotationAngle(tail_middle_r1, 0.48F, 0.0F, 0.0F);
-        tail_middle_r1.setTextureOffset(16, 10)
-                .addBox(-0.5F, -1.0F, 0.0F, 1.0F, 2.0F, 1.0F, 0.0F, false);
+        tail_middle_r1.setTextureOffset(16, 10).addBox(-1.0F, -2.0F, -1.0F, 1.0F, 2.0F, 1.0F, 0.0F, false);
 
         tail_top_r1 = new ModelRenderer(this);
-        tail_top_r1.setRotationPoint(0.0F, 1.0F, 1.0F);
-        tail_middle_r1.addChild(tail_top_r1);
-        setRotationAngle(tail_top_r1, -1.0F, 0.0F, 0.0F);
-        tail_top_r1.setTextureOffset(0, 15)
-                .addBox(-0.5F, -1.0F, 0.0F, 1.0F, 1.0F, 5.0F, 0.0F, false);
+        tail_top_r1.setRotationPoint(0.0F, -10.0F, 4.0F);
+        tail.addChild(tail_top_r1);
+        setRotationAngle(tail_top_r1, -1.5708F, 0.0F, 0.0F);
+        tail_top_r1.setTextureOffset(0, 15).addBox(-1.0F, -2.0F, 5.0F, 1.0F, 1.0F, 5.0F, 0.0F, false);
+
+        head = new ModelRenderer(this);
+        head.setRotationPoint(0.0F, 24.0F, 0.0F);
+        head.setTextureOffset(0, 8).addBox(-3.0F, -9.0F, -6.0F, 5.0F, 4.0F, 3.0F, 0.0F, false);
+        head.setTextureOffset(0, 1).addBox(-2.0F, -7.0F, -8.0F, 3.0F, 2.0F, 1.0F, 0.0F, false);
+        head.setTextureOffset(16, 0).addBox(-2.0F, -8.0F, -7.0F, 3.0F, 3.0F, 1.0F, 0.0F, false);
+
+        bb_main = new ModelRenderer(this);
+        bb_main.setRotationPoint(0.0F, 24.0F, 0.0F);
+        bb_main.setTextureOffset(0, 0).addBox(-2.0F, -8.0F, -3.0F, 3.0F, 3.0F, 5.0F, 0.0F, false);
+        bb_main.setTextureOffset(10, 19).addBox(-3.0F, -8.0F, -4.0F, 5.0F, 5.0F, 7.0F, 0.0F, false);
     }
 
     // =========================
