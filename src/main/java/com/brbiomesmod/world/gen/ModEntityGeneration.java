@@ -76,6 +76,15 @@ public class ModEntityGeneration {
                     3,  // min
                     10   // max
             ));
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get(),
+                    45, // weight
+                    5,  // min
+                    15   // max
+            ));
         }
 
         if (event.getName().equals(AtlanticForestHillsBiome.ATLANTIC_FOREST_HILLS.get().getRegistryName())) {
@@ -93,9 +102,9 @@ public class ModEntityGeneration {
                     ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get().getClassification()
             ).add(new MobSpawnInfo.Spawners(
                     ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get(),
-                    50, // weight
-                    3,  // min
-                    10   // max
+                    45, // weight
+                    5,  // min
+                    15   // max
             ));
         }
 
@@ -114,9 +123,9 @@ public class ModEntityGeneration {
                     ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get().getClassification()
             ).add(new MobSpawnInfo.Spawners(
                     ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get(),
-                    50, // weight
-                    3,  // min
-                    10   // max
+                    45, // weight
+                    5,  // min
+                    15   // max
             ));
         }
 
@@ -130,6 +139,15 @@ public class ModEntityGeneration {
                     3,  // min
                     10   // max
             ));
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.BOTO_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.BOTO_ENTITY.get(),
+                    70, // weight
+                    3,  // min
+                    7   // max
+            ));
         }
 
         if (event.getName().equals(AmazonVarzeaForestBiome.AMAZON_VARZEA_FOREST.get().getRegistryName())) {
@@ -141,6 +159,15 @@ public class ModEntityGeneration {
                     50, // weight
                     3,  // min
                     10   // max
+            ));
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.BOTO_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.BOTO_ENTITY.get(),
+                    70, // weight
+                    5,  // min
+                    7   // max
             ));
         }
     }

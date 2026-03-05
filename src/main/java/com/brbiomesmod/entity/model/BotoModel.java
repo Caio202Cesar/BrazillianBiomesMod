@@ -80,8 +80,7 @@ public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
         float speed = 0.2F;
         float degree = 0.5F;
 
-        tail.rotateAngleY = MathHelper.cos(ageInTicks * speed) * degree;
-        tail_fin.rotateAngleY = MathHelper.cos(ageInTicks * speed) * degree * 1.5F;
+        tail.rotateAngleY = MathHelper.cos(ageInTicks * speed) * degree  * 1.5F;
     }
 
     @Override
