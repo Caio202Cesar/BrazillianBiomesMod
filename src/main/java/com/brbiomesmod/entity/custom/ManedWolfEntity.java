@@ -13,6 +13,7 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
@@ -36,27 +37,53 @@ public class ManedWolfEntity extends AnimalEntity {
     @Override
     protected void registerGoals() {
 
-            this.goalSelector.addGoal(0, new SwimGoal(this));
-            this.goalSelector.addGoal(1, new PanicGoal(this, 1.4D));
-            this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
-            this.goalSelector.addGoal(3, new TemptGoal(this, 1.1D,
-                    Ingredient.fromItems(ModItems.WOLF_APPLE.get()), false));
-            this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.1D));
-            this.goalSelector.addGoal(5, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
-            this.goalSelector.addGoal(6, new LookAtGoal(this, PlayerEntity.class, 8.0F));
-            this.goalSelector.addGoal(7, new LookRandomlyGoal(this));
-            this.goalSelector.addGoal(8, new MeleeAttackGoal(this, 1.25D, true));
+        this.goalSelector.addGoal(0, new SwimGoal(this));
+        this.goalSelector.addGoal(1, new PanicGoal(this, 1.4D));
+        this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
+        this.goalSelector.addGoal(3, new TemptGoal(this, 1.1D,
+                Ingredient.fromItems(ModItems.WOLF_APPLE.get()), false));
+        this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.1D));
+        this.goalSelector.addGoal(5, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
+        this.goalSelector.addGoal(6, new LookAtGoal(this, PlayerEntity.class, 8.0F));
+        this.goalSelector.addGoal(7, new LookRandomlyGoal(this));
+        this.goalSelector.addGoal(2,
+                new AvoidEntityGoal<>(this,
+                        PlayerEntity.class,
+                        10.0F,
+                        1.3D,
+                        1.5D,
+                        (player) -> !this.isStarving()));
+        this.goalSelector.addGoal(4, new ManedWolfStalkGoal(this));
 
+        // TARGETS
+        this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
+        this.targetSelector.addGoal(2,
+                new NearestAttackableTargetGoal<>(this, ChickenEntity.class, true));
+        this.targetSelector.addGoal(3,
+                new NearestAttackableTargetGoal<>(this, RabbitEntity.class, true));
+    }
 
-            // TARGETS
-            this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
-            this.targetSelector.addGoal(2,
-                    new NearestAttackableTargetGoal<>(this, ChickenEntity.class, true));
-            this.targetSelector.addGoal(3,
-                    new NearestAttackableTargetGoal<>(this, RabbitEntity.class, true));
-            this.targetSelector.addGoal(4,
-                    new NearestAttackableTargetGoal<>(this, FoxEntity.class, false));
+    private int hunger = 0;
+    private static final int STARVING_TIME = 24000; // 1 Minecraft day
+
+    @Override
+    public void livingTick() {
+        super.livingTick();
+
+        hunger++;
+
+        if(hunger > STARVING_TIME) {
+            hunger = STARVING_TIME;
         }
+    }
+
+    public boolean isStarving() {
+        return hunger >= STARVING_TIME;
+    }
+
+    public void eatFood() {
+        hunger = 0;
+    }
 
     @Override
     public boolean attackEntityFrom(DamageSource source, float amount) {
@@ -106,6 +133,12 @@ public class ManedWolfEntity extends AnimalEntity {
                 }
             }
         }
+
+        LivingEntity target = this.getAttackTarget();
+
+        if(target != null && this.getDistance(target) < 2.0F) {
+            this.attackEntityAsMob(target);
+        }
     }
 
     @Override
@@ -154,4 +187,60 @@ public class ManedWolfEntity extends AnimalEntity {
     protected SoundEvent getDeathSound() {
         return SoundEvents.ENTITY_WOLF_DEATH;
     }
+
+    public class ManedWolfStalkGoal extends Goal {
+
+        private final ManedWolfEntity wolf;
+        private LivingEntity target;
+        private int stalkTime;
+
+        public ManedWolfStalkGoal(ManedWolfEntity wolf) {
+            this.wolf = wolf;
+        }
+
+        @Override
+        public boolean shouldExecute() {
+            target = wolf.getAttackTarget();
+
+            if(target == null) return false;
+            if(!target.isAlive()) return false;
+
+            return wolf.getDistance(target) < 12;
+        }
+
+        @Override
+        public void startExecuting() {
+            stalkTime = 0;
+        }
+
+        @Override
+        public void tick() {
+
+            wolf.getNavigator().tryMoveToEntityLiving(target, 0.6D);
+
+            stalkTime++;
+
+            // After stalking for a while → jump attack
+            if(stalkTime > 40) {
+                wolf.jumpAttack(target);
+            }
+        }
+    }
+
+    public void jumpAttack(LivingEntity target) {
+
+        double dx = target.getPosX() - this.getPosX();
+        double dz = target.getPosZ() - this.getPosZ();
+
+        double distance = MathHelper.sqrt(dx * dx + dz * dz);
+
+        this.setMotion(
+                dx / distance * 0.6D,
+                0.6D,
+                dz / distance * 0.6D
+        );
+
+        this.velocityChanged = true;
+    }
+
 }
