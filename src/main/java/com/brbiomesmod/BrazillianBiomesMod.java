@@ -6,10 +6,7 @@ import com.brbiomesmod.block.PlantsGroup;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.block.WoodGroup;
 import com.brbiomesmod.entity.ModEntityTypes;
-import com.brbiomesmod.entity.render.BotoRenderer;
-import com.brbiomesmod.entity.render.GoldenLionTamarinRenderer;
-import com.brbiomesmod.entity.render.MapinguariRenderer;
-import com.brbiomesmod.entity.render.TocoToucanRenderer;
+import com.brbiomesmod.entity.render.*;
 import com.brbiomesmod.events.ModEntities;
 import com.brbiomesmod.events.ModParticles;
 import com.brbiomesmod.features.FoliagePlacers.ModFoliagePlacer;
@@ -110,6 +107,7 @@ public class BrazillianBiomesMod {
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.MAPINGUARI_ENTITY.get(), MapinguariRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.BOTO_ENTITY.get(), BotoRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get(), GoldenLionTamarinRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.MANED_WOLF_ENTITY.get(), ManedWolfRenderer::new);
 
     }
 
