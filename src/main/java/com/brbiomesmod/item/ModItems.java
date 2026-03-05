@@ -325,19 +325,23 @@ public class ModItems {
     //Mobs
     public static final RegistryObject<ModSpawnEggItem> TOCO_TOUCAN_SPAWN_EGG = ITEMS.register("toco_toucan_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.TOCO_TOUCAN_ENTITY, 0x191919, 0xf59805,
-                    new Item.Properties().group(ItemGroup.MISC)));
+                    new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
 
     public static final RegistryObject<ModSpawnEggItem> MAPINGUARI_SPAWN_EGG = ITEMS.register("mapinguari_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.MAPINGUARI_ENTITY, 0x9e8777, 0x8A7F78,
-                    new Item.Properties().group(ItemGroup.MISC)));
+                    new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
 
     public static final RegistryObject<ModSpawnEggItem> BOTO_SPAWN_EGG = ITEMS.register("boto_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.BOTO_ENTITY, 0xed71a8, 0xf2b8d2,
-                    new Item.Properties().group(ItemGroup.MISC)));
+                    new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
 
     public static final RegistryObject<ModSpawnEggItem> GOLDEN_LION_TAMARIN_SPAWN_EGG = ITEMS.register("golden_tamarin_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY, 0xcc5500, 0x4c3100,
-                    new Item.Properties().group(ItemGroup.MISC)));
+                    new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
+
+    public static final RegistryObject<ModSpawnEggItem> MANED_WOLF_SPAWN_EGG = ITEMS.register("maned_wolf_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.MANED_WOLF_ENTITY, 0x4c3100, 0x191919,
+                    new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
 
 
     public static RegistryObject<Item> ICE_CREAM_CONE;

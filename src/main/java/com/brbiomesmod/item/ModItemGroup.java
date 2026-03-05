@@ -55,4 +55,12 @@ public class ModItemGroup {
         {
             return new ItemStack(ModItems.BRAZILNUT_SHELL.get());
         }};
+
+    public static final ItemGroup CREATURES_GROUP = new ItemGroup("BrazilianBiomes:Creatures")
+    {
+        @Override
+        public ItemStack createIcon()
+        {
+            return new ItemStack(ModItems.MAPINGUARI_SPAWN_EGG.get());
+        }};
 }

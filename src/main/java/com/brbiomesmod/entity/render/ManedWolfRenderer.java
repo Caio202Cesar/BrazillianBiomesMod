@@ -15,7 +15,7 @@ public class ManedWolfRenderer extends MobRenderer<ManedWolfEntity, ManedWolfMod
             new ResourceLocation(BrazillianBiomesMod.MOD_ID, "textures/entity/maned_wolf.png");
 
     public ManedWolfRenderer(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new ManedWolfModel<>(), 0.7F); // 1F is too large for dolphin
+        super(renderManagerIn, new ManedWolfModel<>(), 0.6F); //
     }
 
     @Override
