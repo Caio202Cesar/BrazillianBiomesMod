@@ -6,6 +6,7 @@ import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.passive.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -58,7 +59,14 @@ public class ManedWolfEntity extends AnimalEntity {
                         1.5D,
                         (player) -> !this.isStarving())); //It will not attack player unless its starving or is attacked.
         this.goalSelector.addGoal(4, new ManedWolfStalkGoal(this));
+        this.goalSelector.addGoal(4, new PounceAttackGoal(this, 1.3D, true));
         this.goalSelector.addGoal(8, new MeleeAttackGoal(this, 1.25D, true));
+
+        this.goalSelector.addGoal(5, new EatWolfAppleGoal(this));
+
+        this.targetSelector.addGoal(1,
+                (new HurtByTargetGoal(this))
+                        .setCallsForHelp(ManedWolfEntity.class));
 
         // TARGETS
         this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
@@ -248,4 +256,64 @@ public class ManedWolfEntity extends AnimalEntity {
         this.velocityChanged = true;
     }
 
+    public class PounceAttackGoal extends MeleeAttackGoal {
+
+        public PounceAttackGoal(CreatureEntity entity, double speed, boolean memory) {
+            super(entity, speed, memory);
+        }
+
+        @Override
+        protected void checkAndPerformAttack(LivingEntity mob, double distSq) {
+
+            if (distSq < 6.0D && mob.isOnGround()) {
+
+                mob.setMotion(
+                        mob.getMotion().add(0, 0.6D, 0)
+                );
+
+                mob.attackEntityAsMob(mob);
+            }
+        }
+    }
+
+    public class EatWolfAppleGoal extends Goal {
+
+        private final ManedWolfEntity wolf;
+
+        public EatWolfAppleGoal(ManedWolfEntity wolf) {
+            this.wolf = wolf;
+        }
+
+        public boolean shouldExecute() {
+
+            List<ItemEntity> items = wolf.world.getEntitiesWithinAABB(
+                    ItemEntity.class,
+                    wolf.getBoundingBox().grow(6),
+                    item -> item.getItem().getItem() == ModItems.WOLF_APPLE.get()
+            );
+
+            return !items.isEmpty();
+        }
+
+        public void tick() {
+
+            List<ItemEntity> items = wolf.world.getEntitiesWithinAABB(
+                    ItemEntity.class,
+                    wolf.getBoundingBox().grow(6)
+            );
+
+            for (ItemEntity item : items) {
+
+                if (item.getItem().getItem() == ModItems.WOLF_APPLE.get()) {
+
+                    wolf.getNavigator().tryMoveToEntityLiving(item, 1.0D);
+
+                    if (wolf.getDistance(item) < 2) {
+                        wolf.eatFood();
+                        item.remove();
+                    }
+                }
+            }
+        }
+    }
 }
