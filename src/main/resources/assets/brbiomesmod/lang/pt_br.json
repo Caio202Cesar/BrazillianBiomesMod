@@ -687,5 +687,19 @@
   "entity.brbiomesmod.toco_toucan": "Tucano-toco",
   "entity.brbiomesmod.golden_lion_tamarin": "Mico-leão-dourado",
   "entity.brbiomesmod.boto_dolphin": "Boto-cor-de-rosa",
-  "entity.brbiomesmod.maned_wolf": "Lobo-guará"
+  "entity.brbiomesmod.maned_wolf": "Lobo-guará",
+
+  "item.brbiomesmod.toco_toucan_spawn_egg": "Ovo gerador de tucano-toco",
+  "item.brbiomesmod.mapinguari_spawn_egg": "Ovo gerador de mapinguari",
+  "item.brbiomesmod.boto_spawn_egg": "Ovo gerador de boto-cor-de-rosa",
+  "item.brbiomesmod.golden_tamarin_spawn_egg": "Ovo gerador de mico-leão-dourado",
+  "item.brbiomesmod.maned_wolf_spawn_egg": "Ovo gerador de lobo-guará",
+
+  "itemGroup.brazilian_biomes_food": "Brazilian Biomes: Comida",
+  "itemGroup.brazilian_biomes_fruits_vegetables": "Brazilian Biomes: Frutas e Vegetais",
+  "itemGroup.brazilian_biomes_plants": "Brazilian Biomes: Plantas",
+  "itemGroup.brazilian_biomes_woods": "Brazilian Biomes: Madeira",
+  "itemGroup.brazilian_biomes_trees": "Brazilian Biomes: Árvores",
+  "itemGroup.brazilian_biomes_miscellaneous": "Brazilian Biomes: Diversos",
+  "itemGroup.brazilian_biomes_creatures": "Brazilian Biomes: Criaturas"
 }
