@@ -1,100 +1,79 @@
 package com.brbiomesmod.entity.model;
 
 import com.brbiomesmod.entity.custom.BotoEntity;
+import com.google.common.collect.ImmutableList;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
+import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
+import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 
-public class BotoModel<T extends BotoEntity> extends EntityModel<T> {
-
-    private final ModelRenderer head;
-    private final ModelRenderer snout;
+public class BotoModel<T extends BotoEntity> extends SegmentedModel<T> {
     private final ModelRenderer body;
     private final ModelRenderer tail;
-    private final ModelRenderer right_fin;
-    private final ModelRenderer left_fin;
-    private final ModelRenderer back_fin;
-    private final ModelRenderer tail_fin;
+    private final ModelRenderer tailFin;
 
     public BotoModel() {
-        textureWidth = 64;
-        textureHeight = 64;
-
-        // BODY
-        body = new ModelRenderer(this);
-        body.setRotationPoint(0.0F, 24.0F, -3.0F);
-        body.setTextureOffset(0, 13)
-                .addBox(-1.0F, -2.0F, -10.0F, 2.0F, 2.0F, 4.0F);
-        body.setTextureOffset(22, 0)
-                .addBox(-4.0F, -7.0F, 0.0F, 8.0F, 7.0F, 13.0F);
-
-        // HEAD (aligned with body top)
-        head = new ModelRenderer(this);
-        head.setRotationPoint(0.0F, 24.0F, -9.0F);
-        head.setTextureOffset(0, 0)
-                .addBox(-4.0F, -7.0F, 0.0F, 8.0F, 7.0F, 6.0F);
-
-        // SNOUT (properly attached visually)
-        snout = new ModelRenderer(this);
-        snout.setRotationPoint(0.0F, 24.0F, -15.0F);
-        snout.setTextureOffset(0, 0)
-                .addBox(-1.5F, -5.0F, 0.0F, 3.0F, 3.0F, 6.0F);
-
-        // TAIL
-        tail = new ModelRenderer(this);
-        tail.setRotationPoint(0.0F, 24.0F, 8.0F);
-        tail.setTextureOffset(0, 19)
-                .addBox(-2.0F, -5.5F, 0.0F, 4.0F, 5.0F, 11.0F);
-
-        // RIGHT FIN
-        right_fin = new ModelRenderer(this);
-        right_fin.setRotationPoint(-4.5F, 24.0F, -2.0F);
-        right_fin.setTextureOffset(48, 20)
-                .addBox(-0.5F, -4.0F, 0.0F, 1.0F, 4.0F, 7.0F);
-
-        // LEFT FIN
-        left_fin = new ModelRenderer(this);
-        left_fin.setRotationPoint(4.5F, 24.0F, -2.0F);
-        left_fin.setTextureOffset(48, 20)
-                .addBox(-0.5F, -4.0F, 0.0F, 1.0F, 4.0F, 7.0F);
-
-        // BACK FIN
-        back_fin = new ModelRenderer(this);
-        back_fin.setRotationPoint(0.0F, 24.0F, -5.0F);
-        back_fin.setTextureOffset(51, 0)
-                .addBox(-0.5F, -11.0F, 8.0F, 1.0F, 4.0F, 5.0F);
-
-        // TAIL FIN
-        tail_fin = new ModelRenderer(this);
-        tail_fin.setRotationPoint(0.0F, 24.0F, 19.0F);
-        tail_fin.setTextureOffset(19, 20)
-                .addBox(-5.0F, -3.5F, 0.0F, 10.0F, 1.0F, 6.0F);
+        this.textureWidth = 64;
+        this.textureHeight = 64;
+        float f = 18.0F;
+        float f1 = -8.0F;
+        this.body = new ModelRenderer(this, 22, 0);
+        this.body.addBox(-4.0F, -7.0F, 0.0F, 8.0F, 7.0F, 13.0F);
+        this.body.setRotationPoint(0.0F, 22.0F, -5.0F);
+        ModelRenderer modelrenderer = new ModelRenderer(this, 51, 0);
+        modelrenderer.addBox(-0.5F, 0.0F, 8.0F, 1.0F, 4.0F, 5.0F);
+        modelrenderer.rotateAngleX = ((float)Math.PI / 3F);
+        this.body.addChild(modelrenderer);
+        ModelRenderer modelrenderer1 = new ModelRenderer(this, 48, 20);
+        modelrenderer1.mirror = true;
+        modelrenderer1.addBox(-0.5F, -4.0F, 0.0F, 1.0F, 4.0F, 7.0F);
+        modelrenderer1.setRotationPoint(2.0F, -2.0F, 4.0F);
+        modelrenderer1.rotateAngleX = ((float)Math.PI / 3F);
+        modelrenderer1.rotateAngleZ = 2.0943952F;
+        this.body.addChild(modelrenderer1);
+        ModelRenderer modelrenderer2 = new ModelRenderer(this, 48, 20);
+        modelrenderer2.addBox(-0.5F, -4.0F, 0.0F, 1.0F, 4.0F, 7.0F);
+        modelrenderer2.setRotationPoint(-2.0F, -2.0F, 4.0F);
+        modelrenderer2.rotateAngleX = ((float)Math.PI / 3F);
+        modelrenderer2.rotateAngleZ = -2.0943952F;
+        this.body.addChild(modelrenderer2);
+        this.tail = new ModelRenderer(this, 0, 19);
+        this.tail.addBox(-2.0F, -2.5F, 0.0F, 4.0F, 5.0F, 11.0F);
+        this.tail.setRotationPoint(0.0F, -2.5F, 11.0F);
+        this.tail.rotateAngleX = -0.10471976F;
+        this.body.addChild(this.tail);
+        this.tailFin = new ModelRenderer(this, 19, 20);
+        this.tailFin.addBox(-5.0F, -0.5F, 0.0F, 10.0F, 1.0F, 6.0F);
+        this.tailFin.setRotationPoint(0.0F, 0.0F, 9.0F);
+        this.tailFin.rotateAngleX = 0.0F;
+        this.tail.addChild(this.tailFin);
+        ModelRenderer modelrenderer3 = new ModelRenderer(this, 0, 0);
+        modelrenderer3.addBox(-4.0F, -3.0F, -3.0F, 8.0F, 7.0F, 6.0F);
+        modelrenderer3.setRotationPoint(0.0F, -4.0F, -3.0F);
+        ModelRenderer modelrenderer4 = new ModelRenderer(this, 0, 13);
+        modelrenderer4.addBox(-1.0F, 2.0F, -7.0F, 2.0F, 2.0F, 4.0F);
+        modelrenderer3.addChild(modelrenderer4);
+        this.body.addChild(modelrenderer3);
     }
 
-    @Override
-    public void setRotationAngles(T entity, float limbSwing, float limbSwingAmount,
-                                  float ageInTicks, float netHeadYaw, float headPitch) {
-
-        float speed = 0.2F;
-        float degree = 0.5F;
-
-        tail.rotateAngleY = MathHelper.cos(ageInTicks * speed) * degree  * 1.5F;
+    public Iterable<ModelRenderer> getParts() {
+        return ImmutableList.of(this.body);
     }
 
-    @Override
-    public void render(MatrixStack matrixStack, IVertexBuilder buffer,
-                       int packedLight, int packedOverlay,
-                       float red, float green, float blue, float alpha) {
+    /**
+     * Sets this entity's model rotation angles
+     */
+    public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        this.body.rotateAngleX = headPitch * ((float)Math.PI / 180F);
+        this.body.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
+        if (Entity.horizontalMag(entityIn.getMotion()) > 1.0E-7D) {
+            this.body.rotateAngleX += -0.05F + -0.05F * MathHelper.cos(ageInTicks * 0.3F);
+            this.tail.rotateAngleX = -0.1F * MathHelper.cos(ageInTicks * 0.3F);
+            this.tailFin.rotateAngleX = -0.2F * MathHelper.cos(ageInTicks * 0.3F);
+        }
 
-        head.render(matrixStack, buffer, packedLight, packedOverlay);
-        snout.render(matrixStack, buffer, packedLight, packedOverlay);
-        body.render(matrixStack, buffer, packedLight, packedOverlay);
-        tail.render(matrixStack, buffer, packedLight, packedOverlay);
-        right_fin.render(matrixStack, buffer, packedLight, packedOverlay);
-        left_fin.render(matrixStack, buffer, packedLight, packedOverlay);
-        back_fin.render(matrixStack, buffer, packedLight, packedOverlay);
-        tail_fin.render(matrixStack, buffer, packedLight, packedOverlay);
     }
 }
