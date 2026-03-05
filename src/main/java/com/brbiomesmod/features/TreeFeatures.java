@@ -46,7 +46,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PALMITO_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.ACAI_LEAVES),
                     new AcaiFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(10, 8, 0),
+                    new StraightTrunkPlacer(12, 8, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JUSSARA_PALM = register("jussara_palm",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PALMITO_LOG),
@@ -874,7 +874,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new SimpleBlockStateProvider(TreeFeatures.States.BURITI_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(15, 2, 4),
-                    new TwoLayerFeature(1, 0, 1))).build()));
+                    new TwoLayerFeature(1, 0, 1))).setMaxWaterDepth(1).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BURITI_PALM_WITH_VINE = register("buriti_tree_with_vine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BURITI_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.BURITI_LEAVES),

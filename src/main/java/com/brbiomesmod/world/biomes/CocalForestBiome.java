@@ -27,7 +27,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> COCAL_FOREST_BIOME = BIOMES.register("cocal_forest",
-        () -> makeCocalForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.126f));
+        () -> makeCocalForestBiome(() -> ConfiguredSurfaceBuilders.SWAMP, 0.1f, 0.126f));
 
 
 private static Biome makeCocalForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
