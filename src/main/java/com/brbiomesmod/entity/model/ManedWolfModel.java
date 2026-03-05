@@ -1,6 +1,7 @@
 package com.brbiomesmod.entity.model;
 
 import com.brbiomesmod.entity.custom.GoldenLionTamarinEntity;
+import com.brbiomesmod.entity.custom.ManedWolfEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;

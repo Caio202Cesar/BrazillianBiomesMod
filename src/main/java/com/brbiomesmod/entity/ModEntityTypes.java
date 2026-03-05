@@ -42,7 +42,7 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<ManedWolfEntity>> MANED_WOLF_ENTITY =
             ENTITY_TYPES.register("maned_wolf",
                     () -> EntityType.Builder.create(ManedWolfEntity::new,
-                                    EntityClassification.CREATURE).size(0.5F, 0.7F)
+                                    EntityClassification.CREATURE).size(0.6F, 0.9F)
                             .build(new ResourceLocation(BrazillianBiomesMod.MOD_ID, "maned_wolf").toString()));
 
     public static void register(IEventBus eventBus) {
