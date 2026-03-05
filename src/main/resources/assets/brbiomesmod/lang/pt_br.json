@@ -693,7 +693,10 @@
   "entity.brbiomesmod.mapinguari": "Mapinguari",
   "entity.brbiomesmod.toco_toucan": "Tucano-toco",
   "entity.brbiomesmod.golden_lion_tamarin": "Mico-leão-dourado",
-  "entity.brbiomesmod.boto_dolphin": "Boto-cor-de-rosa"
+  "entity.brbiomesmod.boto_dolphin": "Boto-cor-de-rosa",
+  "entity.brbiomesmod.maned_wolf": "Lobo-guará",
+
+  "itemGroup.brbiomesmod.BrazilianBiomes:Creatures": "Brazilian Biomes: Creatures"
 
 
 
