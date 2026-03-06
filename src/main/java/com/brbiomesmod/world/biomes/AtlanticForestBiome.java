@@ -57,7 +57,6 @@ private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBui
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withForestTrumpetTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withDutchmanVineTrees(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withPitangaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAtlanticForestUpperTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAtlanticForestFlowers(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAngelTrumpetBushes(biomegenerationsettings$builder);
