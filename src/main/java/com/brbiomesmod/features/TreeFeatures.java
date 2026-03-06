@@ -1202,11 +1202,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     BRAZILLIAN_ROSEWOOD_WITH_DUTCHMAN_VINE)).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.5F, 3))));
 
-    public static final ConfiguredFeature<?, ?> JABUTICABA_TREES = register("jabuticaba_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JABUTICABA_TREE.withChance(0.4F),
-                    JABUTICABA_FANCY_TREE.withChance(0.6F)), JABUTICABA_BIG_TREE)).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(3, 0.0F, 0))));
-
     //Amazon rainforest vegetation
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YOUNG_KAPOK_TREE.withChance(0.4F), KAPOK_TREE.withChance(0.35F),
@@ -1363,6 +1358,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
     //Pitanga trees
+    public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_MYRTACEAE = register("atlantic_forest_myrtaceae",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_PITANGA_TREE.withChance(0.042F),
+                            JABUTICABA_TREE.withChance(0.3F), JABUTICABA_FANCY_TREE.withChance(0.7F), JABUTICABA_BIG_TREE.withChance(0.075F)),
+                    PITANGA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(3, 0.0F, 0))));
     public static final ConfiguredFeature<?, ?> PITANGA_TREES = register("pitanga_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BLACK_PITANGA_TREE.withChance(0.02F)),
                     PITANGA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA

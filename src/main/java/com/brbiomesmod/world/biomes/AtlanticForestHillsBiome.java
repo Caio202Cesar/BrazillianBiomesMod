@@ -59,15 +59,15 @@ private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBui
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withForestTrumpetTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withCambuciTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAtlanticForestUpperTrees(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withPitangaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withPassionvineAtlanticForestTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAtlanticForestFlowers(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAngelTrumpetBushes(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAtlanticForestPalms(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withJabuticabaTrees(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withAtlanticForestMyrtaceae(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.XAXIM_TREE);
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);

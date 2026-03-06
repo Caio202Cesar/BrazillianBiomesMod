@@ -122,8 +122,8 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withPampasTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PAMPAS_TREES);
     }
-    public static void withJabuticabaTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.JABUTICABA_TREES);
+    public static void withAtlanticForestMyrtaceae(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ATLANTIC_FOREST_MYRTACEAE);
     }
     public static void withXananaFlower(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.XANANA_PATCH);
