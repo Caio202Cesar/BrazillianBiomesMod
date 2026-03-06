@@ -53,7 +53,7 @@ public class RestingaBeachBiome {
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
 
-        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.BEACH).depth(depth).scale(scale)
+        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
                 .temperature(1.2F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4445678)
                         .setWaterFogColor(270131).withSkyColor(8103167).withFoliageColor(4110351)
                         .withGrassColor(6604607).setFogColor(13028309)
