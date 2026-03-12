@@ -6,10 +6,10 @@ import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class OvniModel extends EntityModel<Entity> {
+public class UFOModel extends EntityModel<Entity> {
     private final ModelRenderer bb_main;
 
-    public OvniModel() {
+    public UFOModel() {
         texWidth = 256;
         texHeight = 256;
 
