@@ -55,7 +55,7 @@ public class MonkeyCajaranaSapling extends SaplingBlock {
 
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.9f;
-        float maxTemp = 1.2f;
+        float maxTemp = 2f;
 
         boolean isProtectedByGlass = isUnderGlass(world, pos);
 
@@ -123,7 +123,7 @@ public class MonkeyCajaranaSapling extends SaplingBlock {
         }
 
         float minTemp = 0.9F;
-        float maxTemp = 1.2F;
+        float maxTemp = 2F;
 
         // If protected, ignore cold restriction
         if (!isProtectedByGlass) {
@@ -155,7 +155,7 @@ public class MonkeyCajaranaSapling extends SaplingBlock {
 
             float temp = worldIn.getBiome(pos).getTemperature(pos);
             float minTemp = 0.9f;
-            float maxTemp = 1.2f;
+            float maxTemp = 2f;
 
             boolean isProtectedByGlass = false;
 
