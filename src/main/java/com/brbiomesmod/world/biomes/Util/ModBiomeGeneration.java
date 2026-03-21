@@ -14,7 +14,7 @@ import static net.minecraftforge.common.BiomeDictionary.Type.*;
 public class ModBiomeGeneration {
     public static void generateBiomes() {
         addBiome(AmazonRainforestBiome.AMAZON_RAINFOREST.get(), BiomeManager.BiomeType.DESERT, 27, OVERWORLD, HOT, JUNGLE, DENSE, SPOOKY);
-        addBiome(AraucariaPlateauBiome.ARAUCARIA_PLATEAU.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, PLATEAU);
+        addBiome(AraucariaPlateauBiome.ARAUCARIA_PLATEAU.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD);
         addBiome(PantanalBiome.PANTANAL.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, HOT, SPARSE, SAVANNA);
         addBiome(CaatingaBiome.CAATINGA.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, SPARSE, SAVANNA, DRY, SANDY);
         addBiome(DunasRestingaBiome.DUNAS_RESTINGA.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, SANDY);
