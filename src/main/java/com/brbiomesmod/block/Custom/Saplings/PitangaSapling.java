@@ -42,7 +42,7 @@ public class PitangaSapling extends SaplingBlock {
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
         float minTemp = 0.8f;
-        float maxTemp = 1.2f;
+        float maxTemp = 1.6f;
 
         boolean isProtectedByGlass = isUnderGlass(world, pos);
 
@@ -113,7 +113,7 @@ public class PitangaSapling extends SaplingBlock {
         }
 
         float minTemp = 0.8F;
-        float maxTemp = 1.2F;
+        float maxTemp = 1.6F;
 
         // If protected, ignore cold restriction
         if (!isProtectedByGlass) {
@@ -140,7 +140,7 @@ public class PitangaSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.8f, maxTemp = 1.2f;
+            float minTemp = 0.8f, maxTemp = 1.6f;
 
             boolean isProtectedByGlass = false;
 
