@@ -38,22 +38,23 @@ public class GoldenLionTamarinEntity extends ShoulderRidingEntity {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new SwimGoal(this));
-        this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
-        this.goalSelector.addGoal(3, new TemptGoal(this, 1.2D, Ingredient.fromItems(ModItems.JABUTICABA.get()), false));
-        this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.1D));
-        this.goalSelector.addGoal(5, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
-        this.goalSelector.addGoal(6, new LookAtGoal(this, PlayerEntity.class, 6.0F));
-        this.goalSelector.addGoal(7, new LookRandomlyGoal(this));
-        this.goalSelector.addGoal(8, new FollowMobGoal(this, 1.0D, 5.0F, 2.0F));
+
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.3D, true));
         this.targetSelector.addGoal(1,
                 (new HurtByTargetGoal(this))
                         .setCallsForHelp(GoldenLionTamarinEntity.class));
-        this.targetSelector.addGoal(2,
-                new NearestAttackableTargetGoal<>(this, WolfEntity.class, true));
-        this.goalSelector.addGoal(2, new SitGoal(this));
+
         this.goalSelector.addGoal(2, new FollowOwnerGoal(this, 1.0D, 5.0F, 1.0F, true));
         this.goalSelector.addGoal(3, new LandOnOwnersShoulderGoal(this));
+
+        this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
+        this.goalSelector.addGoal(3, new TemptGoal(this, 1.2D, Ingredient.fromItems(ModItems.JABUTICABA.get()), false));
+        this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.1D));
+
+        this.goalSelector.addGoal(5, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
+        this.goalSelector.addGoal(6, new LookAtGoal(this, PlayerEntity.class, 6.0F));
+        this.goalSelector.addGoal(7, new LookRandomlyGoal(this));
+        this.goalSelector.addGoal(8, new FollowMobGoal(this, 1.0D, 5.0F, 2.0F));
 
     }
 
@@ -92,8 +93,6 @@ public class GoldenLionTamarinEntity extends ShoulderRidingEntity {
         } else {
             this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(8.0D);
         }
-
-        this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(4.0D);
     }
 
     @Override
@@ -117,6 +116,31 @@ public class GoldenLionTamarinEntity extends ShoulderRidingEntity {
                 }
             }
         }
+    }
+
+    @Override
+    public ActionResultType getEntityInteractionResult(PlayerEntity player, Hand hand) {
+        ItemStack stack = player.getHeldItem(hand);
+
+        if (stack.getItem() == ModItems.JABUTICABA.get()) {
+
+            if (!this.world.isRemote) {
+                if (this.rand.nextInt(3) == 0) {
+                    this.setTamedBy(player);
+                    this.world.setEntityState(this, (byte)7);
+                } else {
+                    this.world.setEntityState(this, (byte)6);
+                }
+            }
+
+            if (!player.abilities.isCreativeMode) {
+                stack.shrink(1);
+            }
+
+            return ActionResultType.SUCCESS;
+        }
+
+        return super.getEntityInteractionResult(player, hand);
     }
 
     @Override
