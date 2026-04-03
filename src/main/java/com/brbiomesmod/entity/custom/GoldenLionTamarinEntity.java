@@ -7,26 +7,24 @@ import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.ShoulderRidingEntity;
+import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.minecraft.item.*;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.util.DamageSource;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
-import net.minecraft.world.DifficultyInstance;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class GoldenLionTamarinEntity extends AnimalEntity {
+public class GoldenLionTamarinEntity extends ShoulderRidingEntity {
 
-    public GoldenLionTamarinEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
+    public GoldenLionTamarinEntity(EntityType<? extends ShoulderRidingEntity> type, World worldIn) {
         super(type, worldIn);
+        this.setTamed(false);
     }
 
     public static AttributeModifierMap.MutableAttribute setCustomAttributes() {
@@ -39,7 +37,6 @@ public class GoldenLionTamarinEntity extends AnimalEntity {
 
     @Override
     protected void registerGoals() {
-
         this.goalSelector.addGoal(0, new SwimGoal(this));
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.4D));
         this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
@@ -55,6 +52,10 @@ public class GoldenLionTamarinEntity extends AnimalEntity {
                         .setCallsForHelp(GoldenLionTamarinEntity.class));
         this.targetSelector.addGoal(2,
                 new NearestAttackableTargetGoal<>(this, WolfEntity.class, true));
+        this.goalSelector.addGoal(2, new SitGoal(this));
+        this.goalSelector.addGoal(2, new FollowOwnerGoal(this, 1.0D, 5.0F, 1.0F, true));
+        this.goalSelector.addGoal(3, new LandOnOwnersShoulderGoal(this));
+
     }
 
     @Override
@@ -82,6 +83,18 @@ public class GoldenLionTamarinEntity extends AnimalEntity {
         }
 
         return result;
+    }
+
+    public void setTamed(boolean tamed) {
+        super.setTamed(tamed);
+        if (tamed) {
+            this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(12.0D);
+            this.setHealth(12.0F);
+        } else {
+            this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(8.0D);
+        }
+
+        this.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(4.0D);
     }
 
     @Override
