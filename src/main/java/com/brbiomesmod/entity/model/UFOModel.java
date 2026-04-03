@@ -10,33 +10,31 @@ public class UFOModel extends EntityModel<Entity> {
     private final ModelRenderer bb_main;
 
     public UFOModel() {
-        texWidth = 256;
-        texHeight = 256;
+        textureWidth = 256;
+        textureHeight = 256;
 
         bb_main = new ModelRenderer(this);
-        bb_main.setPos(0.0F, 24.0F, 0.0F);
-        bb_main.texOffs(0, 0).addBox(-17.0F, -8.0F, -17.0F, 35.0F, 2.0F, 35.0F, 0.0F, false);
-        bb_main.texOffs(0, 37).addBox(-14.0F, -6.0F, -14.0F, 29.0F, 2.0F, 29.0F, 0.0F, false);
-        bb_main.texOffs(0, 68).addBox(-14.0F, -10.0F, -14.0F, 29.0F, 2.0F, 29.0F, 0.0F, false);
-        bb_main.texOffs(0, 99).addBox(-8.0F, -4.0F, -8.0F, 16.0F, 3.0F, 16.0F, 0.0F, false);
-        bb_main.texOffs(116, 37).addBox(-5.0F, -17.0F, -5.0F, 10.0F, 5.0F, 10.0F, 0.0F, false);
-        bb_main.texOffs(64, 99).addBox(-8.0F, -13.0F, -8.0F, 16.0F, 3.0F, 16.0F, 0.0F, false);
-        bb_main.texOffs(116, 52).addBox(-5.0F, -2.0F, -5.0F, 10.0F, 2.0F, 10.0F, 0.0F, false);
+        bb_main.setRotationPoint(0.0F, 24.0F, 0.0F);
+        bb_main.setTextureOffset(0, 0).addBox(-17.0F, -8.0F, -17.0F, 35.0F, 2.0F, 35.0F, 0.0F, false);
+        bb_main.setTextureOffset(0, 37).addBox(-14.0F, -6.0F, -14.0F, 29.0F, 2.0F, 29.0F, 0.0F, false);
+        bb_main.setTextureOffset(0, 68).addBox(-14.0F, -10.0F, -14.0F, 29.0F, 2.0F, 29.0F, 0.0F, false);
+        bb_main.setTextureOffset(0, 99).addBox(-8.0F, -4.0F, -8.0F, 16.0F, 3.0F, 16.0F, 0.0F, false);
+        bb_main.setTextureOffset(116, 37).addBox(-5.0F, -17.0F, -5.0F, 10.0F, 5.0F, 10.0F, 0.0F, false);
+        bb_main.setTextureOffset(64, 99).addBox(-8.0F, -13.0F, -8.0F, 16.0F, 3.0F, 16.0F, 0.0F, false);
+        bb_main.setTextureOffset(116, 52).addBox(-5.0F, -2.0F, -5.0F, 10.0F, 2.0F, 10.0F, 0.0F, false);
     }
 
     @Override
-    public void setupAnim(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch){
-        //previously the render function, render code was moved to a method below
-    }
+    public void setRotationAngles(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
-    @Override
-    public void renderToBuffer(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
-        bb_main.render(matrixStack, buffer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 
     public void setRotationAngle(ModelRenderer modelRenderer, float x, float y, float z) {
-        modelRenderer.xRot = x;
-        modelRenderer.yRot = y;
-        modelRenderer.zRot = z;
+
+    }
+
+    @Override
+    public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
+
     }
 }
