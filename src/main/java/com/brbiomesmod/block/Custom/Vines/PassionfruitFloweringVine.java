@@ -5,6 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.VineBlock;
+import net.minecraft.block.material.Material;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
@@ -32,10 +33,30 @@ public class PassionfruitFloweringVine extends VineBlock {
      * @param pos
      * @param random
      */
+
+    //Hardiness Zone 10 to 12
+    public static final float MIN_TEMP = 0.85F;
+    public static final float MAX_TEMP = 1.6F;
+
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         super.randomTick(state, worldIn, pos, random);
 
+        //Growth Logic
+        float temp = worldIn.getBiome(pos).getTemperature();
+        boolean underGlass = isUnderGlass(worldIn, pos);
+
+        if (temp < MIN_TEMP && !underGlass || temp > MAX_TEMP) {
+            if (random.nextFloat() < 0.25F) {
+                worldIn.destroyBlock(pos, false); // no drop
+            }
+
+            return;
+        }
+
+        super.randomTick(state, worldIn, pos, random);
+
+        //Fruiting
         double chance = 0.001;
 
         if (random.nextDouble() < chance) {
@@ -52,7 +73,30 @@ public class PassionfruitFloweringVine extends VineBlock {
         }
     }
 
+    private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
 
+        BlockPos.Mutable checkPos = new BlockPos.Mutable(pos.getX(), pos.getY() + 1, pos.getZ());
+
+        while (checkPos.getY() < world.getHeight()) {
+
+            BlockState stateAbove = world.getBlockState(checkPos);
+
+            if (stateAbove.isAir() || stateAbove.getBlock() instanceof VineBlock) {
+                checkPos.move(Direction.UP);
+                continue;
+            }
+
+            // If this block is glass → protected
+            if (stateAbove.getMaterial() == Material.GLASS) {
+                return true;
+            }
+
+            // Any other solid block blocks protection
+            return false;
+        }
+
+        return false;
+    }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 90;
