@@ -5,10 +5,14 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.math.MathHelper;
 
 public class CapybaraModel extends EntityModel<Entity> {
     private final ModelRenderer body;
-    private final ModelRenderer legs;
+    private final ModelRenderer legFL;
+    private final ModelRenderer legFR;
+    private final ModelRenderer legBL;
+    private final ModelRenderer legBR;
     private final ModelRenderer head;
 
     public CapybaraModel() {
@@ -19,12 +23,21 @@ public class CapybaraModel extends EntityModel<Entity> {
         body.setRotationPoint(0.0F, 24.0F, 0.0F);
         body.setTextureOffset(0, 0).addBox(-4.0F, -9.0F, -5.0F, 6.0F, 7.0F, 11.0F, 0.0F, false);
 
-        legs = new ModelRenderer(this);
-        legs.setRotationPoint(0.0F, 24.0F, 0.0F);
-        legs.setTextureOffset(22, 18).addBox(-4.0F, -2.0F, 4.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-        legs.setTextureOffset(22, 26).addBox(-4.0F, -2.0F, -4.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-        legs.setTextureOffset(0, 30).addBox(0.0F, -2.0F, -4.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
-        legs.setTextureOffset(22, 22).addBox(0.0F, -2.0F, 4.0F, 2.0F, 2.0F, 2.0F, 0.0F, false);
+        legFL = new ModelRenderer(this);
+        legFL.setRotationPoint(0.0F, 24.0F, 0.0F);
+        legFL.setTextureOffset(0, 30).addBox(0.0F, -2.0F, -4.0F, 2, 2, 2);
+
+        legFR = new ModelRenderer(this);
+        legFR.setRotationPoint(0.0F, 24.0F, 0.0F);
+        legFR.setTextureOffset(22, 26).addBox(-4.0F, -2.0F, -4.0F, 2, 2, 2);
+
+        legBL = new ModelRenderer(this);
+        legBL.setRotationPoint(0.0F, 24.0F, 0.0F);
+        legBL.setTextureOffset(22, 22).addBox(0.0F, -2.0F, 4.0F, 2, 2, 2);
+
+        legBR = new ModelRenderer(this);
+        legBR.setRotationPoint(0.0F, 24.0F, 0.0F);
+        legBR.setTextureOffset(22, 18).addBox(-4.0F, -2.0F, 4.0F, 2, 2, 2);
 
         head = new ModelRenderer(this);
         head.setRotationPoint(0.0F, 16.0F, -7.0F);
@@ -35,13 +48,28 @@ public class CapybaraModel extends EntityModel<Entity> {
 
     @Override
     public void setRotationAngles(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+        float speed = 0.6F;
+        float degree = 0.6F;
 
+        this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
+        this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
+
+        this.legFL.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed) * degree * limbSwingAmount;
+        this.legBR.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.2F * limbSwingAmount;
+
+        this.legFR.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.2F * limbSwingAmount;
+        this.legBL.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.2F * limbSwingAmount;
+
+        this.body.rotateAngleX = 0.05F * MathHelper.cos(limbSwing * 0.6662F) * limbSwingAmount;
     }
 
     @Override
     public void render(MatrixStack matrixStackIn, IVertexBuilder bufferIn, int packedLightIn, int packedOverlayIn, float red, float green, float blue, float alpha) {
         body.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
-        legs.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
+        legFL.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
+        legFR.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
+        legBL.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
+        legBR.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
         head.render(matrixStackIn, bufferIn, packedLightIn, packedOverlayIn, red, green, blue, alpha);
     }
 }
