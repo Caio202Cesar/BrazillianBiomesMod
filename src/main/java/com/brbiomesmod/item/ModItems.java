@@ -343,6 +343,9 @@ public class ModItems {
             () -> new ModSpawnEggItem(ModEntityTypes.MANED_WOLF_ENTITY, 0x4c3100, 0x191919,
                     new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
 
+    public static final RegistryObject<ModSpawnEggItem> CAPYBARA_SPAWN_EGG = ITEMS.register("capybara_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.CAPYBARA_ENTITY, 0xe4d5b4, 0x674F2D,
+                    new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
 
     public static RegistryObject<Item> ICE_CREAM_CONE;
     public static RegistryObject<Item> BANANA;
