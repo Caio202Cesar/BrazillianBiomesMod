@@ -1,6 +1,7 @@
 package com.brbiomesmod.entity.custom;
 
 import com.brbiomesmod.Util.ModSoundEvents;
+import com.brbiomesmod.entity.goals.SitOnCapybaraGoal;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -43,6 +44,7 @@ public class TocoToucanEntity extends ParrotEntity {
         this.goalSelector.addGoal(5, new WaterAvoidingRandomWalkingGoal(this, 1.0D));
         this.goalSelector.addGoal(6, new LookAtGoal(this, PlayerEntity.class, 6.0F));
         this.goalSelector.addGoal(7, new LookRandomlyGoal(this));
+        this.goalSelector.addGoal(3, new SitOnCapybaraGoal(this));
     }
 
     @Override

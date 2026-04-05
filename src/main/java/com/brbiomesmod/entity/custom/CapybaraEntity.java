@@ -3,17 +3,20 @@ package com.brbiomesmod.entity.custom;
 import com.brbiomesmod.entity.ModEntityTypes;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.AgeableEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.ParrotEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
@@ -47,6 +50,79 @@ public class CapybaraEntity extends AnimalEntity {
 
     }
 
+    @Override
+    protected boolean canFitPassenger(Entity passenger) {
+        // Only allow parrots (or your custom birds)
+        if (!(passenger instanceof ParrotEntity || passenger instanceof TocoToucanEntity)) return false;
+
+        return this.getPassengers().size() < 3; // allow up to 3 birds
+    }
+
+    @Override
+    public void updatePassenger(Entity passenger) {
+        super.updatePassenger(passenger);
+
+        int index = this.getPassengers().indexOf(passenger);
+
+        float yOffset = 0.65F; // height of back
+
+        float xOffset = 0.0F;
+        float zOffset = 0.2F;
+
+        // Different layouts depending on number of birds
+        int count = this.getPassengers().size();
+
+        if (count == 1) {
+            // center
+            xOffset = 0.0F;
+            zOffset = 0.1F;
+        }
+        else if (count == 2) {
+            // left and right
+            xOffset = (index == 0) ? -0.25F : 0.25F;
+            zOffset = 0.15F;
+        }
+        else if (count >= 3) {
+            // triangle formation
+            if (index == 0) {
+                xOffset = 0.0F;
+                zOffset = 0.0F;
+            } else if (index == 1) {
+                xOffset = -0.25F;
+                zOffset = 0.3F;
+            } else {
+                xOffset = 0.25F;
+                zOffset = 0.3F;
+            }
+        }
+
+        float yaw = this.renderYawOffset * ((float)Math.PI / 180F);
+
+        // rotate offsets with body
+        double rotatedX = xOffset * MathHelper.cos(yaw) - zOffset * MathHelper.sin(yaw);
+        double rotatedZ = xOffset * MathHelper.sin(yaw) + zOffset * MathHelper.cos(yaw);
+
+        passenger.setPosition(
+                this.getPosX() + rotatedX,
+                this.getPosY() + yOffset,
+                this.getPosZ() + rotatedZ
+        );
+    }
+
+    @Override
+    public void livingTick() {
+        super.livingTick();
+
+        // If in water → birds leave
+        if (this.isInWater()) {
+            this.removePassengers();
+        }
+
+        // If running fast → birds leave
+        if (this.getMotion().lengthSquared() > 0.2D) {
+            this.removePassengers();
+        }
+    }
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
