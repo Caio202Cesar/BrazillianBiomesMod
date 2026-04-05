@@ -307,10 +307,11 @@ public class ModItems {
 
     //Rubber
     public static final RegistryObject<Item> RUBBERIZED_NETHERITE_PICKAXE = ITEMS.register("rubberized_netherite_pickaxe",
-            () -> new RubberizedPickaxeItem(ModItemTier.RUBBER, 1, -2.8F,
+            () -> new RubberizedPickaxeItem(ItemTier.NETHERITE, 1, -2.8F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
+
     public static final RegistryObject<Item> RUBBERIZED_NETHERITE_SHOVEL = ITEMS.register("rubberized_netherite_shovel",
-            () -> new ShovelItem(ModItemTier.RUBBER, 1.5F, -3.0F,
+            () -> new RubberizedShovelItem(ItemTier.NETHERITE, 1.5F, -3.0F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
 
     //Armor
