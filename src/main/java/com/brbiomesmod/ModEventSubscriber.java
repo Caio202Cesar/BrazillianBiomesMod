@@ -79,7 +79,8 @@ public class ModEventSubscriber {
 
     private static boolean isRubberized(ItemStack stack) {
         return stack.getItem() == ModItems.RUBBERIZED_NETHERITE_PICKAXE.get()
-                || stack.getItem() == ModItems.RUBBERIZED_NETHERITE_SHOVEL.get();
+                || stack.getItem() == ModItems.RUBBERIZED_NETHERITE_SHOVEL.get()
+                || stack.getItem() == ModItems.RUBBERIZED_TOURMALINE_SHOVEL.get();
     }
 
     @SubscribeEvent
