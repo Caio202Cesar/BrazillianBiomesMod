@@ -48,7 +48,7 @@ public class ModEntityTypes {
     public static final RegistryObject<EntityType<CapybaraEntity>> CAPYBARA_ENTITY =
             ENTITY_TYPES.register("capybara",
                     () -> EntityType.Builder.create(CapybaraEntity::new,
-                                    EntityClassification.CREATURE).size(0.9F, 0.8F)
+                                    EntityClassification.CREATURE).size(0.9F, 0.6F)
                             .build(new ResourceLocation(BrazillianBiomesMod.MOD_ID, "capybara").toString()));
 
     public static void register(IEventBus eventBus) {

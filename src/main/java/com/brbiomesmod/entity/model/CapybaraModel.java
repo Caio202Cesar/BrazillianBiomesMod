@@ -53,18 +53,15 @@ public class CapybaraModel<T extends CapybaraEntity> extends EntityModel<T> {
     public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         float speed = 0.5F;
         float degree = 0.15F;
-        float damp = 0.5F;
 
         this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
         this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
 
-        this.legFL.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed) * degree * limbSwingAmount * damp;
-        this.legBR.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed) * degree * limbSwingAmount * damp;
+        this.legFL.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed) * degree * limbSwingAmount;
+        this.legBR.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed) * degree * limbSwingAmount;
 
-        this.legFR.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed + (float)Math.PI) * degree * limbSwingAmount * damp;
-        this.legBL.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed + (float)Math.PI) * degree * limbSwingAmount * damp;
-
-        this.body.rotateAngleX = 0.02F * MathHelper.cos(limbSwing * 0.6662F) * limbSwingAmount;
+        this.legFR.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed + (float)Math.PI) * degree * limbSwingAmount;
+        this.legBL.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed + (float)Math.PI) * degree * limbSwingAmount;
     }
 
     @Override
