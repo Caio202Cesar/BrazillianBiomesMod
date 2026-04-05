@@ -4,6 +4,7 @@ import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -69,34 +70,11 @@ public class ModEventSubscriber {
 
         if (!isRubberized(tool)) return;
 
-        World world = (World) event.getWorld();
-        BlockPos pos = event.getPos();
-        BlockState state = world.getBlockState(pos);
+        // Já tem silk? ignora
+        if (EnchantmentHelper.getEnchantmentLevel(Enchantments.SILK_TOUCH, tool) > 0) return;
 
-        if (!(world instanceof ServerWorld)) return;
-
-        // Cancel normal drop behavior
-        event.setCanceled(true);
-
-        // Create fake Silk Touch tool
-        ItemStack silkTool = tool.copy();
-        silkTool.addEnchantment(Enchantments.SILK_TOUCH, 1);
-
-        LootContext.Builder builder = new LootContext.Builder((ServerWorld) world)
-                .withRandom(world.rand)
-                .withParameter(LootParameters.TOOL, silkTool)
-                .withNullableParameter(LootParameters.BLOCK_ENTITY, world.getTileEntity(pos))
-                .withParameter(LootParameters.THIS_ENTITY, player);
-
-        List<ItemStack> drops = state.getDrops(builder);
-
-        // Remove block
-        world.removeBlock(pos, false);
-
-        // Spawn drops manually
-        for (ItemStack drop : drops) {
-            Block.spawnAsEntity(world, pos, drop);
-        }
+        // adiciona silk TEMPORARIAMENTE
+        tool.addEnchantment(Enchantments.SILK_TOUCH, 1);
     }
 
     private static boolean isRubberized(ItemStack stack) {
