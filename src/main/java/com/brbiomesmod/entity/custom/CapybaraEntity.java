@@ -22,6 +22,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
+import java.util.List;
 
 public class CapybaraEntity extends AnimalEntity {
     public CapybaraEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
@@ -106,6 +107,14 @@ public class CapybaraEntity extends AnimalEntity {
                 this.getPosY() + yOffset,
                 this.getPosZ() + rotatedZ
         );
+
+        if (passenger instanceof CapybaraEntity && ((CapybaraEntity) passenger).isChild()) {
+            passenger.setPosition(
+                    this.getPosX(),
+                    this.getPosY() + 0.7F,
+                    this.getPosZ() - 0.2F
+            );
+        }
     }
 
     @Override
@@ -120,6 +129,34 @@ public class CapybaraEntity extends AnimalEntity {
         // If running fast → birds leave
         if (this.getMotion().lengthSquared() > 0.2D) {
             this.removePassengers();
+        }
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+
+        // Only babies, not already riding, AND in water
+        if (this.isChild() && !this.isPassenger() && this.isInWater()) {
+
+            List<CapybaraEntity> adults =
+                    this.world.getEntitiesWithinAABB(
+                            CapybaraEntity.class,
+                            this.getBoundingBox().grow(4.0D),
+                            entity -> !entity.isChild() && entity.isInWater()
+                    );
+
+            if (!adults.isEmpty()) {
+                CapybaraEntity parent = adults.get(0);
+
+                if (this.getDistance(parent) < 2.0F) {
+                    this.startRiding(parent, true);
+                }
+            }
+        }
+
+        if (!this.isInWater() && this.isPassenger()) {
+            this.stopRiding();
         }
     }
 
