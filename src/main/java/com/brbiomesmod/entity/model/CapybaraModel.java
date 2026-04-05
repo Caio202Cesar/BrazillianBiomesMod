@@ -23,23 +23,23 @@ public class CapybaraModel<T extends CapybaraEntity> extends EntityModel<T> {
         textureHeight = 64;
 
         body = new ModelRenderer(this);
-        body.setRotationPoint(0.0F, 24.0F, 0.0F);
+        body.setRotationPoint(0.0F, 22.0F, 0.0F);
         body.setTextureOffset(0, 0).addBox(-4.0F, -9.0F, -5.0F, 6.0F, 7.0F, 11.0F, 0.0F, false);
 
         legFL = new ModelRenderer(this);
-        legFL.setRotationPoint(0.0F, 24.0F, 0.0F);
+        legFL.setRotationPoint(0.0F, 22.0F, 0.0F);
         legFL.setTextureOffset(0, 30).addBox(0.0F, -2.0F, -4.0F, 2, 2, 2);
 
         legFR = new ModelRenderer(this);
-        legFR.setRotationPoint(0.0F, 24.0F, 0.0F);
+        legFR.setRotationPoint(0.0F, 22.0F, 0.0F);
         legFR.setTextureOffset(22, 26).addBox(-4.0F, -2.0F, -4.0F, 2, 2, 2);
 
         legBL = new ModelRenderer(this);
-        legBL.setRotationPoint(0.0F, 24.0F, 0.0F);
+        legBL.setRotationPoint(0.0F, 22.0F, 0.0F);
         legBL.setTextureOffset(22, 22).addBox(0.0F, -2.0F, 4.0F, 2, 2, 2);
 
         legBR = new ModelRenderer(this);
-        legBR.setRotationPoint(0.0F, 24.0F, 0.0F);
+        legBR.setRotationPoint(0.0F, 22.0F, 0.0F);
         legBR.setTextureOffset(22, 18).addBox(-4.0F, -2.0F, 4.0F, 2, 2, 2);
 
         head = new ModelRenderer(this);
@@ -73,7 +73,7 @@ public class CapybaraModel<T extends CapybaraEntity> extends EntityModel<T> {
         matrixStackIn.push();
 
         if (this.isChild) {
-            float scale = 0.55F;
+            float scale = 0.5F;
 
             // Scale entire baby
             matrixStackIn.scale(scale, scale, scale);
