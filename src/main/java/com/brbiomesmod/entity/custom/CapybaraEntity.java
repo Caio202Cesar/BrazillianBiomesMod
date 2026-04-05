@@ -24,7 +24,6 @@ import net.minecraft.world.server.ServerWorld;
 import javax.annotation.Nullable;
 
 public class CapybaraEntity extends AnimalEntity {
-
     public CapybaraEntity(EntityType<? extends AnimalEntity> type, World worldIn) {
         super(type, worldIn);
     }

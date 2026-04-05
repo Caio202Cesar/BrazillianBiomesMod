@@ -108,6 +108,7 @@ public class BrazillianBiomesMod {
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.BOTO_ENTITY.get(), BotoRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get(), GoldenLionTamarinRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.MANED_WOLF_ENTITY.get(), ManedWolfRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.CAPYBARA_ENTITY.get(), CapybaraRenderer::new);
 
     }
 

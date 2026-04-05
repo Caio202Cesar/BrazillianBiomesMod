@@ -1,13 +1,16 @@
 package com.brbiomesmod.entity.model;
 
+import com.brbiomesmod.entity.custom.CapybaraEntity;
+import com.brbiomesmod.entity.custom.GoldenLionTamarinEntity;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.entity.model.EntityModel;
+import net.minecraft.client.renderer.entity.model.SegmentedModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 
-public class CapybaraModel extends EntityModel<Entity> {
+public class CapybaraModel<T extends CapybaraEntity> extends EntityModel<T> {
     private final ModelRenderer body;
     private final ModelRenderer legFL;
     private final ModelRenderer legFR;
@@ -47,7 +50,7 @@ public class CapybaraModel extends EntityModel<Entity> {
     }
 
     @Override
-    public void setRotationAngles(Entity entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+    public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
         float speed = 0.6F;
         float degree = 0.6F;
 

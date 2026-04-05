@@ -18,6 +18,7 @@ public class ModEventBusEvents {
         event.put(ModEntityTypes.BOTO_ENTITY.get(), BotoEntity.setCustomAttributes().create());
         event.put(ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get(), GoldenLionTamarinEntity.setCustomAttributes().create());
         event.put(ModEntityTypes.MANED_WOLF_ENTITY.get(), ManedWolfEntity.setCustomAttributes().create());
+        event.put(ModEntityTypes.CAPYBARA_ENTITY.get(), CapybaraEntity.setCustomAttributes().create());
 
     }
 
