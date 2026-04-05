@@ -11,6 +11,7 @@ import net.minecraft.entity.passive.ShoulderRidingEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.passive.WolfEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.*;
@@ -138,6 +139,14 @@ public class GoldenLionTamarinEntity extends ShoulderRidingEntity {
             }
 
             return ActionResultType.SUCCESS;
+        }
+
+        if (!this.world.isRemote) {
+
+            if (this.func_213439_d((ServerPlayerEntity) player)) { // tries to sit on shoulder
+                return ActionResultType.SUCCESS;
+            }
+            if (!this.isTamed()) return ActionResultType.PASS;
         }
 
         return super.getEntityInteractionResult(player, hand);

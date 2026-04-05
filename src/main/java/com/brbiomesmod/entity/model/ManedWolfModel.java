@@ -21,7 +21,7 @@ public class ManedWolfModel<T extends ManedWolfEntity> extends EntityModel<T> {
         textureWidth = 64;
         textureHeight = 64;
 
-        head = new ModelRenderer(this);
+        head = new ModelRenderer(this, 0, 0);
         head.setRotationPoint(-1.0F, 10.5F, -3.0F);
         head.setTextureOffset(1, 5).addBox(-3.0F, -2.0F, -5.0F, 8.0F, 6.0F, 6.0F, 0.0F, false);
         head.setTextureOffset(15, 1).addBox(3.0F, -4.0F, -4.0F, 2.0F, 2.0F, 1.0F, 0.0F, false);
@@ -33,19 +33,19 @@ public class ManedWolfModel<T extends ManedWolfEntity> extends EntityModel<T> {
         setRotationAngle(body, 1.5708F, 0.0F, 0.0F);
         body.setTextureOffset(24, 15).addBox(-3.0F, 4.0F, 1.5F, 6.0F, 11.0F, 6.0F, 0.0F, false);
 
-        leg1 = new ModelRenderer(this);
+        leg1 = new ModelRenderer(this, 0, 18);
         leg1.setRotationPoint(-5.0F, 17.5F, 7.0F);
         leg1.setTextureOffset(13, 24).addBox(1.999F, -3.5F, -1.0F, 2.0F, 10.0F, 2.0F, 0.0F, false);
 
-        leg2 = new ModelRenderer(this);
+        leg2 = new ModelRenderer(this, 0, 18);
         leg2.setRotationPoint(-1.0F, 17.5F, 7.0F);
         leg2.setTextureOffset(4, 24).addBox(2.001F, -3.5F, -1.0F, 2.0F, 10.0F, 2.0F, 0.0F, false);
 
-        leg3 = new ModelRenderer(this);
+        leg3 = new ModelRenderer(this, 0, 18);
         leg3.setRotationPoint(-5.0F, 17.5F, 0.0F);
         leg3.setTextureOffset(13, 24).addBox(1.999F, -3.5F, -1.0F, 2.0F, 10.0F, 2.0F, 0.0F, false);
 
-        leg4 = new ModelRenderer(this);
+        leg4 = new ModelRenderer(this, 0, 18);
         leg4.setRotationPoint(-1.0F, 17.5F, 0.0F);
         leg4.setTextureOffset(4, 24).addBox(2.001F, -3.5F, -1.0F, 2.0F, 10.0F, 2.0F, 0.0F, false);
 

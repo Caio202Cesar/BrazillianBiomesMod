@@ -26,23 +26,23 @@ public class CapybaraModel<T extends CapybaraEntity> extends EntityModel<T> {
         body.setRotationPoint(0.0F, 22.0F, 0.0F);
         body.setTextureOffset(0, 0).addBox(-4.0F, -9.0F, -5.0F, 6.0F, 7.0F, 11.0F, 0.0F, false);
 
-        legFL = new ModelRenderer(this);
+        legFL = new ModelRenderer(this, 0, 18);
         legFL.setRotationPoint(0.0F, 22.0F, 0.0F);
         legFL.setTextureOffset(0, 30).addBox(0.0F, -2.0F, -4.0F, 2, 2, 2);
 
-        legFR = new ModelRenderer(this);
+        legFR = new ModelRenderer(this, 0, 18);
         legFR.setRotationPoint(0.0F, 22.0F, 0.0F);
         legFR.setTextureOffset(22, 26).addBox(-4.0F, -2.0F, -4.0F, 2, 2, 2);
 
-        legBL = new ModelRenderer(this);
+        legBL = new ModelRenderer(this, 0, 18);
         legBL.setRotationPoint(0.0F, 22.0F, 0.0F);
         legBL.setTextureOffset(22, 22).addBox(0.0F, -2.0F, 4.0F, 2, 2, 2);
 
-        legBR = new ModelRenderer(this);
+        legBR = new ModelRenderer(this, 0, 18);
         legBR.setRotationPoint(0.0F, 22.0F, 0.0F);
         legBR.setTextureOffset(22, 18).addBox(-4.0F, -2.0F, 4.0F, 2, 2, 2);
 
-        head = new ModelRenderer(this);
+        head = new ModelRenderer(this, 0, 0);
         head.setRotationPoint(0.0F, 16.0F, -7.0F);
         head.setTextureOffset(0, 18).addBox(-3.0F, -3.0F, -5.0F, 4.0F, 5.0F, 7.0F, 0.0F, false);
         head.setTextureOffset(8, 30).addBox(-4.0F, -5.0F, 0.0F, 1.0F, 2.0F, 2.0F, 0.0F, false);
@@ -51,19 +51,20 @@ public class CapybaraModel<T extends CapybaraEntity> extends EntityModel<T> {
 
     @Override
     public void setRotationAngles(T entityIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-        float speed = 0.6F;
-        float degree = 0.6F;
+        float speed = 0.5F;
+        float degree = 0.15F;
+        float damp = 0.5F;
 
         this.head.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
         this.head.rotateAngleX = headPitch * ((float)Math.PI / 180F);
 
-        this.legFL.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed) * degree * limbSwingAmount;
-        this.legBR.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.2F * limbSwingAmount;
+        this.legFL.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed) * degree * limbSwingAmount * damp;
+        this.legBR.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed) * degree * limbSwingAmount * damp;
 
-        this.legFR.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.2F * limbSwingAmount;
-        this.legBL.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F + (float)Math.PI) * 1.2F * limbSwingAmount;
+        this.legFR.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed + (float)Math.PI) * degree * limbSwingAmount * damp;
+        this.legBL.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F * speed + (float)Math.PI) * degree * limbSwingAmount * damp;
 
-        this.body.rotateAngleX = 0.05F * MathHelper.cos(limbSwing * 0.6662F) * limbSwingAmount;
+        this.body.rotateAngleX = 0.02F * MathHelper.cos(limbSwing * 0.6662F) * limbSwingAmount;
     }
 
     @Override

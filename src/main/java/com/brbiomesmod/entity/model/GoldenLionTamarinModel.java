@@ -23,19 +23,19 @@ public class GoldenLionTamarinModel<T extends GoldenLionTamarinEntity> extends E
         textureWidth = 32;
         textureHeight = 32;
 
-        front_limb_right = new ModelRenderer(this);
+        front_limb_right = new ModelRenderer(this, 0, 18);
         front_limb_right.setRotationPoint(0.0F, 24.0F, 0.0F);
         front_limb_right.setTextureOffset(20, 4).addBox(0.0F, -5.0F, -3.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
 
-        front_limb_left = new ModelRenderer(this);
+        front_limb_left = new ModelRenderer(this, 0, 18);
         front_limb_left.setRotationPoint(0.0F, 24.0F, 0.0F);
         front_limb_left.setTextureOffset(16, 19).addBox(-2.0F, -5.0F, -3.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
 
-        back_limb_left = new ModelRenderer(this);
+        back_limb_left = new ModelRenderer(this, 0, 18);
         back_limb_left.setRotationPoint(0.0F, 24.0F, 0.0F);
         back_limb_left.setTextureOffset(12, 19).addBox(-2.0F, -5.0F, 1.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
 
-        back_limb_right = new ModelRenderer(this);
+        back_limb_right = new ModelRenderer(this, 0, 18);
         back_limb_right.setRotationPoint(0.0F, 24.0F, 0.0F);
         back_limb_right.setTextureOffset(16, 4).addBox(0.0F, -5.0F, 1.0F, 1.0F, 5.0F, 1.0F, 0.0F, false);
 
@@ -55,7 +55,7 @@ public class GoldenLionTamarinModel<T extends GoldenLionTamarinEntity> extends E
         setRotationAngle(tail_top_r1, -1.5708F, 0.0F, 0.0F);
         tail_top_r1.setTextureOffset(0, 15).addBox(-1.0F, -2.0F, 5.0F, 1.0F, 1.0F, 5.0F, 0.0F, false);
 
-        head = new ModelRenderer(this);
+        head = new ModelRenderer(this, 0, 0);
         head.setRotationPoint(0.0F, 24.0F, 0.0F);
         head.setTextureOffset(0, 8).addBox(-3.0F, -9.0F, -6.0F, 5.0F, 4.0F, 3.0F, 0.0F, false);
         head.setTextureOffset(0, 1).addBox(-2.0F, -7.0F, -8.0F, 3.0F, 2.0F, 1.0F, 0.0F, false);
