@@ -6,7 +6,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:passion_fruit_flowering_vine"
+          "name": "brbiomesmod:passion_fruit_vine"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "brbiomesmod:purple_passionfruit"
         }
       ],
       "conditions": [
@@ -15,6 +19,15 @@
           "predicate": {
             "tag": "forge:shears"
           }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "brbiomesmod:purple_passionfruit"
         }
       ]
     }

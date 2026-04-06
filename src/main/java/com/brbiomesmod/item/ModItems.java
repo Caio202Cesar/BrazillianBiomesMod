@@ -74,6 +74,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.JABUTICABA)));
     public static final RegistryObject<Item> PASSIONFRUIT = ITEMS.register("passionfruit",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.PASSIONFRUIT)));
+    public static final RegistryObject<Item> PURPLE_PASSIONFRUIT = ITEMS.register("purple_passionfruit",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.PASSIONFRUIT)));
     public static final RegistryObject<Item> TURK_TURBAN_BERRIES = ITEMS.register("turk_turban_berries",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.TURK_TURBAN_BERRIES)));
     public static final RegistryObject<Item> CAGAITA = ITEMS.register("cagaita_fruits",

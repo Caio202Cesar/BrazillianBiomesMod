@@ -95,13 +95,13 @@ public class PurplePassionfruitFruitingVine extends VineBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
 
-            ItemStack itemStack = new ItemStack(ModItems.PASSIONFRUIT.get());
+            ItemStack itemStack = new ItemStack(ModItems.PURPLE_PASSIONFRUIT.get());
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
 
             BlockState currentState = state;
-            BlockState newState = PlantsGroup.PASSION_FRUIT_VINE.get().getDefaultState();
+            BlockState newState = PlantsGroup.PURPLE_PASSION_FRUIT_VINE.get().getDefaultState();
 
             newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
