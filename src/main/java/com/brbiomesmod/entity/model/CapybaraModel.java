@@ -44,9 +44,9 @@ public class CapybaraModel<T extends CapybaraEntity> extends EntityModel<T> {
 
         head = new ModelRenderer(this, 0, 0);
         head.setRotationPoint(0.0F, 16.0F, -7.0F);
-        head.setTextureOffset(0, 18).addBox(-3.0F, -3.0F, -5.0F, 4.0F, 5.0F, 7.0F, 0.0F, false);
-        head.setTextureOffset(8, 30).addBox(-4.0F, -5.0F, 0.0F, 1.0F, 2.0F, 2.0F, 0.0F, false);
-        head.setTextureOffset(14, 30).addBox(1.0F, -5.0F, 0.0F, 1.0F, 2.0F, 2.0F, 0.0F, false);
+        head.setTextureOffset(0, 18).addBox(-3.0F, -2.0F, -4.0F, 4.0F, 5.0F, 7.0F, 0.0F, false);
+        head.setTextureOffset(8, 30).addBox(-4.0F, -4.0F, 1.0F, 1.0F, 2.0F, 2.0F, 0.0F, false);
+        head.setTextureOffset(14, 30).addBox(1.0F, -4.0F, 1.0F, 1.0F, 2.0F, 2.0F, 0.0F, false);
     }
 
     @Override
