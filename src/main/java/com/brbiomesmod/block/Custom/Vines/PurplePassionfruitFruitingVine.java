@@ -1,43 +1,35 @@
 package com.brbiomesmod.block.Custom.Vines;
 
 import com.brbiomesmod.block.PlantsGroup;
-import net.minecraft.block.*;
+import com.brbiomesmod.item.ModItems;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.VineBlock;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.util.Direction;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.PlantType;
 import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class PassionfruitVine extends VineBlock {
-    public PassionfruitVine() {
-        super(AbstractBlock.Properties.from(Blocks.VINE).tickRandomly().zeroHardnessAndResistance()
+public class PurplePassionfruitFruitingVine extends VineBlock {
+    public PurplePassionfruitFruitingVine() {
+        super(Properties.from(Blocks.VINE).tickRandomly().zeroHardnessAndResistance()
                 .sound(SoundType.PLANT).doesNotBlockMovement().notSolid().harvestTool(ToolType.HOE));
     }
 
-    public boolean ticksRandomly(BlockState state) {
-        return true;
-    }
-
-    /**
-     * Performs a random tick on a block.
-     *
-     * @param state
-     * @param worldIn
-     * @param pos
-     * @param random
-     */
-
-    //Hardiness Zone 9 to 12
+    //Hardiness Zone 9 to 10
     public static final float MIN_TEMP = 0.8F;
-    public static final float MAX_TEMP = 1.6F;
+    public static final float MAX_TEMP = 0.89F;
 
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
@@ -57,14 +49,15 @@ public class PassionfruitVine extends VineBlock {
 
         super.randomTick(state, worldIn, pos, random);
 
-
-        //Flowering
+        //Fruiting
         double chance = 0.001;
 
         if (random.nextDouble() < chance) {
-            BlockState currentState = state;
 
-            BlockState newState = PlantsGroup.PASSION_FRUIT_FLOWERING_VINE.get().getDefaultState();
+            BlockState currentState = state;
+            BlockState newState = PlantsGroup.PURPLE_PASSION_FRUIT_VINE.get().getDefaultState();
+
+            worldIn.setBlockState(pos, PlantsGroup.PURPLE_PASSION_FRUIT_VINE.get().getDefaultState());
 
             newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
@@ -98,12 +91,27 @@ public class PassionfruitVine extends VineBlock {
         return false;
     }
 
-    @OnlyIn(Dist.CLIENT)
-    public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(PlantsGroup.PASSION_FRUIT_VINE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PlantsGroup.PASSION_FRUIT_FLOWERING_VINE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PlantsGroup.PASSION_FRUIT_FRUITING_VINE.get(), RenderType.getCutout());
+    @Override
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        if (!worldIn.isRemote) {
 
+            ItemStack itemStack = new ItemStack(ModItems.PASSIONFRUIT.get());
+            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, itemStack);
+
+            worldIn.addEntity(itemEntity);
+
+            BlockState currentState = state;
+            BlockState newState = PlantsGroup.PASSION_FRUIT_VINE.get().getDefaultState();
+
+            newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
+                    .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
+
+            worldIn.setBlockState(pos, newState, 3);
+
+            worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
+
+        }
+        return ActionResultType.SUCCESS;
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {

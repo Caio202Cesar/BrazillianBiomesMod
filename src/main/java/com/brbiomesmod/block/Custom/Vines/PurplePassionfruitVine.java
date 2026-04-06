@@ -1,7 +1,10 @@
 package com.brbiomesmod.block.Custom.Vines;
 
 import com.brbiomesmod.block.PlantsGroup;
-import net.minecraft.block.*;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.VineBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -16,9 +19,9 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-public class PassionfruitVine extends VineBlock {
-    public PassionfruitVine() {
-        super(AbstractBlock.Properties.from(Blocks.VINE).tickRandomly().zeroHardnessAndResistance()
+public class PurplePassionfruitVine extends VineBlock {
+    public PurplePassionfruitVine() {
+        super(Properties.from(Blocks.VINE).tickRandomly().zeroHardnessAndResistance()
                 .sound(SoundType.PLANT).doesNotBlockMovement().notSolid().harvestTool(ToolType.HOE));
     }
 
@@ -35,9 +38,9 @@ public class PassionfruitVine extends VineBlock {
      * @param random
      */
 
-    //Hardiness Zone 9 to 12
+    //Hardiness Zone 9 to 10
     public static final float MIN_TEMP = 0.8F;
-    public static final float MAX_TEMP = 1.6F;
+    public static final float MAX_TEMP = 0.89F;
 
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
@@ -64,7 +67,7 @@ public class PassionfruitVine extends VineBlock {
         if (random.nextDouble() < chance) {
             BlockState currentState = state;
 
-            BlockState newState = PlantsGroup.PASSION_FRUIT_FLOWERING_VINE.get().getDefaultState();
+            BlockState newState = PlantsGroup.PURPLE_PASSION_FRUIT_FLOWERING_VINE.get().getDefaultState();
 
             newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
                     .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
@@ -100,9 +103,9 @@ public class PassionfruitVine extends VineBlock {
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(PlantsGroup.PASSION_FRUIT_VINE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PlantsGroup.PASSION_FRUIT_FLOWERING_VINE.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(PlantsGroup.PASSION_FRUIT_FRUITING_VINE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.PURPLE_PASSION_FRUIT_VINE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.PURPLE_PASSION_FRUIT_FLOWERING_VINE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(PlantsGroup.PURPLE_PASSION_FRUIT_FRUITING_VINE.get(), RenderType.getCutout());
 
     }
 

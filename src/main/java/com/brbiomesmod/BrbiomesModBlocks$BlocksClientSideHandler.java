@@ -11,6 +11,7 @@ import com.brbiomesmod.block.Custom.TallPlants.XaximPlant;
 import com.brbiomesmod.block.Custom.Vines.AristolochiaVine;
 import com.brbiomesmod.block.Custom.Vines.CaatingaPassionfruitVine;
 import com.brbiomesmod.block.Custom.Vines.PassionfruitVine;
+import com.brbiomesmod.block.Custom.Vines.PurplePassionfruitVine;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -43,6 +44,7 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         BuritiBunchBlock.registerRenderLayer();
         PindoBunchBlock.registerRenderLayer();
         CaatingaPassionfruitVine.registerRenderLayer();
+        PurplePassionfruitVine.registerRenderLayer();
 
         AlgarrobilloSapling.registerRenderLayer();
         CavenThornSapling.registerRenderLayer();
