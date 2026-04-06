@@ -79,8 +79,19 @@ public class ModEventSubscriber {
 
     private static boolean isRubberized(ItemStack stack) {
         return stack.getItem() == ModItems.RUBBERIZED_NETHERITE_PICKAXE.get()
+                || stack.getItem() == ModItems.RUBBERIZED_TOURMALINE_PICKAXE.get()
+                || stack.getItem() == ModItems.RUBBERIZED_DIAMOND_PICKAXE.get()
+                || stack.getItem() == ModItems.RUBBERIZED_GOLDEN_PICKAXE.get()
+                || stack.getItem() == ModItems.RUBBERIZED_IRON_PICKAXE.get()
+                || stack.getItem() == ModItems.RUBBERIZED_STONE_PICKAXE.get()
+                || stack.getItem() == ModItems.RUBBERIZED_WOOD_PICKAXE.get()
                 || stack.getItem() == ModItems.RUBBERIZED_NETHERITE_SHOVEL.get()
-                || stack.getItem() == ModItems.RUBBERIZED_TOURMALINE_SHOVEL.get();
+                || stack.getItem() == ModItems.RUBBERIZED_TOURMALINE_SHOVEL.get()
+                || stack.getItem() == ModItems.RUBBERIZED_DIAMOND_SHOVEL.get()
+                || stack.getItem() == ModItems.RUBBERIZED_GOLDEN_SHOVEL.get()
+                || stack.getItem() == ModItems.RUBBERIZED_IRON_SHOVEL.get()
+                || stack.getItem() == ModItems.RUBBERIZED_STONE_SHOVEL.get()
+                || stack.getItem() == ModItems.RUBBERIZED_WOOD_SHOVEL.get();
     }
 
     @SubscribeEvent

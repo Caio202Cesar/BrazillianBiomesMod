@@ -312,6 +312,21 @@ public class ModItems {
     public static final RegistryObject<Item> RUBBERIZED_TOURMALINE_PICKAXE = ITEMS.register("rubberized_tourmaline_pickaxe",
             () -> new RubberizedPickaxeItem(ModItemTier.TOURMALINE, 1, -2.8F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<Item> RUBBERIZED_DIAMOND_PICKAXE = ITEMS.register("rubberized_diamond_pickaxe",
+            () -> new RubberizedPickaxeItem(ItemTier.DIAMOND, 1, -2.8F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<Item> RUBBERIZED_GOLDEN_PICKAXE = ITEMS.register("rubberized_golden_pickaxe",
+            () -> new RubberizedPickaxeItem(ItemTier.GOLD, 1, -2.8F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<Item> RUBBERIZED_IRON_PICKAXE = ITEMS.register("rubberized_iron_pickaxe",
+            () -> new RubberizedPickaxeItem(ItemTier.IRON, 1, -2.8F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<Item> RUBBERIZED_STONE_PICKAXE = ITEMS.register("rubberized_stone_pickaxe",
+            () -> new RubberizedPickaxeItem(ItemTier.STONE, 1, -2.8F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<Item> RUBBERIZED_WOOD_PICKAXE = ITEMS.register("rubberized_wood_pickaxe",
+            () -> new RubberizedPickaxeItem(ItemTier.WOOD, 1, -2.8F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
 
     public static final RegistryObject<Item> RUBBERIZED_NETHERITE_SHOVEL = ITEMS.register("rubberized_netherite_shovel",
             () -> new RubberizedShovelItem(ItemTier.NETHERITE, 1.5F, -3.0F,
@@ -319,20 +334,32 @@ public class ModItems {
     public static final RegistryObject<Item> RUBBERIZED_TOURMALINE_SHOVEL = ITEMS.register("rubberized_tourmaline_shovel",
             () -> new RubberizedShovelItem(ModItemTier.TOURMALINE, 1.5F, -3.0F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<Item> RUBBERIZED_DIAMOND_SHOVEL = ITEMS.register("rubberized_diamond_shovel",
+            () -> new RubberizedShovelItem(ItemTier.DIAMOND, 1.5F, -3.0F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<Item> RUBBERIZED_GOLDEN_SHOVEL = ITEMS.register("rubberized_golden_shovel",
+            () -> new RubberizedShovelItem(ItemTier.GOLD, 1.5F, -3.0F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<Item> RUBBERIZED_IRON_SHOVEL = ITEMS.register("rubberized_iron_shovel",
+            () -> new RubberizedShovelItem(ItemTier.IRON, 1.5F, -3.0F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<Item> RUBBERIZED_STONE_SHOVEL = ITEMS.register("rubberized_stone_shovel",
+            () -> new RubberizedShovelItem(ItemTier.STONE, 1.5F, -3.0F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
+    public static final RegistryObject<Item> RUBBERIZED_WOOD_SHOVEL = ITEMS.register("rubberized_wood_shovel",
+            () -> new RubberizedShovelItem(ItemTier.WOOD, 1.5F, -3.0F,
+                    new Item.Properties().group(ItemGroup.TOOLS)));
 
     //Armor
     public static final RegistryObject<Item> RUBBER_BOOTS = ITEMS.register("rubber_boots",
             () -> new ArmorItem(ModArmorMaterial.RUBBER, EquipmentSlotType.FEET,
                     new Item.Properties().group(ModItemGroup.MISC_GROUP)));
-
     public static final RegistryObject<Item> RUBBER_CHESTPLATE = ITEMS.register("rubber_chestplate",
             () -> new ArmorItem(ModArmorMaterial.RUBBER, EquipmentSlotType.CHEST,
                     new Item.Properties().group(ModItemGroup.MISC_GROUP)));
-
     public static final RegistryObject<Item> RUBBER_LEGGINGS = ITEMS.register("rubber_leggings",
             () -> new ArmorItem(ModArmorMaterial.RUBBER, EquipmentSlotType.LEGS,
                     new Item.Properties().group(ModItemGroup.MISC_GROUP)));
-
     public static final RegistryObject<Item> RUBBER_HELMET = ITEMS.register("rubber_helmet",
             () -> new ArmorItem(ModArmorMaterial.RUBBER, EquipmentSlotType.HEAD,
                     new Item.Properties().group(ModItemGroup.MISC_GROUP)));
@@ -341,23 +368,18 @@ public class ModItems {
     public static final RegistryObject<ModSpawnEggItem> TOCO_TOUCAN_SPAWN_EGG = ITEMS.register("toco_toucan_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.TOCO_TOUCAN_ENTITY, 0x191919, 0xf59805,
                     new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
-
     public static final RegistryObject<ModSpawnEggItem> MAPINGUARI_SPAWN_EGG = ITEMS.register("mapinguari_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.MAPINGUARI_ENTITY, 0x9e8777, 0x8A7F78,
                     new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
-
     public static final RegistryObject<ModSpawnEggItem> BOTO_SPAWN_EGG = ITEMS.register("boto_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.BOTO_ENTITY, 0xed71a8, 0xf2b8d2,
                     new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
-
     public static final RegistryObject<ModSpawnEggItem> GOLDEN_LION_TAMARIN_SPAWN_EGG = ITEMS.register("golden_tamarin_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY, 0xcc5500, 0x4c3100,
                     new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
-
     public static final RegistryObject<ModSpawnEggItem> MANED_WOLF_SPAWN_EGG = ITEMS.register("maned_wolf_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.MANED_WOLF_ENTITY, 0x4c3100, 0x191919,
                     new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
-
     public static final RegistryObject<ModSpawnEggItem> CAPYBARA_SPAWN_EGG = ITEMS.register("capybara_spawn_egg",
             () -> new ModSpawnEggItem(ModEntityTypes.CAPYBARA_ENTITY, 0xe4d5b4, 0x674F2D,
                     new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
