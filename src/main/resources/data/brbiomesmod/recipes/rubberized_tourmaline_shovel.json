@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:tourmaline_paraiba"
+    },
+    "X": {
+      "item": "brbiomesmod:vulcanized_rubber"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:rubberized_tourmaline_shovel"
+  }
+}
