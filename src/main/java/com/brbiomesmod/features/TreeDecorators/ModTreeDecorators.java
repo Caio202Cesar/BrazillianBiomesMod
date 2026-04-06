@@ -15,6 +15,10 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("passionvine_decorator",
                     () -> new TreeDecoratorType<>(PassionFruitVineLeavesDecorator.CODEC));
 
+    public static final RegistryObject<TreeDecoratorType<PurplePassionFruitVineLeavesDecorator>> PURPLE_PASSIONVINE_DECORATOR =
+            TREE_DECORATORS.register("purple_passionvine_decorator",
+                    () -> new TreeDecoratorType<>(PurplePassionFruitVineLeavesDecorator.CODEC));
+
     public static final RegistryObject<TreeDecoratorType<DutchmanPipeVineDecorator>> DUTCHMAN_PIPE_VINE_DECORATOR =
             TREE_DECORATORS.register("dutchman_pipe_vine_decorator",
                     () -> new TreeDecoratorType<>(DutchmanPipeVineDecorator.CODEC));
@@ -22,6 +26,10 @@ public class ModTreeDecorators {
     public static final RegistryObject<TreeDecoratorType<PassionFruitVineTrunkDecorator>> TRUNK_PASSIONVINE_DECORATOR =
             TREE_DECORATORS.register("passionvine_trunk_decorator",
                     () -> new TreeDecoratorType<>(PassionFruitVineTrunkDecorator.CODEC));
+
+    public static final RegistryObject<TreeDecoratorType<PurplePassionFruitVineTrunkDecorator>> TRUNK_PURPLE_PASSIONVINE_DECORATOR =
+            TREE_DECORATORS.register("passionvine_purple_trunk_decorator",
+                    () -> new TreeDecoratorType<>(PurplePassionFruitVineTrunkDecorator.CODEC));
 
     public static final RegistryObject<TreeDecoratorType<CaatingaPassionFruitVineLeavesDecorator>> CAATINGA_PASSIONVINE_DECORATOR =
             TREE_DECORATORS.register("caatinga_passionvine_decorator",
