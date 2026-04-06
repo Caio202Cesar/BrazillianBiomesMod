@@ -135,6 +135,7 @@
   "item.brbiomesmod.boto_spawn_egg": "Boto Spawn Egg",
   "item.brbiomesmod.golden_tamarin_spawn_egg": "Golden Lion Tamarin Spawn Egg",
   "item.brbiomesmod.maned_wolf_spawn_egg": "Maned Wolf Spawn Egg",
+  "item.brbiomesmod.capybara_spawn_egg": "Capybara Spawn Egg",
 
   "block.brbiomesmod.acai_bunch": "Acai Bunch",
   "block.brbiomesmod.algarrobillo_fence": "Algarrobillo Fence",
@@ -685,6 +686,7 @@
   "entity.brbiomesmod.golden_lion_tamarin": "Golden Lion Tamarin",
   "entity.brbiomesmod.boto_dolphin": "Pink Boto",
   "entity.brbiomesmod.maned_wolf": "Maned Wolf",
+  "entity.brbiomesmod.capybara": "Capybara",
 
   "itemGroup.brazilian_biomes_food": "Brazilian Biomes: Food",
   "itemGroup.brazilian_biomes_fruits_vegetables": "Brazilian Biomes: Fruits & Vegetables",

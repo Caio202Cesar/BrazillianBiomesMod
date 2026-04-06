@@ -185,7 +185,164 @@ public class ModEntityGeneration {
             event.getSpawns().getSpawner(
                     ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get().getClassification()
             ).add(new MobSpawnInfo.Spawners(
-                    ModEntityTypes.TOCO_TOUCAN_ENTITY.get(),
+                    ModEntityTypes.GOLDEN_LION_TAMARIN_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        //Capybara
+        if (event.getName().equals(AmazonRainforestBiome.AMAZON_RAINFOREST.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(AmazonRainforestEdgeBiome.AMAZON_RAINFOREST_EDGE.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(AmazonVarzeaForestBiome.AMAZON_VARZEA_FOREST.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(CerradoBiome.CERRADO.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    25, // weight
+                    3,  // min
+                    8   // max
+            ));
+        }
+
+        if (event.getName().equals(PampasBiome.PAMPAS.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(PampasCoastalFields.PAMPAS_COASTAL_FIELDS.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(ButiaPampasBiome.BUTIA_PAMPAS.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(CoxilhasBiome.COXILHAS.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(PantanalBiome.PANTANAL.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    70, // weight
+                    5,  // min
+                    13   // max
+            ));
+        }
+
+        if (event.getName().equals(AtlanticForestBiome.ATLANTIC_FOREST.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(AtlanticForestHillsBiome.ATLANTIC_FOREST_HILLS.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(CocalForestBiome.COCAL_FOREST_BIOME.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(DunasRestingaBiome.DUNAS_RESTINGA.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
                     50, // weight
                     3,  // min
                     10   // max
