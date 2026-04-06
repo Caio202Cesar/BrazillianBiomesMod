@@ -28,19 +28,19 @@ public class CapybaraModel<T extends CapybaraEntity> extends EntityModel<T> {
 
         legFL = new ModelRenderer(this, 0, 18);
         legFL.setRotationPoint(0.0F, 22.0F, 0.0F);
-        legFL.setTextureOffset(0, 30).addBox(0.0F, -2.0F, -4.0F, 2, 2, 2);
+        legFL.setTextureOffset(0, 30).addBox(0.0F, -2.0F, -4.0F, 2, 3, 2, 0, false);
 
         legFR = new ModelRenderer(this, 0, 18);
         legFR.setRotationPoint(0.0F, 22.0F, 0.0F);
-        legFR.setTextureOffset(22, 26).addBox(-4.0F, -2.0F, -4.0F, 2, 2, 2);
+        legFR.setTextureOffset(22, 26).addBox(-4.0F, -2.0F, -4.0F, 2, 3, 2, 0, false);
 
         legBL = new ModelRenderer(this, 0, 18);
         legBL.setRotationPoint(0.0F, 22.0F, 0.0F);
-        legBL.setTextureOffset(22, 22).addBox(0.0F, -2.0F, 4.0F, 2, 2, 2);
+        legBL.setTextureOffset(22, 22).addBox(0.0F, -2.0F, 4.0F, 2, 3, 2, 0, false);
 
         legBR = new ModelRenderer(this, 0, 18);
         legBR.setRotationPoint(0.0F, 22.0F, 0.0F);
-        legBR.setTextureOffset(22, 18).addBox(-4.0F, -2.0F, 4.0F, 2, 2, 2);
+        legBR.setTextureOffset(22, 18).addBox(-4.0F, -3.0F, 4.0F, 2, 3, 2, 0, false);
 
         head = new ModelRenderer(this, 0, 0);
         head.setRotationPoint(0.0F, 16.0F, -7.0F);
