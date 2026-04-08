@@ -701,5 +701,29 @@
   "itemGroup.brazilian_biomes_woods": "Brazilian Biomes: Madeira",
   "itemGroup.brazilian_biomes_trees": "Brazilian Biomes: Árvores",
   "itemGroup.brazilian_biomes_miscellaneous": "Brazilian Biomes: Diversos",
-  "itemGroup.brazilian_biomes_creatures": "Brazilian Biomes: Criaturas"
+  "itemGroup.brazilian_biomes_creatures": "Brazilian Biomes: Criaturas",
+
+  "item.brbiomesmod.rubberized_netherite_pickaxe": "Picareta de neterite emborrachada",
+  "item.brbiomesmod.rubberized_netherite_shovel": "Pá de neterite emborrachada",
+  "item.brbiomesmod.rubberized_tourmaline_pickaxe": "Picareta de turmalina-paraíba emborrachada",
+  "item.brbiomesmod.rubberized_tourmaline_shovel": "Pá de turmalina-paraíba emborrachada",
+  "item.brbiomesmod.rubberized_diamond_pickaxe": "Picareta de diamante emborrachada",
+  "item.brbiomesmod.rubberized_diamond_shovel": "Pá de diamante emborrachada",
+  "item.brbiomesmod.rubberized_golden_pickaxe": "Picareta de ouro emborrachada",
+  "item.brbiomesmod.rubberized_golden_shovel": "Pá de diamante emborrachada",
+  "item.brbiomesmod.rubberized_iron_pickaxe": "Picareta de ferro emborrachada",
+  "item.brbiomesmod.rubberized_iron_shovel": "Pá de ferro emborrachada",
+  "item.brbiomesmod.rubberized_stone_pickaxe": "Picareta de pedra emborrachada",
+  "item.brbiomesmod.rubberized_stone_shovel": "Pá de pedra emborrachada",
+  "item.brbiomesmod.rubberized_wooden_pickaxe": "Picareta de madeira emborrachada",
+  "item.brbiomesmod.rubberized_wooden_shovel": "Picareta de madeira emborrachada",
+  "item.brbiomesmod.capybara_spawn_egg": "Ovo invocador de capivara",
+  "item.brbiomesmod.purple_passionfruit": "Maracujá-roxo",
+
+  "block.brbiomesmod.passion_fruit_purple_vine": "Maracujazeiro-roxo",
+  "block.brbiomesmod.passion_fruit_purple_flowering_vine": "Maracujazeiro-roxo em flor",
+  "block.brbiomesmod.passion_fruit_purple_fruiting_vine": "Maracujazeiro-roxo com frutos",
+
+  "entity.brbiomesmod.capybara": "Capivara"
+
 }
