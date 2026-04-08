@@ -326,7 +326,7 @@ public class ModItems {
     public static final RegistryObject<Item> RUBBERIZED_STONE_PICKAXE = ITEMS.register("rubberized_stone_pickaxe",
             () -> new RubberizedPickaxeItem(ItemTier.STONE, 1, -2.8F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
-    public static final RegistryObject<Item> RUBBERIZED_WOOD_PICKAXE = ITEMS.register("rubberized_wood_pickaxe",
+    public static final RegistryObject<Item> RUBBERIZED_WOOD_PICKAXE = ITEMS.register("rubberized_wooden_pickaxe",
             () -> new RubberizedPickaxeItem(ItemTier.WOOD, 1, -2.8F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
 
@@ -348,7 +348,7 @@ public class ModItems {
     public static final RegistryObject<Item> RUBBERIZED_STONE_SHOVEL = ITEMS.register("rubberized_stone_shovel",
             () -> new RubberizedShovelItem(ItemTier.STONE, 1.5F, -3.0F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
-    public static final RegistryObject<Item> RUBBERIZED_WOOD_SHOVEL = ITEMS.register("rubberized_wood_shovel",
+    public static final RegistryObject<Item> RUBBERIZED_WOOD_SHOVEL = ITEMS.register("rubberized_wooden_shovel",
             () -> new RubberizedShovelItem(ItemTier.WOOD, 1.5F, -3.0F,
                     new Item.Properties().group(ItemGroup.TOOLS)));
 
