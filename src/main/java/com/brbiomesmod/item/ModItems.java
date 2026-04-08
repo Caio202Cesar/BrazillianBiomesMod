@@ -288,19 +288,19 @@ public class ModItems {
     //Tools
     public static final RegistryObject<Item> TOURMALINE_SWORD = ITEMS.register("tourmaline_paraiba_sword",
             () -> new SwordItem(ModItemTier.TOURMALINE, 3, -2.4F,
-                    new Item.Properties().group(ItemGroup.COMBAT)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> TOURMALINE_PICKAXE = ITEMS.register("tourmaline_paraiba_pickaxe",
             () -> new PickaxeItem(ModItemTier.TOURMALINE, 1, -2.8F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> TOURMALINE_SHOVEL = ITEMS.register("tourmaline_paraiba_shovel",
             () -> new ShovelItem(ModItemTier.TOURMALINE, 1.5F, -3.0F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> TOURMALINE_AXE = ITEMS.register("tourmaline_paraiba_axe",
             () -> new AxeItem(ModItemTier.TOURMALINE, 5.0F, -3.0F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> TOURMALINE_HOE = ITEMS.register("tourmaline_paraiba_hoe",
             () -> new HoeItem(ModItemTier.TOURMALINE, -3, 0.0F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> TAPPING_KNIFE = ITEMS.register("tapping_knife",
             () -> new TappingKnifeItem(new Item.Properties()
                     .maxStackSize(1)
@@ -310,47 +310,47 @@ public class ModItems {
     //Rubber
     public static final RegistryObject<Item> RUBBERIZED_NETHERITE_PICKAXE = ITEMS.register("rubberized_netherite_pickaxe",
             () -> new RubberizedPickaxeItem(ItemTier.NETHERITE, 1, -2.8F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> RUBBERIZED_TOURMALINE_PICKAXE = ITEMS.register("rubberized_tourmaline_pickaxe",
             () -> new RubberizedPickaxeItem(ModItemTier.TOURMALINE, 1, -2.8F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> RUBBERIZED_DIAMOND_PICKAXE = ITEMS.register("rubberized_diamond_pickaxe",
             () -> new RubberizedPickaxeItem(ItemTier.DIAMOND, 1, -2.8F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> RUBBERIZED_GOLDEN_PICKAXE = ITEMS.register("rubberized_golden_pickaxe",
             () -> new RubberizedPickaxeItem(ItemTier.GOLD, 1, -2.8F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> RUBBERIZED_IRON_PICKAXE = ITEMS.register("rubberized_iron_pickaxe",
             () -> new RubberizedPickaxeItem(ItemTier.IRON, 1, -2.8F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> RUBBERIZED_STONE_PICKAXE = ITEMS.register("rubberized_stone_pickaxe",
             () -> new RubberizedPickaxeItem(ItemTier.STONE, 1, -2.8F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> RUBBERIZED_WOOD_PICKAXE = ITEMS.register("rubberized_wooden_pickaxe",
             () -> new RubberizedPickaxeItem(ItemTier.WOOD, 1, -2.8F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
 
     public static final RegistryObject<Item> RUBBERIZED_NETHERITE_SHOVEL = ITEMS.register("rubberized_netherite_shovel",
             () -> new RubberizedShovelItem(ItemTier.NETHERITE, 1.5F, -3.0F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> RUBBERIZED_TOURMALINE_SHOVEL = ITEMS.register("rubberized_tourmaline_shovel",
             () -> new RubberizedShovelItem(ModItemTier.TOURMALINE, 1.5F, -3.0F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> RUBBERIZED_DIAMOND_SHOVEL = ITEMS.register("rubberized_diamond_shovel",
             () -> new RubberizedShovelItem(ItemTier.DIAMOND, 1.5F, -3.0F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> RUBBERIZED_GOLDEN_SHOVEL = ITEMS.register("rubberized_golden_shovel",
             () -> new RubberizedShovelItem(ItemTier.GOLD, 1.5F, -3.0F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> RUBBERIZED_IRON_SHOVEL = ITEMS.register("rubberized_iron_shovel",
             () -> new RubberizedShovelItem(ItemTier.IRON, 1.5F, -3.0F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> RUBBERIZED_STONE_SHOVEL = ITEMS.register("rubberized_stone_shovel",
             () -> new RubberizedShovelItem(ItemTier.STONE, 1.5F, -3.0F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
     public static final RegistryObject<Item> RUBBERIZED_WOOD_SHOVEL = ITEMS.register("rubberized_wooden_shovel",
             () -> new RubberizedShovelItem(ItemTier.WOOD, 1.5F, -3.0F,
-                    new Item.Properties().group(ItemGroup.TOOLS)));
+                    new Item.Properties().group(ModItemGroup.MISC_GROUP)));
 
     //Armor
     public static final RegistryObject<Item> RUBBER_BOOTS = ITEMS.register("rubber_boots",
