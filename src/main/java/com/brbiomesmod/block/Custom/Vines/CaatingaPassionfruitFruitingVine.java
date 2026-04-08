@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.VineBlock;
+import net.minecraft.block.material.Material;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
@@ -24,6 +25,56 @@ public class CaatingaPassionfruitFruitingVine extends VineBlock {
     public CaatingaPassionfruitFruitingVine() {
         super(Properties.from(Blocks.VINE).tickRandomly().zeroHardnessAndResistance()
                 .sound(SoundType.PLANT).doesNotBlockMovement().notSolid().harvestTool(ToolType.HOE));
+    }
+
+    public boolean ticksRandomly(BlockState state) {
+        return true;
+    }
+
+    /**
+     * Performs a random tick on a block.
+     *
+     * @param state
+     * @param worldIn
+     * @param pos
+     * @param random
+     */
+    //Hardiness Zone 9 to 13
+    public static final float MIN_TEMP = 0.8F;
+    public static final float MAX_TEMP = 2F;
+
+    @Override
+    public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        super.randomTick(state, worldIn, pos, random);
+
+        //Growth Logic
+        float temp = worldIn.getBiome(pos).getTemperature();
+        boolean underGlass = isUnderGlass(worldIn, pos);
+
+        if (temp < MIN_TEMP && !underGlass || temp > MAX_TEMP) {
+            if (random.nextFloat() < 0.25F) {
+                worldIn.destroyBlock(pos, false); // no drop
+            }
+
+            return;
+        }
+
+        super.randomTick(state, worldIn, pos, random);
+
+        double chance = 0.001;
+
+        if (random.nextDouble() < chance) {
+
+            BlockState currentState = state;
+            BlockState newState = PlantsGroup.CAATINGA_PASSION_FRUIT_VINE.get().getDefaultState();
+
+            worldIn.setBlockState(pos, PlantsGroup.CAATINGA_PASSION_FRUIT_VINE.get().getDefaultState());
+
+            newState = newState.with(VineBlock.NORTH, currentState.get(VineBlock.NORTH)).with(VineBlock.EAST, currentState.get(VineBlock.EAST))
+                    .with(VineBlock.SOUTH, currentState.get(VineBlock.SOUTH)).with(VineBlock.WEST, currentState.get(VineBlock.WEST));
+
+            worldIn.setBlockState(pos, newState, 3);
+        }
     }
 
     @Override
@@ -47,6 +98,31 @@ public class CaatingaPassionfruitFruitingVine extends VineBlock {
 
         }
         return ActionResultType.SUCCESS;
+    }
+
+    private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
+
+        BlockPos.Mutable checkPos = new BlockPos.Mutable(pos.getX(), pos.getY() + 1, pos.getZ());
+
+        while (checkPos.getY() < world.getHeight()) {
+
+            BlockState stateAbove = world.getBlockState(checkPos);
+
+            if (stateAbove.isAir() || stateAbove.getBlock() instanceof VineBlock) {
+                checkPos.move(Direction.UP);
+                continue;
+            }
+
+            // If this block is glass → protected
+            if (stateAbove.getMaterial() == Material.GLASS) {
+                return true;
+            }
+
+            // Any other solid block blocks protection
+            return false;
+        }
+
+        return false;
     }
 
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
