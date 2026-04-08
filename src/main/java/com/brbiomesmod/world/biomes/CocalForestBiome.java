@@ -32,7 +32,6 @@ public static final RegistryObject<Biome> COCAL_FOREST_BIOME = BIOMES.register("
 
 private static Biome makeCocalForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
-    DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
     DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
     mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
             new MobSpawnInfo.Spawners(EntityType.BAT, 70, 2, 10));
