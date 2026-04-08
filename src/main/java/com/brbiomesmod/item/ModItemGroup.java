@@ -53,7 +53,7 @@ public class ModItemGroup {
         @Override
         public ItemStack createIcon()
         {
-            return new ItemStack(ModItems.BRAZILNUT_SHELL.get());
+            return new ItemStack(ModItems.TOURMALINE_PARAIBA.get());
         }};
 
     public static final ItemGroup CREATURES_GROUP = new ItemGroup("brazilian_biomes_creatures")
