@@ -35,7 +35,7 @@
                   ]
                 }
               ],
-              "name": "brbiomesmod:yellow_mombin_fruiting_leaves"
+              "name": "brbiomesmod:yellow_mombin_leaves"
             },
             {
               "type": "minecraft:item",
@@ -82,7 +82,7 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 1.0,
+                "min": 0.0,
                 "max": 2.0,
                 "type": "minecraft:uniform"
               }
@@ -137,11 +137,11 @@
               "condition": "minecraft:table_bonus",
               "enchantment": "minecraft:fortune",
               "chances": [
-                0.5,
-                0.55,
-                0.525,
-                0.5333334,
-                0.55
+                0.4,
+                0.45,
+                0.425,
+                0.4333334,
+                0.45
               ]
             }
           ],
@@ -149,8 +149,8 @@
             {
               "function": "minecraft:set_count",
               "count": {
-                "min": 5.0,
-                "max": 10.0,
+                "min": 0.0,
+                "max": 3.0,
                 "type": "minecraft:uniform"
               }
             },
