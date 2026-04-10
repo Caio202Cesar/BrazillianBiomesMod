@@ -71,7 +71,7 @@ public class FeijoaFloweringLeaves extends LeavesBlock implements IForgeShearabl
         int distance = state.get(LeavesBlock.DISTANCE);
         boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-        if ("SUMMER".equals(currentSeason) && random.nextInt(55) == 0) {
+        if ("SUMMER".equals(currentSeason) && random.nextInt(25) == 0) {
             if (warmSummer) {
                     setFruiting(worldIn, pos, distance, persistent);
                 } else {

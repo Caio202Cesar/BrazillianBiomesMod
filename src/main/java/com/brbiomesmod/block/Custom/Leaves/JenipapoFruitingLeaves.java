@@ -104,7 +104,7 @@ public class JenipapoFruitingLeaves extends LeavesBlock implements IForgeShearab
         }
 
         //Subtropical flowering
-        if (temp <= 0.89F && "SUMMER".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp <= 0.89F && "SPRING".equals(currentSeason) && random.nextInt(25) == 0) {
             int dropCount = 1 + random.nextInt(3);
 
             ItemStack itemStack = new ItemStack(ModItems.RIPE_JENIPAPO.get(), dropCount);

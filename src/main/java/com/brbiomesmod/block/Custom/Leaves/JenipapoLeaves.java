@@ -90,7 +90,7 @@ public class JenipapoLeaves extends LeavesBlock implements IForgeShearable {
         }
 
         //Subtropical flowering
-        if (temp <= 0.89F && "SUMMER".equals(currentSeason) && random.nextInt(25) == 0) {
+        if (temp <= 0.89F && "SPRING".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 

@@ -100,23 +100,6 @@ public class JenipapoFruitingDriedBranches extends LeavesBlock implements IForge
 
             worldIn.setBlockState(pos, newState, 2);
         }
-
-        if (temp <= 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
-
-            int dropCount = 1 + random.nextInt(3);
-
-            ItemStack itemStack = new ItemStack(ModItems.RIPE_JENIPAPO.get(), dropCount);
-            ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
-
-            worldIn.addEntity(itemEntity);
-
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
-        }
     }
 
     @Override
