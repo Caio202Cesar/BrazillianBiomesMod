@@ -166,6 +166,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(10, 11, 3), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SUBTROPICAL_YELLOW_IPE_TREE = register("subtropical_yellow_ipe_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
+                    new SimpleBlockStateProvider(States.YELLOW_IPE_BLOSSOM),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLE_IPE_TREE = register("purple_ipe_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
                     new SimpleBlockStateProvider(States.PURPLE_IPE_LEAVES),
@@ -1133,6 +1140,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState PINK_IPE_LEAVES = TreesGroup.PINK_IPE_LEAVES.get().getDefaultState();
         protected static final BlockState WHITE_IPE_LEAVES = TreesGroup.WHITE_IPE_LEAVES.get().getDefaultState();
         protected static final BlockState APRICOT_IPE_LEAVES = TreesGroup.APRICOT_IPE_LEAVES.get().getDefaultState();
+        protected static final BlockState YELLOW_IPE_BLOSSOM = TreesGroup.YELLOW_IPE_BLOSSOM.get().getDefaultState();
 
         protected static final BlockState CAMBUCI_LOG = TreesGroup.CAMBUCI_LOG.get().getDefaultState();
         protected static final BlockState CAMBUCI_LEAVES = TreesGroup.CAMBUCI_LEAVES.get().getDefaultState();
@@ -1357,7 +1365,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> OCOTEA_TREES = register("ocotea_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_SASSAFRAS_TREE.withChance(0.2F),
                             BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.1F), IMBUIA_TREE.withChance(0.3F), IMBUIA_FANCY_TREE_VINE.withChance(0.078F),
-                            BRAZILLIAN_SASSAFRAS_TREE_WITH_PURPLE_PASSIONVINE.withChance(0.067F), YELLOW_IPE_TREE.withChance(0.1F)), IMBUIA_FANCY_TREE))
+                            BRAZILLIAN_SASSAFRAS_TREE_WITH_PURPLE_PASSIONVINE.withChance(0.067F), SUBTROPICAL_YELLOW_IPE_TREE.withChance(0.1F)), IMBUIA_FANCY_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> MATE_TREES = register("mate_trees",
