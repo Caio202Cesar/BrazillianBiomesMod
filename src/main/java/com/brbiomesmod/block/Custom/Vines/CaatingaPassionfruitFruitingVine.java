@@ -23,7 +23,7 @@ import java.util.Random;
 
 public class CaatingaPassionfruitFruitingVine extends VineBlock {
     public CaatingaPassionfruitFruitingVine() {
-        super(Properties.from(Blocks.VINE).tickRandomly().zeroHardnessAndResistance()
+        super(Properties.from(Blocks.VINE).zeroHardnessAndResistance()
                 .sound(SoundType.PLANT).doesNotBlockMovement().notSolid().harvestTool(ToolType.HOE));
     }
 

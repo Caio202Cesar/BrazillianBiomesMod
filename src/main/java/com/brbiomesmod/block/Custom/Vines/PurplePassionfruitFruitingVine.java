@@ -23,9 +23,22 @@ import java.util.Random;
 
 public class PurplePassionfruitFruitingVine extends VineBlock {
     public PurplePassionfruitFruitingVine() {
-        super(Properties.from(Blocks.VINE).tickRandomly().zeroHardnessAndResistance()
+        super(Properties.from(Blocks.VINE).zeroHardnessAndResistance()
                 .sound(SoundType.PLANT).doesNotBlockMovement().notSolid().harvestTool(ToolType.HOE));
     }
+
+    public boolean ticksRandomly(BlockState state) {
+        return true;
+    }
+
+    /**
+     * Performs a random tick on a block.
+     *
+     * @param state
+     * @param worldIn
+     * @param pos
+     * @param random
+     */
 
     //Hardiness Zone 9 to 11
     public static final float MIN_TEMP = 0.8F;
