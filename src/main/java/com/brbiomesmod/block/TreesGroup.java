@@ -1081,7 +1081,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    /*public static final RegistryObject<Block> CANNONBALL_TREE_LOG = registerBlock("cannonball_tree_log",
+    public static final RegistryObject<Block> CANNONBALL_TREE_LOG = registerBlock("cannonball_tree_log",
             ModLogs::new);
     public static final RegistryObject<Block> CANNONBALL_TREE_LEAVES = registerBlock("cannonball_tree_leaves",
             ModLeaves::new);
@@ -1092,7 +1092,34 @@ public class TreesGroup {
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_CANNONBALL_TREE_SAPLING = BLOCKS.register("potted_cannonball_tree_sapling",
             () -> new FlowerPotBlock(TreesGroup.SANDBOX_TREE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));*/
+                    .zeroHardnessAndResistance().notSolid()));
+
+
+    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_LOG = registerBlock("podocarpus_lambertii_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_LEAVES = registerBlock("podocarpus_lambertii_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_SAPLING = registerBlock("podocarpus_lambertii_sapling",
+            PodocarpusLambertiiSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PODOCARPUS_LAMBERTII_SAPLING = BLOCKS.register("potted_podocarpus_lambertii_sapling",
+            () -> new FlowerPotBlock(TreesGroup.PODOCARPUS_LAMBERTII_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
+
+
+    public static final RegistryObject<Block> PAU_ROSA_LOG = registerBlock("pau_rosa_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PAU_ROSA_LEAVES = registerBlock("pau_rosa_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PAU_ROSA_BLOSSOM = registerBlock("pau_rosa_blossom",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PAU_ROSA_SAPLING = registerBlock("pau_rosa_sapling",
+            CannonballTreeSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PAU_ROSA_SAPLING = BLOCKS.register("potted_pau_rosa_sapling",
+            () -> new FlowerPotBlock(TreesGroup.PAU_ROSA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
 
     public static final RegistryObject<Block> HUMBOLDT_WILLOW_LOG = registerBlock("humboldt_willow_log",
             ModLogs::new);
