@@ -1087,11 +1087,17 @@ public class TreesGroup {
             ModLeaves::new);
     public static final RegistryObject<Block> CANNONBALL_TREE_DRIED_BRANCHES = registerBlock("cannonball_tree_dried_branches",
             ModLeaves::new);
+    public static final RegistryObject<Block> CANNONBALL_TREE_TRUNK_BRANCHES = registerBlock("cannonball_tree_trunk_branches",
+            CannonballTreeTrunkBranches::new);
+    public static final RegistryObject<Block> CANNONBALL_TREE_FLOWERING_TRUNK_BRANCHES = registerBlock("cannonball_tree_flowering_trunk_branches",
+            CannonballTreeFloweringTrunkBranches::new);
+    public static final RegistryObject<Block> CANNONBALL_TREE_FRUITING_TRUNK_BRANCHES = registerBlock("cannonball_tree_fruiting_trunk_branches",
+            CannonballTreeFruitingTrunkBranches::new);
     public static final RegistryObject<Block> CANNONBALL_TREE_SAPLING = registerBlock("cannonball_tree_sapling",
             CannonballTreeSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_CANNONBALL_TREE_SAPLING = BLOCKS.register("potted_cannonball_tree_sapling",
-            () -> new FlowerPotBlock(TreesGroup.SANDBOX_TREE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            () -> new FlowerPotBlock(TreesGroup.CANNONBALL_TREE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
 
@@ -1114,7 +1120,7 @@ public class TreesGroup {
     public static final RegistryObject<Block> PAU_ROSA_BLOSSOM = registerBlock("pau_rosa_blossom",
             ModLeaves::new);
     public static final RegistryObject<Block> PAU_ROSA_SAPLING = registerBlock("pau_rosa_sapling",
-            CannonballTreeSapling::new);
+            PauRosaSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_PAU_ROSA_SAPLING = BLOCKS.register("potted_pau_rosa_sapling",
             () -> new FlowerPotBlock(TreesGroup.PAU_ROSA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
