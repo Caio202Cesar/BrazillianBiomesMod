@@ -37,6 +37,7 @@ public class ComposterHandler {
             CompostingHelper.registerCompostable(ModItems.PINEAPPLE_GUAVA.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.JABUTICABA.get(), 0.3F);
             CompostingHelper.registerCompostable(ModItems.PASSIONFRUIT.get(), 0.65F);
+            CompostingHelper.registerCompostable(ModItems.PURPLE_PASSIONFRUIT.get(), 0.65F);
             CompostingHelper.registerCompostable(ModItems.TURK_TURBAN_BERRIES.get(), 0.3F);
             CompostingHelper.registerCompostable(ModItems.CAGAITA.get(), 0.3F);
             CompostingHelper.registerCompostable(ModItems.CECROPIA_FRUITS.get(), 0.3F);
