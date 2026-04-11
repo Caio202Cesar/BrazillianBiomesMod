@@ -116,6 +116,9 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     public static void withPassionvineAtlanticForestTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ATLANTIC_FOREST_TREES_WITH_PASSIONVINE);
     }
+    public static void withPurplePassionvineAtlanticForestTrees(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ATLANTIC_FOREST_TREES_WITH_PURPLE_PASSIONVINE);
+    }
     public static void withIpomaeaPesCaprae(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.IPOMAEA_PES_CAPRAE_PATCH);
     }
