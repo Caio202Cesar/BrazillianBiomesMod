@@ -1081,7 +1081,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> CANNONBALL_TREE_LOG = registerBlock("cannonball_tree_log",
+    /*public static final RegistryObject<Block> CANNONBALL_TREE_LOG = registerBlock("cannonball_tree_log",
             ModLogs::new);
     public static final RegistryObject<Block> CANNONBALL_TREE_LEAVES = registerBlock("cannonball_tree_leaves",
             ModLeaves::new);
@@ -1124,7 +1124,7 @@ public class TreesGroup {
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_PAU_ROSA_SAPLING = BLOCKS.register("potted_pau_rosa_sapling",
             () -> new FlowerPotBlock(TreesGroup.PAU_ROSA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
+                    .zeroHardnessAndResistance().notSolid()));*/
 
 
     public static final RegistryObject<Block> HUMBOLDT_WILLOW_LOG = registerBlock("humboldt_willow_log",
