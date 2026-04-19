@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "#W#"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:bacuri"
+    },
+    "W": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:bacuri",
+    "count": 1
+  }
+}

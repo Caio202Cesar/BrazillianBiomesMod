@@ -124,5 +124,9 @@ public class ModFoods extends Foods {
     public static final Food PASSIONFRUIT_MOUSSE = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food CECROPIA_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
     public static final Food YELLOW_MOMBIN_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food ACAI_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food ACAI_BANANA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food BACURI_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+
 
 }
