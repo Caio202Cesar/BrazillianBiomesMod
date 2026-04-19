@@ -117,6 +117,14 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.ACAI_ICE_CREAM)));
     public static final RegistryObject<Item> ACAI_BANANA_ICE_CREAM = ITEMS.register("acai_banana_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.ACAI_BANANA_ICE_CREAM)));
+    public static final RegistryObject<Item> ACAI_JAM = ITEMS.register("acai_jam",
+            () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
+    public static final RegistryObject<Item> ACAI_JAM_TOAST = ITEMS.register("acai_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.ACAI_JAM_TOAST)));
+    public static final RegistryObject<Item> ACAI_BANANA_JAM = ITEMS.register("acai_banana_jam",
+            () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
+    public static final RegistryObject<Item> ACAI_BANANA_JAM_TOAST = ITEMS.register("acai_banana_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.ACAI_JAM_TOAST)));
 
 
     public static final RegistryObject<Item> BACURI_PASTE = ITEMS.register("bacuri_paste",
@@ -126,7 +134,6 @@ public class ModItems {
                     .food(ModFoods.BACURI_JUICE)));
     public static final RegistryObject<Item> BACURI_ICE_CREAM = ITEMS.register("bacuri_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BACURI_ICE_CREAM)));
-
     public static final RegistryObject<Item> BACURI_JAM = ITEMS.register("bacuri_jam",
             () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
     public static final RegistryObject<Item> BACURI_JAM_TOAST = ITEMS.register("bacuri_jam_toast",
