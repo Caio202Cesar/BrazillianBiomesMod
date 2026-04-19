@@ -488,12 +488,15 @@ public class ModItems {
             () -> new ModSpawnEggItem(ModEntityTypes.CAPYBARA_ENTITY, 0xe4d5b4, 0x674F2D,
                     new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
 
+
     public static RegistryObject<Item> ICE_CREAM_CONE;
     public static RegistryObject<Item> BANANA;
     public static RegistryObject<Item> CALABASH;
     public static RegistryObject<Item> COCONUT;
     public static RegistryObject<Item> SULPHUR;
     public static RegistryObject<Item> JAR;
+    public static RegistryObject<Item> LEMON;
+    public static RegistryObject<Item> TOAST;
 
     public static void register(IEventBus eventBus) {
         String modA = "caiocesarbiomes";
@@ -503,6 +506,8 @@ public class ModItems {
         ResourceLocation coconutId = new ResourceLocation(modA, "coconut");
         ResourceLocation sulphurId = new ResourceLocation(modA, "sulphur");
         ResourceLocation jarId = new ResourceLocation(modA, "jar");
+        ResourceLocation lemonId = new ResourceLocation(modA, "lemon");
+        ResourceLocation toastId = new ResourceLocation(modA, "toast");
 
         boolean shouldRegisterItems = false;
 
@@ -551,6 +556,22 @@ public class ModItems {
         } else {
             JAR = ITEMS.register("jar", () ->
                     new Item(new Item.Properties().group(ItemGroup.MISC)));
+            shouldRegisterItems = true;
+        }
+
+        if (ForgeRegistries.ITEMS.containsKey(lemonId)) {
+            LEMON = RegistryObject.of(lemonId, ForgeRegistries.ITEMS);
+        } else {
+            LEMON = ITEMS.register("lemon", () ->
+                    new Item(new Item.Properties().group(ItemGroup.FOOD)));
+            shouldRegisterItems = true;
+        }
+
+        if (ForgeRegistries.ITEMS.containsKey(toastId)) {
+            TOAST = RegistryObject.of(toastId, ForgeRegistries.ITEMS);
+        } else {
+            TOAST = ITEMS.register("toast", () ->
+                    new Item(new Item.Properties().group(ItemGroup.FOOD)));
             shouldRegisterItems = true;
         }
 
