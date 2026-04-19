@@ -124,7 +124,7 @@ public class ModItems {
     public static final RegistryObject<Item> ACAI_BANANA_JAM = ITEMS.register("acai_banana_jam",
             () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
     public static final RegistryObject<Item> ACAI_BANANA_JAM_TOAST = ITEMS.register("acai_banana_jam_toast",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.ACAI_JAM_TOAST)));
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.ACAI_BANANA_JAM_TOAST)));
 
 
     public static final RegistryObject<Item> BACURI_PASTE = ITEMS.register("bacuri_paste",
