@@ -3,28 +3,25 @@
   "group": "food",
   "pattern": [
     "abb",
-    "ebb",
-    "ccd"
+    "cbb",
+    "cbd"
   ],
   "key": {
     "a": {
       "item": "caiocesarbiomes:jar"
     },
     "b": {
-      "item": "brbiomesmod:acai_berries"
+      "item": "brbiomesmod:buriti"
     },
     "c": {
-      "item": "caiocesarbiomes:banana"
+      "item": "minecraft:sugar"
     },
     "d": {
       "item": "caiocesarbiomes:lemon"
-    },
-    "e": {
-      "item": "minecraft:sugar"
     }
   },
   "result": {
-    "item": "brbiomesmod:acai_banana_jam",
+    "item": "brbiomesmod:buriti_jam",
     "count": 1
   }
 }

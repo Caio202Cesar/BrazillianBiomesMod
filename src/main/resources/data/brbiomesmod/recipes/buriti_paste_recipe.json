@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "###",
+    "WWW",
+    "WWW"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
+    },
+    "W": {
+      "item": "brbiomesmod:buriti"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:buriti_paste",
+    "count": 1
+  }
+}

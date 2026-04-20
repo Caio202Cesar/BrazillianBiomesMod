@@ -16,9 +16,6 @@ public class ModFoods extends Foods {
     public static final Food BLACK_PITANGA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food RIO_GRANDE_CHERRY = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food COOKED_PARANA_PINENUT = (new Food.Builder()).hunger(2).saturation(0.1F).build();
-    public static final Food GUARANA_FRUIT = (new Food.Builder()).hunger(2).saturation(0.1F)
-            .effect(new EffectInstance(Effects.JUMP_BOOST, 100, 0), 0.6F)
-            .effect(new EffectInstance(Effects.SPEED, 100, 0), 0.6F).build();
     public static final Food PELLED_BRAZILNUT = (new Food.Builder()).hunger(1).saturation(0.1F).build();
     public static final Food ROASTED_BRAZILNUT = (new Food.Builder()).hunger(2).saturation(0.2F).build();
     public static final Food SAPUCAIA_NUTS = (new Food.Builder()).hunger(2).saturation(0.2F).build();
@@ -127,6 +124,8 @@ public class ModFoods extends Foods {
     public static final Food ACAI_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food ACAI_BANANA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food BACURI_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
-
+    public static final Food BACURI_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food BURITI_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food BURITI_PASTE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
 
 }
