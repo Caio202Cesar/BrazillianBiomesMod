@@ -11,7 +11,14 @@ public class ModFoods extends Foods {
     public static final Food COOKED_CASHEWNUT = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food JUA_BERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food CAMBUCI = (new Food.Builder()).hunger(2).saturation(0.3F).build();
-    public static final Food MONKEY_CAJARANA = (new Food.Builder()).hunger(2).saturation(0.3F).build();
+    public static final Food MONKEY_CAJARANA = (new Food.Builder()).hunger(2).saturation(0.3F)
+            .effect(new EffectInstance(Effects.REGENERATION, 500, 1), 1.0F)
+            .effect(new EffectInstance(Effects.HUNGER, 1500, 0), 1.0F)
+            .effect(new EffectInstance(Effects.HEALTH_BOOST, 500, 0), 1.0F)
+            .effect(new EffectInstance(Effects.BLINDNESS, 500, 0), 1.0F)
+            .effect(new EffectInstance(Effects.SLOWNESS, 500, 0), 1.0F)
+            .effect(new EffectInstance(Effects.MINING_FATIGUE, 500, 0), 1.0F)
+            .build();
     public static final Food PITANGA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food BLACK_PITANGA = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food RIO_GRANDE_CHERRY = (new Food.Builder()).hunger(2).saturation(0.1F).build();
