@@ -11,7 +11,7 @@
       "item": "caiocesarbiomes:jar"
     },
     "b": {
-      "item": "brbiomesmod:bacuri"
+      "item": "brbiomesmod:cashew_apple"
     },
     "c": {
       "item": "minecraft:sugar"
@@ -21,7 +21,7 @@
     }
   },
   "result": {
-    "item": "brbiomesmod:bacuri_jam",
+    "item": "brbiomesmod:cashew_apple_jam",
     "count": 1
   }
 }

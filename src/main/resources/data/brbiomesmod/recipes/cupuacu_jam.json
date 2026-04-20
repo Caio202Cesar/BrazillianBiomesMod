@@ -3,7 +3,7 @@
   "group": "food",
   "pattern": [
     "abb",
-    "cb ",
+    "c  ",
     "c d"
   ],
   "key": {
@@ -11,7 +11,7 @@
       "item": "caiocesarbiomes:jar"
     },
     "b": {
-      "item": "brbiomesmod:bacuri"
+      "item": "brbiomesmod:cupuacu"
     },
     "c": {
       "item": "minecraft:sugar"
@@ -21,7 +21,7 @@
     }
   },
   "result": {
-    "item": "brbiomesmod:bacuri_jam",
+    "item": "brbiomesmod:cupuacu_jam",
     "count": 1
   }
 }
