@@ -219,6 +219,10 @@ public class ModItems {
                     .food(ModFoods.CAMBUCI_JUICE)));
     public static final RegistryObject<Item> CAMBUCI_ICE_CREAM = ITEMS.register("cambuci_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CAMBUCI_ICE_CREAM)));
+    public static final RegistryObject<Item> CAMBUCI_JAM = ITEMS.register("cambuci_jam",
+            () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
+    public static final RegistryObject<Item> CAMBUCI_JAM_TOAST = ITEMS.register("cambuci_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CAMBUCI_JAM_TOAST)));
 
 
     public static final RegistryObject<Item> PITANGA_JUICE = ITEMS.register("pitanga_juice",

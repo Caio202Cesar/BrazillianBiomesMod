@@ -131,5 +131,6 @@ public class ModFoods extends Foods {
     public static final Food CASHEW_APPLE_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food CUPUACU_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food CUPUACU_ICE_CREAM = (new Food.Builder()).hunger(4).saturation(0.3F).build();
+    public static final Food CAMBUCI_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
 
 }
