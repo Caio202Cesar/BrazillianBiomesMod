@@ -230,11 +230,10 @@ public class ModItems {
                     .food(ModFoods.PITANGA_JUICE)));
     public static final RegistryObject<Item> PITANGA_ICE_CREAM = ITEMS.register("pitanga_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PITANGA_ICE_CREAM)));
-    public static final RegistryObject<Item> CAMBUCI_JAM = ITEMS.register("cambuci_jam",
+    public static final RegistryObject<Item> PITANGA_JAM = ITEMS.register("pitanga_jam",
             () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
-    public static final RegistryObject<Item> CAMBUCI_JAM_TOAST = ITEMS.register("cambuci_jam_toast",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CAMBUCI_JAM_TOAST)));
-
+    public static final RegistryObject<Item> PITANGA_JAM_TOAST = ITEMS.register("pitanga_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PITANGA_JAM_TOAST)));
     public static final RegistryObject<Item> BLACK_PITANGA_JUICE = ITEMS.register("black_pitanga_juice",
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
                     .food(ModFoods.BLACK_PITANGA_JUICE)));
@@ -244,6 +243,7 @@ public class ModItems {
             () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
     public static final RegistryObject<Item> BLACK_PITANGA_JAM_TOAST = ITEMS.register("black_pitanga_jam_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BLACK_PITANGA_JAM_TOAST)));
+
 
     public static final RegistryObject<Item> RIO_GRANDE_CHERRY_JUICE = ITEMS.register("rio_grande_cherry_juice",
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
