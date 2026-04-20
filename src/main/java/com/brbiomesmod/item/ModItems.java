@@ -300,6 +300,10 @@ public class ModItems {
                     .food(ModFoods.JABUTICABA_JUICE)));
     public static final RegistryObject<Item> JABUTICABA_ICE_CREAM = ITEMS.register("jabuticaba_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.JABUTICABA_ICE_CREAM)));
+    public static final RegistryObject<Item> JABUTICABA_JAM = ITEMS.register("jabuticaba_jam",
+            () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
+    public static final RegistryObject<Item> JABUTICABA_JAM_TOAST = ITEMS.register("jabuticaba_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.JABUTICABA_JAM_TOAST)));
 
 
     public static final RegistryObject<Item> PASSIONFRUIT_JUICE = ITEMS.register("passionfruit_juice",
