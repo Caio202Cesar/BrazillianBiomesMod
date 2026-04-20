@@ -143,5 +143,8 @@ public class ModFoods extends Foods {
     public static final Food BLACK_PITANGA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food RIO_GRANDE_CHERRY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food PINK_PEEPER_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food MANGABA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food BUTIA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food BUTIA_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
 
 }

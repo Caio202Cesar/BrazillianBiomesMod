@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "XXX",
+    "X#X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "caiocesarbiomes:toast"
+    },
+    "#": {
+      "item": "brbiomesmod:mangaba_jam"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:mangaba_jam_toast",
+    "count": 8
+  }
+}
