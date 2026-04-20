@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "XXX",
+    "X#X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "caiocesarbiomes:toast"
+    },
+    "#": {
+      "item": "brbiomesmod:camu_camu_jam"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:camu_camu_jam_toast",
+    "count": 8
+  }
+}
