@@ -146,5 +146,6 @@ public class ModFoods extends Foods {
     public static final Food MANGABA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food BUTIA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food BUTIA_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food FEIJOA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
 
 }
