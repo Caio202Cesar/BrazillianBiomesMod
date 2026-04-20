@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Passiflora edulis$(br)$(bold)Biomes:$(reset) Atlantic Forest"
+      "text": "$(bold)Scientific Name:$(reset) Passiflora edulis var. flavicarpa$(br)$(bold)Biomes:$(reset) Atlantic Forest"
     },
     {
       "type": "spotlight",

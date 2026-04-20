@@ -6,13 +6,13 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Nome Científico:$(reset) Passiflora edulis var. flavicarpa$(br)$(bold)Biomes:$(reset) Atlantic Forest"
+      "text": "$(bold)Scientific Name:$(reset) Passiflora edulis var. edulis$(br)$(bold)Biomes:$(reset) Atlantic Forest"
     },
     {
       "type": "spotlight",
-      "item": "brbiomesmod:passionfruit",
+      "item": "brbiomesmod:passion_fruit_flowering_vine",
       "title": "Tree Spotlight",
-      "text": "Edible fruits."
+      "text": "Flowering vine."
     }
   ]
 }
