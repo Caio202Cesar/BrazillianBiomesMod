@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "brbiomesmod:item/pink_pepper_jam"
+    "layer0": "brbiomesmod:item/pink_peeper_jam"
   }
 }

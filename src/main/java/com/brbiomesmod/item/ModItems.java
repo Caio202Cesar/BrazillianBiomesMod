@@ -381,16 +381,16 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.UMBU_ICE_CREAM)));
 
 
-    public static final RegistryObject<Item> CECROPIA_JUICE = ITEMS.register("cecropia_juice",
+    /*public static final RegistryObject<Item> CECROPIA_JUICE = ITEMS.register("cecropia_juice",
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
-                    .food(ModFoods.CECROPIA_JUICE)));
+                    .food(ModFoods.CECROPIA_JUICE)));*/
     public static final RegistryObject<Item> CECROPIA_ICE_CREAM = ITEMS.register("cecropia_fruit_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CECROPIA_ICE_CREAM)));
 
 
-    public static final RegistryObject<Item> YELLOW_MOMBIN_JUICE = ITEMS.register("yellow_mombin_juice",
+    /*public static final RegistryObject<Item> YELLOW_MOMBIN_JUICE = ITEMS.register("yellow_mombin_juice",
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
-                    .food(ModFoods.YELLOW_MOMBIN_JUICE)));
+                    .food(ModFoods.YELLOW_MOMBIN_JUICE)));*/
     public static final RegistryObject<Item> YELLOW_MOMBIN_ICE_CREAM = ITEMS.register("yellow_mombin_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.YELLOW_MOMBIN_ICE_CREAM)));
 
