@@ -3,6 +3,7 @@ package com.brbiomesmod.world.gen;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.entity.ModEntityTypes;
 import com.brbiomesmod.world.biomes.*;
+import net.minecraft.entity.EntityClassification;
 import net.minecraft.world.biome.MobSpawnInfo;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -148,15 +149,18 @@ public class ModEntityGeneration {
                     3,  // min
                     10   // max
             ));
+        }
 
-            event.getSpawns().getSpawner(
-                    ModEntityTypes.BOTO_ENTITY.get().getClassification()
-            ).add(new MobSpawnInfo.Spawners(
-                    ModEntityTypes.BOTO_ENTITY.get(),
-                    70, // weight
-                    3,  // min
-                    7   // max
-            ));
+        if (event.getName() != null &&
+                event.getName().equals(AmazonRainforestBiome.AMAZON_RAINFOREST.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(EntityClassification.WATER_CREATURE)
+                    .add(new MobSpawnInfo.Spawners(
+                            ModEntityTypes.BOTO_ENTITY.get(),
+                            70,
+                            3,
+                            7
+                    ));
         }
 
         if (event.getName().equals(AmazonVarzeaForestBiome.AMAZON_VARZEA_FOREST.get().getRegistryName())) {

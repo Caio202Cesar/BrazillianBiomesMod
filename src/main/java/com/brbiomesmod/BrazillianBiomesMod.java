@@ -6,6 +6,7 @@ import com.brbiomesmod.block.PlantsGroup;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.block.WoodGroup;
 import com.brbiomesmod.entity.ModEntityTypes;
+import com.brbiomesmod.entity.custom.BotoEntity;
 import com.brbiomesmod.entity.render.*;
 import com.brbiomesmod.events.ModEntities;
 import com.brbiomesmod.events.ModParticles;
@@ -17,6 +18,8 @@ import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
+import net.minecraft.world.gen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -92,7 +95,12 @@ public class BrazillianBiomesMod {
 
             ModBiomeGeneration.generateBiomes();
 
-
+            EntitySpawnPlacementRegistry.register(
+                    ModEntityTypes.BOTO_ENTITY.get(),
+                    EntitySpawnPlacementRegistry.PlacementType.IN_WATER,
+                    Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
+                    BotoEntity::canSpawn
+            );
         });
     }
 
@@ -101,6 +109,7 @@ public class BrazillianBiomesMod {
             LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().fontRenderer);
 
             RenderTypeLookup.setRenderLayer(MiscBlocks.CASSAVA_CROP.get(), RenderType.getCutout());
+
         });
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.TOCO_TOUCAN_ENTITY.get(), TocoToucanRenderer::new);

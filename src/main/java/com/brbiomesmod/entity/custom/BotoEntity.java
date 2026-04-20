@@ -6,13 +6,19 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.passive.DolphinEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.pathfinding.SwimmerPathNavigator;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.util.*;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
 
-public class BotoEntity extends DolphinEntity {
+import java.util.Random;
 
+public class BotoEntity extends DolphinEntity {
     public BotoEntity(EntityType<? extends DolphinEntity> type, World worldIn) {
         super(type, worldIn);
+        this.navigator = new SwimmerPathNavigator(this, world);
     }
 
     // =========================
@@ -23,6 +29,24 @@ public class BotoEntity extends DolphinEntity {
                 .createMutableAttribute(Attributes.MAX_HEALTH, 10.0D)
                 .createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.25D)
                 .createMutableAttribute(Attributes.ATTACK_DAMAGE, 3.0D);
+    }
+
+    public static boolean canSpawn(EntityType<BotoEntity> type,
+                                   IWorld world,
+                                   SpawnReason reason,
+                                   BlockPos pos,
+                                   Random random) {
+
+        // Must be water at spawn position
+        if (!world.getFluidState(pos).isTagged(FluidTags.WATER)) return false;
+
+        // Must have water BELOW (not standing on ground edge)
+        if (!world.getFluidState(pos.down()).isTagged(FluidTags.WATER)) return false;
+
+        // Must NOT have air below (prevents shoreline spawning)
+        if (world.getBlockState(pos.down()).isAir()) return false;
+
+        return true;
     }
 
     // =========================
