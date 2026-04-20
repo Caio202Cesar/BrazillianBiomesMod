@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "abb",
+    "ebb",
+    "ccd"
+  ],
+  "key": {
+    "a": {
+      "item": "caiocesarbiomes:jar"
+    },
+    "b": {
+      "item": "brbiomesmod:pink_peeper"
+    },
+    "c": {
+      "item": "minecraft:apple"
+    },
+    "d": {
+      "item": "caiocesarbiomes:lemon"
+    },
+    "e": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:acai_banana_jam",
+    "count": 1
+  }
+}

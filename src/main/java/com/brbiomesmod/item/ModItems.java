@@ -256,10 +256,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.RIO_GRANDE_CHERRY_JAM_TOAST)));
 
 
-    public static final RegistryObject<Item> PINK_PEEPER_JAM = ITEMS.register("pink_pepper_jam",
+    public static final RegistryObject<Item> PINK_PEEPER_JAM = ITEMS.register("pink_peeper_jam",
             () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
-    public static final RegistryObject<Item> PINK_PEEPER_JAM_TOAST = ITEMS.register("pink_pepper_jam_toast",
-            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PINK_PEPPER_JAM_TOAST)));
+    public static final RegistryObject<Item> PINK_PEEPER_JAM_TOAST = ITEMS.register("pink_peeper_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PINK_PEEPER_JAM_TOAST)));
 
 
     public static final RegistryObject<Item> MANGABA_JUICE = ITEMS.register("mangaba_juice",
