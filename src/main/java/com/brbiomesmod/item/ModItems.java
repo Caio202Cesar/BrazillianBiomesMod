@@ -348,6 +348,10 @@ public class ModItems {
                     .food(ModFoods.PEQUI_JUICE)));
     public static final RegistryObject<Item> PEQUI_ICE_CREAM = ITEMS.register("pequi_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PEQUI_ICE_CREAM)));
+    public static final RegistryObject<Item> PEQUI_JAM = ITEMS.register("pequi_jam",
+            () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
+    public static final RegistryObject<Item> PEQUI_JAM_TOAST = ITEMS.register("pequi_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.PEQUI_JAM_TOAST)));
 
 
     public static final RegistryObject<Item> CAGAITA_ICE_CREAM = ITEMS.register("cagaita_ice_cream",
