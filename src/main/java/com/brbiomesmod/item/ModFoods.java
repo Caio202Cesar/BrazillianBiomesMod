@@ -152,5 +152,7 @@ public class ModFoods extends Foods {
     public static final Food CAMU_CAMU_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food PEQUI_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food PEQUI_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food CAGAITA_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food CAGAITA_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
 
 }

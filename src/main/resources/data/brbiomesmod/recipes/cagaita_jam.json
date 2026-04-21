@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "abb",
+    "cbb",
+    "c d"
+  ],
+  "key": {
+    "a": {
+      "item": "caiocesarbiomes:jar"
+    },
+    "b": {
+      "item": "brbiomesmod:cagaita_fruits"
+    },
+    "c": {
+      "item": "minecraft:sugar"
+    },
+    "d": {
+      "item": "caiocesarbiomes:lemon"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:cagaita_jam",
+    "count": 1
+  }
+}
