@@ -8,14 +8,14 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:ripe_jenipapo"
+      "item": "brbiomesmod:buriti"
     },
     "W": {
       "item": "minecraft:glass_bottle"
     }
   },
   "result": {
-    "item": "brbiomesmod:jenipapo_juice",
+    "item": "brbiomesmod:buriti_juice",
     "count": 1
   }
 }
