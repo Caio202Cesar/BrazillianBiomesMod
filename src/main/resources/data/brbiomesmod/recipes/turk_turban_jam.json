@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "abb",
+    "ecc",
+    "e d"
+  ],
+  "key": {
+    "a": {
+      "item": "caiocesarbiomes:jar"
+    },
+    "b": {
+      "item": "brbiomesmod:turk_turban_cactus"
+    },
+    "c": {
+      "item": "caiocesarbiomes:coconut"
+    },
+    "d": {
+      "item": "caiocesarbiomes:lemon"
+    },
+    "e": {
+      "item": "minecraft:sugar"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:turk_turban_jam",
+    "count": 1
+  }
+}
