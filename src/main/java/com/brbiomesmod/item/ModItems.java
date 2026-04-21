@@ -413,6 +413,10 @@ public class ModItems {
             () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
     public static final RegistryObject<Item> TURK_TURBAN_JAM_TOAST = ITEMS.register("turk_turban_jam_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.TURK_TURBAN_JAM_TOAST)));
+    public static final RegistryObject<Item> TURK_TURBAN_BERRY_JAM = ITEMS.register("turk_turban_berry_jam",
+            () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
+    public static final RegistryObject<Item> TURK_TURBAN_BERRY_JAM_TOAST = ITEMS.register("turk_turban_berry_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.TURK_TURBAN_BERRY_JAM_TOAST)));
 
 
     public static final RegistryObject<Item> YELLOW_MOMBIN_JUICE = ITEMS.register("yellow_mombin_juice",
