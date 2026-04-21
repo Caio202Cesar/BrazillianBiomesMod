@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "abb",
+    "cbb",
+    "cbd"
+  ],
+  "key": {
+    "a": {
+      "item": "caiocesarbiomes:jar"
+    },
+    "b": {
+      "item": "brbiomesmod:umbu"
+    },
+    "c": {
+      "item": "minecraft:sugar"
+    },
+    "d": {
+      "item": "caiocesarbiomes:lemon"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:umbu_jam",
+    "count": 1
+  }
+}

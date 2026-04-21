@@ -1101,18 +1101,6 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_LOG = registerBlock("podocarpus_lambertii_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_LEAVES = registerBlock("podocarpus_lambertii_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_SAPLING = registerBlock("podocarpus_lambertii_sapling",
-            PodocarpusLambertiiSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_PODOCARPUS_LAMBERTII_SAPLING = BLOCKS.register("potted_podocarpus_lambertii_sapling",
-            () -> new FlowerPotBlock(TreesGroup.PODOCARPUS_LAMBERTII_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance()));
-
-
     public static final RegistryObject<Block> PAU_ROSA_LOG = registerBlock("pau_rosa_log",
             ModLogs::new);
     public static final RegistryObject<Block> PAU_ROSA_LEAVES = registerBlock("pau_rosa_leaves",
@@ -1179,6 +1167,19 @@ public class TreesGroup {
     public static final RegistryObject<Block> POTTED_BRAZILLIAN_TIGERWOOD_SAPLING = BLOCKS.register("potted_brazillian_tigerwood_sapling",
             () -> new FlowerPotBlock(TreesGroup.BRAZILLIAN_TIGERWOOD_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
+
+    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_LOG = registerBlock("podocarpus_lambertii_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_LEAVES = registerBlock("podocarpus_lambertii_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_SAPLING = registerBlock("podocarpus_lambertii_sapling",
+            PodocarpusLambertiiSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PODOCARPUS_LAMBERTII_SAPLING = BLOCKS.register("potted_podocarpus_lambertii_sapling",
+            () -> new FlowerPotBlock(TreesGroup.PODOCARPUS_LAMBERTII_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
