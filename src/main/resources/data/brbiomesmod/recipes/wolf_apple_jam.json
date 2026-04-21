@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "abb",
+    "cb ",
+    "c d"
+  ],
+  "key": {
+    "a": {
+      "item": "caiocesarbiomes:jar"
+    },
+    "b": {
+      "item": "brbiomesmod:wolf_apple"
+    },
+    "c": {
+      "item": "minecraft:sugar"
+    },
+    "d": {
+      "item": "caiocesarbiomes:lemon"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:wolf_apple_jam",
+    "count": 1
+  }
+}
