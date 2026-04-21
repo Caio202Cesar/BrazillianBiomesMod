@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/podocarpus_lambertii_sapling",
+    "particle": "brbiomesmod:block/podocarpus_lambertii_sapling"
+  }
+}
