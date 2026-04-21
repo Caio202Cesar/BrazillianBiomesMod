@@ -27,25 +27,25 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.util.Random;
 
-public class BrazillianTigerwoodSapling extends SaplingBlock {
-    public BrazillianTigerwoodSapling() {
-        super(new BrazillianTigerwoodSapling.BrazillianTigerwoodTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
+public class PodocarpusLambertiiSapling extends SaplingBlock {
+    public PodocarpusLambertiiSapling() {
+        super(new PodocarpusLambertiiSapling.PodocarpusLambertiiTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
     }
 
     @OnlyIn(Dist.CLIENT)
     public static void registerRenderLayer() {
-        RenderTypeLookup.setRenderLayer(TreesGroup.BRAZILLIAN_TIGERWOOD_SAPLING.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_BRAZILLIAN_TIGERWOOD_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.PODOCARPUS_LAMBERTII_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TreesGroup.POTTED_PODOCARPUS_LAMBERTII_SAPLING.get(), RenderType.getCutout());
 
     }
 
-    //Hardy to zone 10
+    //Hardy from zone 9 to zone 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.85f;
-        float maxTemp = 2f;
+        float minTemp = 0.8f;
+        float maxTemp = 0.89f;
 
         if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
             // Only attempt natural growth in suitable biomes
@@ -66,8 +66,8 @@ public class BrazillianTigerwoodSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 2F;
-        boolean tooCold = temp < 0.85F;
+        boolean tooHot = temp > 0.89F;
+        boolean tooCold = temp < 0.8F;
 
         if (tooHot || tooCold) {
             return false;
@@ -86,7 +86,7 @@ public class BrazillianTigerwoodSapling extends SaplingBlock {
     public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
         if (!worldIn.isRemote) {
             float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.85f, maxTemp = 2f;
+            float minTemp = 0.8f, maxTemp = 0.89f;
 
             if (temp < minTemp) {
                 player.sendMessage(
@@ -120,13 +120,13 @@ public class BrazillianTigerwoodSapling extends SaplingBlock {
     }
 
 
-    private static class BrazillianTigerwoodTree extends Tree {
+    private static class PodocarpusLambertiiTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 0) {
-                return TreeFeatures.BRAZILLIAN_TIGERWOOD_FANCY_TREE;
+                return TreeFeatures.PODOCARPUS_LAMBERTII_FANCY_TREE;
             } else {
-                return TreeFeatures.BRAZILLIAN_TIGERWOOD_TREE;
+                return TreeFeatures.PODOCARPUS_LAMBERTII_TREE;
             }
         }
     }
