@@ -398,14 +398,14 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.UMBU_JAM_TOAST)));
 
 
-    public static final RegistryObject<Item> CECROPIA_JUICE = ITEMS.register("cecropia_juice",
+    public static final RegistryObject<Item> CECROPIA_JUICE = ITEMS.register("cecropia_fruits_juice",
             () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
                     .food(ModFoods.CECROPIA_JUICE)));
     public static final RegistryObject<Item> CECROPIA_ICE_CREAM = ITEMS.register("cecropia_fruit_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CECROPIA_ICE_CREAM)));
-    public static final RegistryObject<Item> CECROPIA_FRUIT_JAM = ITEMS.register("cecropia_fruit_jam",
+    public static final RegistryObject<Item> CECROPIA_FRUIT_JAM = ITEMS.register("cecropia_fruits_jam",
             () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
-    public static final RegistryObject<Item> CECROPIA_FRUIT_JAM_TOAST = ITEMS.register("cecropia_fruit_jam_toast",
+    public static final RegistryObject<Item> CECROPIA_FRUIT_JAM_TOAST = ITEMS.register("cecropia_fruits_jam_toast",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.CECROPIA_FRUIT_JAM_TOAST)));
 
 

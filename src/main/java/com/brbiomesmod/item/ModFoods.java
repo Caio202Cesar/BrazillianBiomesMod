@@ -161,5 +161,7 @@ public class ModFoods extends Foods {
     public static final Food UMBU_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food TURK_TURBAN_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
     public static final Food TURK_TURBAN_BERRY_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
+    public static final Food CECROPIA_JUICE = (new Food.Builder()).hunger(4).saturation(0.1F).build();
+    public static final Food CECROPIA_FRUIT_JAM_TOAST = (new Food.Builder()).hunger(4).saturation(0.5F).build();
 
 }
