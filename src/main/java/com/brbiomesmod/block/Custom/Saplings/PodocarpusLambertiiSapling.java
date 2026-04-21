@@ -6,6 +6,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -25,6 +26,7 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 public class PodocarpusLambertiiSapling extends SaplingBlock {
@@ -120,7 +122,7 @@ public class PodocarpusLambertiiSapling extends SaplingBlock {
     }
 
 
-    private static class PodocarpusLambertiiTree extends Tree {
+    private static class PodocarpusLambertiiTree extends BigTree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 0) {
@@ -128,6 +130,12 @@ public class PodocarpusLambertiiSapling extends SaplingBlock {
             } else {
                 return TreeFeatures.PODOCARPUS_LAMBERTII_TREE;
             }
+        }
+
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            return TreeFeatures.PODOCARPUS_LAMBERTII_BIG_TREE;
         }
     }
 }
