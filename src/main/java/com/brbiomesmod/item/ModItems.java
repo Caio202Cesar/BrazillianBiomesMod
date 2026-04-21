@@ -376,8 +376,15 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.JENIPAPO_JAM_TOAST)));
 
 
+    public static final RegistryObject<Item> JUA_BERRIES_JUICE = ITEMS.register("jua_berries_juice",
+            () -> new BeverageItem(new Item.Properties().group(ModItemGroup.FOOD_GROUP).maxStackSize(1)
+                    .food(ModFoods.JUA_BERRIES_JUICE)));
     public static final RegistryObject<Item> JUA_BERRIES_ICE_CREAM = ITEMS.register("jua_berries_ice_cream",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.JUA_BERRIES_ICE_CREAM)));
+    public static final RegistryObject<Item> JUA_BERRIES_JAM = ITEMS.register("jua_berries_jam",
+            () -> new JarItem(new Item.Properties().maxStackSize(1).group(ModItemGroup.FOOD_GROUP)));
+    public static final RegistryObject<Item> JUA_BERRIES_JAM_TOAST = ITEMS.register("jua_berries_jam_toast",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.JUA_BERRIES_JAM_TOAST)));
 
 
     public static final RegistryObject<Item> UMBU_JUICE = ITEMS.register("umbu_juice",
