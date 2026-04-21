@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "food",
+  "pattern": [
+    "###",
+    "#W#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:yellow_mombin"
+    },
+    "W": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:yellow_mombin_juice",
+    "count": 1
+  }
+}
