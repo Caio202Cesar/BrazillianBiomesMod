@@ -661,12 +661,6 @@
   "block.brbiomesmod.humboldt_willow_fall_leaves": "Folhas de salgueiro-de-Humboldt",
   "block.brbiomesmod.humboldt_willow_branches": "Galhos de salgueiro-de-Humboldt",
   "block.brbiomesmod.humboldt_willow_sapling": "Muda de salgueiro-de-Humboldt",
-
-  "item.brbiomesmod.rubber_boots": "Botas de borracha",
-  "item.brbiomesmod.rubber_leggings": "Calça de borracha",
-  "item.brbiomesmod.rubber_helmet": "Capacete de borracha",
-  "item.brbiomesmod.rubber_chestplate": "Peitoral de borracha",
-
   "block.brbiomesmod.pitanga_black_winter_flowering_leaves": "Folhas de pitangueira-negra em flor",
   "block.brbiomesmod.pitanga_winter_flowering_leaves": "Folhas de pitangueira em flor",
   "block.brbiomesmod.raw_rubber_block": "Bloco de borracha crua",
@@ -682,27 +676,22 @@
   "block.brbiomesmod.oiticica_leaves": "Folhas de oiticica",
   "block.brbiomesmod.oiticica_sapling": "Muda de oiticica",
   "block.brbiomesmod.oiti_log": "Oiti Log",
+  "block.brbiomesmod.podocarpus_lambertii_leaves": "Folhas de pinheiro-bravo",
+  "block.brbiomesmod.podocarpus_lambertii_sapling": "Muda de pinheiro-bravo",
+  "block.brbiomesmod.podocarpus_lambertii_log": "Tronco de pinheiro-bravo",
+  "block.brbiomesmod.passion_fruit_purple_vine": "Maracujazeiro-roxo",
+  "block.brbiomesmod.passion_fruit_purple_flowering_vine": "Maracujazeiro-roxo em flor",
+  "block.brbiomesmod.passion_fruit_purple_fruiting_vine": "Maracujazeiro-roxo com frutos",
 
-  "entity.brbiomesmod.mapinguari": "Mapinguari",
-  "entity.brbiomesmod.toco_toucan": "Tucano-toco",
-  "entity.brbiomesmod.golden_lion_tamarin": "Mico-leão-dourado",
-  "entity.brbiomesmod.boto_dolphin": "Boto-cor-de-rosa",
-  "entity.brbiomesmod.maned_wolf": "Lobo-guará",
-
+  "item.brbiomesmod.rubber_boots": "Botas de borracha",
+  "item.brbiomesmod.rubber_leggings": "Calça de borracha",
+  "item.brbiomesmod.rubber_helmet": "Capacete de borracha",
+  "item.brbiomesmod.rubber_chestplate": "Peitoral de borracha",
   "item.brbiomesmod.toco_toucan_spawn_egg": "Ovo gerador de tucano-toco",
   "item.brbiomesmod.mapinguari_spawn_egg": "Ovo gerador de mapinguari",
   "item.brbiomesmod.boto_spawn_egg": "Ovo gerador de boto-cor-de-rosa",
   "item.brbiomesmod.golden_tamarin_spawn_egg": "Ovo gerador de mico-leão-dourado",
   "item.brbiomesmod.maned_wolf_spawn_egg": "Ovo gerador de lobo-guará",
-
-  "itemGroup.brazilian_biomes_food": "Brazilian Biomes: Comida",
-  "itemGroup.brazilian_biomes_fruits_vegetables": "Brazilian Biomes: Frutas e Vegetais",
-  "itemGroup.brazilian_biomes_plants": "Brazilian Biomes: Plantas",
-  "itemGroup.brazilian_biomes_woods": "Brazilian Biomes: Madeira",
-  "itemGroup.brazilian_biomes_trees": "Brazilian Biomes: Árvores",
-  "itemGroup.brazilian_biomes_miscellaneous": "Brazilian Biomes: Diversos",
-  "itemGroup.brazilian_biomes_creatures": "Brazilian Biomes: Criaturas",
-
   "item.brbiomesmod.rubberized_netherite_pickaxe": "Picareta de neterite emborrachada",
   "item.brbiomesmod.rubberized_netherite_shovel": "Pá de neterite emborrachada",
   "item.brbiomesmod.rubberized_tourmaline_pickaxe": "Picareta de turmalina-paraíba emborrachada",
@@ -720,10 +709,18 @@
   "item.brbiomesmod.capybara_spawn_egg": "Ovo invocador de capivara",
   "item.brbiomesmod.purple_passionfruit": "Maracujá-roxo",
 
-  "block.brbiomesmod.passion_fruit_purple_vine": "Maracujazeiro-roxo",
-  "block.brbiomesmod.passion_fruit_purple_flowering_vine": "Maracujazeiro-roxo em flor",
-  "block.brbiomesmod.passion_fruit_purple_fruiting_vine": "Maracujazeiro-roxo com frutos",
+  "itemGroup.brazilian_biomes_food": "Brazilian Biomes: Comida",
+  "itemGroup.brazilian_biomes_fruits_vegetables": "Brazilian Biomes: Frutas e Vegetais",
+  "itemGroup.brazilian_biomes_plants": "Brazilian Biomes: Plantas",
+  "itemGroup.brazilian_biomes_woods": "Brazilian Biomes: Madeira",
+  "itemGroup.brazilian_biomes_trees": "Brazilian Biomes: Árvores",
+  "itemGroup.brazilian_biomes_miscellaneous": "Brazilian Biomes: Diversos",
+  "itemGroup.brazilian_biomes_creatures": "Brazilian Biomes: Criaturas",
 
-  "entity.brbiomesmod.capybara": "Capivara"
-
+  "entity.brbiomesmod.capybara": "Capivara",
+  "entity.brbiomesmod.mapinguari": "Mapinguari",
+  "entity.brbiomesmod.toco_toucan": "Tucano-toco",
+  "entity.brbiomesmod.golden_lion_tamarin": "Mico-leão-dourado",
+  "entity.brbiomesmod.boto_dolphin": "Boto-cor-de-rosa",
+  "entity.brbiomesmod.maned_wolf": "Lobo-guará"
 }
