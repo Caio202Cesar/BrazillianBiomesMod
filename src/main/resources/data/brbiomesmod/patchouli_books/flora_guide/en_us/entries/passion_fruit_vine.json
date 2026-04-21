@@ -1,6 +1,6 @@
 {
-  "name": "Passionfruit Vine",
-  "icon": "brbiomesmod:passion_fruit_flowering_vine",
+  "name": "Yellow Passionfruit Vine",
+  "icon": "brbiomesmod:passion_fruit_fruiting_vine",
   "category": "brbiomesmod:vines",
   "pages": [
     {
@@ -10,9 +10,9 @@
     },
     {
       "type": "spotlight",
-      "item": "brbiomesmod:passion_fruit_flowering_vine",
+      "item": "brbiomesmod:passion_fruit_fruiting_vine",
       "title": "Tree Spotlight",
-      "text": "Flowering vine."
+      "text": "Yellow fruits. Hoter climates."
     }
   ]
 }
