@@ -219,21 +219,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YERBA_MATE_TREE_WITH_VINE = register("yerba_mate_tree_vine",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.YERBA_MATE_LOG),
-                    new SimpleBlockStateProvider(States.YERBA_MATE_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
-                    PurplePassionFruitVineLeavesDecorator.INSTANCE, PurplePassionFruitVineTrunkDecorator.INSTANCE)).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YERBA_MATE_FANCY_TREE_WITH_VINE = register("yerba_mate_fancy_tree_vine",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.YERBA_MATE_LOG),
-                    new SimpleBlockStateProvider(States.YERBA_MATE_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setDecorators(ImmutableList.of(
-                    PurplePassionFruitVineLeavesDecorator.INSTANCE, PurplePassionFruitVineTrunkDecorator.INSTANCE))
-                    .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Feijoa Shrub
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FEIJOA_SHRUB = register("feijoa_shrub",
@@ -242,13 +227,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
                     new StraightTrunkPlacer(2, 1, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FEIJOA_SHRUB_WITH_PASSIONVINE = register("feijoa_shrub_passionvine",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FEIJOA_LOG),
-                    new SimpleBlockStateProvider(States.FEIJOA_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
-                    new StraightTrunkPlacer(2, 1, 0),
-                    new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE)).setIgnoreVines().build()));
 
 
     //Cambuci Tree
@@ -1111,10 +1089,28 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new StraightTrunkPlacer(5, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
+    //Podocarpus lambertii
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PODOCARPUS_LAMBERTII_TREE = register("podocarpus_lambertii_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PODOCARPUS_LAMBERTII_LOG),
+                    new SimpleBlockStateProvider(States.PODOCARPUS_LAMBERTII_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PODOCARPUS_LAMBERTII_FANCY_TREE = register("podocarpus_lambertii_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PODOCARPUS_LAMBERTII_LOG),
+                    new SimpleBlockStateProvider(States.PODOCARPUS_LAMBERTII_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
     public static final class States {
 
         protected static final BlockState KAPOK_LOG = TreesGroup.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = TreesGroup.KAPOK_LEAVES.get().getDefaultState();
+
+        protected static final BlockState PODOCARPUS_LAMBERTII_LOG = TreesGroup.PODOCARPUS_LAMBERTII_LOG.get().getDefaultState();
+        protected static final BlockState PODOCARPUS_LAMBERTII_LEAVES = TreesGroup.PODOCARPUS_LAMBERTII_LEAVES.get().getDefaultState();
 
         protected static final BlockState OITI_LOG = TreesGroup.OITI_LOG.get().getDefaultState();
         protected static final BlockState OITICICA_LEAVES = TreesGroup.OITICICA_LEAVES.get().getDefaultState();
@@ -1413,7 +1409,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Araucaria Plateau
     public static final ConfiguredFeature<?, ?> ARAUCARIA_PLATEAU_MYRTACEAE = register("araucaria_plateau_myrtaceae",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PITANGA_TREE.withChance(0.1F),
-                    BLACK_PITANGA_TREE.withChance(0.05F), FEIJOA_SHRUB.withChance(0.7F), FEIJOA_SHRUB_WITH_PASSIONVINE.withChance(0.05F),
+                    BLACK_PITANGA_TREE.withChance(0.05F), FEIJOA_SHRUB.withChance(0.7F),
                     RIO_GRANDE_CHERRY_TREE.withChance(0.5F)),
                     RIO_GRANDE_CHERRY_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
@@ -1421,18 +1417,19 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PARANA_PINE_TREE_YOUNG.withChance(0.2F),
                     PARANA_PINE_TREE.withChance(0.4F), XAXIM_TREE.withChance(0.4F), HUMBOLDT_WILLOW_TREE.withChance(0.0067F),
                     PARANA_PINE_TREE_VINE.withChance(0.00167F), PARANA_PINE_TREE_VINE2.withChance(0.0027F),
-                    PARANA_PINE_TREE_YOUNG_VINE.withChance(0.00537F)),
+                    PARANA_PINE_TREE_YOUNG_VINE.withChance(0.00537F), PODOCARPUS_LAMBERTII_TREE.withChance(0.2F),
+                    PODOCARPUS_LAMBERTII_FANCY_TREE.withChance(0.2F)),
                     PARANA_PINE_TREE2)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(13, 0.4F, 1))));
     public static final ConfiguredFeature<?, ?> OCOTEA_TREES = register("ocotea_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_SASSAFRAS_TREE.withChance(0.2F),
-                            BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.1F), IMBUIA_TREE.withChance(0.3F), IMBUIA_FANCY_TREE_VINE.withChance(0.078F),
-                            BRAZILLIAN_SASSAFRAS_TREE_WITH_PURPLE_PASSIONVINE.withChance(0.067F), SUBTROPICAL_YELLOW_IPE_TREE.withChance(0.1F)), IMBUIA_FANCY_TREE))
+                            BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.1F), IMBUIA_TREE.withChance(0.3F), IMBUIA_FANCY_TREE_VINE.withChance(0.0078F),
+                            BRAZILLIAN_SASSAFRAS_TREE_WITH_PURPLE_PASSIONVINE.withChance(0.0067F), SUBTROPICAL_YELLOW_IPE_TREE.withChance(0.1F)),
+                            IMBUIA_FANCY_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> MATE_TREES = register("mate_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YERBA_MATE_FANCY_TREE.withChance(0.1F),
-                    YERBA_MATE_FANCY_TREE_WITH_VINE.withChance(0.054F), YERBA_MATE_TREE_WITH_VINE.withChance(0.03F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YERBA_MATE_FANCY_TREE.withChance(0.1F)),
                     YERBA_MATE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
