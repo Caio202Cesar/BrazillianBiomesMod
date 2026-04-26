@@ -60,14 +60,16 @@ public class YerbaMateSapling extends SaplingBlock {
         Biome biome = world.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
+        int minY = 60;
+
         float minTemp = 0.8f;
         float maxTemp = 0.89f;
 
         boolean isProtectedByGlass = isUnderGlass(world, pos);
 
         // 🌱 Growth logic
-        if ((temp >= minTemp && temp <= maxTemp)
-                || (temp < minTemp && isProtectedByGlass)) {
+        if ((temp >= minTemp && temp <= maxTemp && pos.getY() >= minY)
+                || (temp < minTemp && isProtectedByGlass && pos.getY() >= minY)) {
 
             super.randomTick(state, world, pos, random);
         }
@@ -158,6 +160,8 @@ public class YerbaMateSapling extends SaplingBlock {
 
         float temp = biome.getTemperature(pos);
 
+        int minY = 60;
+
         boolean isProtectedByGlass = false;
 
         if (world instanceof ServerWorld) {
@@ -169,12 +173,12 @@ public class YerbaMateSapling extends SaplingBlock {
 
         // If protected, ignore cold restriction
         if (!isProtectedByGlass) {
-            if (temp < minTemp || temp > maxTemp) {
+            if (temp < minTemp || temp > maxTemp || pos.getY() < minY) {
                 return false;
             }
         } else {
-            // Under glass → only block extreme heat
-            if (temp > maxTemp) {
+            // Under glass → only block extreme heat and lower atitude
+            if (temp > maxTemp || pos.getY() < minY) {
                 return false;
             }
         }
@@ -196,6 +200,8 @@ public class YerbaMateSapling extends SaplingBlock {
 
             float minTemp = 0.8f, maxTemp = 0.89f;
 
+            int minY = 60;
+
             boolean isProtectedByGlass = false;
 
             if (worldIn instanceof ServerWorld) {
@@ -213,6 +219,14 @@ public class YerbaMateSapling extends SaplingBlock {
             if (temp > maxTemp) {
                 player.sendMessage(
                         new StringTextComponent("This biome is too hot for this sapling."),
+                        player.getUniqueID()
+                );
+                return ActionResultType.SUCCESS; // Prevent further processing if needed
+            }
+
+            if (pos.getY() < minY) {
+                player.sendMessage(
+                        new StringTextComponent("This biome is too low altitude for this sapling."),
                         player.getUniqueID()
                 );
                 return ActionResultType.SUCCESS; // Prevent further processing if needed
