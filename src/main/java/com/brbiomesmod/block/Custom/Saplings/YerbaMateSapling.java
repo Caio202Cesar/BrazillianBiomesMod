@@ -52,7 +52,7 @@ public class YerbaMateSapling extends SaplingBlock {
      * @param pos
      * @param random
      */
-    //Hardy from zone 9 to 11 (8 with protection)
+    //Hardy from zone 9 to 10
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 
@@ -61,7 +61,7 @@ public class YerbaMateSapling extends SaplingBlock {
         float temp = biome.getTemperature(pos);
 
         float minTemp = 0.8f;
-        float maxTemp = 0.94f;
+        float maxTemp = 0.89f;
 
         boolean isProtectedByGlass = isUnderGlass(world, pos);
 
@@ -164,7 +164,7 @@ public class YerbaMateSapling extends SaplingBlock {
             isProtectedByGlass = isUnderGlass((ServerWorld) world, pos);
         }
 
-        float maxTemp = 0.94F;
+        float maxTemp = 0.89F;
         float minTemp = 0.8F;
 
         // If protected, ignore cold restriction
@@ -194,7 +194,7 @@ public class YerbaMateSapling extends SaplingBlock {
             Biome biome = worldIn.getBiome(pos);
             float temp = biome.getTemperature(pos);
 
-            float minTemp = 0.8f, maxTemp = 0.94f;
+            float minTemp = 0.8f, maxTemp = 0.89f;
 
             boolean isProtectedByGlass = false;
 
