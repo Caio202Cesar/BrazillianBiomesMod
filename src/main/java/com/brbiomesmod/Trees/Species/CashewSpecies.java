@@ -28,9 +28,4 @@ public class CashewSpecies extends Species {
         this.setTapering(0.5f);
     }
 
-    @Override
-    public Species generateSeed() {
-        this.setSeed(RegistryHandler.addItem(this.getSeedName(), () -> new CashewSeed(this)));
-        return this;
-    }
 }
