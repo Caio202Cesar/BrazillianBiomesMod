@@ -186,8 +186,8 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             artifact jar
-            groupId = 'com.yourname'          // choose this
-            artifactId = 'brazilianbiomes'
+            groupId = 'com.brbiomesmod'          // choose this
+            artifactId = 'brbiomesmod'
             version = '1.0.0'
         }
     }
