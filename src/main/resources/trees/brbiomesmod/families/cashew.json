@@ -1,0 +1,12 @@
+{
+  "common_leaves": "brbiomesmod:cashew_dynamic_leaves",
+  "common_species": "brbiomesmod:cashew_DT",
+  "primitive_log": "brbiomesmod:cashew_log",
+  "primitive_stripped_log": "brbiomesmod:cashew_log",
+  "max_branch_radius": 7,
+  "type": "seasonal_fruiting",
+  "stick": "minecraft:stick",
+  "generate_stripped_branch": false,
+  "branch_is_ladder": true,
+  "max_signal_depth": 16
+}
