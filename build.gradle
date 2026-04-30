@@ -185,7 +185,7 @@ tasks.named('jar', Jar).configure {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            artifact jar
+            artifact tasks.jar
             groupId = 'com.brbiomesmod'          // choose this
             artifactId = 'brbiomesmod'
             version = '1.0.0'
@@ -193,7 +193,7 @@ publishing {
     }
     repositories {
         maven {
-            url = uri("${project.projectDir}/mcmodsrepo")
+            url = uri("C:/Users/ADM/IdeaProjects/BrazilianBiomesMod/mcmodsrepo")
         }
     }
 }
