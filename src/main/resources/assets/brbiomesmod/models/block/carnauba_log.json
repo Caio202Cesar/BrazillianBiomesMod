@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "brbiomesmod:block/carnauba_log_middle",
-    "side": "brbiomesmod:block/carnauba_bark"
+    "end": "brbiomesmod:block/carnauba_log_top",
+    "side": "brbiomesmod:block/carnauba_log"
   }
 }

@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "brbiomesmod:block/monkey_cajarana_log_middle",
-    "side": "brbiomesmod:block/monkey_cajarana_bark"
+    "end": "brbiomesmod:block/monkey_cajarana_log_top",
+    "side": "brbiomesmod:block/monkey_cajarana_log"
   }
 }

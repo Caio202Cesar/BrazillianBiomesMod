@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "brbiomesmod:block/oiti_log_middle",
-    "side": "brbiomesmod:block/oiti_bark"
+    "end": "brbiomesmod:block/oiti_log_top",
+    "side": "brbiomesmod:block/oiti_log"
   }
 }

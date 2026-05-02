@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "brbiomesmod:block/sapucaia_log_middle",
-    "side": "brbiomesmod:block/sapucaia_bark"
+    "end": "brbiomesmod:block/sapucaia_log_top",
+    "side": "brbiomesmod:block/sapucaia_log"
   }
 }

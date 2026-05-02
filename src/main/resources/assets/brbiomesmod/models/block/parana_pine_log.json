@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "brbiomesmod:block/parana_pine_log_middle",
-    "side": "brbiomesmod:block/parana_pine_bark"
+    "end": "brbiomesmod:block/parana_pine_log_top",
+    "side": "brbiomesmod:block/parana_pine_log"
   }
 }

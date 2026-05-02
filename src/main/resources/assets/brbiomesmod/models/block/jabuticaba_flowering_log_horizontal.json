@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "brbiomesmod:block/jabuticaba_log_middle",
-    "side": "brbiomesmod:block/jabuticaba_flowering_bark"
+    "end": "brbiomesmod:block/jabuticaba_log_top",
+    "side": "brbiomesmod:block/jabuticaba_flowering_log"
   }
 }

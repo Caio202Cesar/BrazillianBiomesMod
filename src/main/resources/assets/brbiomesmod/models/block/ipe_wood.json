@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "brbiomesmod:block/ipe_bark",
-    "side": "brbiomesmod:block/ipe_bark"
+    "end": "brbiomesmod:block/ipe_log",
+    "side": "brbiomesmod:block/ipe_log"
   }
 }

@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "brbiomesmod:block/camu_camu_log_middle",
-    "side": "brbiomesmod:block/camu_camu_bark"
+    "end": "brbiomesmod:block/camu_camu_log_top",
+    "side": "brbiomesmod:block/camu_camu_log"
   }
 }

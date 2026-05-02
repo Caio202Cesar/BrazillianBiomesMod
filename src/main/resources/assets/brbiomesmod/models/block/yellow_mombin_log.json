@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "brbiomesmod:block/yellow_mombin_log_middle",
-    "side": "brbiomesmod:block/yellow_mombin_bark"
+    "end": "brbiomesmod:block/yellow_mombin_log_top",
+    "side": "brbiomesmod:block/yellow_mombin_log"
   }
 }

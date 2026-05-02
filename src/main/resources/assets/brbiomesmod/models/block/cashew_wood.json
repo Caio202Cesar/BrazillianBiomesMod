@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "brbiomesmod:block/cashew_bark",
-    "side": "brbiomesmod:block/cashew_bark"
+    "end": "brbiomesmod:block/cashew_log",
+    "side": "brbiomesmod:block/cashew_log"
   }
 }
