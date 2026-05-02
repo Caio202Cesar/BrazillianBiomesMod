@@ -29,6 +29,25 @@ public class TreesGroup {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, BrazillianBiomesMod.MOD_ID);
 
+
+    public static final RegistryObject<Block> CASHEW_LOG = registerBlock("cashew_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CASHEW_STRIPPED_LOG = registerBlock("stripped_cashew_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CASHEW_LEAVES = registerBlock("cashew_leaves",
+            () -> new CashewLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CASHEW_FRUITING_LEAVES));
+    public static final RegistryObject<Block> CASHEW_FRUITING_LEAVES = registerBlock("cashew_fruiting_leaves",
+            () -> new CashewFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CASHEW_LEAVES));
+    public static final RegistryObject<Block> CASHEW_SAPLING = registerBlock("cashew_sapling",
+            CashewSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CASHEW_SAPLING = BLOCKS.register("potted_cashew_sapling",
+            () -> new FlowerPotBlock(TreesGroup.CASHEW_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+
     public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
             SilkFlossLog::new);
 
@@ -724,20 +743,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance()));
 
 
-    public static final RegistryObject<Block> CASHEW_LOG = registerBlock("cashew_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CASHEW_LEAVES = registerBlock("cashew_leaves",
-            () -> new CashewLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CASHEW_FRUITING_LEAVES));
-    public static final RegistryObject<Block> CASHEW_FRUITING_LEAVES = registerBlock("cashew_fruiting_leaves",
-            () -> new CashewFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CASHEW_LEAVES));
-    public static final RegistryObject<Block> CASHEW_SAPLING = registerBlock("cashew_sapling",
-            CashewSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_CASHEW_SAPLING = BLOCKS.register("potted_cashew_sapling",
-            () -> new FlowerPotBlock(TreesGroup.CASHEW_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
+
 
 
     public static final RegistryObject<Block> MANGABA_LOG = registerBlock("mangaba_log",
