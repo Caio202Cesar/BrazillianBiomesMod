@@ -138,6 +138,8 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> IPE_LOG = registerBlock("ipe_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_IPE_LOG = registerBlock("stripped_ipe_log",
+            ModLogs::new);
 
     public static final RegistryObject<Block> YELLOW_IPE_LEAVES = registerBlock("yellow_ipe_leaves",
             () -> new YellowIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
