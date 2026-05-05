@@ -329,6 +329,8 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> EUGENIA_LOG = registerBlock("eugenia_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_EUGENIA_LOG = registerBlock("stripped_eugenia_log",
+            ModLogs::new);
 
     public static final RegistryObject<Block> PITANGA_LEAVES = registerBlock("pitanga_leaves",
             () -> new PitangaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
