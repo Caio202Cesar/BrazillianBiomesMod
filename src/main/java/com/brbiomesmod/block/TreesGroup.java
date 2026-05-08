@@ -815,6 +815,8 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> LOPHANTERA_LOG = registerBlock("lophantera_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LOPHANTERA_LOG = registerBlock("stripped_lophantera_log",
+            ModLogs::new);
     public static final RegistryObject<Block> LOPHANTERA_LEAVES = registerBlock("lophantera_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> LOPHANTERA_SAPLING = registerBlock("lophantera_sapling",
