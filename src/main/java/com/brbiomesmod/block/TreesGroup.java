@@ -298,6 +298,8 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> YERBA_MATE_LOG = registerBlock("yerba_mate_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_YERBA_MATE_LOG = registerBlock("stripped_yerba_mate_log",
+            ModLogs::new);
     public static final RegistryObject<Block> YERBA_MATE_LEAVES = registerBlock("yerba_mate_leaves",
             YerbaMateLeaves::new);
     public static final RegistryObject<Block> YERBA_MATE_SAPLING = registerBlock("yerba_mate_sapling",
@@ -600,6 +602,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> WOLF_APPLE_LOG = registerBlock("wolf_apple_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_WOLF_APPLE_LOG = registerBlock("stripped_wolf_apple_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> WOLF_APPLE_LEAVES = registerBlock("wolf_apple_leaves",
             () -> new WolfAppleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
