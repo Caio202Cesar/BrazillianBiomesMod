@@ -432,6 +432,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> CAMBUCI_LOG = registerBlock("cambuci_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CAMBUCI_LOG = registerBlock("stripped_cambuci_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> CAMBUCI_LEAVES = registerBlock("cambuci_leaves",
             () -> new CambuciLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CAMBUCI_FLOWERING_LEAVES));
