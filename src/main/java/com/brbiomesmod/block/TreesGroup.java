@@ -242,6 +242,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LOG = registerBlock("brazillian_rosewood_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BRAZILLIAN_ROSEWOOD_LOG = registerBlock("stripped_brazillian_rosewood_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LEAVES = registerBlock("brazillian_rosewood_leaves",
             () -> new BrazillianRosewoodLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_ROSEWOOD_DRIED_BRANCHES));
@@ -263,6 +266,8 @@ public class TreesGroup {
 
 
     public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_LOG = registerBlock("brazillian_sassafras_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BRAZILLIAN_SASSAFRAS_LOG = registerBlock("stripped_brazillian_sassafras_log",
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_LEAVES = registerBlock("brazillian_sassafras_leaves",
             ModLeaves::new);
