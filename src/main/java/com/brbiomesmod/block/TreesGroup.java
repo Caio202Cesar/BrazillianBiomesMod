@@ -466,6 +466,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> UMBU_LOG = registerBlock("umbu_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_UMBU_LOG = registerBlock("stripped_umbu_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> UMBU_LEAVES = registerBlock("umbu_leaves",
             () -> new UmbuLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
