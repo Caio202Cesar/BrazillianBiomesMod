@@ -32,7 +32,7 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> CASHEW_LOG = registerBlock("cashew_log",
             ModLogs::new);
-    public static final RegistryObject<Block> CASHEW_STRIPPED_LOG = registerBlock("stripped_cashew_log",
+    public static final RegistryObject<Block> STRIPPED_CASHEW_LOG = registerBlock("stripped_cashew_log",
             ModLogs::new);
     public static final RegistryObject<Block> CASHEW_LEAVES = registerBlock("cashew_leaves",
             () -> new CashewLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
