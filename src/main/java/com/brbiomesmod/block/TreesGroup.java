@@ -113,6 +113,8 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> PINK_PEROBA_LOG = registerBlock("pink_peroba_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PINK_PEROBA_LOG = registerBlock("stripped_pink_peroba_log",
+            ModLogs::new);
     public static final RegistryObject<Block> PINK_PEROBA_LEAVES = registerBlock("pink_peroba_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> PINK_PEROBA_SAPLING = registerBlock("pink_peroba_sapling",
