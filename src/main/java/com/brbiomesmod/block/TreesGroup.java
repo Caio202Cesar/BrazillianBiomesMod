@@ -327,6 +327,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> FEIJOA_LOG = registerBlock("feijoa_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_FEIJOA_LOG = registerBlock("stripped_feijoa_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> FEIJOA_LEAVES = registerBlock("feijoa_leaves",
             () -> new FeijoaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.FEIJOA_FLOWERING_LEAVES));
