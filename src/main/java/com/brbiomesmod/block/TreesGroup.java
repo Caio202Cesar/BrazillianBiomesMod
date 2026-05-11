@@ -127,6 +127,8 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> JEQUITIBA_LOG = registerBlock("jequitiba_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_JEQUITIBA_LOG = registerBlock("stripped_jequitiba_log",
+            ModLogs::new);
     public static final RegistryObject<Block> JEQUITIBA_LEAVES = registerBlock("jequitiba_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> JEQUITIBA_SAPLING = registerBlock("jequitiba_sapling",
