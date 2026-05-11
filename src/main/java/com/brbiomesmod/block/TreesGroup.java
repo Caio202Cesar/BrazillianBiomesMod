@@ -228,6 +228,8 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> MANACA_DA_SERRA_LOG = registerBlock("manaca_da_serra_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MANACA_DA_SERRA_LOG = registerBlock("stripped_manaca_da_serra_log",
+            ModLogs::new);
     public static final RegistryObject<Block> MANACA_DA_SERRA_LEAVES = registerBlock("manaca_da_serra_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> MANACA_DA_SERRA_SAPLING = registerBlock("manaca_da_serra_sapling",

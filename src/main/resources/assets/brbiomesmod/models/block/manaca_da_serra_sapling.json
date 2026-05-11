@@ -1,7 +1,7 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "brbiomesmod:block/manaca_sapling",
-    "particle": "brbiomesmod:block/manaca_sapling"
+    "cross": "brbiomesmod:block/manaca_da_serra_sapling",
+    "particle": "brbiomesmod:block/manaca_da_serra_sapling"
   }
 }
