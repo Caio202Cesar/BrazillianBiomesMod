@@ -15,10 +15,12 @@ import com.brbiomesmod.features.TreeDecorators.ModTreeDecorators;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.*;
 import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
+import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
+import net.minecraft.item.AxeItem;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -92,6 +94,26 @@ public class BrazillianBiomesMod {
 
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
+
+            AxeItem.BLOCK_STRIPPING_MAP = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.BLOCK_STRIPPING_MAP)
+                    .put(TreesGroup.YERBA_MATE_LOG.get(), TreesGroup.STRIPPED_YERBA_MATE_LOG.get())
+                    .put(TreesGroup.BRAZILLIAN_ROSEWOOD_LOG.get(), TreesGroup.STRIPPED_BRAZILLIAN_ROSEWOOD_LOG.get())
+                    .put(TreesGroup.BRAZILLIAN_SASSAFRAS_LOG.get(), TreesGroup.STRIPPED_BRAZILLIAN_SASSAFRAS_LOG.get())
+                    .put(TreesGroup.CAMBUCI_LOG.get(), TreesGroup.STRIPPED_CAMBUCI_LOG.get())
+                    .put(TreesGroup.CASHEW_LOG.get(), TreesGroup.STRIPPED_CASHEW_LOG.get())
+                    .put(TreesGroup.EUGENIA_LOG.get(), TreesGroup.STRIPPED_EUGENIA_LOG.get())
+                    .put(TreesGroup.FEIJOA_LOG.get(), TreesGroup.STRIPPED_FEIJOA_LOG.get())
+                    .put(TreesGroup.IMBUIA_LOG.get(), TreesGroup.STRIPPED_IMBUIA_LOG.get())
+                    .put(TreesGroup.IPE_LOG.get(), TreesGroup.STRIPPED_IPE_LOG.get())
+                    .put(TreesGroup.JEQUITIBA_LOG.get(), TreesGroup.STRIPPED_JEQUITIBA_LOG.get())
+                    .put(TreesGroup.LOPHANTERA_LOG.get(), TreesGroup.STRIPPED_LOPHANTERA_LOG.get())
+                    .put(TreesGroup.MANACA_DA_SERRA_LOG.get(), TreesGroup.STRIPPED_MANACA_DA_SERRA_LOG.get())
+                    .put(TreesGroup.PARANA_PINE_LOG.get(), TreesGroup.STRIPPED_PARANA_PINE_LOG.get())
+                    .put(TreesGroup.PINK_PEROBA_LOG.get(), TreesGroup.STRIPPED_PINK_PEROBA_LOG.get())
+                    .put(TreesGroup.PODOCARPUS_LAMBERTII_LOG.get(), TreesGroup.STRIPPED_PODOCARPUS_LAMBERTII_LOG.get())
+                    .put(TreesGroup.UMBU_LOG.get(), TreesGroup.STRIPPED_UMBU_LOG.get())
+                    .put(TreesGroup.WOLF_APPLE_LOG.get(), TreesGroup.STRIPPED_WOLF_APPLE_LOG.get())
+                    .build();
 
             ModBiomeGeneration.generateBiomes();
 
