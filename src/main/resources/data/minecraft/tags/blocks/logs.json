@@ -48,13 +48,13 @@
     "brbiomesmod:pequi_log",
     "brbiomesmod:yellow_mombin_log",
     "brbiomesmod:guapuruvu_log",
-    "brbiomesmod:sandbox_tree_log",
     "brbiomesmod:humboldt_willow_log",
     "brbiomesmod:babassu_log",
     "brbiomesmod:oiti_log",
     "brbiomesmod:brazillian_tigerwood_log",
     "brbiomesmod:podocarpus_lambertii_log",
-    "brbiomesmod:jenipapo_log"
-
+    "brbiomesmod:jenipapo_log",
+    "brbiomesmod:sandbox_tree_log",
+    "brbiomesmod:sandbox_tree_thornless_log"
   ]
 }
