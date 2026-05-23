@@ -447,8 +447,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.UMBU_LOG),
                     new SimpleBlockStateProvider(States.UMBU_LEAVES),
                     new BushFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new DarkOakTrunkPlacer(6, 2, 1),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setMaxWaterDepth(Integer.MAX_VALUE).setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
     //Lophantera Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOPHANTERA_TREE = register("lophantera_tree",
@@ -996,7 +997,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Jenipapo Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JENIPAPO_TREE = register("jenipapo_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JENIPAPO_LOG),
                     new SimpleBlockStateProvider(States.JENIPAPO_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(7, 5, 0),
@@ -1150,6 +1151,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState XAXIM_LEAVES = TreesGroup.XAXIM_LEAVES.get().getDefaultState();
 
         protected static final BlockState JENIPAPO_LEAVES = TreesGroup.JENIPAPO_LEAVES.get().getDefaultState();
+        protected static final BlockState JENIPAPO_LOG = TreesGroup.JENIPAPO_LOG.get().getDefaultState();
 
         protected static final BlockState BURITI_LEAVES = TreesGroup.BURITI_LEAVES.get().getDefaultState();
         protected static final BlockState BURITI_LOG = TreesGroup.BURITI_LOG.get().getDefaultState();

@@ -988,7 +988,8 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.PURPLEHEART_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-
+    public static final RegistryObject<Block> JENIPAPO_LOG = registerBlock("jenipapo_log",
+            ModLogs::new);
     public static final RegistryObject<Block> JENIPAPO_LEAVES = registerBlock("jenipapo_leaves",
             () -> new JenipapoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));

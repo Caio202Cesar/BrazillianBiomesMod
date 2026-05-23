@@ -17,6 +17,7 @@ import com.brbiomesmod.world.biomes.*;
 import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
@@ -96,7 +97,6 @@ public class BrazillianBiomesMod {
         event.enqueueWork(() -> {
 
             AxeItem.BLOCK_STRIPPING_MAP = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.BLOCK_STRIPPING_MAP)
-                    .put(TreesGroup.YERBA_MATE_LOG.get(), TreesGroup.STRIPPED_YERBA_MATE_LOG.get())
                     .put(TreesGroup.BRAZILLIAN_ROSEWOOD_LOG.get(), TreesGroup.STRIPPED_BRAZILLIAN_ROSEWOOD_LOG.get())
                     .put(TreesGroup.BRAZILLIAN_SASSAFRAS_LOG.get(), TreesGroup.STRIPPED_BRAZILLIAN_SASSAFRAS_LOG.get())
                     .put(TreesGroup.CAMBUCI_LOG.get(), TreesGroup.STRIPPED_CAMBUCI_LOG.get())
@@ -113,6 +113,9 @@ public class BrazillianBiomesMod {
                     .put(TreesGroup.PODOCARPUS_LAMBERTII_LOG.get(), TreesGroup.STRIPPED_PODOCARPUS_LAMBERTII_LOG.get())
                     .put(TreesGroup.UMBU_LOG.get(), TreesGroup.STRIPPED_UMBU_LOG.get())
                     .put(TreesGroup.WOLF_APPLE_LOG.get(), TreesGroup.STRIPPED_WOLF_APPLE_LOG.get())
+                    .put(TreesGroup.JENIPAPO_LOG.get(), Blocks.STRIPPED_JUNGLE_LOG)
+                    .put(TreesGroup.YERBA_MATE_LOG.get(), TreesGroup.STRIPPED_YERBA_MATE_LOG.get())
+
                     .build();
 
             ModBiomeGeneration.generateBiomes();
