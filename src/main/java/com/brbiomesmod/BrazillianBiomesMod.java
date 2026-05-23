@@ -114,7 +114,9 @@ public class BrazillianBiomesMod {
                     .put(TreesGroup.UMBU_LOG.get(), TreesGroup.STRIPPED_UMBU_LOG.get())
                     .put(TreesGroup.WOLF_APPLE_LOG.get(), TreesGroup.STRIPPED_WOLF_APPLE_LOG.get())
                     .put(TreesGroup.JENIPAPO_LOG.get(), Blocks.STRIPPED_JUNGLE_LOG)
-                    .put(TreesGroup.YERBA_MATE_LOG.get(), TreesGroup.STRIPPED_YERBA_MATE_LOG.get()).build();
+                    .put(TreesGroup.YERBA_MATE_LOG.get(), TreesGroup.STRIPPED_YERBA_MATE_LOG.get())
+                    .put(TreesGroup.SANDBOX_TREE_LOG.get(), TreesGroup.SANDBOX_TREE_THORNLESS_LOG.get())
+                    .put(TreesGroup.SANDBOX_TREE_THORNLESS_LOG.get(), TreesGroup.STRIPPED_SANDBOX_TREE_LOG.get()).build();
 
             ModBiomeGeneration.generateBiomes();
 

@@ -1108,6 +1108,10 @@ public class TreesGroup {
     //Varzea Plant
     public static final RegistryObject<Block> SANDBOX_TREE_LOG = registerBlock("sandbox_tree_log",
             SilkFlossLog::new);
+    public static final RegistryObject<Block> SANDBOX_TREE_THORNLESS_LOG = registerBlock("sandbox_tree_thornless_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_SANDBOX_TREE_LOG = registerBlock("stripped_sandbox_tree_log",
+            ModLogs::new);
 
     public static final RegistryObject<Block> SANDBOX_TREE_LEAVES = registerBlock("sandbox_tree_leaves",
             () -> new SandboxTreeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
