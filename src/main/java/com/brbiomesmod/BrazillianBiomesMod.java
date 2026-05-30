@@ -131,6 +131,8 @@ public class BrazillianBiomesMod {
                     .put(TreesGroup.COCKSPUR_CORAL_LOG.get(), TreesGroup.STRIPPED_COCKSPUR_CORAL_LOG.get())
                     .put(TreesGroup.SCHINUS_LOG.get(), TreesGroup.STRIPPED_SCHINUS_LOG.get())
                     .put(TreesGroup.JUA_LOG.get(), TreesGroup.STRIPPED_JUA_LOG.get())
+                    .put(TreesGroup.MANGABA_LOG.get(), TreesGroup.STRIPPED_MANGABA_LOG.get())
+                    .put(TreesGroup.MONKEY_CAJARANA_LOG.get(), TreesGroup.STRIPPED_MONKEY_CAJARANA_LOG.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();
