@@ -854,6 +854,9 @@ public class TreesGroup {
     //Can be deciduous in drier areas.
     public static final RegistryObject<Block> BALSA_LOG = registerBlock("balsa_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BALSA_LOG = registerBlock("stripped_balsa_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> BALSA_LEAVES = registerBlock("balsa_leaves",
             () -> new BalsaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BALSA_DRIED_BRANCHES));
@@ -872,6 +875,7 @@ public class TreesGroup {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_LOPHANTERA_LOG = registerBlock("stripped_lophantera_log",
             ModLogs::new);
+
     public static final RegistryObject<Block> LOPHANTERA_LEAVES = registerBlock("lophantera_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> LOPHANTERA_SAPLING = registerBlock("lophantera_sapling",
