@@ -556,6 +556,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> JABUTICABA_LOG = registerBlock("jabuticaba_log",
             JabuticabaLog::new);
+    public static final RegistryObject<Block> STRIPPED_JABUTICABA_LOG = registerBlock("stripped_jabuticaba_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> JABUTICABA_FLOWERING_LOG = registerBlock("jabuticaba_flowering_log",
             JabuticabaFloweringLog::new);
     public static final RegistryObject<Block> JABUTICABA_FRUITING_LOG = registerBlock("jabuticaba_fruiting_log",

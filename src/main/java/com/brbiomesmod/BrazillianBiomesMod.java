@@ -120,6 +120,9 @@ public class BrazillianBiomesMod {
                     .put(TreesGroup.SANDBOX_TREE_LOG.get(), TreesGroup.SANDBOX_TREE_THORNLESS_LOG.get())
                     .put(TreesGroup.SANDBOX_TREE_THORNLESS_LOG.get(), TreesGroup.STRIPPED_SANDBOX_TREE_LOG.get())
                     .put(TreesGroup.SAPUCAIA_LOG.get(), TreesGroup.STRIPPED_SAPUCAIA_LOG.get())
+                    .put(TreesGroup.JABUTICABA_LOG.get(), TreesGroup.STRIPPED_JABUTICABA_LOG.get())
+                    .put(TreesGroup.JABUTICABA_FLOWERING_LOG.get(), TreesGroup.STRIPPED_JABUTICABA_LOG.get())
+                    .put(TreesGroup.JABUTICABA_FRUITING_LOG.get(), TreesGroup.STRIPPED_JABUTICABA_LOG.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();
