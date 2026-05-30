@@ -599,8 +599,6 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.ACAI_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
 
-    public static final RegistryObject<Block> ACAI_BUNCH = registerBlock("acai_bunch",
-            AcaiBunchBlock::new);
     public static final RegistryObject<Block> JUSSARA_LEAVES = registerBlock("jussara_leaves",
             () -> new AcaiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
                     .notSolid().sound(SoundType.PLANT)));
@@ -611,9 +609,16 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.JUSSARA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
 
+    public static final RegistryObject<Block> ACAI_BUNCH = registerBlock("acai_bunch",
+            AcaiBunchBlock::new);
+
+
 
     public static final RegistryObject<Block> BLACK_SUCUPIRA_LOG = registerBlock("black_sucupira_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BLACK_SUCUPIRA_LOG = registerBlock("stripped_black_sucupira_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> BLACK_SUCUPIRA_LEAVES = registerBlock("black_sucupira_leaves",
             () -> new BlackSucupiraLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BLACK_SUCUPIRA_BLOSSOM));
