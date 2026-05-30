@@ -800,11 +800,11 @@ public class TreesGroup {
                     .zeroHardnessAndResistance()));
 
 
-
-
-
     public static final RegistryObject<Block> MANGABA_LOG = registerBlock("mangaba_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MANGABA_LOG = registerBlock("stripped_mangaba_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> MANGABA_LEAVES = registerBlock("mangaba_leaves",
             () -> new MangabaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
@@ -826,6 +826,8 @@ public class TreesGroup {
 
 
     public static final RegistryObject<Block> MONKEY_CAJARANA_LOG = registerBlock("monkey_cajarana_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MONKEY_CAJARANA_LOG = registerBlock("stripped_monkey_cajarana_log",
             ModLogs::new);
 
     public static final RegistryObject<Block> MONKEY_CAJARANA_YOUNG_LEAVES = registerBlock("monkey_cajarana_young_leaves",
