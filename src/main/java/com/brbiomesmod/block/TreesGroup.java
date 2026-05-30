@@ -685,6 +685,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> ALGARROBILLO_LOG = registerBlock("algarrobillo_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_ALGARROBILLO_LOG = registerBlock("stripped_algarrobillo_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> ALGARROBILLO_LEAVES = registerBlock("algarrobillo_leaves",
             () -> new AlgarrobilloLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.ALGARROBILLO_BRANCHES));
