@@ -499,6 +499,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> SAPUCAIA_LOG = registerBlock("sapucaia_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_SAPUCAIA_LOG = registerBlock("stripped_sapucaia_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> SAPUCAIA_LEAVES = registerBlock("sapucaia_leaves",
             () -> new SapucaiaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
