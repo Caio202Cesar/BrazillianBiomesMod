@@ -556,13 +556,13 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> JABUTICABA_LOG = registerBlock("jabuticaba_log",
             JabuticabaLog::new);
-    public static final RegistryObject<Block> STRIPPED_JABUTICABA_LOG = registerBlock("stripped_jabuticaba_log",
-            ModLogs::new);
-
     public static final RegistryObject<Block> JABUTICABA_FLOWERING_LOG = registerBlock("jabuticaba_flowering_log",
             JabuticabaFloweringLog::new);
     public static final RegistryObject<Block> JABUTICABA_FRUITING_LOG = registerBlock("jabuticaba_fruiting_log",
             JabuticabaFruitingLog::new);
+    public static final RegistryObject<Block> STRIPPED_JABUTICABA_LOG = registerBlock("stripped_jabuticaba_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> JABUTICABA_LEAVES = registerBlock("jabuticaba_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> JABUTICABA_SAPLING = registerBlock("jabuticaba_sapling",
@@ -574,6 +574,8 @@ public class TreesGroup {
 
 
     public static final RegistryObject<Block> BRAZILWOOD_LOG = registerBlock("brazilwood_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BRAZILWOOD_LOG = registerBlock("stripped_brazilwood_log",
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILWOOD_LEAVES = registerBlock("brazilwood_leaves",
             ModLeaves::new);

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/stripped_brazilwood_log_top",
+    "side": "brbiomesmod:block/stripped_brazilwood_log"
+  }
+}
