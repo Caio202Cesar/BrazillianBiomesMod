@@ -728,6 +728,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> COCKSPUR_CORAL_LOG = registerBlock("cockspur_coral_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_COCKSPUR_CORAL_LOG = registerBlock("stripped_cockspur_coral_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> COCKSPUR_CORAL_LEAVES = registerBlock("cockspur_coral_leaves",
             () -> new CockspurCoralLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.COCKSPUR_CORAL_WINTER_BRANCHES));
