@@ -747,6 +747,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> SCHINUS_LOG = registerBlock("schinus_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_SCHINUS_LOG = registerBlock("stripped_schinus_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> BRAZILLIAN_PEPPER_LEAVES = registerBlock("brazillian_pepper_leaves",
             () -> new BrazillianPepperLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_PEPPER_FRUITING_LEAVES));
