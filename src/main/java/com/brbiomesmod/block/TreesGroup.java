@@ -783,6 +783,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> JUA_LOG = registerBlock("jua_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_JUA_LOG = registerBlock("stripped_jua_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> JUA_LEAVES = registerBlock("jua_leaves",
             () -> new JuaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.JUA_FRUITING_LEAVES));
