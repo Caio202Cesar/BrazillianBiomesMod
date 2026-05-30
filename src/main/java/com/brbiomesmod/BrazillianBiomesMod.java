@@ -123,6 +123,7 @@ public class BrazillianBiomesMod {
                     .put(TreesGroup.JABUTICABA_LOG.get(), TreesGroup.STRIPPED_JABUTICABA_LOG.get())
                     .put(TreesGroup.JABUTICABA_FLOWERING_LOG.get(), TreesGroup.STRIPPED_JABUTICABA_LOG.get())
                     .put(TreesGroup.JABUTICABA_FRUITING_LOG.get(), TreesGroup.STRIPPED_JABUTICABA_LOG.get())
+                    .put(TreesGroup.BRAZILWOOD_LOG.get(), TreesGroup.STRIPPED_BRAZILWOOD_LOG.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();
