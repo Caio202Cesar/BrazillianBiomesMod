@@ -44,7 +44,7 @@ public class CupuacuFruitingLeaves extends LeavesBlock implements IForgeShearabl
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
 
             int dropCount = 1;
 

@@ -888,10 +888,13 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> CUPUACU_LEAVES = registerBlock("cupuacu_leaves",
             () -> new CupuacuLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CUPUACU_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> CUPUACU_FLOWERING_LEAVES = registerBlock("cupuacu_flowering_leaves",
+            () -> new CupuacuFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CUPUACU_FRUITING_LEAVES));
     public static final RegistryObject<Block> CUPUACU_FRUITING_LEAVES = registerBlock("cupuacu_fruiting_leaves",
             () -> new CupuacuFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CUPUACU_FRUITING_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CUPUACU_LEAVES));
     public static final RegistryObject<Block> CUPUACU_SAPLING = registerBlock("cupuacu_sapling",
             CupuacuSapling::new);
     @SuppressWarnings("deprecation")
