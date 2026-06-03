@@ -1007,6 +1007,8 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> SOMBREIRO_LOG = registerBlock("sombreiro_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_SOMBREIRO_LOG = registerBlock("stripped_sombreiro_log",
+            ModLogs::new);
     public static final RegistryObject<Block> SOMBREIRO_LEAVES = registerBlock("sombreiro_leaves",
             () -> new SombreiroLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.SOMBREIRO_DRIED_BRANCHES));
