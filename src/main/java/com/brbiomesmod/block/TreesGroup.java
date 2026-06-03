@@ -941,6 +941,8 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> SHARINGA_LOG = registerBlock("sharinga_log",
             SharingaLog::new);
+    public static final RegistryObject<Block> STRIPPED_SHARINGA_LOG = registerBlock("stripped_sharinga_log",
+            SharingaLog::new);
     public static final RegistryObject<Block> SHARINGA_TAPPERED_LOG = registerBlock("sharinga_tappered_log",
             SharingaTapperedLog::new);
     public static final RegistryObject<Block> SHARINGA_LEAVES = registerBlock("sharinga_leaves",
