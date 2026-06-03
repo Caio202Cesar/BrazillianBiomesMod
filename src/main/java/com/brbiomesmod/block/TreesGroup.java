@@ -957,6 +957,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> BACURI_LOG = registerBlock("bacuri_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BACURI_LOG = registerBlock("stripped_bacuri_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> BACURI_LEAVES = registerBlock("bacuri_leaves",
             () -> new BacuriLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
