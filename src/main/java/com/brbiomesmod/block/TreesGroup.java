@@ -1025,6 +1025,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> PURPLEHEART_LOG = registerBlock("purpleheart_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PURPLEHEART_LOG = registerBlock("stripped_purpleheart_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> PURPLEHEART_LEAVES = registerBlock("purpleheart_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> PURPLEHEART_SAPLING = registerBlock("purpleheart_sapling",
@@ -1033,6 +1036,7 @@ public class TreesGroup {
     public static final RegistryObject<Block> POTTED_PURPLEHEART_SAPLING = BLOCKS.register("potted_purpleheart_sapling",
             () -> new FlowerPotBlock(TreesGroup.PURPLEHEART_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+
 
     public static final RegistryObject<Block> JENIPAPO_LOG = registerBlock("jenipapo_log",
             ModLogs::new);
@@ -1061,6 +1065,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> GUAPURUVU_LOG = registerBlock("guapuruvu_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_GUAPURUVU_LOG = registerBlock("stripped_guapuruvu_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> GUAPURUVU_LEAVES = registerBlock("guapuruvu_leaves",
             () -> new GuapuruvuLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.GUAPURUVU_DRIED_BRANCHES));
