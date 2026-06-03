@@ -919,6 +919,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> BRAZILNUT_LOG = registerBlock("brazilnut_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BRAZILNUT_LOG = registerBlock("stripped_brazilnut_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> BRAZILNUT_LEAVES = registerBlock("brazilnut_leaves",
             () -> new BrazilnutLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE))); //leaf sheed in dry season, fruiting in wet season
