@@ -1247,6 +1247,8 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> OITI_LOG = registerBlock("oiti_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_OITI_LOG = registerBlock("stripped_oiti_log",
+            ModLogs::new);
     public static final RegistryObject<Block> OITICICA_LEAVES = registerBlock("oiticica_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> OITICICA_SAPLING = registerBlock("oiticica_sapling",
@@ -1259,7 +1261,8 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_LOG = registerBlock("brazillian_tigerwood_log",
             ModLogs::new);
-
+    public static final RegistryObject<Block> STRIPPED_BRAZILLIAN_TIGERWOOD_LOG = registerBlock("stripped_brazillian_tigerwood_log",
+            ModLogs::new);
     public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_LEAVES = registerBlock("brazillian_tigerwood_leaves",
             () -> new BrazillianTigerwoodLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_TIGERWOOD_FALL_LEAVES));
@@ -1269,7 +1272,6 @@ public class TreesGroup {
     public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_BRANCHES = registerBlock("brazillian_tigerwood_dried_branches",
             () -> new BrazillianTigerwoodBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_TIGERWOOD_LEAVES));
-
     public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_SAPLING = registerBlock("brazillian_tigerwood_sapling",
             BrazillianTigerwoodSapling::new);
     @SuppressWarnings("deprecation")

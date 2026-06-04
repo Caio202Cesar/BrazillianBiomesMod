@@ -99,6 +99,7 @@ public class BrazillianBiomesMod {
             AxeItem.BLOCK_STRIPPING_MAP = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.BLOCK_STRIPPING_MAP)
                     .put(TreesGroup.BRAZILLIAN_ROSEWOOD_LOG.get(), TreesGroup.STRIPPED_BRAZILLIAN_ROSEWOOD_LOG.get())
                     .put(TreesGroup.BRAZILLIAN_SASSAFRAS_LOG.get(), TreesGroup.STRIPPED_BRAZILLIAN_SASSAFRAS_LOG.get())
+                    .put(TreesGroup.BRAZILLIAN_TIGERWOOD_LOG.get(), TreesGroup.STRIPPED_BRAZILLIAN_TIGERWOOD_LOG.get())
                     .put(TreesGroup.CAMBUCI_LOG.get(), TreesGroup.STRIPPED_CAMBUCI_LOG.get())
                     .put(TreesGroup.CASHEW_LOG.get(), TreesGroup.STRIPPED_CASHEW_LOG.get())
                     .put(TreesGroup.EUGENIA_LOG.get(), TreesGroup.STRIPPED_EUGENIA_LOG.get())
@@ -145,6 +146,7 @@ public class BrazillianBiomesMod {
                     .put(TreesGroup.YELLOW_MOMBIN_LOG.get(), TreesGroup.STRIPPED_YELLOW_MOMBIN_LOG.get())
                     .put(TreesGroup.PEQUI_LOG.get(), TreesGroup.STRIPPED_PEQUI_LOG.get())
                     .put(TreesGroup.HUMBOLDT_WILLOW_LOG.get(), TreesGroup.STRIPPED_HUMBOLDT_WILLOW_LOG.get())
+                    .put(TreesGroup.OITI_LOG.get(), TreesGroup.STRIPPED_OITI_LOG.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();
