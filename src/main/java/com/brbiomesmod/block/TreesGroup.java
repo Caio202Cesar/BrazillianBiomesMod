@@ -1224,6 +1224,8 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> HUMBOLDT_WILLOW_LOG = registerBlock("humboldt_willow_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_HUMBOLDT_WILLOW_LOG = registerBlock("stripped_humboldt_willow_log",
+            ModLogs::new);
 
     public static final RegistryObject<Block> HUMBOLDT_WILLOW_LEAVES = registerBlock("humboldt_willow_leaves",
             () -> new HumboldtWillowLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
