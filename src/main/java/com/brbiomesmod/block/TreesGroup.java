@@ -1087,6 +1087,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> YELLOW_MOMBIN_LOG = registerBlock("yellow_mombin_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_YELLOW_MOMBIN_LOG = registerBlock("stripped_yellow_mombin_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> YELLOW_MOMBIN_LEAVES = registerBlock("yellow_mombin_leaves",
             () -> new YellowMombinLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));

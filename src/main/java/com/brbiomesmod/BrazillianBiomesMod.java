@@ -140,6 +140,8 @@ public class BrazillianBiomesMod {
                     .put(TreesGroup.CAMU_CAMU_LOG.get(), TreesGroup.STRIPPED_CAMU_CAMU_LOG.get())
                     .put(TreesGroup.SOMBREIRO_LOG.get(), TreesGroup.STRIPPED_SOMBREIRO_LOG.get())
                     .put(TreesGroup.PURPLEHEART_LOG.get(), TreesGroup.STRIPPED_PURPLEHEART_LOG.get())
+                    .put(TreesGroup.GUAPURUVU_LOG.get(), TreesGroup.STRIPPED_GUAPURUVU_LOG.get())
+                    .put(TreesGroup.YELLOW_MOMBIN_LOG.get(), TreesGroup.STRIPPED_YELLOW_MOMBIN_LOG.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();
