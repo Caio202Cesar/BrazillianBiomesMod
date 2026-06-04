@@ -1112,6 +1112,9 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> PEQUI_LOG = registerBlock("pequi_log",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PEQUI_LOG = registerBlock("stripped_pequi_log",
+            ModLogs::new);
+
     public static final RegistryObject<Block> PEQUI_LEAVES = registerBlock("pequi_leaves",
             () -> new PequiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PEQUI_DRIED_BRANCHES));
