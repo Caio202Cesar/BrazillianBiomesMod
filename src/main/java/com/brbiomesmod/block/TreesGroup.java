@@ -398,6 +398,9 @@ public class TreesGroup {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CAGAITA_DRIED_BRANCHES));
     public static final RegistryObject<Block> CAGAITA_DRIED_BRANCHES = registerBlock("cagaita_dried_branches",
             () -> new CagaitaDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CAGAITA_BUDDING_LEAVES));
+    public static final RegistryObject<Block> CAGAITA_BUDDING_LEAVES = registerBlock("cagaita_budding_leaves",
+            () -> new CagaitaBuddingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CAGAITA_FLOWERING_LEAVES));
     public static final RegistryObject<Block> CAGAITA_FLOWERING_LEAVES = registerBlock("cagaita_flowering_leaves",
             () -> new CagaitaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
