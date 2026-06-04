@@ -50,6 +50,8 @@ public class TreesGroup {
 
     public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
             SilkFlossLog::new);
+    public static final RegistryObject<Block> SILK_FLOSS_THORNLESS_LOG = registerBlock("silk_floss_thornless_log",
+            ModLogs::new);
 
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_LEAVES = registerBlock("silk_floss_white_leaves",
             () -> new WhiteSilkFlossLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()

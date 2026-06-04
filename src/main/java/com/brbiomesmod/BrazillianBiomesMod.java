@@ -114,7 +114,8 @@ public class BrazillianBiomesMod {
                     .put(TreesGroup.UMBU_LOG.get(), TreesGroup.STRIPPED_UMBU_LOG.get())
                     .put(TreesGroup.WOLF_APPLE_LOG.get(), TreesGroup.STRIPPED_WOLF_APPLE_LOG.get())
                     .put(TreesGroup.JENIPAPO_LOG.get(), Blocks.STRIPPED_JUNGLE_LOG)
-                    .put(TreesGroup.SILK_FLOSS_LOG.get(), Blocks.STRIPPED_JUNGLE_LOG)
+                    .put(TreesGroup.SILK_FLOSS_LOG.get(), TreesGroup.SILK_FLOSS_THORNLESS_LOG.get())
+                    .put(TreesGroup.SILK_FLOSS_THORNLESS_LOG.get(), Blocks.STRIPPED_JUNGLE_LOG)
                     .put(TreesGroup.KAPOK_LOG.get(), Blocks.STRIPPED_JUNGLE_LOG)
                     .put(TreesGroup.YERBA_MATE_LOG.get(), TreesGroup.STRIPPED_YERBA_MATE_LOG.get())
                     .put(TreesGroup.SANDBOX_TREE_LOG.get(), TreesGroup.SANDBOX_TREE_THORNLESS_LOG.get())
@@ -142,6 +143,7 @@ public class BrazillianBiomesMod {
                     .put(TreesGroup.PURPLEHEART_LOG.get(), TreesGroup.STRIPPED_PURPLEHEART_LOG.get())
                     .put(TreesGroup.GUAPURUVU_LOG.get(), TreesGroup.STRIPPED_GUAPURUVU_LOG.get())
                     .put(TreesGroup.YELLOW_MOMBIN_LOG.get(), TreesGroup.STRIPPED_YELLOW_MOMBIN_LOG.get())
+                    .put(TreesGroup.PEQUI_LOG.get(), TreesGroup.STRIPPED_PEQUI_LOG.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();
