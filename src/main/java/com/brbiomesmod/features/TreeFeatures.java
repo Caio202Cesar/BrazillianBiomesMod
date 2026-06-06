@@ -458,13 +458,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LOPHANTERA_LOG),
                     new SimpleBlockStateProvider(States.LOPHANTERA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
+                    new StraightTrunkPlacer(4, 4, 0),
                     new TwoLayerFeature(1, 2, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOPHANTERA_TREE2 = register("lophantera_tree2",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LOPHANTERA_LOG),
                     new SimpleBlockStateProvider(States.LOPHANTERA_LEAVES),
                     new SpruceFoliagePlacer(FeatureSpread.create(4), FeatureSpread.create(3), FeatureSpread.create(6)),
-                    new StraightTrunkPlacer(3, 5, 0),
+                    new StraightTrunkPlacer(3, 7, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Manaca da Serra Tree
