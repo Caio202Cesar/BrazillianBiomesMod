@@ -77,7 +77,7 @@ public class UmbuSapling extends SaplingBlock {
         // (radius 2 → 5x5 small green house)
         // (radius 3 → 7x7 medium green house)
         // (radius 4 → 9x9 large green house)
-        int radius = 3;
+        int radius = 4;
 
         for (int x = -radius; x <= radius; x++) {
             for (int z = -radius; z <= radius; z++) {
