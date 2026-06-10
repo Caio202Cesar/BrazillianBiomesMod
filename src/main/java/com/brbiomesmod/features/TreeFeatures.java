@@ -446,12 +446,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> UMBU_TREE =
             register("umbu_tree", Feature.TREE.withConfiguration(new BaseTreeFeatureConfig.Builder(
                     new SimpleBlockStateProvider(TreeFeatures.States.UMBU_LOG),
-                            new SimpleBlockStateProvider(States.UMBU_LEAVES),
-                            new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                            new SimpleBlockStateProvider(States.UMBU_LEAVES), 
+                    new BushFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0), 3),
                                     new ForkyTrunkPlacer(4, 2, 1),
-                                    new TwoLayerFeature(2, 0, 2)).build()
-                    )
-            );
+                                    new TwoLayerFeature(2, 0, 2)).build()));
 
     //Lophantera Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOPHANTERA_TREE = register("lophantera_tree",
