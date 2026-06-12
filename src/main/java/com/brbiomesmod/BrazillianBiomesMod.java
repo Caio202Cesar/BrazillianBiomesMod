@@ -103,6 +103,7 @@ public class BrazillianBiomesMod {
                     .put(TreesGroup.CAMBUCI_LOG.get(), TreesGroup.STRIPPED_CAMBUCI_LOG.get())
                     .put(TreesGroup.CASHEW_LOG.get(), TreesGroup.STRIPPED_CASHEW_LOG.get())
                     .put(TreesGroup.EUGENIA_LOG.get(), TreesGroup.STRIPPED_EUGENIA_LOG.get())
+                    .put(TreesGroup.CAGAITA_LOG.get(), TreesGroup.STRIPPED_EUGENIA_LOG.get())
                     .put(TreesGroup.FEIJOA_LOG.get(), TreesGroup.STRIPPED_FEIJOA_LOG.get())
                     .put(TreesGroup.IMBUIA_LOG.get(), TreesGroup.STRIPPED_IMBUIA_LOG.get())
                     .put(TreesGroup.IPE_LOG.get(), TreesGroup.STRIPPED_IPE_LOG.get())

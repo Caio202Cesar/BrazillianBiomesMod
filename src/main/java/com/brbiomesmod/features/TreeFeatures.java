@@ -762,14 +762,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Cagaita Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAGAITA_TREE = register("cagaita_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.EUGENIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CAGAITA_LOG),
                     new SimpleBlockStateProvider(States.CAGAITA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CERRADO_CAGAITA_TREE = register("cerrado_cagaita_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.EUGENIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CAGAITA_LOG),
                     new SimpleBlockStateProvider(States.CAGAITA_BLOSSOM),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
@@ -1248,9 +1248,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState EUGENIA_LOG = TreesGroup.EUGENIA_LOG.get().getDefaultState();
         protected static final BlockState PITANGA_LEAVES = TreesGroup.PITANGA_LEAVES.get().getDefaultState();
         protected static final BlockState BLACK_PITANGA_LEAVES = TreesGroup.BLACK_PITANGA_LEAVES.get().getDefaultState();
-        protected static final BlockState CAGAITA_LEAVES = TreesGroup.CAGAITA_LEAVES.get().getDefaultState();
         protected static final BlockState CAGAITA_BLOSSOM = TreesGroup.CAGAITA_FLOWERING_LEAVES.get().getDefaultState();
         protected static final BlockState RIO_GRANDE_CHERRY_LEAVES = TreesGroup.RIO_GRANDE_CHERRY_LEAVES.get().getDefaultState();
+
+        protected static final BlockState CAGAITA_LOG = TreesGroup.CAGAITA_LOG.get().getDefaultState();
+        protected static final BlockState CAGAITA_LEAVES = TreesGroup.CAGAITA_LEAVES.get().getDefaultState();
 
         protected static final BlockState SHARINGA_LOG = TreesGroup.SHARINGA_LOG.get().getDefaultState();
         protected static final BlockState SHARINGA_LEAVES = TreesGroup.SHARINGA_LEAVES.get().getDefaultState();
