@@ -292,6 +292,8 @@ public class WoodGroup {
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
+    public static final RegistryObject<Block> CAGAITA_WOOD = registerBlock("cagaita_wood",
+            ModLogs::new);
 
     public static final RegistryObject<Block> EUGENIA_WOOD = registerBlock("eugenia_wood",
             ModLogs::new);
