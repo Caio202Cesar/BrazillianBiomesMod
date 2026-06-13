@@ -29,21 +29,41 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> CECROPIA_WOOD = registerBlock("cecropia_wood",
             ModLogs::new);
+
+
     public static final RegistryObject<Block> BLACK_JUREMA_WOOD = registerBlock("black_jurema_wood",
             ModLogs::new);
     public static final RegistryObject<Block> CAVEN_THORN_WOOD = registerBlock("caven_thorn_wood",
             ModLogs::new);
+
+
     public static final RegistryObject<Block> KAPOK_WOOD = registerBlock("kapok_wood",
             ModLogs::new);
+
+
     public static final RegistryObject<Block> SILK_FLOSS_WOOD = registerBlock("silk_floss_thornless_wood",
             ModLogs::new);
     public static final RegistryObject<Block> SILK_FLOSS_THORNY_WOOD = registerBlock("silk_floss_thorny_wood",
             SilkFlossLog::new);
 
 
+    public static final RegistryObject<Block> CAGAITA_WOOD = registerBlock("cagaita_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CAGAITA_WOOD = registerBlock("stripped_cagaita_wood",
+            ModLogs::new);
+
+
+    public static final RegistryObject<Block> JENIPAPO_WOOD = registerBlock("jenipapo_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_JENIPAPO_WOOD = registerBlock("stripped_jenipapo_wood",
+            ModLogs::new);
+
+
     public static final RegistryObject<Block> BALSA_PLANKS = registerBlock("balsa_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> BALSA_WOOD = registerBlock("balsa_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BALSA_WOOD = registerBlock("stripped_balsa_wood",
             ModLogs::new);
     public static final RegistryObject<Block> BALSA_SLAB = registerBlock("balsa_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
@@ -63,6 +83,8 @@ public class WoodGroup {
             ModPlanks::new);
     public static final RegistryObject<Block> LOPHANTERA_WOOD = registerBlock("lophantera_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_LOPHANTERA_WOOD = registerBlock("stripped_lophantera_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> LOPHANTERA_SLAB = registerBlock("lophantera_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -80,6 +102,8 @@ public class WoodGroup {
     public static final RegistryObject<Block> BRAZILNUT_PLANKS = registerBlock("brazilnut_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> BRAZILNUT_WOOD = registerBlock("brazilnut_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BRAZILNUT_WOOD = registerBlock("stripped_brazilnut_wood",
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILNUT_SLAB = registerBlock("brazilnut_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
@@ -99,6 +123,8 @@ public class WoodGroup {
             ModPlanks::new);
     public static final RegistryObject<Block> SHARINGA_WOOD = registerBlock("sharinga_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_SHARINGA_WOOD = registerBlock("stripped_sharinga_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> SHARINGA_SLAB = registerBlock("sharinga_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -116,6 +142,8 @@ public class WoodGroup {
     public static final RegistryObject<Block> BACURI_PLANKS = registerBlock("bacuri_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> BACURI_WOOD = registerBlock("bacuri_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BACURI_WOOD = registerBlock("stripped_bacuri_wood",
             ModLogs::new);
     public static final RegistryObject<Block> BACURI_SLAB = registerBlock("bacuri_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
@@ -135,6 +163,8 @@ public class WoodGroup {
             ModPlanks::new);
     public static final RegistryObject<Block> CAMU_CAMU_WOOD = registerBlock("camu_camu_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CAMU_CAMU_WOOD = registerBlock("stripped_camu_camu_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> CAMU_CAMU_SLAB = registerBlock("camu_camu_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -153,6 +183,8 @@ public class WoodGroup {
             ModPlanks::new);
     public static final RegistryObject<Block> SOMBREIRO_WOOD = registerBlock("sombreiro_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_SOMBREIRO_WOOD = registerBlock("stripped_sombreiro_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> SOMBREIRO_SLAB = registerBlock("sombreiro_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -168,6 +200,8 @@ public class WoodGroup {
 
 
     public static final RegistryObject<Block> COCKSPUR_CORAL_WOOD = registerBlock("cockspur_coral_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_COCKSPUR_CORAL_WOOD = registerBlock("stripped_cockspur_coral_wood",
             ModLogs::new);
     public static final RegistryObject<Block> COCKSPUR_CORAL_PLANKS = registerBlock("cockspur_coral_planks",
             ModPlanks::new);
@@ -187,6 +221,8 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> ALGARROBILLO_WOOD = registerBlock("algarrobillo_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_ALGARROBILLO_WOOD = registerBlock("stripped_algarrobillo_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> ALGARROBILLO_PLANKS = registerBlock("algarrobillo_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> ALGARROBILLO_SLAB = registerBlock("algarrobillo_slab",
@@ -204,6 +240,8 @@ public class WoodGroup {
 
 
     public static final RegistryObject<Block> SCHINUS_WOOD = registerBlock("schinus_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_SCHINUS_WOOD = registerBlock("stripped_schinus_wood",
             ModLogs::new);
     public static final RegistryObject<Block> SCHINUS_PLANKS = registerBlock("schinus_planks",
             ModPlanks::new);
@@ -223,6 +261,8 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> JUA_WOOD = registerBlock("jua_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_JUA_WOOD = registerBlock("stripped_jua_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> JUA_PLANKS = registerBlock("jua_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> JUA_SLAB = registerBlock("jua_slab",
@@ -240,6 +280,8 @@ public class WoodGroup {
 
 
     public static final RegistryObject<Block> FEIJOA_WOOD = registerBlock("feijoa_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_FEIJOA_WOOD = registerBlock("stripped_feijoa_wood",
             ModLogs::new);
     public static final RegistryObject<Block> FEIJOA_PLANKS = registerBlock("feijoa_planks",
             ModPlanks::new);
@@ -259,6 +301,8 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> YERBA_MATE_WOOD = registerBlock("yerba_mate_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_YERBA_MATE_WOOD = registerBlock("stripped_yerba_mate_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> YERBA_MATE_PLANKS = registerBlock("yerba_mate_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> YERBA_MATE_SLAB = registerBlock("yerba_mate_slab",
@@ -277,6 +321,8 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> IMBUIA_WOOD = registerBlock("imbuia_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_IMBUIA_WOOD = registerBlock("stripped_imbuia_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> IMBUIA_PLANKS = registerBlock("imbuia_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> IMBUIA_SLAB = registerBlock("imbuia_slab",
@@ -292,10 +338,10 @@ public class WoodGroup {
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
-    public static final RegistryObject<Block> CAGAITA_WOOD = registerBlock("cagaita_wood",
-            ModLogs::new);
 
     public static final RegistryObject<Block> EUGENIA_WOOD = registerBlock("eugenia_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_EUGENIA_WOOD = registerBlock("stripped_eugenia_wood",
             ModLogs::new);
     public static final RegistryObject<Block> EUGENIA_PLANKS = registerBlock("eugenia_planks",
             ModPlanks::new);
@@ -315,6 +361,8 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> PARANA_PINE_WOOD = registerBlock("parana_pine_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PARANA_PINE_WOOD = registerBlock("stripped_parana_pine_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> PARANA_PINE_PLANKS = registerBlock("parana_pine_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> PARANA_PINE_SLAB = registerBlock("parana_pine_slab",
@@ -333,6 +381,8 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> PINK_PEROBA_WOOD = registerBlock("pink_peroba_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PINK_PEROBA_WOOD = registerBlock("stripped_pink_peroba_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> PINK_PEROBA_PLANKS = registerBlock("pink_peroba_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> PINK_PEROBA_SLAB = registerBlock("pink_peroba_slab",
@@ -348,10 +398,10 @@ public class WoodGroup {
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
-    public static final RegistryObject<Block> JENIPAPO_WOOD = registerBlock("jenipapo_wood",
-            ModLogs::new);
 
     public static final RegistryObject<Block> JEQUITIBA_WOOD = registerBlock("jequitiba_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_JEQUITIBA_WOOD = registerBlock("stripped_jequitiba_wood",
             ModLogs::new);
     public static final RegistryObject<Block> JEQUITIBA_PLANKS = registerBlock("jequitiba_planks",
             ModPlanks::new);
@@ -371,6 +421,9 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> SAPUCAIA_WOOD = registerBlock("sapucaia_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_SAPUCAIA_WOOD = registerBlock("stripped_sapucaia_wood",
+            ModLogs::new);
+
     public static final RegistryObject<Block> SAPUCAIA_PLANKS = registerBlock("sapucaia_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> SAPUCAIA_SLAB = registerBlock("sapucaia_slab",
@@ -388,6 +441,8 @@ public class WoodGroup {
 
 
     public static final RegistryObject<Block> IPE_WOOD = registerBlock("ipe_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_IPE_WOOD = registerBlock("stripped_ipe_wood",
             ModLogs::new);
     public static final RegistryObject<Block> IPE_PLANKS = registerBlock("ipe_planks",
             ModPlanks::new);
@@ -407,6 +462,9 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> MANACA_DA_SERRA_WOOD = registerBlock("manaca_da_serra_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MANACA_DA_SERRA_WOOD = registerBlock("stripped_manaca_da_serra_wood",
+            ModLogs::new);
+
     public static final RegistryObject<Block> MANACA_DA_SERRA_PLANKS = registerBlock("manaca_da_serra_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> MANACA_DA_SERRA_SLAB = registerBlock("manaca_da_serra_slab",
@@ -424,6 +482,8 @@ public class WoodGroup {
 
 
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_WOOD = registerBlock("brazillian_rosewood_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BRAZILLIAN_ROSEWOOD_WOOD = registerBlock("stripped_brazillian_rosewood_wood",
             ModLogs::new);
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_PLANKS = registerBlock("brazillian_rosewood_planks",
             ModPlanks::new);
@@ -443,6 +503,8 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_WOOD = registerBlock("brazillian_sassafras_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BRAZILLIAN_SASSAFRAS_WOOD = registerBlock("stripped_brazillian_sassafras_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_PLANKS = registerBlock("brazillian_sassafras_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_SLAB = registerBlock("brazillian_sassafras_slab",
@@ -460,6 +522,8 @@ public class WoodGroup {
 
 
     public static final RegistryObject<Block> UMBU_WOOD = registerBlock("umbu_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_UMBU_WOOD = registerBlock("stripped_umbu_wood",
             ModLogs::new);
     public static final RegistryObject<Block> UMBU_PLANKS = registerBlock("umbu_planks",
             ModPlanks::new);
@@ -479,6 +543,8 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> JABUTICABA_WOOD = registerBlock("jabuticaba_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_JABUTICABA_WOOD = registerBlock("stripped_jabuticaba_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> JABUTICABA_PLANKS = registerBlock("jabuticaba_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> JABUTICABA_SLAB = registerBlock("jabuticaba_slab",
@@ -496,6 +562,8 @@ public class WoodGroup {
 
 
     public static final RegistryObject<Block> CAMBUCI_WOOD = registerBlock("cambuci_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CAMBUCI_WOOD = registerBlock("stripped_cambuci_wood",
             ModLogs::new);
     public static final RegistryObject<Block> CAMBUCI_PLANKS = registerBlock("cambuci_planks",
             ModPlanks::new);
@@ -515,6 +583,8 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> BRAZILWOOD_WOOD = registerBlock("brazilwood_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BRAZILWOOD_WOOD = registerBlock("stripped_brazilwood_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> BRAZILWOOD_PLANKS = registerBlock("brazilwood_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> BRAZILWOOD_SLAB = registerBlock("brazilwood_slab",
@@ -532,6 +602,8 @@ public class WoodGroup {
 
 
     public static final RegistryObject<Block> WOLF_APPLE_WOOD = registerBlock("wolf_apple_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_WOLF_APPLE_WOOD = registerBlock("stripped_wolf_apple_wood",
             ModLogs::new);
     public static final RegistryObject<Block> WOLF_APPLE_PLANKS = registerBlock("wolf_apple_planks",
             ModPlanks::new);
@@ -551,6 +623,8 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> BLACK_SUCUPIRA_WOOD = registerBlock("black_sucupira_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BLACK_SUCUPIRA_WOOD = registerBlock("stripped_black_sucupira_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> BLACK_SUCUPIRA_PLANKS = registerBlock("black_sucupira_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> BLACK_SUCUPIRA_SLAB = registerBlock("black_sucupira_slab",
@@ -568,6 +642,8 @@ public class WoodGroup {
 
 
     public static final RegistryObject<Block> CASHEW_WOOD = registerBlock("cashew_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CASHEW_WOOD = registerBlock("stripped_cashew_wood",
             ModLogs::new);
     public static final RegistryObject<Block> CASHEW_PLANKS = registerBlock("cashew_planks",
             ModPlanks::new);
@@ -587,6 +663,8 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> MANGABA_WOOD = registerBlock("mangaba_wood",
             ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MANGABA_WOOD = registerBlock("stripped_mangaba_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> MANGABA_PLANKS = registerBlock("mangaba_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> MANGABA_SLAB = registerBlock("mangaba_slab",
@@ -605,7 +683,8 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> MONKEY_CAJARANA_WOOD = registerBlock("monkey_cajarana_wood",
             ModLogs::new);
-
+    public static final RegistryObject<Block> STRIPPED_MONKEY_CAJARANA_WOOD = registerBlock("stripped_monkey_cajarana_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> MONKEY_CAJARANA_PLANKS = registerBlock("monkey_cajarana_planks",
             ModPlanks::new);
     public static final RegistryObject<Block> MONKEY_CAJARANA_SLAB = registerBlock("monkey_cajarana_slab",
