@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "brbiomesmod:monkey_cajarana_wood"
+      "item": "brbiomesmod:mangaba_wood"
     }
   ],
   "result": {
-    "item": "brbiomesmod:monkey_cajarana_planks",
+    "item": "brbiomesmod:mangaba_planks",
     "count": 4
   }
 }

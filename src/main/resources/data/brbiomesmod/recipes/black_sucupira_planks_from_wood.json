@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "brbiomesmod:monkey_cajarana_wood"
+      "item": "brbiomesmod:black_sucupira_wood"
     }
   ],
   "result": {
-    "item": "brbiomesmod:monkey_cajarana_planks",
+    "item": "brbiomesmod:black_sucupira_planks",
     "count": 4
   }
 }
