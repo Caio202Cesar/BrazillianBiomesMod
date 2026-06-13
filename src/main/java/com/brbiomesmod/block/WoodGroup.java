@@ -734,15 +734,23 @@ public class WoodGroup {
     public static final RegistryObject<Block> PURPLEHEART_PLANKS = registerBlock("purpleheart_planks",
             ModPlanks::new);
 
-    /*
+
+    public static final RegistryObject<Block> GUAPURUVU_WOOD = registerBlock("guapuruvu_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_GUAPURUVU_WOOD = registerBlock("stripped_guapuruvu_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> GUAPURUVU_PLANKS = registerBlock("guapuruvu_planks",
+            ModPlanks::new);
+
+
     public static final RegistryObject<Block> YELLOW_MOMBIN_WOOD = registerBlock("yellow_mombin_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_YELLOW_MOMBIN_WOOD = registerBlock("stripped_yellow_mombin_wood",
             ModLogs::new);
     public static final RegistryObject<Block> YELLOW_MOMBIN_PLANKS = registerBlock("yellow_mombin_planks",
             ModPlanks::new);
 
 
-
-*/
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
