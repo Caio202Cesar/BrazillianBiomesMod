@@ -701,6 +701,39 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
+    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_WOOD = registerBlock("podocarpus_lambertii_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PODOCARPUS_LAMBERTII_WOOD = registerBlock("stripped_podocarpus_lambertii_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_PLANKS = registerBlock("podocarpus_lambertii_planks",
+            ModPlanks::new);
+
+
+    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_WOOD = registerBlock("brazillian_tigerwood_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_BRAZILLIAN_TIGERWOOD_WOOD = registerBlock("stripped_brazillian_tigerwood_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_PLANKS = registerBlock("brazillian_tigerwood_planks",
+            ModPlanks::new);
+
+
+    public static final RegistryObject<Block> SANDBOX_TREE_WOOD = registerBlock("sandbox_tree_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> SANDBOX_TREE_THORNLESS_WOOD = registerBlock("sandbox_tree_thornless_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_SANDBOX_TREE_WOOD = registerBlock("stripped_sandbox_tree_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> SANDBOX_TREE_PLANKS = registerBlock("sandbox_tree_planks",
+            ModPlanks::new);
+
+
+    public static final RegistryObject<Block> PURPLEHEART_WOOD = registerBlock("purpleheart_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PURPLEHEART_WOOD = registerBlock("stripped_purpleheart_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> PURPLEHEART_PLANKS = registerBlock("purpleheart_planks",
+            ModPlanks::new);
+
     /*
     public static final RegistryObject<Block> YELLOW_MOMBIN_WOOD = registerBlock("yellow_mombin_wood",
             ModLogs::new);
@@ -708,10 +741,7 @@ public class WoodGroup {
             ModPlanks::new);
 
 
-    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_WOOD = registerBlock("brazillian_tigerwood_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_PLANKS = registerBlock("brazillian_tigerwood_planks",
-            ModPlanks::new);
+
 */
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
