@@ -622,6 +622,18 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
+    /*
+    public static final RegistryObject<Block> YELLOW_MOMBIN_WOOD = registerBlock("yellow_mombin_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> YELLOW_MOMBIN_PLANKS = registerBlock("yellow_mombin_planks",
+            ModPlanks::new);
+
+
+    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_WOOD = registerBlock("brazillian_tigerwood_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_PLANKS = registerBlock("brazillian_tigerwood_planks",
+            ModPlanks::new);
+*/
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
