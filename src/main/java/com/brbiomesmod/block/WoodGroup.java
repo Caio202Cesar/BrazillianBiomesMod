@@ -751,6 +751,29 @@ public class WoodGroup {
             ModPlanks::new);
 
 
+    public static final RegistryObject<Block> PEQUI_WOOD = registerBlock("pequi_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_PEQUI_WOOD = registerBlock("stripped_pequi_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> PEQUI_PLANKS = registerBlock("pequi_planks",
+            ModPlanks::new);
+
+
+    public static final RegistryObject<Block> HUMBOLDT_WILLOW_WOOD = registerBlock("humboldt_willow_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_HUMBOLDT_WILLOW_WOOD = registerBlock("stripped_humboldt_willow_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> HUMBOLDT_WILLOW_PLANKS = registerBlock("humboldt_willow_planks",
+            ModPlanks::new);
+
+
+    public static final RegistryObject<Block> OITI_WOOD = registerBlock("oiti_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_OITI_WOOD = registerBlock("stripped_oiti_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> OITI_PLANKS = registerBlock("oiti_planks",
+            ModPlanks::new);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
