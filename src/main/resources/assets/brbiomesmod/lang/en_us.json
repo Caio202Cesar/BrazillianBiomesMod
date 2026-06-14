@@ -579,6 +579,10 @@
   "block.brbiomesmod.cagaita_log": "Cagaita Log",
   "block.brbiomesmod.cagaita_wood": "Cagaita Wood",
   "block.brbiomesmod.jenipapo_wood": "Jenipapo Wood",
+  "block.brbiomesmod.podocarpus_lambertii_wood": "podocarpus lambertii Wood",
+  "block.brbiomesmod.podocarpus_lambertii_planks": "podocarpus lambertii Planks",
+  "block.brbiomesmod.brazillian_tigerwood_wood": "Brazillian Tigerwood Wood",
+  "block.brbiomesmod.brazillian_tigerwood_planks": "Brazillian Tigerwood Planks",
 
   "biome.brbiomesmod.caatinga_shrubland": "Caatinga",
   "biome.brbiomesmod.atlantic_forest": "Atlantic Forest",

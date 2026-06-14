@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:stripped_brazillian_tigerwood_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:brazillian_tigerwood_planks",
+    "count": 4
+  }
+}
