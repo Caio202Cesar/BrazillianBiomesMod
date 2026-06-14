@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:podocarpus_lambertii_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:podocarpus_lambertii_planks",
+    "count": 4
+  }
+}

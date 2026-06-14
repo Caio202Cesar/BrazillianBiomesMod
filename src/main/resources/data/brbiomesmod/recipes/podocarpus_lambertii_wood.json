@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "log",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:podocarpus_lambertii_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:podocarpus_lambertii_wood",
+    "count": 3
+  }
+}
