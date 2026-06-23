@@ -1115,6 +1115,22 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
+
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OITI_TREE = register("oiti_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OITI_LOG),
+                    new SimpleBlockStateProvider(States.OITI_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OITI_FANCY_TREE = register("oiti_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OITI_LOG),
+                    new SimpleBlockStateProvider(States.OITI_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
+
     public static final class States {
 
         protected static final BlockState KAPOK_LOG = TreesGroup.KAPOK_LOG.get().getDefaultState();
