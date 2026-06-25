@@ -9,6 +9,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.PushReaction;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.state.IntegerProperty;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
@@ -20,6 +21,8 @@ import net.minecraftforge.common.ToolType;
 import java.util.Random;
 
 public class BuritiBunchBlock extends Block {
+    public static final IntegerProperty LENGTH = IntegerProperty.create("length", 1, 3);
+
     public BuritiBunchBlock() {
         super(Properties.from(Blocks.BEEHIVE).zeroHardnessAndResistance().tickRandomly()
                 .sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().harvestTool(ToolType.HOE));
@@ -40,6 +43,16 @@ public class BuritiBunchBlock extends Block {
             // Check if the space below is air
             if (belowState.isAir()) {
                 world.setBlockState(belowPos, TreesGroup.BURITI_BUNCH.get().getDefaultState(), 2);
+
+                int length = state.get(LENGTH);
+
+                if (length < 3) {
+                    world.setBlockState(
+                            pos.down(),
+                            state.with(LENGTH, length + 1),
+                            2
+                    );
+                }
             }
         }
     }

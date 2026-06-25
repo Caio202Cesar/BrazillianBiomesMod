@@ -1116,7 +1116,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
 
 
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OITI_TREE = register("oiti_tree",
+    /*public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OITI_TREE = register("oiti_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OITI_LOG),
                     new SimpleBlockStateProvider(States.OITI_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
@@ -1128,7 +1128,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));*/
 
 
     public static final class States {

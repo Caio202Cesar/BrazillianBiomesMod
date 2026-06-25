@@ -2,11 +2,14 @@ package com.brbiomesmod.features.FoliagePlacers;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.FeatureSpread;
+import net.minecraft.world.gen.feature.TreeFeature;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacer;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 
@@ -119,5 +122,27 @@ public class YoungKapokFoliagePlacer extends FoliagePlacer {
                                      int radius,
                                      boolean giantTrunk) {
         return false;
+    }
+
+    private void placeLeaf(
+            IWorldGenerationReader world,
+            Random random,
+            BaseTreeFeatureConfig config,
+            BlockPos pos,
+            Set<BlockPos> leaves,
+            MutableBoundingBox box) {
+
+        if (TreeFeature.isReplaceableAt(world, pos)) {
+
+            BlockState leafState = config.leavesProvider
+                    .getBlockState(random, pos)
+                    .with(LeavesBlock.PERSISTENT, true)
+                    .with(LeavesBlock.DISTANCE, 1);
+
+            world.setBlockState(pos, leafState, 19);
+
+            leaves.add(pos);
+            box.expandTo(new MutableBoundingBox(pos, pos));
+        }
     }
 }
