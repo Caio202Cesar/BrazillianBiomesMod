@@ -1,7 +1,7 @@
 {
   "variants": {
-    "": {
-      "model": "brbiomesmod:block/buriti_bunch"
-    }
+    "length=1": { "model": "brbiomesmod:block/buriti_bunch" },
+    "length=2": { "model": "brbiomesmod:block/buriti_bunch" },
+    "length=3": { "model": "brbiomesmod:block/buriti_bunch" }
   }
 }

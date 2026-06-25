@@ -10,6 +10,7 @@ import net.minecraft.block.material.PushReaction;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.state.IntegerProperty;
+import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
@@ -23,9 +24,21 @@ import java.util.Random;
 public class BuritiBunchBlock extends Block {
     public static final IntegerProperty LENGTH = IntegerProperty.create("length", 1, 3);
 
+    @Override
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+        builder.add(LENGTH);
+    }
+
     public BuritiBunchBlock() {
-        super(Properties.from(Blocks.BEEHIVE).zeroHardnessAndResistance().tickRandomly()
-                .sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().harvestTool(ToolType.HOE));
+        super(Properties.from(Blocks.BEEHIVE)
+                .zeroHardnessAndResistance()
+                .tickRandomly()
+                .sound(SoundType.WET_GRASS)
+                .notSolid()
+                .doesNotBlockMovement()
+                .harvestTool(ToolType.HOE));
+
+        this.setDefaultState(this.stateContainer.getBaseState().with(LENGTH, 1));
     }
 
     public boolean ticksRandomly(BlockState state) {
@@ -42,14 +55,12 @@ public class BuritiBunchBlock extends Block {
 
             // Check if the space below is air
             if (belowState.isAir()) {
-                world.setBlockState(belowPos, TreesGroup.BURITI_BUNCH.get().getDefaultState(), 2);
-
                 int length = state.get(LENGTH);
 
-                if (length < 3) {
+                if (length < 3 && world.isAirBlock(pos.down())) {
                     world.setBlockState(
                             pos.down(),
-                            state.with(LENGTH, length + 1),
+                            this.getDefaultState().with(LENGTH, length + 1),
                             2
                     );
                 }
