@@ -14,6 +14,8 @@ import net.minecraft.state.StateContainer;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.IWorldReader;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -66,6 +68,30 @@ public class BuritiBunchBlock extends Block {
                 }
             }
         }
+    }
+
+    @Override
+    public BlockState updatePostPlacement(BlockState state,
+                                          Direction facing,
+                                          BlockState facingState,
+                                          IWorld world,
+                                          BlockPos currentPos,
+                                          BlockPos facingPos) {
+
+        // Only care when the block above changes
+        if (facing == Direction.UP && !isValidPosition(state, world, currentPos)) {
+            return Blocks.AIR.getDefaultState();
+        }
+
+        return super.updatePostPlacement(state, facing, facingState, world, currentPos, facingPos);
+    }
+
+    @Override
+    public boolean isValidPosition(BlockState state, IWorldReader world, BlockPos pos) {
+        BlockState above = world.getBlockState(pos.up());
+
+        return above.getBlock() == TreesGroup.BURITI_BUNCH.get()
+                || above.getBlock() == TreesGroup.BURITI_LEAVES.get();
     }
 
     @OnlyIn(Dist.CLIENT)
