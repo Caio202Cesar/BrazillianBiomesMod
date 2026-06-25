@@ -1424,7 +1424,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     COCKSPUR_CORAL_TREE1.withChance(0.1F), COCKSPUR_CORAL_TREE2.withChance(0.2F), HUMBOLDT_WILLOW_TREE.withChance(0.18F)),
                     ALGARROBILLO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
-
+    public static final ConfiguredFeature<?, ?> PAMPAS_HIGHLAND_PODOCARPUS = register("pampas_highland_podocarpus",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
+                    PODOCARPUS_LAMBERTII_BIG_TREE.withChance(0.06F), PODOCARPUS_LAMBERTII_TREE.withChance(0.18F)),
+                    PODOCARPUS_LAMBERTII_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
 
     //Pantanal Vegetation
     public static final ConfiguredFeature<?, ?> PANTANAL_VEGETATION = register("pantanal_vegetation",

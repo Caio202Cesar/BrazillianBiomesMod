@@ -60,10 +60,11 @@ public class CoxilhasBiome {
         ModDefaultBiomeFeatures.withPampasFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPampasPalms(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPampasGrass(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withPampasHighlandPodocarpus(biomegenerationsettings$builder);
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-        //Hardiness zone 10: 0.85F - 0.89F (but high altitude can make it reaches colder zones by the formula: (base temp - ((Y - 64)*0.0016))F
+        //Hardiness zone 10: 0.85F-0.89F (but high altitude can make it reaches colder zones by the formula: (base temp - ((Y - 64)*0.0016))F
         //    //    //Y = your current height in blocks; 64 = sea level height.
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(depth).scale(scale)
                 .temperature(0.87F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
