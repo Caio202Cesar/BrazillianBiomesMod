@@ -40,12 +40,14 @@
     "brbiomesmod:cockspur_coral_log",
     "brbiomesmod:monkey_cajarana_log",
     "brbiomesmod:sombreiro_log",
-    "brbiomesmod:palmito_log",
-    "brbiomesmod:carnauba_log",
     "brbiomesmod:queen_palm_log",
     "brbiomesmod:jelly_palm_log",
+    "brbiomesmod:carnauba_log",
     "brbiomesmod:buriti_log",
     "brbiomesmod:xaxim_log",
+    "brbiomesmod:pequi_log",
+    "brbiomesmod:yellow_mombin_log",
+    "brbiomesmod:guapuruvu_log",
     "brbiomesmod:humboldt_willow_log",
     "brbiomesmod:babassu_log",
     "brbiomesmod:oiti_log",
@@ -55,6 +57,5 @@
     "brbiomesmod:sandbox_tree_log",
     "brbiomesmod:sandbox_tree_thornless_log",
     "brbiomesmod:cagaita_log"
-
   ]
 }

@@ -45,11 +45,12 @@
     "brbiomesmod:pink_ipe_leaves",
     "brbiomesmod:pink_ipe_fall_leaves",
     "brbiomesmod:white_ipe_blossom",
-    "brbiomesmod:white_ipe_leaves",
     "brbiomesmod:white_ipe_fall_leaves",
+    "brbiomesmod:white_ipe_leaves",
     "brbiomesmod:apricot_ipe_blossom",
-    "brbiomesmod:apricot_ipe_leaves",
     "brbiomesmod:apricot_ipe_fall_leaves",
+    "brbiomesmod:apricot_ipe_leaves",
+    "brbiomesmod:pitanga_leaves",
     "brbiomesmod:pitanga_leaves",
     "brbiomesmod:pitanga_flowering_leaves",
     "brbiomesmod:pitanga_fruiting_leaves",
@@ -92,6 +93,7 @@
     "brbiomesmod:cagaita_fruiting_leaves",
     "brbiomesmod:cagaita_dried_branches",
     "brbiomesmod:brazillian_pepper_leaves",
+    "brbiomesmod:brazillian_pepper_fruiting_leaves",
     "brbiomesmod:peruvian_pepper_leaves",
     "brbiomesmod:algarrobillo_leaves",
     "brbiomesmod:algarrobillo_branches",
@@ -135,8 +137,8 @@
     "brbiomesmod:jenipapo_fruiting_leaves",
     "brbiomesmod:jenipapo_dried_branches",
     "brbiomesmod:jenipapo_fruiting_dried_branches",
-    "brbiomesmod:brazillian_pepper_fruiting_leaves",
     "brbiomesmod:guarana_fruiting_leaves",
+    "brbiomesmod:black_sucupira_blossom",
     "brbiomesmod:guapuruvu_leaves",
     "brbiomesmod:guapuruvu_blossom",
     "brbiomesmod:guapuruvu_dried_branches",
@@ -160,5 +162,6 @@
     "brbiomesmod:brazillian_tigerwood_dried_branches",
     "brbiomesmod:podocarpus_lambertii_leaves",
     "brbiomesmod:cupuacu_flowering_leaves"
+
   ]
 }

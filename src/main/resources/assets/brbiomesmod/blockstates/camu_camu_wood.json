@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "brbiomesmod:block/lophantera_wood",
+      "model": "brbiomesmod:block/camu_camu_wood",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "brbiomesmod:block/lophantera_wood"
+      "model": "brbiomesmod:block/camu_camu_wood"
     },
     "axis=z": {
-      "model": "brbiomesmod:block/lophantera_wood",
+      "model": "brbiomesmod:block/camu_camu_wood",
       "x": 90
     }
   }

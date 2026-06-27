@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "brbiomesmod:stripped_camu_camu_log"
+      "item": "brbiomesmod:stripped_jabuticaba_wood"
     }
   ],
   "result": {
-    "item": "brbiomesmod:camu_camu_planks",
+    "item": "brbiomesmod:jabuticaba_planks",
     "count": 4
   }
 }

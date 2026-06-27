@@ -189,7 +189,7 @@ public class BrazillianBiomesMod {
                     .put(WoodGroup.BRAZILNUT_WOOD.get(), WoodGroup.STRIPPED_BRAZILNUT_WOOD.get())
                     .put(WoodGroup.SHARINGA_WOOD.get(), WoodGroup.STRIPPED_SHARINGA_WOOD.get())
                     .put(WoodGroup.BACURI_WOOD.get(), WoodGroup.STRIPPED_BACURI_WOOD.get())
-                    .put(WoodGroup.CAMU_CAMU_WOOD.get(), WoodGroup.STRIPPED_CAMU_CAMU_WOOD.get())
+                    .put(WoodGroup.CAMU_CAMU_WOOD.get(), WoodGroup.STRIPPED_JABUTICABA_WOOD.get())
                     .put(WoodGroup.SOMBREIRO_WOOD.get(), WoodGroup.STRIPPED_SOMBREIRO_WOOD.get())
                     .put(WoodGroup.PURPLEHEART_WOOD.get(), WoodGroup.STRIPPED_PURPLEHEART_WOOD.get())
                     .put(WoodGroup.GUAPURUVU_WOOD.get(), WoodGroup.STRIPPED_GUAPURUVU_WOOD.get())

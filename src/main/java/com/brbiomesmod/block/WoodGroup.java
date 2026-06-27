@@ -159,10 +159,8 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-    public static final RegistryObject<Block> CAMU_CAMU_PLANKS = registerBlock("camu_camu_planks",
+    /*public static final RegistryObject<Block> CAMU_CAMU_PLANKS = registerBlock("camu_camu_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> CAMU_CAMU_WOOD = registerBlock("camu_camu_wood",
-            ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_CAMU_CAMU_WOOD = registerBlock("stripped_camu_camu_wood",
             ModLogs::new);
     public static final RegistryObject<Block> CAMU_CAMU_SLAB = registerBlock("camu_camu_slab",
@@ -176,7 +174,7 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> CAMU_CAMU_FENCE_GATE = registerBlock("camu_camu_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
+                    .hardnessAndResistance(3f)));*/
 
 
     public static final RegistryObject<Block> SOMBREIRO_PLANKS = registerBlock("sombreiro_planks",
@@ -541,6 +539,8 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
+    public static final RegistryObject<Block> CAMU_CAMU_WOOD = registerBlock("camu_camu_wood",
+            ModLogs::new);
     public static final RegistryObject<Block> JABUTICABA_WOOD = registerBlock("jabuticaba_wood",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_JABUTICABA_WOOD = registerBlock("stripped_jabuticaba_wood",
