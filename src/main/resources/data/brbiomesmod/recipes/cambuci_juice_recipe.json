@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "group": "food",
   "pattern": [
-    " # ",
+    "$# ",
     "#W#",
-    " # "
+    " #$"
   ],
   "key": {
     "#": {
@@ -12,6 +12,9 @@
     },
     "W": {
       "item": "minecraft:glass_bottle"
+    },
+    "$": {
+      "item": "minecraft:sugar"
     }
   },
   "result": {
