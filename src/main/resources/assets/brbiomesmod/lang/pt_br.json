@@ -581,7 +581,7 @@
   "block.brbiomesmod.jenipapo_wood": "Madeira de jenipapeiro",
 
   "item.brbiomesmod.cashew_fruit": "Caju",
-  "item.brbiomesmod.cashew_apple": "Polpa de caju",
+  "item.brbiomesmod.cashew_apple": "Pendúnculo de caju",
   "item.brbiomesmod.cashewnut": "Castanha de caju",
   "item.brbiomesmod.cooked_cashewnut": "Castanha de caju cozida",
   "item.brbiomesmod.jua_berries": "Frutos de juazeiro",
@@ -830,5 +830,9 @@
   "entity.brbiomesmod.toco_toucan": "Tucano-toco",
   "entity.brbiomesmod.golden_lion_tamarin": "Mico-leão-dourado",
   "entity.brbiomesmod.boto_dolphin": "Boto-cor-de-rosa",
-  "entity.brbiomesmod.maned_wolf": "Lobo-guará"
+  "entity.brbiomesmod.maned_wolf": "Lobo-guará",
+  "block.brbiomesmod.podocarpus_lambertii_wood": "podocarpus lambertii Wood",
+  "block.brbiomesmod.podocarpus_lambertii_planks": "podocarpus lambertii Planks",
+  "block.brbiomesmod.brazillian_tigerwood_wood": "Brazillian Tigerwood Wood",
+  "block.brbiomesmod.brazillian_tigerwood_planks": "Brazillian Tigerwood Planks"
 }
