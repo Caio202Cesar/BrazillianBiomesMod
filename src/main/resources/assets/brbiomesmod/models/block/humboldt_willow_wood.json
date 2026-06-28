@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/humboldt_willow_log",
+    "side": "brbiomesmod:block/humboldt_willow_log"
+  }
+}
