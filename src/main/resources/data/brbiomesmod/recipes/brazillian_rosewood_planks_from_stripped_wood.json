@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:stripped_brazillian_rosewood_wood"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:brazillian_rosewood_planks",
+    "count": 4
+  }
+}
