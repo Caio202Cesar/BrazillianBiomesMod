@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:purpleheart_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:purpleheart_planks",
+    "count": 4
+  }
+}
