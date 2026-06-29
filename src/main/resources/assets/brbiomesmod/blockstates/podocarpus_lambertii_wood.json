@@ -1,15 +1,15 @@
 {
   "variants": {
     "axis=x": {
-      "model": "brbiomesmod:block/podocarpus_lamberti_wood",
+      "model": "brbiomesmod:block/podocarpus_lambertii_wood",
       "x": 90,
       "y": 90
     },
     "axis=y": {
-      "model": "brbiomesmod:block/podocarpus_lamberti_wood"
+      "model": "brbiomesmod:block/podocarpus_lambertii_wood"
     },
     "axis=z": {
-      "model": "brbiomesmod:block/podocarpus_lamberti_wood",
+      "model": "brbiomesmod:block/podocarpus_lambertii_wood",
       "x": 90
     }
   }
