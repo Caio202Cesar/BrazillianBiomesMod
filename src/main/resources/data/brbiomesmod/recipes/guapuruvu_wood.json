@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "log",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:guapuruvu_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:guapuruvu_wood",
+    "count": 3
+  }
+}

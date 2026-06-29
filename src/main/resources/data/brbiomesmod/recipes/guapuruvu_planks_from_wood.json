@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:guapuruvu_wood"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:guapuruvu_planks",
+    "count": 4
+  }
+}

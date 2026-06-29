@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:stripped_humboldt_willow_wood"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:humboldt_willow_planks",
+    "count": 4
+  }
+}

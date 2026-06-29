@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "log",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "brbiomesmod:yellow_mombin_log"
+    }
+  },
+  "result": {
+    "item": "brbiomesmod:yellow_mombin_wood",
+    "count": 3
+  }
+}
