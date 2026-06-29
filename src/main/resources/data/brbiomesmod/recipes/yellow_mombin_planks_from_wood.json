@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:yellow_mombin_wood"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:yellow_mombin_planks",
+    "count": 4
+  }
+}

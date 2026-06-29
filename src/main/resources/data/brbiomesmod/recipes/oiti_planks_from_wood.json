@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:oiti_wood"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:oiti_planks",
+    "count": 4
+  }
+}

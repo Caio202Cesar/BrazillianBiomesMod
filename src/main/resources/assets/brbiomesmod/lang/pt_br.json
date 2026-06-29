@@ -876,5 +876,12 @@
   "block.brbiomesmod.oiti_wood": "Madeira de oiti",
   "block.brbiomesmod.stripped_oiti_wood": "Madeira de oiti descascada",
   "block.brbiomesmod.stripped_podocarpus_lambertii_wood": "Madeira de pinheiro-bravo descascada",
-  "block.brbiomesmod.stripped_jequitiba_wood": "Madeira de jequitibá descascada"
+  "block.brbiomesmod.stripped_jequitiba_wood": "Madeira de jequitibá descascada",
+  "block.brbiomesmod.purpleheart_planks": "Tábuas de pau-roxo",
+  "block.brbiomesmod.guapuruvu_planks": "Tábuas de guapuruvu",
+  "block.brbiomesmod.yellow_mombin_planks": "Tábuas de cajazeira",
+  "block.brbiomesmod.pequi_planks": "Tábuas de pequizeiro",
+  "block.brbiomesmod.sandbox_tree_planks": "Tábuas de açacu",
+  "block.brbiomesmod.humboldt_willow_planks": "Tábuas de salgueiro-de-humboldt",
+  "block.brbiomesmod.oiti_planks": "Tábuas de oiti"
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:humboldt_willow_log"
+    }
+  ],
+  "result": {
+    "item": "brbiomesmod:humboldt_willow_planks",
+    "count": 4
+  }
+}
