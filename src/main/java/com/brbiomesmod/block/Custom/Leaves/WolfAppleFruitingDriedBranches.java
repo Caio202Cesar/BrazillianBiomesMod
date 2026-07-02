@@ -106,7 +106,7 @@ public class WolfAppleFruitingDriedBranches extends LeavesBlock implements IForg
 
             worldIn.addEntity(itemEntity);
 
-            worldIn.setBlockState(pos, TreesGroup.WOLF_APPLE_LEAVES.get().getDefaultState());
+            worldIn.setBlockState(pos, TreesGroup.WOLF_APPLE_DRIED_BRANCHES.get().getDefaultState());
 
             worldIn.playSound(null, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
