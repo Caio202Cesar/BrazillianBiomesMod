@@ -126,7 +126,7 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
                         MathHelper.floor(y),
                         MathHelper.floor(z));
 
-                func_236911_a_(
+                placeLog(
                         reader,
                         rand,
                         lastPos,

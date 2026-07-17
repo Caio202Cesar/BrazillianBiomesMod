@@ -4,6 +4,7 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.FoliagePlacers.*;
 import com.brbiomesmod.features.TreeDecorators.*;
+import com.brbiomesmod.features.TrunkPlacers.UmbuTrunkPlacer;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -446,10 +447,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> UMBU_TREE =
             register("umbu_tree", Feature.TREE.withConfiguration(new BaseTreeFeatureConfig.Builder(
                     new SimpleBlockStateProvider(TreeFeatures.States.UMBU_LOG),
-                            new SimpleBlockStateProvider(States.UMBU_LEAVES), 
-                    new BushFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0), 3),
-                                    new ForkyTrunkPlacer(4, 2, 1),
-                                    new TwoLayerFeature(2, 0, 2)).build()));
+                    new SimpleBlockStateProvider(States.UMBU_LEAVES),
+                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new UmbuTrunkPlacer(3, 4, 2, 5, 6),
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .build()));
 
     //Lophantera Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOPHANTERA_TREE = register("lophantera_tree",
