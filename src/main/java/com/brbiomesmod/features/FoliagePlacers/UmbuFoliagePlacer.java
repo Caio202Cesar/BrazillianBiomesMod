@@ -43,24 +43,29 @@ public class UmbuFoliagePlacer extends FoliagePlacer {
 
         int[] radii = {
                 radius + 2,
-                radius + 3,
                 radius + 4,
-                radius + 3,
+                radius + 5,
+                radius + 4,
                 radius + 2
         };
 
+        int variation = rand.nextInt(3) - 1;
+
         for (int y = -2; y <= 2; y++) {
 
-            int r = radii[y + 2];
+            int localRadius = radii[y + 2] + variation;
 
-            for (int x = -r; x <= r; x++) {
-                for (int z = -r; z <= r; z++) {
+            for (int x = -localRadius; x <= localRadius; x++) {
+                for (int z = -localRadius; z <= localRadius; z++) {
 
                     double dist = Math.sqrt(x * x + z * z);
 
-                    if (dist <= r + rand.nextFloat() * 0.5F) {
+                    if (dist <= localRadius + rand.nextFloat() * 0.5F) {
 
-                        if (dist > r - 1 && rand.nextFloat() < 0.25F)
+                        if (dist > localRadius - 1 && rand.nextFloat() < 0.35F)
+                            continue;
+
+                        if (dist < localRadius - 2 && rand.nextFloat() < 0.06F)
                             continue;
 
                         func_236753_a_(
@@ -68,7 +73,10 @@ public class UmbuFoliagePlacer extends FoliagePlacer {
                                 rand,
                                 config,
                                 center.add(x, y, z),
+                                0,
                                 leaves,
+                                offset,
+                                foliage.func_236765_c_(),
                                 box);
                     }
                 }
@@ -77,7 +85,7 @@ public class UmbuFoliagePlacer extends FoliagePlacer {
 
         // Hanging fringe
 
-        int fringe = radius + 3;
+        int fringe = radius + 2 + rand.nextInt(2);
 
         for (int i = 0; i < fringe * 10; i++) {
 
@@ -86,7 +94,7 @@ public class UmbuFoliagePlacer extends FoliagePlacer {
             int x = (int)Math.round(Math.cos(angle) * fringe);
             int z = (int)Math.round(Math.sin(angle) * fringe);
 
-            int length = 1 + rand.nextInt(3);
+            int length = 1 + rand.nextInt(1);
 
             for (int d = 0; d < length; d++) {
 
@@ -95,7 +103,10 @@ public class UmbuFoliagePlacer extends FoliagePlacer {
                         rand,
                         config,
                         center.add(x, -2 - d, z),
+                        0,
                         leaves,
+                        offset,
+                        foliage.func_236765_c_(),
                         box);
             }
         }

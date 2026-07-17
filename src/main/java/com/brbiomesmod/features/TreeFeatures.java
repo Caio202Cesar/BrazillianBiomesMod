@@ -445,14 +445,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Umbu Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> UMBU_TREE =
-            register("umbu_tree", Feature.TREE.withConfiguration(new BaseTreeFeatureConfig.Builder(
-                    new SimpleBlockStateProvider(TreeFeatures.States.UMBU_LOG),
-                    new SimpleBlockStateProvider(States.UMBU_LEAVES),
-                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new UmbuTrunkPlacer(2, 4, 2, 5, 3),
-                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))
-                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .build()));
+            register("umbu_tree", Feature.TREE.withConfiguration(
+                    new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.UMBU_LOG),
+                            new SimpleBlockStateProvider(States.UMBU_LEAVES),
+                            new UmbuFoliagePlacer(FeatureSpread.create(5), FeatureSpread.create(0)),
+                            new UmbuTrunkPlacer(4, 2, 1, 5, 6),
+                            new TwoLayerFeature(1, 0, 2, OptionalInt.of(4)))
+                            .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Lophantera Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOPHANTERA_TREE = register("lophantera_tree",

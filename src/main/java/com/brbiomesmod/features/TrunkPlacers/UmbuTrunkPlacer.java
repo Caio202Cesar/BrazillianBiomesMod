@@ -87,7 +87,6 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
         }
 
         BlockPos crownCenter = startPos.up(trunkHeight - 1);
-
         //--------------------------------------------------
         // Scaffold branches
         //--------------------------------------------------
@@ -96,16 +95,19 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
 
         for (int i = 0; i < branchCount; i++) {
 
+            BlockPos branchStart = crownCenter.down(rand.nextInt(3));
+
             double angle =
                     startAngle +
-                            (Math.PI * 2.0D * i) / branchCount;
+                            (Math.PI * 2.0D * i) / branchCount +
+                            (rand.nextDouble() - 0.5D) * 0.35D;
 
             growPrimaryBranch(
                     reader,
                     rand,
-                    crownCenter,
+                    branchStart,
                     angle,
-                    branchLength,
+                    branchLength + rand.nextInt(3) - 1,
                     logs,
                     box,
                     config,
@@ -166,9 +168,7 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
             // Heavy branch base
             //----------------------------------------------------
 
-            if (step <= 1) {
-
-                placeLogLine(
+            placeLogLine(
                         reader,
                         rand,
                         previous,
@@ -177,35 +177,6 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
                         box,
                         config);
 
-                placeLogLine(
-                        reader,
-                        rand,
-                        previous,
-                        current.east(),
-                        logs,
-                        box,
-                        config);
-
-                placeLogLine(
-                        reader,
-                        rand,
-                        previous,
-                        current.south(),
-                        logs,
-                        box,
-                        config);
-
-            } else {
-
-                placeLogLine(
-                        reader,
-                        rand,
-                        previous,
-                        current,
-                        logs,
-                        box,
-                        config);
-            }
 
             //----------------------------------------------------
             // Secondary branch
@@ -233,7 +204,7 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
             // Foliage attachment
             //----------------------------------------------------
 
-            if (step >= 2 && step % 2 == 0) {
+            if (step >= 2 && rand.nextFloat() < 0.65F) {
 
                 foliages.add(
                         new FoliagePlacer.Foliage(
@@ -272,6 +243,14 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
 
         double verticalSpeed = rand.nextDouble() * 0.08D;
 
+        verticalSpeed += (rand.nextDouble() - 0.5D) * 0.03D;
+
+        if (verticalSpeed > 0.12D)
+            verticalSpeed = 0.12D;
+
+        if (verticalSpeed < -0.12D)
+            verticalSpeed = -0.12D;
+
         BlockPos last = start;
 
         for (int step = 0; step < length; step++) {
@@ -290,8 +269,10 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
                     MathHelper.floor(y),
                     MathHelper.floor(z));
 
-            placeLog(reader,
+            placeLogLine(
+                    reader,
                     rand,
+                    last,
                     current,
                     logs,
                     box,
