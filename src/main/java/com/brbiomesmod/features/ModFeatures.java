@@ -13,7 +13,7 @@ import net.minecraft.world.gen.feature.*;
 
 import java.util.function.Supplier;
 
-public class ModFeatures extends Features implements IFeatureConfig {
+public class ModFeatures implements IFeatureConfig {
 
     public static final ConfiguredFeature<?, ?> PATCH_XAXIM_PLANT = register("patch_xaxim_plant",
             Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModFeatures.States.XAXIM),

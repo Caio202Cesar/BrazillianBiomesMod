@@ -6,7 +6,7 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 
 @SuppressWarnings("deprecation")
-public class ModFoods extends Foods {
+public class ModFoods {
     public static final Food CASHEW_APPLE = (new Food.Builder()).hunger(2).saturation(0.3F).build();
     public static final Food COOKED_CASHEWNUT = (new Food.Builder()).hunger(2).saturation(0.1F).build();
     public static final Food JUA_BERRIES = (new Food.Builder()).hunger(2).saturation(0.1F).build();

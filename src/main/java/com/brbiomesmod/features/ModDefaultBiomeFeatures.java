@@ -4,7 +4,7 @@ import net.minecraft.world.biome.BiomeGenerationSettings;
 import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
 
-public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
+public class ModDefaultBiomeFeatures {
     public static void withAmazonTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.AMAZON_TREES);
     }
@@ -139,8 +139,5 @@ public class ModDefaultBiomeFeatures extends DefaultBiomeFeatures {
     }
     public static void withCerradoTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CERRADO_TREES);
-    }
-    public static void withWetlandSeaGrass(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, ModFeatures.SEAGRASS_SWAMP);
     }
 }

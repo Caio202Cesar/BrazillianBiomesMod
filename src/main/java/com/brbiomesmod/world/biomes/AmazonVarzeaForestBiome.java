@@ -62,7 +62,7 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
     DefaultBiomeFeatures.withNoiseTallGrass(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withCassavaPlants(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAmazonVarzeaTrees(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withWetlandSeaGrass(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withSimpleSeagrass(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.VARZEA_PALMS);
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
