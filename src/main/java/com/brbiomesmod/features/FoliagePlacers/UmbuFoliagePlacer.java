@@ -42,11 +42,11 @@ public class UmbuFoliagePlacer extends FoliagePlacer {
         BlockPos center = foliage.func_236763_a_();
 
         int[] radii = {
+                radius + 1,
                 radius + 2,
-                radius + 4,
                 radius + 5,
-                radius + 4,
-                radius + 2
+                radius + 2,
+                radius + 1
         };
 
         int variation = rand.nextInt(3) - 1;
