@@ -449,7 +449,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new SimpleBlockStateProvider(TreeFeatures.States.UMBU_LOG),
                     new SimpleBlockStateProvider(States.UMBU_LEAVES),
                     new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new UmbuTrunkPlacer(3, 4, 2, 5, 6),
+                    new UmbuTrunkPlacer(2, 4, 2, 5, 3),
                     new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .build()));
