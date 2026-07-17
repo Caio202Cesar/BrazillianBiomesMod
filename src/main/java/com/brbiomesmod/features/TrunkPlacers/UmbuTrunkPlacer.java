@@ -21,10 +21,10 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
     public static final Codec<UmbuTrunkPlacer> CODEC =
             RecordCodecBuilder.create(instance ->
                     getAbstractTrunkCodec(instance)
-                            .and(Codec.intRange(4, 8)
+                            .and(Codec.intRange(4, 6)
                                     .fieldOf("branches")
                                     .forGetter(tp -> tp.branchCount))
-                            .and(Codec.intRange(4, 16)
+                            .and(Codec.intRange(5, 8)
                                     .fieldOf("branch_length")
                                     .forGetter(tp -> tp.branchLength))
                             .apply(instance, UmbuTrunkPlacer::new));
@@ -33,10 +33,10 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
     private final int branchLength;
 
     public UmbuTrunkPlacer(int baseHeight,
-                               int heightRandA,
-                               int heightRandB,
-                               int branchCount,
-                               int branchLength) {
+                           int heightRandA,
+                           int heightRandB,
+                           int branchCount,
+                           int branchLength) {
 
         super(baseHeight, heightRandA, heightRandB);
 
@@ -61,96 +61,259 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
 
         List<FoliagePlacer.Foliage> foliages = Lists.newArrayList();
 
-        // Vanilla dirt placement
-        func_236909_a_(reader, startPos.down());
+        if (!config.forcePlacement) {
+            func_236909_a_(reader, startPos.down());
+        }
 
-        // --------------------------
+        //--------------------------------------------------
         // Main trunk
-        // --------------------------
+        //--------------------------------------------------
 
-        BlockPos.Mutable pos = new BlockPos.Mutable();
+        int trunkHeight = Math.max(3, treeHeight - 2);
 
-        for (int y = 0; y < treeHeight; y++) {
+        BlockPos.Mutable trunkPos = new BlockPos.Mutable();
 
-            pos.setPos(startPos).move(Direction.UP, y);
+        for (int y = 0; y < trunkHeight; y++) {
+
+            trunkPos.setPos(startPos).move(Direction.UP, y);
 
             func_236911_a_(
                     reader,
                     rand,
-                    pos,
+                    trunkPos,
                     logs,
                     box,
                     config);
         }
 
-        BlockPos trunkTop = startPos.up(treeHeight - 1);
+        BlockPos crownCenter = startPos.up(trunkHeight - 1);
 
-        // --------------------------
+        //--------------------------------------------------
         // Scaffold branches
-        // --------------------------
+        //--------------------------------------------------
 
-        double startAngle = rand.nextDouble() * Math.PI * 2.0;
+        double startAngle = rand.nextDouble() * Math.PI * 2.0D;
 
         for (int i = 0; i < branchCount; i++) {
 
             double angle =
                     startAngle +
-                            (Math.PI * 2.0 * i) / branchCount;
+                            (Math.PI * 2.0D * i) / branchCount;
 
-            double x = trunkTop.getX() + 0.5;
-            double y = trunkTop.getY();
-            double z = trunkTop.getZ() + 0.5;
-
-            double dx = Math.cos(angle);
-            double dz = Math.sin(angle);
-
-            BlockPos lastPos = trunkTop;
-
-            for (int step = 0; step < branchLength; step++) {
-
-                x += dx;
-                z += dz;
-
-                // Almost horizontal branches
-                if (rand.nextFloat() < 0.12F)
-                    y++;
-
-                // Small curvature
-                angle += (rand.nextFloat() - 0.5F) * 0.08F;
-
-                dx = Math.cos(angle);
-                dz = Math.sin(angle);
-
-                lastPos = new BlockPos(
-                        MathHelper.floor(x),
-                        MathHelper.floor(y),
-                        MathHelper.floor(z));
-
-                placeLog(
-                        reader,
-                        rand,
-                        lastPos,
-                        logs,
-                        box,
-                        config);
-            }
-
-            foliages.add(
-                    new FoliagePlacer.Foliage(
-                            lastPos,
-                            0,
-                            false));
+            growPrimaryBranch(
+                    reader,
+                    rand,
+                    crownCenter,
+                    angle,
+                    branchLength,
+                    logs,
+                    box,
+                    config,
+                    foliages);
         }
 
         return foliages;
     }
 
-    private void placeLog(IWorldGenerationReader reader,
-                          Random rand,
-                          BlockPos pos,
-                          Set<BlockPos> logs,
-                          MutableBoundingBox box,
-                          BaseTreeFeatureConfig config) {
+    private void growPrimaryBranch(
+            IWorldGenerationReader reader,
+            Random rand,
+            BlockPos start,
+            double angle,
+            int length,
+            Set<BlockPos> logs,
+            MutableBoundingBox box,
+            BaseTreeFeatureConfig config,
+            List<FoliagePlacer.Foliage> foliages) {
+
+        double x = start.getX() + 0.5D;
+        double y = start.getY() + 0.2D;
+        double z = start.getZ() + 0.5D;
+
+        double dx = Math.cos(angle);
+        double dz = Math.sin(angle);
+
+        double verticalSpeed = (rand.nextFloat() - 0.5D) * 0.08D;
+
+        BlockPos previous = start;
+
+        for (int step = 0; step < length; step++) {
+
+            x += dx;
+            z += dz;
+
+            y += verticalSpeed;
+
+            verticalSpeed += (rand.nextFloat() - 0.5D) * 0.04D;
+
+            if (verticalSpeed > 0.15D)
+                verticalSpeed = 0.15D;
+
+            if (verticalSpeed < -0.15D)
+                verticalSpeed = -0.15D;
+
+            angle += (rand.nextFloat() - 0.5D) * 0.12D;
+
+            dx = Math.cos(angle);
+            dz = Math.sin(angle);
+
+            BlockPos current = new BlockPos(
+                    MathHelper.floor(x),
+                    MathHelper.floor(y),
+                    MathHelper.floor(z));
+
+            //----------------------------------------------------
+            // Heavy branch base
+            //----------------------------------------------------
+
+            if (step <= 1) {
+
+                placeLogLine(
+                        reader,
+                        rand,
+                        previous,
+                        current,
+                        logs,
+                        box,
+                        config);
+
+                placeLog(reader, rand,
+                        current.east(),
+                        logs, box, config);
+
+                placeLog(reader, rand,
+                        current.south(),
+                        logs, box, config);
+
+            } else {
+
+                placeLogLine(
+                        reader,
+                        rand,
+                        previous,
+                        current,
+                        logs,
+                        box,
+                        config);
+            }
+
+            //----------------------------------------------------
+            // Secondary branch
+            //----------------------------------------------------
+
+            if (step == length / 2) {
+
+                double fork =
+                        angle +
+                                (rand.nextBoolean() ? 0.8D : -0.8D);
+
+                growSecondaryBranch(
+                        reader,
+                        rand,
+                        current,
+                        fork,
+                        2 + rand.nextInt(3),
+                        logs,
+                        box,
+                        config,
+                        foliages);
+            }
+
+            //----------------------------------------------------
+            // Foliage attachment
+            //----------------------------------------------------
+
+            if (step >= 2 && step % 2 == 0) {
+
+                foliages.add(
+                        new FoliagePlacer.Foliage(
+                                current,
+                                0,
+                                false));
+            }
+
+            previous = current;
+        }
+
+        foliages.add(
+                new FoliagePlacer.Foliage(
+                        previous,
+                        0,
+                        false));
+    }
+
+    private void growSecondaryBranch(
+            IWorldGenerationReader reader,
+            Random rand,
+            BlockPos start,
+            double angle,
+            int length,
+            Set<BlockPos> logs,
+            MutableBoundingBox box,
+            BaseTreeFeatureConfig config,
+            List<FoliagePlacer.Foliage> foliages) {
+
+        double x = start.getX() + 0.5D;
+        double y = start.getY() + 0.5D;
+        double z = start.getZ() + 0.5D;
+
+        double dx = Math.cos(angle);
+        double dz = Math.sin(angle);
+
+        double verticalSpeed = rand.nextDouble() * 0.08D;
+
+        BlockPos last = start;
+
+        for (int step = 0; step < length; step++) {
+
+            x += dx;
+            z += dz;
+            y += verticalSpeed;
+
+            angle += (rand.nextDouble() - 0.5D) * 0.18D;
+
+            dx = Math.cos(angle);
+            dz = Math.sin(angle);
+
+            BlockPos current = new BlockPos(
+                    MathHelper.floor(x),
+                    MathHelper.floor(y),
+                    MathHelper.floor(z));
+
+            placeLog(reader,
+                    rand,
+                    current,
+                    logs,
+                    box,
+                    config);
+
+            if (step > 0) {
+                foliages.add(new FoliagePlacer.Foliage(
+                        current,
+                        0,
+                        false));
+            }
+
+            last = current;
+        }
+
+        foliages.add(new FoliagePlacer.Foliage(
+                last,
+                0,
+                false));
+    }
+
+    private void placeLog(
+            IWorldGenerationReader reader,
+            Random rand,
+            BlockPos pos,
+            Set<BlockPos> logs,
+            MutableBoundingBox box,
+            BaseTreeFeatureConfig config) {
+
+        if (logs.contains(pos)) {
+            return;
+        }
 
         func_236911_a_(
                 reader,
@@ -159,5 +322,54 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
                 logs,
                 box,
                 config);
+    }
+
+    private void placeLogLine(
+            IWorldGenerationReader reader,
+            Random rand,
+            BlockPos from,
+            BlockPos to,
+            Set<BlockPos> logs,
+            MutableBoundingBox box,
+            BaseTreeFeatureConfig config) {
+
+        BlockPos delta = to.subtract(from);
+
+        int steps = Math.max(
+                Math.abs(delta.getX()),
+                Math.max(
+                        Math.abs(delta.getY()),
+                        Math.abs(delta.getZ())));
+
+        if (steps == 0) {
+            placeLog(reader, rand, from, logs, box, config);
+            return;
+        }
+
+        double dx = delta.getX() / (double) steps;
+        double dy = delta.getY() / (double) steps;
+        double dz = delta.getZ() / (double) steps;
+
+        double x = from.getX();
+        double y = from.getY();
+        double z = from.getZ();
+
+        for (int i = 0; i <= steps; i++) {
+
+            placeLog(
+                    reader,
+                    rand,
+                    new BlockPos(
+                            MathHelper.floor(x + 0.5D),
+                            MathHelper.floor(y + 0.5D),
+                            MathHelper.floor(z + 0.5D)),
+                    logs,
+                    box,
+                    config);
+
+            x += dx;
+            y += dy;
+            z += dz;
+        }
     }
 }
