@@ -67,11 +67,8 @@ public class UmbuFoliagePlacer extends FoliagePlacer {
                                 world,
                                 rand,
                                 config,
-                                foliage,
                                 center.add(x, y, z),
-                                radius,
                                 leaves,
-                                offset,
                                 box);
                     }
                 }

@@ -177,13 +177,23 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
                         box,
                         config);
 
-                placeLog(reader, rand,
+                placeLogLine(
+                        reader,
+                        rand,
+                        previous,
                         current.east(),
-                        logs, box, config);
+                        logs,
+                        box,
+                        config);
 
-                placeLog(reader, rand,
+                placeLogLine(
+                        reader,
+                        rand,
+                        previous,
                         current.south(),
-                        logs, box, config);
+                        logs,
+                        box,
+                        config);
 
             } else {
 
