@@ -16,25 +16,8 @@ public class ModTrunkPlacers {
                     new TrunkPlacerType<>(UmbuTrunkPlacer.CODEC)
             );
 
-    static {
+    public static void register() {
         System.out.println("REGISTERING CUSTOM TRUNK PLACERS");
-    }
-
-    private static <P extends AbstractTrunkPlacer> TrunkPlacerType<P> register(
-            String name,
-            Codec<P> codec) {
-        try {
-            Method m = TrunkPlacerType.class.getDeclaredMethod(
-                    "register",
-                    String.class,
-                    Codec.class
-            );
-            m.setAccessible(true);
-
-            return (TrunkPlacerType<P>) m.invoke(null, name, codec);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
     }
 }
 
