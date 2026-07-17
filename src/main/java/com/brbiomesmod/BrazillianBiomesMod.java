@@ -12,6 +12,7 @@ import com.brbiomesmod.events.ModEntities;
 import com.brbiomesmod.events.ModParticles;
 import com.brbiomesmod.features.FoliagePlacers.ModFoliagePlacer;
 import com.brbiomesmod.features.TreeDecorators.ModTreeDecorators;
+import com.brbiomesmod.features.TrunkPlacers.ModTrunkPlacers;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.*;
 import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
@@ -61,6 +62,7 @@ public class BrazillianBiomesMod {
         ModTreeDecorators.register(eventBus);
         ModEntityTypes.register(eventBus);
         ModSoundEvents.register(eventBus);
+        ModTrunkPlacers.register();
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);
