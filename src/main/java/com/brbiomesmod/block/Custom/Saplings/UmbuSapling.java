@@ -181,7 +181,7 @@ public class UmbuSapling extends SaplingBlock {
     private static class UmbuTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.UMBU_TREE;
+            return TreeFeatures.UMBU_TREE2;
         }
     }
         protected boolean isValidGround(BlockState state, IBlockReader worldIn, BlockPos pos) {

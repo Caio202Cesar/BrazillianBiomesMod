@@ -9,12 +9,12 @@ import java.lang.reflect.Method;
 
 public class ModTrunkPlacers {
 
-    public static final TrunkPlacerType<UmbuTrunkPlacer> UMBU_TRUNK =
+    /*public static final TrunkPlacerType<UmbuTrunkPlacer> UMBU_TRUNK =
             Registry.register(
                     Registry.TRUNK_REPLACER,
                     "brbiomesmod:umbu_trunk",
                     new TrunkPlacerType<>(UmbuTrunkPlacer.CODEC)
-            );
+            );*/
 
     public static void register() {
         System.out.println("REGISTERING CUSTOM TRUNK PLACERS");
