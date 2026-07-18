@@ -447,9 +447,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> UMBU_TREE = register("umbu_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.UMBU_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.UMBU_LEAVES),
-                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
-                    new GiantTrunkPlacer(3, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
+                    new DarkOakTrunkPlacer(4,  2,   1),
+                    new TwoLayerFeature(1,0,2))).setIgnoreVines().build()));
 
     //Lophantera Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOPHANTERA_TREE = register("lophantera_tree",
