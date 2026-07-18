@@ -4,7 +4,6 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.FoliagePlacers.*;
 import com.brbiomesmod.features.TreeDecorators.*;
-import com.brbiomesmod.features.TrunkPlacers.UmbuTrunkPlacer;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -22,7 +21,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.OptionalInt;
-import java.util.function.Supplier;
 
 public abstract class TreeFeatures implements IFeatureConfig {
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, BrazillianBiomesMod.MOD_ID);

@@ -62,7 +62,6 @@ public class BrazillianBiomesMod {
         ModTreeDecorators.register(eventBus);
         ModEntityTypes.register(eventBus);
         ModSoundEvents.register(eventBus);
-        ModTrunkPlacers.register();
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);
