@@ -42,10 +42,6 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("babassu_foliage_placer",
                     () -> new FoliagePlacerType<>(BabassuFoliagePlacer.CODEC));
 
-    public static final RegistryObject<FoliagePlacerType<UmbuFoliagePlacer>> UMBU_FOLIAGE_PLACER =
-            FOLIAGE_PLACERS.register("umbu_foliage_placer",
-                    () -> new FoliagePlacerType<>(UmbuFoliagePlacer.CODEC));
-
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
     }
