@@ -42,10 +42,10 @@ public class UmbuFoliagePlacer extends FoliagePlacer {
         BlockPos center = foliage.func_236763_a_();
 
         int[] radii = {
-                radius + 1,
+                radius,
                 radius + 2,
-                radius + 5,
-                radius + 2,
+                radius + 4,
+                radius + 3,
                 radius + 1
         };
 
@@ -60,7 +60,17 @@ public class UmbuFoliagePlacer extends FoliagePlacer {
 
                     double dist = Math.sqrt(x * x + z * z);
 
-                    if (dist <= localRadius + rand.nextFloat() * 0.5F) {
+                    double noise = rand.nextFloat() * 0.4F;
+
+                    boolean shell =
+                            dist >= localRadius - 1.3 &&
+                                    dist <= localRadius + noise;
+
+                    boolean interior =
+                            dist < localRadius - 1.3 &&
+                                    rand.nextFloat() < 0.15F;
+
+                    if (shell || interior) {
 
                         if (dist > localRadius - 1 && rand.nextFloat() < 0.35F)
                             continue;
@@ -82,34 +92,6 @@ public class UmbuFoliagePlacer extends FoliagePlacer {
                 }
             }
         }
-
-        // Hanging fringe
-
-        int fringe = radius + 2 + rand.nextInt(2);
-
-        for (int i = 0; i < fringe * 10; i++) {
-
-            double angle = rand.nextDouble() * Math.PI * 2;
-
-            int x = (int)Math.round(Math.cos(angle) * fringe);
-            int z = (int)Math.round(Math.sin(angle) * fringe);
-
-            int length = 1 + rand.nextInt(1);
-
-            for (int d = 0; d < length; d++) {
-
-                func_236753_a_(
-                        world,
-                        rand,
-                        config,
-                        center.add(x, -2 - d, z),
-                        0,
-                        leaves,
-                        offset,
-                        foliage.func_236765_c_(),
-                        box);
-            }
-        }
     }
 
     @Override
@@ -117,7 +99,7 @@ public class UmbuFoliagePlacer extends FoliagePlacer {
                               int trunkHeight,
                               BaseTreeFeatureConfig config) {
 
-        return 5;
+        return 3;
     }
 
     @Override

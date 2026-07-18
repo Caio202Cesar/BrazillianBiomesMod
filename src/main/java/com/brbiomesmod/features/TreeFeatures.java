@@ -452,6 +452,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             new UmbuTrunkPlacer(4, 2, 1, 5, 4),
                             new TwoLayerFeature(1, 0, 2, OptionalInt.of(4)))
                             .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> UMBU_TREE2 = register("umbu_tree2",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.UMBU_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.UMBU_LEAVES),
+                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
+                    new GiantTrunkPlacer(3, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
 
     //Lophantera Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOPHANTERA_TREE = register("lophantera_tree",
@@ -1490,7 +1496,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Caatinga vegetation
     public static final ConfiguredFeature<?, ?> CAATINGA_TREES = register("caatinga_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(UMBU_TREE.withChance(0.2F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(UMBU_TREE2.withChance(0.2F),
                     JUA_TREE.withChance(0.1F), JUA_TREE_WITH_PASSIONVINE.withChance(0.03F), WHITE_SILK_FLOSS_TREE.withChance(0.01F),
                             CARNAUBA_PALM.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.03F), CARNAUBA_PALM_WITH_PASSIONVINE.withChance(0.03F),
                             BLACK_JUREMA_TREE_WITH_PASSIONVINE.withChance(0.05F), WHITE_SILK_FLOSS_BIG_TREE_PASSIONVINE.withChance(0.025F),

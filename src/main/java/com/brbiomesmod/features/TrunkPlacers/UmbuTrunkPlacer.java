@@ -95,7 +95,7 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
 
         for (int i = 0; i < branchCount; i++) {
 
-            BlockPos branchStart = crownCenter.down(rand.nextInt(3));
+            BlockPos branchStart = crownCenter.up(rand.nextBoolean() ? 0 : 1);
 
             double angle =
                     startAngle +
@@ -135,7 +135,7 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
         double dx = Math.cos(angle);
         double dz = Math.sin(angle);
 
-        double verticalSpeed = (rand.nextFloat() - 0.5D) * 0.08D;
+        double verticalSpeed = -0.015D + rand.nextDouble() * 0.03D;
 
         BlockPos previous = start;
 
@@ -146,7 +146,11 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
 
             y += verticalSpeed;
 
-            verticalSpeed += (rand.nextFloat() - 0.5D) * 0.04D;
+            verticalSpeed += (rand.nextDouble() - 0.5D) * 0.01D;
+
+            verticalSpeed = MathHelper.clamp(verticalSpeed,
+                    -0.05D,
+                    0.05D);
 
             if (verticalSpeed > 0.15D)
                 verticalSpeed = 0.15D;
@@ -154,7 +158,7 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
             if (verticalSpeed < -0.15D)
                 verticalSpeed = -0.15D;
 
-            angle += (rand.nextFloat() - 0.5D) * 0.12D;
+            angle += (rand.nextDouble() - 0.5D) * 0.03D;
 
             dx = Math.cos(angle);
             dz = Math.sin(angle);
@@ -182,7 +186,7 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
             // Secondary branch
             //----------------------------------------------------
 
-            if (step == length / 2) {
+            if (step == (length * 3) / 4) {
 
                 double fork =
                         angle +
@@ -203,16 +207,6 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
             //----------------------------------------------------
             // Foliage attachment
             //----------------------------------------------------
-
-            if (step >= 2 && rand.nextFloat() < 0.65F) {
-
-                foliages.add(
-                        new FoliagePlacer.Foliage(
-                                current,
-                                0,
-                                false));
-            }
-
             previous = current;
         }
 
@@ -241,9 +235,9 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
         double dx = Math.cos(angle);
         double dz = Math.sin(angle);
 
-        double verticalSpeed = rand.nextDouble() * 0.08D;
+        double verticalSpeed = -0.03D + rand.nextDouble() * 0.02D;
 
-        verticalSpeed += (rand.nextDouble() - 0.5D) * 0.03D;
+        verticalSpeed += (rand.nextDouble() - 0.5D) * 0.18D;
 
         if (verticalSpeed > 0.12D)
             verticalSpeed = 0.12D;
@@ -259,7 +253,7 @@ public class UmbuTrunkPlacer extends AbstractTrunkPlacer {
             z += dz;
             y += verticalSpeed;
 
-            angle += (rand.nextDouble() - 0.5D) * 0.18D;
+            angle += (rand.nextDouble() - 0.5D) * 0.05D;
 
             dx = Math.cos(angle);
             dz = Math.sin(angle);
