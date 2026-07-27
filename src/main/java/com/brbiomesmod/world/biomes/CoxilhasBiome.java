@@ -27,7 +27,7 @@ public class CoxilhasBiome {
     public static final RegistryObject<Biome> COXILHAS = BIOMES.register("pampas_hills",
             () -> makePlainsBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.45F, 0.3F));
 
-
+    //Based on Serras do Sudeste
     private static Biome makePlainsBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
@@ -67,7 +67,7 @@ public class CoxilhasBiome {
         //Hardiness zone 10: 0.85F-0.89F (but high altitude can make it reaches colder zones by the formula: (base temp - ((Y - 64)*0.0016))F
         //    //    //Y = your current height in blocks; 64 = sea level height.
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(depth).scale(scale)
-                .temperature(0.87F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.89F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(7842607)
                         .withGrassColor(9551193).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
