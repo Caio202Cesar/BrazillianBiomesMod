@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.brbiomesmod.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "brbiomesmod.refmap.json",
+  "mixins": [
+
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
