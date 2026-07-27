@@ -21,6 +21,42 @@ public class ModBiomeRelationships {
                 6,
                 false, false);
 
+        BiomeRelationshipRegistry.register(
+                ModBiomes.DUNAS_RESTINGA,
+                ModBiomes.RESTINGA_BEACH,
+                RelationshipType.BEACH,
+                8,
+                0,
+                6,
+                true, false);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.PAMPAS,
+                ModBiomes.PAMPAS_COAST,
+                RelationshipType.SUB_BIOME,
+                8,
+                0,
+                6,
+                false, false);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.PAMPAS,
+                ModBiomes.COXILHAS,
+                RelationshipType.SUB_BIOME,
+                8,
+                0,
+                6,
+                false, false);
+
+        BiomeRelationshipRegistry.register(
+                ModBiomes.PAMPAS,
+                ModBiomes.BUTIA_PAMPAS,
+                RelationshipType.SUB_BIOME,
+                4,
+                0,
+                6,
+                false, false);
+
         /*BiomeRelationshipRegistry.registerRiver(
                 ModBiomes.AMAZON_RAINFOREST,
                 ModBiomes.BLACK_RIVER);

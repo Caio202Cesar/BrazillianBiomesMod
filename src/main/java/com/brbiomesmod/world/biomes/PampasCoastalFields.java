@@ -30,7 +30,7 @@ public class PampasCoastalFields {
     public static final RegistryObject<Biome> PAMPAS_COASTAL_FIELDS = BIOMES.register("pampas_coastal_fields",
             () -> makeGenericBeachBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.0F, 0.025F));
 
-
+    //Based on Rio Grande do Sul/Uruguai coast (Porto Alegre, Pelotas, St. Vitoria do Palmar, Montevideo)
     private static Biome makeGenericBeachBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);

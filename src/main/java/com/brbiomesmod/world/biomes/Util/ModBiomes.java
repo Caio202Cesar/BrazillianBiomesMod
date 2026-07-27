@@ -35,7 +35,7 @@ public class ModBiomes {
     public static final ResourceLocation COCAL_FOREST =
             new ResourceLocation(BrazillianBiomesMod.MOD_ID, "cocal_forest");
 
-    public static final ResourceLocation PAMPAS_HILLS =
+    public static final ResourceLocation COXILHAS =
             new ResourceLocation(BrazillianBiomesMod.MOD_ID, "pampas_hills");
 
     public static final ResourceLocation DUNAS_RESTINGA =
