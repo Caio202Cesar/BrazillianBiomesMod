@@ -1,22 +1,19 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
-import com.brbiomesmod.Climate.SummerHeat;
-import com.brbiomesmod.Climate.SummerHeatRegistry;
 import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.block.TreesGroup;
-import net.minecraft.block.Block;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatRegistry;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IForgeShearable;
 
 import java.util.Random;
-import java.util.function.Supplier;
 
 public class FeijoaFloweringLeaves extends LeavesBlock implements IForgeShearable {
     public FeijoaFloweringLeaves(Properties properties) {

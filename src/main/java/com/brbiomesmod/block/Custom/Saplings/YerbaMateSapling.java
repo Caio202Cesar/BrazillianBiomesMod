@@ -1,10 +1,10 @@
 package com.brbiomesmod.block.Custom.Saplings;
 
-import com.brbiomesmod.Climate.SummerHeat;
-import com.brbiomesmod.Climate.SummerHeatRegistry;
 import com.brbiomesmod.Seasons.Season;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatRegistry;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
