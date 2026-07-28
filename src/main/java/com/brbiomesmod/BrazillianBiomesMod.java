@@ -12,11 +12,9 @@ import com.brbiomesmod.events.ModEntities;
 import com.brbiomesmod.events.ModParticles;
 import com.brbiomesmod.features.FoliagePlacers.ModFoliagePlacer;
 import com.brbiomesmod.features.TreeDecorators.ModTreeDecorators;
-import com.brbiomesmod.features.TrunkPlacers.ModTrunkPlacers;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.*;
 import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
-import com.brbiomesmod.world.biomes.Util.ModBiomeRelationships;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -202,7 +200,6 @@ public class BrazillianBiomesMod {
                     .build();
 
             ModBiomeGeneration.generateBiomes();
-            ModBiomeRelationships.register();
 
             EntitySpawnPlacementRegistry.register(
                     ModEntityTypes.BOTO_ENTITY.get(),

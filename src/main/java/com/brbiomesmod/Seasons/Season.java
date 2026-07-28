@@ -23,16 +23,4 @@ public enum Season {
             return "WINTER";
         }
     }
-
-    @SubscribeEvent
-    public static void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
-        Minecraft mc = Minecraft.getInstance();
-        ClientPlayerEntity player = mc.player;
-        if (player == null) return;
-        World world = player.world;
-
-        String season = getSeason(world.getDayTime());
-
-        mc.fontRenderer.drawString(event.getMatrixStack(), "Harvest Season: " + season, 10, 10, 0xFFFFFF);
-    }
 }

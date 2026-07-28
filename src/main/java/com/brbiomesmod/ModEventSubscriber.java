@@ -35,11 +35,6 @@ import java.util.List;
 public class ModEventSubscriber {
 
     @SubscribeEvent
-    public static void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
-        Season.onRenderGameOverlay(event);
-    }
-
-    @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         if (event.phase != TickEvent.Phase.END) return;
 

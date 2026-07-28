@@ -4,7 +4,7 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "brbiomesmod.refmap.json",
   "mixins": [
-    "LayerUtilMixin"
+
   ],
   "client": [],
   "server": [],
