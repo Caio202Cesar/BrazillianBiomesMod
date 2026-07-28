@@ -1,6 +1,6 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
-import com.brbiomesmod.Seasons.Season;
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import net.minecraft.block.*;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;

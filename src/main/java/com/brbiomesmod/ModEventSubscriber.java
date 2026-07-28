@@ -1,6 +1,6 @@
 package com.brbiomesmod;
 
-import com.brbiomesmod.Seasons.Season;
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

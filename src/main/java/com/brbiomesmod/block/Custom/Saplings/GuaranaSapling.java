@@ -1,6 +1,6 @@
 package com.brbiomesmod.block.Custom.Saplings;
 
-import com.brbiomesmod.Seasons.Season;
+import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
