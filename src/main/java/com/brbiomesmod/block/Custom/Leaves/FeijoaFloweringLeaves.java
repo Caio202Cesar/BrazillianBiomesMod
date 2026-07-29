@@ -3,7 +3,7 @@ package com.brbiomesmod.block.Custom.Leaves;
 import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.brbiomesmod.block.TreesGroup;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeat;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatRegistry;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.Climate.SummerHeatHelper;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -21,7 +21,7 @@ public class FeijoaFloweringLeaves extends LeavesBlock implements IForgeShearabl
     }
 
     private static boolean isSummerAllowed(World world, BlockPos pos) {
-        SummerHeat heat = SummerHeatRegistry.get(world, pos);
+        SummerHeat heat = SummerHeat.fromTemperature(SummerHeatHelper.get(world, pos));
         return heat == SummerHeat.WARM;
     }
 
