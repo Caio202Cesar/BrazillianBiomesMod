@@ -587,26 +587,10 @@ public class ModItems {
             () -> new ModSpawnEggItem(ModEntityTypes.CAPYBARA_ENTITY, 0xe4d5b4, 0x674F2D,
                     new Item.Properties().group(ModItemGroup.CREATURES_GROUP)));
 
-
-    public static RegistryObject<Item> ICE_CREAM_CONE;
-    public static RegistryObject<Item> BANANA;
-    public static RegistryObject<Item> CALABASH;
-    public static RegistryObject<Item> COCONUT;
-    public static RegistryObject<Item> SULPHUR;
-    public static RegistryObject<Item> JAR;
-    public static RegistryObject<Item> LEMON;
-    public static RegistryObject<Item> TOAST;
-
     public static void register(IEventBus eventBus) {
+        /*
         String modA = "caiocesarbiomes";
         ResourceLocation coneId = new ResourceLocation(modA, "ice_cream_cone");
-        ResourceLocation bananaId = new ResourceLocation(modA, "banana");
-        ResourceLocation calabashId = new ResourceLocation(modA, "calabash");
-        ResourceLocation coconutId = new ResourceLocation(modA, "coconut");
-        ResourceLocation sulphurId = new ResourceLocation(modA, "sulphur");
-        ResourceLocation jarId = new ResourceLocation(modA, "jar");
-        ResourceLocation lemonId = new ResourceLocation(modA, "lemon");
-        ResourceLocation toastId = new ResourceLocation(modA, "toast");
 
         boolean shouldRegisterItems = false;
 
@@ -615,67 +599,12 @@ public class ModItems {
         } else {
             ICE_CREAM_CONE = ITEMS.register("ice_cream_cone", () ->
                     new Item(new Item.Properties().group(ItemGroup.FOOD)));
-            shouldRegisterItems = true;
-        }
-
-        if (ForgeRegistries.ITEMS.containsKey(bananaId)) {
-            BANANA = RegistryObject.of(bananaId, ForgeRegistries.ITEMS);
-        } else {
-            BANANA = ITEMS.register("banana", () ->
-                    new Item(new Item.Properties().group(ItemGroup.FOOD)));
-            shouldRegisterItems = true;
-        }
-
-        if (ForgeRegistries.ITEMS.containsKey(calabashId)) {
-            CALABASH = RegistryObject.of(calabashId, ForgeRegistries.ITEMS);
-        } else {
-            CALABASH = ITEMS.register("calabash", () ->
-                    new Item(new Item.Properties().group(ItemGroup.MATERIALS)));
-            shouldRegisterItems = true;
-        }
-
-        if (ForgeRegistries.ITEMS.containsKey(coconutId)) {
-            COCONUT = RegistryObject.of(coconutId, ForgeRegistries.ITEMS);
-        } else {
-            COCONUT = ITEMS.register("coconut", () ->
-                    new Item(new Item.Properties().group(ItemGroup.FOOD)));
-            shouldRegisterItems = true;
-        }
-
-        if (ForgeRegistries.ITEMS.containsKey(sulphurId)) {
-            SULPHUR = RegistryObject.of(sulphurId, ForgeRegistries.ITEMS);
-        } else {
-            SULPHUR = ITEMS.register("sulphur", () ->
-                    new Item(new Item.Properties().group(ItemGroup.MISC)));
-            shouldRegisterItems = true;
-        }
-
-        if (ForgeRegistries.ITEMS.containsKey(jarId)) {
-            JAR = RegistryObject.of(jarId, ForgeRegistries.ITEMS);
-        } else {
-            JAR = ITEMS.register("jar", () ->
-                    new Item(new Item.Properties().group(ItemGroup.MISC)));
-            shouldRegisterItems = true;
-        }
-
-        if (ForgeRegistries.ITEMS.containsKey(lemonId)) {
-            LEMON = RegistryObject.of(lemonId, ForgeRegistries.ITEMS);
-        } else {
-            LEMON = ITEMS.register("lemon", () ->
-                    new Item(new Item.Properties().group(ItemGroup.FOOD)));
-            shouldRegisterItems = true;
-        }
-
-        if (ForgeRegistries.ITEMS.containsKey(toastId)) {
-            TOAST = RegistryObject.of(toastId, ForgeRegistries.ITEMS);
-        } else {
-            TOAST = ITEMS.register("toast", () ->
-                    new Item(new Item.Properties().group(ItemGroup.FOOD)));
-            shouldRegisterItems = true;
+            shouldRegisterItems = false;
         }
 
         if (shouldRegisterItems) {
             ITEMS.register(eventBus);
-        }
+        }*/
+        ITEMS.register(eventBus);
     }
 }
