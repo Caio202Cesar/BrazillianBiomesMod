@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XXX",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:netherite_sword"
+    },
+    "X": {
+      "item": "brbiomesmod:assacu_poison_sap"
+    }
+  },
+  "result": {
+    "item": "caiocesarbiomes:netherite_poisoned_sword",
+    "count": 1
+  }
+}
