@@ -2,6 +2,7 @@ package com.brbiomesmod.world.biomes;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.features.ModDefaultBiomeFeatures;
+import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -19,20 +20,18 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class CoxilhasBiome {
+public class PampasRiver {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, BrazillianBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> COXILHAS = BIOMES.register("pampas_hills",
-            () -> makePlainsBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.45F, 0.3F));
+    public static final RegistryObject<Biome> PAMPAS_RIVER = BIOMES.register("pampas_river",
+            () -> makePampasRiver(() -> ConfiguredSurfaceBuilders.GRASS, -0.5F, 0.0f));
 
-    //Based on Serras do Sudeste (base hardiness zone 10, which goes 9 in higher altitudes)
-    private static Biome makePlainsBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+    private static Biome makePampasRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
         DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
-        DefaultBiomeFeatures.withSpawnsWithHorseAndDonkey(mobspawninfo$builder);
         mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
                 new MobSpawnInfo.Spawners(EntityType.OCELOT, 100, 7, 10));
 
@@ -54,21 +53,20 @@ public class CoxilhasBiome {
         DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withPinkPeeperTrees(biomegenerationsettings$builder);
         DefaultBiomeFeatures.withTallGrass(biomegenerationsettings$builder);
+        ModDefaultBiomeFeatures.withPinkPeeperTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPampasPitangaTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPampasTrees(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPampasFlowers(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPampasPalms(biomegenerationsettings$builder);
         ModDefaultBiomeFeatures.withPampasGrass(biomegenerationsettings$builder);
-        ModDefaultBiomeFeatures.withPampasHighlandPodocarpus(biomegenerationsettings$builder);
 
+        biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PAMPAS_RIPARIAN_TREES);
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-        //Hardiness zone 9: 0.8F-0.84F (but high altitude can make it reaches colder zones by the formula: (base temp - ((Y - 64)*0.0016))F
-        //    //    //Y = your current height in blocks; 64 = sea level height.
+        //Hardiness zone 10: 0.85F - 0.89F
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(depth).scale(scale)
-                .temperature(0.84F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.85F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(7842607)
                         .withGrassColor(9551193).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)

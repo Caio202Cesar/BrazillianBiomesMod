@@ -1419,14 +1419,20 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .configure(new AtSurfaceWithExtraConfig(8, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> PAMPAS_TREES = register("pampas_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAVEN_THORN_TREE.withChance(0.3F),
-                    COCKSPUR_CORAL_TREE1.withChance(0.1F), COCKSPUR_CORAL_TREE2.withChance(0.2F), HUMBOLDT_WILLOW_TREE.withChance(0.18F)),
-                    ALGARROBILLO_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    COCKSPUR_CORAL_TREE1.withChance(0.1F), COCKSPUR_CORAL_TREE2.withChance(0.2F)), ALGARROBILLO_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
     public static final ConfiguredFeature<?, ?> PAMPAS_HIGHLAND_PODOCARPUS = register("pampas_highland_podocarpus",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                     PODOCARPUS_LAMBERTII_BIG_TREE.withChance(0.06F), PODOCARPUS_LAMBERTII_TREE.withChance(0.18F)),
                     PODOCARPUS_LAMBERTII_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
+    public static final ConfiguredFeature<?, ?> PAMPAS_RIPARIAN_TREES = register("pampas_riparian_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(HUMBOLDT_WILLOW_TREE.withChance(0.3F),
+                    QUEEN_PALM.withChance(0.12F), PERUVIAN_PEPPER_FANCY_TREE.withChance(0.23F),
+                            PERUVIAN_PEPPER_TREE.withChance(0.2F), JELLY_PALM.withChance(0.21F),
+                            TALL_JELLY_PALM.withChance(0.14F)), BRAZILLIAN_PEPPER_STOUT_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.3F, 4))));
 
     //Pantanal Vegetation
     public static final ConfiguredFeature<?, ?> PANTANAL_VEGETATION = register("pantanal_vegetation",
