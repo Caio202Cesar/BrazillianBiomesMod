@@ -85,6 +85,7 @@ public class BrazillianBiomesMod {
         AmazonRainforestEdgeBiome.register(eventBus);
         CocalForestBiome.register(eventBus);
         SolimoesAmazonRiver.register(eventBus);
+        BlackAmazonRiver.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

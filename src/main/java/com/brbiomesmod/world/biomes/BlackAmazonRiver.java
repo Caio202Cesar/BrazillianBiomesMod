@@ -3,6 +3,7 @@ package com.brbiomesmod.world.biomes;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.features.ModDefaultBiomeFeatures;
 import com.brbiomesmod.features.TreeFeatures;
+import com.brbiomesmod.world.biomes.Util.ModConfiguredSurfaceBuilders;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -12,7 +13,6 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.Features;
 import net.minecraft.world.gen.feature.structure.StructureFeatures;
 import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilder;
-import net.minecraft.world.gen.surfacebuilders.ConfiguredSurfaceBuilders;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -20,15 +20,16 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class SolimoesAmazonRiver {
+public class BlackAmazonRiver {
 public static final DeferredRegister<Biome> BIOMES
         = DeferredRegister.create(ForgeRegistries.BIOMES, BrazillianBiomesMod.MOD_ID);
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-public static final RegistryObject<Biome> SOLIMOES_AMAZON_RIVER = BIOMES.register("solimoes_amazon_river",
-        () -> makeAmazonRainforestBiome(() -> ConfiguredSurfaceBuilders.SWAMP, -0.5F, 0.0f));
+public static final RegistryObject<Biome> BLACK_AMAZON_RIVER = BIOMES.register("black_amazon_river",
+        () -> makeBlackAmazonRiver(() -> ModConfiguredSurfaceBuilders.FOREST_SURFACE, -0.5F, 0.0f));
 
-private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+
+private static Biome makeBlackAmazonRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
     DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
     mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
@@ -54,19 +55,18 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
     DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-    DefaultBiomeFeatures.withSavannaGrass(biomegenerationsettings$builder);
-    DefaultBiomeFeatures.withNoiseTallGrass(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withSimpleSeagrass(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withAmazonTrees(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withGuaranaShrubs(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withCassavaPlants(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withAmazonVarzeaTrees(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withVarzeaPalms(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withAmazonianPlants(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CAMU_CAMU_TREE);
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.RIVER).depth(depth).scale(scale)
-            .temperature(1.2F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(10787684)
-                    .setWaterFogColor(10787684).withSkyColor(4169700).withFoliageColor(3830303)
+            .temperature(1.2F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(10788964)
+                    .setWaterFogColor(10788964).withSkyColor(4169700).withFoliageColor(3830303)
                     .withGrassColor(6604607).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                     .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
