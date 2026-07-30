@@ -2,7 +2,6 @@ package com.brbiomesmod.world.biomes;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.features.ModDefaultBiomeFeatures;
-import com.brbiomesmod.features.TreeFeatures;
 import com.brbiomesmod.world.biomes.Util.ModConfiguredSurfaceBuilders;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
@@ -20,24 +19,24 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class BlackAmazonRiver {
+public class AtlanticForestRiver {
 public static final DeferredRegister<Biome> BIOMES
         = DeferredRegister.create(ForgeRegistries.BIOMES, BrazillianBiomesMod.MOD_ID);
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-public static final RegistryObject<Biome> BLACK_AMAZON_RIVER = BIOMES.register("black_amazon_river",
-        () -> makeBlackAmazonRiver(() -> ModConfiguredSurfaceBuilders.FOREST_SURFACE, -0.5F, 0.0f));
+public static final RegistryObject<Biome> ATLANTIC_FOREST_RIVER = BIOMES.register("atlantic_forest_river",
+        () -> makeAtlanticForestBiome(() -> ModConfiguredSurfaceBuilders.FOREST_SURFACE, -0.5F, 0.0f));
 
 
-private static Biome makeBlackAmazonRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
+private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
     DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);
     mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
             new MobSpawnInfo.Spawners(EntityType.BAT, 70, 2, 10));
     mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
             new MobSpawnInfo.Spawners(EntityType.PARROT, 100, 7, 10));
-    mobspawninfo$builder.withSpawner(EntityClassification.MONSTER,
-            new MobSpawnInfo.Spawners(EntityType.SLIME, 100, 7, 10));
+    mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
+            new MobSpawnInfo.Spawners(EntityType.OCELOT, 100, 7, 10));
 
     BiomeGenerationSettings.Builder biomegenerationsettings$builder =
             (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
@@ -49,19 +48,21 @@ private static Biome makeBlackAmazonRiver(final Supplier<ConfiguredSurfaceBuilde
     DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
-    DefaultBiomeFeatures.withSimpleSeagrass(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withAmazonTrees(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withGuaranaShrubs(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withCassavaPlants(biomegenerationsettings$builder);
-    ModDefaultBiomeFeatures.withAmazonianPlants(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withForestTrumpetTrees(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withDutchmanVineTrees(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withAtlanticForestUpperTrees(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withAtlanticForestFlowers(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withAngelTrumpetBushes(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withPassionvineAtlanticForestTrees(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withAtlanticForestPalms(biomegenerationsettings$builder);
+    ModDefaultBiomeFeatures.withAtlanticForestMyrtaceae(biomegenerationsettings$builder);
 
-    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CAMU_CAMU_TREE);
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.RIVER).depth(depth).scale(scale)
-            .temperature(1.2F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(10788964)
-                    .setWaterFogColor(10788964).withSkyColor(4169700).withFoliageColor(3830303)
-                    .withGrassColor(6604607).setFogColor(14807295)
+            .temperature(0.95F).downfall(0.95F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
+                    .setWaterFogColor(993300).withSkyColor(4169700).withFoliageColor(5877296)
+                    .withGrassColor(7979098).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                     .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                     .build())

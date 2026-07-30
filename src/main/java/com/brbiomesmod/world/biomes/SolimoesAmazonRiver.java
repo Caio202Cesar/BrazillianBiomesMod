@@ -41,12 +41,6 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
     BiomeGenerationSettings.Builder biomegenerationsettings$builder =
             (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
-    biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
-    biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_JUNGLE);
-    biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
-    biomegenerationsettings$builder.withStructure(StructureFeatures.PILLAGER_OUTPOST);
-    biomegenerationsettings$builder.withStructure(StructureFeatures.JUNGLE_PYRAMID);
-
     DefaultBiomeFeatures.withCavesAndCanyons(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);

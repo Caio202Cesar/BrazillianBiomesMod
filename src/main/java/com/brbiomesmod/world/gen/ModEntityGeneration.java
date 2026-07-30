@@ -380,5 +380,29 @@ public class ModEntityGeneration {
                     10   // max
             ));
         }
+
+        if (event.getName().equals(PampasRiver.PAMPAS_RIVER.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
+
+        if (event.getName().equals(AtlanticForestRiver.ATLANTIC_FOREST_RIVER.get().getRegistryName())) {
+
+            event.getSpawns().getSpawner(
+                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
+            ).add(new MobSpawnInfo.Spawners(
+                    ModEntityTypes.CAPYBARA_ENTITY.get(),
+                    50, // weight
+                    3,  // min
+                    10   // max
+            ));
+        }
     }
 }

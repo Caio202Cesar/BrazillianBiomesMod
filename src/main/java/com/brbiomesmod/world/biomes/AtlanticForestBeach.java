@@ -2,7 +2,6 @@ package com.brbiomesmod.world.biomes;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.features.ModDefaultBiomeFeatures;
-import com.brbiomesmod.world.biomes.Util.ModConfiguredSurfaceBuilders;
 import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
@@ -27,7 +26,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> ATLANTIC_FOREST_BEACH = BIOMES.register("atlantic_forest_beach",
-        () -> makeAtlanticForestBeach(() -> ConfiguredSurfaceBuilders.DESERT, 0.1f, 0.3f));
+        () -> makeAtlanticForestBeach(() -> ConfiguredSurfaceBuilders.DESERT, 0.0F, 0.025F));
 
 private static Biome makeAtlanticForestBeach(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
