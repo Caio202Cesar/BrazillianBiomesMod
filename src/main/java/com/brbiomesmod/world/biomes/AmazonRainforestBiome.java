@@ -60,9 +60,6 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
     ModDefaultBiomeFeatures.withCassavaPlants(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAmazonianPlants(biomegenerationsettings$builder);
 
-    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Features.SEAGRASS_SWAMP);
-    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
-
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
             .temperature(1.2F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(10788964)
                     .setWaterFogColor(10788964).withSkyColor(4169700).withFoliageColor(3830303)

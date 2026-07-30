@@ -13,11 +13,11 @@ import static net.minecraftforge.common.BiomeDictionary.Type.*;
 
 public class ModBiomeGeneration {
     public static void generateBiomes() {
-        addBiome(AmazonRainforestBiome.AMAZON_RAINFOREST.get(), BiomeManager.BiomeType.DESERT, 27, OVERWORLD, HOT, JUNGLE, DENSE, SPOOKY);
+        addBiome(AmazonRainforestBiome.AMAZON_RAINFOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, HOT, JUNGLE, DENSE, SPOOKY);
 
         addBiome(AraucariaPlateauBiome.ARAUCARIA_PLATEAU.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD);
 
-        addBiome(PantanalBiome.PANTANAL.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, HOT, SPARSE, SAVANNA);
+        addBiome(PantanalBiome.PANTANAL.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, SPARSE, SAVANNA);
 
         addBiome(CaatingaBiome.CAATINGA.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, SPARSE, SAVANNA, DRY, SANDY);
 
@@ -29,9 +29,9 @@ public class ModBiomeGeneration {
 
         addBiome(CerradoBiome.CERRADO.get(), BiomeManager.BiomeType.DESERT, 25, HOT, OVERWORLD, SPARSE, SAVANNA);
 
-        addBiome(AtlanticForestBiome.ATLANTIC_FOREST.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, DENSE, LUSH, JUNGLE);
+        addBiome(AtlanticForestBiome.ATLANTIC_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, HOT, DENSE, LUSH, JUNGLE);
 
-        addBiome(CocalForestBiome.COCAL_FOREST_BIOME.get(), BiomeManager.BiomeType.DESERT, 27, OVERWORLD, HOT, SAVANNA, SPARSE);
+        addBiome(CocalForestBiome.COCAL_FOREST_BIOME.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, HOT, SAVANNA, SPARSE);
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {

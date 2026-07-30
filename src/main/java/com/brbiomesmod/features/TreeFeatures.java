@@ -1430,7 +1430,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                     PODOCARPUS_LAMBERTII_BIG_TREE.withChance(0.06F), PODOCARPUS_LAMBERTII_TREE.withChance(0.18F)),
                     PODOCARPUS_LAMBERTII_FANCY_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 2))));
+                    .configure(new AtSurfaceWithExtraConfig(2, 0.1F, 2))));
     public static final ConfiguredFeature<?, ?> PAMPAS_RIPARIAN_TREES = register("pampas_riparian_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(HUMBOLDT_WILLOW_TREE.withChance(0.3F),
                     QUEEN_PALM.withChance(0.12F), PERUVIAN_PEPPER_FANCY_TREE.withChance(0.23F),

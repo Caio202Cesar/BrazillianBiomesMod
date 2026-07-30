@@ -56,11 +56,10 @@ private static Biome makeBlackAmazonRiver(final Supplier<ConfiguredSurfaceBuilde
     ModDefaultBiomeFeatures.withAmazonianPlants(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CAMU_CAMU_TREE);
-    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.RIVER).depth(depth).scale(scale)
-            .temperature(1.2F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(10788964)
-                    .setWaterFogColor(10788964).withSkyColor(4169700).withFoliageColor(3830303)
+            .temperature(0.99F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
+                    .setWaterFogColor(993300).withSkyColor(4169700).withFoliageColor(3830303)
                     .withGrassColor(6604607).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                     .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))

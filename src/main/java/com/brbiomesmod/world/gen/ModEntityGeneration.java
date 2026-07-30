@@ -213,19 +213,7 @@ public class ModEntityGeneration {
             ));
         }
 
-        if (event.getName().equals(SolimoesAmazonRiver.SOLIMOES_AMAZON_RIVER.get().getRegistryName())) {
-
-            event.getSpawns().getSpawner(
-                    ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
-            ).add(new MobSpawnInfo.Spawners(
-                    ModEntityTypes.CAPYBARA_ENTITY.get(),
-                    50, // weight
-                    3,  // min
-                    10   // max
-            ));
-        }
-
-        if (event.getName().equals(SolimoesAmazonRiver.SOLIMOES_AMAZON_RIVER.get().getRegistryName())) {
+        if (event.getName().equals(AmazonVarzeaForestBiome.AMAZON_VARZEA_FOREST.get().getRegistryName())) {
 
             event.getSpawns().getSpawner(
                     ModEntityTypes.BOTO_ENTITY.get().getClassification()

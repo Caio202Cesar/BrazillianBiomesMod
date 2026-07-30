@@ -27,7 +27,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> AMAZON_VARZEA_FOREST = BIOMES.register("amazon_varzea_forest",
-        () -> makeAmazonRainforestBiome(() -> ConfiguredSurfaceBuilders.SWAMP, -0.1f, 0.120f));
+        () -> makeAmazonRainforestBiome(() -> ConfiguredSurfaceBuilders.SWAMP, -0.5F, 0.0f));
 
 //Varzea trees: kapok, sandbox tree, andiroba and buriti
 private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -65,7 +65,7 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
     ModDefaultBiomeFeatures.withAmazonVarzeaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withVarzeaPalms(biomegenerationsettings$builder);
 
-    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CAMU_CAMU_TREE);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
             .temperature(1.2F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(10787684)
