@@ -31,11 +31,7 @@ public class ModBiomeGeneration {
 
         addBiome(AtlanticForestBiome.ATLANTIC_FOREST.get(), BiomeManager.BiomeType.DESERT, 25, OVERWORLD, HOT, DENSE, LUSH, JUNGLE);
 
-        addBiome(AtlanticForestHillsBiome.ATLANTIC_FOREST_HILLS.get(), BiomeManager.BiomeType.DESERT, 18, OVERWORLD, HOT, DENSE, HILLS, JUNGLE, MAGICAL);
-
         addBiome(CocalForestBiome.COCAL_FOREST_BIOME.get(), BiomeManager.BiomeType.DESERT, 27, OVERWORLD, HOT, SAVANNA, SPARSE);
-
-
     }
 
     private static void addBiome(Biome biome, BiomeManager.BiomeType type, int weight, BiomeDictionary.Type... types) {
