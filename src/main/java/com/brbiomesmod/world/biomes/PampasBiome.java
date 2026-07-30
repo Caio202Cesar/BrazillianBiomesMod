@@ -27,7 +27,7 @@ public class PampasBiome {
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
     public static final RegistryObject<Biome> PAMPAS = BIOMES.register("pampas",
-            () -> makePlainsBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.126f));
+            () -> makePlainsBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.0F, 0.025F));
 
     //Based on Campanha Gaúcha
     private static Biome makePlainsBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
