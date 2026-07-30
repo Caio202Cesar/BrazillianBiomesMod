@@ -6,7 +6,7 @@
     {
       "type": "text",
       "title": "Plant Info",
-      "text": "$(bold)Scientific Name:$(reset) Ficus cestrifolia/organensis$(br)$(bold)Biomes:$(reset) Pampas Coastal Fields, Southern Alto Parana Atlantic Forest"
+      "text": "$(bold)Scientific Name:$(reset) Ficus cestrifolia/organensis$(br)$(bold)Biomes:$(reset) Pampas, Pampas Hills, Pampas Coastal Fields, Pampas Butia Savanna, Southern Alto Parana Atlantic Forest"
     },
     {
       "type": "spotlight",
