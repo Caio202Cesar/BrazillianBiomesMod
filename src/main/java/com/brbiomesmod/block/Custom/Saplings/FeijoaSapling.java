@@ -1,7 +1,5 @@
 package com.brbiomesmod.block.Custom.Saplings;
 
-import com.brbiomesmod.Climate.SummerHeat;
-import com.brbiomesmod.Climate.SummerHeatRegistry;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;

@@ -27,7 +27,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> ATLANTIC_FOREST_HILLS = BIOMES.register("atlantic_forest_hills",
-        () -> makeAtlanticForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 1.4f, 0.3f));
+        () -> makeAtlanticForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.7f, 0.9f));
 
 
 private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
