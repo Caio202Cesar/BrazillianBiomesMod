@@ -27,7 +27,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> ATLANTIC_FOREST_HILLS = BIOMES.register("atlantic_forest_hills",
-        () -> makeAtlanticForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.45f, 0.35f));
+        () -> makeAtlanticForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 2.0f, 0.25f));
 
 private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();

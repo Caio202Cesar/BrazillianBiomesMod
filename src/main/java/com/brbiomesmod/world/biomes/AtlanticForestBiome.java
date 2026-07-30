@@ -25,7 +25,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> ATLANTIC_FOREST = BIOMES.register("atlantic_forest",
-        () -> makeAtlanticForestBiome(() -> ModConfiguredSurfaceBuilders.FOREST_SURFACE, 0.1f, 0.3f));
+        () -> makeAtlanticForestBiome(() -> ModConfiguredSurfaceBuilders.FOREST_SURFACE, 0.1f, 0.2f));
 
 
 private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -51,7 +51,6 @@ private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBui
     DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
-    DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withForestTrumpetTrees(biomegenerationsettings$builder);

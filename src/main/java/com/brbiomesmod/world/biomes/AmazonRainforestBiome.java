@@ -26,7 +26,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> AMAZON_RAINFOREST = BIOMES.register("amazon_rainforest",
-        () -> makeAmazonRainforestBiome(() -> ModConfiguredSurfaceBuilders.FOREST_SURFACE, 0.1f, 0.126f));
+        () -> makeAmazonRainforestBiome(() -> ModConfiguredSurfaceBuilders.FOREST_SURFACE, 0.1f, 0.2f));
 
 
 private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -53,7 +53,6 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
     DefaultBiomeFeatures.withMonsterRoom(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withCommonOverworldBlocks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withOverworldOres(biomegenerationsettings$builder);
-    DefaultBiomeFeatures.withClayDisks(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAmazonTrees(biomegenerationsettings$builder);

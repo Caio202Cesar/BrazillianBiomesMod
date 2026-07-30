@@ -19,7 +19,7 @@ public class ModConfiguredSurfaceBuilders {
     public static ConfiguredSurfaceBuilder<?> FOREST_SURFACE = register("forest_surface",
             SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
                     Blocks.PODZOL.getBlock().getDefaultState(), //top material
-                    Blocks.STONE.getBlock().getDefaultState(), //under material
+                    Blocks.DIRT.getBlock().getDefaultState(), //under material
                     Blocks.GRAVEL.getBlock().getDefaultState() //underwater material
             )));
 
@@ -27,13 +27,6 @@ public class ModConfiguredSurfaceBuilders {
             SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
                     Blocks.PODZOL.getBlock().getDefaultState(), //top material
                     Blocks.SAND.getBlock().getDefaultState(), //under material
-                    Blocks.SAND.getBlock().getDefaultState() //underwater material
-            )));
-
-    public static ConfiguredSurfaceBuilder<?> VARZEA = register("varzea_surface",
-            SurfaceBuilder.DEFAULT.func_242929_a(new SurfaceBuilderConfig(
-                    Blocks.WATER.getBlock().getDefaultState(), //top material
-                    Blocks.PODZOL.getBlock().getDefaultState(), //under material
                     Blocks.SAND.getBlock().getDefaultState() //underwater material
             )));
 
