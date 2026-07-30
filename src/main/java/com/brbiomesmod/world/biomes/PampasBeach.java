@@ -2,6 +2,7 @@ package com.brbiomesmod.world.biomes;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.features.ModDefaultBiomeFeatures;
+import com.caiocesarmods.caiocesarbiomes.Util.ModSoundEvents;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -19,18 +20,15 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-import static net.minecraft.world.biome.BiomeMaker.makeGenericBeachBiome;
-
 //Beach biome with jelly palm and the other species of the Pampas biome
-public class PampasCoastalFields {
+public class PampasBeach {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, BrazillianBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> PAMPAS_COASTAL_FIELDS = BIOMES.register("pampas_coastal_fields",
-            () -> makeGenericBeachBiome(() -> ConfiguredSurfaceBuilders.OCEAN_SAND, 0.0F, 0.025F));
+    public static final RegistryObject<Biome> PAMPAS_BEACH = BIOMES.register("pampas_beach",
+            () -> makeGenericBeachBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.0F, 0.025F));
 
-    //Warmer variant of Pampas Biomes - based on Rio Grande do Sul/Uruguai coast (Porto Alegre, Pelotas, St. Vitoria do Palmar, Montevideo)
     private static Biome makeGenericBeachBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
         MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
         DefaultBiomeFeatures.withPassiveMobs(mobspawninfo$builder);
@@ -67,12 +65,12 @@ public class PampasCoastalFields {
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-        //Hardiness zone 10: 0.85F - 0.89F
-        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(depth).scale(scale)
+        //Hardiness zone 10: 0.85F - 0.89F (even zone 9 Pampas biome will be in zone 10, like Montevideu, because Southern Atlantic ocanic influence turn the coastal winter milder)
+        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
                 .temperature(0.89F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(7842607)
                         .withGrassColor(9551193).setFogColor(14807295)
-                        .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
+                        .setAmbientSound(ModSoundEvents.BEACH_AMBIENCE.get())
                         .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))
                         .build())
                 .withMobSpawnSettings(mobspawninfo$builder.build()).withGenerationSettings(biomegenerationsettings$builder.build()).build();

@@ -75,6 +75,7 @@ public class BrazillianBiomesMod {
         DunasRestingaBiome.register(eventBus);
         PampasBiome.register(eventBus);
         PampasRiver.register(eventBus);
+        PampasBeach.register(eventBus);
         CerradoBiome.register(eventBus);
         RestingaBeachBiome.register(eventBus);
         AmazonVarzeaForestBiome.register(eventBus);
