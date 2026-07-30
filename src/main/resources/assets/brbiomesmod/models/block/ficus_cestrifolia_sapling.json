@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "brbiomesmod:block/ficus_cestrifolia_sapling",
+    "particle": "brbiomesmod:block/ficus_cestrifolia_sapling"
+  }
+}

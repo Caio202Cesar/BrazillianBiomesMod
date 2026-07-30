@@ -1299,6 +1299,11 @@ public class TreesGroup {
                     .zeroHardnessAndResistance()));
 
 
+    public static final RegistryObject<Block> FICUS_CESTRIFOLIA_LEAVES = registerBlock("ficus_cestrifolia_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> FICUS_CESTRIFOLIA_SAPLING = registerBlock("ficus_cestrifolia_sapling",
+            FicusCestrifoliaSapling::new);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

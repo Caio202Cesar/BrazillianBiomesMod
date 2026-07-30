@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "brbiomesmod:block/ficus_cestrifolia_leaves",
+    "particle": "brbiomesmod:block/ficus_cestrifolia_leaves"
+  }
+}

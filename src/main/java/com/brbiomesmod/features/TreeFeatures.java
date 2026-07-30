@@ -4,6 +4,10 @@ import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.FoliagePlacers.*;
 import com.brbiomesmod.features.TreeDecorators.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.VirginianaFoliagePlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.UmbrellaTrunkPlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures.Placements;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -930,7 +934,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                            OptionalInt.of(4)))).setDecorators(ImmutableList.of(Placements.SPANISH_MOSS_PLACEMENT045))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RIO_GRANDE_CHERRY_TREE = register("rio_grande_cherry_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUGENIA_LOG),
                     new SimpleBlockStateProvider(States.RIO_GRANDE_CHERRY_LEAVES),
@@ -1095,7 +1100,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)),
+                            Placements.SPANISH_MOSS_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PODOCARPUS_LAMBERTII_FANCY_TREE = register("podocarpus_lambertii_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PODOCARPUS_LAMBERTII_LOG),
                     new SimpleBlockStateProvider(States.PODOCARPUS_LAMBERTII_LEAVES),
@@ -1103,7 +1109,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)),
+                            Placements.SPANISH_MOSS_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PODOCARPUS_LAMBERTII_BIG_TREE = register("podocarpus_lambertii_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PODOCARPUS_LAMBERTII_LOG),
                     new SimpleBlockStateProvider(States.PODOCARPUS_LAMBERTII_LEAVES),
@@ -1111,7 +1118,17 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new MegaJungleTrunkPlacer(6, 2, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
+                    .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)),
+                            Placements.SPANISH_MOSS_PLACEMENT)).build()));
+
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FICUS_CESTRIFOLIA_TREE = register("ficus_cestrifolia_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_FICUS_LOG),
+                    new SimpleBlockStateProvider(States.FICUS_CESTRIFOLIA_LEAVES),
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new UmbrellaTrunkPlacer(4, 4, 2, 5, 5),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setDecorators(ImmutableList.of(Placements.SPANISH_MOSS_PLACEMENT075))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
 
     /*public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OITI_TREE = register("oiti_tree",
@@ -1136,6 +1153,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState PODOCARPUS_LAMBERTII_LOG = TreesGroup.PODOCARPUS_LAMBERTII_LOG.get().getDefaultState();
         protected static final BlockState PODOCARPUS_LAMBERTII_LEAVES = TreesGroup.PODOCARPUS_LAMBERTII_LEAVES.get().getDefaultState();
+
+        protected static final BlockState JUNGLE_FICUS_LOG = TreeBlocks.JUNGLE_FIG_LOG.get().getDefaultState();
+        protected static final BlockState FICUS_CESTRIFOLIA_LEAVES = TreesGroup.FICUS_CESTRIFOLIA_LEAVES.get().getDefaultState();
 
         protected static final BlockState OITI_LOG = TreesGroup.OITI_LOG.get().getDefaultState();
         protected static final BlockState OITICICA_LEAVES = TreesGroup.OITICICA_LEAVES.get().getDefaultState();
