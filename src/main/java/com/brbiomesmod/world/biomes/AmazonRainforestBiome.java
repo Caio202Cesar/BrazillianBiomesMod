@@ -42,6 +42,7 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
     BiomeGenerationSettings.Builder biomegenerationsettings$builder =
             (new BiomeGenerationSettings.Builder()).withSurfaceBuilder(surfaceBuilder);
 
+    //Large lakes? What does gen these lakes here?
     biomegenerationsettings$builder.withStructure(StructureFeatures.MINESHAFT);
     biomegenerationsettings$builder.withStructure(StructureFeatures.RUINED_PORTAL_JUNGLE);
     biomegenerationsettings$builder.withStructure(StructureFeatures.BURIED_TREASURE);
