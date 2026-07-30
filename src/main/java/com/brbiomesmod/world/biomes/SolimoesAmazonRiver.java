@@ -3,7 +3,6 @@ package com.brbiomesmod.world.biomes;
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.features.ModDefaultBiomeFeatures;
 import com.brbiomesmod.features.TreeFeatures;
-import com.brbiomesmod.world.biomes.Util.ModConfiguredSurfaceBuilders;
 import net.minecraft.client.audio.BackgroundMusicTracks;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.EntityType;
@@ -21,13 +20,13 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class AmazonVarzeaForestBiome {
+public class SolimoesAmazonRiver {
 public static final DeferredRegister<Biome> BIOMES
         = DeferredRegister.create(ForgeRegistries.BIOMES, BrazillianBiomesMod.MOD_ID);
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-public static final RegistryObject<Biome> AMAZON_VARZEA_FOREST = BIOMES.register("amazon_varzea_forest",
-        () -> makeAmazonRainforestBiome(() -> ConfiguredSurfaceBuilders.SWAMP, -0.1f, 0.120f));
+public static final RegistryObject<Biome> SOLIMOES_AMAZON_RIVER = BIOMES.register("solimoes_amazon_river",
+        () -> makeAmazonRainforestBiome(() -> ConfiguredSurfaceBuilders.SWAMP, -0.5F, 0.0f));
 
 //Varzea trees: kapok, sandbox tree, andiroba and buriti
 private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -37,8 +36,6 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
             new MobSpawnInfo.Spawners(EntityType.BAT, 70, 2, 10));
     mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
             new MobSpawnInfo.Spawners(EntityType.PARROT, 100, 7, 10));
-    mobspawninfo$builder.withSpawner(EntityClassification.CREATURE,
-            new MobSpawnInfo.Spawners(EntityType.OCELOT, 100, 7, 10));
     mobspawninfo$builder.withSpawner(EntityClassification.MONSTER,
             new MobSpawnInfo.Spawners(EntityType.SLIME, 100, 7, 10));
 
@@ -65,9 +62,10 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
     ModDefaultBiomeFeatures.withAmazonVarzeaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withVarzeaPalms(biomegenerationsettings$builder);
 
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CAMU_CAMU_TREE);
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-    return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.JUNGLE).depth(depth).scale(scale)
+    return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.RIVER).depth(depth).scale(scale)
             .temperature(1.2F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(10787684)
                     .setWaterFogColor(10787684).withSkyColor(4169700).withFoliageColor(3830303)
                     .withGrassColor(6604607).setFogColor(14807295)

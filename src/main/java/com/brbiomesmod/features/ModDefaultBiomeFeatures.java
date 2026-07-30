@@ -17,6 +17,9 @@ public class ModDefaultBiomeFeatures {
     public static void withAmazonVarzeaTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.VARZEA_TREES);
     }
+    public static void withVarzeaPalms(BiomeGenerationSettings.Builder builder) {
+        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.VARZEA_PALMS);
+    }
     public static void withCerradoPalms(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CERRADO_PALM_TREES);
     }
