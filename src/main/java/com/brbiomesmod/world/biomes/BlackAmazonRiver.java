@@ -28,7 +28,6 @@ private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> BLACK_AMAZON_RIVER = BIOMES.register("black_amazon_river",
         () -> makeBlackAmazonRiver(() -> ModConfiguredSurfaceBuilders.FOREST_SURFACE, -0.5F, 0.0f));
 
-
 private static Biome makeBlackAmazonRiver(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
     MobSpawnInfo.Builder mobspawninfo$builder = new MobSpawnInfo.Builder();
     DefaultBiomeFeatures.withBatsAndHostiles(mobspawninfo$builder);

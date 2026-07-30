@@ -25,6 +25,7 @@ public class ModBiomeGeneration {
 
         addBiome(PampasBiome.PAMPAS.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, PLAINS);
 
+        //More a variant than a sub-biome
         addBiome(PampasCoastalFields.PAMPAS_COASTAL_FIELDS.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, SPARSE, PLAINS); //It is a major biome instead just a sub-biome.
 
         addBiome(CerradoBiome.CERRADO.get(), BiomeManager.BiomeType.DESERT, 25, HOT, OVERWORLD, SPARSE, SAVANNA);
