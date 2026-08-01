@@ -27,7 +27,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> AMAZON_RAINFOREST_EDGE = BIOMES.register("amazon_rainforest_edge",
-        () -> makeAmazonRainforestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.126f));
+        () -> makeAmazonRainforestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 0.1f, 0.2f));
 
 
 private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {

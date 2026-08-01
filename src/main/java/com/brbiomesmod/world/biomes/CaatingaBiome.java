@@ -29,7 +29,7 @@ public static final DeferredRegister<Biome> BIOMES
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
 public static final RegistryObject<Biome> CAATINGA = BIOMES.register("caatinga_shrubland",
-        () -> makeCaatingaBiome(() -> ModConfiguredSurfaceBuilders.CAATINGA_SURFACE, 0.1f, 0.4f));
+        () -> makeCaatingaBiome(() -> ModConfiguredSurfaceBuilders.CAATINGA_SURFACE, 0.1f, 0.2f));
 
 
 private static Biome makeCaatingaBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
