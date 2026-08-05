@@ -1384,7 +1384,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> ALTO_PARANA_FOREST_UPPER_TREES = register("alto_parana_forest_upper_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JEQUITIBA_TREE.withChance(0.05F),
                     PINK_PEROBA_TREE.withChance(0.056F), JUSSARA_PALM.withChance(0.24F), ANGICO_VELHO_TREE.withChance(0.3F),
-                    ),
+                    CHAL_CHAL_TREE1.withChance(0.23F), CHAL_CHAL_TREE2.withChance(0.3F),
+                    QUEEN_PALM.withChance(0.24F), JELLY_PALM.withChance(0.12F), TALL_JELLY_PALM.withChance(0.12F)),
                     PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 3))));
 
