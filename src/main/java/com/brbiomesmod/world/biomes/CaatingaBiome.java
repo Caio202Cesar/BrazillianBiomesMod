@@ -69,8 +69,8 @@ private static Biome makeCaatingaBiome(final Supplier<ConfiguredSurfaceBuilder<?
 
 
     return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
-            .temperature(2.0F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(993300)
-                    .setWaterFogColor(993300).withSkyColor(8569325).withFoliageColor(7441937)
+            .temperature(2.0F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                    .setWaterFogColor(4159204).withSkyColor(8569325).withFoliageColor(7441937)
                     .withGrassColor(142107676).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
                     .setMusic(BackgroundMusicTracks.getDefaultBackgroundMusicSelector(SoundEvents.MUSIC_CREATIVE))

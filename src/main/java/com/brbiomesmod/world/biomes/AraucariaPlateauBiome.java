@@ -58,6 +58,9 @@ private static Biome makeSavannaPlateauBiome(final Supplier<ConfiguredSurfaceBui
     DefaultBiomeFeatures.withStrongholdAndMineshaft(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withFossils(biomegenerationsettings$builder);
     DefaultBiomeFeatures.withJungleGrass(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withEmeraldOre(biomegenerationsettings$builder);
+    DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withOcoteaTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withParanaPineTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withYerbaMateTrees(biomegenerationsettings$builder);
@@ -65,9 +68,6 @@ private static Biome makeSavannaPlateauBiome(final Supplier<ConfiguredSurfaceBui
     ModDefaultBiomeFeatures.withXaximPlant(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withAraucariaForestFlowers(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withPinkPeeperTrees(biomegenerationsettings$builder);
-    DefaultBiomeFeatures.withForestRocks(biomegenerationsettings$builder);
-    DefaultBiomeFeatures.withEmeraldOre(biomegenerationsettings$builder);
-    DefaultBiomeFeatures.withLargeFern(biomegenerationsettings$builder);
 
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PAMPAS_PALMS);
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
