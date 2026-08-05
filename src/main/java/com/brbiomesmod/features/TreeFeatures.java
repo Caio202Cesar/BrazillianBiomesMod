@@ -686,9 +686,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JEQUITIBA_TREE = register("jequitiba_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JEQUITIBA_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.JEQUITIBA_LEAVES),
-                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new MegaJungleTrunkPlacer(13, 20, 4),
-                    new TwoLayerFeature(1, 0, 1))).build()));
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new UmbrellaTrunkPlacer(9, 8, 5, 5, 5),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Brazillian Rosewood Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_ROSEWOOD_TREE = register("brazillian_rosewood_tree",
@@ -1381,7 +1382,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .configure(new AtSurfaceWithExtraConfig(0, 0.5F, 3))));
 
     public static final ConfiguredFeature<?, ?> ALTO_PARANA_FOREST_UPPER_TREES = register("alto_parana_forest_upper_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JEQUITIBA_TREE.withChance(0.2F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JEQUITIBA_TREE.withChance(0.05F),
+                    PINK_PEROBA_TREE.withChance(0.056F), JUSSARA_PALM.withChance(0.24F), ANGICO_VELHO_TREE.withChance(0.3F),
+                    ),
                     PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 3))));
 
