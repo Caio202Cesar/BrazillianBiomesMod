@@ -78,11 +78,13 @@ public class BrazillianBiomesMod {
         PampasBiome.register(eventBus);
         PampasRiver.register(eventBus);
         PampasBeach.register(eventBus);
+        PampasCoastalFields.register(eventBus);
+        PampasCoastalFieldsRiver.register(eventBus);
+        PampasCoastalFieldsBeach.register(eventBus);
         CerradoBiome.register(eventBus);
         RestingaBeachBiome.register(eventBus);
         AmazonVarzeaForestBiome.register(eventBus);
         ButiaPampasBiome.register(eventBus);
-        PampasCoastalFields.register(eventBus);
         AtlanticForestHillsBiome.register(eventBus);
         CoxilhasBiome.register(eventBus);
         AmazonRainforestEdgeBiome.register(eventBus);

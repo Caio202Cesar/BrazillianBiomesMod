@@ -21,12 +21,12 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.function.Supplier;
 
 //Beach biome with jelly palm and the other species of the Pampas biome
-public class PampasBeach {
+public class PampasCoastalFieldsBeach {
     public static final DeferredRegister<Biome> BIOMES
             = DeferredRegister.create(ForgeRegistries.BIOMES, BrazillianBiomesMod.MOD_ID);
 
     private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-    public static final RegistryObject<Biome> PAMPAS_BEACH = BIOMES.register("pampas_beach",
+    public static final RegistryObject<Biome> PAMPAS_COASTAL_FIELDS_BEACH = BIOMES.register("pampas_coastal_fields_beach",
             () -> makeGenericBeachBiome(() -> ConfiguredSurfaceBuilders.DESERT, 0.0F, 0.025F));
 
     private static Biome makeGenericBeachBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
@@ -64,9 +64,9 @@ public class PampasBeach {
 
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
-        //Hardiness zone 10: 0.8F - 0.84F
+        //Hardiness zone 10: 0.85F - 0.89F
         return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
-                .temperature(0.8F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
+                .temperature(0.89F).downfall(0.4F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
                         .setWaterFogColor(4765085).withSkyColor(7907327).withFoliageColor(7842607)
                         .withGrassColor(9551193).setFogColor(14807295)
                         .setAmbientSound(ModSoundEvents.BEACH_AMBIENCE.get())
