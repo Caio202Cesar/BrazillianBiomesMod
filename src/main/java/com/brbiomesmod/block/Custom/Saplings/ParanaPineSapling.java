@@ -119,10 +119,13 @@ public class ParanaPineSapling extends SaplingBlock {
 
     private static class ParanaPineTree extends BigTree {
         @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random rand, boolean p_225546_2_) {
+            if (rand.nextInt(10) == 0) {
                 return TreeFeatures.PARANA_PINE_TREE_YOUNG;
+            } else {
+                return TreeFeatures.PARANA_PINE_TREE2;
+            }
         }
-
         /**
          * Get a {@link ConfiguredFeature} of the huge variant of this tree
          *
@@ -131,11 +134,7 @@ public class ParanaPineSapling extends SaplingBlock {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
-            if (rand.nextInt(10) == 8) {
-                return TreeFeatures.PARANA_PINE_TREE;
-            } else {
-                return TreeFeatures.PARANA_PINE_TREE2;
-            }
+            return TreeFeatures.PARANA_PINE_TREE;
         }
     }
 }
