@@ -1380,6 +1380,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     BRAZILLIAN_ROSEWOOD_WITH_DUTCHMAN_VINE)).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.5F, 3))));
 
+    public static final ConfiguredFeature<?, ?> ALTO_PARANA_FOREST_UPPER_TREES = register("alto_parana_forest_upper_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JEQUITIBA_TREE.withChance(0.2F)),
+                    PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 3))));
+
     //Amazon rainforest vegetation
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YOUNG_KAPOK_TREE.withChance(0.4F), KAPOK_TREE.withChance(0.35F),

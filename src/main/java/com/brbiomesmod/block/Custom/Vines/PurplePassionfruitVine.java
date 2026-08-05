@@ -38,7 +38,7 @@ public class PurplePassionfruitVine extends VineBlock {
      * @param random
      */
 
-    //Hardiness Zone 9 to 10
+    //Hardiness Zone 9 to 11
     public static final float MIN_TEMP = 0.8F;
     public static final float MAX_TEMP = 0.94F;
 

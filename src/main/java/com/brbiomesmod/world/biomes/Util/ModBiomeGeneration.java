@@ -30,9 +30,9 @@ public class ModBiomeGeneration {
 
         addBiome(CerradoBiome.CERRADO.get(), BiomeManager.BiomeType.DESERT, 25, HOT, OVERWORLD, SPARSE, SAVANNA);
 
-        addBiome(AtlanticForestBiome.ATLANTIC_FOREST.get(), BiomeManager.BiomeType.DESERT_LEGACY, 25, OVERWORLD, HOT, DENSE, LUSH, JUNGLE);
+        addBiome(AtlanticForestBiome.ATLANTIC_FOREST.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, HOT, DENSE, LUSH, JUNGLE);
 
-        addBiome(AtlanticForestHillsBiome.ATLANTIC_FOREST_HILLS.get(), BiomeManager.BiomeType.DESERT_LEGACY, 25, OVERWORLD, HOT, DENSE, LUSH, JUNGLE, MODIFIED, MOUNTAIN);
+        addBiome(AtlanticForestHillsBiome.ATLANTIC_FOREST_HILLS.get(), BiomeManager.BiomeType.WARM, 25, OVERWORLD, HOT, DENSE, LUSH, JUNGLE, MODIFIED, MOUNTAIN);
 
     }
 
