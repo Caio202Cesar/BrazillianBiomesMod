@@ -247,7 +247,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE, PassionFruitVineTrunkDecorator.INSTANCE)).build()));
+                    .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE, PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
 
     //Peruvian Pepper Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PERUVIAN_PEPPER_TREE = register("peruvian_pepper_tree",
@@ -393,43 +393,72 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Brazillian Sassafras Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_SASSAFRAS_TREE = register("brazillian_sassafras_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_SASSAFRAS_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
                     new SimpleBlockStateProvider(States.BRAZILLIAN_SASSAFRAS_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 6, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?>  BRAZILLIAN_SASSAFRAS_FANCY_TREE = register("brazillian_sassafras_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_SASSAFRAS_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
                     new SimpleBlockStateProvider(States.BRAZILLIAN_SASSAFRAS_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?>  BRAZILLIAN_SASSAFRAS_TREE_WITH_PASSIONVINE =
-            register("brazillian_sassafras_fancy_tree_with_passionvine",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_SASSAFRAS_LOG),
-                    new SimpleBlockStateProvider(States.BRAZILLIAN_SASSAFRAS_LEAVES),
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?>  BRAZILLIAN_SASSAFRAS_TREE_WITH_PURPLE_PASSIONVINE =
+            register("brazillian_sassafras_fancy_tree_with_purple_passionvine",
+                    Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(
+                            TreeFeatures.States.LAUREL_LOG),
+                            new SimpleBlockStateProvider(States.BRAZILLIAN_SASSAFRAS_LEAVES),
+                            new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                            new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                            .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE,
+                                    PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
+
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?>  CANELA_PRETA_TREE = register("canela_preta_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(States.CANELA_PRETA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?>  CANELA_PRETA_TREE_WITH_PASSIONVINE = register("canela_preta_tree_with_passionvine",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(States.CANELA_PRETA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE, PassionFruitVineTrunkDecorator.INSTANCE)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?>  BRAZILLIAN_SASSAFRAS_TREE_WITH_PURPLE_PASSIONVINE =
-            register("brazillian_sassafras_fancy_tree_with_purple_passionvine",
-                    Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_SASSAFRAS_LOG),
-                            new SimpleBlockStateProvider(States.BRAZILLIAN_SASSAFRAS_LEAVES),
-                            new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                            new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                            .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE, PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
+                    .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE,
+                            PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
+
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?>  LAUREL_GUAIKA_TREE = register("laurel_guaika_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(States.LAUREL_GUAIKA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?>  LAUREL_GUAIKA_TREE_WITH_PASSIONVINE = register("laurel_guaika_tree_with_passionvine",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(States.LAUREL_GUAIKA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE,
+                            PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
+
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> NECTANDRA_MEGAPOTAMICA_TREE = register("nectandra_megapotamica_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(States.NECTANDRA_MEGAPOTAMICA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> NECTANDRA_MEGAPOTAMICA_FANCY_TREE = register("nectandra_megapotamica_fancy_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(States.NECTANDRA_MEGAPOTAMICA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Dutchman Vine Trees
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?>  BRAZILLIAN_SASSAFRAS_TREE_WITH_VINE =
-            register("brazillian_sassafras_fancy_tree_with_vine",
-                    Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILLIAN_SASSAFRAS_LOG),
-                            new SimpleBlockStateProvider(States.BRAZILLIAN_SASSAFRAS_LEAVES),
-                            new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                            new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                            .setDecorators(ImmutableList.of(DutchmanPipeVineDecorator.INSTANCE)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> DUTCHMAN_VINE_BRAZILWOOD = register("dutchman_vine_brazilwood",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILWOOD_LOG),
                     new SimpleBlockStateProvider(States.BRAZILWOOD_LEAVES),
@@ -1153,9 +1182,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final class States {
 
         protected static final BlockState LAUREL_LOG = TreeBlocks.LAUREL_LOG.get().getDefaultState();
-        protected static final BlockState BRAZILLIAN_SASSAFRAS_LOG = TreesGroup.BRAZILLIAN_SASSAFRAS_LOG.get().getDefaultState();
         protected static final BlockState BRAZILLIAN_SASSAFRAS_LEAVES = TreesGroup.BRAZILLIAN_SASSAFRAS_LEAVES.get().getDefaultState();
-
+        protected static final BlockState CANELA_PRETA_LEAVES = TreesGroup.CANELA_PRETA_LEAVES.get().getDefaultState();
+        protected static final BlockState LAUREL_GUAIKA_LEAVES = TreesGroup.LAUREL_GUAIKA_LEAVES.get().getDefaultState();
+        protected static final BlockState NECTANDRA_MEGAPOTAMICA_LEAVES = TreesGroup.NECTANDRA_MEGAPOTAMICA_LEAVES.get().getDefaultState();
 
         protected static final BlockState KAPOK_LOG = TreesGroup.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = TreesGroup.KAPOK_LEAVES.get().getDefaultState();
@@ -1349,13 +1379,15 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JUSSARA_PALM.withChance(0.5F)),
                     QUEEN_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(7, 0.1F, 1))));
-    public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_TREES_WITH_PASSIONVINE = register("passionvine_atlantic_forest_trees",
+    public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_TREES = register("atlantic_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_ROSEWOOD_WITH_PASSIONVINE.withChance(0.5F),
                             BRAZILLIAN_SASSAFRAS_TREE_WITH_PASSIONVINE.withChance(0.3F), CECROPIA_WITH_PASSIONVINE.withChance(0.3F),
                             SILVER_CECROPIA_WITH_PASSIONVINE.withChance(0.17F), BRAZILWOOD_TREE_WITH_PASSIONVINE.withChance(0.5F),
                             SAPUCAIA_TREE_WITH_PASSIONVINE.withChance(0.3F), MANACA_WITH_PASSIONVINE.withChance(0.1F)),
                             PINK_PEROBA_TREE_WITH_PASSIONFRUIT)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.5F, 3))));
+
+
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_TREES_WITH_PURPLE_PASSIONVINE = register("purple_passionvine_atlantic_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_ROSEWOOD_WITH_PUPRLE_PASSIONVINE.withChance(0.5F),
                             BRAZILLIAN_SASSAFRAS_TREE_WITH_PURPLE_PASSIONVINE.withChance(0.3F), CECROPIA_WITH_PURPLE_PASSIONVINE.withChance(0.3F),
@@ -1363,27 +1395,43 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             SAPUCAIA_TREE_WITH_PURPLE_PASSIONVINE.withChance(0.3F), MANACA_WITH_PURPLE_PASSIONVINE.withChance(0.1F)),
                             PINK_PEROBA_TREE_WITH_PURPLE_PASSIONFRUIT)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.5F, 3))));
+
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_UPPER_TREES = register("atlantic_forest_upper_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.3F),
-                    JEQUITIBA_TREE.withChance(0.4F), BRAZILLIAN_SASSAFRAS_TREE.withChance(0.3F), GUAPURUVU_TREE.withChance(0.2F),
-                    BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.3F), MANACA_FANCY_TREE.withChance(0.4F), MANACA_TREE.withChance(0.3F),
-                    SILVER_CECROPIA_TREE.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.3F), SAPUCAIA_TREE.withChance(0.4F),
-                    BRAZILLIAN_ROSEWOOD_TREE.withChance(0.5F), BRAZILWOOD_TREE.withChance(0.4F),BRAZILWOOD_FANCY_TREE.withChance(0.5F),
+                    JEQUITIBA_TREE.withChance(0.4F), GUAPURUVU_TREE.withChance(0.2F),
+                     MANACA_FANCY_TREE.withChance(0.4F),
+                    MANACA_TREE.withChance(0.3F),
+                    SILVER_CECROPIA_TREE.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.3F),
+                    SAPUCAIA_TREE.withChance(0.4F),
+                    BRAZILLIAN_ROSEWOOD_TREE.withChance(0.5F), BRAZILWOOD_TREE.withChance(0.4F),
+                    BRAZILWOOD_FANCY_TREE.withChance(0.5F),
                     JENIPAPO_TREE.withChance(0.3F), PURPLEHEART_TREE.withChance(0.3F),
                     YELLOW_MOMBIN_TREE.withChance(0.4F), BRAZILLIAN_TIGERWOOD_TREE.withChance(0.07F),
                     BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.5F)),
                     PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 3))));
-    public static final ConfiguredFeature<?, ?> CAMBUCI_TREES = register("cambuci_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CAMBUCI_TREE_WITH_PASSIONVINE.withChance(0.015F),
-                    XAXIM_TREE.withChance(0.5F), HUMBOLDT_WILLOW_TREE.withChance(0.018F)), CAMBUCI_TREE)).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(5, 0.5F, 4))));
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_TREE_WITH_DUTCHMAN_VINE = register("atlantic_forest_trees_with_dutchman_vine",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of
-                    (BRAZILLIAN_SASSAFRAS_TREE_WITH_VINE.withChance(0.14F), DUTCHMAN_VINE_BRAZILWOOD.withChance(0.2F),
+                    (DUTCHMAN_VINE_BRAZILWOOD.withChance(0.2F),
                             PINK_PEROBA_TREE_WITH_DUTCHMAN_VINE.withChance(0.3F)),
                     BRAZILLIAN_ROSEWOOD_WITH_DUTCHMAN_VINE)).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(0, 0.5F, 3))));
+
+
+    public static final ConfiguredFeature<?, ?> SERRA_DO_MAR_FOREST_TREES = register("serra_do_mar_forest_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANACA_TREE.withChance(0.35F),
+                    MANACA_FANCY_TREE.withChance(0.35F), BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.3F),
+                    BRAZILLIAN_SASSAFRAS_TREE.withChance(0.3F), XAXIM_TREE.withChance(0.4F),
+                    CAMBUCI_TREE_WITH_PASSIONVINE.withChance(0.035F), CAMBUCI_TREE.withChance(0.5F),
+                    CANELA_PRETA_TREE.withChance(0.34F), CANELA_PRETA_TREE_WITH_PASSIONVINE.withChance(0.034F),
+                    LAUREL_GUAIKA_TREE.withChance(0.34F), LAUREL_GUAIKA_TREE_WITH_PASSIONVINE.withChance(0.034F),
+                    NECTANDRA_MEGAPOTAMICA_TREE.withChance(0.25F), NECTANDRA_MEGAPOTAMICA_FANCY_TREE.withChance(0.34F),
+
+                    JUSSARA_PALM.withChance(0.24F), ANGICO_VERMELHO_TREE.withChance(0.3F),
+                    CHAL_CHAL_TREE1.withChance(0.23F), CHAL_CHAL_TREE2.withChance(0.3F), GUABIROBA_TREE.withChance(0.23F),
+                    QUEEN_PALM.withChance(0.24F), JELLY_PALM.withChance(0.12F), TALL_JELLY_PALM.withChance(0.12F)),
+                    PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 3))));
 
     public static final ConfiguredFeature<?, ?> ALTO_PARANA_FOREST_UPPER_TREES = register("alto_parana_forest_upper_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(JEQUITIBA_TREE.withChance(0.05F),

@@ -1302,7 +1302,7 @@ public class TreesGroup {
             FicusCestrifoliaSapling::new);
 
     public static final RegistryObject<Block> CANELA_PRETA_LEAVES = registerBlock("canela_preta_leaves",
-            ModLeaves::new);
+            ModLeaves::new); //Serra do Mar
     public static final RegistryObject<Block> CANELA_PRETA_SAPLING = registerBlock("canela_preta_sapling",
             FicusCestrifoliaSapling::new);
 
