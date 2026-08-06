@@ -211,13 +211,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Yerba maté Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YERBA_MATE_TREE = register("yerba_mate_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.YERBA_MATE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ILEX_LOG),
                     new SimpleBlockStateProvider(States.YERBA_MATE_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YERBA_MATE_FANCY_TREE = register("yerba_mate_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.YERBA_MATE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.ILEX_LOG),
                     new SimpleBlockStateProvider(States.YERBA_MATE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
@@ -1214,7 +1214,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState CASHEW_LOG = TreesGroup.CASHEW_LOG.get().getDefaultState();
         protected static final BlockState CASHEW_LEAVES = TreesGroup.CASHEW_LEAVES.get().getDefaultState();
 
-        protected static final BlockState YERBA_MATE_LOG = TreesGroup.YERBA_MATE_LOG.get().getDefaultState();
+        protected static final BlockState ILEX_LOG = TreeBlocks.HOLLY_LOG.get().getDefaultState();
         protected static final BlockState YERBA_MATE_LEAVES = TreesGroup.YERBA_MATE_LEAVES.get().getDefaultState();
 
         protected static final BlockState FEIJOA_LOG = TreesGroup.FEIJOA_LOG.get().getDefaultState();

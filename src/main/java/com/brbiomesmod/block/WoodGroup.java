@@ -275,26 +275,6 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-    public static final RegistryObject<Block> YERBA_MATE_WOOD = registerBlock("yerba_mate_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_YERBA_MATE_WOOD = registerBlock("stripped_yerba_mate_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> YERBA_MATE_PLANKS = registerBlock("yerba_mate_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> YERBA_MATE_SLAB = registerBlock("yerba_mate_slab",
-            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> YERBA_MATE_STAIRS = registerBlock("yerba_mate_stairs",
-            () -> new StairsBlock(() -> YERBA_MATE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> YERBA_MATE_FENCE = registerBlock("yerba_mate_fence",
-            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> YERBA_MATE_FENCE_GATE = registerBlock("yerba_mate_fence_gate",
-            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-
-
     public static final RegistryObject<Block> IMBUIA_WOOD = registerBlock("imbuia_wood",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_IMBUIA_WOOD = registerBlock("stripped_imbuia_wood",
@@ -751,6 +731,27 @@ public class WoodGroup {
             ModLogs::new);
     public static final RegistryObject<Block> OITI_PLANKS = registerBlock("oiti_planks",
             ModPlanks::new);
+
+
+    /*
+    public static final RegistryObject<Block> YERBA_MATE_WOOD = registerBlock("yerba_mate_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_YERBA_MATE_WOOD = registerBlock("stripped_yerba_mate_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> YERBA_MATE_PLANKS = registerBlock("yerba_mate_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> YERBA_MATE_SLAB = registerBlock("yerba_mate_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> YERBA_MATE_STAIRS = registerBlock("yerba_mate_stairs",
+            () -> new StairsBlock(() -> YERBA_MATE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> YERBA_MATE_FENCE = registerBlock("yerba_mate_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> YERBA_MATE_FENCE_GATE = registerBlock("yerba_mate_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));*/
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
