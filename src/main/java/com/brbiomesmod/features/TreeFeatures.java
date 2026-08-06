@@ -1444,8 +1444,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     LAUREL_GUAIKA_TREE.withChance(0.34F), LAUREL_GUAIKA_TREE_WITH_PASSIONVINE.withChance(0.034F),
                     NECTANDRA_MEGAPOTAMICA_TREE.withChance(0.25F), NECTANDRA_MEGAPOTAMICA_FANCY_TREE.withChance(0.34F),
                     GRUMIXAMA_TREE.withChance(0.35F), GUABIROBA_TREE.withChance(0.32F), GUABIROBA_TREE_WITH_PASSIONVINE.withChance(0.04F),
-                    JUSSARA_PALM.withChance(0.44F), CECROPIA_TREE.withChance(0.094F), STRAWBERRY_GUAVA_TREE.withChance(0.32F),
-
+                    JUSSARA_PALM.withChance(0.5F), CECROPIA_TREE.withChance(0.094F), STRAWBERRY_GUAVA_TREE.withChance(0.32F),
+                    PINK_JEQUITIBA_TREE.withChance(0.4F),
                     ANGICO_VERMELHO_TREE.withChance(0.3F),
                     CHAL_CHAL_TREE1.withChance(0.23F), CHAL_CHAL_TREE2.withChance(0.3F), GUABIROBA_TREE.withChance(0.23F),
                     QUEEN_PALM.withChance(0.24F), JELLY_PALM.withChance(0.12F), TALL_JELLY_PALM.withChance(0.12F)),
