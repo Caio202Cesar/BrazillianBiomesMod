@@ -1097,7 +1097,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Podocarpus lambertii
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PODOCARPUS_LAMBERTII_TREE = register("podocarpus_lambertii_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PODOCARPUS_LAMBERTII_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PODOCARPUS_LOG),
                     new SimpleBlockStateProvider(States.PODOCARPUS_LAMBERTII_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
@@ -1105,7 +1105,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)),
                             Placements.SPANISH_MOSS_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PODOCARPUS_LAMBERTII_FANCY_TREE = register("podocarpus_lambertii_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PODOCARPUS_LAMBERTII_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.PODOCARPUS_LOG),
                     new SimpleBlockStateProvider(States.PODOCARPUS_LAMBERTII_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
@@ -1114,7 +1114,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)),
                             Placements.SPANISH_MOSS_PLACEMENT)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PODOCARPUS_LAMBERTII_BIG_TREE = register("podocarpus_lambertii_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PODOCARPUS_LAMBERTII_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PODOCARPUS_LOG),
                     new SimpleBlockStateProvider(States.PODOCARPUS_LAMBERTII_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new MegaJungleTrunkPlacer(6, 2, 0),
@@ -1153,7 +1153,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState KAPOK_LOG = TreesGroup.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = TreesGroup.KAPOK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PODOCARPUS_LAMBERTII_LOG = TreesGroup.PODOCARPUS_LAMBERTII_LOG.get().getDefaultState();
+        protected static final BlockState PODOCARPUS_LOG = TreeBlocks.PODOCARPUS_LOG.get().getDefaultState();
         protected static final BlockState PODOCARPUS_LAMBERTII_LEAVES = TreesGroup.PODOCARPUS_LAMBERTII_LEAVES.get().getDefaultState();
 
         protected static final BlockState JUNGLE_FICUS_LOG = TreeBlocks.JUNGLE_FIG_LOG.get().getDefaultState();

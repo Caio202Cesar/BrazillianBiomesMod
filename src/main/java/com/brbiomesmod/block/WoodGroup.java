@@ -659,14 +659,6 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_WOOD = registerBlock("podocarpus_lambertii_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_PODOCARPUS_LAMBERTII_WOOD = registerBlock("stripped_podocarpus_lambertii_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_PLANKS = registerBlock("podocarpus_lambertii_planks",
-            ModPlanks::new);
-
-
     public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_WOOD = registerBlock("brazillian_tigerwood_wood",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_BRAZILLIAN_TIGERWOOD_WOOD = registerBlock("stripped_brazillian_tigerwood_wood",

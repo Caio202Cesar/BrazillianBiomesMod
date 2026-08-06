@@ -1281,10 +1281,6 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_LOG = registerBlock("podocarpus_lambertii_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_PODOCARPUS_LAMBERTII_LOG = registerBlock("stripped_podocarpus_lambertii_log",
-            ModLogs::new);
     public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_LEAVES = registerBlock("podocarpus_lambertii_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> PODOCARPUS_LAMBERTII_SAPLING = registerBlock("podocarpus_lambertii_sapling",
