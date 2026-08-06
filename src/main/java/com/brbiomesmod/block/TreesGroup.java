@@ -267,16 +267,6 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_LEAVES = registerBlock("brazillian_sassafras_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_SAPLING = registerBlock("brazillian_sassafras_sapling",
-            BrazillianSassafrasSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_BRAZILLIAN_SASSAFRAS_SAPLING = BLOCKS.register("potted_brazillian_sassafras_sapling",
-            () -> new FlowerPotBlock(TreesGroup.BRAZILLIAN_SASSAFRAS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
-
-
     public static final RegistryObject<Block> PARANA_PINE_LOG = registerBlock("parana_pine_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_PARANA_PINE_LOG = registerBlock("stripped_parana_pine_log",
@@ -1289,6 +1279,33 @@ public class TreesGroup {
             ModLeaves::new);
     public static final RegistryObject<Block> FICUS_CESTRIFOLIA_SAPLING = registerBlock("ficus_cestrifolia_sapling",
             FicusCestrifoliaSapling::new);
+
+
+    public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_LEAVES = registerBlock("brazillian_sassafras_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_SAPLING = registerBlock("brazillian_sassafras_sapling",
+            BrazillianSassafrasSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_BRAZILLIAN_SASSAFRAS_SAPLING = BLOCKS.register("potted_brazillian_sassafras_sapling",
+            () -> new FlowerPotBlock(TreesGroup.BRAZILLIAN_SASSAFRAS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+
+    public static final RegistryObject<Block> NECTANDRA_MEGAPOTAMICA_LEAVES = registerBlock("nectandra_megapotamica_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> NECTANDRA_MEGAPOTAMICA_SAPLING = registerBlock("nectandra_megapotamica_sapling",
+            FicusCestrifoliaSapling::new);
+
+    public static final RegistryObject<Block> LAUREL_GUAIKA_LEAVES = registerBlock("laurel_guaika_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> LAUREL_GUAIKA_SAPLING = registerBlock("laurel_guaika_sapling",
+            FicusCestrifoliaSapling::new);
+
+    public static final RegistryObject<Block> CANELA_PRETA_LEAVES = registerBlock("canela_preta_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CANELA_PRETA_SAPLING = registerBlock("canela_preta_sapling",
+            FicusCestrifoliaSapling::new);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
