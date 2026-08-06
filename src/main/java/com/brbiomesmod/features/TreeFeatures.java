@@ -1148,7 +1148,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));*/
 
 
+
+
     public static final class States {
+
+        protected static final BlockState LAUREL_LOG = TreeBlocks.LAUREL_LOG.get().getDefaultState();
+        protected static final BlockState BRAZILLIAN_SASSAFRAS_LOG = TreesGroup.BRAZILLIAN_SASSAFRAS_LOG.get().getDefaultState();
+        protected static final BlockState BRAZILLIAN_SASSAFRAS_LEAVES = TreesGroup.BRAZILLIAN_SASSAFRAS_LEAVES.get().getDefaultState();
+
 
         protected static final BlockState KAPOK_LOG = TreesGroup.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = TreesGroup.KAPOK_LEAVES.get().getDefaultState();
@@ -1268,9 +1275,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState JUA_LOG = TreesGroup.JUA_LOG.get().getDefaultState();
         protected static final BlockState JUA_LEAVES = TreesGroup.JUA_LEAVES.get().getDefaultState();
-
-        protected static final BlockState BRAZILLIAN_SASSAFRAS_LOG = TreesGroup.BRAZILLIAN_SASSAFRAS_LOG.get().getDefaultState();
-        protected static final BlockState BRAZILLIAN_SASSAFRAS_LEAVES = TreesGroup.BRAZILLIAN_SASSAFRAS_LEAVES.get().getDefaultState();
 
         protected static final BlockState UMBU_LOG = TreesGroup.UMBU_LOG.get().getDefaultState();
         protected static final BlockState UMBU_LEAVES = TreesGroup.UMBU_LEAVES.get().getDefaultState();

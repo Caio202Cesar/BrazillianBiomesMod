@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "brbiomesmod:block/yerba_mate_log",
-    "side": "brbiomesmod:block/yerba_mate_log"
-  }
-}

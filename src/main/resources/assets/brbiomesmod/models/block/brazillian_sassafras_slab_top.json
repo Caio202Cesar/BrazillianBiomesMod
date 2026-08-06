@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "brbiomesmod:block/brazillian_sassafras_planks",
-    "top": "brbiomesmod:block/brazillian_sassafras_planks",
-    "side": "brbiomesmod:block/brazillian_sassafras_planks"
-  }
-}

@@ -267,10 +267,6 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_LOG = registerBlock("brazillian_sassafras_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_BRAZILLIAN_SASSAFRAS_LOG = registerBlock("stripped_brazillian_sassafras_log",
-            ModLogs::new);
     public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_LEAVES = registerBlock("brazillian_sassafras_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> BRAZILLIAN_SASSAFRAS_SAPLING = registerBlock("brazillian_sassafras_sapling",

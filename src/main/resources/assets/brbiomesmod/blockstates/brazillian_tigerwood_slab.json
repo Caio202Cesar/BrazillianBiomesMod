@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/brazillian_tigerwood_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/brazillian_tigerwood_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/brazillian_tigerwood_slab_top"
+    }
+  }
+}
