@@ -713,8 +713,6 @@ public class WoodGroup {
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_HUMBOLDT_WILLOW_WOOD = registerBlock("stripped_humboldt_willow_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> HUMBOLDT_WILLOW_PLANKS = registerBlock("humboldt_willow_planks",
-            ModPlanks::new);
 
 
     public static final RegistryObject<Block> OITI_WOOD = registerBlock("oiti_wood",
