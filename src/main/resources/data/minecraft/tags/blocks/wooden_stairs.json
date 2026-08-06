@@ -12,7 +12,7 @@
     "brbiomesmod:brazilwood_stairs",
     "brbiomesmod:brazilnut_stairs",
     "brbiomesmod:jua_stairs",
-    "brbiomesmod:brazillian_sassafras_stairs",
+    "brbiomesmod:brazillian_tigerwood_stairs",
     "brbiomesmod:lophantera_stairs",
     "brbiomesmod:imbuia_stairs",
     "brbiomesmod:umbu_stairs",
@@ -30,7 +30,8 @@
     "brbiomesmod:cockspur_coral_stairs",
     "brbiomesmod:sapucaia_stairs",
     "brbiomesmod:monkey_cajarana_stairs",
-    "brbiomesmod:sombreiro_stairs"
+    "brbiomesmod:sombreiro_stairs",
+    "brbiomesmod:yerba_mate_stairs"
 
   ]
 }

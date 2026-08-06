@@ -12,7 +12,7 @@
     "brbiomesmod:brazilwood_fence",
     "brbiomesmod:brazilnut_fence",
     "brbiomesmod:jua_fence",
-    "brbiomesmod:brazillian_sassafras_fence",
+    "brbiomesmod:brazillian_tigerwood_fence",
     "brbiomesmod:lophantera_fence",
     "brbiomesmod:imbuia_fence",
     "brbiomesmod:umbu_fence",
@@ -30,7 +30,8 @@
     "brbiomesmod:cockspur_coral_fence",
     "brbiomesmod:sapucaia_fence",
     "brbiomesmod:monkey_cajarana_fence",
-    "brbiomesmod:sombreiro_fence"
+    "brbiomesmod:sombreiro_fence",
+    "brbiomesmod:yerba_mate_fence"
 
   ]
 }

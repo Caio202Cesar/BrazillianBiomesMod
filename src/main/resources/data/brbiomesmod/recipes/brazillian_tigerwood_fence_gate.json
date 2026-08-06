@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "brbiomesmod:brazillian_sassafras_planks"
+      "item": "brbiomesmod:brazillian_tigerwood_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:brazillian_sassafras_fence_gate"
+    "item": "brbiomesmod:brazillian_tigerwood_fence_gate"
   }
 }
