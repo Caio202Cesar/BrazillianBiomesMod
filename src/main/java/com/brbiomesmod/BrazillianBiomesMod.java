@@ -15,6 +15,7 @@ import com.brbiomesmod.features.TreeDecorators.ModTreeDecorators;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.*;
 import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
+import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -105,7 +106,6 @@ public class BrazillianBiomesMod {
 
             AxeItem.BLOCK_STRIPPING_MAP = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.BLOCK_STRIPPING_MAP)
                     .put(TreesGroup.BRAZILLIAN_ROSEWOOD_LOG.get(), TreesGroup.STRIPPED_BRAZILLIAN_ROSEWOOD_LOG.get())
-                    .put(TreesGroup.BRAZILLIAN_SASSAFRAS_LOG.get(), TreesGroup.STRIPPED_BRAZILLIAN_SASSAFRAS_LOG.get())
                     .put(TreesGroup.BRAZILLIAN_TIGERWOOD_LOG.get(), TreesGroup.STRIPPED_BRAZILLIAN_TIGERWOOD_LOG.get())
                     .put(TreesGroup.CAMBUCI_LOG.get(), TreesGroup.STRIPPED_CAMBUCI_LOG.get())
                     .put(TreesGroup.CASHEW_LOG.get(), TreesGroup.STRIPPED_CASHEW_LOG.get())
@@ -151,10 +151,10 @@ public class BrazillianBiomesMod {
                     .put(TreesGroup.GUAPURUVU_LOG.get(), TreesGroup.STRIPPED_GUAPURUVU_LOG.get())
                     .put(TreesGroup.YELLOW_MOMBIN_LOG.get(), TreesGroup.STRIPPED_YELLOW_MOMBIN_LOG.get())
                     .put(TreesGroup.PEQUI_LOG.get(), TreesGroup.STRIPPED_PEQUI_LOG.get())
-                    .put(TreesGroup.HUMBOLDT_WILLOW_LOG.get(), TreesGroup.STRIPPED_HUMBOLDT_WILLOW_LOG.get())
+                    .put(TreesGroup.HUMBOLDT_WILLOW_LOG.get(), TreeBlocks.STRIPPED_WILLOW_LOG.get())
                     .put(TreesGroup.OITI_LOG.get(), TreesGroup.STRIPPED_OITI_LOG.get())
+
                     .put(WoodGroup.BRAZILLIAN_ROSEWOOD_WOOD.get(), WoodGroup.STRIPPED_BRAZILLIAN_ROSEWOOD_WOOD.get())
-                    .put(WoodGroup.BRAZILLIAN_SASSAFRAS_WOOD.get(), WoodGroup.STRIPPED_BRAZILLIAN_SASSAFRAS_WOOD.get())
                     .put(WoodGroup.CAMBUCI_WOOD.get(), WoodGroup.STRIPPED_CAMBUCI_WOOD.get())
                     .put(WoodGroup.CASHEW_WOOD.get(), WoodGroup.STRIPPED_CASHEW_WOOD.get())
                     .put(WoodGroup.EUGENIA_WOOD.get(), WoodGroup.STRIPPED_EUGENIA_WOOD.get())
@@ -198,7 +198,7 @@ public class BrazillianBiomesMod {
                     .put(WoodGroup.GUAPURUVU_WOOD.get(), WoodGroup.STRIPPED_GUAPURUVU_WOOD.get())
                     .put(WoodGroup.YELLOW_MOMBIN_WOOD.get(), WoodGroup.STRIPPED_YELLOW_MOMBIN_WOOD.get())
                     .put(WoodGroup.PEQUI_WOOD.get(), WoodGroup.STRIPPED_PEQUI_WOOD.get())
-                    .put(WoodGroup.HUMBOLDT_WILLOW_WOOD.get(), WoodGroup.STRIPPED_HUMBOLDT_WILLOW_WOOD.get())
+                    .put(WoodGroup.HUMBOLDT_WILLOW_WOOD.get(), TreeBlocks.STRIPPED_WILLOW_WOOD.get())
                     .put(WoodGroup.OITI_WOOD.get(), WoodGroup.STRIPPED_OITI_WOOD.get())
                     .build();
 
