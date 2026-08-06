@@ -249,6 +249,23 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE, PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GUABIROBA_TREE = register("guabiroba_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CAMBUCI_LOG),
+                    new SimpleBlockStateProvider(States.GUABIROBA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GUABIROBA_TREE_WITH_PASSIONVINE = register("guabiroba_tree_with_passionvine",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CAMBUCI_LOG),
+                    new SimpleBlockStateProvider(States.GUABIROBA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE, PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
+
+
     //Peruvian Pepper Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PERUVIAN_PEPPER_TREE = register("peruvian_pepper_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SCHINUS_LOG),
@@ -1381,7 +1398,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .configure(new AtSurfaceWithExtraConfig(7, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_TREES = register("atlantic_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_ROSEWOOD_WITH_PASSIONVINE.withChance(0.5F),
-                            BRAZILLIAN_SASSAFRAS_TREE_WITH_PASSIONVINE.withChance(0.3F), CECROPIA_WITH_PASSIONVINE.withChance(0.3F),
+                            CECROPIA_WITH_PASSIONVINE.withChance(0.3F),
                             SILVER_CECROPIA_WITH_PASSIONVINE.withChance(0.17F), BRAZILWOOD_TREE_WITH_PASSIONVINE.withChance(0.5F),
                             SAPUCAIA_TREE_WITH_PASSIONVINE.withChance(0.3F), MANACA_WITH_PASSIONVINE.withChance(0.1F)),
                             PINK_PEROBA_TREE_WITH_PASSIONFRUIT)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
@@ -1426,8 +1443,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     CANELA_PRETA_TREE.withChance(0.34F), CANELA_PRETA_TREE_WITH_PASSIONVINE.withChance(0.034F),
                     LAUREL_GUAIKA_TREE.withChance(0.34F), LAUREL_GUAIKA_TREE_WITH_PASSIONVINE.withChance(0.034F),
                     NECTANDRA_MEGAPOTAMICA_TREE.withChance(0.25F), NECTANDRA_MEGAPOTAMICA_FANCY_TREE.withChance(0.34F),
-                    GRUMIXAMA_TREE.withChance(0.35F),
-                    JUSSARA_PALM.withChance(0.24F), ANGICO_VERMELHO_TREE.withChance(0.3F),
+                    GRUMIXAMA_TREE.withChance(0.35F), GUABIROBA_TREE.withChance(0.32F), GUABIROBA_TREE_WITH_PASSIONVINE.withChance(0.04F),
+                    JUSSARA_PALM.withChance(0.44F), CECROPIA_TREE.withChance(0.094F), STRAWBERRY_GUAVA_TREE.withChance(0.32F),
+
+                    ANGICO_VERMELHO_TREE.withChance(0.3F),
                     CHAL_CHAL_TREE1.withChance(0.23F), CHAL_CHAL_TREE2.withChance(0.3F), GUABIROBA_TREE.withChance(0.23F),
                     QUEEN_PALM.withChance(0.24F), JELLY_PALM.withChance(0.12F), TALL_JELLY_PALM.withChance(0.12F)),
                     PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
