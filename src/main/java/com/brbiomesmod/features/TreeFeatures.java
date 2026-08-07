@@ -249,22 +249,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE, PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
 
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GUABIROBA_TREE = register("guabiroba_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MYRTACEAE_LOG),
-                    new SimpleBlockStateProvider(States.GUABIROBA_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0),
-                    new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GUABIROBA_TREE_WITH_PASSIONVINE = register("guabiroba_tree_with_passionvine",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MYRTACEAE_LOG),
-                    new SimpleBlockStateProvider(States.GUABIROBA_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0),
-                    new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE, PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
-
 
     //Peruvian Pepper Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PERUVIAN_PEPPER_TREE = register("peruvian_pepper_tree",
@@ -1195,6 +1179,29 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));*/
 
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GRUMIXAMA_TREE = register("grumixama_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
+                    new SimpleBlockStateProvider(States.GRUMIXAMA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GUABIROBA_TREE = register("guabiroba_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MYRTACEAE_LOG),
+                    new SimpleBlockStateProvider(States.GUABIROBA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GUABIROBA_TREE_WITH_PASSIONVINE = register("guabiroba_tree_with_passionvine",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MYRTACEAE_LOG),
+                    new SimpleBlockStateProvider(States.GUABIROBA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE,
+                            PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
 
 
 
@@ -1206,6 +1213,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState PITANGA_LEAVES = TreesGroup.PITANGA_LEAVES.get().getDefaultState();
         protected static final BlockState BLACK_PITANGA_LEAVES = TreesGroup.BLACK_PITANGA_LEAVES.get().getDefaultState();
         protected static final BlockState RIO_GRANDE_CHERRY_LEAVES = TreesGroup.RIO_GRANDE_CHERRY_LEAVES.get().getDefaultState();
+        protected static final BlockState GRUMIXAMA_LEAVES = TreesGroup.GRUMIXAMA_LEAVES.get().getDefaultState();
 
         protected static final BlockState LAUREL_LOG = TreeBlocks.LAUREL_LOG.get().getDefaultState();
         protected static final BlockState BRAZILLIAN_SASSAFRAS_LEAVES = TreesGroup.BRAZILLIAN_SASSAFRAS_LEAVES.get().getDefaultState();
@@ -1441,12 +1449,16 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     CANELA_PRETA_TREE.withChance(0.34F), CANELA_PRETA_TREE_WITH_PASSIONVINE.withChance(0.034F),
                     LAUREL_GUAIKA_TREE.withChance(0.34F), LAUREL_GUAIKA_TREE_WITH_PASSIONVINE.withChance(0.034F),
                     NECTANDRA_MEGAPOTAMICA_TREE.withChance(0.25F), NECTANDRA_MEGAPOTAMICA_FANCY_TREE.withChance(0.34F),
-                    GRUMIXAMA_TREE.withChance(0.35F), GUABIROBA_TREE.withChance(0.32F), GUABIROBA_TREE_WITH_PASSIONVINE.withChance(0.04F),
-                    JUSSARA_PALM.withChance(0.5F), CECROPIA_TREE.withChance(0.094F), STRAWBERRY_GUAVA_TREE.withChance(0.32F),
-                    PINK_JEQUITIBA_TREE.withChance(0.4F),
+                    GRUMIXAMA_TREE.withChance(0.35F), GUABIROBA_TREE.withChance(0.32F),
+                    GUABIROBA_TREE_WITH_PASSIONVINE.withChance(0.04F), QUEEN_PALM.withChance(0.4F),
+                    JUSSARA_PALM.withChance(0.5F), CECROPIA_TREE.withChance(0.194F), STRAWBERRY_GUAVA_TREE.withChance(0.32F),
+                    PINK_JEQUITIBA_TREE.withChance(0.4F), JABUTICABA_BIG_TREE.withChance(0.3F), JABUTICABA_TREE.withChance(0.34F),
+                    JABUTICABA_FANCY_TREE.withChance(0.35F), PITANGA_TREE.withChance(0.32F),
+                    BLACK_PITANGA_TREE.withChance(0.00234F),
+
                     ANGICO_VERMELHO_TREE.withChance(0.3F),
                     CHAL_CHAL_TREE1.withChance(0.23F), CHAL_CHAL_TREE2.withChance(0.3F), GUABIROBA_TREE.withChance(0.23F),
-                    QUEEN_PALM.withChance(0.24F), JELLY_PALM.withChance(0.12F), TALL_JELLY_PALM.withChance(0.12F)),
+                     JELLY_PALM.withChance(0.12F), TALL_JELLY_PALM.withChance(0.12F)),
                     PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 3))));
 

@@ -1220,17 +1220,45 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.RIO_GRANDE_CHERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+
     public static final RegistryObject<Block> GRUMIXAMA_LEAVES = registerBlock("grumixama_leaves",
-            () -> new BrazillianTigerwoodLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new GrumixamaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.GRUMIXAMA_FLOWERING_LEAVES));
     public static final RegistryObject<Block> GRUMIXAMA_FLOWERING_LEAVES = registerBlock("grumixama_flowering_leaves",
-            () -> new BrazillianTigerwoodFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new GrumixamaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.GRUMIXAMA_FRUITING_LEAVES));
     public static final RegistryObject<Block> GRUMIXAMA_FRUITING_LEAVES = registerBlock("grumixama_fruiting_leaves",
-            () -> new BrazillianTigerwoodBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new GrumixamaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.GRUMIXAMA_LEAVES));
     public static final RegistryObject<Block> GRUMIXAMA_SAPLING = registerBlock("grumixama_sapling",
-            BrazillianTigerwoodSapling::new);
+            GrumixamaSapling::new);
+
+
+    public static final RegistryObject<Block> GUABIROBA_LEAVES = registerBlock("guabiroba_leaves",
+            () -> new GuabirobaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.GUABIROBA_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> GUABIROBA_FLOWERING_LEAVES = registerBlock("guabiroba_flowering_leaves",
+            () -> new GuabirobaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.GUABIROBA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> GUABIROBA_FRUITING_LEAVES = registerBlock("guabiroba_fruiting_leaves",
+            () -> new GuabirobaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.GUABIROBA_LEAVES));
+    public static final RegistryObject<Block> GUABIROBA_SAPLING = registerBlock("guabiroba_sapling",
+            GuabirobaSapling::new);
+
+
+    public static final RegistryObject<Block> STRAWBERRY_GUAVA_LEAVES = registerBlock("strawberry_guava_leaves",
+            () -> new StrawberryGuavaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.STRAWBERRY_GUAVA_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> STRAWBERRY_GUAVA_FLOWERING_LEAVES = registerBlock("strawberry_guava_flowering_leaves",
+            () -> new StrawberryGuavaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.STRAWBERRY_GUAVA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> STRAWBERRY_GUAVA_FRUITING_LEAVES = registerBlock("strawberry_guava_fruiting_leaves",
+            () -> new StrawberryGuavaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.STRAWBERRY_GUAVA_LEAVES));
+    public static final RegistryObject<Block> STRAWBERRY_GUAVA_SAPLING = registerBlock("strawberry_guava_sapling",
+            StrawberryGuavaSapling::new);
+
 
     public static final RegistryObject<Block> CAGAITA_LOG = registerBlock("cagaita_log",
             ModLogs::new);
