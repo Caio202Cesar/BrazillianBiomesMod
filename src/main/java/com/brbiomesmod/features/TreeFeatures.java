@@ -577,7 +577,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Araucaria Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PARANA_PINE_TREE = register("parana_pine_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PARANA_PINE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
                     new SimpleBlockStateProvider(States.PARANA_PINE_LEAVES),
                     new ParanaPineFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new GiantTrunkPlacer(13, 2, 14),
@@ -585,21 +585,21 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)),
                             Placements.SPANISH_MOSS_PLACEMENT045)).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PARANA_PINE_TREE2 = register("parana_pine_tree2",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PARANA_PINE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
                     new SimpleBlockStateProvider(States.PARANA_PINE_LEAVES),
                     new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(13, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PARANA_PINE_TREE_YOUNG = register("young_parana_pine_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PARANA_PINE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
                     new SimpleBlockStateProvider(States.PARANA_PINE_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new StraightTrunkPlacer(6, 2, 14),
                     new TwoLayerFeature(1, 1, 2)))
                     .setDecorators(ImmutableList.of(new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PARANA_PINE_TREE_VINE = register("parana_pine_tree_vine",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PARANA_PINE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
                     new SimpleBlockStateProvider(States.PARANA_PINE_LEAVES),
                     new ParanaPineFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new GiantTrunkPlacer(13, 2, 14),
@@ -607,7 +607,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE, PurplePassionFruitVineTrunkDecorator.INSTANCE,
                             new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PARANA_PINE_TREE_VINE2 = register("parana_pine_tree_vine2",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PARANA_PINE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
                     new SimpleBlockStateProvider(States.PARANA_PINE_LEAVES),
                     new DarkOakFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(13, 2, 14),
@@ -615,7 +615,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE, PurplePassionFruitVineTrunkDecorator.INSTANCE,
                             new AlterGroundTreeDecorator(new SimpleBlockStateProvider(States.PODZOL)))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PARANA_PINE_TREE_YOUNG_VINE = register("young_parana_pine_tree_vine",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PARANA_PINE_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ARAUCARIA_LOG),
                     new SimpleBlockStateProvider(States.PARANA_PINE_LEAVES),
                     new MegaPineFoliagePlacer(FeatureSpread.create(0), FeatureSpread.create(0), FeatureSpread.create(13, 4)),
                     new StraightTrunkPlacer(6, 2, 14),
@@ -1340,7 +1340,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState SHARINGA_LOG = TreesGroup.SHARINGA_LOG.get().getDefaultState();
         protected static final BlockState SHARINGA_LEAVES = TreesGroup.SHARINGA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PARANA_PINE_LOG = TreesGroup.PARANA_PINE_LOG.get().getDefaultState();
+        protected static final BlockState ARAUCARIA_LOG = TreeBlocks.ARAUCARIA_LOG.get().getDefaultState();
         protected static final BlockState PARANA_PINE_LEAVES = TreesGroup.PARANA_PINE_LEAVES.get().getDefaultState();
 
         protected static final BlockState IMBUIA_LOG = TreesGroup.IMBUIA_LOG.get().getDefaultState();

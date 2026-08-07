@@ -277,12 +277,7 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-    public static final RegistryObject<Block> PARANA_PINE_WOOD = registerBlock("parana_pine_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_PARANA_PINE_WOOD = registerBlock("stripped_parana_pine_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> PARANA_PINE_PLANKS = registerBlock("parana_pine_planks",
-            ModPlanks::new);
+    /*
     public static final RegistryObject<Block> PARANA_PINE_SLAB = registerBlock("parana_pine_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -294,7 +289,7 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> PARANA_PINE_FENCE_GATE = registerBlock("parana_pine_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
+                    .hardnessAndResistance(3f)));*/
 
 
     public static final RegistryObject<Block> PINK_PEROBA_WOOD = registerBlock("pink_peroba_wood",
