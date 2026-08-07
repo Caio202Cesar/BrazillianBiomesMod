@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/fence_post",
   "textures": {
-    "texture": "brbiomesmod:block/eugenia_planks"
+    "texture": "brbiomesmod:block/oiti_planks"
   }
 }
