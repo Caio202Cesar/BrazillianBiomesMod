@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "brbiomesmod:camu_camu_planks"
+      "item": "brbiomesmod:guapuruvu_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:camu_camu_fence_gate"
+    "item": "brbiomesmod:guapuruvu_fence_gate"
   }
 }
