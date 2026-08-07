@@ -85,16 +85,16 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.RIO_GRANDE_CHERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_LEAVES = registerBlock("brazillian_tigerwood_leaves",
+    public static final RegistryObject<Block> GRUMIXAMA_LEAVES = registerBlock("grumixama_leaves",
             () -> new BrazillianTigerwoodLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_TIGERWOOD_FALL_LEAVES));
-    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_FALL_LEAVES = registerBlock("brazillian_tigerwood_fall_leaves",
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.GRUMIXAMA_FLOWERING_LEAVES));
+    public static final RegistryObject<Block> GRUMIXAMA_FLOWERING_LEAVES = registerBlock("grumixama_flowering_leaves",
             () -> new BrazillianTigerwoodFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_TIGERWOOD_BRANCHES));
-    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_BRANCHES = registerBlock("brazillian_tigerwood_dried_branches",
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.GRUMIXAMA_FRUITING_LEAVES));
+    public static final RegistryObject<Block> GRUMIXAMA_FRUITING_LEAVES = registerBlock("grumixama_fruiting_leaves",
             () -> new BrazillianTigerwoodBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_TIGERWOOD_LEAVES));
-    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_SAPLING = registerBlock("brazillian_tigerwood_sapling",
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.GRUMIXAMA_LEAVES));
+    public static final RegistryObject<Block> GRUMIXAMA_SAPLING = registerBlock("grumixama_sapling",
             BrazillianTigerwoodSapling::new);
 
     public static final RegistryObject<Block> CAGAITA_LOG = registerBlock("cagaita_log",
@@ -560,8 +560,6 @@ public class TreesGroup {
             JabuticabaFloweringLog::new);
     public static final RegistryObject<Block> JABUTICABA_FRUITING_LOG = registerBlock("jabuticaba_fruiting_log",
             JabuticabaFruitingLog::new);
-    public static final RegistryObject<Block> STRIPPED_JABUTICABA_LOG = registerBlock("stripped_jabuticaba_log",
-            ModLogs::new);
 
     public static final RegistryObject<Block> JABUTICABA_LEAVES = registerBlock("jabuticaba_leaves",
             ModLeaves::new);
