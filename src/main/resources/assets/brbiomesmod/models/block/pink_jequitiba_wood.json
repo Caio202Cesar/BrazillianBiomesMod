@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "brbiomesmod:block/pink_jequitiba_log",
+    "side": "brbiomesmod:block/pink_jequitiba_log"
+  }
+}
