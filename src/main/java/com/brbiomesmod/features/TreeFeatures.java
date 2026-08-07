@@ -1451,14 +1451,15 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     NECTANDRA_MEGAPOTAMICA_TREE.withChance(0.25F), NECTANDRA_MEGAPOTAMICA_FANCY_TREE.withChance(0.34F),
                     GRUMIXAMA_TREE.withChance(0.35F), GUABIROBA_TREE.withChance(0.32F),
                     GUABIROBA_TREE_WITH_PASSIONVINE.withChance(0.04F), QUEEN_PALM.withChance(0.4F),
-                    JUSSARA_PALM.withChance(0.5F), CECROPIA_TREE.withChance(0.194F), STRAWBERRY_GUAVA_TREE.withChance(0.32F),
+                    JUSSARA_PALM.withChance(0.5F), CECROPIA_TREE.withChance(0.094F), STRAWBERRY_GUAVA_TREE.withChance(0.32F),
                     PINK_JEQUITIBA_TREE.withChance(0.4F), JABUTICABA_BIG_TREE.withChance(0.3F), JABUTICABA_TREE.withChance(0.34F),
                     JABUTICABA_FANCY_TREE.withChance(0.35F), PITANGA_TREE.withChance(0.32F),
-                    BLACK_PITANGA_TREE.withChance(0.00234F),
+                    BLACK_PITANGA_TREE.withChance(0.00234F), SILVER_CECROPIA_TREE.withChance(0.083F),
+                    BRAZILLIAN_PEPPER_TREE.withChance(0.123F), BRAZILLIAN_PEPPER_BIG_TREE.withChance(0.2F),
+                    YELLOW_IPE_TREE.withChance(0.3F),
 
                     ANGICO_VERMELHO_TREE.withChance(0.3F),
-                    CHAL_CHAL_TREE1.withChance(0.23F), CHAL_CHAL_TREE2.withChance(0.3F), GUABIROBA_TREE.withChance(0.23F),
-                     JELLY_PALM.withChance(0.12F), TALL_JELLY_PALM.withChance(0.12F)),
+                    CHAL_CHAL_TREE1.withChance(0.23F), CHAL_CHAL_TREE2.withChance(0.3F)),
                     PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 3))));
 
