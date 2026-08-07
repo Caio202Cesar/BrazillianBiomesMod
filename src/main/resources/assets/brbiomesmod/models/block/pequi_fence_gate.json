@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_fence_gate",
   "textures": {
-    "texture": "brbiomesmod:block/feijoa_planks"
+    "texture": "brbiomesmod:block/pequi_planks"
   }
 }
