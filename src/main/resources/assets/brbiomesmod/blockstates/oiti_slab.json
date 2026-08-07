@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/oiti_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/oiti_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/oiti_slab_top"
+    }
+  }
+}
