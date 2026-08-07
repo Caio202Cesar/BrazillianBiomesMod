@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:cambuci_planks"
+      "item": "brbiomesmod:purpleheart_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:cambuci_stairs",
+    "item": "brbiomesmod:purpleheart_stairs",
     "count": 4
   }
 }

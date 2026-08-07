@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:eugenia_planks"
+      "item": "brbiomesmod:pequi_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:eugenia_stairs",
+    "item": "brbiomesmod:pequi_stairs",
     "count": 4
   }
 }

@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "brbiomesmod:cambuci_wood"
+      "item": "brbiomesmod:jabuticaba_log"
     }
   ],
   "result": {
-    "item": "brbiomesmod:cambuci_planks",
+    "item": "caiocesarbiomes:myrtaceae_planks",
     "count": 4
   }
 }

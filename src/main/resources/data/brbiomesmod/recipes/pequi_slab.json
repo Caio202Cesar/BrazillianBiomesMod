@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:cambuci_planks"
+      "item": "brbiomesmod:pequi_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:cambuci_slab",
+    "item": "brbiomesmod:pequi_slab",
     "count": 6
   }
 }

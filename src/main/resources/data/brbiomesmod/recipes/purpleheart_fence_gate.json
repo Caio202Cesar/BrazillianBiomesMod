@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "brbiomesmod:eugenia_planks"
+      "item": "brbiomesmod:purpleheart_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:eugenia_fence_gate"
+    "item": "brbiomesmod:purpleheart_fence_gate"
   }
 }

@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "brbiomesmod:cagaita_log"
+      "item": "brbiomesmod:camu_camu__wood"
     }
   ],
   "result": {
-    "item": "brbiomesmod:eugenia_planks",
+    "item": "caiocesarbiomes:myrtaceae_planks",
     "count": 4
   }
 }

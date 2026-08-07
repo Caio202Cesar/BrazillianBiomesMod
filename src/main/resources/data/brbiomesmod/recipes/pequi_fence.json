@@ -10,11 +10,11 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "brbiomesmod:feijoa_planks"
+      "item": "brbiomesmod:pequi_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:feijoa_fence",
+    "item": "brbiomesmod:pequi_fence",
     "count": 3
   }
 }

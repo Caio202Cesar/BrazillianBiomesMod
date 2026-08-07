@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "brbiomesmod:stripped_feijoa_log"
+      "item": "brbiomesmod:cagaita_log"
     }
   ],
   "result": {
-    "item": "brbiomesmod:feijoa_planks",
+    "item": "caiocesarbiomes:myrtaceae_planks",
     "count": 4
   }
 }
