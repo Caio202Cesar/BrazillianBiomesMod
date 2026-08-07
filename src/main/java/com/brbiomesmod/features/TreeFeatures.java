@@ -792,15 +792,17 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new SimpleBlockStateProvider(States.JABUTICABA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).build()));
+                    new TwoLayerFeature(1, 0, 1)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_0002_PLACEMENT)).build()));
 
     //Algarrobillo Tree (Pampas)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ALGARROBILLO_TREE = register("algarrobillo_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ALGARROBILLO_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MESQUITE_LOG),
                     new SimpleBlockStateProvider(States.ALGARROBILLO_LEAVES),
                     new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new ForkyTrunkPlacer(5, 2, 2),
-                    new TwoLayerFeature(1, 0, 2))).setIgnoreVines().build()));
+                    new TwoLayerFeature(1, 0, 2)))
+                    .setDecorators(ImmutableList.of(Placements.SPANISH_MOSS_PLACEMENT)).setIgnoreVines().build()));
 
     //Caven Thorn Tree (Pampas)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAVEN_THORN_TREE = register("caven_thorn_tree",
@@ -1362,7 +1364,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState JABUTICABA_LOG = TreesGroup.JABUTICABA_LOG.get().getDefaultState();
         protected static final BlockState JABUTICABA_LEAVES = TreesGroup.JABUTICABA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState ALGARROBILLO_LOG = TreesGroup.ALGARROBILLO_LOG.get().getDefaultState();
+        protected static final BlockState MESQUITE_LOG = TreeBlocks.MESQUITE_LOG.get().getDefaultState();
         protected static final BlockState ALGARROBILLO_LEAVES = TreesGroup.ALGARROBILLO_LEAVES.get().getDefaultState();
 
         protected static final BlockState CAVEN_THORN_LOG = TreesGroup.CAVEN_THORN_LOG.get().getDefaultState();

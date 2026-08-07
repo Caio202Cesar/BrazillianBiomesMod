@@ -267,6 +267,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+
     public static final RegistryObject<Block> PARANA_PINE_LEAVES = registerBlock("parana_pine_leaves",
             () -> new ParanaPineLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PARANA_PINE_FRUITING_LEAVES));
@@ -534,11 +535,6 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.BLACK_JUREMA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
 
-
-    public static final RegistryObject<Block> ALGARROBILLO_LOG = registerBlock("algarrobillo_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_ALGARROBILLO_LOG = registerBlock("stripped_algarrobillo_log",
-            ModLogs::new);
 
     public static final RegistryObject<Block> ALGARROBILLO_LEAVES = registerBlock("algarrobillo_leaves",
             () -> new AlgarrobilloLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()

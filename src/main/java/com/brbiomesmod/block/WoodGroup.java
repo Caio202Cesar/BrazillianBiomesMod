@@ -197,12 +197,7 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-    public static final RegistryObject<Block> ALGARROBILLO_WOOD = registerBlock("algarrobillo_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_ALGARROBILLO_WOOD = registerBlock("stripped_algarrobillo_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> ALGARROBILLO_PLANKS = registerBlock("algarrobillo_planks",
-            ModPlanks::new);
+    /*
     public static final RegistryObject<Block> ALGARROBILLO_SLAB = registerBlock("algarrobillo_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
@@ -214,7 +209,7 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> ALGARROBILLO_FENCE_GATE = registerBlock("algarrobillo_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
+                    .hardnessAndResistance(3f)));*/
 
 
     public static final RegistryObject<Block> SCHINUS_WOOD = registerBlock("schinus_wood",
