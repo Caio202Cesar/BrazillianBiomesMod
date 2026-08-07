@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/pequi_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/pequi_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/pequi_slab_top"
+    }
+  }
+}

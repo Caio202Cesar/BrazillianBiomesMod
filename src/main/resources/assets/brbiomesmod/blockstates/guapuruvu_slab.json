@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/guapuruvu_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/guapuruvu_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/guapuruvu_slab_top"
+    }
+  }
+}
