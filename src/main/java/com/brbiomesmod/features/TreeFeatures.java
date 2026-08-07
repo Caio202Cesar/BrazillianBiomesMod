@@ -225,7 +225,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Feijoa Shrub
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FEIJOA_SHRUB = register("feijoa_shrub",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FEIJOA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.FEIJOA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
                     new StraightTrunkPlacer(2, 1, 0),
@@ -234,14 +234,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Cambuci Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAMBUCI_TREE = register("cambuci_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CAMBUCI_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.CAMBUCI_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAMBUCI_TREE_WITH_PASSIONVINE = register("cambuci_tree_with_passionvine",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CAMBUCI_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.CAMBUCI_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
@@ -250,14 +250,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE, PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GUABIROBA_TREE = register("guabiroba_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CAMBUCI_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.GUABIROBA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GUABIROBA_TREE_WITH_PASSIONVINE = register("guabiroba_tree_with_passionvine",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.CAMBUCI_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.GUABIROBA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
@@ -543,25 +543,25 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Pitanga Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PITANGA_TREE = register("pitanga_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUGENIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.PITANGA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_PITANGA_TREE = register("black_pitanga_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUGENIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.BLACK_PITANGA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PITANGA_BUSH = register("pitanga_bush",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUGENIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.PITANGA_LEAVES),
                     new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
                     new StraightTrunkPlacer(1, 0, 0),
                     new TwoLayerFeature(0, 0, 0))).setHeightmap(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_PITANGA_BUSH = register("black_pitanga_bush",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUGENIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.BLACK_PITANGA_LEAVES),
                     new BushFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
                     new StraightTrunkPlacer(1, 0, 0),
@@ -977,7 +977,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Rio Grande Cherry
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RIO_GRANDE_CHERRY_FANCY_TREE = register("rio_grande_cherry_fancy_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUGENIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.RIO_GRANDE_CHERRY_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
@@ -985,7 +985,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             OptionalInt.of(4)))).setDecorators(ImmutableList.of(Placements.SPANISH_MOSS_PLACEMENT045))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> RIO_GRANDE_CHERRY_TREE = register("rio_grande_cherry_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.EUGENIA_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.RIO_GRANDE_CHERRY_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(5, 2, 0),
@@ -1198,6 +1198,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     public static final class States {
 
+        protected static final BlockState MYRTACEAE_LOG = TreeBlocks.MYRTACEAE_LOG.get().getDefaultState();
+        protected static final BlockState FEIJOA_LEAVES = TreesGroup.FEIJOA_LEAVES.get().getDefaultState();
+        protected static final BlockState CAMBUCI_LEAVES = TreesGroup.CAMBUCI_LEAVES.get().getDefaultState();
+        protected static final BlockState PITANGA_LEAVES = TreesGroup.PITANGA_LEAVES.get().getDefaultState();
+        protected static final BlockState BLACK_PITANGA_LEAVES = TreesGroup.BLACK_PITANGA_LEAVES.get().getDefaultState();
+        protected static final BlockState RIO_GRANDE_CHERRY_LEAVES = TreesGroup.RIO_GRANDE_CHERRY_LEAVES.get().getDefaultState();
+
         protected static final BlockState LAUREL_LOG = TreeBlocks.LAUREL_LOG.get().getDefaultState();
         protected static final BlockState BRAZILLIAN_SASSAFRAS_LEAVES = TreesGroup.BRAZILLIAN_SASSAFRAS_LEAVES.get().getDefaultState();
         protected static final BlockState CANELA_PRETA_LEAVES = TreesGroup.CANELA_PRETA_LEAVES.get().getDefaultState();
@@ -1271,9 +1278,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState ILEX_LOG = TreeBlocks.HOLLY_LOG.get().getDefaultState();
         protected static final BlockState YERBA_MATE_LEAVES = TreesGroup.YERBA_MATE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState FEIJOA_LOG = TreesGroup.FEIJOA_LOG.get().getDefaultState();
-        protected static final BlockState FEIJOA_LEAVES = TreesGroup.FEIJOA_LEAVES.get().getDefaultState();
-
         protected static final BlockState BLACK_JUREMA_LOG = TreesGroup.BLACK_JUREMA_LOG.get().getDefaultState();
         protected static final BlockState BLACK_JUREMA_LEAVES = TreesGroup.BLACK_JUREMA_LEAVES.get().getDefaultState();
 
@@ -1294,9 +1298,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState WHITE_IPE_LEAVES = TreesGroup.WHITE_IPE_LEAVES.get().getDefaultState();
         protected static final BlockState APRICOT_IPE_LEAVES = TreesGroup.APRICOT_IPE_LEAVES.get().getDefaultState();
         protected static final BlockState YELLOW_IPE_BLOSSOM = TreesGroup.YELLOW_IPE_BLOSSOM.get().getDefaultState();
-
-        protected static final BlockState CAMBUCI_LOG = TreesGroup.CAMBUCI_LOG.get().getDefaultState();
-        protected static final BlockState CAMBUCI_LEAVES = TreesGroup.CAMBUCI_LEAVES.get().getDefaultState();
 
         protected static final BlockState SCHINUS_LOG = TreesGroup.SCHINUS_LOG.get().getDefaultState();
         protected static final BlockState BRAZILLIAN_PEPPER_LEAVES = TreesGroup.BRAZILLIAN_PEPPER_LEAVES.get().getDefaultState();
@@ -1332,13 +1333,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState MANACA_DA_SERRA_LOG = TreesGroup.MANACA_DA_SERRA_LOG.get().getDefaultState();
         protected static final BlockState MANACA_DA_SERRA_LEAVES = TreesGroup.MANACA_DA_SERRA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState EUGENIA_LOG = TreesGroup.EUGENIA_LOG.get().getDefaultState();
-        protected static final BlockState PITANGA_LEAVES = TreesGroup.PITANGA_LEAVES.get().getDefaultState();
-        protected static final BlockState BLACK_PITANGA_LEAVES = TreesGroup.BLACK_PITANGA_LEAVES.get().getDefaultState();
-        protected static final BlockState CAGAITA_BLOSSOM = TreesGroup.CAGAITA_FLOWERING_LEAVES.get().getDefaultState();
-        protected static final BlockState RIO_GRANDE_CHERRY_LEAVES = TreesGroup.RIO_GRANDE_CHERRY_LEAVES.get().getDefaultState();
-
         protected static final BlockState CAGAITA_LOG = TreesGroup.CAGAITA_LOG.get().getDefaultState();
+        protected static final BlockState CAGAITA_BLOSSOM = TreesGroup.CAGAITA_FLOWERING_LEAVES.get().getDefaultState();
         protected static final BlockState CAGAITA_LEAVES = TreesGroup.CAGAITA_LEAVES.get().getDefaultState();
 
         protected static final BlockState SHARINGA_LOG = TreesGroup.SHARINGA_LOG.get().getDefaultState();
