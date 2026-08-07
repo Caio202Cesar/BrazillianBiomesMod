@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "brbiomesmod:block/cambuci_planks",
-    "top": "brbiomesmod:block/cambuci_planks",
-    "side": "brbiomesmod:block/cambuci_planks"
-  }
-}
