@@ -391,6 +391,17 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.RIO_GRANDE_CHERRY_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_LEAVES = registerBlock("brazillian_tigerwood_leaves",
+            () -> new BrazillianTigerwoodLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_TIGERWOOD_FALL_LEAVES));
+    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_FALL_LEAVES = registerBlock("brazillian_tigerwood_fall_leaves",
+            () -> new BrazillianTigerwoodFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_TIGERWOOD_BRANCHES));
+    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_BRANCHES = registerBlock("brazillian_tigerwood_dried_branches",
+            () -> new BrazillianTigerwoodBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_TIGERWOOD_LEAVES));
+    public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_SAPLING = registerBlock("brazillian_tigerwood_sapling",
+            BrazillianTigerwoodSapling::new);
 
     public static final RegistryObject<Block> CAGAITA_LOG = registerBlock("cagaita_log",
             ModLogs::new);
