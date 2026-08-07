@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "brbiomesmod:block/stripped_brazillian_tigerwood_log",
-    "side": "brbiomesmod:block/stripped_brazillian_tigerwood_log"
-  }
-}

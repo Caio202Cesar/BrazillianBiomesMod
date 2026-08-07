@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "brbiomesmod:block/camu_camu_planks",
-    "top": "brbiomesmod:block/camu_camu_planks",
-    "side": "brbiomesmod:block/camu_camu_planks"
-  }
-}

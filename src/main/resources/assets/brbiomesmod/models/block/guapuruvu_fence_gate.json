@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_fence_gate",
   "textures": {
-    "texture": "brbiomesmod:block/camu_camu_planks"
+    "texture": "brbiomesmod:block/guapuruvu_planks"
   }
 }
