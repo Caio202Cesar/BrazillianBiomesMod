@@ -600,16 +600,16 @@ public class WoodGroup {
             ModLogs::new);
     public static final RegistryObject<Block> PURPLEHEART_PLANKS = registerBlock("purpleheart_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> EUGENIA_SLAB = registerBlock("eugenia_slab",
+    public static final RegistryObject<Block> PURPLEHEART_SLAB = registerBlock("purpleheart_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> EUGENIA_STAIRS = registerBlock("eugenia_stairs",
-            () -> new StairsBlock(() -> EUGENIA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+    public static final RegistryObject<Block> PURPLEHEART_STAIRS = registerBlock("purpleheart_stairs",
+            () -> new StairsBlock(() -> PURPLEHEART_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> EUGENIA_FENCE = registerBlock("eugenia_fence",
+    public static final RegistryObject<Block> PURPLEHEART_FENCE = registerBlock("purpleheart_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> EUGENIA_FENCE_GATE = registerBlock("eugenia_fence_gate",
+    public static final RegistryObject<Block> PURPLEHEART_FENCE_GATE = registerBlock("purpleheart_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
@@ -620,16 +620,16 @@ public class WoodGroup {
             ModLogs::new);
     public static final RegistryObject<Block> GUAPURUVU_PLANKS = registerBlock("guapuruvu_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> JABUTICABA_SLAB = registerBlock("jabuticaba_slab",
+    public static final RegistryObject<Block> GUAPURUVU_SLAB = registerBlock("guapuruvu_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> JABUTICABA_STAIRS = registerBlock("jabuticaba_stairs",
-            () -> new StairsBlock(() -> JABUTICABA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+    public static final RegistryObject<Block> GUAPURUVU_STAIRS = registerBlock("guapuruvu_stairs",
+            () -> new StairsBlock(() -> GUAPURUVU_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> JABUTICABA_FENCE = registerBlock("jabuticaba_fence",
+    public static final RegistryObject<Block> GUAPURUVU_FENCE = registerBlock("guapuruvu_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> JABUTICABA_FENCE_GATE = registerBlock("jabuticaba_fence_gate",
+    public static final RegistryObject<Block> GUAPURUVU_FENCE_GATE = registerBlock("guapuruvu_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
@@ -648,16 +648,16 @@ public class WoodGroup {
             ModLogs::new);
     public static final RegistryObject<Block> PEQUI_PLANKS = registerBlock("pequi_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> CAMBUCI_SLAB = registerBlock("cambuci_slab",
+    public static final RegistryObject<Block> PEQUI_SLAB = registerBlock("pequi_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> CAMBUCI_STAIRS = registerBlock("cambuci_stairs",
-            () -> new StairsBlock(() -> CAMBUCI_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+    public static final RegistryObject<Block> PEQUI_STAIRS = registerBlock("pequi_stairs",
+            () -> new StairsBlock(() -> PEQUI_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> CAMBUCI_FENCE = registerBlock("cambuci_fence",
+    public static final RegistryObject<Block> PEQUI_FENCE = registerBlock("pequi_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> CAMBUCI_FENCE_GATE = registerBlock("cambuci_fence_gate",
+    public static final RegistryObject<Block> PEQUI_FENCE_GATE = registerBlock("pequi_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
@@ -672,16 +672,16 @@ public class WoodGroup {
             ModLogs::new);
     public static final RegistryObject<Block> OITI_PLANKS = registerBlock("oiti_planks",
             ModPlanks::new);
-    public static final RegistryObject<Block> FEIJOA_SLAB = registerBlock("feijoa_slab",
+    public static final RegistryObject<Block> OITI_SLAB = registerBlock("oiti_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> FEIJOA_STAIRS = registerBlock("feijoa_stairs",
-            () -> new StairsBlock(() -> FEIJOA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+    public static final RegistryObject<Block> OITI_STAIRS = registerBlock("oiti_stairs",
+            () -> new StairsBlock(() -> OITI_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> FEIJOA_FENCE = registerBlock("feijoa_fence",
+    public static final RegistryObject<Block> OITI_FENCE = registerBlock("oiti_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> FEIJOA_FENCE_GATE = registerBlock("feijoa_fence_gate",
+    public static final RegistryObject<Block> OITI_FENCE_GATE = registerBlock("oiti_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
