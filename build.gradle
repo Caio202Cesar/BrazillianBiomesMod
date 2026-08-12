@@ -80,6 +80,7 @@ repositories {
 
     maven { url 'https://maven.blamejared.com' }
     maven {url = uri("C:/Users/ADM/IdeaProjects/CaioCesarBiomesMod/mcmodsrepo")}
+    maven {url = uri("C:/Users/ADM/IdeaProjects/CaioClimates-1.16.5/mcmodsrepo")}
 
 }
 
@@ -93,6 +94,8 @@ dependencies {
     runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-53.2")
 
     implementation fg.deobf("com.caiocesarmods:caiocesarbiomes:1.0.0")
+
+    implementation fg.deobf("com.caiocesarmods:caioclimates:1.0.0")
 
 }
 
