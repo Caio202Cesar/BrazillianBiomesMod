@@ -93,7 +93,7 @@ dependencies {
     compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-53.2:api")
     runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-53.2")
 
-    implementation fg.deobf("com.caiocesarmods:caiocesarbiomes:1.0.0")
+    implementation fg.deobf("com.caiocesarmods:caiocesarbiomes:2.0.0")
 
     implementation fg.deobf("com.caiocesarmods:caioclimates:1.0.0")
 
@@ -120,7 +120,7 @@ tasks.named('jar', Jar).configure {
         attributes([
                 'Specification-Title'     : "brbiomesmod",
                 'Specification-Vendor'    : mod_authors,
-                'Specification-Version'   : '1', // We are version 1 of ourselves
+                'Specification-Version'   : '2', // We are version 1 of ourselves
                 'Implementation-Title'    : project.name,
                 'Implementation-Version'  : project.jar.archiveVersion,
                 'Implementation-Vendor'   : mod_authors,
