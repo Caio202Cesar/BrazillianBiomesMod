@@ -27,9 +27,53 @@ public class WoodGroup {
             = DeferredRegister.create(ForgeRegistries.BLOCKS, BrazillianBiomesMod.MOD_ID);
 
 
-    public static final RegistryObject<Block> CECROPIA_WOOD = registerBlock("cecropia_wood",
+    /// Cashew
+    public static final RegistryObject<Block> CASHEW_LOG = registerBlock("cashew_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CASHEW_LOG = registerBlock("stripped_cashew_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CASHEW_WOOD = registerBlock("cashew_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_CASHEW_WOOD = registerBlock("stripped_cashew_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> CASHEW_PLANKS = registerBlock("cashew_planks",
+            ModPlanks::new);
+    public static final RegistryObject<Block> CASHEW_SLAB = registerBlock("cashew_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> CASHEW_STAIRS = registerBlock("cashew_stairs",
+            () -> new StairsBlock(() -> CASHEW_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> CASHEW_FENCE = registerBlock("cashew_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> CASHEW_FENCE_GATE = registerBlock("cashew_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+
+
+    /// Silk Floss
+    public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
+            SilkFlossLog::new);
+    public static final RegistryObject<Block> SILK_FLOSS_THORNLESS_LOG = registerBlock("silk_floss_thornless_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> SILK_FLOSS_WOOD = registerBlock("silk_floss_thornless_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> SILK_FLOSS_THORNY_WOOD = registerBlock("silk_floss_thorny_wood",
+            SilkFlossLog::new);
+
+
+    /// Kapok
+    public static final RegistryObject<Block> KAPOK_LOG = registerBlock("kapok_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> KAPOK_WOOD = registerBlock("kapok_wood",
             ModLogs::new);
 
+
+
+
+    public static final RegistryObject<Block> CECROPIA_WOOD = registerBlock("cecropia_wood",
+            ModLogs::new);
 
     public static final RegistryObject<Block> BLACK_JUREMA_WOOD = registerBlock("black_jurema_wood",
             ModLogs::new);
@@ -37,14 +81,10 @@ public class WoodGroup {
             ModLogs::new);
 
 
-    public static final RegistryObject<Block> KAPOK_WOOD = registerBlock("kapok_wood",
-            ModLogs::new);
 
 
-    public static final RegistryObject<Block> SILK_FLOSS_WOOD = registerBlock("silk_floss_thornless_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> SILK_FLOSS_THORNY_WOOD = registerBlock("silk_floss_thorny_wood",
-            SilkFlossLog::new);
+
+
 
 
     public static final RegistryObject<Block> CAGAITA_WOOD = registerBlock("cagaita_wood",
@@ -477,24 +517,7 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-    public static final RegistryObject<Block> CASHEW_WOOD = registerBlock("cashew_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CASHEW_WOOD = registerBlock("stripped_cashew_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> CASHEW_PLANKS = registerBlock("cashew_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> CASHEW_SLAB = registerBlock("cashew_slab",
-            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> CASHEW_STAIRS = registerBlock("cashew_stairs",
-            () -> new StairsBlock(() -> CASHEW_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> CASHEW_FENCE = registerBlock("cashew_fence",
-            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> CASHEW_FENCE_GATE = registerBlock("cashew_fence_gate",
-            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
+
 
 
     public static final RegistryObject<Block> MANGABA_WOOD = registerBlock("mangaba_wood",

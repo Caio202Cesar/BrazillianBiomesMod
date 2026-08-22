@@ -29,11 +29,7 @@ public class TreesGroup {
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, BrazillianBiomesMod.MOD_ID);
 
-
-    public static final RegistryObject<Block> CASHEW_LOG = registerBlock("cashew_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_CASHEW_LOG = registerBlock("stripped_cashew_log",
-            ModLogs::new);
+    /// Cashew
     public static final RegistryObject<Block> CASHEW_LEAVES = registerBlock("cashew_leaves",
             () -> new CashewLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CASHEW_FRUITING_LEAVES));
@@ -48,11 +44,8 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
-            SilkFlossLog::new);
-    public static final RegistryObject<Block> SILK_FLOSS_THORNLESS_LOG = registerBlock("silk_floss_thornless_log",
-            ModLogs::new);
-
+    /// Silk Floss
+    //White Silk Floss
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_LEAVES = registerBlock("silk_floss_white_leaves",
             () -> new WhiteSilkFlossLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_SILK_FLOSS_DRIED_BRANCHES));
@@ -65,14 +58,13 @@ public class TreesGroup {
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_FRUITING_LEAVES = registerBlock("silk_floss_white_fruiting_leaves",
             () -> new WhiteSilkFlossFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_SILK_FLOSS_LEAVES));
-
     public static final RegistryObject<Block> WHITE_SILK_FLOSS_SAPLING = registerBlock("silk_floss_white_sapling",
             WhiteSilkFlossSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_WHITE_SILK_FLOSS_SAPLING = BLOCKS.register("potted_silk_floss_white_sapling",
             () -> new FlowerPotBlock(TreesGroup.WHITE_SILK_FLOSS_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
-
+    //Pink Silk Floss
     public static final RegistryObject<Block> PINK_SILK_FLOSS_LEAVES = registerBlock("silk_floss_pink_leaves",
             () -> new PinkSilkFlossLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
@@ -85,7 +77,6 @@ public class TreesGroup {
     public static final RegistryObject<Block> PINK_SILK_FLOSS_DRIED_BRANCHES = registerBlock("silk_floss_pink_dried_branches",
             () -> new PinkSilkFlossDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
-
     public static final RegistryObject<Block> PINK_SILK_FLOSS_SAPLING = registerBlock("silk_floss_pink_sapling",
             PinkSilkFlossSapling::new);
     @SuppressWarnings("deprecation")
@@ -94,8 +85,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance()));
 
 
-    public static final RegistryObject<Block> KAPOK_LOG = registerBlock("kapok_log",
-            ModLogs::new);
+    /// Kapok
     public static final RegistryObject<Block> KAPOK_LEAVES = registerBlock("kapok_leaves",
             () -> new KapokLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
@@ -113,6 +103,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    /// Pink Peroba
     public static final RegistryObject<Block> PINK_PEROBA_LOG = registerBlock("pink_peroba_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_PINK_PEROBA_LOG = registerBlock("stripped_pink_peroba_log",
@@ -127,17 +118,18 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> JEQUITIBA_LOG = registerBlock("jequitiba_log",
+    /// White Jequitiba
+    public static final RegistryObject<Block> WHITE_JEQUITIBA_LOG = registerBlock("white_jequitiba_log",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_JEQUITIBA_LOG = registerBlock("stripped_jequitiba_log",
+    public static final RegistryObject<Block> STRIPPED_WHITE_JEQUITIBA_LOG = registerBlock("stripped_white_jequitiba_log",
             ModLogs::new);
-    public static final RegistryObject<Block> JEQUITIBA_LEAVES = registerBlock("jequitiba_leaves",
+    public static final RegistryObject<Block> WHITE_JEQUITIBA_LEAVES = registerBlock("white_jequitiba_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> JEQUITIBA_SAPLING = registerBlock("jequitiba_sapling",
-            JequitibaSapling::new);
+    public static final RegistryObject<Block> WHITEJEQUITIBA_SAPLING = registerBlock("white_jequitiba_sapling",
+            WhiteJequitibaSapling::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_JEQUITIBA_SAPLING = BLOCKS.register("potted_jequitiba_sapling",
-            () -> new FlowerPotBlock(TreesGroup.JEQUITIBA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_WHITE_JEQUITIBA_SAPLING = BLOCKS.register("potted_white_jequitiba_sapling",
+            () -> new FlowerPotBlock(TreesGroup.WHITE_JEQUITIBA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
 
