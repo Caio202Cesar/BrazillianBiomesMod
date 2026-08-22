@@ -104,10 +104,6 @@ public class TreesGroup {
 
 
     /// Pink Peroba
-    public static final RegistryObject<Block> PINK_PEROBA_LOG = registerBlock("pink_peroba_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_PINK_PEROBA_LOG = registerBlock("stripped_pink_peroba_log",
-            ModLogs::new);
     public static final RegistryObject<Block> PINK_PEROBA_LEAVES = registerBlock("pink_peroba_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> PINK_PEROBA_SAPLING = registerBlock("pink_peroba_sapling",
@@ -119,10 +115,6 @@ public class TreesGroup {
 
 
     /// White Jequitiba
-    public static final RegistryObject<Block> WHITE_JEQUITIBA_LOG = registerBlock("white_jequitiba_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_WHITE_JEQUITIBA_LOG = registerBlock("stripped_white_jequitiba_log",
-            ModLogs::new);
     public static final RegistryObject<Block> WHITE_JEQUITIBA_LEAVES = registerBlock("white_jequitiba_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> WHITEJEQUITIBA_SAPLING = registerBlock("white_jequitiba_sapling",
@@ -133,12 +125,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-
-    public static final RegistryObject<Block> IPE_LOG = registerBlock("ipe_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_IPE_LOG = registerBlock("stripped_ipe_log",
-            ModLogs::new);
-
+    /// Ipe
     public static final RegistryObject<Block> YELLOW_IPE_LEAVES = registerBlock("yellow_ipe_leaves",
             () -> new YellowIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.YELLOW_IPE_FALL_LEAVES));

@@ -1,0 +1,18 @@
+{
+  "name": "Jequitiba",
+  "icon": "brbiomesmod:white_jequitiba_sapling",
+  "category": "brbiomesmod:trees",
+  "pages": [
+    {
+      "type": "text",
+      "title": "Plant Info",
+      "text": "$(bold)Nome Científico:$(reset) Cariniana estrellensis$(br)$(bold)Biomes:$(reset) Atlantic Forest"
+    },
+    {
+      "type": "spotlight",
+      "item": "brbiomesmod:white_jequitiba_sapling",
+      "title": "Tree Spotlight",
+      "text": "Tree Sapling."
+    }
+  ]
+}
