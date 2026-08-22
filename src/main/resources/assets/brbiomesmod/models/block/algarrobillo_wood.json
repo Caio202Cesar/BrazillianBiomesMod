@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "brbiomesmod:block/algarrobillo_log",
-    "side": "brbiomesmod:block/algarrobillo_log"
-  }
-}
