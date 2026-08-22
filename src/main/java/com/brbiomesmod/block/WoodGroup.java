@@ -20,8 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
-import static com.caiocesarmods.caiocesarbiomes.block.ModWood.ILEX_PLANKS;
-
 public class WoodGroup {
     public static List<Block> blocksList = new ArrayList<>();
 
@@ -270,21 +268,6 @@ public class WoodGroup {
     public static final RegistryObject<Block> IMBUIA_FENCE_GATE = registerBlock("imbuia_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-
-
-    /*
-    public static final RegistryObject<Block> PARANA_PINE_SLAB = registerBlock("parana_pine_slab",
-            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> PARANA_PINE_STAIRS = registerBlock("parana_pine_stairs",
-            () -> new StairsBlock(() -> PARANA_PINE_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> PARANA_PINE_FENCE = registerBlock("parana_pine_fence",
-            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> PARANA_PINE_FENCE_GATE = registerBlock("parana_pine_fence_gate",
-            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));*/
 
 
     public static final RegistryObject<Block> PINK_PEROBA_WOOD = registerBlock("pink_peroba_wood",
