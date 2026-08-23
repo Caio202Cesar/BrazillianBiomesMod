@@ -15,6 +15,7 @@ import com.brbiomesmod.features.TreeDecorators.ModTreeDecorators;
 import com.brbiomesmod.item.ModItems;
 import com.brbiomesmod.world.biomes.*;
 import com.brbiomesmod.world.biomes.Util.ModBiomeGeneration;
+import com.caiocesarmods.caiocesarbiomes.block.ModWood;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
