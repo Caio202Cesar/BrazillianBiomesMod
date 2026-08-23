@@ -117,8 +117,8 @@ public class TreesGroup {
     /// White Jequitiba
     public static final RegistryObject<Block> WHITE_JEQUITIBA_LEAVES = registerBlock("white_jequitiba_leaves",
             ModLeaves::new);
-    public static final RegistryObject<Block> WHITEJEQUITIBA_SAPLING = registerBlock("white_jequitiba_sapling",
-            WhiteJequitibaSapling::new);
+    public static final RegistryObject<Block> WHITE_JEQUITIBA_SAPLING = registerBlock("white_jequitiba_sapling",
+            JequitibaSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_WHITE_JEQUITIBA_SAPLING = BLOCKS.register("potted_white_jequitiba_sapling",
             () -> new FlowerPotBlock(TreesGroup.WHITE_JEQUITIBA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
@@ -1200,6 +1200,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    /*
     public static final RegistryObject<Block> GRUMIXAMA_LEAVES = registerBlock("grumixama_leaves",
             () -> new GrumixamaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.GRUMIXAMA_FLOWERING_LEAVES));
@@ -1237,7 +1238,7 @@ public class TreesGroup {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.STRAWBERRY_GUAVA_LEAVES));
     public static final RegistryObject<Block> STRAWBERRY_GUAVA_SAPLING = registerBlock("strawberry_guava_sapling",
             StrawberryGuavaSapling::new);
-
+*/
 
     public static final RegistryObject<Block> CAGAITA_LOG = registerBlock("cagaita_log",
             ModLogs::new);

@@ -2,11 +2,13 @@ package com.brbiomesmod.features;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.TreesGroup;
+import com.brbiomesmod.block.WoodGroup;
 import com.brbiomesmod.features.FoliagePlacers.*;
 import com.brbiomesmod.features.TreeDecorators.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.VirginianaFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.UmbrellaTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures.Placements;
+import com.caiocesarmods.caiocesarbiomes.block.ModWood;
 import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
@@ -1178,13 +1180,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));*/
-
+ /*
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GRUMIXAMA_TREE = register("grumixama_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.GRUMIXAMA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
+
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GUABIROBA_TREE = register("guabiroba_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MYRTACEAE_LOG),
@@ -1202,32 +1205,32 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE,
                             PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
-
+*/
 
 
     public static final class States {
 
-        protected static final BlockState MYRTACEAE_LOG = TreeBlocks.MYRTACEAE_LOG.get().getDefaultState();
+        protected static final BlockState MYRTACEAE_LOG = ModWood.MYRTACEAE_LOG.get().getDefaultState();
         protected static final BlockState FEIJOA_LEAVES = TreesGroup.FEIJOA_LEAVES.get().getDefaultState();
         protected static final BlockState CAMBUCI_LEAVES = TreesGroup.CAMBUCI_LEAVES.get().getDefaultState();
         protected static final BlockState PITANGA_LEAVES = TreesGroup.PITANGA_LEAVES.get().getDefaultState();
         protected static final BlockState BLACK_PITANGA_LEAVES = TreesGroup.BLACK_PITANGA_LEAVES.get().getDefaultState();
         protected static final BlockState RIO_GRANDE_CHERRY_LEAVES = TreesGroup.RIO_GRANDE_CHERRY_LEAVES.get().getDefaultState();
-        protected static final BlockState GRUMIXAMA_LEAVES = TreesGroup.GRUMIXAMA_LEAVES.get().getDefaultState();
+        //protected static final BlockState GRUMIXAMA_LEAVES = TreesGroup.GRUMIXAMA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState LAUREL_LOG = TreeBlocks.LAUREL_LOG.get().getDefaultState();
+        protected static final BlockState LAUREL_LOG = ModWood.LAUREL_LOG.get().getDefaultState();
         protected static final BlockState BRAZILLIAN_SASSAFRAS_LEAVES = TreesGroup.BRAZILLIAN_SASSAFRAS_LEAVES.get().getDefaultState();
         protected static final BlockState CANELA_PRETA_LEAVES = TreesGroup.CANELA_PRETA_LEAVES.get().getDefaultState();
         protected static final BlockState LAUREL_GUAIKA_LEAVES = TreesGroup.LAUREL_GUAIKA_LEAVES.get().getDefaultState();
         protected static final BlockState NECTANDRA_MEGAPOTAMICA_LEAVES = TreesGroup.NECTANDRA_MEGAPOTAMICA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState KAPOK_LOG = TreesGroup.KAPOK_LOG.get().getDefaultState();
+        protected static final BlockState KAPOK_LOG = WoodGroup.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState KAPOK_LEAVES = TreesGroup.KAPOK_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PODOCARPUS_LOG = TreeBlocks.PODOCARPUS_LOG.get().getDefaultState();
+        protected static final BlockState PODOCARPUS_LOG = ModWood.PODOCARPUS_LOG.get().getDefaultState();
         protected static final BlockState PODOCARPUS_LAMBERTII_LEAVES = TreesGroup.PODOCARPUS_LAMBERTII_LEAVES.get().getDefaultState();
 
-        protected static final BlockState JUNGLE_FICUS_LOG = TreeBlocks.JUNGLE_FIG_LOG.get().getDefaultState();
+        protected static final BlockState JUNGLE_FICUS_LOG = ModWood.JUNGLE_FIG_LOG.get().getDefaultState();
         protected static final BlockState FICUS_CESTRIFOLIA_LEAVES = TreesGroup.FICUS_CESTRIFOLIA_LEAVES.get().getDefaultState();
 
         protected static final BlockState OITI_LOG = TreesGroup.OITI_LOG.get().getDefaultState();
@@ -1282,16 +1285,16 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState SOMBREIRO_LOG = TreesGroup.SOMBREIRO_LOG.get().getDefaultState();
         protected static final BlockState SOMBREIRO_LEAVES = TreesGroup.SOMBREIRO_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CASHEW_LOG = TreesGroup.CASHEW_LOG.get().getDefaultState();
+        protected static final BlockState CASHEW_LOG = WoodGroup.CASHEW_LOG.get().getDefaultState();
         protected static final BlockState CASHEW_LEAVES = TreesGroup.CASHEW_LEAVES.get().getDefaultState();
 
-        protected static final BlockState ILEX_LOG = TreeBlocks.HOLLY_LOG.get().getDefaultState();
+        protected static final BlockState ILEX_LOG = ModWood.ILEX_LOG.get().getDefaultState();
         protected static final BlockState YERBA_MATE_LEAVES = TreesGroup.YERBA_MATE_LEAVES.get().getDefaultState();
 
         protected static final BlockState BLACK_JUREMA_LOG = TreesGroup.BLACK_JUREMA_LOG.get().getDefaultState();
         protected static final BlockState BLACK_JUREMA_LEAVES = TreesGroup.BLACK_JUREMA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SILK_FLOSS_LOG = TreesGroup.SILK_FLOSS_LOG.get().getDefaultState();
+        protected static final BlockState SILK_FLOSS_LOG = WoodGroup.SILK_FLOSS_LOG.get().getDefaultState();
         protected static final BlockState WHITE_SILK_FLOSS_LEAVES = TreesGroup.WHITE_SILK_FLOSS_LEAVES.get().getDefaultState();
         protected static final BlockState PINK_SILK_FLOSS_LEAVES = TreesGroup.PINK_SILK_FLOSS_LEAVES.get().getDefaultState();
 
@@ -1301,7 +1304,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState CAMU_CAMU_LOG = TreesGroup.CAMU_CAMU_LOG.get().getDefaultState();
         protected static final BlockState CAMU_CAMU_LEAVES = TreesGroup.CAMU_CAMU_LEAVES.get().getDefaultState();
 
-        protected static final BlockState IPE_LOG = TreesGroup.IPE_LOG.get().getDefaultState();
+        protected static final BlockState IPE_LOG = WoodGroup.IPE_LOG.get().getDefaultState();
         protected static final BlockState YELLOW_IPE_LEAVES = TreesGroup.YELLOW_IPE_LEAVES.get().getDefaultState();
         protected static final BlockState PURPLE_IPE_LEAVES = TreesGroup.PURPLE_IPE_LEAVES.get().getDefaultState();
         protected static final BlockState PINK_IPE_LEAVES = TreesGroup.PINK_IPE_LEAVES.get().getDefaultState();
@@ -1350,7 +1353,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState SHARINGA_LOG = TreesGroup.SHARINGA_LOG.get().getDefaultState();
         protected static final BlockState SHARINGA_LEAVES = TreesGroup.SHARINGA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState ARAUCARIA_LOG = TreeBlocks.ARAUCARIA_LOG.get().getDefaultState();
+        protected static final BlockState ARAUCARIA_LOG = ModWood.ARAUCARIA_LOG.get().getDefaultState();
         protected static final BlockState PARANA_PINE_LEAVES = TreesGroup.PARANA_PINE_LEAVES.get().getDefaultState();
 
         protected static final BlockState IMBUIA_LOG = TreesGroup.IMBUIA_LOG.get().getDefaultState();
@@ -1360,11 +1363,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState CECROPIA_LEAVES = TreesGroup.CECROPIA_LEAVES.get().getDefaultState();
         protected static final BlockState SILVER_CECROPIA_LEAVES = TreesGroup.CECROPIA_SILVER_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PINK_PEROBA_LOG = TreesGroup.PINK_PEROBA_LOG.get().getDefaultState();
+        protected static final BlockState PINK_PEROBA_LOG = WoodGroup.PINK_PEROBA_LOG.get().getDefaultState();
         protected static final BlockState PINK_PEROBA_LEAVES = TreesGroup.PINK_PEROBA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState JEQUITIBA_LOG = TreesGroup.JEQUITIBA_LOG.get().getDefaultState();
-        protected static final BlockState JEQUITIBA_LEAVES = TreesGroup.JEQUITIBA_LEAVES.get().getDefaultState();
+        protected static final BlockState JEQUITIBA_LOG = WoodGroup.WHITE_JEQUITIBA_LOG.get().getDefaultState();
+        protected static final BlockState JEQUITIBA_LEAVES = TreesGroup.WHITE_JEQUITIBA_LEAVES.get().getDefaultState();
 
         protected static final BlockState BRAZILLIAN_ROSEWOOD_LOG = TreesGroup.BRAZILLIAN_ROSEWOOD_LOG.get().getDefaultState();
         protected static final BlockState BRAZILLIAN_ROSEWOOD_LEAVES = TreesGroup.BRAZILLIAN_ROSEWOOD_LEAVES.get().getDefaultState();
@@ -1372,7 +1375,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState JABUTICABA_LOG = TreesGroup.JABUTICABA_LOG.get().getDefaultState();
         protected static final BlockState JABUTICABA_LEAVES = TreesGroup.JABUTICABA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState MESQUITE_LOG = TreeBlocks.MESQUITE_LOG.get().getDefaultState();
+        protected static final BlockState MESQUITE_LOG = ModWood.MESQUITE_LOG.get().getDefaultState();
         protected static final BlockState ALGARROBILLO_LEAVES = TreesGroup.ALGARROBILLO_LEAVES.get().getDefaultState();
 
         protected static final BlockState CAVEN_THORN_LOG = TreesGroup.CAVEN_THORN_LOG.get().getDefaultState();
@@ -1441,6 +1444,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .configure(new AtSurfaceWithExtraConfig(0, 0.5F, 3))));
 
 
+    /*
     public static final ConfiguredFeature<?, ?> SERRA_DO_MAR_FOREST_TREES = register("serra_do_mar_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANACA_TREE.withChance(0.35F),
                     MANACA_FANCY_TREE.withChance(0.35F), BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.3F),
@@ -1470,7 +1474,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     QUEEN_PALM.withChance(0.24F), JELLY_PALM.withChance(0.12F), TALL_JELLY_PALM.withChance(0.12F)),
                     PINK_PEROBA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(12, 0.4F, 3))));
-
+*/
     //Amazon rainforest vegetation
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YOUNG_KAPOK_TREE.withChance(0.4F), KAPOK_TREE.withChance(0.35F),

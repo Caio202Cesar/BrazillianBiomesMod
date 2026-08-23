@@ -50,9 +50,6 @@ public class ModDefaultBiomeFeatures {
     public static void withSavannaTrumpetTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.SAVANNA_TRUMPET_TREES);
     }
-    public static void withCambuciTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CAMBUCI_TREES);
-    }
     public static void withParanaPineTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.PARANA_PINE_TREES);
     }
@@ -115,9 +112,6 @@ public class ModDefaultBiomeFeatures {
     }
     public static void withCerradoFruitTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.CERRADO_FRUIT_TREES);
-    }
-    public static void withPassionvineAtlanticForestTrees(BiomeGenerationSettings.Builder builder) {
-        builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ATLANTIC_FOREST_TREES_WITH_PASSIONVINE);
     }
     public static void withPurplePassionvineAtlanticForestTrees(BiomeGenerationSettings.Builder builder) {
         builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.ATLANTIC_FOREST_TREES_WITH_PURPLE_PASSIONVINE);
