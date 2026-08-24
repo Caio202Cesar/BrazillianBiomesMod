@@ -65,7 +65,7 @@ public class PantanalBiome {
         biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
         //Hardiness zone 11: 0.9F - 0.94F
-        return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.SWAMP).depth(depth).scale(scale)
+        return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.SWAMP).depth(depth).scale(scale)
                 .temperature(0.94F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(10788964)
                         .setWaterFogColor(10788964).withSkyColor(8569325).withFoliageColor(4110351)
                         .withGrassColor(6604607).setFogColor(14807295)
