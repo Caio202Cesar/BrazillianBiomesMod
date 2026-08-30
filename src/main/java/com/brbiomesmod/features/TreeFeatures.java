@@ -5,11 +5,11 @@ import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.block.WoodGroup;
 import com.brbiomesmod.features.FoliagePlacers.*;
 import com.brbiomesmod.features.TreeDecorators.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CoconutFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.VirginianaFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.UmbrellaTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures.Placements;
 import com.caiocesarmods.caiocesarbiomes.block.ModWood;
-import com.caiocesarmods.caiocesarbiomes.block.TreeBlocks;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -50,13 +50,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ACAI_PALM = register("acai_palm",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PALMITO_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.ACAI_LEAVES),
-                    new AcaiFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new CoconutFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(12, 8, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JUSSARA_PALM = register("jussara_palm",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.PALMITO_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.JUSSARA_LEAVES),
-                    new JussaraFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new CoconutFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(16, 8, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
 

@@ -10,14 +10,6 @@ public class ModFoliagePlacer {
     public static final DeferredRegister<FoliagePlacerType<?>> FOLIAGE_PLACERS =
             DeferredRegister.create(ForgeRegistries.FOLIAGE_PLACER_TYPES, "brbiomesmod");
 
-    public static final RegistryObject<FoliagePlacerType<AcaiFoliagePlacer>> ACAI_FOLIAGE_PLACER =
-            FOLIAGE_PLACERS.register("acai_foliage_placer",
-                    () -> new FoliagePlacerType<>(AcaiFoliagePlacer.CODEC));
-
-    public static final RegistryObject<FoliagePlacerType<JussaraFoliagePlacer>> JUSSARA_FOLIAGE_PLACER =
-            FOLIAGE_PLACERS.register("jussara_foliage_placer",
-                    () -> new FoliagePlacerType<>(JussaraFoliagePlacer.CODEC));
-
     public static final RegistryObject<FoliagePlacerType<QueenPalmFoliagePlacer>> QUEEN_PALM_FOLIAGE_PLACER =
             FOLIAGE_PLACERS.register("queen_palm_foliage_placer",
                     () -> new FoliagePlacerType<>(QueenPalmFoliagePlacer.CODEC));
