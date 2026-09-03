@@ -127,6 +127,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.ACAI_BANANA_JAM_TOAST)));
 
 
+    public static final RegistryObject<Item> COCOA_FRUIT = ITEMS.register("cocoa_fruit",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP)));
+
+
     public static final RegistryObject<Item> BACURI_PASTE = ITEMS.register("bacuri_paste",
             () -> new Item(new Item.Properties().group(ModItemGroup.FOOD_GROUP).food(ModFoods.BACURI_PASTE)));
     public static final RegistryObject<Item> BACURI_JUICE = ITEMS.register("bacuri_juice",

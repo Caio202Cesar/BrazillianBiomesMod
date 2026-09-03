@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "cocoa_beans",
+  "ingredients": [
+    {
+      "item": "brbiomesmod:cocoa_fruit"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cocoa_beans",
+    "count": 4
+  }
+}
