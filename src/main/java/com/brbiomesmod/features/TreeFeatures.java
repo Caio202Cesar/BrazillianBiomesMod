@@ -1513,7 +1513,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     SANDBOX_TREE.withChance(0.3F)), ACAI_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(50, 0.1F, 1))));//Add pupunha too
     public static final ConfiguredFeature<?, ?> AMAZON_EDGE_PALMS = register("amazon_edge_palms",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BABASSU_PALM1.withChance(0.3F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BABASSU_PALM2.withChance(0.6F),
                     BABASSU_PALM1_WITH_VINE.withChance(0.03F)), BABASSU_PALM1)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 
