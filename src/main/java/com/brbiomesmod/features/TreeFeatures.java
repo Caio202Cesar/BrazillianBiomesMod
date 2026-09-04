@@ -1515,7 +1515,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> AMAZON_EDGE_PALMS = register("amazon_edge_palms",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BABASSU_PALM1.withChance(0.3F),
                     BABASSU_PALM1_WITH_VINE.withChance(0.03F)), BABASSU_PALM1)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
+                    .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
 
     //Mata dos cocais
     public static final ConfiguredFeature<?, ?> COCAL_FOREST_PALMS = register("cocal_forest_palms",
