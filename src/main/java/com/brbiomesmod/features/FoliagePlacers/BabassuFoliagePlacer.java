@@ -92,7 +92,7 @@ public class BabassuFoliagePlacer extends FoliagePlacer {
             double t = i / (double) length;
 
             double vertical =
-                    2.5 * Math.sin(Math.PI * t)   // upward arch
+                    2.5 * Math.sin(Math.PI * t)   // upward arch (o sinal positivo é o responsável por colocar para cima. Aumentar esse angulo para fazer palha de palmeira nypa e nykau.
                             + 4 * t;
 
             int x = (int)Math.round(trunkCenterX + (double) i * Math.cos(angle));
