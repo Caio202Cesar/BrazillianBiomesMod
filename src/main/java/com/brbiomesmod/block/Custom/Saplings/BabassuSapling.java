@@ -122,7 +122,7 @@ public class BabassuSapling extends SaplingBlock {
     private static class BabassuTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.BABASSU_PALM;
+            return TreeFeatures.BABASSU_PALM1;
         }
     }
 }

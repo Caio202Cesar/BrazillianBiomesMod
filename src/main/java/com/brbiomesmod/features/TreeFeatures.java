@@ -5,6 +5,7 @@ import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.block.WoodGroup;
 import com.brbiomesmod.features.FoliagePlacers.*;
 import com.brbiomesmod.features.TreeDecorators.*;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CanaryDateFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CoconutFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.VirginianaFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.UmbrellaTrunkPlacer;
@@ -61,16 +62,22 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(1, 0, 1))).build()));
 
     //Babassu Palm
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BABASSU_PALM = register("babassu_palm",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BABASSU_PALM1 = register("babassu_palm1",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BABASSU_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.BABASSU_LEAVES),
+                    new CanaryDateFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(16, 8, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BABASSU_PALM2 = register("babassu_palm2",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BABASSU_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.BABASSU_LEAVES),
                     new BabassuFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(16, 8, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BABASSU_PALM_WITH_VINE = register("babassu_palm_with_vine",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BABASSU_PALM1_WITH_VINE = register("babassu_palm1_with_vine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BABASSU_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.BABASSU_LEAVES),
-                    new BabassuFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new CanaryDateFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(16, 8, 0),
                     new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
                     CaatingaPassionFruitVineLeavesDecorator.INSTANCE, CaatingaPassionFruitVineTrunkDecorator.INSTANCE)).build()));
@@ -1495,11 +1502,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YOUNG_KAPOK_TREE.withChance(0.4F), KAPOK_TREE.withChance(0.35F),
                             BURITI_PALM.withChance(0.4F), COCOA_TREE.withChance(0.4F), SOMBREIRO_TREE.withChance(0.3F),
                             LARGE_CECROPIA_TREE.withChance(0.2F), SHARINGA_TREE.withChance(0.5F), LOPHANTERA_TREE2.withChance(0.25F), LOPHANTERA_TREE.withChance(0.25F),
-                            BACURI_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.34F),
+                            BACURI_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.34F), BABASSU_PALM2.withChance(0.5F),
                             BALSA_TREE.withChance(0.5F), SANDBOX_TREE.withChance(0.4F), BRAZILLIAN_TIGERWOOD_TREE.withChance(0.2F),
                             BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.22F), JENIPAPO_TREE.withChance(0.3F), SAPUCAIA_TREE.withChance(0.34F),
                             MEGA_BALSA_TREE.withChance(0.5F), YELLOW_MOMBIN_TREE.withChance(0.2F), BRAZILNUT_TREE.withChance(0.5F),  BRAZILNUT_FANCY_TREE.withChance(0.5F),
-                            PURPLEHEART_TREE.withChance(0.4F), AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F)), BABASSU_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            PURPLEHEART_TREE.withChance(0.4F), AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F)), BABASSU_PALM1)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> VARZEA_TREES = register("varzea_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.09F),
@@ -1516,8 +1523,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> COCAL_FOREST_PALMS = register("cocal_forest_palms",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.5F),
                     BURITI_PALM_WITH_VINE.withChance(0.008F), OITICICA_TREE.withChance(0.089F),
-                    CARNAUBA_PALM.withChance(0.5F), CARNAUBA_PALM_WITH_PASSIONVINE.withChance(0.007F), BABASSU_PALM_WITH_VINE.withChance(0.0047F)),
-                    BABASSU_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    CARNAUBA_PALM.withChance(0.5F), CARNAUBA_PALM_WITH_PASSIONVINE.withChance(0.007F), BABASSU_PALM1_WITH_VINE.withChance(0.0047F)),
+                    BABASSU_PALM1)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(2, 0.4F, 3))));
     public static final ConfiguredFeature<?, ?> COCAL_FOREST_TREES = register("cocal_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
