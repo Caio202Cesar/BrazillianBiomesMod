@@ -40,7 +40,7 @@ public class BabassuFoliagePlacer extends FoliagePlacer {
         int frondCount = 5 + random.nextInt(3);
         for (int i = 0; i < frondCount; i++) {
             double angle = 2 * Math.PI * i / frondCount;
-            int length = 7 + random.nextInt(2); //Shorter
+            int length = 5 + random.nextInt(2); //Shorter
             generateFrond(world, random, config, center, angle, length, leaves, boundingBox);
         }
 
@@ -48,7 +48,7 @@ public class BabassuFoliagePlacer extends FoliagePlacer {
         BlockPos lowerCenter = center.down(2);
         for (int i = 0; i < frondCount; i++) {
             double angle = 2 * Math.PI * i / frondCount;
-            int length = 7 + random.nextInt(2);
+            int length = 5 + random.nextInt(2);
             generateFrond(world, random, config, lowerCenter, angle, length, leaves, boundingBox);
         }
 
@@ -57,7 +57,7 @@ public class BabassuFoliagePlacer extends FoliagePlacer {
         int denserFrondCount = frondCount + 2; // More fronds for density
         for (int i = 0; i < denserFrondCount; i++) {
             double angle = 2 * Math.PI * i / denserFrondCount;
-            int length = 7 + random.nextInt(4); // Larger fronds
+            int length = 5 + random.nextInt(1); // Larger fronds
             generateFrond(world, random, config, thirdLayerCenter, angle, length, leaves, boundingBox);
         }
 
@@ -65,21 +65,21 @@ public class BabassuFoliagePlacer extends FoliagePlacer {
         int lastFrondCount = frondCount + 2; // More fronds for density
         for (int i = 0; i < lastFrondCount; i++) {
             double angle = 2 * Math.PI * i / lastFrondCount;
-            int length = 7 + random.nextInt(4); // Larger fronds
+            int length = 5 + random.nextInt(1); // Larger fronds
             generateFrond(world, random, config, fourthLayerCenter, angle, length, leaves, boundingBox);
         }
 
         BlockPos fifthLayerCenter = center.down(2);
         for (int i = 0; i < frondCount; i++) {
             double angle = 2 * Math.PI * i / frondCount;
-            int length = 7 + random.nextInt(4);
+            int length = 5 + random.nextInt(2);
             generateFrond(world, random, config, fifthLayerCenter, angle, length, leaves, boundingBox);
         }
 
         BlockPos sixthLayerCenter = center.down(2);
         for (int i = 0; i < frondCount; i++) {
             double angle = 2 * Math.PI * i / frondCount;
-            int length = 7 + random.nextInt(4);
+            int length =5 + random.nextInt(2);
             generateFrond(world, random, config, sixthLayerCenter, angle, length, leaves, boundingBox);
         }
     }
@@ -93,7 +93,7 @@ public class BabassuFoliagePlacer extends FoliagePlacer {
 
             double vertical =
                     2.5 * Math.sin(Math.PI * t)   // upward arch
-                            - 4 * t;
+                            + 4 * t;
 
             int x = (int)Math.round(trunkCenterX + (double) i * Math.cos(angle));
             int z = (int)Math.round(trunkCenterZ + (double) i * Math.sin(angle));

@@ -61,11 +61,11 @@ private static Biome makeAmazonRainforestBiome(final Supplier<ConfiguredSurfaceB
     ModDefaultBiomeFeatures.withAmazonEdgeTrees(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withCassavaPlants(biomegenerationsettings$builder);
 
-    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BABASSU_PALM1);
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.AMAZON_EDGE_PALMS);
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.SAVANNA).depth(depth).scale(scale)
-            .temperature(1.2F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(10787684)
+            .temperature(1.0F).downfall(0.8F).setEffects((new BiomeAmbience.Builder()).setWaterColor(10787684)
                     .setWaterFogColor(10787684).withSkyColor(4169700).withFoliageColor(3830303)
                     .withGrassColor(6604607).setFogColor(14807295)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)

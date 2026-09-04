@@ -119,22 +119,11 @@ public class KapokSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class KapokTree extends BigTree {
-        @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.YOUNG_KAPOK_TREE;
-        }
-
-        /**
-         * Get a {@link ConfiguredFeature} of the huge variant of this tree
-         *
-         * @param rand
-         */
+    private static class KapokTree extends Tree {
         @Nullable
         @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
             return TreeFeatures.KAPOK_TREE;
-
         }
     }
 }
