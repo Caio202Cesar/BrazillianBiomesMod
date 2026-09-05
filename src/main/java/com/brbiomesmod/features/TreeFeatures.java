@@ -1494,14 +1494,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             CUPUACU_TREE.withChance(0.4F), COCOA_TREE.withChance(0.4F),
                             SOMBREIRO_TREE.withChance(0.3F), SHARINGA_TREE.withChance(0.5F),
-                            BACURI_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F),
-                            MEGA_BACURI_TREE.withChance(0.34F),
-                            BALSA_TREE.withChance(0.5F), SANDBOX_TREE.withChance(0.4F),
-                            BRAZILLIAN_TIGERWOOD_TREE.withChance(0.2F),
-                            BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.22F),
-                            JENIPAPO_TREE.withChance(0.3F), SAPUCAIA_TREE.withChance(0.34F),
-                            MEGA_BALSA_TREE.withChance(0.5F), YELLOW_MOMBIN_TREE.withChance(0.2F), BRAZILNUT_TREE.withChance(0.5F),  BRAZILNUT_FANCY_TREE.withChance(0.5F),
-                            PURPLEHEART_TREE.withChance(0.4F), AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F)), LOPHANTERA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            BACURI_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F)), LOPHANTERA_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.5F, 2))));
     public static final ConfiguredFeature<?, ?> AMAZON_EDGE_TREES = register("amazon_edge_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(KAPOK_TREE.withChance(0.35F),
