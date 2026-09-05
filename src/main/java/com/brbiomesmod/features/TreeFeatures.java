@@ -86,16 +86,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> QUEEN_PALM = register("queen_palm",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.QUEEN_PALM_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.QUEEN_PALM_LEAVES),
-                    new QueenPalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new CoconutFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(10, 4, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> QUEEN_PALM_WITH_VINE = register("vined_queen_palm",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.QUEEN_PALM_LOG),
-                    new SimpleBlockStateProvider(TreeFeatures.States.QUEEN_PALM_LEAVES),
-                    new QueenPalmFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new StraightTrunkPlacer(10, 4, 0),
-                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
-                    CaatingaPassionFruitVineLeavesDecorator.INSTANCE, CaatingaPassionFruitVineTrunkDecorator.INSTANCE)).build()));
 
     //Jelly Palm
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> JELLY_PALM = register("jelly_palm",
@@ -1686,7 +1679,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.3F, 2))));
     public static final ConfiguredFeature<?, ?> CERRADO_PALM_TREES = register("cerrado_palm_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(QUEEN_PALM.withChance(0.5F),
-                            JELLY_PALM.withChance(0.2F), JELLY_PALM_CAATINGA_PASSIONFLOWER.withChance(0.03F), QUEEN_PALM_WITH_VINE.withChance(0.004F)),
+                            JELLY_PALM.withChance(0.2F), JELLY_PALM_CAATINGA_PASSIONFLOWER.withChance(0.03F)),
                             BURITI_PALM)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> CERRADO_TREES = register("cerrado_trees",
