@@ -39,6 +39,9 @@ public class ModTreeDecorators {
             TREE_DECORATORS.register("caatinga_passionvine_trunk_decorator",
                     () -> new TreeDecoratorType<>(CaatingaPassionFruitVineTrunkDecorator.CODEC));
 
+    public static final RegistryObject<TreeDecoratorType<AcaiTreeDecorator>> ACAI =
+            TREE_DECORATORS.register("acai_decorator", () -> new TreeDecoratorType<>(AcaiTreeDecorator.field_236866_a_));
+
     public static void register(IEventBus eventBus) {
         TREE_DECORATORS.register(eventBus);
     }
