@@ -135,6 +135,7 @@ public class TreesGroup {
 
 
     /// Ipe
+    //Yellow
     public static final RegistryObject<Block> YELLOW_IPE_LEAVES = registerBlock("yellow_ipe_leaves",
             () -> new YellowIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.YELLOW_IPE_FALL_LEAVES));
@@ -150,7 +151,7 @@ public class TreesGroup {
     public static final RegistryObject<Block> POTTED_YELLOW_IPE_SAPLING = BLOCKS.register("potted_yellow_ipe_sapling",
             () -> new FlowerPotBlock(TreesGroup.YELLOW_IPE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
+    //Purple
     public static final RegistryObject<Block> PURPLE_IPE_LEAVES = registerBlock("purple_ipe_leaves",
             () -> new PurpleIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PURPLE_IPE_FALL_LEAVES));
@@ -159,14 +160,17 @@ public class TreesGroup {
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> PURPLE_IPE_BLOSSOM = registerBlock("purple_ipe_blossom",
             () -> new PurpleIpeBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PURPLE_IPE_LEAVES));
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PURPLE_IPE_BRANCHES));
+    public static final RegistryObject<Block> PURPLE_IPE_BRANCHES = registerBlock("purple_ipe_branches",
+            () -> new PurpleIpeFallLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
     public static final RegistryObject<Block> PURPLE_IPE_SAPLING = registerBlock("purple_ipe_sapling",
             PurpleIpeSapling::new);
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_PURPLE_IPE_SAPLING = BLOCKS.register("potted_purple_ipe_sapling",
             () -> new FlowerPotBlock(TreesGroup.PURPLE_IPE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
+    //Apricot
     public static final RegistryObject<Block> APRICOT_IPE_LEAVES = registerBlock("apricot_ipe_leaves",
             () -> new ApricotIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.APRICOT_IPE_FALL_LEAVES));
@@ -182,7 +186,7 @@ public class TreesGroup {
     public static final RegistryObject<Block> POTTED_APRICOT_IPE_SAPLING = BLOCKS.register("potted_apricot_ipe_sapling",
             () -> new FlowerPotBlock(TreesGroup.APRICOT_IPE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
+    //Pink
     public static final RegistryObject<Block> PINK_IPE_LEAVES = registerBlock("pink_ipe_leaves",
             () -> new PinkIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PINK_IPE_FALL_LEAVES));
@@ -198,7 +202,7 @@ public class TreesGroup {
     public static final RegistryObject<Block> POTTED_PINK_IPE_SAPLING = BLOCKS.register("potted_pink_ipe_sapling",
             () -> new FlowerPotBlock(TreesGroup.PINK_IPE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
-
+    //White
     public static final RegistryObject<Block> WHITE_IPE_LEAVES = registerBlock("white_ipe_leaves",
             () -> new WhiteIpeLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.WHITE_IPE_FALL_LEAVES));
@@ -217,10 +221,6 @@ public class TreesGroup {
 
 
     /// Manaca da Serra
-    public static final RegistryObject<Block> MANACA_DA_SERRA_LOG = registerBlock("manaca_da_serra_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_MANACA_DA_SERRA_LOG = registerBlock("stripped_manaca_da_serra_log",
-            ModLogs::new);
     public static final RegistryObject<Block> MANACA_DA_SERRA_LEAVES = registerBlock("manaca_da_serra_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> MANACA_DA_SERRA_SAPLING = registerBlock("manaca_da_serra_sapling",
@@ -231,11 +231,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LOG = registerBlock("brazillian_rosewood_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_BRAZILLIAN_ROSEWOOD_LOG = registerBlock("stripped_brazillian_rosewood_log",
-            ModLogs::new);
-
+    /// Brazillian Rosewood
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LEAVES = registerBlock("brazillian_rosewood_leaves",
             () -> new BrazillianRosewoodLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRAZILLIAN_ROSEWOOD_DRIED_BRANCHES));
@@ -256,19 +252,27 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-
-    public static final RegistryObject<Block> PARANA_PINE_LEAVES = registerBlock("parana_pine_leaves",
-            () -> new ParanaPineLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PARANA_PINE_FRUITING_LEAVES));
-    public static final RegistryObject<Block> PARANA_PINE_FRUITING_LEAVES = registerBlock("parana_pine_fruiting_leaves",
-            () -> new ParanaPineFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
-                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PARANA_PINE_LEAVES));
-    public static final RegistryObject<Block> PARANA_PINE_SAPLING = registerBlock("parana_pine_sapling",
-            ParanaPineSapling::new);
+    /// Cecropia
+    public static final RegistryObject<Block> CECROPIA_SILVER_LEAVES = registerBlock("cecropia_silver_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CECROPIA_SILVER_SAPLING = registerBlock("cecropia_silver_sapling",
+            SilverCecropiaSapling::new);
     @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_PARANA_PINE_SAPLING = BLOCKS.register("potted_parana_pine_sapling",
-            () -> new FlowerPotBlock(TreesGroup.PARANA_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+    public static final RegistryObject<Block> POTTED_CECROPIA_SILVER_SAPLING = BLOCKS.register("potted_cecropia_silver_sapling",
+            () -> new FlowerPotBlock(TreesGroup.CECROPIA_SILVER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
+    public static final RegistryObject<Block> CECROPIA_LEAVES = registerBlock("cecropia_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CECROPIA_SAPLING = registerBlock("cecropia_sapling",
+            CecropiaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_CECROPIA_SAPLING = BLOCKS.register("potted_cecropia_sapling",
+            () -> new FlowerPotBlock(TreesGroup.CECROPIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+
+
+
 
 
     public static final RegistryObject<Block> IMBUIA_LOG = registerBlock("imbuia_log",
@@ -358,22 +362,7 @@ public class TreesGroup {
 
 
 
-    public static final RegistryObject<Block> CECROPIA_SILVER_LEAVES = registerBlock("cecropia_silver_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> CECROPIA_SILVER_SAPLING = registerBlock("cecropia_silver_sapling",
-            SilverCecropiaSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_CECROPIA_SILVER_SAPLING = BLOCKS.register("potted_cecropia_silver_sapling",
-            () -> new FlowerPotBlock(TreesGroup.CECROPIA_SILVER_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
-    public static final RegistryObject<Block> CECROPIA_LEAVES = registerBlock("cecropia_leaves",
-            ModLeaves::new);
-    public static final RegistryObject<Block> CECROPIA_SAPLING = registerBlock("cecropia_sapling",
-            CecropiaSapling::new);
-    @SuppressWarnings("deprecation")
-    public static final RegistryObject<Block> POTTED_CECROPIA_SAPLING = BLOCKS.register("potted_cecropia_sapling",
-            () -> new FlowerPotBlock(TreesGroup.CECROPIA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
-                    .zeroHardnessAndResistance().notSolid()));
+
 
 
 
@@ -455,10 +444,6 @@ public class TreesGroup {
                     .zeroHardnessAndResistance()));
 
 
-    public static final RegistryObject<Block> WOLF_APPLE_LOG = registerBlock("wolf_apple_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_WOLF_APPLE_LOG = registerBlock("stripped_wolf_apple_log",
-            ModLogs::new);
 
     public static final RegistryObject<Block> WOLF_APPLE_LEAVES = registerBlock("wolf_apple_leaves",
             () -> new WolfAppleLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -486,8 +471,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance()));
 
 
-    public static final RegistryObject<Block> BLACK_JUREMA_LOG = registerBlock("black_jurema_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> BLACK_JUREMA_LEAVES = registerBlock("black_jurema_leaves",
             () -> new BlackJuremaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BLACK_JUREMA_DRIED_BRANCHES));
@@ -500,6 +484,7 @@ public class TreesGroup {
     public static final RegistryObject<Block> POTTED_BLACK_JUREMA_SAPLING = BLOCKS.register("potted_black_jurema_sapling",
             () -> new FlowerPotBlock(TreesGroup.BLACK_JUREMA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
+
 
 
     public static final RegistryObject<Block> ALGARROBILLO_LEAVES = registerBlock("algarrobillo_leaves",
@@ -516,8 +501,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> CAVEN_THORN_LOG = registerBlock("caven_thorn_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> CAVEN_THORN_LEAVES = registerBlock("caven_thorn_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CAVEN_THORN_SAPLING = registerBlock("caven_thorn_sapling",
@@ -528,8 +512,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> BABASSU_LOG = registerBlock("babassu_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> BABASSU_LEAVES = registerBlock("babassu_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> BABASSU_SAPLING = registerBlock("babassu_sapling",
@@ -540,10 +523,6 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> COCKSPUR_CORAL_LOG = registerBlock("cockspur_coral_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_COCKSPUR_CORAL_LOG = registerBlock("stripped_cockspur_coral_log",
-            ModLogs::new);
 
     public static final RegistryObject<Block> COCKSPUR_CORAL_LEAVES = registerBlock("cockspur_coral_leaves",
             () -> new CockspurCoralLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -1284,6 +1263,21 @@ public class TreesGroup {
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_FEIJOA_SAPLING = BLOCKS.register("potted_feijoa_sapling",
             () -> new FlowerPotBlock(TreesGroup.FEIJOA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+
+    /// Parana Pine
+    public static final RegistryObject<Block> PARANA_PINE_LEAVES = registerBlock("parana_pine_leaves",
+            () -> new ParanaPineLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PARANA_PINE_FRUITING_LEAVES));
+    public static final RegistryObject<Block> PARANA_PINE_FRUITING_LEAVES = registerBlock("parana_pine_fruiting_leaves",
+            () -> new ParanaPineFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.PARANA_PINE_LEAVES));
+    public static final RegistryObject<Block> PARANA_PINE_SAPLING = registerBlock("parana_pine_sapling",
+            ParanaPineSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PARANA_PINE_SAPLING = BLOCKS.register("potted_parana_pine_sapling",
+            () -> new FlowerPotBlock(TreesGroup.PARANA_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
 

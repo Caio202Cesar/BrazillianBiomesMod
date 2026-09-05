@@ -2,6 +2,6 @@
   "parent": "block/cube_column",
   "textures": {
     "end": "brbiomesmod:block/imbuia_log_top",
-    "side": "brbiomesmod:block/imbuia_log"
+    "side": "caiocesarbiomes:block/laurel_log"
   }
 }
