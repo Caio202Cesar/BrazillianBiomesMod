@@ -271,14 +271,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-
-
-
-
-    public static final RegistryObject<Block> IMBUIA_LOG = registerBlock("imbuia_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_IMBUIA_LOG = registerBlock("stripped_imbuia_log",
-            ModLogs::new);
+    /// Imbuia
     public static final RegistryObject<Block> IMBUIA_LEAVES = registerBlock("imbuia_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> IMBUIA_SAPLING = registerBlock("imbuia_sapling",

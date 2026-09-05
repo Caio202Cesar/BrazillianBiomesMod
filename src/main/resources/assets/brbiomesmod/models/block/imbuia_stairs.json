@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "brbiomesmod:block/imbuia_planks",
-    "top": "brbiomesmod:block/imbuia_planks",
-    "side": "brbiomesmod:block/imbuia_planks"
-  }
-}
