@@ -1251,7 +1251,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState GUAPURUVU_LOG = TreesGroup.GUAPURUVU_LOG.get().getDefaultState();
         protected static final BlockState GUAPURUVU_LEAVES = TreesGroup.GUAPURUVU_LEAVES.get().getDefaultState();
 
-        protected static final BlockState XAXIM_LOG = TreesGroup.XAXIM_LOG.get().getDefaultState();
+        protected static final BlockState XAXIM_LOG = WoodGroup.XAXIM_LOG.get().getDefaultState();
         protected static final BlockState XAXIM_LEAVES = TreesGroup.XAXIM_LEAVES.get().getDefaultState();
 
         protected static final BlockState JENIPAPO_LEAVES = TreesGroup.JENIPAPO_LEAVES.get().getDefaultState();
@@ -1260,17 +1260,17 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState BURITI_LEAVES = TreesGroup.BURITI_LEAVES.get().getDefaultState();
         protected static final BlockState BURITI_LOG = TreesGroup.BURITI_LOG.get().getDefaultState();
 
-        protected static final BlockState BABASSU_LOG = TreesGroup.BABASSU_LOG.get().getDefaultState();
+        protected static final BlockState BABASSU_LOG = WoodGroup.BABASSU_LOG.get().getDefaultState();
         protected static final BlockState BABASSU_LEAVES = TreesGroup.BABASSU_LEAVES.get().getDefaultState();
 
-        protected static final BlockState PALMITO_LOG = TreesGroup.PALMITO_LOG.get().getDefaultState();
+        protected static final BlockState PALMITO_LOG = WoodGroup.PALMITO_LOG.get().getDefaultState();
         protected static final BlockState ACAI_LEAVES = TreesGroup.ACAI_LEAVES.get().getDefaultState();
         protected static final BlockState JUSSARA_LEAVES = TreesGroup.JUSSARA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState QUEEN_PALM_LOG = TreesGroup.QUEEN_PALM_LOG.get().getDefaultState();
+        protected static final BlockState QUEEN_PALM_LOG = WoodGroup.QUEEN_PALM_LOG.get().getDefaultState();
         protected static final BlockState QUEEN_PALM_LEAVES = TreesGroup.QUEEN_PALM_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CARNAUBA_LOG = TreesGroup.CARNAUBA_LOG.get().getDefaultState();
+        protected static final BlockState CARNAUBA_LOG = WoodGroup.CARNAUBA_LOG.get().getDefaultState();
         protected static final BlockState CARNAUBA_LEAVES = TreesGroup.CARNAUBA_LEAVES.get().getDefaultState();
 
         protected static final BlockState JELLY_PALM_LOG = TreesGroup.JELLY_PALM_LOG.get().getDefaultState();
@@ -1285,7 +1285,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState ILEX_LOG = ModWood.ILEX_LOG.get().getDefaultState();
         protected static final BlockState YERBA_MATE_LEAVES = TreesGroup.YERBA_MATE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BLACK_JUREMA_LOG = TreesGroup.BLACK_JUREMA_LOG.get().getDefaultState();
+        protected static final BlockState BLACK_JUREMA_LOG = WoodGroup.BLACK_JUREMA_LOG.get().getDefaultState();
         protected static final BlockState BLACK_JUREMA_LEAVES = TreesGroup.BLACK_JUREMA_LEAVES.get().getDefaultState();
 
         protected static final BlockState SILK_FLOSS_LOG = WoodGroup.SILK_FLOSS_LOG.get().getDefaultState();
@@ -1311,7 +1311,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState PERUVIAN_PEPPER_LEAVES = TreesGroup.PERUVIAN_PEPPER_LEAVES.get().getDefaultState();
         protected static final BlockState SILVER_PEPPER_LEAVES = TreesGroup.SILVER_PEPPER_LEAVES.get().getDefaultState();
 
-        protected static final BlockState WOLF_APPLE_LOG = TreesGroup.WOLF_APPLE_LOG.get().getDefaultState();
+        protected static final BlockState WOLF_APPLE_LOG = WoodGroup.WOLF_APPLE_LOG.get().getDefaultState();
         protected static final BlockState WOLF_APPLE_LEAVES = TreesGroup.WOLF_APPLE_LEAVES.get().getDefaultState();
 
         protected static final BlockState MANGABA_LOG = TreesGroup.MANGABA_LOG.get().getDefaultState();
@@ -1325,19 +1325,19 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState JUNGLE_LOG = Blocks.JUNGLE_LOG.getDefaultState();
         protected static final BlockState JUNGLE_LEAVES = Blocks.JUNGLE_LEAVES.getDefaultState();
 
-        protected static final BlockState BRAZILWOOD_LOG = TreesGroup.BRAZILWOOD_LOG.get().getDefaultState();
+        protected static final BlockState BRAZILWOOD_LOG = WoodGroup.BRAZILWOOD_LOG.get().getDefaultState();
         protected static final BlockState BRAZILWOOD_LEAVES = TreesGroup.BRAZILWOOD_LEAVES.get().getDefaultState();
 
         protected static final BlockState JUA_LOG = TreesGroup.JUA_LOG.get().getDefaultState();
         protected static final BlockState JUA_LEAVES = TreesGroup.JUA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState UMBU_LOG = TreesGroup.UMBU_LOG.get().getDefaultState();
+        protected static final BlockState UMBU_LOG = WoodGroup.UMBU_LOG.get().getDefaultState();
         protected static final BlockState UMBU_LEAVES = TreesGroup.UMBU_LEAVES.get().getDefaultState();
 
         protected static final BlockState LOPHANTERA_LOG = TreesGroup.LOPHANTERA_LOG.get().getDefaultState();
         protected static final BlockState LOPHANTERA_LEAVES = TreesGroup.LOPHANTERA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState MANACA_DA_SERRA_LOG = TreesGroup.MANACA_DA_SERRA_LOG.get().getDefaultState();
+        protected static final BlockState MANACA_DA_SERRA_LOG = WoodGroup.MANACA_DA_SERRA_LOG.get().getDefaultState();
         protected static final BlockState MANACA_DA_SERRA_LEAVES = TreesGroup.MANACA_DA_SERRA_LEAVES.get().getDefaultState();
 
         protected static final BlockState CAGAITA_LOG = TreesGroup.CAGAITA_LOG.get().getDefaultState();
@@ -1350,10 +1350,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState ARAUCARIA_LOG = ModWood.ARAUCARIA_LOG.get().getDefaultState();
         protected static final BlockState PARANA_PINE_LEAVES = TreesGroup.PARANA_PINE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState IMBUIA_LOG = TreesGroup.IMBUIA_LOG.get().getDefaultState();
+        protected static final BlockState IMBUIA_LOG = WoodGroup.IMBUIA_LOG.get().getDefaultState();
         protected static final BlockState IMBUIA_LEAVES = TreesGroup.IMBUIA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CECROPIA_LOG = TreesGroup.CECROPIA_LOG.get().getDefaultState();
+        protected static final BlockState CECROPIA_LOG = WoodGroup.CECROPIA_LOG.get().getDefaultState();
         protected static final BlockState CECROPIA_LEAVES = TreesGroup.CECROPIA_LEAVES.get().getDefaultState();
         protected static final BlockState SILVER_CECROPIA_LEAVES = TreesGroup.CECROPIA_SILVER_LEAVES.get().getDefaultState();
 
@@ -1363,28 +1363,28 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState JEQUITIBA_LOG = WoodGroup.WHITE_JEQUITIBA_LOG.get().getDefaultState();
         protected static final BlockState JEQUITIBA_LEAVES = TreesGroup.WHITE_JEQUITIBA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BRAZILLIAN_ROSEWOOD_LOG = TreesGroup.BRAZILLIAN_ROSEWOOD_LOG.get().getDefaultState();
+        protected static final BlockState BRAZILLIAN_ROSEWOOD_LOG = WoodGroup.BRAZILLIAN_ROSEWOOD_LOG.get().getDefaultState();
         protected static final BlockState BRAZILLIAN_ROSEWOOD_LEAVES = TreesGroup.BRAZILLIAN_ROSEWOOD_LEAVES.get().getDefaultState();
 
-        protected static final BlockState JABUTICABA_LOG = TreesGroup.JABUTICABA_LOG.get().getDefaultState();
+        protected static final BlockState JABUTICABA_LOG = WoodGroup.JABUTICABA_LOG.get().getDefaultState();
         protected static final BlockState JABUTICABA_LEAVES = TreesGroup.JABUTICABA_LEAVES.get().getDefaultState();
 
         protected static final BlockState MESQUITE_LOG = ModWood.MESQUITE_LOG.get().getDefaultState();
         protected static final BlockState ALGARROBILLO_LEAVES = TreesGroup.ALGARROBILLO_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CAVEN_THORN_LOG = TreesGroup.CAVEN_THORN_LOG.get().getDefaultState();
+        protected static final BlockState CAVEN_THORN_LOG = WoodGroup.CAVEN_THORN_LOG.get().getDefaultState();
         protected static final BlockState CAVEN_THORN_LEAVES = TreesGroup.CAVEN_THORN_LEAVES.get().getDefaultState();
 
-        protected static final BlockState BLACK_SUCUPIRA_LOG = TreesGroup.BLACK_SUCUPIRA_LOG.get().getDefaultState();
+        protected static final BlockState BLACK_SUCUPIRA_LOG = WoodGroup.BLACK_SUCUPIRA_LOG.get().getDefaultState();
         protected static final BlockState BLACK_SUCUPIRA_LEAVES = TreesGroup.BLACK_SUCUPIRA_LEAVES.get().getDefaultState();
 
         protected static final BlockState BALSA_LOG = TreesGroup.BALSA_LOG.get().getDefaultState();
         protected static final BlockState BALSA_LEAVES = TreesGroup.BALSA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState COCKSPUR_CORAL_LOG = TreesGroup.COCKSPUR_CORAL_LOG.get().getDefaultState();
+        protected static final BlockState COCKSPUR_CORAL_LOG = WoodGroup.COCKSPUR_CORAL_LOG.get().getDefaultState();
         protected static final BlockState COCKSPUR_CORAL_LEAVES = TreesGroup.COCKSPUR_CORAL_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SAPUCAIA_LOG = TreesGroup.SAPUCAIA_LOG.get().getDefaultState();
+        protected static final BlockState SAPUCAIA_LOG = WoodGroup.SAPUCAIA_LOG.get().getDefaultState();
         protected static final BlockState SAPUCAIA_LEAVES = TreesGroup.SAPUCAIA_LEAVES.get().getDefaultState();
 
         protected static final BlockState MONKEY_CAJARANA_LOG = TreesGroup.MONKEY_CAJARANA_LOG.get().getDefaultState();
