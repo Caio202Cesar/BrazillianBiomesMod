@@ -114,7 +114,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    /// White Jequitiba
+    /// Jequitiba
     public static final RegistryObject<Block> WHITE_JEQUITIBA_LEAVES = registerBlock("white_jequitiba_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> WHITE_JEQUITIBA_SAPLING = registerBlock("white_jequitiba_sapling",
@@ -122,6 +122,15 @@ public class TreesGroup {
     @SuppressWarnings("deprecation")
     public static final RegistryObject<Block> POTTED_WHITE_JEQUITIBA_SAPLING = BLOCKS.register("potted_white_jequitiba_sapling",
             () -> new FlowerPotBlock(TreesGroup.WHITE_JEQUITIBA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
+    public static final RegistryObject<Block> PINK_JEQUITIBA_LEAVES = registerBlock("pink_jequitiba_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> PINK_JEQUITIBA_SAPLING = registerBlock("pink_jequitiba_sapling",
+            JequitibaSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_PINK_JEQUITIBA_SAPLING = BLOCKS.register("potted_pink_jequitiba_sapling",
+            () -> new FlowerPotBlock(TreesGroup.PINK_JEQUITIBA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
 
@@ -207,6 +216,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    /// Manaca da Serra
     public static final RegistryObject<Block> MANACA_DA_SERRA_LOG = registerBlock("manaca_da_serra_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_MANACA_DA_SERRA_LOG = registerBlock("stripped_manaca_da_serra_log",
@@ -285,8 +295,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> CARNAUBA_LOG = registerBlock("carnauba_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> CARNAUBA_LEAVES = registerBlock("carnauba_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CARNAUBA_SAPLING = registerBlock("carnauba_sapling",
@@ -297,10 +306,6 @@ public class TreesGroup {
                     .zeroHardnessAndResistance()));
 
 
-    public static final RegistryObject<Block> UMBU_LOG = registerBlock("umbu_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_UMBU_LOG = registerBlock("stripped_umbu_log",
-            ModLogs::new);
 
     public static final RegistryObject<Block> UMBU_LEAVES = registerBlock("umbu_leaves",
             () -> new UmbuLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -319,8 +324,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance()));
 
 
-    public static final RegistryObject<Block> XAXIM_LOG = registerBlock("xaxim_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> XAXIM_LEAVES = registerBlock("xaxim_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> XAXIM_SAPLING = registerBlock("xaxim_sapling",
@@ -331,10 +335,6 @@ public class TreesGroup {
                     .zeroHardnessAndResistance()));
 
 
-    public static final RegistryObject<Block> SAPUCAIA_LOG = registerBlock("sapucaia_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_SAPUCAIA_LOG = registerBlock("stripped_sapucaia_log",
-            ModLogs::new);
 
     public static final RegistryObject<Block> SAPUCAIA_LEAVES = registerBlock("sapucaia_leaves",
             () -> new SapucaiaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
@@ -356,8 +356,8 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> CECROPIA_LOG = registerBlock("cecropia_log",
-            ModLogs::new);
+
+
     public static final RegistryObject<Block> CECROPIA_SILVER_LEAVES = registerBlock("cecropia_silver_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> CECROPIA_SILVER_SAPLING = registerBlock("cecropia_silver_sapling",
@@ -376,8 +376,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> QUEEN_PALM_LOG = registerBlock("queen_palm_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> QUEEN_PALM_LEAVES = registerBlock("queen_palm_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> QUEEN_PALM_SAPLING = registerBlock("queen_palm_sapling",
@@ -388,8 +387,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> JABUTICABA_LOG = registerBlock("jabuticaba_log",
-            JabuticabaLog::new);
+
     public static final RegistryObject<Block> JABUTICABA_FLOWERING_LOG = registerBlock("jabuticaba_flowering_log",
             JabuticabaFloweringLog::new);
     public static final RegistryObject<Block> JABUTICABA_FRUITING_LOG = registerBlock("jabuticaba_fruiting_log",
@@ -405,10 +403,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> BRAZILWOOD_LOG = registerBlock("brazilwood_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_BRAZILWOOD_LOG = registerBlock("stripped_brazilwood_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> BRAZILWOOD_LEAVES = registerBlock("brazilwood_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> BRAZILWOOD_SAPLING = registerBlock("brazilwood_sapling",
@@ -419,8 +414,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> PALMITO_LOG = registerBlock("palmito_log",
-            PalmitoLog::new);
+
     public static final RegistryObject<Block> ACAI_LEAVES = registerBlock("acai_leaves",
             () -> new AcaiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
                     .notSolid().sound(SoundType.PLANT)));
@@ -430,7 +424,6 @@ public class TreesGroup {
     public static final RegistryObject<Block> POTTED_ACAI_SAPLING = BLOCKS.register("potted_acai_sapling",
             () -> new FlowerPotBlock(TreesGroup.ACAI_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
-
     public static final RegistryObject<Block> JUSSARA_LEAVES = registerBlock("jussara_leaves",
             () -> new AcaiLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).tickRandomly()
                     .notSolid().sound(SoundType.PLANT)));
@@ -440,16 +433,10 @@ public class TreesGroup {
     public static final RegistryObject<Block> POTTED_JUSSARA_SAPLING = BLOCKS.register("potted_jussara_sapling",
             () -> new FlowerPotBlock(TreesGroup.JUSSARA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
-
     public static final RegistryObject<Block> ACAI_BUNCH = registerBlock("acai_bunch",
             AcaiBunchBlock::new);
 
 
-
-    public static final RegistryObject<Block> BLACK_SUCUPIRA_LOG = registerBlock("black_sucupira_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_BLACK_SUCUPIRA_LOG = registerBlock("stripped_black_sucupira_log",
-            ModLogs::new);
 
     public static final RegistryObject<Block> BLACK_SUCUPIRA_LEAVES = registerBlock("black_sucupira_leaves",
             () -> new BlackSucupiraLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()

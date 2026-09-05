@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_column",
   "textures": {
-    "end": "brbiomesmod:block/palmito_log_top",
+    "end": "caiocesarbiomes:block/palm_log_top",
     "side": "brbiomesmod:block/palmito_log"
   }
 }
