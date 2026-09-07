@@ -40,77 +40,6 @@ public class BabassuSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 10
-    @Override
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.85f;
-        float maxTemp = 1.6f;
-
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
-            // Only attempt natural growth in suitable biomes
-            super.randomTick(state, world, pos, random);
-        }
-        // If biome temperature is too low/high, do nothing (block natural growth)
-    }
-
-    @Override
-    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-        if (!(worldIn instanceof World)) {
-            return false;
-        }
-
-        World world = (World) worldIn;
-
-        Biome biome = world.getBiome(pos);
-        float temp = biome.getTemperature(pos);
-
-        // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 1.6F;
-        boolean tooCold = temp < 0.85F;
-
-        if (tooHot || tooCold) {
-            return false;
-        }
-
-        return super.canGrow(worldIn, pos, state, isClient);
-    }
-
-    @Override
-    public boolean canUseBonemeal(World worldIn, Random random, BlockPos pos, BlockState state) {
-        // Always allow for the check, we'll block in grow()
-        return true;
-    }
-
-    @Override
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        if (!worldIn.isRemote) {
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.85f, maxTemp = 1.6f;
-
-            if (temp < minTemp) {
-                player.sendMessage(
-                        new StringTextComponent("This biome is too cold for this sapling."),
-                        player.getUniqueID()
-                );
-                return ActionResultType.SUCCESS; // Prevent further processing if needed
-            }
-
-            if (temp > maxTemp) {
-                player.sendMessage(
-                        new StringTextComponent("This biome is too hot for this sapling."),
-                        player.getUniqueID()
-                );
-                return ActionResultType.SUCCESS; // Prevent further processing if needed
-            }
-
-            // If temp is in range, optionally allow normal processing:
-            // return super.onBlockActivated(...);
-            return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
-        }
-        return ActionResultType.SUCCESS;
-    }
-
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 80;
     }
@@ -122,7 +51,11 @@ public class BabassuSapling extends SaplingBlock {
     private static class BabassuTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.BABASSU_PALM2;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.BABASSU_PALM1;
+            } else {
+                return TreeFeatures.BABASSU_PALM2;
+            }
         }
     }
 }
