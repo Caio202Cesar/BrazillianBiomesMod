@@ -1001,7 +1001,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Cocoa Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COCOA_TREE = register("cocoa_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
-                    new SimpleBlockStateProvider(States.JUNGLE_LEAVES),
+                    new SimpleBlockStateProvider(States.COCOA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
