@@ -5,6 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CocoaBlock;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorldReader;
 import org.spongepowered.asm.mixin.Mixin;
@@ -25,7 +26,7 @@ public class CocoaBlockMixin {
     public void isValidPosition(BlockState state, IWorldReader worldIn, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         Block block = worldIn.getBlockState(pos.offset(state.get(HORIZONTAL_FACING))).getBlock();
 
-        if (block.getBlock() == Blocks.JUNGLE_LOG) {
+        if (block.isIn(BlockTags.JUNGLE_LOGS)) {
             cir.cancel();
         }
     }
