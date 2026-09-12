@@ -843,7 +843,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Camu-camu Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> CAMU_CAMU_TREE = register("camu_camu_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CAMU_CAMU_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
                     new SimpleBlockStateProvider(States.CAMU_CAMU_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
@@ -1220,6 +1220,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState PITANGA_LEAVES = TreesGroup.PITANGA_LEAVES.get().getDefaultState();
         protected static final BlockState BLACK_PITANGA_LEAVES = TreesGroup.BLACK_PITANGA_LEAVES.get().getDefaultState();
         protected static final BlockState RIO_GRANDE_CHERRY_LEAVES = TreesGroup.RIO_GRANDE_CHERRY_LEAVES.get().getDefaultState();
+        protected static final BlockState CAMU_CAMU_LEAVES = TreesGroup.CAMU_CAMU_LEAVES.get().getDefaultState();
         //Lauraceae
         protected static final BlockState BRAZILLIAN_SASSAFRAS_LEAVES = TreesGroup.BRAZILLIAN_SASSAFRAS_LEAVES.get().getDefaultState();
         protected static final BlockState CANELA_PRETA_LEAVES = TreesGroup.CANELA_PRETA_LEAVES.get().getDefaultState();
@@ -1301,9 +1302,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState BACURI_LOG = TreesGroup.BACURI_LOG.get().getDefaultState();
         protected static final BlockState BACURI_LEAVES = TreesGroup.BACURI_LEAVES.get().getDefaultState();
-
-        protected static final BlockState CAMU_CAMU_LOG = TreesGroup.CAMU_CAMU_LOG.get().getDefaultState();
-        protected static final BlockState CAMU_CAMU_LEAVES = TreesGroup.CAMU_CAMU_LEAVES.get().getDefaultState();
 
         protected static final BlockState IPE_LOG = WoodGroup.IPE_LOG.get().getDefaultState();
         protected static final BlockState YELLOW_IPE_LEAVES = TreesGroup.YELLOW_IPE_LEAVES.get().getDefaultState();

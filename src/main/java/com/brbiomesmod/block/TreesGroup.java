@@ -370,10 +370,7 @@ public class TreesGroup {
 
 
 
-    public static final RegistryObject<Block> JABUTICABA_FLOWERING_LOG = registerBlock("jabuticaba_flowering_log",
-            JabuticabaFloweringLog::new);
-    public static final RegistryObject<Block> JABUTICABA_FRUITING_LOG = registerBlock("jabuticaba_fruiting_log",
-            JabuticabaFruitingLog::new);
+
 
     public static final RegistryObject<Block> JABUTICABA_LEAVES = registerBlock("jabuticaba_leaves",
             ModLeaves::new);
@@ -768,9 +765,6 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.BACURI_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
-
-    public static final RegistryObject<Block> CAMU_CAMU_LOG = registerBlock("camu_camu_log",
-            ModLogs::new);
 
     public static final RegistryObject<Block> CAMU_CAMU_LEAVES = registerBlock("camu_camu_leaves",
             () -> new CamuCamuLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()

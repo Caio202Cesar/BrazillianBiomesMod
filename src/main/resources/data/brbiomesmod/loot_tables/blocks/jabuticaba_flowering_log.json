@@ -1,13 +1,12 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "brbiomesmod:blocks/jabuticaba_flowering_log",
   "pools": [
     {
       "rolls": 1.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "brbiomesmod:jabuticaba_log"
+          "name": "caiocesarbiomes:myrtaceae_log"
         }
       ]
     }

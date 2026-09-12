@@ -1,6 +1,5 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "brbiomesmod:blocks/jabuticaba_log",
   "pools": [
     {
       "rolls": 1.0,

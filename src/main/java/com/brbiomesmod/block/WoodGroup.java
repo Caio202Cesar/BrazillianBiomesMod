@@ -1,9 +1,7 @@
 package com.brbiomesmod.block;
 
 import com.brbiomesmod.BrazillianBiomesMod;
-import com.brbiomesmod.block.Custom.Log.JabuticabaLog;
-import com.brbiomesmod.block.Custom.Log.ModLogs;
-import com.brbiomesmod.block.Custom.Log.SilkFlossLog;
+import com.brbiomesmod.block.Custom.Log.*;
 import com.brbiomesmod.block.Custom.ModPlanks;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
@@ -70,8 +68,11 @@ public class WoodGroup {
     public static final RegistryObject<Block> KAPOK_WOOD = registerBlock("kapok_wood",
             ModLogs::new);
 
+
+    /// Cacao
     public static final RegistryObject<Block> COCOA_LOG = registerBlock("cocoa_log",
             ModLogs::new);
+
 
     /// Pink Peroba
     public static final RegistryObject<Block> PINK_PEROBA_LOG = registerBlock("pink_peroba_log",
@@ -498,14 +499,12 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-
-    public static final RegistryObject<Block> CAMU_CAMU_WOOD = registerBlock("camu_camu_wood",
-            ModLogs::new);
     public static final RegistryObject<Block> JABUTICABA_LOG = registerBlock("jabuticaba_log",
             JabuticabaLog::new);
-    public static final RegistryObject<Block> JABUTICABA_WOOD = registerBlock("jabuticaba_wood",
-            ModLogs::new);
-
+    public static final RegistryObject<Block> JABUTICABA_FLOWERING_LOG = registerBlock("jabuticaba_flowering_log",
+            JabuticabaFloweringLog::new);
+    public static final RegistryObject<Block> JABUTICABA_FRUITING_LOG = registerBlock("jabuticaba_fruiting_log",
+            JabuticabaFruitingLog::new);
 
 
     public static final RegistryObject<Block> BRAZILWOOD_LOG = registerBlock("brazilwood_log",
