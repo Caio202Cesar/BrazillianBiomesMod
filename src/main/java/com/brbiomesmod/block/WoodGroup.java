@@ -70,6 +70,8 @@ public class WoodGroup {
     public static final RegistryObject<Block> KAPOK_WOOD = registerBlock("kapok_wood",
             ModLogs::new);
 
+    public static final RegistryObject<Block> COCOA_LOG = registerBlock("cocoa_log",
+            ModLogs::new);
 
     /// Pink Peroba
     public static final RegistryObject<Block> PINK_PEROBA_LOG = registerBlock("pink_peroba_log",
