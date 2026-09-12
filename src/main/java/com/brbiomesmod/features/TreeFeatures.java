@@ -7,6 +7,7 @@ import com.brbiomesmod.features.FoliagePlacers.*;
 import com.brbiomesmod.features.TreeDecorators.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CanaryDateFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CoconutFoliagePlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.RoyalPoincianaFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.VirginianaFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.UmbrellaTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures.Placements;
@@ -475,9 +476,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> UMBU_TREE = register("umbu_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.UMBU_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.UMBU_LEAVES),
-                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(1), 2),
-                    new DarkOakTrunkPlacer(4,  2,   1),
-                    new TwoLayerFeature(1,0,2))).setIgnoreVines().build()));
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new UmbrellaTrunkPlacer(3, 4, 2, 5, 4),
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
+                    .setIgnoreVines().build()));
 
     //Lophantera Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> LOPHANTERA_TREE = register("lophantera_tree",
@@ -1102,11 +1104,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Oiticica Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OITICICA_TREE = register("oiticica_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.OITI_LOG),
-                    new SimpleBlockStateProvider(States.OITICICA_LEAVES),
-                    new DarkOakFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
-                    new DarkOakTrunkPlacer(3, 4, 1),
-                    new TwoLayerFeature(1, 0, 1))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OITI_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.OITICICA_LEAVES),
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new UmbrellaTrunkPlacer(3, 4, 2, 5, 4),
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
+                    .setIgnoreVines().build()));
 
     //Gonçalo Alves
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILLIAN_TIGERWOOD_FANCY_TREE = register("brazillian_tigerwood_fancy_tree",
