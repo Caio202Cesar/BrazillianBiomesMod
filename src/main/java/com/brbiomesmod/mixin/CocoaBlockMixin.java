@@ -3,7 +3,6 @@ package com.brbiomesmod.mixin;
 import com.brbiomesmod.block.WoodGroup;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.CocoaBlock;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.math.BlockPos;
@@ -28,6 +27,10 @@ public class CocoaBlockMixin {
 
         if (block.isIn(BlockTags.JUNGLE_LOGS)) {
             cir.cancel();
+        }
+
+        else if (block.getBlock() == WoodGroup.COCOA_LOG.get()) {
+            cir.setReturnValue(true);
         }
     }
 }

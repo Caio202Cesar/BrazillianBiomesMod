@@ -1000,8 +1000,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Cocoa Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COCOA_TREE = register("cocoa_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_LOG),
-                    new SimpleBlockStateProvider(States.JUNGLE_LEAVES),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.COCOA_LOG),
+                    new SimpleBlockStateProvider(States.COCOA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1)))
@@ -1208,26 +1208,30 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final class States {
 
         protected static final BlockState MYRTACEAE_LOG = ModWood.MYRTACEAE_LOG.get().getDefaultState();
+        protected static final BlockState LAUREL_LOG = ModWood.LAUREL_LOG.get().getDefaultState();
+        protected static final BlockState KAPOK_LOG = WoodGroup.KAPOK_LOG.get().getDefaultState();
+        protected static final BlockState COCOA_LOG = WoodGroup.COCOA_LOG.get().getDefaultState();
+        protected static final BlockState PODOCARPUS_LOG = ModWood.PODOCARPUS_LOG.get().getDefaultState();
+        protected static final BlockState JUNGLE_FICUS_LOG = ModWood.JUNGLE_FIG_LOG.get().getDefaultState();
+
+        //Myrtaceae
         protected static final BlockState FEIJOA_LEAVES = TreesGroup.FEIJOA_LEAVES.get().getDefaultState();
         protected static final BlockState CAMBUCI_LEAVES = TreesGroup.CAMBUCI_LEAVES.get().getDefaultState();
         protected static final BlockState PITANGA_LEAVES = TreesGroup.PITANGA_LEAVES.get().getDefaultState();
         protected static final BlockState BLACK_PITANGA_LEAVES = TreesGroup.BLACK_PITANGA_LEAVES.get().getDefaultState();
         protected static final BlockState RIO_GRANDE_CHERRY_LEAVES = TreesGroup.RIO_GRANDE_CHERRY_LEAVES.get().getDefaultState();
-        //protected static final BlockState GRUMIXAMA_LEAVES = TreesGroup.GRUMIXAMA_LEAVES.get().getDefaultState();
-
-        protected static final BlockState LAUREL_LOG = ModWood.LAUREL_LOG.get().getDefaultState();
+        //Lauraceae
         protected static final BlockState BRAZILLIAN_SASSAFRAS_LEAVES = TreesGroup.BRAZILLIAN_SASSAFRAS_LEAVES.get().getDefaultState();
         protected static final BlockState CANELA_PRETA_LEAVES = TreesGroup.CANELA_PRETA_LEAVES.get().getDefaultState();
         protected static final BlockState LAUREL_GUAIKA_LEAVES = TreesGroup.LAUREL_GUAIKA_LEAVES.get().getDefaultState();
         protected static final BlockState NECTANDRA_MEGAPOTAMICA_LEAVES = TreesGroup.NECTANDRA_MEGAPOTAMICA_LEAVES.get().getDefaultState();
-
-        protected static final BlockState KAPOK_LOG = WoodGroup.KAPOK_LOG.get().getDefaultState();
+        //Kapok
         protected static final BlockState KAPOK_LEAVES = TreesGroup.KAPOK_LEAVES.get().getDefaultState();
-
-        protected static final BlockState PODOCARPUS_LOG = ModWood.PODOCARPUS_LOG.get().getDefaultState();
+        //Cocoa
+        protected static final BlockState COCOA_LEAVES = TreesGroup.COCOA_LEAVES.get().getDefaultState();
+        //Podocarpus
         protected static final BlockState PODOCARPUS_LAMBERTII_LEAVES = TreesGroup.PODOCARPUS_LAMBERTII_LEAVES.get().getDefaultState();
-
-        protected static final BlockState JUNGLE_FICUS_LOG = ModWood.JUNGLE_FIG_LOG.get().getDefaultState();
+        //Figs
         protected static final BlockState FICUS_CESTRIFOLIA_LEAVES = TreesGroup.FICUS_CESTRIFOLIA_LEAVES.get().getDefaultState();
 
         protected static final BlockState OITI_LOG = TreesGroup.OITI_LOG.get().getDefaultState();

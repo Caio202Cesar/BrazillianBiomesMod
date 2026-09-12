@@ -122,6 +122,7 @@ public class BrazillianBiomesMod {
                     .put(WoodGroup.SILK_FLOSS_LOG.get(), WoodGroup.SILK_FLOSS_THORNLESS_LOG.get())
                     .put(WoodGroup.SILK_FLOSS_THORNLESS_LOG.get(), Blocks.STRIPPED_JUNGLE_LOG)
                     .put(WoodGroup.KAPOK_LOG.get(), Blocks.STRIPPED_JUNGLE_LOG)
+                    .put(WoodGroup.COCOA_LOG.get(), Blocks.STRIPPED_JUNGLE_LOG)
                     .put(TreesGroup.SANDBOX_TREE_LOG.get(), TreesGroup.SANDBOX_TREE_THORNLESS_LOG.get())
                     .put(TreesGroup.SANDBOX_TREE_THORNLESS_LOG.get(), TreesGroup.STRIPPED_SANDBOX_TREE_LOG.get())
                     .put(WoodGroup.SAPUCAIA_LOG.get(), WoodGroup.STRIPPED_SAPUCAIA_LOG.get())
