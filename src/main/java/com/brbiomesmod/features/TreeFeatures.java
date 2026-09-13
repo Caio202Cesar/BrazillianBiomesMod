@@ -131,9 +131,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> KAPOK_TREE = register("kapok_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.KAPOK_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.KAPOK_LEAVES),
-                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new MegaJungleTrunkPlacer(10, 20, 4),
-                    new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new UmbrellaTrunkPlacer(20, 10, 5, 5, 5),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty()))).setDecorators(ImmutableList.of(
                     TrunkVineTreeDecorator.INSTANCE, LeaveVineTreeDecorator.field_236871_b_)).setIgnoreVines().build()));
 
     //Black Jurema Tree
