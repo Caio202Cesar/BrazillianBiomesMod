@@ -34,7 +34,7 @@ public class CocoaLog extends RotatedPillarBlock {
 
         for (Direction direction : Direction.Plane.HORIZONTAL) {
 
-            if (random.nextFloat() <= 0.25F) {
+            if (random.nextFloat() <= 0.096F) {
 
                 Direction opposite = direction.getOpposite();
 
