@@ -1004,8 +1004,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new SimpleBlockStateProvider(States.COCOA_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1)))
-                    .setDecorators(ImmutableList.of(new CocoaTreeDecorator(0.98F))).setIgnoreVines().build()));
+                    new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+                    //.setDecorators(ImmutableList.of(new CocoaTreeDecorator(0.98F)))
 
     //Buriti Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BURITI_PALM = register("buriti_tree",

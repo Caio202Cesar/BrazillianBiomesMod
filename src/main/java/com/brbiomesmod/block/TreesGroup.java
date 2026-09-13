@@ -369,7 +369,10 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-
+    public static final RegistryObject<Block> COCOA_LEAVES = registerBlock("cocoa_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> COCOA_SAPLING = registerBlock("cocoa_sapling",
+            CocoaSapling::new);
 
 
     public static final RegistryObject<Block> JABUTICABA_LEAVES = registerBlock("jabuticaba_leaves",

@@ -1,5 +1,6 @@
 package com.brbiomesmod.block.Custom.Log;
 
+import com.brbiomesmod.block.WoodGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.entity.item.ItemEntity;
@@ -10,6 +11,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.ToolType;
 
@@ -19,6 +21,18 @@ public class JabuticabaFruitingLog extends RotatedPillarBlock {
     public JabuticabaFruitingLog() {
         super(AbstractBlock.Properties.from(Blocks.OAK_LOG).sound(SoundType.WOOD).hardnessAndResistance(2.0f)
                 .harvestTool(ToolType.AXE));
+    }
+
+    @Override
+    public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
+        super.randomTick(state, worldIn, pos, random);
+
+        double chance = 0.07;
+
+        if (random.nextDouble() < chance) {
+            worldIn.setBlockState(pos, WoodGroup.JABUTICABA_LOG.get().getDefaultState());
+
+        }
     }
 
     @Override

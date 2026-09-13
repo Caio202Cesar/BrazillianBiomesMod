@@ -1,6 +1,7 @@
 package com.brbiomesmod.block.Custom.Log;
 
 import com.brbiomesmod.block.TreesGroup;
+import com.brbiomesmod.block.WoodGroup;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.RotatedPillarBlock;
@@ -39,7 +40,7 @@ public class JabuticabaLog extends RotatedPillarBlock {
         double chance = 0.6;
 
         if (random.nextDouble() < chance) {
-            worldIn.setBlockState(pos, TreesGroup.JABUTICABA_FLOWERING_LOG.get().getDefaultState());
+            worldIn.setBlockState(pos, WoodGroup.JABUTICABA_FLOWERING_LOG.get().getDefaultState());
 
         }
     }
