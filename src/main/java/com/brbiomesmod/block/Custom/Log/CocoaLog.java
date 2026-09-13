@@ -10,11 +10,9 @@ import net.minecraftforge.common.ToolType;
 
 import java.util.Random;
 
-import static net.minecraft.state.properties.BlockStateProperties.HORIZONTAL_FACING;
-
 public class CocoaLog extends RotatedPillarBlock {
     public CocoaLog() {
-        super(Properties.from(Blocks.OAK_LOG).sound(SoundType.WOOD).hardnessAndResistance(2.0f)
+        super(Properties.from(Blocks.OAK_LOG).sound(SoundType.WOOD).hardnessAndResistance(2.0f).tickRandomly()
                 .harvestTool(ToolType.AXE));
     }
 
@@ -34,12 +32,23 @@ public class CocoaLog extends RotatedPillarBlock {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         super.randomTick(state, worldIn, pos, random);
 
-        if (random.nextFloat() < 0.001f) {
+        for (Direction direction : Direction.Plane.HORIZONTAL) {
 
-            BlockPos sidePosition = pos.offset(state.get(HORIZONTAL_FACING));
+            if (random.nextFloat() <= 0.25F) {
 
-            worldIn.setBlockState(sidePosition, Blocks.COCOA.getDefaultState(), 2);
+                Direction opposite = direction.getOpposite();
 
+                BlockPos cocoaPos = pos.offset(opposite);
+
+                if (worldIn.getBlockState(cocoaPos).isAir()) {
+
+                    BlockState cocoaState = Blocks.COCOA.getDefaultState()
+                            .with(CocoaBlock.AGE, random.nextInt(3))
+                            .with(CocoaBlock.HORIZONTAL_FACING, direction);
+
+                    worldIn.setBlockState(cocoaPos, cocoaState, 3);
+                }
+            }
         }
     }
 
