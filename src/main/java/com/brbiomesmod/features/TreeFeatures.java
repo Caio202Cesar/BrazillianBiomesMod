@@ -1520,9 +1520,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Mata dos cocais
     public static final ConfiguredFeature<?, ?> COCAL_FOREST_PALMS = register("cocal_forest_palms",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.5F),
-                    BURITI_PALM_WITH_VINE.withChance(0.008F), OITICICA_TREE.withChance(0.089F),
-                    CARNAUBA_PALM.withChance(0.5F), CARNAUBA_PALM_WITH_PASSIONVINE.withChance(0.007F), BABASSU_PALM1_WITH_VINE.withChance(0.0047F)),
-                    BABASSU_PALM1)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                    BURITI_PALM_WITH_VINE.withChance(0.008F), OITICICA_TREE.withChance(0.089F), BABASSU_PALM2.withChance(0.56F),
+                    CARNAUBA_PALM.withChance(0.5F), CARNAUBA_PALM_WITH_PASSIONVINE.withChance(0.007F), BABASSU_PALM1.withChance(0.0047F)),
+                    BABASSU_PALM1_WITH_VINE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                     .configure(new AtSurfaceWithExtraConfig(2, 0.4F, 3))));
     public static final ConfiguredFeature<?, ?> COCAL_FOREST_TREES = register("cocal_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(

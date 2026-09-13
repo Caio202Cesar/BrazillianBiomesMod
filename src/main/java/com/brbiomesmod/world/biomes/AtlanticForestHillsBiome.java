@@ -26,7 +26,7 @@ public static final DeferredRegister<Biome> BIOMES
         = DeferredRegister.create(ForgeRegistries.BIOMES, BrazillianBiomesMod.MOD_ID);
 
 private static ConfiguredSurfaceBuilder<?> DefaultSurfaceBuilder;
-public static final RegistryObject<Biome> ATLANTIC_FOREST_HILLS = BIOMES.register("atlantic_forest_hills",
+public static final RegistryObject<Biome> SERRA_DO_MAR_HIGHLAND_FOREST = BIOMES.register("serra_do_mar_highland_forest",
         () -> makeAtlanticForestBiome(() -> ConfiguredSurfaceBuilders.GRASS, 2.0f, 0.25f));
 
 private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBuilder<?>> surfaceBuilder, float depth, float scale) {
