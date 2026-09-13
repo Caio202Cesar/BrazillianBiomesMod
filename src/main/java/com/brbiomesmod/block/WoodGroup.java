@@ -71,7 +71,7 @@ public class WoodGroup {
 
     /// Cacao
     public static final RegistryObject<Block> COCOA_LOG = registerBlock("cocoa_log",
-            ModLogs::new);
+            CocoaLog::new);
 
 
     /// Pink Peroba
