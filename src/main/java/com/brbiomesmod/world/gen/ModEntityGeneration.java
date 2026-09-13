@@ -97,7 +97,7 @@ public class ModEntityGeneration {
             ));
         }
 
-        if (event.getName().equals(AtlanticForestHillsBiome.ATLANTIC_FOREST_HILLS.get().getRegistryName())) {
+        if (event.getName().equals(AtlanticForestHillsBiome.SERRA_DO_MAR_HIGHLAND_FOREST.get().getRegistryName())) {
 
             event.getSpawns().getSpawner(
                     ModEntityTypes.TOCO_TOUCAN_ENTITY.get().getClassification()
@@ -309,7 +309,7 @@ public class ModEntityGeneration {
             ));
         }
 
-        if (event.getName().equals(AtlanticForestHillsBiome.ATLANTIC_FOREST_HILLS.get().getRegistryName())) {
+        if (event.getName().equals(AtlanticForestHillsBiome.SERRA_DO_MAR_HIGHLAND_FOREST.get().getRegistryName())) {
 
             event.getSpawns().getSpawner(
                     ModEntityTypes.CAPYBARA_ENTITY.get().getClassification()
