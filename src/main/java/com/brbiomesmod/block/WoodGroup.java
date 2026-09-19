@@ -149,6 +149,11 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
+    /// Spondias
+    public static final RegistryObject<Block> YELLOW_MOMBIN_LOG = registerBlock("yellow_mombin_log",
+            ModLogs::new);
+
+
     /// Manaca da Serra
     public static final RegistryObject<Block> MANACA_DA_SERRA_LOG = registerBlock("manaca_da_serra_log",
             ModLogs::new);
