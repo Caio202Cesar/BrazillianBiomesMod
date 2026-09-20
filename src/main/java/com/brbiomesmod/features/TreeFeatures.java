@@ -7,7 +7,6 @@ import com.brbiomesmod.features.FoliagePlacers.*;
 import com.brbiomesmod.features.TreeDecorators.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CanaryDateFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CoconutFoliagePlacer;
-import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.RoyalPoincianaFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.VirginianaFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.UmbrellaTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures.Placements;
@@ -29,9 +28,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.OptionalInt;
-
-import static com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures.JAPANESE_MAPLE_TREE;
-import static com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures.register;
 
 public abstract class TreeFeatures implements IFeatureConfig {
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, BrazillianBiomesMod.MOD_ID);
@@ -1252,7 +1248,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState PEQUI_LOG = TreesGroup.PEQUI_LOG.get().getDefaultState();
         protected static final BlockState PEQUI_LEAVES = TreesGroup.PEQUI_LEAVES.get().getDefaultState();
 
-        protected static final BlockState YELLOW_MOMBIN_LOG = TreesGroup.YELLOW_MOMBIN_LOG.get().getDefaultState();
+        protected static final BlockState YELLOW_MOMBIN_LOG = WoodGroup.YELLOW_MOMBIN_LOG.get().getDefaultState();
         protected static final BlockState YELLOW_MOMBIN_LEAVES = TreesGroup.YELLOW_MOMBIN_LEAVES.get().getDefaultState();
 
         protected static final BlockState PURPLEHEART_LOG = TreesGroup.PURPLEHEART_LOG.get().getDefaultState();

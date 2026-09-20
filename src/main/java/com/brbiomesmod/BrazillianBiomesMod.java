@@ -145,7 +145,6 @@ public class BrazillianBiomesMod {
                     .put(TreesGroup.SOMBREIRO_LOG.get(), TreesGroup.STRIPPED_SOMBREIRO_LOG.get())
                     .put(TreesGroup.PURPLEHEART_LOG.get(), TreesGroup.STRIPPED_PURPLEHEART_LOG.get())
                     .put(TreesGroup.GUAPURUVU_LOG.get(), TreesGroup.STRIPPED_GUAPURUVU_LOG.get())
-                    .put(TreesGroup.YELLOW_MOMBIN_LOG.get(), TreesGroup.STRIPPED_YELLOW_MOMBIN_LOG.get())
                     .put(TreesGroup.PEQUI_LOG.get(), TreesGroup.STRIPPED_PEQUI_LOG.get())
                     .put(TreesGroup.HUMBOLDT_WILLOW_LOG.get(), ModWood.STRIPPED_WILLOW_LOG.get())
                     .put(TreesGroup.OITI_LOG.get(), TreesGroup.STRIPPED_OITI_LOG.get())
