@@ -30,6 +30,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.OptionalInt;
 
+import static com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures.JAPANESE_MAPLE_TREE;
+import static com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.TreeFeatures.register;
+
 public abstract class TreeFeatures implements IFeatureConfig {
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, BrazillianBiomesMod.MOD_ID);
 
@@ -1629,6 +1632,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.076F)), BLACK_JUREMA_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(1, 0.1F, 2))));
+
+    public static final ConfiguredFeature<?, ?> BLACK_JUREMA = register("black_jurema",
+            BLACK_JUREMA_TREE.withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                    .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(8, 0.1F, 2))));
 
     //Restinga vegetation
     public static final ConfiguredFeature<?, ?> RESTINGA_TREES = register("restinga_trees",

@@ -2,6 +2,7 @@ package com.brbiomesmod.world.biomes;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.features.ModDefaultBiomeFeatures;
+import com.brbiomesmod.features.TreeFeatures;
 import com.brbiomesmod.world.biomes.Util.ModConfiguredSurfaceBuilders;
 import com.brbiomesmod.world.gen.ModOreGeneration;
 import net.minecraft.client.audio.BackgroundMusicTracks;
@@ -65,8 +66,8 @@ private static Biome makeCaatingaBiome(final Supplier<ConfiguredSurfaceBuilder<?
     ModDefaultBiomeFeatures.withTurkTurbanCactus(biomegenerationsettings$builder);
     ModDefaultBiomeFeatures.withScrubPinkPeeperTrees(biomegenerationsettings$builder);
 
+    biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, TreeFeatures.BLACK_JUREMA);
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
-
 
     return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.DESERT).depth(depth).scale(scale)
             .temperature(2.0F).downfall(0.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4159204)
