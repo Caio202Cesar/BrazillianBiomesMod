@@ -8,7 +8,9 @@ import com.brbiomesmod.features.TreeDecorators.*;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CanaryDateFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CoconutFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.VirginianaFoliagePlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.AncientMetrosiderosTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.UmbrellaTrunkPlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures.Placements;
 import com.caiocesarmods.caiocesarbiomes.block.ModWood;
 import com.google.common.collect.ImmutableList;
@@ -617,6 +619,15 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ANCIENT_IMBUIA_TREE = register("ancient_imbuia_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(States.IMBUIA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new AncientMetrosiderosTrunkPlacer(5, 2, 1, 7, 5),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
+                            com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures.Placements.SPANISH_MOSS_PLACEMENT, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025))
+                    .setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> IMBUIA_FANCY_TREE_VINE = register("imbuia_fancy_tree_with_vine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IMBUIA_LOG),
                     new SimpleBlockStateProvider(States.IMBUIA_LEAVES),
@@ -1585,11 +1596,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .configure(new AtSurfaceWithExtraConfig(13, 0.4F, 1))));
     public static final ConfiguredFeature<?, ?> OCOTEA_TREES = register("ocotea_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_SASSAFRAS_TREE.withChance(0.2F),
-                            BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.1F), IMBUIA_TREE.withChance(0.3F),
-                            IMBUIA_FANCY_TREE_VINE.withChance(0.00898F),
-                            BRAZILLIAN_SASSAFRAS_TREE_WITH_PURPLE_PASSIONVINE.withChance(0.00897F),
-                            SUBTROPICAL_YELLOW_IPE_TREE.withChance(0.1F)),
-                            IMBUIA_FANCY_TREE))
+                            BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.2F), IMBUIA_TREE.withChance(0.2F),
+                            IMBUIA_FANCY_TREE_VINE.withChance(0.2F),
+                            BRAZILLIAN_SASSAFRAS_TREE_WITH_PURPLE_PASSIONVINE.withChance(0.2F),
+                            SUBTROPICAL_YELLOW_IPE_TREE.withChance(0.2F), IMBUIA_FANCY_TREE.withChance(0.2F)),
+                            ANCIENT_IMBUIA_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> MATE_TREES = register("mate_trees",

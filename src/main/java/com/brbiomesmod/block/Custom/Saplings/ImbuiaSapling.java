@@ -4,6 +4,7 @@ import com.caiocesarmods.caiocesarbiomes.Seasons.Season;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -23,6 +24,7 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 public class ImbuiaSapling extends SaplingBlock {
@@ -184,7 +186,7 @@ public class ImbuiaSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class ImbuiaTree extends Tree {
+    private static class ImbuiaTree extends BigTree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
             if (random.nextInt(10) == 0) {
@@ -192,6 +194,12 @@ public class ImbuiaSapling extends SaplingBlock {
             } else {
                 return TreeFeatures.IMBUIA_TREE;
             }
+        }
+
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            return TreeFeatures.ANCIENT_IMBUIA_TREE;
         }
     }
 }
