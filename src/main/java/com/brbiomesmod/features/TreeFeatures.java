@@ -626,7 +626,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new AncientMetrosiderosTrunkPlacer(5, 2, 1, 7, 5),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
-                            com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures.Placements.SPANISH_MOSS_PLACEMENT, ModFeatures.Placements.CREEPING_FIG_VINE_TRUNK_PLACEMENT025))
+                            com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures.Placements.SPANISH_MOSS_PLACEMENT))
                     .setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> IMBUIA_FANCY_TREE_VINE = register("imbuia_fancy_tree_with_vine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IMBUIA_LOG),
@@ -1529,11 +1529,11 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Mata dos cocais
     public static final ConfiguredFeature<?, ?> COCAL_FOREST_PALMS = register("cocal_forest_palms",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.5F),
-                    BURITI_PALM_WITH_VINE.withChance(0.008F), OITICICA_TREE.withChance(0.089F), BABASSU_PALM2.withChance(0.56F),
-                    CARNAUBA_PALM.withChance(0.5F), CARNAUBA_PALM_WITH_PASSIONVINE.withChance(0.007F), BABASSU_PALM1.withChance(0.0047F)),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BURITI_PALM.withChance(0.2F),
+                    BURITI_PALM_WITH_VINE.withChance(0.2F), OITICICA_TREE.withChance(0.2F), BABASSU_PALM2.withChance(0.2F),
+                    CARNAUBA_PALM.withChance(0.2F), CARNAUBA_PALM_WITH_PASSIONVINE.withChance(0.2F), BABASSU_PALM1.withChance(0.2F)),
                     BABASSU_PALM1_WITH_VINE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(2, 0.4F, 3))));
+                    .configure(new AtSurfaceWithExtraConfig(4, 0.4F, 3))));
     public static final ConfiguredFeature<?, ?> COCAL_FOREST_TREES = register("cocal_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             SAPUCAIA_TREE.withChance(0.34F), LARGE_CECROPIA_TREE.withChance(0.2F), PEQUI_TREE.withChance(0.25F),
@@ -1588,26 +1588,19 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .configure(new AtSurfaceWithExtraConfig(3, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> PARANA_PINE_TREES = register("parana_pine_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PARANA_PINE_TREE_YOUNG.withChance(0.2F),
-                    PARANA_PINE_TREE.withChance(0.4F), XAXIM_TREE.withChance(0.4F),
-                    PARANA_PINE_TREE_VINE.withChance(0.00167F), PARANA_PINE_TREE_VINE2.withChance(0.0027F),
-                    PARANA_PINE_TREE_YOUNG_VINE.withChance(0.00537F), PODOCARPUS_LAMBERTII_TREE.withChance(0.089F),
-                    PODOCARPUS_LAMBERTII_FANCY_TREE.withChance(0.2F), PODOCARPUS_LAMBERTII_BIG_TREE.withChance(0.069F)),
-                    PARANA_PINE_TREE2)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(13, 0.4F, 1))));
-    public static final ConfiguredFeature<?, ?> OCOTEA_TREES = register("ocotea_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_SASSAFRAS_TREE.withChance(0.2F),
-                            BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.2F), IMBUIA_TREE.withChance(0.2F),
-                            IMBUIA_FANCY_TREE_VINE.withChance(0.2F),
-                            BRAZILLIAN_SASSAFRAS_TREE_WITH_PURPLE_PASSIONVINE.withChance(0.2F),
-                            SUBTROPICAL_YELLOW_IPE_TREE.withChance(0.2F), IMBUIA_FANCY_TREE.withChance(0.2F)),
-                            ANCIENT_IMBUIA_TREE))
+                    PARANA_PINE_TREE.withChance(0.4F), PARANA_PINE_TREE_VINE.withChance(0.00167F), PARANA_PINE_TREE_VINE2.withChance(0.0027F),
+                    PARANA_PINE_TREE_YOUNG_VINE.withChance(0.00537F)), PARANA_PINE_TREE2))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                            .configure(new AtSurfaceWithExtraConfig(10, 0.1F, 1))));
-    public static final ConfiguredFeature<?, ?> MATE_TREES = register("mate_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(YERBA_MATE_FANCY_TREE.withChance(0.1F)),
-                    YERBA_MATE_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
-                    .configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
-
+                    .configure(new AtSurfaceWithExtraConfig(13, 0.4F, 1))));
+    public static final ConfiguredFeature<?, ?> ARAUCARIA_FOREST_TREES = register("araucaria_forest_trees",
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_SASSAFRAS_TREE.withChance(0.2F),
+                            BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.2F), IMBUIA_TREE.withChance(0.2F), YERBA_MATE_FANCY_TREE.withChance(0.2F),
+                            YERBA_MATE_TREE.withChance(0.2F), XAXIM_TREE.withChance(0.2F), PODOCARPUS_LAMBERTII_TREE.withChance(0.2F),
+                            PODOCARPUS_LAMBERTII_BIG_TREE.withChance(0.2F), PODOCARPUS_LAMBERTII_FANCY_TREE.withChance(0.2F),
+                            IMBUIA_FANCY_TREE_VINE.withChance(0.2F), BRAZILLIAN_SASSAFRAS_TREE_WITH_PURPLE_PASSIONVINE.withChance(0.2F),
+                            SUBTROPICAL_YELLOW_IPE_TREE.withChance(0.2F), IMBUIA_FANCY_TREE.withChance(0.2F)), ANCIENT_IMBUIA_TREE))
+                    .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
+                            .configure(new AtSurfaceWithExtraConfig(6, 0.1F, 1))));
 
     //Trumpet Trees
     public static final ConfiguredFeature<?, ?> SAVANNA_TRUMPET_TREES = register("savanna_trumpet_trees",

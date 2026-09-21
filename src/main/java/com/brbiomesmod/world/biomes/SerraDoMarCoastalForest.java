@@ -67,7 +67,7 @@ private static Biome makeAtlanticForestBiome(final Supplier<ConfiguredSurfaceBui
     biomegenerationsettings$builder.withFeature(GenerationStage.Decoration.LAKES, Features.LAKE_LAVA);
 
     return (new Biome.Builder()).precipitation(Biome.RainType.RAIN).category(Biome.Category.BEACH).depth(depth).scale(scale)
-            .temperature(0.89F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(1352389)
+            .temperature(0.92F).downfall(1.0F).setEffects((new BiomeAmbience.Builder()).setWaterColor(1352389)
                     .setWaterFogColor(1352389).withSkyColor(4169700).withFoliageColor(5877296)
                     .withGrassColor(7979098).setFogColor(13882323)
                     .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
