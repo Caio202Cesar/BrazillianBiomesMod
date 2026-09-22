@@ -162,7 +162,9 @@
     "brbiomesmod:podocarpus_lambertii_leaves",
     "brbiomesmod:cupuacu_flowering_leaves",
     "brbiomesmod:ficus_cestrifolia_leaves",
-    "brbiomesmod:cocoa_leaves"
+    "brbiomesmod:cocoa_leaves",
+    "brbiomesmod:bracatinga_leaves",
+    "brbiomesmod:bracatinga_blossom"
 
   ]
 }
