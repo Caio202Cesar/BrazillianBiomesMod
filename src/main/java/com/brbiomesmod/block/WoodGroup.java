@@ -149,7 +149,8 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-    /// Spondias
+    /// Lightwood
+    // Spondias
     public static final RegistryObject<Block> YELLOW_MOMBIN_LOG = registerBlock("yellow_mombin_log",
             ModLogs::new);
     public static final RegistryObject<Block> YELLOW_MOMBIN_WOOD = registerBlock("yellow_mombin_wood",
@@ -158,12 +159,10 @@ public class WoodGroup {
             ModLogs::new);
     public static final RegistryObject<Block> UMBU_WOOD = registerBlock("umbu_wood",
             ModLogs::new);
-
-
-    /// Manaca da Serra
+    // Manaca da Serra
     public static final RegistryObject<Block> MANACA_DA_SERRA_LOG = registerBlock("manaca_da_serra_log",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_MANACA_DA_SERRA_LOG = registerBlock("stripped_manaca_da_serra_log",
+    public static final RegistryObject<Block> MANACA_DA_SERRA_WOOD = registerBlock("manaca_da_serra_wood",
             ModLogs::new);
 
 
@@ -439,28 +438,6 @@ public class WoodGroup {
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> SAPUCAIA_FENCE_GATE = registerBlock("sapucaia_fence_gate",
-            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-
-
-
-    public static final RegistryObject<Block> MANACA_DA_SERRA_WOOD = registerBlock("manaca_da_serra_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_MANACA_DA_SERRA_WOOD = registerBlock("stripped_manaca_da_serra_wood",
-            ModLogs::new);
-
-    public static final RegistryObject<Block> MANACA_DA_SERRA_PLANKS = registerBlock("manaca_da_serra_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> MANACA_DA_SERRA_SLAB = registerBlock("manaca_da_serra_slab",
-            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> MANACA_DA_SERRA_STAIRS = registerBlock("manaca_da_serra_stairs",
-            () -> new StairsBlock(() -> MANACA_DA_SERRA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> MANACA_DA_SERRA_FENCE = registerBlock("manaca_da_serra_fence",
-            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> MANACA_DA_SERRA_FENCE_GATE = registerBlock("manaca_da_serra_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
