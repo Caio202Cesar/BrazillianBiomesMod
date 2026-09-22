@@ -152,6 +152,12 @@ public class WoodGroup {
     /// Spondias
     public static final RegistryObject<Block> YELLOW_MOMBIN_LOG = registerBlock("yellow_mombin_log",
             ModLogs::new);
+    public static final RegistryObject<Block> YELLOW_MOMBIN_WOOD = registerBlock("yellow_mombin_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> UMBU_LOG = registerBlock("umbu_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> UMBU_WOOD = registerBlock("umbu_wood",
+            ModLogs::new);
 
 
     /// Manaca da Serra
@@ -681,13 +687,6 @@ public class WoodGroup {
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
-
-    public static final RegistryObject<Block> YELLOW_MOMBIN_WOOD = registerBlock("yellow_mombin_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> UMBU_LOG = registerBlock("umbu_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> UMBU_WOOD = registerBlock("umbu_wood",
-            ModLogs::new);
 
 
     public static final RegistryObject<Block> PEQUI_WOOD = registerBlock("pequi_wood",
