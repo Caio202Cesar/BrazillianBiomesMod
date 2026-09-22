@@ -484,29 +484,6 @@ public class WoodGroup {
             ModLogs::new);
 
 
-    public static final RegistryObject<Block> UMBU_LOG = registerBlock("umbu_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_UMBU_LOG = registerBlock("stripped_umbu_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> UMBU_WOOD = registerBlock("umbu_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_UMBU_WOOD = registerBlock("stripped_umbu_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> UMBU_PLANKS = registerBlock("umbu_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> UMBU_SLAB = registerBlock("umbu_slab",
-            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> UMBU_STAIRS = registerBlock("umbu_stairs",
-            () -> new StairsBlock(() -> UMBU_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> UMBU_FENCE = registerBlock("umbu_fence",
-            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> UMBU_FENCE_GATE = registerBlock("umbu_fence_gate",
-            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-
 
     public static final RegistryObject<Block> JABUTICABA_LOG = registerBlock("jabuticaba_log",
             JabuticabaLog::new);
@@ -707,10 +684,10 @@ public class WoodGroup {
 
     public static final RegistryObject<Block> YELLOW_MOMBIN_WOOD = registerBlock("yellow_mombin_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_YELLOW_MOMBIN_WOOD = registerBlock("stripped_yellow_mombin_wood",
+    public static final RegistryObject<Block> UMBU_LOG = registerBlock("umbu_log",
             ModLogs::new);
-    public static final RegistryObject<Block> YELLOW_MOMBIN_PLANKS = registerBlock("yellow_mombin_planks",
-            ModPlanks::new);
+    public static final RegistryObject<Block> UMBU_WOOD = registerBlock("umbu_wood",
+            ModLogs::new);
 
 
     public static final RegistryObject<Block> PEQUI_WOOD = registerBlock("pequi_wood",
