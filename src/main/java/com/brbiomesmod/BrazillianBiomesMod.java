@@ -112,6 +112,8 @@ public class BrazillianBiomesMod {
                     .put(WoodGroup.CASHEW_LOG.get(), WoodGroup.STRIPPED_CASHEW_LOG.get())
                     .put(TreesGroup.CAGAITA_LOG.get(), ModWood.STRIPPED_MYRTACEAE_LOG.get())
                     .put(WoodGroup.IMBUIA_LOG.get(), ModWood.STRIPPED_BLACK_WALNUT_LOG.get())
+                    .put(WoodGroup.BRACATINGA_LOG.get(), ModWood.STRIPPED_LAUREL_LOG.get())
+                    .put(WoodGroup.BRACATINGA_WOOD.get(), ModWood.STRIPPED_LAUREL_WOOD.get())
                     .put(WoodGroup.IPE_LOG.get(), WoodGroup.STRIPPED_IPE_LOG.get())
                     .put(WoodGroup.WHITE_JEQUITIBA_LOG.get(), WoodGroup.STRIPPED_WHITE_JEQUITIBA_LOG.get())
                     .put(TreesGroup.LOPHANTERA_LOG.get(), TreesGroup.STRIPPED_LOPHANTERA_LOG.get())

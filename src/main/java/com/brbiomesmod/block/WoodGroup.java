@@ -181,6 +181,11 @@ public class WoodGroup {
     public static final RegistryObject<Block> IMBUIA_WOOD = registerBlock("imbuia_wood",
             ModLogs::new);
 
+    /// Bracatinga
+    public static final RegistryObject<Block> BRACATINGA_LOG = registerBlock("bracatinga_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BRACATINGA_WOOD = registerBlock("bracatinga_wood",
+            ModLogs::new);
 
 
     /// Black Jurema
@@ -192,7 +197,6 @@ public class WoodGroup {
             ModLogs::new);
     public static final RegistryObject<Block> CAVEN_THORN_WOOD = registerBlock("caven_thorn_wood",
             ModLogs::new);
-
 
 
     /// Palm

@@ -207,7 +207,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
-    //Yerba maté Tree
+    //Yerba mate Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YERBA_MATE_TREE = register("yerba_mate_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ILEX_LOG),
                     new SimpleBlockStateProvider(States.YERBA_MATE_LEAVES),
@@ -220,6 +220,15 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
+    //Bracatinga
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRACATINGA_TREE = register("bracatinga_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRACATINGA_LOG),
+                    new SimpleBlockStateProvider(States.BRACATINGA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(4, 17, 0),
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4))))
+                    .setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Feijoa Shrub
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FEIJOA_SHRUB = register("feijoa_shrub",
@@ -1302,6 +1311,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState ILEX_LOG = ModWood.ILEX_LOG.get().getDefaultState();
         protected static final BlockState YERBA_MATE_LEAVES = TreesGroup.YERBA_MATE_LEAVES.get().getDefaultState();
 
+        protected static final BlockState BRACATINGA_LOG = WoodGroup.BRACATINGA_LOG.get().getDefaultState();
+        protected static final BlockState BRACATINGA_LEAVES = TreesGroup.BRACATINGA_LEAVES.get().getDefaultState();
+
         protected static final BlockState BLACK_JUREMA_LOG = WoodGroup.BLACK_JUREMA_LOG.get().getDefaultState();
         protected static final BlockState BLACK_JUREMA_LEAVES = TreesGroup.BLACK_JUREMA_LEAVES.get().getDefaultState();
 
@@ -1596,7 +1608,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_SASSAFRAS_TREE.withChance(0.2F),
                             BRAZILLIAN_SASSAFRAS_FANCY_TREE.withChance(0.2F), IMBUIA_TREE.withChance(0.2F), YERBA_MATE_FANCY_TREE.withChance(0.2F),
                             YERBA_MATE_TREE.withChance(0.2F), XAXIM_TREE.withChance(0.2F), PODOCARPUS_LAMBERTII_TREE.withChance(0.2F),
-                            PODOCARPUS_LAMBERTII_BIG_TREE.withChance(0.2F), PODOCARPUS_LAMBERTII_FANCY_TREE.withChance(0.2F),
+                            PODOCARPUS_LAMBERTII_BIG_TREE.withChance(0.2F), BRACATINGA_TREE.withChance(0.2F), PODOCARPUS_LAMBERTII_FANCY_TREE.withChance(0.2F),
                             IMBUIA_FANCY_TREE_VINE.withChance(0.2F), BRAZILLIAN_SASSAFRAS_TREE_WITH_PURPLE_PASSIONVINE.withChance(0.2F),
                             SUBTROPICAL_YELLOW_IPE_TREE.withChance(0.2F), IMBUIA_FANCY_TREE.withChance(0.2F)), ANCIENT_IMBUIA_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA

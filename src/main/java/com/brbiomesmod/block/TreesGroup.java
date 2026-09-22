@@ -1265,6 +1265,16 @@ public class TreesGroup {
             () -> new FlowerPotBlock(TreesGroup.PARANA_PINE_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance().notSolid()));
 
+    /// Bracatinga
+    public static final RegistryObject<Block> BRACATINGA_BLOSSOM = registerBlock("bracatinga_blossom",
+            () -> new BracatingaBlossom(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRACATINGA_LEAVES));
+    public static final RegistryObject<Block> BRACATINGA_LEAVES = registerBlock("bracatinga_leaves",
+            () -> new BracatingaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.BRACATINGA_BLOSSOM));
+    public static final RegistryObject<Block> BRACATINGA_SAPLING = registerBlock("bracatinga_sapling",
+            BracatingaSapling::new);
+
 
     ///Ibatingui
 
