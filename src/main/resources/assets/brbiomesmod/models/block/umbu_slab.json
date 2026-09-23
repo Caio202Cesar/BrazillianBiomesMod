@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "brbiomesmod:block/umbu_planks",
-    "top": "brbiomesmod:block/umbu_planks",
-    "side": "brbiomesmod:block/umbu_planks"
-  }
-}
