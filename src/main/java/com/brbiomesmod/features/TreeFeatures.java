@@ -423,20 +423,34 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE,
                                     PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
 
+    //Canela-preta (Ocotea catharinensis)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?>  CANELA_PRETA_TREE = register("canela_preta_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
                     new SimpleBlockStateProvider(States.CANELA_PRETA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?>  CANELA_PRETA_TREE_WITH_PASSIONVINE = register("canela_preta_tree_with_passionvine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
                     new SimpleBlockStateProvider(States.CANELA_PRETA_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
+                    new FancyTrunkPlacer(4, 17, 0), new TwoLayerFeature(0, 0, 0,
+                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE,
                             PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_CANELA_PRETA_TREE1 = register("mega_canela_preta_tree1",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(States.CANELA_PRETA_LEAVES),
+                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new MegaJungleTrunkPlacer(8, 16, 8),
+                    new TwoLayerFeature(2, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_CANELA_PRETA_TREE2 = register("mega_canela_preta_tree2",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
+                    new SimpleBlockStateProvider(States.CANELA_PRETA_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
+                    new MegaJungleTrunkPlacer(8, 16, 8),
+                    new TwoLayerFeature(2, 0, 1))).build()));
+
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?>  LAUREL_GUAIKA_TREE = register("laurel_guaika_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.LAUREL_LOG),
