@@ -1668,13 +1668,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Restinga vegetation
     public static final ConfiguredFeature<?, ?> RESTINGA_TREES = register("restinga_trees",
-            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.1F),
-                            CECROPIA_TREE.withChance(0.2F), CECROPIA_WITH_CAATINGA_PASSIONVINE.withChance(0.0083F), YELLOW_MOMBIN_TREE.withChance(0.09F),
-                            MONKEY_CAJARANA_TREE1.withChance(0.1F), JUA_TREE.withChance(0.089F), JUA_TREE_WITH_PASSIONVINE.withChance(0.0079F),
-                            MONKEY_CAJARANA_TREE2.withChance(0.2F), BRAZILWOOD_TREE.withChance(0.1F), BRAZILWOOD_FANCY_TREE.withChance(0.09F),
-                            JENIPAPO_TREE.withChance(0.1F), BLACK_SUCUPIRA_TREE.withChance(0.1F), CASHEW_TREE_WITH_PASSIONVINE.withChance(0.02F),
+            Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(MANGABA_TREE.withChance(0.2F),
+                            CECROPIA_TREE.withChance(0.2F), CECROPIA_WITH_CAATINGA_PASSIONVINE.withChance(0.0083F), YELLOW_MOMBIN_TREE.withChance(0.2F),
+                            MONKEY_CAJARANA_TREE1.withChance(0.2F), JUA_TREE.withChance(0.089F), JUA_TREE_WITH_PASSIONVINE.withChance(0.0079F),
+                            MONKEY_CAJARANA_TREE2.withChance(0.2F), BRAZILWOOD_TREE.withChance(0.2F), BRAZILWOOD_FANCY_TREE.withChance(0.2F),
+                            JENIPAPO_TREE.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.2F), CASHEW_TREE_WITH_PASSIONVINE.withChance(0.02F),
                             YELLOW_MOMBIN_TREE_WITH_VINE.withChance(0.015F), MANGABA_TREE_WITH_VINE.withChance(0.015F),
-                            SAPUCAIA_TREE.withChance(0.08F), OITICICA_TREE.withChance(0.089F)), CASHEW_SHRUB))
+                            SAPUCAIA_TREE.withChance(0.08F), OITICICA_TREE.withChance(0.089F), OITI_TREE.withChance(0.2F),
+                            OITI_FANCY_TREE.withChance(0.2F), BIG_OITI_TREE.withChance(0.2F)), CASHEW_SHRUB))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 
