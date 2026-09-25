@@ -116,5 +116,6 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         FicusCestrifoliaSapling.registerRenderLayer();
         CocoaSapling.registerRenderLayer();
         BracatingaSapling.registerRenderLayer();
+        OitiSapling.registerRenderLayer();
     }
 }
