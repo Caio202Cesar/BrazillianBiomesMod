@@ -438,12 +438,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE,
                             PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_CANELA_PRETA_TREE1 = register("mega_canela_preta_tree1",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
-                    new SimpleBlockStateProvider(States.CANELA_PRETA_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new MegaJungleTrunkPlacer(8, 16, 8),
-                    new TwoLayerFeature(2, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_CANELA_PRETA_TREE2 = register("mega_canela_preta_tree2",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.LAUREL_LOG),
                     new SimpleBlockStateProvider(States.CANELA_PRETA_LEAVES),
@@ -1196,7 +1190,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
 
 
-    /*public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OITI_TREE = register("oiti_tree",
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> OITI_TREE = register("oiti_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OITI_LOG),
                     new SimpleBlockStateProvider(States.OITI_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
@@ -1208,7 +1202,15 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));*/
+                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BIG_OITI_TREE = register("big_oiti_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.OITI_LOG),
+                    new SimpleBlockStateProvider(States.OITI_LEAVES),
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new UmbrellaTrunkPlacer(6, 4, 2, 5, 5),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setIgnoreVines().build()));
+
  /*
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> GRUMIXAMA_TREE = register("grumixama_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.MYRTACEAE_LOG),
@@ -1269,6 +1271,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
         protected static final BlockState OITI_LOG = TreesGroup.OITI_LOG.get().getDefaultState();
         protected static final BlockState OITICICA_LEAVES = TreesGroup.OITICICA_LEAVES.get().getDefaultState();
+        protected static final BlockState OITI_LEAVES = TreesGroup.OITI_LEAVES.get().getDefaultState();
 
         protected static final BlockState BRAZILLIAN_TIGERWOOD_LOG = TreesGroup.BRAZILLIAN_TIGERWOOD_LOG.get().getDefaultState();
         protected static final BlockState BRAZILLIAN_TIGERWOOD_LEAVES = TreesGroup.BRAZILLIAN_TIGERWOOD_LEAVES.get().getDefaultState();

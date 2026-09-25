@@ -1029,7 +1029,10 @@ public class TreesGroup {
     public static final RegistryObject<Block> POTTED_OITICICA_SAPLING = BLOCKS.register("potted_oiticica_sapling",
             () -> new FlowerPotBlock(TreesGroup.OITICICA_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
                     .zeroHardnessAndResistance()));
-
+    public static final RegistryObject<Block> OITI_LEAVES = registerBlock("oiti_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> OITI_SAPLING = registerBlock("oiti_sapling",
+            OitiSapling::new);
 
     public static final RegistryObject<Block> BRAZILLIAN_TIGERWOOD_LOG = registerBlock("brazillian_tigerwood_log",
             ModLogs::new);
