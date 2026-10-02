@@ -643,7 +643,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new AncientMetrosiderosTrunkPlacer(5, 2, 1, 7, 5),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT,
-                            com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures.Placements.SPANISH_MOSS_PLACEMENT))
+                            ModFeatures.Placements.SPANISH_MOSS_PLACEMENT))
                     .setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> IMBUIA_FANCY_TREE_VINE = register("imbuia_fancy_tree_with_vine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IMBUIA_LOG),
