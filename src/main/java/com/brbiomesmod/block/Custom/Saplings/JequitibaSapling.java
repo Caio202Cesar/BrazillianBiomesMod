@@ -123,7 +123,7 @@ public class JequitibaSapling extends SaplingBlock {
     private static class JequitibaTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.JEQUITIBA_TREE;
+            return TreeFeatures.WHITE_JEQUITIBA_TREE;
         }
     }
 }
