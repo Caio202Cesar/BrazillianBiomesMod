@@ -19,6 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
+import static com.caiocesarmods.caiocesarbiomes.block.ModWood.MULBERRY_PLANKS;
+
 public class WoodGroup {
     public static List<Block> blocksList = new ArrayList<>();
 
@@ -400,16 +402,16 @@ public class WoodGroup {
     public static final RegistryObject<Block> JUA_WOOD = registerBlock("jua_wood",
             ModLogs::new);
 
-    public static final RegistryObject<Block> JUA_SLAB = registerBlock("jua_slab",
+    public static final RegistryObject<Block> MULBERRY_SLAB = registerBlock("mulberry_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> JUA_STAIRS = registerBlock("jua_stairs",
-            () -> new StairsBlock(() -> JUA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+    public static final RegistryObject<Block> MULBERRY_STAIRS = registerBlock("mulberry_stairs",
+            () -> new StairsBlock(() -> MULBERRY_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
                     .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> JUA_FENCE = registerBlock("jua_fence",
+    public static final RegistryObject<Block> MULBERRY_FENCE = registerBlock("mulberry_fence",
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> JUA_FENCE_GATE = registerBlock("jua_fence_gate",
+    public static final RegistryObject<Block> MULBERRY_FENCE_GATE = registerBlock("mulberry_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
