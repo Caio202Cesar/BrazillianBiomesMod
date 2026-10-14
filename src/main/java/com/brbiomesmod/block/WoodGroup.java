@@ -396,13 +396,10 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-
+    //Mulberry woodset
     public static final RegistryObject<Block> JUA_WOOD = registerBlock("jua_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_JUA_WOOD = registerBlock("stripped_jua_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> JUA_PLANKS = registerBlock("jua_planks",
-            ModPlanks::new);
+
     public static final RegistryObject<Block> JUA_SLAB = registerBlock("jua_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
