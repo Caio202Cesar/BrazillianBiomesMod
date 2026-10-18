@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "brbiomesmod:jua_wood"
+      "item": "brbiomesmod:jua_log"
     }
   ],
   "result": {
-    "item": "brbiomesmod:jua_planks",
+    "item": "caiocesarbiomes:mulberry_planks",
     "count": 4
   }
 }
