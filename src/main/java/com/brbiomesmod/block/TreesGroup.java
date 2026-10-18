@@ -231,6 +231,13 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
+    /// Catingueira
+    public static final RegistryObject<Block> CATINGUEIRA_LEAVES = registerBlock("catingueira_leaves",
+            ModLeaves::new);
+    public static final RegistryObject<Block> CATINGUEIRA_SAPLING = registerBlock("catingueira_sapling",
+            ManacaSapling::new);
+
+
     /// Brazillian Rosewood
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LEAVES = registerBlock("brazillian_rosewood_leaves",
             () -> new BrazillianRosewoodLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
