@@ -1371,7 +1371,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState BRAZILWOOD_LOG = WoodGroup.BRAZILWOOD_LOG.get().getDefaultState();
         protected static final BlockState BRAZILWOOD_LEAVES = TreesGroup.BRAZILWOOD_LEAVES.get().getDefaultState();
 
-        protected static final BlockState JUA_LOG = TreesGroup.JUA_LOG.get().getDefaultState();
+        protected static final BlockState JUA_LOG = WoodGroup.JUA_LOG.get().getDefaultState();
         protected static final BlockState JUA_LEAVES = TreesGroup.JUA_LEAVES.get().getDefaultState();
 
         protected static final BlockState UMBU_LOG = WoodGroup.UMBU_LOG.get().getDefaultState();
