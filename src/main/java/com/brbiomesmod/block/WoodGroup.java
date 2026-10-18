@@ -399,22 +399,10 @@ public class WoodGroup {
 
 
     //Mulberry woodset
+    public static final RegistryObject<Block> JUA_LOG = registerBlock("jua_log",
+            ModLogs::new);
     public static final RegistryObject<Block> JUA_WOOD = registerBlock("jua_wood",
             ModLogs::new);
-
-    public static final RegistryObject<Block> MULBERRY_SLAB = registerBlock("mulberry_slab",
-            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> MULBERRY_STAIRS = registerBlock("mulberry_stairs",
-            () -> new StairsBlock(() -> MULBERRY_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> MULBERRY_FENCE = registerBlock("mulberry_fence",
-            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> MULBERRY_FENCE_GATE = registerBlock("mulberry_fence_gate",
-            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-
 
 
     public static final RegistryObject<Block> SAPUCAIA_LOG = registerBlock("sapucaia_log",
