@@ -2,6 +2,7 @@ package com.brbiomesmod.block;
 
 import com.brbiomesmod.BrazillianBiomesMod;
 import com.brbiomesmod.block.Custom.Cactuses.MandacaruCactusBlock;
+import com.brbiomesmod.block.Custom.Cactuses.MandacaruCactusFloweringBlock;
 import com.brbiomesmod.block.Custom.Fruiting.AcaiBunchBlock;
 import com.brbiomesmod.block.Custom.Fruiting.BuritiBunchBlock;
 import com.brbiomesmod.block.Custom.Fruiting.PindoBunchBlock;
@@ -39,17 +40,9 @@ public class TreesGroup {
             () -> new MandacaruCactusBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.PURPLE)
                     .hardnessAndResistance(0.4F).sound(SoundType.WOOD).notSolid()));
     public static final RegistryObject<Block> MANDACARU_CACTUS_FLOWERING = registerBlock("mandacaru_cactus_flowering",
-            () -> new MandacaruCactusFlowerBlock((MandacaruCactusBlock)MANDACARU_CACTUS,
-                    AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.PURPLE)
-                            .tickRandomly().hardnessAndResistance(0.4F).sound(SoundType.WOOD).notSolid()));
-
-    public static final Block CHORUS_PLANT = register("chorus_plant",
-            new ChorusPlantBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.PURPLE)
-                    .hardnessAndResistance(0.4F).sound(SoundType.WOOD).notSolid()));
-    public static final Block CHORUS_FLOWER = register("chorus_flower",
-            new ChorusFlowerBlock((ChorusPlantBlock)CHORUS_PLANT,
-                    AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.PURPLE)
-                            .tickRandomly().hardnessAndResistance(0.4F).sound(SoundType.WOOD).notSolid()));
+            () -> new MandacaruCactusFloweringBlock((MandacaruCactusBlock)MANDACARU_CACTUS.get(),
+                    AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.PURPLE).tickRandomly().hardnessAndResistance(0.4F)
+                            .sound(SoundType.WOOD).notSolid()));
 
 
     /// Cashew
