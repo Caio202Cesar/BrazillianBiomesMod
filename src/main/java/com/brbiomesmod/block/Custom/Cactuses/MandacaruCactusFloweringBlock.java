@@ -3,6 +3,7 @@ package com.brbiomesmod.block.Custom.Cactuses;
 import com.brbiomesmod.block.TreesGroup;
 import net.minecraft.block.*;
 import net.minecraft.entity.projectile.ProjectileEntity;
+import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.IntegerProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
@@ -20,12 +21,19 @@ import java.util.Random;
 
 public class MandacaruCactusFloweringBlock extends Block {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_0_2;
+    public static final BooleanProperty FRUITED = BooleanProperty.create("fruited");
     private final MandacaruCactusBlock plantBlock;
 
     public MandacaruCactusFloweringBlock(MandacaruCactusBlock plantBlock, AbstractBlock.Properties builder) {
         super(builder);
         this.plantBlock = plantBlock;
-        this.setDefaultState(this.stateContainer.getBaseState().with(AGE, Integer.valueOf(0)));
+        this.setDefaultState(this.stateContainer.getBaseState()
+                .with(AGE, 0)
+                .with(FRUITED, Boolean.FALSE));
+    }
+
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+        builder.add(AGE, FRUITED);
     }
 
     public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
@@ -40,8 +48,10 @@ public class MandacaruCactusFloweringBlock extends Block {
 
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         BlockPos blockpos = pos.up();
+
         if (worldIn.isAirBlock(blockpos) && blockpos.getY() < 256) {
             int i = state.get(AGE);
+
             if (i < 2 && net.minecraftforge.common.ForgeHooks.onCropsGrowPre(worldIn, blockpos, state, true)) {
                 boolean flag = false;
                 boolean flag1 = false;
@@ -102,6 +112,23 @@ public class MandacaruCactusFloweringBlock extends Block {
                 net.minecraftforge.common.ForgeHooks.onCropsGrowPost(worldIn, pos, state);
             }
         }
+
+        if (state.get(AGE) == 2 && !state.get(FRUITED)) {
+
+            // Attempt to place fruit on all available horizontal sides.
+            // This helper will return after checking all four directions.
+
+            this.placeFruitOnAvailableSides(worldIn, pos);
+
+            // Mark this flower as having completed its fruiting attempt.
+            worldIn.setBlockState(
+                    pos,
+                    state.with(FRUITED, Boolean.valueOf(true)),
+                    2
+            );
+
+            return;
+        }
     }
 
     private void placeBudFlower(World worldIn, BlockPos pos, int age) {
@@ -114,11 +141,23 @@ public class MandacaruCactusFloweringBlock extends Block {
         worldIn.playEvent(1034, pos, 0);
     }
 
-    //Once reaching this state, the plant must gen another block: the MANDACARU_FRUIT =
-    // this block "grows" in each face (except for the one connected to the rest of the plant).
-    private void placeFruitBlock(World worldIn, BlockPos pos) {
+    private void placeFruitingBlock(World worldIn, BlockPos pos) {
         worldIn.setBlockState(pos, this.getDefaultState().with(AGE, Integer.valueOf(2)), 2);
         worldIn.playEvent(1035, pos, 0);
+    }
+
+    private void placeFruitOnAvailableSides(World worldIn, BlockPos pos) {
+        for (Direction direction : Direction.Plane.HORIZONTAL) {
+            BlockPos fruitPos = pos.offset(direction);
+
+            if (worldIn.isAirBlock(fruitPos)) {
+                worldIn.setBlockState(
+                        fruitPos,
+                        TreesGroup.MANDACARU_FRUIT.get().getDefaultState(),
+                        3
+                );
+            }
+        }
     }
 
     private static boolean areAllNeighborsEmpty(IWorldReader worldIn, BlockPos pos, @Nullable Direction excludingSide) {
@@ -171,10 +210,6 @@ public class MandacaruCactusFloweringBlock extends Block {
         } else {
             return true;
         }
-    }
-
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(AGE);
     }
 
     public static void generatePlant(IWorld worldIn, BlockPos pos, Random rand, int maxHorizontalDistance) {
