@@ -38,12 +38,7 @@ public class BalsaDriedBranches extends LeavesBlock implements IForgeShearable {
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
-        Biome biome = worldIn.getBiome(pos);
-
-        //Deciduous species in prolonged dry season (Fall is the peak dry season in Minecraft seasonal mods)
-        if ("SPRING".equals(currentSeason)
-                && biome.getPrecipitation() == Biome.RainType.NONE
-                && random.nextInt(5) == 0) {
+        if ("SPRING".equals(currentSeason)) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -53,9 +48,7 @@ public class BalsaDriedBranches extends LeavesBlock implements IForgeShearable {
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if ("SUMMER".equals(currentSeason)
-                && biome.getPrecipitation() == Biome.RainType.NONE
-                && random.nextInt(2) == 0) {
+        if ("SUMMER".equals(currentSeason)) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);

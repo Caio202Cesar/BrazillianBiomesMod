@@ -1,6 +1,8 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
-import com.caiocesarmods.caioclimates.Seasons.Season;import net.minecraft.block.Block;
+import com.caiocesarmods.caioclimates.Seasons.Season;
+import com.caiocesarmods.caioclimates.Seasons.SeasonalPhase;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -40,9 +42,8 @@ public class BalsaLeaves extends LeavesBlock implements IForgeShearable {
 
         Biome biome = worldIn.getBiome(pos);
 
-        //Deciduous species in prolonged dry season (Fall is the peak dry season in Minecraft seasonal mods)
-        if ("FALL".equals(currentSeason)
-                && biome.getPrecipitation() == Biome.RainType.NONE
+        //Deciduous species in prolonged dry season
+        if ("WINTER".equals(currentSeason) && biome.getPrecipitation() == Biome.RainType.NONE
                 && random.nextInt(5) == 0) {
 
             int distance = state.get(LeavesBlock.DISTANCE);
