@@ -1,6 +1,7 @@
 package com.brbiomesmod.block;
 
 import com.brbiomesmod.BrazillianBiomesMod;
+import com.brbiomesmod.block.Custom.Cactuses.MandacaruCactusBlock;
 import com.brbiomesmod.block.Custom.Fruiting.AcaiBunchBlock;
 import com.brbiomesmod.block.Custom.Fruiting.BuritiBunchBlock;
 import com.brbiomesmod.block.Custom.Fruiting.PindoBunchBlock;
@@ -11,6 +12,7 @@ import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.ToolType;
@@ -28,6 +30,27 @@ public class TreesGroup {
 
     public static final DeferredRegister<Block> BLOCKS
             = DeferredRegister.create(ForgeRegistries.BLOCKS, BrazillianBiomesMod.MOD_ID);
+
+
+
+    /// Cactuses
+    //Mandacaru
+    public static final RegistryObject<Block> MANDACARU_CACTUS = registerBlock("mandacaru_cactus",
+            () -> new MandacaruCactusBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.PURPLE)
+                    .hardnessAndResistance(0.4F).sound(SoundType.WOOD).notSolid()));
+    public static final RegistryObject<Block> MANDACARU_CACTUS_FLOWERING = registerBlock("mandacaru_cactus_flowering",
+            () -> new MandacaruCactusFlowerBlock((MandacaruCactusBlock)MANDACARU_CACTUS,
+                    AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.PURPLE)
+                            .tickRandomly().hardnessAndResistance(0.4F).sound(SoundType.WOOD).notSolid()));
+
+    public static final Block CHORUS_PLANT = register("chorus_plant",
+            new ChorusPlantBlock(AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.PURPLE)
+                    .hardnessAndResistance(0.4F).sound(SoundType.WOOD).notSolid()));
+    public static final Block CHORUS_FLOWER = register("chorus_flower",
+            new ChorusFlowerBlock((ChorusPlantBlock)CHORUS_PLANT,
+                    AbstractBlock.Properties.create(Material.PLANTS, MaterialColor.PURPLE)
+                            .tickRandomly().hardnessAndResistance(0.4F).sound(SoundType.WOOD).notSolid()));
+
 
     /// Cashew
     public static final RegistryObject<Block> CASHEW_LEAVES = registerBlock("cashew_leaves",
