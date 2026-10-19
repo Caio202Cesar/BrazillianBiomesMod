@@ -35,38 +35,38 @@ public class BacuriLeaves extends LeavesBlock implements IForgeShearable {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
 
         //Dry season
-        if ("SUMMER".equals(currentSeason) && random.nextInt(85) == 0) {
+        if ("FALL".equals(currentSeason) && random.nextInt(85) == 0) {
+            int distance = state.get(LeavesBlock.DISTANCE);
+            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+            worldIn.setBlockState(pos, TreesGroup.BACURI_LEAVES.get()
+                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        }
+        if ("FALL".equals(currentSeason) && random.nextInt(25) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
             worldIn.setBlockState(pos, TreesGroup.BACURI_DRIED_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
-        if ("SUMMER".equals(currentSeason) && random.nextInt(25) == 0) {
+
+        if ("WINTER".equals(currentSeason) && random.nextInt(55) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            worldIn.setBlockState(pos, TreesGroup.BACURI_FLOWERING_DRIED_BRANCHES.get()
+            worldIn.setBlockState(pos, TreesGroup.BACURI_LEAVES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
-
-        if ("FALL".equals(currentSeason) && random.nextInt(55) == 0) {
+        if ("WINTER".equals(currentSeason) && random.nextInt(5) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
             worldIn.setBlockState(pos, TreesGroup.BACURI_DRIED_BRANCHES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
-        }
-        if ("FALL".equals(currentSeason) && random.nextInt(5) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            worldIn.setBlockState(pos, TreesGroup.BACURI_FLOWERING_DRIED_BRANCHES.get()
                     .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
         }
 
         //Wet season's flowering = purely ornamental
-        if ("WINTER".equals(currentSeason) && random.nextInt(10) == 0) {
+        if ("SUMMER".equals(currentSeason) && random.nextInt(10) == 0) {
             int distance = state.get(LeavesBlock.DISTANCE);
             boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
