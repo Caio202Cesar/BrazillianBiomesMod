@@ -114,7 +114,8 @@ public class MandacaruCactusFloweringBlock extends Block {
         worldIn.playEvent(1034, pos, 0);
     }
 
-    //Once reaching this state, the plant must gen another block: the MANDACARU_FRUIT.
+    //Once reaching this state, the plant must gen another block: the MANDACARU_FRUIT =
+    // this block "grows" in each face (except for the one connected to the rest of the plant).
     private void placeFruitBlock(World worldIn, BlockPos pos) {
         worldIn.setBlockState(pos, this.getDefaultState().with(AGE, Integer.valueOf(2)), 2);
         worldIn.playEvent(1035, pos, 0);
