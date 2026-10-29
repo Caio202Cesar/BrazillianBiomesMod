@@ -80,6 +80,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.TURK_TURBAN_BERRIES)));
     public static final RegistryObject<Item> CAGAITA = ITEMS.register("cagaita_fruits",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.CAGAITA)));
+    public static final RegistryObject<Item> FERMENTED_CAGAITA = ITEMS.register("cagaita_fermented",
+            () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.FERMENTED_CAGAITA)));
     public static final RegistryObject<Item> CECROPIA_FRUITS = ITEMS.register("cecropia_fruits",
             () -> new Item(new Item.Properties().group(ModItemGroup.FRUITS_AND_VEGETABLES_GROUP).food(ModFoods.CECROPIA_FRUITS)));
     public static final RegistryObject<Item> BACURI = ITEMS.register("bacuri",

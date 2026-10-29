@@ -52,7 +52,7 @@ public class CagaitaFruitingLeaves extends LeavesBlock implements IForgeShearabl
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.CAGAITA.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.FERMENTED_CAGAITA.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -69,7 +69,7 @@ public class CagaitaFruitingLeaves extends LeavesBlock implements IForgeShearabl
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.CAGAITA.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.FERMENTED_CAGAITA.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -86,7 +86,7 @@ public class CagaitaFruitingLeaves extends LeavesBlock implements IForgeShearabl
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.CAGAITA.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.FERMENTED_CAGAITA.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -104,7 +104,7 @@ public class CagaitaFruitingLeaves extends LeavesBlock implements IForgeShearabl
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.CAGAITA.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.FERMENTED_CAGAITA.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
@@ -121,7 +121,7 @@ public class CagaitaFruitingLeaves extends LeavesBlock implements IForgeShearabl
 
             int dropCount = 1;
 
-            ItemStack itemStack = new ItemStack(ModItems.CAGAITA.get(), dropCount);
+            ItemStack itemStack = new ItemStack(ModItems.FERMENTED_CAGAITA.get(), dropCount);
             ItemEntity itemEntity = new ItemEntity(worldIn, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, itemStack);
 
             worldIn.addEntity(itemEntity);
