@@ -5,5 +5,33 @@
     "sounds": [
       "brbiomesmod:toco_toucan_sound_call"
     ]
+  },
+  "fart1": {
+    "category": "player",
+    "subtitle": "brbiomesmod.fart1",
+    "sounds": [
+      "brbiomesmod:fart1"
+    ]
+  },
+  "fart2": {
+    "category": "player",
+    "subtitle": "brbiomesmod.fart2",
+    "sounds": [
+      "brbiomesmod:fart2"
+    ]
+  },
+  "little_fart": {
+    "category": "player",
+    "subtitle": "brbiomesmod.little_fart",
+    "sounds": [
+      "brbiomesmod:little_fart"
+    ]
+  },
+  "wet_fart": {
+  "category": "player",
+  "subtitle": "brbiomesmod.wet_fart",
+  "sounds": [
+    "brbiomesmod:wet_fart"
+  ]
   }
 }

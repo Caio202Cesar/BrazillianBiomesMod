@@ -17,6 +17,13 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> TOCO_TOUCAN_CALL_SOUND =
             registerSoundEvent("toco_toucan_sound_call");
 
+    public static final RegistryObject<SoundEvent> FART1 = registerSoundEvent("fart1");
+
+    public static final RegistryObject<SoundEvent> FART2 = registerSoundEvent("fart2");
+
+    public static final RegistryObject<SoundEvent> LITTLE_FART = registerSoundEvent("little_fart");
+
+    public static final RegistryObject<SoundEvent> WET_FART = registerSoundEvent("wet_fart");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(BrazillianBiomesMod.MOD_ID, name)));
