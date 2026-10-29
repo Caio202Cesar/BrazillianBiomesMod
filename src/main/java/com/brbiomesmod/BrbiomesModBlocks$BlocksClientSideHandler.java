@@ -2,6 +2,7 @@ package com.brbiomesmod;
 
 import com.brbiomesmod.block.Custom.Fruiting.AcaiBunchBlock;
 import com.brbiomesmod.block.Custom.Fruiting.BuritiBunchBlock;
+import com.brbiomesmod.block.Custom.Fruiting.MandacaruFruit;
 import com.brbiomesmod.block.Custom.Fruiting.PindoBunchBlock;
 import com.brbiomesmod.block.Custom.Plants.*;
 import com.brbiomesmod.block.Custom.Saplings.*;
@@ -45,6 +46,8 @@ public class BrbiomesModBlocks$BlocksClientSideHandler {
         PindoBunchBlock.registerRenderLayer();
         CaatingaPassionfruitVine.registerRenderLayer();
         PurplePassionfruitVine.registerRenderLayer();
+
+        MandacaruFruit.registerRenderLayer();
 
         AlgarrobilloSapling.registerRenderLayer();
         CavenThornSapling.registerRenderLayer();

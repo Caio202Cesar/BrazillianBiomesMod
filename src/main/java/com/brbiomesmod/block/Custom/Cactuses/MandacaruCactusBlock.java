@@ -34,30 +34,48 @@ public class MandacaruCactusBlock extends SixWayBlock {
         Block block3 = blockReader.getBlockState(pos.east()).getBlock();
         Block block4 = blockReader.getBlockState(pos.south()).getBlock();
         Block block5 = blockReader.getBlockState(pos.west()).getBlock();
-        return this.getDefaultState().with(DOWN, Boolean.valueOf(block == this
-                        || block == TreesGroup.MANDACARU_CACTUS_FLOWERING.get()
-                        || block == TreesGroup.MANDACARU_CACTUS_FRUITING.get()
-                        || block == Blocks.COARSE_DIRT))
-                .with(UP, Boolean.valueOf(block1 == this || block1 == TreesGroup.MANDACARU_CACTUS_FLOWERING.get() ||
-                        block1 == TreesGroup.MANDACARU_CACTUS_FRUITING.get()
-                .with(NORTH, Boolean.valueOf(block2 == this || block2 == TreesGroup.MANDACARU_CACTUS_FLOWERING.get() ||
-                        block2 == TreesGroup.MANDACARU_CACTUS_FRUITING.get()
-                .with(EAST, Boolean.valueOf(block3 == this || block3 == TreesGroup.MANDACARU_CACTUS_FLOWERING.get() ||
-                        block3 == TreesGroup.MANDACARU_CACTUS_FRUITING.get()
-                .with(SOUTH, Boolean.valueOf(block4 == this || block4 == TreesGroup.MANDACARU_CACTUS_FLOWERING.get() ||
-                        block4 == TreesGroup.MANDACARU_CACTUS_FRUITING.get()
-                .with(WEST, Boolean.valueOf(block5 == this || block5 == TreesGroup.MANDACARU_CACTUS_FLOWERING.get() ||
-                        block5 == TreesGroup.MANDACARU_CACTUS_FRUITING.get()))))))))));
+
+        return this.getDefaultState()
+                .with(DOWN, Boolean.valueOf(
+                        block == this
+                                || block == TreesGroup.MANDACARU_CACTUS_FLOWERING.get()
+                                || block == Blocks.COARSE_DIRT))
+                .with(UP, Boolean.valueOf(
+                        block1 == this
+                                || block1 == TreesGroup.MANDACARU_CACTUS_FLOWERING.get()))
+                .with(NORTH, Boolean.valueOf(
+                        block2 == this
+                                || block2 == TreesGroup.MANDACARU_CACTUS_FLOWERING.get()))
+                .with(EAST, Boolean.valueOf(
+                        block3 == this
+                                || block3 == TreesGroup.MANDACARU_CACTUS_FLOWERING.get()))
+                .with(SOUTH, Boolean.valueOf(
+                        block4 == this
+                                || block4 == TreesGroup.MANDACARU_CACTUS_FLOWERING.get()))
+                .with(WEST, Boolean.valueOf(
+                        block5 == this
+                                || block5 == TreesGroup.MANDACARU_CACTUS_FLOWERING.get()));
     }
 
-    public BlockState updatePostPlacement(BlockState stateIn, Direction facing, BlockState facingState, IWorld worldIn, BlockPos currentPos, BlockPos facingPos) {
+    @Override
+    public BlockState updatePostPlacement(
+            BlockState stateIn,
+            Direction facing,
+            BlockState facingState,
+            IWorld worldIn,
+            BlockPos currentPos,
+            BlockPos facingPos) {
+
         if (!stateIn.isValidPosition(worldIn, currentPos)) {
             worldIn.getPendingBlockTicks().scheduleTick(currentPos, this, 1);
-            return super.updatePostPlacement(stateIn, facing, facingState, worldIn, currentPos, facingPos);
+            return super.updatePostPlacement(
+                    stateIn, facing, facingState, worldIn, currentPos, facingPos);
         } else {
-            boolean flag = facingState.getBlock() == this || facingState.matchesBlock(TreesGroup.MANDACARU_CACTUS_FLOWERING.get())
-                    || facingState.matchesBlock(TreesGroup.MANDACARU_CACTUS_FRUITING.get()) ||
-                    facing == Direction.DOWN && facingState.matchesBlock(Blocks.COARSE_DIRT);
+            boolean flag = facingState.getBlock() == this
+                    || facingState.matchesBlock(TreesGroup.MANDACARU_CACTUS_FLOWERING.get())
+                    || (facing == Direction.DOWN
+                    && facingState.matchesBlock(Blocks.COARSE_DIRT));
+
             return stateIn.with(FACING_TO_PROPERTY_MAP.get(facing), Boolean.valueOf(flag));
         }
     }
