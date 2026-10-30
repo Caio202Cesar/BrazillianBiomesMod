@@ -559,6 +559,10 @@ public class WoodGroup {
 
 
 
+    public static final RegistryObject<Block> MONKEY_CAJARANA_LOG = registerBlock("monkey_cajarana_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_MONKEY_CAJARANA_LOG = registerBlock("stripped_monkey_cajarana_log",
+            ModLogs::new);
     public static final RegistryObject<Block> MONKEY_CAJARANA_WOOD = registerBlock("monkey_cajarana_wood",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_MONKEY_CAJARANA_WOOD = registerBlock("stripped_monkey_cajarana_wood",

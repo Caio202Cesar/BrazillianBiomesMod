@@ -632,10 +632,6 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> MONKEY_CAJARANA_LOG = registerBlock("monkey_cajarana_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_MONKEY_CAJARANA_LOG = registerBlock("stripped_monkey_cajarana_log",
-            ModLogs::new);
 
     public static final RegistryObject<Block> MONKEY_CAJARANA_YOUNG_LEAVES = registerBlock("monkey_cajarana_young_leaves",
             () -> new MonkeyCajaranaYoungLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
