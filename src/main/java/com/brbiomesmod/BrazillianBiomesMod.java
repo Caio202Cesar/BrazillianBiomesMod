@@ -5,6 +5,7 @@ import com.brbiomesmod.block.MiscBlocks;
 import com.brbiomesmod.block.PlantsGroup;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.block.WoodGroup;
+import com.brbiomesmod.effect.ModEffects;
 import com.brbiomesmod.entity.ModEntityTypes;
 import com.brbiomesmod.entity.custom.BotoEntity;
 import com.brbiomesmod.entity.render.*;
@@ -63,6 +64,7 @@ public class BrazillianBiomesMod {
         ModTreeDecorators.register(eventBus);
         ModEntityTypes.register(eventBus);
         ModSoundEvents.register(eventBus);
+        ModEffects.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);
