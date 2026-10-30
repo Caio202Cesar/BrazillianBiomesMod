@@ -641,7 +641,7 @@ public class TreesGroup {
             () -> new MonkeyCajaranaYoungLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.MONKEY_CAJARANA_FLOWERING_LEAVES));
     public static final RegistryObject<Block> MONKEY_CAJARANA_FLOWERING_LEAVES = registerBlock("monkey_cajarana_flowering_leaves",
-            () -> new MonkeyCajaranaFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new MonkeyCajaranaYoungLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.MONKEY_CAJARANA_FRUITING_LEAVES));
     public static final RegistryObject<Block> MONKEY_CAJARANA_FRUITING_LEAVES = registerBlock("monkey_cajarana_fruiting_leaves",
             () -> new MonkeyCajaranaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
