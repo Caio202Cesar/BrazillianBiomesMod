@@ -56,7 +56,7 @@ public class AlgarrobilloLeaves extends LeavesBlock implements IForgeShearable {
         float dryness = 1.0F - rainChance;
 
         //Pattern for tropical climates (dry season)
-        if (temp > 0.9F && dryness > 0.65F && random.nextFloat() < dryness) {
+        if (temp > 0.9F && dryness > 0.85F && random.nextFloat() < dryness) {
 
         int distance = state.get(LeavesBlock.DISTANCE);
         boolean persistent = state.get(LeavesBlock.PERSISTENT);

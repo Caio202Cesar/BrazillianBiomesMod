@@ -55,7 +55,7 @@ public class AlgarrobilloDriedBranches extends LeavesBlock implements IForgeShea
         float rainChance = pattern.getRainChance(SeasonalPhase.valueOf(phase));
 
         //Pattern for tropical climates (wet season)
-        if (rainChance > 0.50F && random.nextFloat() < rainChance) {
+        if (temp > 0.9F && rainChance > 0.29F && random.nextFloat() < rainChance) {
 
         int distance = state.get(LeavesBlock.DISTANCE);
         boolean persistent = state.get(LeavesBlock.PERSISTENT);
