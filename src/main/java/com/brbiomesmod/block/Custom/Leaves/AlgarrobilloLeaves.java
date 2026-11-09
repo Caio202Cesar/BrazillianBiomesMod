@@ -1,6 +1,10 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
-import com.caiocesarmods.caioclimates.Seasons.Season;import net.minecraft.block.Block;
+import com.caiocesarmods.caioclimates.Climate.Drought.DroughtPattern;
+import com.caiocesarmods.caioclimates.Climate.Drought.DroughtPatternRegistry;
+import com.caiocesarmods.caioclimates.Seasons.Season;
+import com.caiocesarmods.caioclimates.Seasons.SeasonalPhase;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -37,12 +41,22 @@ public class AlgarrobilloLeaves extends LeavesBlock implements IForgeShearable {
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
+        String phase = SeasonalPhase.getPhase(worldIn.getDayTime());
 
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
+        DroughtPattern pattern = DroughtPatternRegistry.get(biome);
+
+        if (pattern == null) {
+            return;
+        }
+
+        float rainChance = pattern.getRainChance(SeasonalPhase.valueOf(phase));
+        float dryness = 1.0F - rainChance;
+
         //Pattern for tropical climates (dry season)
-        if (temp > 0.9F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if (temp > 0.9F && dryness > 0.65F && random.nextFloat() < dryness) {
 
         int distance = state.get(LeavesBlock.DISTANCE);
         boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -52,26 +66,27 @@ public class AlgarrobilloLeaves extends LeavesBlock implements IForgeShearable {
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp > 0.9F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+        //Pattern for subtropical climates (cooler seasons)
+        if (temp < 0.89F) {
+            if ("FALL".equals(currentSeason) && nextStage != null && random.nextInt(155) == 0) {
 
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+                BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
-            worldIn.setBlockState(pos, newState, 2);
+                worldIn.setBlockState(pos, newState, 2);
+            }
 
-        }
+            if ("WINTER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
-        //Pattern for subtropical climates (winter season)
-        if (temp < 0.89F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+                BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
+                worldIn.setBlockState(pos, newState, 2);
+            }
         }
     }
 

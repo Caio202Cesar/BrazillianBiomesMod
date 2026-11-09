@@ -1,6 +1,9 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
+import com.caiocesarmods.caioclimates.Climate.Drought.DroughtPattern;
+import com.caiocesarmods.caioclimates.Climate.Drought.DroughtPatternRegistry;
 import com.caiocesarmods.caioclimates.Seasons.Season;
+import com.caiocesarmods.caioclimates.Seasons.SeasonalPhase;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
@@ -38,12 +41,21 @@ public class AlgarrobilloDriedBranches extends LeavesBlock implements IForgeShea
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
+        String phase = SeasonalPhase.getPhase(worldIn.getDayTime());
 
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
+        DroughtPattern pattern = DroughtPatternRegistry.get(biome);
+
+        if (pattern == null) {
+            return;
+        }
+
+        float rainChance = pattern.getRainChance(SeasonalPhase.valueOf(phase));
+
         //Pattern for tropical climates (wet season)
-        if (temp > 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(25) == 0) {
+        if (rainChance > 0.50F && random.nextFloat() < rainChance) {
 
         int distance = state.get(LeavesBlock.DISTANCE);
         boolean persistent = state.get(LeavesBlock.PERSISTENT);
@@ -53,46 +65,27 @@ public class AlgarrobilloDriedBranches extends LeavesBlock implements IForgeShea
             worldIn.setBlockState(pos, newState, 2);
         }
 
-        if (temp > 0.9F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
-
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
-
-        }
-
         //Pattern for subtropical climates (warmer seasons)
-        if (temp < 0.89F && "SPRING".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
+        if (temp < 0.89F) {
+            if ("SPRING".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
 
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+                BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
-            worldIn.setBlockState(pos, newState, 2);
-        }
+                worldIn.setBlockState(pos, newState, 2);
+            }
 
-        if (temp < 0.89F && "SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
+            if ("SUMMER".equals(currentSeason) && nextStage != null && random.nextInt(2) == 0) {
 
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
 
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
+                BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
 
-            worldIn.setBlockState(pos, newState, 2);
-        }
-
-        if (temp < 0.89F && "FALL".equals(currentSeason) && nextStage != null && random.nextInt(5) == 0) {
-
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
-
-            BlockState newState = nextStage.get().getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent);
-
-            worldIn.setBlockState(pos, newState, 2);
+                worldIn.setBlockState(pos, newState, 2);
+            }
         }
     }
 
