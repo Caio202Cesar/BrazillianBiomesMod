@@ -1,6 +1,11 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
-import com.caiocesarmods.caioclimates.Seasons.Season;import net.minecraft.block.Block;
+import com.brbiomesmod.block.TreesGroup;
+import com.caiocesarmods.caioclimates.Climate.Drought.DroughtPattern;
+import com.caiocesarmods.caioclimates.Climate.Drought.DroughtPatternRegistry;
+import com.caiocesarmods.caioclimates.Seasons.Season;
+import com.caiocesarmods.caioclimates.Seasons.SeasonalPhase;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -37,9 +42,32 @@ public class UmbuDriedBranches extends LeavesBlock implements IForgeShearable {
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
+        String phase = SeasonalPhase.getPhase(worldIn.getDayTime());
 
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
+
+        DroughtPattern pattern = DroughtPatternRegistry.get(biome);
+
+        if (pattern == null) {
+            return;
+        }
+
+        float rainChance = pattern.getRainChance(SeasonalPhase.valueOf(phase));
+        float dryness = 1.0F - rainChance;
+
+        //Pattern for tropical climates
+        if (temp > 0.9F) {
+            //Flowering
+            if (dryness > 0.92F && random.nextFloat() < dryness) {
+
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+                worldIn.setBlockState(pos, TreesGroup.UMBU_BLOSSOM.get()
+                        .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            }
+        }
 
         //Pattern for tropical biomes = wet season
         if (temp >= 0.9F && "WINTER".equals(currentSeason) && nextStage != null && random.nextInt(15) == 0) {
