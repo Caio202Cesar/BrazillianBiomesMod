@@ -353,28 +353,10 @@ public class WoodGroup {
 
 
 
-    public static final RegistryObject<Block> COCKSPUR_CORAL_LOG = registerBlock("cockspur_coral_log",
+    public static final RegistryObject<Block> ERYTHRINA_VELUTINA_LOG = registerBlock("erythrina_velutina_log",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_COCKSPUR_CORAL_LOG = registerBlock("stripped_cockspur_coral_log",
+    public static final RegistryObject<Block> ERYTHRINA_VELUTINA_WOOD = registerBlock("erythrina_velutina_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> COCKSPUR_CORAL_WOOD = registerBlock("cockspur_coral_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_COCKSPUR_CORAL_WOOD = registerBlock("stripped_cockspur_coral_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> COCKSPUR_CORAL_PLANKS = registerBlock("cockspur_coral_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> COCKSPUR_CORAL_SLAB = registerBlock("cockspur_coral_slab",
-            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> COCKSPUR_CORAL_STAIRS = registerBlock("cockspur_coral_stairs",
-            () -> new StairsBlock(() -> COCKSPUR_CORAL_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> COCKSPUR_CORAL_FENCE = registerBlock("cockspur_coral_fence",
-            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> COCKSPUR_CORAL_FENCE_GATE = registerBlock("cockspur_coral_fence_gate",
-            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
 
 
 
