@@ -65,7 +65,7 @@ public class DunasRestingaBiome {
 
 
         return (new Biome.Builder()).precipitation(Biome.RainType.NONE).category(Biome.Category.BEACH).depth(depth).scale(scale)
-                .temperature(1.2F).downfall(0.7F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4757429)
+                .temperature(1.0F).downfall(0.7F).setEffects((new BiomeAmbience.Builder()).setWaterColor(4757429)
                         .setWaterFogColor(4765085).withSkyColor(4169700).withFoliageColor(4110351)
                         .withGrassColor(6604607).setFogColor(14807295)
                         .setAmbientSound(SoundEvents.MUSIC_CREATIVE)
