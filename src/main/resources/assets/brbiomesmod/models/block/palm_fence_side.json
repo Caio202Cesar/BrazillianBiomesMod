@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/fence_side",
   "textures": {
-    "texture": "brbiomesmod:block/cockspur_coral_planks"
+    "texture": "brbiomesmod:block/palm_planks"
   }
 }
