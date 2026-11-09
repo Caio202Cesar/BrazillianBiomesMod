@@ -3,11 +3,11 @@
   "group": "planks",
   "ingredients": [
     {
-      "item": "brbiomesmod:cockspur_coral_wood"
+      "item": "brbiomesmod:erythrina_velutina_wood"
     }
   ],
   "result": {
-    "item": "brbiomesmod:cockspur_coral_planks",
+    "item": "caiocesarbiomes:lightwood_planks",
     "count": 4
   }
 }

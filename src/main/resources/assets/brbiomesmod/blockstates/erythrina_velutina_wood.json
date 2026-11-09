@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "brbiomesmod:block/erythrina_velutina_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "brbiomesmod:block/erythrina_velutina_wood"
+    },
+    "axis=z": {
+      "model": "brbiomesmod:block/erythrina_velutina_wood",
+      "x": 90
+    }
+  }
+}
