@@ -981,13 +981,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
 
     //Cockspur Coral Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COCKSPUR_CORAL_TREE1 = register("cockspur_coral_tree1",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.COCKSPUR_CORAL_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ERYTHRINA_LOG),
                     new SimpleBlockStateProvider(States.COCKSPUR_CORAL_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COCKSPUR_CORAL_TREE2 = register("cockspur_coral_tree2",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.COCKSPUR_CORAL_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.ERYTHRINA_LOG),
                     new SimpleBlockStateProvider(States.COCKSPUR_CORAL_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(3), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(5, 3, 0),
@@ -1432,7 +1432,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState BALSA_LOG = TreesGroup.BALSA_LOG.get().getDefaultState();
         protected static final BlockState BALSA_LEAVES = TreesGroup.BALSA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState COCKSPUR_CORAL_LOG = WoodGroup.COCKSPUR_CORAL_LOG.get().getDefaultState();
+        protected static final BlockState ERYTHRINA_LOG = ModWood.ERYTHRINA_LOG.get().getDefaultState();
         protected static final BlockState COCKSPUR_CORAL_LEAVES = TreesGroup.COCKSPUR_CORAL_LEAVES.get().getDefaultState();
 
         protected static final BlockState SAPUCAIA_LOG = WoodGroup.SAPUCAIA_LOG.get().getDefaultState();
