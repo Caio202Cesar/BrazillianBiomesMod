@@ -1,6 +1,9 @@
 package com.brbiomesmod.block.Custom.Leaves;
 
+import com.caiocesarmods.caioclimates.Climate.Drought.DroughtPattern;
+import com.caiocesarmods.caioclimates.Climate.Drought.DroughtPatternRegistry;
 import com.caiocesarmods.caioclimates.Seasons.Season;import com.brbiomesmod.block.TreesGroup;
+import com.caiocesarmods.caioclimates.Seasons.SeasonalPhase;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.Direction;
@@ -33,25 +36,30 @@ public class UmbuLeaves extends LeavesBlock implements IForgeShearable {
     @Override
     public void randomTick(BlockState state, ServerWorld worldIn, BlockPos pos, Random random) {
         String currentSeason = Season.getSeason(worldIn.getDayTime());
+        String phase = SeasonalPhase.getPhase(worldIn.getDayTime());
 
         Biome biome = worldIn.getBiome(pos);
         float temp = biome.getTemperature(pos);
 
-        //Pattern for tropical biomes = dry season
-        if (temp >= 0.9F && "SUMMER".equals(currentSeason) && random.nextInt(10) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+        DroughtPattern pattern = DroughtPatternRegistry.get(biome);
 
-            worldIn.setBlockState(pos, TreesGroup.UMBU_DRIED_BRANCHES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        if (pattern == null) {
+            return;
         }
 
-        if (temp >= 0.9F && "FALL".equals(currentSeason) && random.nextInt(2) == 0) {
-            int distance = state.get(LeavesBlock.DISTANCE);
-            boolean persistent = state.get(LeavesBlock.PERSISTENT);
+        float rainChance = pattern.getRainChance(SeasonalPhase.valueOf(phase));
+        float dryness = 1.0F - rainChance;
 
-            worldIn.setBlockState(pos, TreesGroup.UMBU_DRIED_BRANCHES.get()
-                    .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+        //Pattern for tropical climates (dry season)
+        if (temp > 0.9F) {
+            if (dryness > 0.70F && random.nextFloat() < dryness) {
+
+                int distance = state.get(LeavesBlock.DISTANCE);
+                boolean persistent = state.get(LeavesBlock.PERSISTENT);
+
+                worldIn.setBlockState(pos, TreesGroup.UMBU_DRIED_BRANCHES.get()
+                        .getDefaultState().with(LeavesBlock.DISTANCE, distance).with(LeavesBlock.PERSISTENT, persistent), 3);
+            }
         }
 
         //Fruiting season
