@@ -19,8 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
-import static com.caiocesarmods.caiocesarbiomes.block.ModWood.MULBERRY_PLANKS;
-
 public class WoodGroup {
     public static List<Block> blocksList = new ArrayList<>();
 
@@ -351,12 +349,6 @@ public class WoodGroup {
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
-
-
-    public static final RegistryObject<Block> ERYTHRINA_VELUTINA_LOG = registerBlock("erythrina_velutina_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> ERYTHRINA_VELUTINA_WOOD = registerBlock("erythrina_velutina_wood",
-            ModLogs::new);
 
 
 

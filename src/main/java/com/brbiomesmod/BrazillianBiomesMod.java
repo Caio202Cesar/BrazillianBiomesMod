@@ -163,8 +163,6 @@ public class BrazillianBiomesMod {
                     .put(WoodGroup.JABUTICABA_FRUITING_LOG.get(), WoodGroup.JABUTICABA_LOG.get())
                     .put(WoodGroup.CAVEN_THORN_LOG.get(), Blocks.STRIPPED_ACACIA_LOG)
                     .put(WoodGroup.CAVEN_THORN_WOOD.get(), Blocks.STRIPPED_ACACIA_WOOD)
-                    .put(WoodGroup.ERYTHRINA_VELUTINA_LOG.get(), ModWood.STRIPPED_LIGHTWOOD_LOG.get())
-                    .put(WoodGroup.ERYTHRINA_VELUTINA_WOOD.get(), ModWood.STRIPPED_LIGHTWOOD_WOOD.get())
                     .put(TreesGroup.SCHINUS_LOG.get(), TreesGroup.STRIPPED_SCHINUS_LOG.get())
                     .put(WoodGroup.SCHINUS_WOOD.get(), WoodGroup.STRIPPED_SCHINUS_WOOD.get())
                     .put(WoodGroup.JUA_LOG.get(), ModWood.STRIPPED_MULBERRY_LOG.get())
