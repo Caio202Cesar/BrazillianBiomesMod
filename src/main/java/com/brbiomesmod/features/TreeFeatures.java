@@ -48,6 +48,14 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new MegaJungleTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
                     CaatingaPassionFruitVineLeavesDecorator.INSTANCE, CaatingaPassionFruitVineTrunkDecorator.INSTANCE)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_CASHEW_TREE = register("mega_cashew_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASHEW_LOG),
+                    new SimpleBlockStateProvider(States.CASHEW_LEAVES),
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new UmbrellaTrunkPlacer(6, 4, 2, 5, 7),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+
 
     //Acai Palm
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ACAI_PALM = register("acai_palm",
@@ -1675,7 +1683,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             JENIPAPO_TREE.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.2F), CASHEW_TREE_WITH_PASSIONVINE.withChance(0.02F),
                             YELLOW_MOMBIN_TREE_WITH_VINE.withChance(0.015F), MANGABA_TREE_WITH_VINE.withChance(0.015F),
                             SAPUCAIA_TREE.withChance(0.08F), OITICICA_TREE.withChance(0.089F), OITI_TREE.withChance(0.2F),
-                            OITI_FANCY_TREE.withChance(0.2F), BIG_OITI_TREE.withChance(0.2F)), CASHEW_SHRUB))
+                            OITI_FANCY_TREE.withChance(0.2F), BIG_OITI_TREE.withChance(0.2F), CASHEW_SHRUB.withChance(0.2F)), MEGA_CASHEW_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(12, 0.1F, 1))));
 

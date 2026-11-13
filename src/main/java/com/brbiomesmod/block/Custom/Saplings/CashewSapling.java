@@ -3,6 +3,7 @@ package com.brbiomesmod.block.Custom.Saplings;
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
 import net.minecraft.block.*;
+import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -22,6 +23,7 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
 public class CashewSapling extends SaplingBlock {
@@ -116,9 +118,15 @@ public class CashewSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class CashewTree extends Tree {
+    private static class CashewTree extends BigTree {
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
                 return TreeFeatures.CASHEW_SHRUB;
+        }
+
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
+            return TreeFeatures.MEGA_CASHEW_TREE;
         }
     }
 }
