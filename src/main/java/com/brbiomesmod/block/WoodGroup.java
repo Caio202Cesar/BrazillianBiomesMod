@@ -412,7 +412,7 @@ public class WoodGroup {
             ModLogs::new);
 
 
-
+    /// MYRTACEAE woodset
     public static final RegistryObject<Block> JABUTICABA_LOG = registerBlock("jabuticaba_log",
             JabuticabaLog::new);
     public static final RegistryObject<Block> JABUTICABA_FLOWERING_LOG = registerBlock("jabuticaba_flowering_log",
@@ -421,6 +421,7 @@ public class WoodGroup {
             JabuticabaFruitingLog::new);
 
 
+    ///  Brazilwood
     public static final RegistryObject<Block> BRAZILWOOD_LOG = registerBlock("brazilwood_log",
             ModLogs::new);
     public static final RegistryObject<Block> STRIPPED_BRAZILWOOD_LOG = registerBlock("stripped_brazilwood_log",
