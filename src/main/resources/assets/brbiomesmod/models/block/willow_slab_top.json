@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "brbiomesmod:block/willow_planks",
-    "top": "brbiomesmod:block/willow_planks",
-    "side": "brbiomesmod:block/willow_planks"
-  }
-}

@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:willow_planks"
+      "item": "brbiomesmod:myrtaceae_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:willow_stairs",
+    "item": "brbiomesmod:myrtaceae_stairs",
     "count": 4
   }
 }

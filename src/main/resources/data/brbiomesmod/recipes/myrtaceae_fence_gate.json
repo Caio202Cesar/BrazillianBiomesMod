@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "brbiomesmod:willow_planks"
+      "item": "brbiomesmod:myrtaceae_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:willow_fence_gate"
+    "item": "brbiomesmod:myrtaceae_fence_gate"
   }
 }
