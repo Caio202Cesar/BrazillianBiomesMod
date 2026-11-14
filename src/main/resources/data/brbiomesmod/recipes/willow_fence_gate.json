@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "brbiomesmod:sapucaia_planks"
+      "item": "brbiomesmod:willow_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:sapucaia_fence_gate"
+    "item": "brbiomesmod:willow_fence_gate"
   }
 }
