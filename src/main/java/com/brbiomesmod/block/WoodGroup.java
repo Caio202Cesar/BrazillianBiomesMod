@@ -372,23 +372,21 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-    //Mulberry woodset
+    ///MULBERRY woodset
     public static final RegistryObject<Block> JUA_LOG = registerBlock("jua_log",
             ModLogs::new);
     public static final RegistryObject<Block> JUA_WOOD = registerBlock("jua_wood",
             ModLogs::new);
 
 
+    /// JUNGLE woodset
+    //Sapucaia
     public static final RegistryObject<Block> SAPUCAIA_LOG = registerBlock("sapucaia_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_SAPUCAIA_LOG = registerBlock("stripped_sapucaia_log",
             ModLogs::new);
     public static final RegistryObject<Block> SAPUCAIA_WOOD = registerBlock("sapucaia_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_SAPUCAIA_WOOD = registerBlock("stripped_sapucaia_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> SAPUCAIA_PLANKS = registerBlock("sapucaia_planks",
-            ModPlanks::new);
+
+
     public static final RegistryObject<Block> SAPUCAIA_SLAB = registerBlock("sapucaia_slab",
             () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
