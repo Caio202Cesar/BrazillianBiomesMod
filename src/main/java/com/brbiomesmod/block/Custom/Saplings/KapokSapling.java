@@ -119,10 +119,16 @@ public class KapokSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class KapokTree extends Tree {
+    private static class KapokTree extends BigTree {
         @Nullable
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
+            return TreeFeatures.YOUNG_KAPOK;
+        }
+
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
             return TreeFeatures.KAPOK_TREE;
         }
     }

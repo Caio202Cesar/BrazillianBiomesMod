@@ -30,6 +30,10 @@ public class ModFoliagePlacer {
             FOLIAGE_PLACERS.register("babassu_foliage_placer",
                     () -> new FoliagePlacerType<>(BabassuFoliagePlacer.CODEC));
 
+    public static final RegistryObject<FoliagePlacerType<MegaBlobFoliagePlacer>> MEGA_BLOB_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("mega_blob_foliage_placer",
+                    () -> new FoliagePlacerType<>(MegaBlobFoliagePlacer.CODEC));
+
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);
     }

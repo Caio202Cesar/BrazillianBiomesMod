@@ -144,6 +144,12 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new UmbrellaTrunkPlacer(20, 10, 5, 5, 5),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty()))).setDecorators(ImmutableList.of(
                     TrunkVineTreeDecorator.INSTANCE, LeaveVineTreeDecorator.field_236871_b_)).setIgnoreVines().build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YOUNG_KAPOK = register("young_kapok",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.KAPOK_LOG),
+                    new SimpleBlockStateProvider(States.KAPOK_LEAVES),
+                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
+                    new MegaJungleTrunkPlacer(6, 2, 4),
+                    new TwoLayerFeature(1, 1, 2))).build()));
 
     //Black Jurema Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BLACK_JUREMA_TREE = register("black_jurema_tree",
@@ -1526,7 +1532,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> AMAZON_CANOPY_TREES = register("amazon_canopy_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(
                             LARGE_CECROPIA_TREE.withChance(0.2F), SHARINGA_TREE.withChance(0.2F),
-                            BACURI_TREE.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.2F),
+                            BACURI_TREE.withChance(0.2F), BLACK_SUCUPIRA_TREE.withChance(0.2F), YOUNG_KAPOK.withChance(0.2F),
                             MEGA_BACURI_TREE.withChance(0.2F), BALSA_TREE.withChance(0.2F), KAPOK_TREE.withChance(0.2F),
                             BRAZILLIAN_TIGERWOOD_TREE.withChance(0.2F), BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.2F),
                             JENIPAPO_TREE.withChance(0.2F), SAPUCAIA_TREE.withChance(0.2F), MEGA_BALSA_TREE.withChance(0.2F),
@@ -1541,7 +1547,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(12, 0.5F, 2))));
     public static final ConfiguredFeature<?, ?> AMAZON_EDGE_TREES = register("amazon_edge_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(KAPOK_TREE.withChance(0.35F),
-                            BURITI_PALM.withChance(0.4F), COCOA_TREE.withChance(0.4F), SOMBREIRO_TREE.withChance(0.3F),
+                            BURITI_PALM.withChance(0.4F), COCOA_TREE.withChance(0.4F), SOMBREIRO_TREE.withChance(0.3F), YOUNG_KAPOK.withChance(0.2F),
                             LARGE_CECROPIA_TREE.withChance(0.2F), SHARINGA_TREE.withChance(0.5F), LOPHANTERA_TREE2.withChance(0.25F), LOPHANTERA_TREE.withChance(0.25F),
                             BACURI_TREE.withChance(0.3F), BLACK_SUCUPIRA_TREE.withChance(0.3F), MEGA_BACURI_TREE.withChance(0.34F), BABASSU_PALM2.withChance(0.5F),
                             BALSA_TREE.withChance(0.5F), SANDBOX_TREE.withChance(0.4F), BRAZILLIAN_TIGERWOOD_TREE.withChance(0.2F),
@@ -1552,7 +1558,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> VARZEA_TREES = register("varzea_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.09F),
                             KAPOK_TREE.withChance(0.25F), YELLOW_MOMBIN_TREE.withChance(0.17F), JENIPAPO_TREE.withChance(0.22F), SOMBREIRO_TREE.withChance(0.45f),
-                            AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F),
+                            AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F), YOUNG_KAPOK.withChance(0.2F),
                     HUMBOLDT_WILLOW_TREE.withChance(0.0059F)), SANDBOX_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.3F, 1))));//Add copaiba and andiroba
     public static final ConfiguredFeature<?, ?> VARZEA_PALMS = register("varzea_palms",
