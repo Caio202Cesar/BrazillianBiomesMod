@@ -1019,9 +1019,6 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));*/
 
 
-    public static final RegistryObject<Block> HUMBOLDT_WILLOW_LOG = registerBlock("humboldt_willow_log",
-            ModLogs::new);
-
     public static final RegistryObject<Block> HUMBOLDT_WILLOW_LEAVES = registerBlock("humboldt_willow_leaves",
             () -> new HumboldtWillowLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.HUMBOLDT_WILLOW_FALL_LEAVES));
@@ -1031,7 +1028,6 @@ public class TreesGroup {
     public static final RegistryObject<Block> HUMBOLDT_WILLOW_BRANCHES = registerBlock("humboldt_willow_branches",
             () -> new HumboldtWillowBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.HUMBOLDT_WILLOW_LEAVES));
-
     public static final RegistryObject<Block> HUMBOLDT_WILLOW_SAPLING = registerBlock("humboldt_willow_sapling",
             HumboldtWillowSapling::new);
     @SuppressWarnings("deprecation")

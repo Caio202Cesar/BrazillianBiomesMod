@@ -1301,7 +1301,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState SANDBOX_TREE_LOG = TreesGroup.SANDBOX_TREE_LOG.get().getDefaultState();
         protected static final BlockState SANDBOX_TREE_LEAVES = TreesGroup.SANDBOX_TREE_LEAVES.get().getDefaultState();
 
-        protected static final BlockState HUMBOLDT_WILLOW_LOG = TreesGroup.HUMBOLDT_WILLOW_LOG.get().getDefaultState();
+        protected static final BlockState HUMBOLDT_WILLOW_LOG = ModWood.WILLOW_LOG.get().getDefaultState();
         protected static final BlockState HUMBOLDT_WILLOW_LEAVES = TreesGroup.HUMBOLDT_WILLOW_LEAVES.get().getDefaultState();
 
         protected static final BlockState PEQUI_LOG = TreesGroup.PEQUI_LOG.get().getDefaultState();

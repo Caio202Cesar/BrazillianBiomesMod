@@ -636,9 +636,6 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-    public static final RegistryObject<Block> HUMBOLDT_WILLOW_WOOD = registerBlock("humboldt_willow_wood",
-            ModLogs::new);
-
 
     public static final RegistryObject<Block> OITI_WOOD = registerBlock("oiti_wood",
             ModLogs::new);
