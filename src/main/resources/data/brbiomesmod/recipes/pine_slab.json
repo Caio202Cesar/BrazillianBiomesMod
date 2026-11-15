@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:myrtaceae_planks"
+      "item": "brbiomesmod:pine_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:myrtaceae_slab",
+    "item": "brbiomesmod:pine_slab",
     "count": 6
   }
 }
