@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "caiocesarbiomes:block/ilex_planks",
-    "top": "caiocesarbiomes:block/ilex_planks",
-    "side": "caiocesarbiomes:block/ilex_planks"
-  }
-}

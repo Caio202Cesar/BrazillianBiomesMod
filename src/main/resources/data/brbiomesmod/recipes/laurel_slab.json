@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:pine_planks"
+      "item": "brbiomesmod:laurel_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:pine_slab",
+    "item": "brbiomesmod:laurel_slab",
     "count": 6
   }
 }

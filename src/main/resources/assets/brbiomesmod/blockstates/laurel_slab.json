@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/laurel_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/laurel_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/laurel_slab_top"
+    }
+  }
+}
