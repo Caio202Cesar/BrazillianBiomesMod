@@ -123,7 +123,11 @@ public class SapucaiaSapling extends SaplingBlock {
     private static class SapucaiaTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.SAPUCAIA_TREE;
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.SAPUCAIA_TREE2;
+            } else {
+                return TreeFeatures.SAPUCAIA_TREE1;
+            }
         }
     }
 }

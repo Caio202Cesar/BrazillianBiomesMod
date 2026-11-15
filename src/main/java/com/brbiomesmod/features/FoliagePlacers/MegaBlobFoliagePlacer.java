@@ -48,59 +48,64 @@ public class MegaBlobFoliagePlacer extends FoliagePlacer {
         BlockPos tip = foliage.func_236763_a_();
         boolean giant = foliage.func_236765_c_();
 
-        int canopyRadius = radius + rand.nextInt(2);
+        // Overall canopy size
+        int canopyRadius = radius + 4;
+        int height = Math.max(foliageHeight, canopyRadius + 2);
 
-        // 🌿 Small canopy around branch tip
-        for (int y = 0; y >= -1; y--) {
-            for (int x = -canopyRadius; x <= canopyRadius; x++) {
-                for (int z = -canopyRadius; z <= canopyRadius; z++) {
+        for (int y = 0; y >= -height; y--) {
 
-                    if (Math.abs(x) + Math.abs(z) <= canopyRadius + 1) {
+            // Position within the canopy (0 = top, 1 = bottom)
+            float progress = (float)(-y) / (float)height;
 
-                        BlockPos pos = tip.add(x, y, z);
+            // Ellipsoid equation
+            float sphere = 1.0F - (float)Math.pow(progress - 0.5F, 2) * 4.0F;
+            sphere = Math.max(0.0F, sphere);
 
-                        this.func_236753_a_(
+            int layerRadius = Math.max(1,
+                    Math.round(canopyRadius * (float)Math.sqrt(sphere)));
+
+            // Slightly flatten the bottom
+            if (progress > 0.75F) {
+                layerRadius += 1;
+            }
+
+            for (int x = -layerRadius; x <= layerRadius; x++) {
+                for (int z = -layerRadius; z <= layerRadius; z++) {
+
+                    double distance = x * x + z * z;
+                    double maxDistance = layerRadius * layerRadius;
+
+                    if (distance > maxDistance)
+                        continue;
+
+                    // Edge irregularity
+                    if (distance > (layerRadius - 1) * (layerRadius - 1)) {
+                        if (rand.nextFloat() < 0.25F)
+                            continue;
+                    }
+
+                    BlockPos pos = tip.add(x, y, z);
+
+                    placeLeaf(
+                            world,
+                            rand,
+                            config,
+                            pos,
+                            leaves,
+                            box
+                    );;
+
+                    // Occasional hanging leaves
+                    if (progress > 0.70F &&
+                            distance > (layerRadius - 2) * (layerRadius - 2) &&
+                            rand.nextFloat() < 0.12F) {
+
+                        placeLeaf(
                                 world,
                                 rand,
                                 config,
                                 pos,
-                                0,          // radius 0 = single leaf
                                 leaves,
-                                y,
-                                giant,
-                                box
-                        );
-                    }
-                }
-            }
-        }
-
-        // 🌿 Hanging willow strands from canopy edge
-        for (int x = -canopyRadius; x <= canopyRadius; x++) {
-            for (int z = -canopyRadius; z <= canopyRadius; z++) {
-
-                int dist = Math.abs(x) + Math.abs(z);
-
-                if (dist >= canopyRadius - 1 && rand.nextFloat() < 0.45F) {
-
-                    int length = 3 + rand.nextInt(4);
-
-                    int dx = Integer.signum(x);
-                    int dz = Integer.signum(z);
-
-                    for (int y = -2; y > -2 - length; y--) {
-
-                        BlockPos hanging = tip.add(x + dx, y, z + dz);
-
-                        this.func_236753_a_(
-                                world,
-                                rand,
-                                config,
-                                hanging,
-                                0,
-                                leaves,
-                                y,
-                                giant,
                                 box
                         );
                     }
@@ -111,7 +116,7 @@ public class MegaBlobFoliagePlacer extends FoliagePlacer {
 
     @Override
     public int func_230374_a_(Random rand, int trunkHeight, BaseTreeFeatureConfig config) {
-        return 2;
+        return trunkHeight - 2;
     }
 
     @Override
@@ -134,12 +139,18 @@ public class MegaBlobFoliagePlacer extends FoliagePlacer {
 
         if (TreeFeature.isReplaceableAt(world, pos)) {
 
-            BlockState leafState = config.leavesProvider
-                    .getBlockState(random, pos)
-                    .with(LeavesBlock.PERSISTENT, true)
-                    .with(LeavesBlock.DISTANCE, 1);
+            BlockState state = config.leavesProvider
+                    .getBlockState(random, pos);
 
-            world.setBlockState(pos, leafState, 19);
+            if (state.hasProperty(LeavesBlock.PERSISTENT)) {
+                state = state.with(LeavesBlock.PERSISTENT, true);
+            }
+
+            if (state.hasProperty(LeavesBlock.DISTANCE)) {
+                state = state.with(LeavesBlock.DISTANCE, 1);
+            }
+
+            world.setBlockState(pos, state, 19);
 
             leaves.add(pos);
             box.expandTo(new MutableBoundingBox(pos, pos));
