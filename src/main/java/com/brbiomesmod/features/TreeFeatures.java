@@ -52,7 +52,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.CASHEW_LOG),
                     new SimpleBlockStateProvider(States.CASHEW_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
-                    new UmbrellaTrunkPlacer(6, 4, 2, 5, 7),
+                    new UmbrellaTrunkPlacer(2, 5, 3, 5, 7),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty())))
                     .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
