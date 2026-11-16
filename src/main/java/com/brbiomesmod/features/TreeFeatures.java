@@ -9,6 +9,7 @@ import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.CoconutFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.FoliagePlacers.VirginianaFoliagePlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.AncientMetrosiderosTrunkPlacer;
+import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.ThinUmbrellaTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.TrunkPlacers.UmbrellaTrunkPlacer;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures;
 import com.caiocesarmods.caiocesarbiomes.World.worldgen.features.features.ModFeatures.Placements;
@@ -909,10 +910,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAPUCAIA_TREE1 = register("sapucaia_tree1",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SAPUCAIA_LOG),
                     new SimpleBlockStateProvider(States.SAPUCAIA_LEAVES),
-                    new MegaBlobFoliagePlacer(FeatureSpread.create(5), FeatureSpread.create(0), 6),
-                    new FancyTrunkPlacer(6, 11, 0),
-                    new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                    new MegaBlobFoliagePlacer(FeatureSpread.create(5), FeatureSpread.create(0), 8),
+                    new ThinUmbrellaTrunkPlacer(4, 6, 4, 5, 5),
+                    new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty()))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAPUCAIA_TREE2 = register("sapucaia_tree2",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SAPUCAIA_LOG),
                     new SimpleBlockStateProvider(States.SAPUCAIA_LEAVES),
