@@ -46,7 +46,6 @@ public class MegaBlobFoliagePlacer extends FoliagePlacer {
                                   MutableBoundingBox box) {
 
         BlockPos tip = foliage.func_236763_a_();
-        boolean giant = foliage.func_236765_c_();
 
         // Overall canopy size
         int height = Math.max(foliageHeight, radius + 2);
