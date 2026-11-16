@@ -49,8 +49,7 @@ public class MegaBlobFoliagePlacer extends FoliagePlacer {
         boolean giant = foliage.func_236765_c_();
 
         // Overall canopy size
-        int canopyRadius = radius + 4;
-        int height = Math.max(foliageHeight, canopyRadius + 2);
+        int height = Math.max(foliageHeight, radius + 2);
 
         for (int y = 0; y >= -height; y--) {
 
@@ -62,7 +61,7 @@ public class MegaBlobFoliagePlacer extends FoliagePlacer {
             sphere = Math.max(0.0F, sphere);
 
             int layerRadius = Math.max(1,
-                    Math.round(canopyRadius * (float)Math.sqrt(sphere)));
+                    Math.round(radius * (float)Math.sqrt(sphere)));
 
             // Slightly flatten the bottom
             if (progress > 0.75F) {
@@ -84,7 +83,7 @@ public class MegaBlobFoliagePlacer extends FoliagePlacer {
                             continue;
                     }
 
-                    BlockPos pos = tip.add(x, y, z);
+                    BlockPos pos = tip.add(x, y - offset, z);
 
                     placeLeaf(
                             world,
@@ -116,16 +115,11 @@ public class MegaBlobFoliagePlacer extends FoliagePlacer {
 
     @Override
     public int func_230374_a_(Random rand, int trunkHeight, BaseTreeFeatureConfig config) {
-        return trunkHeight - 2;
+        return 6;
     }
 
     @Override
-    protected boolean func_230373_a_(Random rand,
-                                     int x,
-                                     int y,
-                                     int z,
-                                     int radius,
-                                     boolean giantTrunk) {
+    protected boolean func_230373_a_(Random rand, int x, int y, int z, int radius, boolean giantTrunk) {
         return false;
     }
 
