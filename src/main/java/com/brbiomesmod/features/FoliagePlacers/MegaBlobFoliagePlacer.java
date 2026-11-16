@@ -136,7 +136,7 @@ public class MegaBlobFoliagePlacer extends BlobFoliagePlacer {
                     .getBlockState(random, pos);
 
             if (state.hasProperty(LeavesBlock.PERSISTENT)) {
-                state = state.with(LeavesBlock.PERSISTENT, true);
+                state = state.with(LeavesBlock.PERSISTENT, false);
             }
 
             if (state.hasProperty(LeavesBlock.DISTANCE)) {
