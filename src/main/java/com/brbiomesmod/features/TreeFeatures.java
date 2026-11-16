@@ -911,7 +911,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SAPUCAIA_LOG),
                     new SimpleBlockStateProvider(States.SAPUCAIA_LEAVES),
                     new MegaBlobFoliagePlacer(FeatureSpread.create(4), FeatureSpread.create(0), 6),
-                    new ThinUmbrellaTrunkPlacer(6, 7, 4, 7, 5),
+                    new ThinUmbrellaTrunkPlacer(5, 7, 4, 7, 5),
                     new ThreeLayerFeature(1, 1, 0, 1, 2, OptionalInt.empty()))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAPUCAIA_TREE2 = register("sapucaia_tree2",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SAPUCAIA_LOG),
@@ -919,7 +919,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
-                            OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+                            OptionalInt.of(4)))).setDecorators(ImmutableList.of(
+                            Placements.SPANISH_MOSS_PLACEMENT, Placements.RESURRECTION_FERN_PLACEMENT075))
+                    .setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
     //Silk Floss Trees
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_SILK_FLOSS_TREE = register("white_silk_floss_tree",
