@@ -50,10 +50,13 @@ public class MegaBlobFoliagePlacer extends FoliagePlacer {
         // Overall canopy size
         int height = Math.max(foliageHeight, radius + 2);
 
-        for (int y = 0; y >= -height; y--) {
+        int topHeight = 2;
+
+        for (int y = topHeight; y >= -height; y--) {
 
             // Position within the canopy (0 = top, 1 = bottom)
-            float progress = (float)(-y) / (float)height;
+            int totalHeight = height + topHeight;
+            float progress = (float)(topHeight - y) / (float)totalHeight;
 
             // Ellipsoid equation
             float sphere = 1.0F - (float)Math.pow(progress - 0.5F, 2) * 4.0F;
