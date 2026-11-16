@@ -909,7 +909,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SAPUCAIA_TREE1 = register("sapucaia_tree1",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.SAPUCAIA_LOG),
                     new SimpleBlockStateProvider(States.SAPUCAIA_LEAVES),
-                    new MegaBlobFoliagePlacer(FeatureSpread.create(5), FeatureSpread.create(0)),
+                    new MegaBlobFoliagePlacer(FeatureSpread.create(5), FeatureSpread.create(0), 6),
                     new FancyTrunkPlacer(6, 11, 0),
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));

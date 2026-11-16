@@ -10,23 +10,20 @@ import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.feature.BaseTreeFeatureConfig;
 import net.minecraft.world.gen.feature.FeatureSpread;
 import net.minecraft.world.gen.feature.TreeFeature;
+import net.minecraft.world.gen.foliageplacer.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacer;
 import net.minecraft.world.gen.foliageplacer.FoliagePlacerType;
 
 import java.util.Random;
 import java.util.Set;
 
-public class MegaBlobFoliagePlacer extends FoliagePlacer {
-    public MegaBlobFoliagePlacer(FeatureSpread radius, FeatureSpread offset) {super(radius, offset);}
+public class MegaBlobFoliagePlacer extends BlobFoliagePlacer {
+    public MegaBlobFoliagePlacer(FeatureSpread radius, FeatureSpread offset, int height) {super(radius, offset, height);}
 
-    public static final Codec<MegaBlobFoliagePlacer> CODEC = RecordCodecBuilder.create(instance ->
-            instance.group(
-                    FeatureSpread.CODEC.fieldOf("radius")
-                            .forGetter(fp -> fp.radius),
-                    FeatureSpread.CODEC.fieldOf("offset")
-                            .forGetter(fp -> fp.offset)
-            ).apply(instance, MegaBlobFoliagePlacer::new)
-    );
+    public static final Codec<MegaBlobFoliagePlacer> CODEC =
+            RecordCodecBuilder.create(instance ->
+                    func_236740_a_(instance).apply(instance, MegaBlobFoliagePlacer::new)
+            );
 
     @Override
     protected FoliagePlacerType<?> getPlacerType() {
@@ -48,14 +45,14 @@ public class MegaBlobFoliagePlacer extends FoliagePlacer {
         BlockPos tip = foliage.func_236763_a_();
 
         // Overall canopy size
-        int height = Math.max(foliageHeight, radius + 2);
+        int canopyHeight = Math.max(this.field_236739_b_, foliageHeight);
 
         int topHeight = 2;
 
-        for (int y = topHeight; y >= -height; y--) {
+        for (int y = topHeight; y >= -canopyHeight; y--) {
 
             // Position within the canopy (0 = top, 1 = bottom)
-            int totalHeight = height + topHeight;
+            int totalHeight = canopyHeight + topHeight;
             float progress = (float)(topHeight - y) / (float)totalHeight;
 
             // Ellipsoid equation
@@ -117,7 +114,7 @@ public class MegaBlobFoliagePlacer extends FoliagePlacer {
 
     @Override
     public int func_230374_a_(Random rand, int trunkHeight, BaseTreeFeatureConfig config) {
-        return 6;
+        return this.field_236739_b_;
     }
 
     @Override
