@@ -1402,7 +1402,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState CAGAITA_BLOSSOM = TreesGroup.CAGAITA_FLOWERING_LEAVES.get().getDefaultState();
         protected static final BlockState CAGAITA_LEAVES = TreesGroup.CAGAITA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SHARINGA_LOG = TreesGroup.SHARINGA_LOG.get().getDefaultState();
+        protected static final BlockState SHARINGA_LOG =  WoodGroup.SHARINGA_LOG.get().getDefaultState();
         protected static final BlockState SHARINGA_LEAVES = TreesGroup.SHARINGA_LEAVES.get().getDefaultState();
 
         protected static final BlockState ARAUCARIA_LOG = ModWood.ARAUCARIA_LOG.get().getDefaultState();

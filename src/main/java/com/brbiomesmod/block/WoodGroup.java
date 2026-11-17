@@ -143,22 +143,18 @@ public class WoodGroup {
     public static final RegistryObject<Block> MANACA_DA_SERRA_WOOD = registerBlock("manaca_da_serra_wood",
             ModLogs::new);
     //Sharinga
+    public static final RegistryObject<Block> SHARINGA_LOG = registerBlock("sharinga_log",
+            SharingaLog::new);
+    public static final RegistryObject<Block> SHARINGA_TAPPERED_LOG = registerBlock("sharinga_tappered_log",
+            SharingaTapperedLog::new);
     public static final RegistryObject<Block> SHARINGA_WOOD = registerBlock("sharinga_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_SHARINGA_WOOD = registerBlock("stripped_sharinga_wood",
+    //Jenipapo
+    public static final RegistryObject<Block> JENIPAPO_LOG = registerBlock("jenipapo_log",
             ModLogs::new);
-    public static final RegistryObject<Block> SHARINGA_SLAB = registerBlock("sharinga_slab",
-            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> SHARINGA_STAIRS = registerBlock("sharinga_stairs",
-            () -> new StairsBlock(() -> SHARINGA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> SHARINGA_FENCE = registerBlock("sharinga_fence",
-            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> SHARINGA_FENCE_GATE = registerBlock("sharinga_fence_gate",
-            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> JENIPAPO_WOOD = registerBlock("jenipapo_wood",
+            ModLogs::new);
+
 
     /// Brazillian Rosewood
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LOG = registerBlock("brazillian_rosewood_log",
@@ -180,7 +176,8 @@ public class WoodGroup {
     public static final RegistryObject<Block> IMBUIA_WOOD = registerBlock("imbuia_wood",
             ModLogs::new);
 
-    /// Bracatinga
+
+    /// LAUREL woodset
     public static final RegistryObject<Block> BRACATINGA_LOG = registerBlock("bracatinga_log",
             ModLogs::new);
     public static final RegistryObject<Block> BRACATINGA_WOOD = registerBlock("bracatinga_wood",
@@ -230,11 +227,6 @@ public class WoodGroup {
     public static final RegistryObject<Block> SAPUCAIA_LOG = registerBlock("sapucaia_log",
             ModLogs::new);
     public static final RegistryObject<Block> SAPUCAIA_WOOD = registerBlock("sapucaia_wood",
-            ModLogs::new);
-    //Jenipapo
-    public static final RegistryObject<Block> JENIPAPO_LOG = registerBlock("jenipapo_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> JENIPAPO_WOOD = registerBlock("jenipapo_wood",
             ModLogs::new);
     //Silk Floss
     public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
