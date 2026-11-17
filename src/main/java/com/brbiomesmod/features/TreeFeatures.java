@@ -1313,7 +1313,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState XAXIM_LEAVES = TreesGroup.XAXIM_LEAVES.get().getDefaultState();
 
         protected static final BlockState JENIPAPO_LEAVES = TreesGroup.JENIPAPO_LEAVES.get().getDefaultState();
-        protected static final BlockState JENIPAPO_LOG = TreesGroup.JENIPAPO_LOG.get().getDefaultState();
+        protected static final BlockState JENIPAPO_LOG = WoodGroup.JENIPAPO_LOG.get().getDefaultState();
 
         protected static final BlockState BURITI_LEAVES = TreesGroup.BURITI_LEAVES.get().getDefaultState();
         protected static final BlockState BURITI_LOG = TreesGroup.BURITI_LOG.get().getDefaultState();
@@ -1398,7 +1398,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState MANACA_DA_SERRA_LOG = WoodGroup.MANACA_DA_SERRA_LOG.get().getDefaultState();
         protected static final BlockState MANACA_DA_SERRA_LEAVES = TreesGroup.MANACA_DA_SERRA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState CAGAITA_LOG = TreesGroup.CAGAITA_LOG.get().getDefaultState();
+        protected static final BlockState CAGAITA_LOG = WoodGroup.CAGAITA_LOG.get().getDefaultState();
         protected static final BlockState CAGAITA_BLOSSOM = TreesGroup.CAGAITA_FLOWERING_LEAVES.get().getDefaultState();
         protected static final BlockState CAGAITA_LEAVES = TreesGroup.CAGAITA_LEAVES.get().getDefaultState();
 
