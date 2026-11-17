@@ -1,26 +1,20 @@
 package com.brbiomesmod.block.Custom.Log;
 
-import com.brbiomesmod.block.TreesGroup;
+import com.brbiomesmod.block.WoodGroup;
 import com.brbiomesmod.item.ModItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.IPlantable;
 import net.minecraftforge.common.ToolType;
-
-import java.util.Random;
 
 public class SharingaLog extends RotatedPillarBlock {
     public SharingaLog() {
@@ -41,14 +35,14 @@ public class SharingaLog extends RotatedPillarBlock {
             return;
 
         // Prevent re-stripping
-        if (state.getBlock() == TreesGroup.SHARINGA_TAPPERED_LOG.get())
+        if (state.getBlock() == WoodGroup.SHARINGA_TAPPERED_LOG.get())
             return;
 
         Direction.Axis axis = state.get(RotatedPillarBlock.AXIS);
 
         worldIn.setBlockState(
                 pos,
-                TreesGroup.SHARINGA_TAPPERED_LOG.get()
+                WoodGroup.SHARINGA_TAPPERED_LOG.get()
                         .getDefaultState()
                         .with(RotatedPillarBlock.AXIS, axis),
                 3
