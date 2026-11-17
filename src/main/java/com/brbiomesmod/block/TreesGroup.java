@@ -842,8 +842,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> JENIPAPO_LOG = registerBlock("jenipapo_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> JENIPAPO_LEAVES = registerBlock("jenipapo_leaves",
             () -> new JenipapoLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
@@ -1213,8 +1212,6 @@ public class TreesGroup {
             StrawberryGuavaSapling::new);
 */
 
-    public static final RegistryObject<Block> CAGAITA_LOG = registerBlock("cagaita_log",
-            ModLogs::new);
     public static final RegistryObject<Block> CAGAITA_LEAVES = registerBlock("cagaita_leaves",
             () -> new CagaitaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CAGAITA_DRIED_BRANCHES));
@@ -1230,7 +1227,6 @@ public class TreesGroup {
     public static final RegistryObject<Block> CAGAITA_FRUITING_LEAVES = registerBlock("cagaita_fruiting_leaves",
             () -> new CagaitaFruitingLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.CAGAITA_LEAVES));
-
     public static final RegistryObject<Block> CAGAITA_SAPLING = registerBlock("cagaita_sapling",
             CagaitaSapling::new);
     @SuppressWarnings("deprecation")
