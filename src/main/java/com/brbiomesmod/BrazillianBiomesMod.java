@@ -174,6 +174,7 @@ public class BrazillianBiomesMod {
                     .put(TreesGroup.BALSA_LOG.get(), TreesGroup.STRIPPED_BALSA_LOG.get())
                     .put(WoodGroup.BALSA_WOOD.get(), WoodGroup.STRIPPED_BALSA_WOOD.get())
                     .put(WoodGroup.SHARINGA_LOG.get(), ModWood.STRIPPED_LIGHTWOOD_LOG.get())
+                    .put(WoodGroup.SHARINGA_TAPPERED_LOG.get(), ModWood.STRIPPED_LIGHTWOOD_LOG.get())
                     .put(WoodGroup.SHARINGA_WOOD.get(), ModWood.STRIPPED_LIGHTWOOD_WOOD.get())
                     .put(TreesGroup.BACURI_LOG.get(), TreesGroup.STRIPPED_BACURI_LOG.get())
                     .put(WoodGroup.BACURI_WOOD.get(), WoodGroup.STRIPPED_BACURI_WOOD.get())
