@@ -51,28 +51,6 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-    /// Silk Floss
-    public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
-            SilkFlossLog::new);
-    public static final RegistryObject<Block> SILK_FLOSS_THORNLESS_LOG = registerBlock("silk_floss_thornless_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> SILK_FLOSS_WOOD = registerBlock("silk_floss_thornless_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> SILK_FLOSS_THORNY_WOOD = registerBlock("silk_floss_thorny_wood",
-            SilkFlossLog::new);
-
-
-    /// Kapok
-    public static final RegistryObject<Block> KAPOK_LOG = registerBlock("kapok_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> KAPOK_WOOD = registerBlock("kapok_wood",
-            ModLogs::new);
-
-
-    /// Cacao
-    public static final RegistryObject<Block> COCOA_LOG = registerBlock("cocoa_log",
-            CocoaLog::new);
-
 
     /// Pink Peroba
     public static final RegistryObject<Block> PINK_PEROBA_LOG = registerBlock("pink_peroba_log",
@@ -164,7 +142,23 @@ public class WoodGroup {
             ModLogs::new);
     public static final RegistryObject<Block> MANACA_DA_SERRA_WOOD = registerBlock("manaca_da_serra_wood",
             ModLogs::new);
-
+    //Sharinga
+    public static final RegistryObject<Block> SHARINGA_WOOD = registerBlock("sharinga_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> STRIPPED_SHARINGA_WOOD = registerBlock("stripped_sharinga_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> SHARINGA_SLAB = registerBlock("sharinga_slab",
+            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> SHARINGA_STAIRS = registerBlock("sharinga_stairs",
+            () -> new StairsBlock(() -> SHARINGA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
+                    .harvestLevel(1).harvestTool(ToolType.AXE)));
+    public static final RegistryObject<Block> SHARINGA_FENCE = registerBlock("sharinga_fence",
+            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
+    public static final RegistryObject<Block> SHARINGA_FENCE_GATE = registerBlock("sharinga_fence_gate",
+            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
+                    .hardnessAndResistance(3f)));
 
     /// Brazillian Rosewood
     public static final RegistryObject<Block> BRAZILLIAN_ROSEWOOD_LOG = registerBlock("brazillian_rosewood_log",
@@ -242,6 +236,23 @@ public class WoodGroup {
             ModLogs::new);
     public static final RegistryObject<Block> JENIPAPO_WOOD = registerBlock("jenipapo_wood",
             ModLogs::new);
+    //Silk Floss
+    public static final RegistryObject<Block> SILK_FLOSS_LOG = registerBlock("silk_floss_log",
+            SilkFlossLog::new);
+    public static final RegistryObject<Block> SILK_FLOSS_THORNLESS_LOG = registerBlock("silk_floss_thornless_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> SILK_FLOSS_WOOD = registerBlock("silk_floss_thornless_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> SILK_FLOSS_THORNY_WOOD = registerBlock("silk_floss_thorny_wood",
+            SilkFlossLog::new);
+    //Kapok
+    public static final RegistryObject<Block> KAPOK_LOG = registerBlock("kapok_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> KAPOK_WOOD = registerBlock("kapok_wood",
+            ModLogs::new);
+    //Cocoa
+    public static final RegistryObject<Block> COCOA_LOG = registerBlock("cocoa_log",
+            CocoaLog::new);
 
 
     /// Balsa
@@ -302,27 +313,6 @@ public class WoodGroup {
             () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
     public static final RegistryObject<Block> BRAZILNUT_FENCE_GATE = registerBlock("brazilnut_fence_gate",
-            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-
-
-
-    public static final RegistryObject<Block> SHARINGA_PLANKS = registerBlock("sharinga_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> SHARINGA_WOOD = registerBlock("sharinga_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_SHARINGA_WOOD = registerBlock("stripped_sharinga_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> SHARINGA_SLAB = registerBlock("sharinga_slab",
-            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> SHARINGA_STAIRS = registerBlock("sharinga_stairs",
-            () -> new StairsBlock(() -> SHARINGA_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> SHARINGA_FENCE = registerBlock("sharinga_fence",
-            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> SHARINGA_FENCE_GATE = registerBlock("sharinga_fence_gate",
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
