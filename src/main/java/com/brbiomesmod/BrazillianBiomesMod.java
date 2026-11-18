@@ -188,8 +188,8 @@ public class BrazillianBiomesMod {
                     .put(WoodGroup.PEQUI_WOOD.get(), WoodGroup.STRIPPED_PEQUI_WOOD.get())
                     .put(WoodGroup.YELLOW_MOMBIN_LOG.get(), ModWood.STRIPPED_LIGHTWOOD_LOG.get())
                     .put(WoodGroup.YELLOW_MOMBIN_WOOD.get(), ModWood.STRIPPED_LIGHTWOOD_WOOD.get())
-                    .put(TreesGroup.OITI_LOG.get(), TreesGroup.STRIPPED_OITI_LOG.get())
-                    .put(WoodGroup.OITI_WOOD.get(), WoodGroup.STRIPPED_OITI_WOOD.get())
+                    .put(WoodGroup.OITI_LOG.get(), ModWood.STRIPPED_LIGHTWOOD_LOG.get())
+                    .put(WoodGroup.OITI_WOOD.get(), ModWood.STRIPPED_LIGHTWOOD_WOOD.get())
                     .build();
 
             ModBiomeGeneration.generateBiomes();

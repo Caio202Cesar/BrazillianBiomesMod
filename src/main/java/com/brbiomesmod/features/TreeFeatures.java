@@ -1284,7 +1284,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         //Figs
         protected static final BlockState FICUS_CESTRIFOLIA_LEAVES = TreesGroup.FICUS_CESTRIFOLIA_LEAVES.get().getDefaultState();
 
-        protected static final BlockState OITI_LOG = TreesGroup.OITI_LOG.get().getDefaultState();
+        protected static final BlockState OITI_LOG = WoodGroup.OITI_LOG.get().getDefaultState();
         protected static final BlockState OITICICA_LEAVES = TreesGroup.OITICICA_LEAVES.get().getDefaultState();
         protected static final BlockState OITI_LEAVES = TreesGroup.OITI_LEAVES.get().getDefaultState();
 

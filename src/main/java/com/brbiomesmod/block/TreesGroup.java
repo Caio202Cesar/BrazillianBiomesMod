@@ -1030,10 +1030,7 @@ public class TreesGroup {
                     .zeroHardnessAndResistance().notSolid()));
 
 
-    public static final RegistryObject<Block> OITI_LOG = registerBlock("oiti_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_OITI_LOG = registerBlock("stripped_oiti_log",
-            ModLogs::new);
+
     public static final RegistryObject<Block> OITICICA_LEAVES = registerBlock("oiticica_leaves",
             ModLeaves::new);
     public static final RegistryObject<Block> OITICICA_SAPLING = registerBlock("oiticica_sapling",

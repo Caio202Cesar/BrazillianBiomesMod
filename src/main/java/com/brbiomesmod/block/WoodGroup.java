@@ -154,6 +154,12 @@ public class WoodGroup {
             ModLogs::new);
     public static final RegistryObject<Block> JENIPAPO_WOOD = registerBlock("jenipapo_wood",
             ModLogs::new);
+    //Oiti
+    public static final RegistryObject<Block> OITI_LOG = registerBlock("oiti_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> OITI_WOOD = registerBlock("oiti_wood",
+            ModLogs::new);
+
 
 
     /// Brazillian Rosewood
@@ -620,26 +626,6 @@ public class WoodGroup {
             () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
                     .hardnessAndResistance(3f)));
 
-
-
-    public static final RegistryObject<Block> OITI_WOOD = registerBlock("oiti_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_OITI_WOOD = registerBlock("stripped_oiti_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> OITI_PLANKS = registerBlock("oiti_planks",
-            ModPlanks::new);
-    public static final RegistryObject<Block> OITI_SLAB = registerBlock("oiti_slab",
-            () -> new SlabBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> OITI_STAIRS = registerBlock("oiti_stairs",
-            () -> new StairsBlock(() -> OITI_PLANKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.WOOD)
-                    .harvestLevel(1).harvestTool(ToolType.AXE)));
-    public static final RegistryObject<Block> OITI_FENCE = registerBlock("oiti_fence",
-            () -> new FenceBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
-    public static final RegistryObject<Block> OITI_FENCE_GATE = registerBlock("oiti_fence_gate",
-            () -> new FenceGateBlock(AbstractBlock.Properties.create(Material.WOOD).harvestLevel(2).harvestTool(ToolType.AXE)
-                    .hardnessAndResistance(3f)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
