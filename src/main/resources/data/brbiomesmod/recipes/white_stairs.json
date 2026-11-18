@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:oiti_planks"
+      "item": "brbiomesmod:white_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:oiti_stairs",
+    "item": "brbiomesmod:white_stairs",
     "count": 4
   }
 }

@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:oiti_planks"
+      "item": "brbiomesmod:white_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:oiti_slab",
+    "item": "brbiomesmod:white_slab",
     "count": 6
   }
 }

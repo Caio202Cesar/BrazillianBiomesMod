@@ -10,11 +10,11 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "brbiomesmod:manaca_da_serra_planks"
+      "item": "brbiomesmod:white_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:manaca_da_serra_fence",
+    "item": "brbiomesmod:white_fence",
     "count": 3
   }
 }
