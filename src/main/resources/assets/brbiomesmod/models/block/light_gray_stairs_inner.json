@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "brbiomesmod:block/light_gray_planks",
+    "top": "brbiomesmod:block/light_gray_planks",
+    "side": "brbiomesmod:block/light_gray_planks"
+  }
+}
