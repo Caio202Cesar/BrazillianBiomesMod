@@ -26,6 +26,17 @@ public class WoodGroup {
             = DeferredRegister.create(ForgeRegistries.BLOCKS, BrazillianBiomesMod.MOD_ID);
 
 
+    /// ACACIA woodset
+    public static final RegistryObject<Block> BLACK_JUREMA_LOG = registerBlock("black_jurema_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> BLACK_JUREMA_WOOD = registerBlock("black_jurema_wood",
+            ModLogs::new);
+    public static final RegistryObject<Block> CAVEN_THORN_LOG = registerBlock("caven_thorn_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> CAVEN_THORN_WOOD = registerBlock("caven_thorn_wood",
+            ModLogs::new);
+
+
     /// Cashew
     public static final RegistryObject<Block> CASHEW_LOG = registerBlock("cashew_log",
             ModLogs::new);
@@ -189,16 +200,6 @@ public class WoodGroup {
     public static final RegistryObject<Block> BRACATINGA_WOOD = registerBlock("bracatinga_wood",
             ModLogs::new);
 
-
-    /// Black Jurema
-    public static final RegistryObject<Block> BLACK_JUREMA_LOG = registerBlock("black_jurema_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> BLACK_JUREMA_WOOD = registerBlock("black_jurema_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> CAVEN_THORN_LOG = registerBlock("caven_thorn_log",
-            ModLogs::new);
-    public static final RegistryObject<Block> CAVEN_THORN_WOOD = registerBlock("caven_thorn_wood",
-            ModLogs::new);
 
 
     /// Palm
