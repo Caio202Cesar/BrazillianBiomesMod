@@ -8,11 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "brbiomesmod:white_planks"
+      "item": "brbiomesmod:light_gray_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:white_stairs",
+    "item": "brbiomesmod:light_gray_stairs",
     "count": 4
   }
 }

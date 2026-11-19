@@ -10,10 +10,10 @@
       "item": "minecraft:stick"
     },
     "W": {
-      "item": "brbiomesmod:white_planks"
+      "item": "brbiomesmod:light_gray_planks"
     }
   },
   "result": {
-    "item": "brbiomesmod:white_fence_gate"
+    "item": "brbiomesmod:light_gray_fence_gate"
   }
 }
