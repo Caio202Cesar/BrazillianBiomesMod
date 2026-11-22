@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "brbiomesmod:block/pine_planks",
-    "top": "brbiomesmod:block/pine_planks",
-    "side": "brbiomesmod:block/pine_planks"
-  }
-}

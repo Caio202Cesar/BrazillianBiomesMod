@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "brbiomesmod:block/southern_magnolia_planks",
+    "top": "brbiomesmod:block/southern_magnolia_planks",
+    "side": "brbiomesmod:block/southern_magnolia_planks"
+  }
+}

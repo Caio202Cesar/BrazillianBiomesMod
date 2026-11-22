@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/southern_magnolia_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/southern_magnolia_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/southern_magnolia_slab_top"
+    }
+  }
+}
