@@ -12,6 +12,8 @@ import com.brbiomesmod.block.Custom.Log.*;
 import com.brbiomesmod.block.Custom.Saplings.*;
 import com.brbiomesmod.item.ModItemGroup;
 import com.brbiomesmod.item.ModItems;
+import com.caiocesarmods.caioclimates.block.SeasonalLeaves.TropicalSubtropicalDeciduousBranches;
+import com.caiocesarmods.caioclimates.block.SeasonalLeaves.TropicalSubtropicalDeciduousLeaves;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -509,10 +511,10 @@ public class TreesGroup {
 
 
     public static final RegistryObject<Block> ALGARROBILLO_LEAVES = registerBlock("algarrobillo_leaves",
-            () -> new AlgarrobilloLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TropicalSubtropicalDeciduousLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.ALGARROBILLO_BRANCHES));
     public static final RegistryObject<Block> ALGARROBILLO_BRANCHES = registerBlock("algarrobillo_branches",
-            () -> new AlgarrobilloDriedBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+            () -> new TropicalSubtropicalDeciduousBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.ALGARROBILLO_LEAVES));
     public static final RegistryObject<Block> ALGARROBILLO_SAPLING = registerBlock("algarrobillo_sapling",
             AlgarrobilloSapling::new);
@@ -1107,7 +1109,7 @@ public class TreesGroup {
             FicusCestrifoliaSapling::new);
 
 
-    //Myrtaceae = use Myrtaceae Log from Caio Cesar's Biomes.
+    //Myrtaceae
     public static final RegistryObject<Block> PITANGA_LEAVES = registerBlock("pitanga_leaves",
             () -> new PitangaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
@@ -1123,7 +1125,6 @@ public class TreesGroup {
     public static final RegistryObject<Block> PITANGA_WINTER_FLOWERING_LEAVES = registerBlock("pitanga_winter_flowering_leaves",
             () -> new PitangaWinterFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
-
     public static final RegistryObject<Block> BLACK_PITANGA_LEAVES = registerBlock("pitanga_black_leaves",
             () -> new BlackPitangaLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
@@ -1139,7 +1140,6 @@ public class TreesGroup {
     public static final RegistryObject<Block> BLACK_PITANGA_WINTER_FLOWERING_LEAVES = registerBlock("pitanga_black_winter_flowering_leaves",
             () -> new BlackPitangaWinterFloweringLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
                     .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE)));
-
     public static final RegistryObject<Block> PITANGA_SAPLING = registerBlock("pitanga_sapling",
             PitangaSapling::new);
     @SuppressWarnings("deprecation")
@@ -1286,7 +1286,20 @@ public class TreesGroup {
             BracatingaSapling::new);
 
 
-    ///Ibatingui
+    ///Açoita-cavalo
+    public static final RegistryObject<Block> ACOITA_CAVALO_LEAVES = registerBlock("acoita_cavalo_leaves",
+            () -> new TropicalSubtropicalDeciduousLeaves(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.ACOITA_CAVALO_BRANCHES));
+    public static final RegistryObject<Block> ACOITA_CAVALO_BRANCHES = registerBlock("acoita_cavalo_branches",
+            () -> new TropicalSubtropicalDeciduousBranches(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly()
+                    .notSolid().sound(SoundType.PLANT).harvestTool(ToolType.HOE), TreesGroup.ACOITA_CAVALO_LEAVES));
+    public static final RegistryObject<Block> ACOITA_CAVALO_SAPLING = registerBlock("acoita_cavalo_sapling",
+            AcoitaCavaloSapling::new);
+    @SuppressWarnings("deprecation")
+    public static final RegistryObject<Block> POTTED_ACOITA_CAVALO_SAPLING = BLOCKS.register("potted_acoita_cavalo_sapling",
+            () -> new FlowerPotBlock(TreesGroup.ACOITA_CAVALO_SAPLING.get(), AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+                    .zeroHardnessAndResistance().notSolid()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

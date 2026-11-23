@@ -187,6 +187,13 @@ public class WoodGroup {
             ModLogs::new);
 
 
+    /// Açoita-cavalo
+    public static final RegistryObject<Block> ACOITA_CAVALO_LOG = registerBlock("acoita_cavalo_log",
+            ModLogs::new);
+    public static final RegistryObject<Block> ACOITA_CAVALO_WOOD = registerBlock("acoita_cavalo_wood",
+            ModLogs::new);
+
+
     /// Imbuia
     public static final RegistryObject<Block> IMBUIA_LOG = registerBlock("imbuia_log",
             ModLogs::new);
