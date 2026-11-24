@@ -1196,7 +1196,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             Placements.SPANISH_MOSS_PLACEMENT)).build()));
 
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> FICUS_CESTRIFOLIA_TREE = register("ficus_cestrifolia_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.JUNGLE_FICUS_LOG),
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.FIG_LOG),
                     new SimpleBlockStateProvider(States.FICUS_CESTRIFOLIA_LEAVES),
                     new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
                     new UmbrellaTrunkPlacer(4, 4, 2, 5, 5),
@@ -1261,7 +1261,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState KAPOK_LOG = WoodGroup.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState COCOA_LOG = WoodGroup.COCOA_LOG.get().getDefaultState();
         protected static final BlockState PODOCARPUS_LOG = ModWood.PODOCARPUS_LOG.get().getDefaultState();
-        protected static final BlockState FICUS_LOG = ModWood.FIG_LOG.get().getDefaultState();
+        protected static final BlockState FIG_LOG = ModWood.FIG_LOG.get().getDefaultState();
 
         //Myrtaceae
         protected static final BlockState FEIJOA_LEAVES = TreesGroup.FEIJOA_LEAVES.get().getDefaultState();
