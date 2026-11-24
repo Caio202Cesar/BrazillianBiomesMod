@@ -1261,7 +1261,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState KAPOK_LOG = WoodGroup.KAPOK_LOG.get().getDefaultState();
         protected static final BlockState COCOA_LOG = WoodGroup.COCOA_LOG.get().getDefaultState();
         protected static final BlockState PODOCARPUS_LOG = ModWood.PODOCARPUS_LOG.get().getDefaultState();
-        protected static final BlockState JUNGLE_FICUS_LOG = ModWood.JUNGLE_FIG_LOG.get().getDefaultState();
+        protected static final BlockState FICUS_LOG = ModWood.FIG_LOG.get().getDefaultState();
 
         //Myrtaceae
         protected static final BlockState FEIJOA_LEAVES = TreesGroup.FEIJOA_LEAVES.get().getDefaultState();
