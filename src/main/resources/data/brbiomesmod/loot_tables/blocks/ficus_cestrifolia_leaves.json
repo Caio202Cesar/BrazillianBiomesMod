@@ -65,6 +65,28 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              }
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ],
+          "name": "caiocesarbiomes:ficus_latex"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
           "conditions": [
             {
               "condition": "minecraft:table_bonus",
