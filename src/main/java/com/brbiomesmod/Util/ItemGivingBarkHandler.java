@@ -59,5 +59,34 @@ public class ItemGivingBarkHandler {
                         p -> p.sendBreakAnimation(event.getHand()));
             }
         }
+
+        // Check the sharinga log
+        if (state.getBlock() != WoodGroup.SHARINGA_LOG.get())
+            return;
+
+        if (!world.isRemote) {
+
+            // Give ficus latex
+            Block.spawnAsEntity(
+                    world,
+                    pos,
+                    new ItemStack(com.caiocesarmods.caiocesarbiomes.item.ModItems.STICKY_LATEX.get())
+            );
+
+
+            // Replace with stripped log
+            world.setBlockState(
+                    pos,
+                    ModWood.STRIPPED_LIGHTWOOD_LOG.get()
+                            .getDefaultState()
+            );
+
+
+            // Damage axe
+            if (!player.isCreative()) {
+                held.damageItem(1, player,
+                        p -> p.sendBreakAnimation(event.getHand()));
+            }
+        }
     }
 }
