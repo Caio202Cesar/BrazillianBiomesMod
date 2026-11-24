@@ -170,7 +170,7 @@ public class WoodGroup {
             ModLogs::new);
     public static final RegistryObject<Block> OITI_WOOD = registerBlock("oiti_wood",
             ModLogs::new);
-
+    //Sandbox Tree
 
 
     /// Brazillian Rosewood
@@ -562,16 +562,14 @@ public class WoodGroup {
                     .hardnessAndResistance(3f)));
 
 
-
+    public static final RegistryObject<Block> SANDBOX_TREE_LOG = registerBlock("sandbox_tree_log",
+            SilkFlossLog::new);
+    public static final RegistryObject<Block> SANDBOX_TREE_THORNLESS_LOG = registerBlock("sandbox_tree_thornless_log",
+            ModLogs::new);
     public static final RegistryObject<Block> SANDBOX_TREE_WOOD = registerBlock("sandbox_tree_wood",
             ModLogs::new);
     public static final RegistryObject<Block> SANDBOX_TREE_THORNLESS_WOOD = registerBlock("sandbox_tree_thornless_wood",
             ModLogs::new);
-    public static final RegistryObject<Block> STRIPPED_SANDBOX_TREE_WOOD = registerBlock("stripped_sandbox_tree_wood",
-            ModLogs::new);
-    public static final RegistryObject<Block> SANDBOX_TREE_PLANKS = registerBlock("sandbox_tree_planks",
-            ModPlanks::new);
-
 
 
     public static final RegistryObject<Block> PURPLEHEART_WOOD = registerBlock("purpleheart_wood",
