@@ -167,21 +167,23 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(1, 0, 1))).setDecorators(ImmutableList.of(
                     CaatingaPassionFruitVineLeavesDecorator.INSTANCE, CaatingaPassionFruitVineTrunkDecorator.INSTANCE)).build()));
 
-    //Ipe Trees
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOW_IPE_TREE = register("yellow_ipe_tree",
+    ///Ipe Trees
+    //Yellow
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOW_IPE_FANCY_TREE = register("yellow_ipe_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
                     new SimpleBlockStateProvider(States.YELLOW_IPE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> AMAZON_YELLOW_IPE_TREE = register("amazon_yellow_ipe_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
-                    new SimpleBlockStateProvider(States.YELLOW_IPE_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(10, 11, 3), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> YELLOW_IPE_TREE = register("yellow_ipe_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.IPE_LOG),
+                    new SimpleBlockStateProvider(States.YELLOW_IPE_LEAVES),
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(5, 2, 2),
+                    new TwoLayerFeature(1, 0, 2)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).setIgnoreVines().build()));
+    //Highland Yellow Ipe (with silver leaves)
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SUBTROPICAL_YELLOW_IPE_TREE = register("subtropical_yellow_ipe_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
                     new SimpleBlockStateProvider(States.YELLOW_IPE_BLOSSOM),
@@ -189,40 +191,36 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLE_IPE_TREE = register("purple_ipe_tree",
+    //Purple
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLE_IPE_FANCY_TREE = register("purple_ipe_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
                     new SimpleBlockStateProvider(States.PURPLE_IPE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(Features.Placements.BEES_002_PLACEMENT)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> AMAZON_PURPLE_IPE_TREE = register("amazon_purple_ipe_tree",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
-                    new SimpleBlockStateProvider(States.PURPLE_IPE_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(10, 11, 3), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> SMALL_PURPLE_IPE_TREE = register("small_purple_ipe",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(
-                    new SimpleBlockStateProvider(States.IPE_LOG),
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PURPLE_IPE_TREE = register("purple_ipe_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.IPE_LOG),
                     new SimpleBlockStateProvider(States.PURPLE_IPE_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new ForkyTrunkPlacer(4, 6, 0),
-                    new TwoLayerFeature(2, 0, 2)))
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(5, 2, 2),
+                    new TwoLayerFeature(1, 0, 2)))
                     .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_IPE_TREE = register("pink_ipe_tree",
+    //Pink
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> PINK_IPE_FANCY_TREE = register("pink_ipe_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
                     new SimpleBlockStateProvider(States.PINK_IPE_LEAVES),
                     new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
+    //White
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> WHITE_IPE_TREE = register("white_ipe_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.IPE_LOG),
                     new SimpleBlockStateProvider(States.WHITE_IPE_LEAVES),
                     new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
                     new StraightTrunkPlacer(4, 2, 0),
                     new TwoLayerFeature(1, 0, 1))).setIgnoreVines().build()));
+    //Apricot
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> APRICOT_IPE_TREE = register("apricot_ipe_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.IPE_LOG),
                     new SimpleBlockStateProvider(States.APRICOT_IPE_LEAVES),
@@ -380,9 +378,10 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILWOOD_TREE = register("brazilwood_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BRAZILWOOD_LOG),
                     new SimpleBlockStateProvider(States.BRAZILWOOD_LEAVES),
-                    new BlobFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 3),
-                    new StraightTrunkPlacer(4, 2, 0),
-                    new TwoLayerFeature(1, 0, 1))).build()));
+                    new AcaciaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new ForkyTrunkPlacer(5, 2, 2),
+                    new TwoLayerFeature(1, 0, 2)))
+                    .setDecorators(ImmutableList.of(Features.Placements.BEES_005_PLACEMENT)).setIgnoreVines().build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILWOOD_FANCY_TREE = register("brazilwood_fancy_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILWOOD_LOG),
                     new SimpleBlockStateProvider(States.BRAZILWOOD_LEAVES),
@@ -396,14 +395,6 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
                     OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(PassionFruitVineLeavesDecorator.INSTANCE, PassionFruitVineTrunkDecorator.INSTANCE))
-                    .setIgnoreVines().build()));
-    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BRAZILWOOD_TREE_WITH_PURPLE_PASSIONVINE = register("brazilwood_tree_with_purple_passionvine",
-            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.BRAZILWOOD_LOG),
-                    new SimpleBlockStateProvider(States.BRAZILWOOD_LEAVES),
-                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
-                    new FancyTrunkPlacer(3, 11, 0), new TwoLayerFeature(0, 0, 0,
-                    OptionalInt.of(4)))).setHeightmap(Heightmap.Type.MOTION_BLOCKING)
-                    .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE, PurplePassionFruitVineTrunkDecorator.INSTANCE))
                     .setIgnoreVines().build()));
 
     //Jua Tree
@@ -1291,7 +1282,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
         protected static final BlockState BRAZILLIAN_TIGERWOOD_LOG = TreesGroup.BRAZILLIAN_TIGERWOOD_LOG.get().getDefaultState();
         protected static final BlockState BRAZILLIAN_TIGERWOOD_LEAVES = TreesGroup.BRAZILLIAN_TIGERWOOD_LEAVES.get().getDefaultState();
 
-        protected static final BlockState SANDBOX_TREE_LOG = TreesGroup.SANDBOX_TREE_LOG.get().getDefaultState();
+        protected static final BlockState SANDBOX_TREE_LOG = WoodGroup.SANDBOX_TREE_LOG.get().getDefaultState();
         protected static final BlockState SANDBOX_TREE_LEAVES = TreesGroup.SANDBOX_TREE_LEAVES.get().getDefaultState();
 
         protected static final BlockState HUMBOLDT_WILLOW_LOG = ModWood.WILLOW_LOG.get().getDefaultState();
@@ -1531,7 +1522,8 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             BRAZILLIAN_TIGERWOOD_TREE.withChance(0.2F), BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.2F),
                             JENIPAPO_TREE.withChance(0.2F), SAPUCAIA_TREE2.withChance(0.3F), SAPUCAIA_TREE1.withChance(0.3F), MEGA_BALSA_TREE.withChance(0.2F),
                             YELLOW_MOMBIN_TREE.withChance(0.2F), BRAZILNUT_TREE.withChance(0.2F), BRAZILNUT_FANCY_TREE.withChance(0.2F),
-                            PURPLEHEART_TREE.withChance(0.2F), AMAZON_YELLOW_IPE_TREE.withChance(0.2F), AMAZON_PURPLE_IPE_TREE.withChance(0.2F)),
+                            PURPLEHEART_TREE.withChance(0.2F), YELLOW_IPE_FANCY_TREE.withChance(0.2F),
+                            PINK_IPE_FANCY_TREE.withChance(0.26F), PURPLE_IPE_FANCY_TREE.withChance(0.2F)),
                             SANDBOX_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(40, 0.0F, 2))));
     public static final ConfiguredFeature<?, ?> AMAZON_TREES = register("amazon_trees",
@@ -1547,12 +1539,13 @@ public abstract class TreeFeatures implements IFeatureConfig {
                             BALSA_TREE.withChance(0.5F), SANDBOX_TREE.withChance(0.4F), BRAZILLIAN_TIGERWOOD_TREE.withChance(0.2F),
                             BRAZILLIAN_TIGERWOOD_FANCY_TREE.withChance(0.22F), JENIPAPO_TREE.withChance(0.3F), SAPUCAIA_TREE2.withChance(0.3F), SAPUCAIA_TREE1.withChance(0.3F),
                             MEGA_BALSA_TREE.withChance(0.5F), YELLOW_MOMBIN_TREE.withChance(0.2F), BRAZILNUT_TREE.withChance(0.5F),  BRAZILNUT_FANCY_TREE.withChance(0.5F),
-                            PURPLEHEART_TREE.withChance(0.4F), AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F)), BABASSU_PALM1)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
+                            PURPLEHEART_TREE.withChance(0.4F), YELLOW_IPE_FANCY_TREE.withChance(0.26F),
+                            PINK_IPE_FANCY_TREE.withChance(0.26F), PURPLE_IPE_FANCY_TREE.withChance(0.26F)), BABASSU_PALM1)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(2, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> VARZEA_TREES = register("varzea_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(CECROPIA_TREE.withChance(0.09F),
                             KAPOK_TREE.withChance(0.25F), YELLOW_MOMBIN_TREE.withChance(0.17F), JENIPAPO_TREE.withChance(0.22F), SOMBREIRO_TREE.withChance(0.45f),
-                            AMAZON_YELLOW_IPE_TREE.withChance(0.26F), AMAZON_PURPLE_IPE_TREE.withChance(0.26F), YOUNG_KAPOK.withChance(0.2F),
+                            YELLOW_IPE_FANCY_TREE.withChance(0.26F), PINK_IPE_FANCY_TREE.withChance(0.26F), PURPLE_IPE_FANCY_TREE.withChance(0.26F), YOUNG_KAPOK.withChance(0.2F),
                     HUMBOLDT_WILLOW_TREE.withChance(0.0059F)), SANDBOX_TREE)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(3, 0.3F, 1))));//Add copaiba and andiroba
     public static final ConfiguredFeature<?, ?> VARZEA_PALMS = register("varzea_palms",
