@@ -2,6 +2,8 @@ package com.brbiomesmod.block.Custom.Saplings;
 
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
+import com.caiocesarmods.caioclimates.block.ClimaticTree;
+import com.caiocesarmods.caioclimates.block.Saplings.ClimaticSapling;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.SaplingBlock;
@@ -25,9 +27,10 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import javax.annotation.Nullable;
 import java.util.Random;
 
-public class ApricotIpeSapling extends SaplingBlock {
+public class ApricotIpeSapling extends ClimaticSapling {
     public ApricotIpeSapling() {
         super(new ApricotIpeTree(), Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
@@ -48,10 +51,18 @@ public class ApricotIpeSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class ApricotIpeTree extends Tree {
+    private static class ApricotIpeTree extends ClimaticTree {
+        @Nullable
         @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getClimaticTreeFeature(Random random, boolean b, World world, BlockPos blockPos) {
+            Biome biome = world.getBiome(blockPos);
+            float temp = biome.getTemperature(blockPos);
+
+            if (temp > 0.85F) {
                 return TreeFeatures.APRICOT_IPE_TREE;
+            }
+            //Zone 9 growth
+            return TreeFeatures.SMALL_APRICOT_IPE_TREE;
         }
     }
 }
