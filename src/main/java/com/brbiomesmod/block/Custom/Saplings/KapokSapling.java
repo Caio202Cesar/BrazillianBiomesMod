@@ -56,17 +56,18 @@ public class KapokSapling extends ClimaticSapling {
 
             Biome biome = world.getBiome(pos);
             float temp = biome.getTemperature(pos);
+            boolean hasRain = biome.getPrecipitation() != Biome.RainType.NONE;
 
-            if (temp > 0.9F) {
-                if (random.nextInt(10) == 0) {
-                    return TreeFeatures.YOUNG_KAPOK;
-                } else {
-                    return TreeFeatures.KAPOK_TREE;
-                }
+            if (temp > 0.9F || hasRain) {
+                return TreeFeatures.KAPOK_TREE;
             }
 
-            //Zone 10 growth
-            return TreeFeatures.YOUNG_KAPOK;
+            //Zone 10 and dry biomes growth
+            if (random.nextInt(10) == 0) {
+                return TreeFeatures.YOUNG_KAPOK2;
+            } else {
+                return TreeFeatures.YOUNG_KAPOK;
+            }
         }
 
         @Nullable
