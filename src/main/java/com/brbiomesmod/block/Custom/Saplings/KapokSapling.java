@@ -2,6 +2,8 @@ package com.brbiomesmod.block.Custom.Saplings;
 
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
+import com.caiocesarmods.caioclimates.block.ClimaticBigTree;
+import com.caiocesarmods.caioclimates.block.Saplings.ClimaticSapling;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
@@ -26,7 +28,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class KapokSapling extends SaplingBlock {
+public class KapokSapling extends ClimaticSapling {
     public KapokSapling() {
         super(new KapokTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
@@ -119,17 +121,30 @@ public class KapokSapling extends SaplingBlock {
         return 60;
     }
 
-    private static class KapokTree extends BigTree {
+    private static class KapokTree extends ClimaticBigTree {
         @Nullable
         @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random randomIn, boolean largeHive) {
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeClimaticTreeFeature(Random random, World world, BlockPos pos) {
+
+            Biome biome = world.getBiome(pos);
+            float temp = biome.getTemperature(pos);
+
+            if (temp > 0.9F) {
+                if (random.nextInt(10) == 0) {
+                    return TreeFeatures.YOUNG_KAPOK;
+                } else {
+                    return TreeFeatures.KAPOK_TREE;
+                }
+            }
+
+            //Zone 10 growth
             return TreeFeatures.YOUNG_KAPOK;
         }
 
         @Nullable
         @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
-            return TreeFeatures.KAPOK_TREE;
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getClimaticTreeFeature(Random random, boolean b, World world, BlockPos blockPos) {
+            return null;
         }
     }
 }
