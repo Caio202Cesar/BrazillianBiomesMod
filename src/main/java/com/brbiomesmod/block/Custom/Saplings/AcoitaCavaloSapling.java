@@ -43,7 +43,7 @@ public class AcoitaCavaloSapling extends SaplingBlock {
     private static class AcoitaCavaloTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.CAMBUCI_TREE;
+            return TreeFeatures.ACOITA_CAVALO_TREE;
         }
     }
 }

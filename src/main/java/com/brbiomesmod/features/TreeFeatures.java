@@ -85,6 +85,18 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new BabassuFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
                     new StraightTrunkPlacer(16, 8, 0),
                     new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BABASSU_PALM1_ZONE11 = register("babassu_palm1_zone11",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BABASSU_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.BABASSU_LEAVES),
+                    new CanaryDateFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(6, 8, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BABASSU_PALM2_ZONE11 = register("babassu_palm2_zone11",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BABASSU_LOG),
+                    new SimpleBlockStateProvider(TreeFeatures.States.BABASSU_LEAVES),
+                    new BabassuFoliagePlacer(FeatureSpread.create(1), FeatureSpread.create(0)),
+                    new StraightTrunkPlacer(6, 8, 0),
+                    new TwoLayerFeature(1, 0, 1))).build()));
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> BABASSU_PALM1_WITH_VINE = register("babassu_palm1_with_vine",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BABASSU_LOG),
                     new SimpleBlockStateProvider(TreeFeatures.States.BABASSU_LEAVES),
@@ -276,6 +288,15 @@ public abstract class TreeFeatures implements IFeatureConfig {
                     new TwoLayerFeature(0, 0, 0,
                             OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING)
                     .setDecorators(ImmutableList.of(PurplePassionFruitVineLeavesDecorator.INSTANCE, PurplePassionFruitVineTrunkDecorator.INSTANCE)).build()));
+
+    //Cambuci Tree
+    public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> ACOITA_CAVALO_TREE = register("acoita_cavalo_tree",
+            Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(TreeFeatures.States.MYRTACEAE_LOG),
+                    new SimpleBlockStateProvider(States.CAMBUCI_LEAVES),
+                    new FancyFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(4), 4),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    new TwoLayerFeature(0, 0, 0,
+                            OptionalInt.of(4)))).setIgnoreVines().setHeightmap(Heightmap.Type.MOTION_BLOCKING).build()));
 
 
     //Peruvian Pepper Tree
