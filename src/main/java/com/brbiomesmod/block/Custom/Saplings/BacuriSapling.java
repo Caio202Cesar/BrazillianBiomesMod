@@ -2,6 +2,8 @@ package com.brbiomesmod.block.Custom.Saplings;
 
 import com.brbiomesmod.block.TreesGroup;
 import com.brbiomesmod.features.TreeFeatures;
+import com.caiocesarmods.caioclimates.block.ClimaticBigTree;
+import com.caiocesarmods.caioclimates.block.Saplings.ClimaticSapling;
 import net.minecraft.block.*;
 import net.minecraft.block.trees.BigTree;
 import net.minecraft.block.trees.Tree;
@@ -26,7 +28,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class BacuriSapling extends SaplingBlock {
+public class BacuriSapling extends ClimaticSapling {
     public BacuriSapling() {
         super(new BacuriSapling.BacuriTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING).hardnessAndResistance(0.0f)
                 .sound(SoundType.PLANT));
@@ -39,77 +41,6 @@ public class BacuriSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 11 (Tropical)
-    @Override
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.9f;
-        float maxTemp = 1.6f;
-
-        if (biomeTemp >= minTemp && biomeTemp <= maxTemp) {
-            // Only attempt natural growth in suitable biomes
-            super.randomTick(state, world, pos, random);
-        }
-        // If biome temperature is too low/high, do nothing (block natural growth)
-    }
-
-    @Override
-    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-        if (!(worldIn instanceof World)) {
-            return false;
-        }
-
-        World world = (World) worldIn;
-
-        Biome biome = world.getBiome(pos);
-        float temp = biome.getTemperature(pos);
-
-        // ---- YOUR TEMPERATURE RESTRICTION LOGIC ----
-        boolean tooHot = temp > 1.6F;
-        boolean tooCold = temp < 0.9F;
-
-        if (tooHot || tooCold) {
-            return false;
-        }
-
-        return super.canGrow(worldIn, pos, state, isClient);
-    }
-
-    @Override
-    public boolean canUseBonemeal(World worldIn, Random random, BlockPos pos, BlockState state) {
-        // Always allow for the check, we'll block in grow()
-        return true;
-    }
-
-    @Override
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        if (!worldIn.isRemote) {
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.9f, maxTemp = 1.6f;
-
-            if (temp < minTemp) {
-                player.sendMessage(
-                        new StringTextComponent("This biome is too cold for this sapling."),
-                        player.getUniqueID()
-                );
-                return ActionResultType.SUCCESS; // Prevent further processing if needed
-            }
-
-            if (temp > maxTemp) {
-                player.sendMessage(
-                        new StringTextComponent("This biome is too hot for this sapling."),
-                        player.getUniqueID()
-                );
-                return ActionResultType.SUCCESS; // Prevent further processing if needed
-            }
-
-            // If temp is in range, optionally allow normal processing:
-            // return super.onBlockActivated(...);
-            return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
-        }
-        return ActionResultType.SUCCESS;
-    }
-
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 80;
     }
@@ -119,22 +50,32 @@ public class BacuriSapling extends SaplingBlock {
     }
 
 
-    private static class BacuriTree extends BigTree {
-        @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.BACURI_TREE;
-        }
-
-        /**
-         * Get a {@link ConfiguredFeature} of the huge variant of this tree
-         *
-         * @param rand
-         */
+    private static class BacuriTree extends ClimaticBigTree {
         @Nullable
         @Override
-        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeTreeFeature(Random rand) {
-                return TreeFeatures.MEGA_BACURI_TREE;
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getHugeClimaticTreeFeature(Random random, World world, BlockPos blockPos) {
+            Biome biome = world.getBiome(blockPos);
+            float temp = biome.getTemperature(blockPos);
 
+            if (temp > 0.95F) {
+                return TreeFeatures.MEGA_BACURI_TREE;
+            }
+
+            return null;
+        }
+
+        @Nullable
+        @Override
+        protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getClimaticTreeFeature(Random random, boolean b, World world, BlockPos blockPos) {
+            Biome biome = world.getBiome(blockPos);
+            float temp = biome.getTemperature(blockPos);
+
+            if (temp > 0.95F) {
+                return TreeFeatures.FANCY_BACURI_TREE;
+            }
+
+            //Zone 11 growth
+            return TreeFeatures.BACURI_TREE;
         }
     }
 }
