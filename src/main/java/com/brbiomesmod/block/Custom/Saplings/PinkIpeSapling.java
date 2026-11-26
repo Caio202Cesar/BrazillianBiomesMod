@@ -123,7 +123,7 @@ public class PinkIpeSapling extends SaplingBlock {
     private static class PinkIpeTree extends Tree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
-            return TreeFeatures.PINK_IPE_TREE;
+            return TreeFeatures.PINK_IPE_FANCY_TREE;
         }
     }
 }

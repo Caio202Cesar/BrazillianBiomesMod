@@ -1460,7 +1460,7 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<?, ?> ATLANTIC_FOREST_TREES_WITH_PURPLE_PASSIONVINE = register("purple_passionvine_atlantic_forest_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(BRAZILLIAN_ROSEWOOD_WITH_PUPRLE_PASSIONVINE.withChance(0.5F),
                             BRAZILLIAN_SASSAFRAS_TREE_WITH_PURPLE_PASSIONVINE.withChance(0.3F), CECROPIA_WITH_PURPLE_PASSIONVINE.withChance(0.3F),
-                            SILVER_CECROPIA_WITH_PURPLE_PASSIONVINE.withChance(0.17F), BRAZILWOOD_TREE_WITH_PURPLE_PASSIONVINE.withChance(0.5F),
+                            SILVER_CECROPIA_WITH_PURPLE_PASSIONVINE.withChance(0.17F),
                             SAPUCAIA_TREE2.withChance(0.3F), SAPUCAIA_TREE1.withChance(0.3F), MANACA_WITH_PURPLE_PASSIONVINE.withChance(0.1F)),
                             PINK_PEROBA_TREE_WITH_PURPLE_PASSIONFRUIT)).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT)
                     .withPlacement(Placement.COUNT_EXTRA.configure(new AtSurfaceWithExtraConfig(0, 0.5F, 3))));
@@ -1635,18 +1635,18 @@ public abstract class TreeFeatures implements IFeatureConfig {
     //Trumpet Trees
     public static final ConfiguredFeature<?, ?> SAVANNA_TRUMPET_TREES = register("savanna_trumpet_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_IPE_TREE.withChance(0.2F),
-                    PINK_IPE_TREE.withChance(0.3F), APRICOT_IPE_TREE.withChance(0.000034F), PURPLE_IPE_TREE.withChance(0.3F)), YELLOW_IPE_TREE))
+                    PINK_IPE_FANCY_TREE.withChance(0.3F), APRICOT_IPE_TREE.withChance(0.000034F), PURPLE_IPE_TREE.withChance(0.3F)), YELLOW_IPE_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(0, 0.1F, 1))));
     public static final ConfiguredFeature<?, ?> FOREST_TRUMPET_TREES = register("forest_trumpet_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(WHITE_IPE_TREE.withChance(0.025641026F),
-                            PINK_IPE_TREE.withChance(0.30769232F), APRICOT_IPE_TREE.withChance(0.000034F),
+                            PINK_IPE_FANCY_TREE.withChance(0.30769232F), APRICOT_IPE_TREE.withChance(0.000034F),
                             YELLOW_IPE_TREE.withChance(0.33333334F)), PURPLE_IPE_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(1, 0.01F, 0))));
     public static final ConfiguredFeature<?, ?> RESTINGA_TRUMPET_TREES = register("restinga_trumpet_trees",
             Feature.RANDOM_SELECTOR.withConfiguration(new MultipleRandomFeatureConfig(ImmutableList.of(PURPLE_IPE_TREE.withChance(0.3F),
-                            PINK_IPE_TREE.withChance(0.30769232F), YELLOW_IPE_TREE.withChance(0.33333334F)), WHITE_IPE_TREE))
+                            PINK_IPE_FANCY_TREE.withChance(0.30769232F), YELLOW_IPE_TREE.withChance(0.33333334F)), WHITE_IPE_TREE))
                     .withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).withPlacement(Placement.COUNT_EXTRA
                             .configure(new AtSurfaceWithExtraConfig(1, 0.1F, 0))));
 
