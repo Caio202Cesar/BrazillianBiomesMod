@@ -1014,9 +1014,9 @@ public abstract class TreeFeatures implements IFeatureConfig {
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> MEGA_BALSA_TREE = register("mega_balsa_tree",
             Feature.TREE.withConfiguration((new BaseTreeFeatureConfig.Builder(new SimpleBlockStateProvider(States.BALSA_LOG),
                     new SimpleBlockStateProvider(States.BALSA_LEAVES),
-                    new JungleFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0), 2),
-                    new MegaJungleTrunkPlacer(10, 2, 19),
-                    new TwoLayerFeature(1, 1, 2))).build()));
+                    new VirginianaFoliagePlacer(FeatureSpread.create(2), FeatureSpread.create(0)),
+                    new UmbrellaTrunkPlacer(10, 12, 2, 5, 4),
+                    new TwoLayerFeature(0, 0, 0, OptionalInt.of(4)))).build()));
 
     //Cockspur Coral Tree
     public static final ConfiguredFeature<BaseTreeFeatureConfig, ?> COCKSPUR_CORAL_TREE1 = register("cockspur_coral_tree1",
