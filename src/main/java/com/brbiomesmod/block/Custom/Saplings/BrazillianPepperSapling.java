@@ -38,23 +38,6 @@ public class BrazillianPepperSapling extends SaplingBlock {
 
     }
 
-    //Hardy to zone 9
-    @Override
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        float biomeTemp = world.getBiome(pos).getTemperature(pos);
-        float minTemp = 0.8f;
-        float maxTemp = 2f;
-
-        boolean isProtectedByGlass = isUnderGlass(world, pos);
-
-        if ((biomeTemp >= minTemp && biomeTemp <= maxTemp)
-                || (biomeTemp < minTemp && isProtectedByGlass)) {
-
-            super.randomTick(state, world, pos, random);
-        }
-        // If biome temperature is too low/high, do nothing (block natural growth)
-    }
-
     private boolean isUnderGlass(ServerWorld world, BlockPos pos) {
 
         BlockPos.Mutable mutable = new BlockPos.Mutable();
@@ -95,83 +78,6 @@ public class BrazillianPepperSapling extends SaplingBlock {
         return true; // Entire roof area is glass
     }
 
-    @Override
-    public boolean canGrow(IBlockReader worldIn, BlockPos pos, BlockState state, boolean isClient) {
-
-        if (!(worldIn instanceof World)) {
-            return false;
-        }
-
-        World world = (World) worldIn;
-
-        Biome biome = world.getBiome(pos);
-        float temp = biome.getTemperature(pos);
-
-        boolean isProtectedByGlass = false;
-
-        if (world instanceof ServerWorld) {
-            isProtectedByGlass = isUnderGlass((ServerWorld) world, pos);
-        }
-
-        float minTemp = 0.8F;
-        float maxTemp = 2F;
-
-        // If protected, ignore cold restriction
-        if (!isProtectedByGlass) {
-            if (temp < minTemp || temp > maxTemp) {
-                return false;
-            }
-        } else {
-            // Under glass → only block extreme heat
-            if (temp > maxTemp) {
-                return false;
-            }
-        }
-
-        return super.canGrow(worldIn, pos, state, isClient);
-    }
-
-    @Override
-    public boolean canUseBonemeal(World worldIn, Random random, BlockPos pos, BlockState state) {
-        // Always allow for the check, we'll block in grow()
-        return true;
-    }
-
-    @Override
-    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos, PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
-        if (!worldIn.isRemote) {
-            float temp = worldIn.getBiome(pos).getTemperature(pos);
-            float minTemp = 0.8f, maxTemp = 2f;
-
-            boolean isProtectedByGlass = false;
-
-            if (worldIn instanceof ServerWorld) {
-                isProtectedByGlass = isUnderGlass((ServerWorld) worldIn, pos);
-            }
-
-            if (temp < minTemp && !isProtectedByGlass) {
-                player.sendMessage(
-                        new StringTextComponent("This biome is too cold for this sapling."),
-                        player.getUniqueID()
-                );
-                return ActionResultType.SUCCESS;
-            }
-
-            if (temp > maxTemp) {
-                player.sendMessage(
-                        new StringTextComponent("This biome is too hot for this sapling."),
-                        player.getUniqueID()
-                );
-                return ActionResultType.SUCCESS; // Prevent further processing if needed
-            }
-
-            // If temp is in range, optionally allow normal processing:
-            // return super.onBlockActivated(...);
-            return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
-        }
-        return ActionResultType.SUCCESS;
-    }
-
     public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
         return 80;
     }
@@ -180,7 +86,7 @@ public class BrazillianPepperSapling extends SaplingBlock {
         return 60;
     }
 
-
+    //Growing as stout tree in zone 8?
     private static class BrazillianPepperTree extends BigTree {
         @Override
         protected ConfiguredFeature<BaseTreeFeatureConfig, ?> getTreeFeature(Random random, boolean p_225546_2_) {
