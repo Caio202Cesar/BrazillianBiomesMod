@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "brbiomesmod:block/holm_oak_slab"
+    },
+    "type=double": {
+      "model": "brbiomesmod:block/holm_oak_planks"
+    },
+    "type=top": {
+      "model": "brbiomesmod:block/holm_oak_slab_top"
+    }
+  }
+}
