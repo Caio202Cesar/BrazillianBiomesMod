@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "brbiomesmod:block/holm_oak_planks"
+      "model": "brbiomesmod:block/light_gray_planks"
     }
   }
 }
